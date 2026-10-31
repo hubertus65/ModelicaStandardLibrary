@@ -1,9 +1,9 @@
-# ModCheck case list: new ModelicaTest.Math coverage tests (branch coverage-improvement).
+# ModCheck case list: new ModelicaTest coverage tests for Modelica.Math (branch coverage-improvement).
 #
-# Each case is one new test model, run unmodified on Modelon Impact (MSL 4.1.0
-# dependency). Variables are the comparison signals of the model, as listed in
-# ModelicaTest/Resources/Reference/ModelicaTest/Math/<Model>/comparisonSignals.txt.
-# ncp gives 500 output intervals per second of simulated time.
+# Each case is one new test model, run unmodified on Modelon Impact (MSL 4.1.0 dependency).
+# Variables are the comparison signals of the model, as listed in
+# ModelicaTest/Resources/Reference/ModelicaTest/<Package>/<Model>/comparisonSignals.txt.
+# ncp gives 500 output intervals per second of simulated time (2000 for long runs).
 library: ModelicaTest
 workspace: msl-coverage
 custom_function: dynamic
@@ -68,18 +68,6 @@ cases:
     # disabled: fails by design until the MSL bug is fixed: LAPACK.dhgeqz declares Real Q[1, 1]=fill(0, 1, n), which is inconsistent for n > 1
     enabled: false
     model: ModelicaTest.Math.TestLAPACKdhgeqz
-    start_time: 0.0
-    final_time: 0.01
-    ncp: 10
-    rtol: 1.0e-6
-    modifiers: {}
-    variables:
-      - time
-      - "result"
-  - name: TestQuadrature
-    # disabled: Nonlinear.quadratureNewtonCotes is new in MSL 4.2 and not available in the MSL 4.1.0 of Modelon Impact
-    enabled: false
-    model: ModelicaTest.Math.TestQuadrature
     start_time: 0.0
     final_time: 0.01
     ncp: 10
