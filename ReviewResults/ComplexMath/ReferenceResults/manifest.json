@@ -1,0 +1,99 @@
+[
+  {
+    "name": "ComplexVectorFunctions",
+    "model": "ModelicaTest.ComplexMath.ComplexVectorFunctions",
+    "variables": [
+      "indexMax",
+      "indexMin",
+      "lengthV",
+      "norm1V",
+      "normV",
+      "time",
+      "vMax.im",
+      "vMax.re",
+      "vMin.im",
+      "vMin.re",
+      "vNormalized[1].im",
+      "vNormalized[1].re",
+      "vProduct.im",
+      "vProduct.re",
+      "vReversed[1].re",
+      "vSorted[1].re",
+      "vSorted[3].re",
+      "vSum.im",
+      "vSum.re"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.06979888107161969,
+      "steps": 501,
+      "rhs_evaluations": 505,
+      "jacobian_evaluations": 9,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 37121,
+    "record": {
+      "schema": 1,
+      "record_id": "2a753e83aa5ff281470080f733b74682afc1dfbeae1fc58f04e7deb07e7a6806",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T04:55:44",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "c989d3cacc1c88e94013926753f36cfc",
+        "impact_fmu_id": "modelicatest_complexmath_complexvectorfunctions_20261031_045542_174fe81",
+        "model_description_sha256": "97a8cb34ac0477f6c18e3d49c234791383bb9be24407e4010e8e5da802ea2aad"
+      },
+      "experiment": {
+        "case_entry_sha256": "134af924e2dc3f0e39d4a857d068f48ee5770a5a797f1a2e93eb992e1e9a467a",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_complexmath_complexvectorfunctions_20261031_045542_cd5e16c",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "827b1b539b421147e18f3a9df15bfc7809bc62171ed6226b8d886004eba1494c"
+      },
+      "model": {
+        "class": "ModelicaTest.ComplexMath.ComplexVectorFunctions",
+        "libraries": [
+          {
+            "git_commit": "1db057b7f601065ce2247e2d6750badec0dad11f",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 37121,
+        "file": "ComplexVectorFunctions.npz",
+        "format": "npz",
+        "sha256": "25f4d36220950d50cda35491a9696118dc81d70ffbbbc4a0c9552e400bcc2218"
+      },
+      "run": {
+        "utc": "2026-10-31T04:55:49+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,40 @@
+# ModCheck case list: new ModelicaTest.ComplexMath coverage tests (branch coverage-improvement).
+#
+# Each case is one new test model, run unmodified on Modelon Impact (MSL 4.1.0
+# dependency). Variables are the comparison signals of the model, as listed in
+# ModelicaTest/Resources/Reference/ModelicaTest/ComplexMath/<Model>/comparisonSignals.txt.
+# ncp gives 500 output intervals per second of simulated time.
+library: ModelicaTest
+workspace: msl-coverage
+custom_function: dynamic
+tolerance: 0.001
+
+cases:
+  - name: ComplexVectorFunctions
+    enabled: true
+    model: ModelicaTest.ComplexMath.ComplexVectorFunctions
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "normV"
+      - "norm1V"
+      - "lengthV"
+      - "vNormalized[[]1].re"
+      - "vNormalized[[]1].im"
+      - "vReversed[[]1].re"
+      - "vSorted[[]1].re"
+      - "vSorted[[]3].re"
+      - "vMax.re"
+      - "vMax.im"
+      - "indexMax"
+      - "vMin.re"
+      - "vMin.im"
+      - "indexMin"
+      - "vSum.re"
+      - "vSum.im"
+      - "vProduct.re"
+      - "vProduct.im"

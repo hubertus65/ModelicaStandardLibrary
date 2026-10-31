@@ -225,4 +225,40 @@ extends Modelica.Icons.ExamplesPackage;
 
     annotation (experiment(StopTime=0));
   end TestComplexOperations;
+
+  model ComplexVectorFunctions
+    "Test of the vector functions of Modelica.ComplexMath and Modelica.ComplexMath.Vectors"
+    extends Modelica.Icons.Example;
+    import Modelica.ComplexMath;
+
+    Complex v[3]={Complex(1 + time, 2), Complex(-3, 4*time), Complex(0.5, -1)}
+      "Time-varying complex vector";
+    Real normV=ComplexMath.Vectors.norm(v) "Euclidean norm of v";
+    Real norm1V=ComplexMath.Vectors.norm(v, 1) "1-norm of v";
+    Real lengthV=ComplexMath.Vectors.length(v) "Length of v";
+    Complex vNormalized[3]=ComplexMath.Vectors.normalize(v) "v normalized to length 1";
+    Complex vReversed[3]=ComplexMath.Vectors.reverse(v) "v in reversed order";
+    Complex vSorted[3]=ComplexMath.Vectors.sort(v, sortFrequency=false)
+      "v sorted by absolute value";
+    Complex vMax "Element of v with largest absolute value";
+    Integer indexMax "Index of vMax in v";
+    Complex vMin "Element of v with smallest absolute value";
+    Integer indexMin "Index of vMin in v";
+    Complex vSum=ComplexMath.sum(v) "Sum of the elements of v";
+    Complex vProduct=ComplexMath.product(v) "Product of the elements of v";
+  equation
+    (vMax, indexMax) = ComplexMath.max(v);
+    (vMin, indexMin) = ComplexMath.min(v);
+    annotation (experiment(StopTime=1.0), Documentation(info="<html>
+<p>
+Evaluates norm, length, normalize, reverse and sort of
+<a href=\"modelica://Modelica.ComplexMath.Vectors\">Modelica.ComplexMath.Vectors</a>
+and max, min, sum and product of
+<a href=\"modelica://Modelica.ComplexMath\">Modelica.ComplexMath</a>
+for a complex vector whose elements change with time. The order by absolute value
+changes during the simulation: |v[2]| = |-3 + 4j&middot;t| overtakes |v[1]| at t = 0.47 s.
+At t = 1 s, v = {2+2j, -3+4j, 0.5-j}, so vMax = -3+4j (index 2) and vMin = 0.5-j (index 3).
+</p>
+</html>"));
+  end ComplexVectorFunctions;
 end ComplexMath;
