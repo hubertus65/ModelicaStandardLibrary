@@ -11236,6 +11236,7 @@ Note: Modelon Impact (OCT) rejects both functions. Their output size depends on 
 <code>withResidues</code>, and the assignment
 <code>phi := if withResidues then {...6 elements...} else {...3 elements...}</code> is an
 if-expression whose branches have different sizes but whose condition is not a parameter expression.
+Assigning <code>phi</code> in an if-statement avoids this (modelica/ModelicaStandardLibrary#4848).
 </p>
 </html>"));
   end FramesSmallRotation;
