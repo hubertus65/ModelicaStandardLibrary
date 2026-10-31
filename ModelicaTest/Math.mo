@@ -1604,4 +1604,529 @@ For more details of this distribution see
 </html>"));
     end Internal;
   end Random;
+
+  function Matrices4
+    "Test of determinant, LU, QR, eigenvalue, matrix exponential, sort and flip functions of Modelica.Math.Matrices"
+    extends Modelica.Icons.Function;
+    import Modelica.Math.Matrices;
+    import Modelica.Math.Vectors;
+    import Modelica.Utilities.Streams;
+
+    input String logFile="ModelicaTestLog.txt"
+      "Filename where the log is stored";
+    output Boolean ok;
+  protected
+    constant Real eps=1e-12 "Relative tolerance of the checks";
+    Real A[3,3]=[4, -2, 1; 3, 6, -4; 2, 1, 8] "Regular matrix, det(A) = 263";
+    Real b[3]={11, -21, 24} "A*{1,-2,3}";
+    Real LU[3,3] "LU factors of A";
+    Integer pivots[3] "Pivots of the LU decomposition";
+    Integer info;
+    Real x[3] "Solution of A*x = b";
+    Real Q[3,3] "Orthogonal factor of the QR decomposition";
+    Real R[3,3] "Triangular factor of the QR decomposition";
+    Integer p[3] "Column permutation of the QR decomposition";
+    Real S[2,2]=[0, 1; -2, -3] "State matrix with eigenvalues -1 and -2";
+    Real Bs[2,1]=[0; 1] "Input matrix";
+    Real T=0.5 "Sample time";
+    Real ev[2,2] "Eigenvalues";
+    Real J[2,2] "Eigenvalue matrix";
+    Real phi[2,2] "exp(S*T)";
+    Real phiRef[2,2] "Analytic exp(S*T)";
+    Real gamma[2,1] "integral(exp(S*t), t=0..T)*Bs";
+    Real gamma1[2,1] "integral((T-t)*exp(S*t), t=0..T)*Bs";
+    Real M[3,3]=[3, 1, 2; 1, 5, 0; 2, 0, 4] "Matrix to be sorted and flipped";
+    Real Msorted[3,3];
+    Integer indices[3];
+  algorithm
+    Streams.print("... Test of further functions of Modelica.Math.Matrices");
+    Streams.print("... Test of further functions of Modelica.Math.Matrices", logFile);
+
+    // det
+    assert(abs(Matrices.det(A) - 263) < eps*263, "Matrices.det failed");
+
+    // LU, LU_solve
+    (LU, pivots, info) := Matrices.LU(A);
+    assert(info == 0, "Matrices.LU failed");
+    x := Matrices.LU_solve(LU, pivots, b);
+    assert(Vectors.norm(x - {1, -2, 3}) < 1e3*eps, "Matrices.LU_solve failed");
+
+    // QR with and without column pivoting
+    (Q, R, p) := Matrices.QR(A);
+    assert(Matrices.norm(Q*R - A[:, p]) < 1e3*eps*Matrices.norm(A), "Matrices.QR (pivoting) failed");
+    assert(Matrices.norm(transpose(Q)*Q - identity(3)) < 1e3*eps, "Matrices.QR: Q is not orthogonal");
+    (Q, R) := Matrices.QR(A, pivoting=false);
+    assert(Matrices.norm(Q*R - A) < 1e3*eps*Matrices.norm(A), "Matrices.QR (no pivoting) failed");
+
+    // eigenValues, eigenValueMatrix: real and complex eigenvalues
+    ev := Matrices.eigenValues(S);
+    assert(abs(min(ev[:, 1]) + 2) < 1e3*eps and abs(max(ev[:, 1]) + 1) < 1e3*eps and
+      max(abs(ev[:, 2])) < 1e3*eps, "Matrices.eigenValues (real) failed");
+    J := Matrices.eigenValueMatrix(ev);
+    assert(abs(J[1, 2]) < 1e3*eps and abs(J[2, 1]) < 1e3*eps and abs(J[1, 1] + J[2, 2] + 3) < 1e3*eps,
+      "Matrices.eigenValueMatrix (real) failed");
+    ev := Matrices.eigenValues([0, -2; 2, 0]);
+    assert(max(abs(ev[:, 1])) < 1e3*eps and abs(abs(ev[1, 2]) - 2) < 1e3*eps,
+      "Matrices.eigenValues (complex) failed");
+    J := Matrices.eigenValueMatrix(ev);
+    assert(abs(J[1, 1]) < 1e3*eps and abs(abs(J[1, 2]) - 2) < 1e3*eps and abs(J[1, 2] + J[2, 1]) < 1e3*eps,
+      "Matrices.eigenValueMatrix (complex) failed");
+
+    // exp, integralExp, integralExpT against the analytic solution for eigenvalues -1, -2
+    phiRef := [2*Modelica.Math.exp(-T) - Modelica.Math.exp(-2*T), Modelica.Math.exp(-T) - Modelica.Math.exp(-2*T);
+               -2*Modelica.Math.exp(-T) + 2*Modelica.Math.exp(-2*T), -Modelica.Math.exp(-T) + 2*Modelica.Math.exp(-2*T)];
+    phi := Matrices.exp(S, T);
+    assert(Matrices.norm(phi - phiRef) < 1e3*eps, "Matrices.exp failed");
+    (phi, gamma) := Matrices.integralExp(S, Bs, T);
+    assert(Matrices.norm(phi - phiRef) < 1e3*eps and
+      Matrices.norm(S*gamma - (phiRef - identity(2))*Bs) < 1e3*eps, "Matrices.integralExp failed");
+    (phi, gamma, gamma1) := Matrices.integralExpT(S, Bs, T);
+    // integral((T-t)*exp(S*t)) = S^-2*(exp(S*T) - I - S*T)
+    assert(Matrices.norm(S*S*gamma1 - (phiRef - identity(2) - S*T)*Bs) < 1e3*eps and
+      Matrices.norm(S*gamma - (phiRef - identity(2))*Bs) < 1e3*eps, "Matrices.integralExpT failed");
+
+    // sort rows and columns, ascending and descending
+    (Msorted, indices) := Matrices.sort(M);
+    assert(indices[1] == 2 and indices[2] == 3 and indices[3] == 1 and Matrices.isEqual(Msorted, M[indices, :]),
+      "Matrices.sort (rows, ascending) failed");
+    (Msorted, indices) := Matrices.sort(M, ascending=false);
+    assert(indices[1] == 1 and indices[2] == 3 and indices[3] == 2, "Matrices.sort (rows, descending) failed");
+    (Msorted, indices) := Matrices.sort(M, sortRows=false);
+    assert(indices[1] == 2 and indices[2] == 3 and indices[3] == 1 and Matrices.isEqual(Msorted, M[:, indices]),
+      "Matrices.sort (columns) failed");
+
+    // flipLeftRight, flipUpDown
+    assert(Matrices.isEqual(Matrices.flipLeftRight(M), M[:, {3, 2, 1}]), "Matrices.flipLeftRight failed");
+    assert(Matrices.isEqual(Matrices.flipUpDown(M), M[{3, 2, 1}, :]), "Matrices.flipUpDown failed");
+
+    ok := true;
+  end Matrices4;
+
+  model TestMatrices4
+    extends Modelica.Icons.Example;
+
+    Boolean result;
+  algorithm
+    when initial() then
+      result := ModelicaTest.Math.Matrices4();
+    end when;
+
+    annotation (experiment(StopTime=0));
+  end TestMatrices4;
+
+  function LAPACK2
+    "Test of LAPACK functions of Modelica.Math.Matrices.LAPACK that have no wrapper in Modelica.Math.Matrices"
+    extends Modelica.Icons.Function;
+    import Modelica.Math.Matrices;
+    import Modelica.Math.Matrices.LAPACK;
+    import Modelica.Math.Vectors;
+    import Modelica.Utilities.Streams;
+
+    input String logFile="ModelicaTestLog.txt"
+      "Filename where the log is stored";
+    output Boolean ok;
+  protected
+    constant Real eps=1e-10 "Tolerance of the checks";
+    // tridiagonal system tridiag(1, 4, 1)*x = b with x = {1, 2, 3, 4}
+    Real AB[4,4]=[0, 0, 0, 0; 0, 1, 1, 1; 4, 4, 4, 4; 1, 1, 1, 0] "Band storage (kLower = kUpper = 1)";
+    Real b[4]={6, 12, 18, 19} "Right-hand side";
+    Real xRef[4]={1, 2, 3, 4} "Exact solution";
+    Real x[4];
+    Real X[4,2];
+    Integer info;
+    // least squares: fit y = x1 + x2*t through (0,1), (1,2), (2,4)
+    Real Als[3,2]=[1, 0; 1, 1; 1, 2];
+    Real xls[3];
+    // singular values of [3, 0; 4, 5]: sqrt(45), sqrt(5)
+    Real Asv[2,2]=[3, 0; 4, 5];
+    Real sigma[2];
+    Real U[2,2];
+    Real VT[2,2];
+    // eigenvalues -1, -2 and generalized eigenvalues of (S, diag(1, 2)): -0.75 +/- 0.6614j
+    Real S[2,2]=[0, 1; -2, -3];
+    Real Bg[2,2]=[1, 0; 0, 2];
+    Real alphaReal[2];
+    Real alphaImag[2];
+    Real beta[2];
+    Real lV[2,2];
+    Real rV[2,2];
+    Real AS[2,2];
+    // QR and Hessenberg reflectors
+    Real A[3,3]=[4, -2, 1; 3, 6, -4; 2, 1, 8];
+    Real QR[3,3];
+    Real tau[3];
+    Real tauH[2];
+    Real work[9];
+    Real Q[3,3];
+    Real Q2[3,3];
+    Integer piv[3];
+    Real H[3,3];
+    // Schur form and eigenvectors of a symmetric matrix
+    Real M[3,3]=[3, 1, 2; 1, 5, 0; 2, 0, 4];
+    Real T[3,3];
+    Real Z[3,3];
+    Real wr[3];
+    Real wi[3];
+    Real lEV[3,3];
+    Real rEV[3,3];
+    // triangular solve X*U = Bt
+    Real Ut[2,2]=[2, 1; 0, 4];
+    Real Bt[2,2]=[1, 2; 3, 4];
+    Real Xt[2,2];
+  algorithm
+    Streams.print("... Test of further functions of Modelica.Math.Matrices.LAPACK");
+    Streams.print("... Test of further functions of Modelica.Math.Matrices.LAPACK", logFile);
+
+    // dgbsv, dgbsv_vec: banded solver
+    (x, info) := LAPACK.dgbsv_vec(4, 1, 1, AB, b);
+    assert(info == 0 and Vectors.norm(x - xRef) < eps, "LAPACK.dgbsv_vec failed");
+    (X, info) := LAPACK.dgbsv(4, 1, 1, AB, [b, 2*b]);
+    assert(info == 0 and Matrices.norm(X - [xRef, 2*xRef]) < eps, "LAPACK.dgbsv failed");
+
+    // dgtsv, dgtsv_vec: tridiagonal solver
+    (x, info) := LAPACK.dgtsv_vec({1, 1, 1}, {4, 4, 4, 4}, {1, 1, 1}, b);
+    assert(info == 0 and Vectors.norm(x - xRef) < eps, "LAPACK.dgtsv_vec failed");
+    (X, info) := LAPACK.dgtsv({1, 1, 1}, {4, 4, 4, 4}, {1, 1, 1}, [b, 2*b]);
+    assert(info == 0 and Matrices.norm(X - [xRef, 2*xRef]) < eps, "LAPACK.dgtsv failed");
+
+    // dgels_vec: least squares solution x = {5/6, 3/2}
+    (xls, info) := LAPACK.dgels_vec(Als, {1, 2, 4});
+    assert(info == 0 and abs(xls[1] - 5/6) < eps and abs(xls[2] - 1.5) < eps, "LAPACK.dgels_vec failed");
+
+    // dgesvd_sigma, dgesdd: singular values and decomposition
+    (sigma, info) := LAPACK.dgesvd_sigma(Asv);
+    assert(info == 0 and abs(sigma[1] - sqrt(45)) < eps and abs(sigma[2] - sqrt(5)) < eps,
+      "LAPACK.dgesvd_sigma failed");
+    (sigma, U, VT, info) := LAPACK.dgesdd(Asv);
+    assert(info == 0 and Matrices.norm(U*diagonal(sigma)*VT - Asv) < eps, "LAPACK.dgesdd failed");
+
+    // dgeevx: eigenvalues and right eigenvectors (S*v = lambda*v)
+    (alphaReal, alphaImag, lV, rV, AS, info) := LAPACK.dgeevx(S);
+    assert(info == 0 and abs(min(alphaReal) + 2) < eps and abs(max(alphaReal) + 1) < eps and
+      max(abs(alphaImag)) < eps, "LAPACK.dgeevx eigenvalues failed");
+    assert(Matrices.norm(S*rV - rV*diagonal(alphaReal)) < 1e3*eps, "LAPACK.dgeevx eigenvectors failed");
+
+    // dggev, dggevx: generalized eigenvalues of (S, Bg); dhgeqz is tested in LAPACKdhgeqz
+    (alphaReal, alphaImag, beta, lV, rV, info) := LAPACK.dggev(S, Bg);
+    assert(info == 0 and Vectors.norm(alphaReal ./ beta - {-0.75, -0.75}) < eps and
+      Vectors.norm(abs(alphaImag ./ beta) - fill(sqrt(7)/4, 2)) < eps, "LAPACK.dggev failed");
+    (alphaReal, alphaImag, beta, lV, rV, info) := LAPACK.dggevx(S, Bg);
+    assert(info == 0 and Vectors.norm(alphaReal ./ beta - {-0.75, -0.75}) < eps and
+      Vectors.norm(abs(alphaImag ./ beta) - fill(sqrt(7)/4, 2)) < eps, "LAPACK.dggevx failed");
+
+    // dgeqrf, dorgqr, dormqr: QR = A with orthogonal Q
+    (QR, tau, info, work) := LAPACK.dgeqrf(A);
+    assert(info == 0, "LAPACK.dgeqrf failed");
+    (Q, info) := LAPACK.dorgqr(QR, tau);
+    assert(info == 0 and Matrices.norm(transpose(Q)*Q - identity(3)) < eps and
+      Matrices.norm(Q*{{if j >= i then QR[i, j] else 0 for j in 1:3} for i in 1:3} - A) < eps*Matrices.norm(A), "LAPACK.dgeqrf/dorgqr failed");
+    (Q2, info) := LAPACK.dormqr(identity(3), QR, tau);
+    assert(info == 0 and Matrices.norm(Q2 - Q) < eps, "LAPACK.dormqr failed");
+
+    // dgeqp3: QR with column pivoting
+    (QR, tau, piv, info) := LAPACK.dgeqp3(A);
+    (Q, info) := LAPACK.dorgqr(QR, tau);
+    assert(info == 0 and Matrices.norm(Q*{{if j >= i then QR[i, j] else 0 for j in 1:3} for i in 1:3} - A[:, piv]) < eps*Matrices.norm(A),
+      "LAPACK.dgeqp3 failed");
+
+    // dormhr: Q of the Hessenberg reduction, Q'*A*Q = H
+    (H, tauH, info) := LAPACK.dgehrd(A);
+    (Q, info) := LAPACK.dormhr(identity(3), H, tauH);
+    assert(info == 0 and Matrices.norm(transpose(Q)*A*Q - {{if j >= i - 1 then H[i, j] else 0 for j in 1:3} for i in 1:3}) < eps*Matrices.norm(A),
+      "LAPACK.dormhr failed");
+
+    // dtrevc: eigenvectors from the real Schur form, M*v = lambda*v
+    (T, Z, wr, wi) := Matrices.realSchur(M);
+    (lEV, rEV, info) := LAPACK.dtrevc(T, "R", "B", Z);
+    assert(info == 0, "LAPACK.dtrevc failed");
+    for i in 1:3 loop
+      assert(Vectors.norm(M*rEV[:, i] - T[i, i]*rEV[:, i]) < 1e3*eps*Vectors.norm(rEV[:, i]),
+        "LAPACK.dtrevc: column " + String(i) + " is not an eigenvector");
+    end for;
+
+    // dtrsm: solve X*Ut = Bt for upper triangular Ut
+    Xt := LAPACK.dtrsm(Ut, Bt, 1, right=true, upper=true);
+    assert(Matrices.norm(Xt*Ut - Bt) < eps, "LAPACK.dtrsm failed");
+
+    ok := true;
+  end LAPACK2;
+
+  model TestLAPACK2
+    extends Modelica.Icons.Example;
+
+    Boolean result;
+  algorithm
+    when initial() then
+      result := ModelicaTest.Math.LAPACK2();
+    end when;
+
+    annotation (experiment(StopTime=0));
+  end TestLAPACK2;
+
+  impure function FFTAndMisc
+    "Test of FFT functions, Vectors functions, acosh and automaticGlobalSeed"
+    extends Modelica.Icons.Function;
+    import Modelica.Math.FastFourierTransform;
+    import Modelica.Math.Vectors;
+    import Modelica.Utilities.Streams;
+
+    input String logFile="ModelicaTestLog.txt"
+      "Filename where the log is stored";
+    output Boolean ok;
+  protected
+    constant Real eps=1e-12 "Tolerance of the checks";
+    Integer ns "Number of FFT sample points";
+    Boolean success;
+    Integer e2;
+    Integer e3;
+    Integer e5;
+    Real u[40] "Samples of sin(2*pi*2*t) + 0.5*cos(2*pi*3*t) over 1 s";
+    Real amplitudes[5] "FFT amplitudes at 0, 1, 2, 3, 4 Hz";
+    Real phases[5] "FFT phases";
+    Integer info;
+    String fileName "Temporary file for realFFTwriteToFile";
+    Real v[3]={3, -1, 2};
+    Real sorted[3];
+    Integer indices[3];
+    Integer seed;
+  algorithm
+    Streams.print("... Test of FFT and further functions of Modelica.Math");
+    Streams.print("... Test of FFT and further functions of Modelica.Math", logFile);
+
+    // FFT: 40 = 2^3*5 sample points for f_max = 4 Hz, f_resolution = 1 Hz
+    (success, e2, e3, e5) := FastFourierTransform.Internal.prime235Factorization(40);
+    assert(success and e2 == 3 and e3 == 0 and e5 == 1, "FastFourierTransform.Internal.prime235Factorization failed");
+    (success, e2, e3, e5) := FastFourierTransform.Internal.prime235Factorization(14);
+    assert(not success, "FastFourierTransform.Internal.prime235Factorization(14) must fail");
+    ns := FastFourierTransform.realFFTsamplePoints(4, 1);
+    assert(ns == 40, "FastFourierTransform.realFFTsamplePoints failed: " + String(ns));
+    FastFourierTransform.realFFTinfo(4, 1);
+    u := {sin(2*Modelica.Constants.pi*2*(i - 1)/40) + 0.5*cos(2*Modelica.Constants.pi*3*(i - 1)/40) for i in 1:40};
+    (info, amplitudes, phases) := FastFourierTransform.realFFT(u, 5);
+    Streams.print("    realFFT: info = " + String(info) + ", amplitudes = " + Modelica.Math.Vectors.toString(amplitudes)
+      + ", phases = " + Modelica.Math.Vectors.toString(phases));
+    // the absolute amplitudes are checked in RealFFTAmplitudes; here only quantities that do not
+    // depend on the normalization: amplitude ratio 2:1, no other frequencies, phases -90 and 0 deg
+    assert(info == 0 and abs(amplitudes[3]/amplitudes[4] - 2) < 1e-10 and
+      abs(amplitudes[1]) + abs(amplitudes[2]) + abs(amplitudes[5]) < 1e-10*amplitudes[3] and
+      abs(phases[3] + 90) < 1e-8 and abs(phases[4]) < 1e-8, "FastFourierTransform.realFFT failed");
+    fileName := Modelica.Utilities.Files.temporaryFileName() + ".mat";
+    success := FastFourierTransform.realFFTwriteToFile(1, fileName, 4, amplitudes, phases);
+    assert(success and Modelica.Utilities.Files.exist(fileName), "FastFourierTransform.realFFTwriteToFile failed");
+    Modelica.Utilities.Files.removeFile(fileName);
+
+    // Vectors: isEqual, reverse, sort, find
+    assert(Vectors.isEqual(v, {3, -1, 2}) and Vectors.isEqual(v, v + fill(1e-3, 3), 1e-2) and
+      not Vectors.isEqual(v, {3, -1}) and not Vectors.isEqual(v, {3, -1, 2.1}), "Vectors.isEqual failed");
+    assert(Vectors.isEqual(Vectors.reverse(v), {2, -1, 3}), "Vectors.reverse failed");
+    (sorted, indices) := Vectors.sort(v);
+    assert(Vectors.isEqual(sorted, {-1, 2, 3}) and indices[1] == 2 and indices[2] == 3 and indices[3] == 1,
+      "Vectors.sort (ascending) failed");
+    (sorted, indices) := Vectors.sort(v, ascending=false);
+    assert(Vectors.isEqual(sorted, {3, 2, -1}) and indices[1] == 1, "Vectors.sort (descending) failed");
+    assert(Vectors.find(2, v) == 3 and Vectors.find(2.05, v, 0.1) == 3 and Vectors.find(5, v) == 0,
+      "Vectors.find failed");
+
+    // acosh
+    assert(abs(Modelica.Math.acosh(Modelica.Math.cosh(1.5)) - 1.5) < eps and abs(Modelica.Math.acosh(1)) < eps,
+      "Math.acosh failed");
+
+    // automaticGlobalSeed: impure, only check that it can be called
+    seed := Modelica.Math.Random.Utilities.automaticGlobalSeed();
+    Streams.print("    automaticGlobalSeed() = " + String(seed));
+
+    ok := true;
+  end FFTAndMisc;
+
+  model TestFFTAndMisc
+    extends Modelica.Icons.Example;
+
+    Boolean result;
+  algorithm
+    when initial() then
+      result := ModelicaTest.Math.FFTAndMisc();
+    end when;
+
+    annotation (experiment(StopTime=0));
+  end TestFFTAndMisc;
+
+  model PolynomialDerivatives "Test of the derivative functions of Modelica.Math.Polynomials"
+    extends Modelica.Icons.Example;
+    import Modelica.Math.Polynomials;
+
+    parameter Real p[4]={2, -3, 0.5, 1} "Polynomial 2*u^3 - 3*u^2 + 0.5*u + 1";
+    Real u=sin(2*Modelica.Constants.pi*time) "Abscissa value";
+    Real y=Polynomials.evaluate(p, u) "Value of polynomial";
+    Real der_y=der(y) "Time derivative of polynomial";
+    Real dy=Polynomials.derivativeValue(p, u) "Derivative of polynomial w.r.t. u";
+    Real der_dy=der(dy) "Time derivative of dy, uses derivativeValue_der";
+    Real d2y=Polynomials.secondDerivativeValue(p, u) "Second derivative of polynomial w.r.t. u";
+    Real der_dyError=der_dy - d2y*der(u) "Must be zero";
+    Real yInt=Polynomials.integralValue(p, u, -1) "Integral of polynomial from -1 to u";
+    Real der_yInt=der(yInt) "Time derivative of yInt, uses integralValue_der";
+    Real der_yIntError=der_yInt - y*der(u) "Must be zero";
+    Real yRange=Polynomials.evaluateWithRange(p, -0.5, 0.5, u)
+      "Polynomial in [-0.5, 0.5], linearly extrapolated outside";
+    Real der_yRange=der(yRange) "Time derivative of yRange, uses evaluateWithRange_der";
+    annotation (experiment(StopTime=2.0), Documentation(info="<html>
+<p>
+Differentiates polynomial evaluations explicitly with <code>der()</code>, so the
+tool has to use the derivative functions of
+<a href=\"modelica://Modelica.Math.Polynomials\">Modelica.Math.Polynomials</a>:
+derivativeValue_der, integralValue_der and evaluateWithRange_der.
+secondDerivativeValue is evaluated directly. The variables
+<code>der_dyError</code> and <code>der_yIntError</code> compare the derivatives with
+the analytic chain rule and must be zero.
+</p>
+</html>"));
+  end PolynomialDerivatives;
+
+  function LAPACKdhgeqz "Test of Modelica.Math.Matrices.LAPACK.dhgeqz"
+    extends Modelica.Icons.Function;
+    import Modelica.Math.Matrices.LAPACK;
+    import Modelica.Math.Vectors;
+    import Modelica.Utilities.Streams;
+
+    input String logFile="ModelicaTestLog.txt"
+      "Filename where the log is stored";
+    output Boolean ok;
+  protected
+    Real S[2,2]=[0, 1; -2, -3] "Upper Hessenberg matrix";
+    Real Bg[2,2]=[1, 0; 0, 2] "Upper triangular matrix";
+    Real alphaReal[2];
+    Real alphaImag[2];
+    Real beta[2];
+    Integer info;
+  algorithm
+    Streams.print("... Test of Modelica.Math.Matrices.LAPACK.dhgeqz");
+    Streams.print("... Test of Modelica.Math.Matrices.LAPACK.dhgeqz", logFile);
+
+    // generalized eigenvalues of (S, Bg): 2*lambda^2 + 3*lambda + 2 = 0
+    (alphaReal, alphaImag, beta, info) := LAPACK.dhgeqz(S, Bg);
+    assert(info == 0 and Vectors.norm(alphaReal ./ beta - {-0.75, -0.75}) < 1e-10 and
+      Vectors.norm(abs(alphaImag ./ beta) - fill(sqrt(7)/4, 2)) < 1e-10, "LAPACK.dhgeqz failed");
+
+    ok := true;
+    annotation (Documentation(info="<html>
+<p>
+Computes the generalized eigenvalues of a 2x2 pencil with
+<a href=\"modelica://Modelica.Math.Matrices.LAPACK.dhgeqz\">LAPACK.dhgeqz</a>.
+</p>
+<p>
+Note: this test currently fails. In dhgeqz the protected variable
+<code>Real Q[1, 1]=fill(0, 1, n)</code> has inconsistent sizes for every
+n &gt; 1, so the function can only be called for 1x1 systems. Q is not referenced
+(compq = \"N\", ldq = 1), so <code>fill(0, 1, 1)</code> would be sufficient.
+</p>
+</html>"));
+  end LAPACKdhgeqz;
+
+  model TestLAPACKdhgeqz
+    extends Modelica.Icons.Example;
+
+    Boolean result;
+  algorithm
+    when initial() then
+      result := ModelicaTest.Math.LAPACKdhgeqz();
+    end when;
+
+    annotation (experiment(StopTime=0));
+  end TestLAPACKdhgeqz;
+
+  function quadratureIntegrand "Integrand u^3 for the test of quadratureNewtonCotes"
+    extends Modelica.Math.Nonlinear.Interfaces.partialScalarFunction;
+  algorithm
+    y := u^3;
+  end quadratureIntegrand;
+
+  function Quadrature "Test of Modelica.Math.Nonlinear.quadratureNewtonCotes"
+    extends Modelica.Icons.Function;
+    import Modelica.Utilities.Streams;
+
+    input String logFile="ModelicaTestLog.txt"
+      "Filename where the log is stored";
+    output Boolean ok;
+  algorithm
+    Streams.print("... Test of Modelica.Math.Nonlinear.quadratureNewtonCotes");
+    Streams.print("... Test of Modelica.Math.Nonlinear.quadratureNewtonCotes", logFile);
+
+    // integral of u^3 over [0, 2] = 4; Simpson's rule (d = 2) and higher degrees are exact for u^3
+    for d in 2:6 loop
+      assert(abs(Modelica.Math.Nonlinear.quadratureNewtonCotes(quadratureIntegrand, 0, 2, N=12, d=d) - 4) < 1e-12,
+        "Nonlinear.quadratureNewtonCotes failed for d = " + String(d));
+    end for;
+    // trapezoidal rule (d = 1): error = (b - a)*h^2/12*f''(xi) <= 2*(2/360)^2/12*12 = 6.2e-5
+    assert(abs(Modelica.Math.Nonlinear.quadratureNewtonCotes(quadratureIntegrand, 0, 2, N=360, d=1) - 4) < 1e-4,
+      "Nonlinear.quadratureNewtonCotes failed for d = 1");
+
+    ok := true;
+  end Quadrature;
+
+  model TestQuadrature
+    extends Modelica.Icons.Example;
+
+    Boolean result;
+  algorithm
+    when initial() then
+      result := ModelicaTest.Math.Quadrature();
+    end when;
+
+    annotation (experiment(StopTime=0));
+  end TestQuadrature;
+
+  function RealFFTAmplitudes "Test of the amplitude normalization of Modelica.Math.FastFourierTransform.realFFT"
+    extends Modelica.Icons.Function;
+    import Modelica.Utilities.Streams;
+
+    input String logFile="ModelicaTestLog.txt"
+      "Filename where the log is stored";
+    output Boolean ok;
+  protected
+    Real u[40] "Samples of 2 + sin(2*pi*2*t) + 0.5*cos(2*pi*3*t) over 1 s";
+    Real amplitudes[5] "FFT amplitudes at 0, 1, 2, 3, 4 Hz";
+    Real phases[5] "FFT phases";
+    Integer info;
+  algorithm
+    Streams.print("... Test of the amplitude normalization of FastFourierTransform.realFFT");
+    Streams.print("... Test of the amplitude normalization of FastFourierTransform.realFFT", logFile);
+
+    u := {2 + sin(2*Modelica.Constants.pi*2*(i - 1)/40) + 0.5*cos(2*Modelica.Constants.pi*3*(i - 1)/40)
+      for i in 1:40};
+    (info, amplitudes, phases) := Modelica.Math.FastFourierTransform.realFFT(u, 5);
+    Streams.print("    amplitudes = " + Modelica.Math.Vectors.toString(amplitudes));
+    assert(info == 0 and abs(amplitudes[1] - 2) < 1e-10, "FastFourierTransform.realFFT: wrong mean value");
+    assert(abs(amplitudes[3] - 1) < 1e-10 and abs(amplitudes[4] - 0.5) < 1e-10,
+      "FastFourierTransform.realFFT: wrong amplitudes (expected 1 at 2 Hz and 0.5 at 3 Hz)");
+
+    ok := true;
+    annotation (Documentation(info="<html>
+<p>
+Samples 2 + sin(2&pi;&middot;2&middot;t) + 0.5&middot;cos(2&pi;&middot;3&middot;t) at 40 points over one second
+and checks the absolute amplitudes that
+<a href=\"modelica://Modelica.Math.FastFourierTransform.realFFT\">realFFT</a> returns.
+</p>
+<p>
+Note: this test currently fails. The mean value (2) is correct, but the
+amplitudes are 0.952381 and 0.476190, i.e. the expected values times
+N/(N+2) = 40/42. In <code>ModelicaFFT_kiss_fftr</code> (ModelicaFFT.c) the
+DFT magnitudes are divided by <code>nf</code> = N/2 + 1. The amplitude of a
+sinusoid is |X_k|&middot;2/N, so the divisor must be N/2. The relative error is
+2/(N+2): about 1 % for the 200 sample points of
+<a href=\"modelica://Modelica.Math.FastFourierTransform.Examples.RealFFT1\">Examples.RealFFT1</a>.
+It also affects <a href=\"modelica://Modelica.Blocks.Math.RealFFT\">Blocks.Math.RealFFT</a>.
+</p>
+</html>"));
+  end RealFFTAmplitudes;
+
+  model TestRealFFTAmplitudes
+    extends Modelica.Icons.Example;
+
+    Boolean result;
+  algorithm
+    when initial() then
+      result := ModelicaTest.Math.RealFFTAmplitudes();
+    end when;
+
+    annotation (experiment(StopTime=0));
+  end TestRealFFTAmplitudes;
 end Math;

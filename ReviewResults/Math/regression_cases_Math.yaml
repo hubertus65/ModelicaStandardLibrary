@@ -1,0 +1,102 @@
+# ModCheck case list: new ModelicaTest.Math coverage tests (branch coverage-improvement).
+#
+# Each case is one new test model, run unmodified on Modelon Impact (MSL 4.1.0
+# dependency). Variables are the comparison signals of the model, as listed in
+# ModelicaTest/Resources/Reference/ModelicaTest/Math/<Model>/comparisonSignals.txt.
+# ncp gives 500 output intervals per second of simulated time.
+library: ModelicaTest
+workspace: msl-coverage
+custom_function: dynamic
+tolerance: 0.001
+
+cases:
+  - name: TestMatrices4
+    enabled: true
+    model: ModelicaTest.Math.TestMatrices4
+    start_time: 0.0
+    final_time: 0.01
+    ncp: 10
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "result"
+  - name: TestLAPACK2
+    enabled: true
+    model: ModelicaTest.Math.TestLAPACK2
+    start_time: 0.0
+    final_time: 0.01
+    ncp: 10
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "result"
+  - name: TestFFTAndMisc
+    enabled: true
+    model: ModelicaTest.Math.TestFFTAndMisc
+    start_time: 0.0
+    final_time: 0.01
+    ncp: 10
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "result"
+  - name: PolynomialDerivatives
+    enabled: true
+    model: ModelicaTest.Math.PolynomialDerivatives
+    start_time: 0.0
+    final_time: 2.0
+    ncp: 1000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "y"
+      - "der_y"
+      - "dy"
+      - "der_dy"
+      - "d2y"
+      - "der_dyError"
+      - "yInt"
+      - "der_yInt"
+      - "der_yIntError"
+      - "yRange"
+      - "der_yRange"
+  - name: TestLAPACKdhgeqz
+    # disabled: fails by design until the MSL bug is fixed: LAPACK.dhgeqz declares Real Q[1, 1]=fill(0, 1, n), which is inconsistent for n > 1
+    enabled: false
+    model: ModelicaTest.Math.TestLAPACKdhgeqz
+    start_time: 0.0
+    final_time: 0.01
+    ncp: 10
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "result"
+  - name: TestQuadrature
+    # disabled: Nonlinear.quadratureNewtonCotes is new in MSL 4.2 and not available in the MSL 4.1.0 of Modelon Impact
+    enabled: false
+    model: ModelicaTest.Math.TestQuadrature
+    start_time: 0.0
+    final_time: 0.01
+    ncp: 10
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "result"
+  - name: TestRealFFTAmplitudes
+    # disabled: fails by design until the MSL bug is fixed: ModelicaFFT_kiss_fftr divides the DFT magnitudes by N/2+1 instead of N/2 (amplitudes too small by N/(N+2))
+    enabled: false
+    model: ModelicaTest.Math.TestRealFFTAmplitudes
+    start_time: 0.0
+    final_time: 0.01
+    ncp: 10
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "result"
