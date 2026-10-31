@@ -1,0 +1,3 @@
+time
+squareWaveInteger.y
+squareWaveBoolean.y

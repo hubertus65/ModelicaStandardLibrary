@@ -1,0 +1,423 @@
+[
+  {
+    "name": "BooleanSamplersAndHolds",
+    "model": "ModelicaTest.Clocked.BooleanSamplersAndHolds",
+    "variables": [
+      "countTicks.y",
+      "countTriggers.y",
+      "hold1.y",
+      "hold10.y",
+      "hold11.y",
+      "hold12.y",
+      "hold13.y",
+      "hold14.y",
+      "hold15.y",
+      "hold2.y",
+      "hold3.y",
+      "hold4.y",
+      "hold5.y",
+      "hold6.y",
+      "hold7.y",
+      "hold8.y",
+      "hold9.y",
+      "time"
+    ],
+    "metrics": {
+      "state_events": 15,
+      "time_events": 16,
+      "steps": 52566,
+      "function_evaluations": 52566,
+      "jacobian_evaluations": 0,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "cpu_time": 0.0062338,
+      "simulation_time": 0.0029375,
+      "kind": "dynamic",
+      "solver": "cvode",
+      "wall_time": 0.1409302999963984,
+      "samples": 1252,
+      "omc_version": "OpenModelica v1.27.1 (64-bit)",
+      "msl_version": "4.2.0 dev",
+      "spread_applied": true,
+      "rtol": 1e-06
+    },
+    "descriptor": "openmodelica v1.27.1 (64-bit), MSL 4.2.0 dev, cvode",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 7630,
+    "record": {
+      "schema": 1,
+      "record_id": "9cb6c810de30b50cdfa641bf5ee8187c4c4e7559e6c81c4a33ad0d8a22e68b5a",
+      "executable": {},
+      "experiment": {
+        "case_entry_sha256": "5edf0e6c026cb53781a327ca2127669c552076e717fcf7efb45dd353fbf21836",
+        "descriptor": "openmodelica v1.27.1 (64-bit), MSL 4.2.0 dev, cvode",
+        "rtol_factor": 1.0
+      },
+      "model": {
+        "class": "ModelicaTest.Clocked.BooleanSamplersAndHolds",
+        "libraries": [
+          {
+            "git_commit": "ab530da30323c1856d4bcd86e8181822db8b2737",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 7630,
+        "file": "BooleanSamplersAndHolds.npz",
+        "format": "npz",
+        "sha256": "bd18fc50bc2e3493e096844c3d18a56922bad5f00af6c2e195225877d10f0a6f"
+      },
+      "run": {
+        "utc": "2026-10-31T05:47:08+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "Clocks",
+    "model": "ModelicaTest.Clocked.Clocks",
+    "variables": [
+      "fixedRotationalClock1.direction",
+      "lastTick_conjunctiveClock1.y",
+      "lastTick_disjunctiveClock1.y",
+      "lastTick_eventClock1.y",
+      "lastTick_fixedRotationalClock1.y",
+      "lastTick_periodicExactClock1.y",
+      "lastTick_periodicExactClock2.y",
+      "lastTick_rotationalClock1.y",
+      "lastTick_shiftSampleClock1.y",
+      "lastTick_subSampleClock1.y",
+      "lastTick_superSampleClock1.y",
+      "rotationalClock1.direction",
+      "time"
+    ],
+    "metrics": {
+      "state_events": 15,
+      "time_events": 7,
+      "steps": 33572,
+      "function_evaluations": 33572,
+      "jacobian_evaluations": 0,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "cpu_time": 0.0053045,
+      "simulation_time": 0.0023342,
+      "kind": "dynamic",
+      "solver": "cvode",
+      "wall_time": 0.11011040001176298,
+      "samples": 995,
+      "omc_version": "OpenModelica v1.27.1 (64-bit)",
+      "msl_version": "4.2.0 dev",
+      "spread_applied": true,
+      "rtol": 1e-06
+    },
+    "descriptor": "openmodelica v1.27.1 (64-bit), MSL 4.2.0 dev, cvode",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 7756,
+    "record": {
+      "schema": 1,
+      "record_id": "9705e5df88fd8142765807417de36bc7fc55dd22b3623433d507d5e352efbfd2",
+      "executable": {},
+      "experiment": {
+        "case_entry_sha256": "17c066ff6bda502e78a9763eb724dcc7b4e6778ca2a844179f215f40cb5a27e9",
+        "descriptor": "openmodelica v1.27.1 (64-bit), MSL 4.2.0 dev, cvode",
+        "rtol_factor": 1.0
+      },
+      "model": {
+        "class": "ModelicaTest.Clocked.Clocks",
+        "libraries": [
+          {
+            "git_commit": "ab530da30323c1856d4bcd86e8181822db8b2737",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 7756,
+        "file": "Clocks.npz",
+        "format": "npz",
+        "sha256": "dd284652c614037788229f049ba4866437ff5924d9430c73d456ba14afa16526"
+      },
+      "run": {
+        "utc": "2026-10-31T05:47:25+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "IntegerSamplersAndHolds",
+    "model": "ModelicaTest.Clocked.IntegerSamplersAndHolds",
+    "variables": [
+      "countTriggers.y",
+      "hold1.y",
+      "hold10.y",
+      "hold11.y",
+      "hold12.y",
+      "hold13.y",
+      "hold2.y",
+      "hold3.y",
+      "hold4.y",
+      "hold5.y",
+      "hold6.y",
+      "hold7.y",
+      "hold8.y",
+      "hold9.y",
+      "time"
+    ],
+    "metrics": {
+      "state_events": 1,
+      "time_events": 0,
+      "steps": 13559,
+      "function_evaluations": 13559,
+      "jacobian_evaluations": 0,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "cpu_time": 0.0050029,
+      "simulation_time": 0.0021626,
+      "kind": "dynamic",
+      "solver": "cvode",
+      "wall_time": 0.12431290000677109,
+      "samples": 819,
+      "omc_version": "OpenModelica v1.27.1 (64-bit)",
+      "msl_version": "4.2.0 dev",
+      "spread_applied": true,
+      "rtol": 1e-06
+    },
+    "descriptor": "openmodelica v1.27.1 (64-bit), MSL 4.2.0 dev, cvode",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 5662,
+    "record": {
+      "schema": 1,
+      "record_id": "6ba80beac2660d69fe63172994808c266b0b0b334b99ef95eb2f79b3837d04b2",
+      "executable": {},
+      "experiment": {
+        "case_entry_sha256": "ac8a7e266794db43761fcc043757197467853feae1b3f53a188c1b9b45076143",
+        "descriptor": "openmodelica v1.27.1 (64-bit), MSL 4.2.0 dev, cvode",
+        "rtol_factor": 1.0
+      },
+      "model": {
+        "class": "ModelicaTest.Clocked.IntegerSamplersAndHolds",
+        "libraries": [
+          {
+            "git_commit": "ab530da30323c1856d4bcd86e8181822db8b2737",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 5662,
+        "file": "IntegerSamplersAndHolds.npz",
+        "format": "npz",
+        "sha256": "5f83c916c7aa8f6418f19991deab1e0eeb340200747f4847eddbba7766a46bf7"
+      },
+      "run": {
+        "utc": "2026-10-31T05:47:14+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "RealClockedBlocksAndSources",
+    "model": "ModelicaTest.Clocked.RealClockedBlocksAndSources",
+    "variables": [
+      "hold1.y",
+      "hold10.y",
+      "hold11.y",
+      "hold12.y",
+      "hold13.y",
+      "hold2.y",
+      "hold3.y",
+      "hold4.y",
+      "hold5.y",
+      "hold6.y",
+      "hold7.y",
+      "hold8.y",
+      "hold9.y",
+      "time"
+    ],
+    "metrics": {
+      "state_events": 0,
+      "time_events": 0,
+      "steps": 13302,
+      "function_evaluations": 13302,
+      "jacobian_evaluations": 0,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "cpu_time": 0.0046355,
+      "simulation_time": 0.0027173,
+      "kind": "dynamic",
+      "solver": "cvode",
+      "wall_time": 0.09383929998148233,
+      "samples": 605,
+      "omc_version": "OpenModelica v1.27.1 (64-bit)",
+      "msl_version": "4.2.0 dev",
+      "spread_applied": true,
+      "rtol": 1e-06
+    },
+    "descriptor": "openmodelica v1.27.1 (64-bit), MSL 4.2.0 dev, cvode",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 8343,
+    "record": {
+      "schema": 1,
+      "record_id": "f801d68c1e149b00137db699eaf4b4f4cfab680575a8a5b388922d38e75b683b",
+      "executable": {},
+      "experiment": {
+        "case_entry_sha256": "4c77d9ef8a2d6bf105135a6c3b13f51206cc9b8aa47be0f6ff667377c2613914",
+        "descriptor": "openmodelica v1.27.1 (64-bit), MSL 4.2.0 dev, cvode",
+        "rtol_factor": 1.0
+      },
+      "model": {
+        "class": "ModelicaTest.Clocked.RealClockedBlocksAndSources",
+        "libraries": [
+          {
+            "git_commit": "ab530da30323c1856d4bcd86e8181822db8b2737",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 8343,
+        "file": "RealClockedBlocksAndSources.npz",
+        "format": "npz",
+        "sha256": "45bd06e8b236e2e10c478b02b0ab1b4e45700582bb60ffd5e05260ec3d08bbfd"
+      },
+      "run": {
+        "utc": "2026-10-31T05:47:19+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "RealSamplersAndHolds",
+    "model": "ModelicaTest.Clocked.RealSamplersAndHolds",
+    "variables": [
+      "countTriggers.y",
+      "hold1.y",
+      "hold10.y",
+      "hold11.y",
+      "hold12.y",
+      "hold2.y",
+      "hold3.y",
+      "hold4.y",
+      "hold5.y",
+      "hold6.y",
+      "hold7.y",
+      "hold8.y",
+      "hold9.y",
+      "holdWithDAeffects1.y",
+      "squareWave1.y",
+      "time"
+    ],
+    "metrics": {
+      "state_events": 0,
+      "time_events": 0,
+      "steps": 46052,
+      "function_evaluations": 46052,
+      "jacobian_evaluations": 0,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "cpu_time": 0.0072403,
+      "simulation_time": 0.0013338,
+      "kind": "dynamic",
+      "solver": "cvode",
+      "wall_time": 0.16037559998221695,
+      "samples": 1268,
+      "omc_version": "OpenModelica v1.27.1 (64-bit)",
+      "msl_version": "4.2.0 dev",
+      "spread_applied": true,
+      "rtol": 1e-06
+    },
+    "descriptor": "openmodelica v1.27.1 (64-bit), MSL 4.2.0 dev, cvode",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 10108,
+    "record": {
+      "schema": 1,
+      "record_id": "eec9fa9f674b46e3fcc689ba21b1b9aaffcdb5bcd2b08ed039935eae4ed1832a",
+      "executable": {},
+      "experiment": {
+        "case_entry_sha256": "10ff1790b6e0b067de49b497c12081dfc441885cbaeb23387c74e6c42e1a5b8f",
+        "descriptor": "openmodelica v1.27.1 (64-bit), MSL 4.2.0 dev, cvode",
+        "rtol_factor": 1.0
+      },
+      "model": {
+        "class": "ModelicaTest.Clocked.RealSamplersAndHolds",
+        "libraries": [
+          {
+            "git_commit": "ab530da30323c1856d4bcd86e8181822db8b2737",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 10108,
+        "file": "RealSamplersAndHolds.npz",
+        "format": "npz",
+        "sha256": "75e0a4e1947f2c4f27ecd85ccb7d23059d106fe3cc31b252dbfe9dcbe4e5c002"
+      },
+      "run": {
+        "utc": "2026-10-31T05:47:02+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  }
+]

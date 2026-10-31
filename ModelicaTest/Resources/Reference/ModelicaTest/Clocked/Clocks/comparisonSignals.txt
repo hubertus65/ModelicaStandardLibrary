@@ -1,0 +1,13 @@
+time
+lastTick_periodicExactClock1.y
+lastTick_periodicExactClock2.y
+lastTick_eventClock1.y
+lastTick_conjunctiveClock1.y
+lastTick_disjunctiveClock1.y
+lastTick_subSampleClock1.y
+lastTick_superSampleClock1.y
+lastTick_shiftSampleClock1.y
+lastTick_rotationalClock1.y
+lastTick_fixedRotationalClock1.y
+rotationalClock1.direction
+fixedRotationalClock1.direction

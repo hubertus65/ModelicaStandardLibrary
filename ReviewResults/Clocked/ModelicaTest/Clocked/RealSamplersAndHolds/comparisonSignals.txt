@@ -1,0 +1,16 @@
+time
+countTriggers.y
+hold1.y
+hold10.y
+hold11.y
+hold12.y
+hold2.y
+hold3.y
+hold4.y
+hold5.y
+hold6.y
+hold7.y
+hold8.y
+hold9.y
+holdWithDAeffects1.y
+squareWave1.y

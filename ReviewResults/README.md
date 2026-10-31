@@ -6,6 +6,13 @@ they were produced with Modelon Impact (MSL 4.1.0 dependency, CVode) and still
 need to be confirmed with the usual reference-result tooling before they move
 to the reference-results repository.
 
+Exception: `Clocked/`. The MSL distribution of Modelon Impact does not contain
+`Modelica.Clocked`, so these cases run on OpenModelica 1.27.1 (CVode) with the
+libraries of this repository (MSL 4.2.0 dev). omc loads them through
+`loadModel(Modelica, {"4.2.0 dev"})`, so `OPENMODELICALIBRARY` must contain a
+directory with entries `Modelica 4.2.0 dev`, `ModelicaServices 4.2.0 dev` (junctions
+or symlinks to this repository) and `Complex 4.2.0 dev.mo`.
+
 Each `<SubLibrary>/` directory holds:
 
 | Path | Content |
