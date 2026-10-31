@@ -1,0 +1,5 @@
+time
+load.v[3].im
+mutualInductor.i[1].im
+mutualInductor.i[1].re
+mutualInductor.i[2].re

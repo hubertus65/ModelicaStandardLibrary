@@ -267,4 +267,31 @@ package SinglePhase "Single-phase quasi-static package"
     connect(complexRampC.y, impedanceC.Z_ref) annotation (Line(points={{69,-40},{62,-40}}, color={85,170,255}));
   annotation(experiment(StopTime = 1.0));
   end FrequencySweep;
+
+  model Rectifier_230V = Modelica.Electrical.QuasiStatic.SinglePhase.Examples.Rectifier(VAC=230)
+    "Variant of Rectifier with an AC voltage of 230 V"
+    annotation (experiment(StopTime=1.0, Interval=0.0001), Documentation(info="<html>
+<p>
+Variant of <a href=\"modelica://Modelica.Electrical.QuasiStatic.SinglePhase.Examples.Rectifier\">Rectifier</a> (GraetzRectifier, IdealACDCConverter) with an AC rms
+voltage of 230 V instead of 100 V.
+</p>
+</html>"));
+
+  model Transformer_n10 = Modelica.Electrical.QuasiStatic.SinglePhase.Examples.Transformer(idealTransformer(n=10))
+    "Variant of Transformer with a turns ratio of 10"
+    annotation (experiment(StopTime=1), Documentation(info="<html>
+<p>
+Variant of <a href=\"modelica://Modelica.Electrical.QuasiStatic.SinglePhase.Examples.Transformer\">Transformer</a> (IdealTransformer) with a turns ratio of 10 instead
+of 5.
+</p>
+</html>"));
+
+  model MultipleResonance_k08 = Modelica.Electrical.QuasiStatic.SinglePhase.Examples.MultipleResonance(k=0.8)
+    "Variant of MultipleResonance with a coupling factor of 0.8"
+    annotation (experiment(StopTime=1.0, Interval=0.0001), Documentation(info="<html>
+<p>
+Variant of <a href=\"modelica://Modelica.Electrical.QuasiStatic.SinglePhase.Examples.MultipleResonance\">MultipleResonance</a> (Basic.Transformer) with a coupling factor of 0.8
+instead of 0.95.
+</p>
+</html>"));
 end SinglePhase;

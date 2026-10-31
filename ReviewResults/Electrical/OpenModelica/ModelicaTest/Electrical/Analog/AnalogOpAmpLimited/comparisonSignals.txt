@@ -1,0 +1,3 @@
+time
+opAmpFirstOrder.out.v
+opAmpLimited.out.v

@@ -1,0 +1,9 @@
+time
+frequencySensor.f
+frequencySensor1.f
+inductor.i[1].im
+inductor.i[1].re
+load.v[2].re
+load2.v[1].im
+load2.v[1].re
+referenceSensor.gamma

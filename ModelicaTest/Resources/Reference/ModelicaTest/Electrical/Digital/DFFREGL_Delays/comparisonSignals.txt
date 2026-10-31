@@ -1,0 +1,3 @@
+time
+dFFREGL.dataOut[1]
+dFFREGL.dataOut[2]

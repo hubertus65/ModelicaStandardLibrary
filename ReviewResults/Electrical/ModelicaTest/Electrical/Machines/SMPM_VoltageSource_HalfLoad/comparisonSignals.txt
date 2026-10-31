@@ -1,0 +1,6 @@
+time
+inertiaLoad.w
+smpm.idq_sr[1]
+smpm.idq_sr[2]
+smpm.is[1]
+smpm.is[2]

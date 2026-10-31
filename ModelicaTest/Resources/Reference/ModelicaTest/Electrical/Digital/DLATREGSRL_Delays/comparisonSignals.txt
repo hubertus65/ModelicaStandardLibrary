@@ -1,0 +1,3 @@
+time
+dLATREGSRL.dataOut[1]
+dLATREGSRL.dataOut[2]

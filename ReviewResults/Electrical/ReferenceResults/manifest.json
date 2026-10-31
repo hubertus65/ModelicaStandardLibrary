@@ -1,0 +1,5765 @@
+[
+  {
+    "name": "AD_DA_conversion_N4",
+    "model": "ModelicaTest.Electrical.Analog.AD_DA_conversion_N4",
+    "variables": [
+      "aD_Converter.z",
+      "resistor.i",
+      "resistor.v",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.3086274790111929,
+      "steps": 2601,
+      "rhs_evaluations": 4201,
+      "jacobian_evaluations": 400,
+      "time_events": 400,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "resistor.i": "A",
+      "resistor.v": "V"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 28199,
+    "record": {
+      "schema": 1,
+      "record_id": "69106d128ddc36cd7886c19d07914d562d429767d15e5ef384a3de937763a93e",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:25:36",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "164d6eb481e2d157e933f1803f1f7a74",
+        "impact_fmu_id": "modelicatest_electrical_analog_ad_da_conversion_n4_20261031_142534_93de3ac",
+        "model_description_sha256": "380b296d2a86999f14be9d59600840aca076defa64c3ce28d03203b07fd62597"
+      },
+      "experiment": {
+        "case_entry_sha256": "c79f4fd617f5ef08f9168bc5611e14a462822f77672ce4fd276474545f58ac3a",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_electrical_analog_ad_da_conversion_n4_20261031_142534_b7f1e95",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "cbef1f893ff04f25347dbff9a07f64b7ff23ac5c808ea3c33cc5cb149f56457c"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Analog.AD_DA_conversion_N4",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 28199,
+        "file": "AD_DA_conversion_N4.npz",
+        "format": "npz",
+        "sha256": "a8ae645b772c4b0b5e1fdf09025b9c1dbb00d68d95083ac218e854d8ffd910e8"
+      },
+      "run": {
+        "utc": "2026-10-31T14:25:40+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "AmplifierWithOpAmpDetailed_SmallSignal",
+    "model": "ModelicaTest.Electrical.Analog.AmplifierWithOpAmpDetailed_SmallSignal",
+    "variables": [
+      "opAmp.q_fp1",
+      "opAmp.v_in",
+      "opAmp.v_source",
+      "opAmp.x",
+      "resistor2.v",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.2423406639136374,
+      "steps": 2620,
+      "rhs_evaluations": 2649,
+      "jacobian_evaluations": 45,
+      "error_test_failures": 1,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "opAmp.v_in": "V",
+      "opAmp.q_fp1": "V",
+      "opAmp.x": "V",
+      "opAmp.v_source": "V",
+      "resistor2.v": "V"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 110326,
+    "record": {
+      "schema": 1,
+      "record_id": "8139c177cbea0688805b7108b45c0cb155af996179e4c44ddc7acf9abe977098",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:25:30",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "fb6f72433eda46e13998b4188ef595a9",
+        "impact_fmu_id": "_cal_analog_amplifierwithopampdetailed_smallsignal_20261031_142528_4c46ad4",
+        "model_description_sha256": "21b1ee7c0ab3cd3889f383d742204e83a2ea73cf8cb95f73eb9fd9fd1b7b9838"
+      },
+      "experiment": {
+        "case_entry_sha256": "04d1e2fce371b6d00e8e136ba92f73d9760def2edce918d3923bef291baf516b",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_cal_analog_amplifierwithopampdetailed_smallsignal_20261031_142528_33e04f8",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "06fb380792206466f82c48d78bbd098920371b8e578da5dcb9e1d6a3277bec19"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Analog.AmplifierWithOpAmpDetailed_SmallSignal",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 110326,
+        "file": "AmplifierWithOpAmpDetailed_SmallSignal.npz",
+        "format": "npz",
+        "sha256": "ba81fbdc54272f445a24aef4c5621de9519ac6857ac99f24b6c6fb235947cfff"
+      },
+      "run": {
+        "utc": "2026-10-31T14:25:33+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "AnalogBasicComponents",
+    "model": "ModelicaTest.Electrical.Analog.AnalogBasicComponents",
+    "variables": [
+      "R_ccc.v",
+      "R_ccv.v",
+      "R_secondary.v",
+      "R_vcc.v",
+      "R_vcv.v",
+      "R_wiper.v",
+      "emf.i",
+      "mass.s",
+      "opAmp.out.v",
+      "time",
+      "variableCapacitor.i",
+      "variableConductor.i",
+      "variableInductor.i"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.06451269902754575,
+      "steps": 627,
+      "rhs_evaluations": 737,
+      "jacobian_evaluations": 21,
+      "time_events": 1,
+      "error_test_failures": 11,
+      "convergence_failures": 0,
+      "state_events": 10,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "mass.s": "m",
+      "R_vcv.v": "V",
+      "R_vcc.v": "V",
+      "R_ccv.v": "V",
+      "R_ccc.v": "V",
+      "variableConductor.i": "A",
+      "variableCapacitor.i": "A",
+      "variableInductor.i": "A",
+      "R_secondary.v": "V",
+      "opAmp.out.v": "V",
+      "R_wiper.v": "V",
+      "emf.i": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 39807,
+    "record": {
+      "schema": 1,
+      "record_id": "af19c9876196065bd36a1a1bb7a74cdfdfe66b527f763ac7f2e6c308975cc03d",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:47:44",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "7259a200738dbabbabba9f0f6e24e548",
+        "impact_fmu_id": "_elicatest_electrical_analog_analogbasiccomponents_20261031_144741_50694c8",
+        "model_description_sha256": "00465399b9bb99aab7440ecddb51b15e9105e2e93493cd2974d9d5fe47496c26"
+      },
+      "experiment": {
+        "case_entry_sha256": "736fe91b266015772b9af7fd3fd8ee42f35edda4578e28b1a29034cdd980e1c1",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_elicatest_electrical_analog_analogbasiccomponents_20261031_144741_08d222c",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "4ebad6aa6944dd2fbabe6bab117df0d9df09da9db65c538144d85c910c5d3253"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Analog.AnalogBasicComponents",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 39807,
+        "file": "AnalogBasicComponents.npz",
+        "format": "npz",
+        "sha256": "589bafa0bac26333dc797cef5aec09544149a4dd3bc0acf636d3f77bac716283"
+      },
+      "run": {
+        "utc": "2026-10-31T14:47:48+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "AnalogIdealComponents",
+    "model": "ModelicaTest.Electrical.Analog.AnalogIdealComponents",
+    "variables": [
+      "R_arc.v",
+      "R_cinter1.v",
+      "R_cinter2.v",
+      "R_inter1.v",
+      "R_inter2.v",
+      "R_opening.v",
+      "R_transformer.v",
+      "R_triac.v",
+      "idealOpAmp.p2.v",
+      "idealOpAmp3Pin.out.v",
+      "idealOpAmpLimited.out.v",
+      "idealizedOpAmpLimited.out.v",
+      "idle.i",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.11975275597069412,
+      "steps": 1543,
+      "rhs_evaluations": 2415,
+      "jacobian_evaluations": 80,
+      "time_events": 30,
+      "error_test_failures": 122,
+      "convergence_failures": 0,
+      "state_events": 45,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "idle.i": "A",
+      "R_opening.v": "V",
+      "R_arc.v": "V",
+      "R_inter1.v": "V",
+      "R_inter2.v": "V",
+      "R_cinter1.v": "V",
+      "R_cinter2.v": "V",
+      "idealOpAmpLimited.out.v": "V",
+      "idealizedOpAmpLimited.out.v": "V",
+      "R_transformer.v": "V",
+      "R_triac.v": "V",
+      "idealOpAmp.p2.v": "V",
+      "idealOpAmp3Pin.out.v": "V"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 24912,
+    "record": {
+      "schema": 1,
+      "record_id": "a2942f8dd459936a9d1ff3029f125a63b822062d0a3b2753718190c3d2e0f205",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:24:32",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "423be6683ba40cbe12165b73c8e36f75",
+        "impact_fmu_id": "_elicatest_electrical_analog_analogidealcomponents_20261031_142428_56328b3",
+        "model_description_sha256": "fdcd165f2ca4403d41997a1d8b0796a271de29e5fc9172dc4428c1bc29090157"
+      },
+      "experiment": {
+        "case_entry_sha256": "c9c1bc033136f366040ad170c60d3fc882260aa6f268d7d8b5ea9df2e3cd1334",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_elicatest_electrical_analog_analogidealcomponents_20261031_142428_d9952e9",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "7bc899e9f5ab1a829e69a41706615ce42c6af7109d25e36cc599c1a2a70cbb53"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Analog.AnalogIdealComponents",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 24912,
+        "file": "AnalogIdealComponents.npz",
+        "format": "npz",
+        "sha256": "ef6deb4662e9572635a2e8e1915315c6ce43ff02947efe13be709b3dcb185b32"
+      },
+      "run": {
+        "utc": "2026-10-31T14:24:36+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "AnalogSemiconductorsAndLines",
+    "model": "ModelicaTest.Electrical.Analog.AnalogSemiconductorsAndLines",
+    "variables": [
+      "C_load.v",
+      "R_diode.v",
+      "R_diode2.v",
+      "R_mOLine1.v",
+      "R_npn.v",
+      "R_oLine.v",
+      "R_pnp.v",
+      "R_tLine.v",
+      "R_tLine1.v",
+      "R_tLine2.v",
+      "R_tLine3.v",
+      "R_thyristor.v",
+      "R_triac.v",
+      "R_uLine.v",
+      "R_zDiode.v",
+      "powerSensor.power",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.4528486669296399,
+      "steps": 3526,
+      "rhs_evaluations": 5088,
+      "jacobian_evaluations": 125,
+      "time_events": 13,
+      "error_test_failures": 176,
+      "convergence_failures": 3,
+      "state_events": 25,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "C_load.v": "V",
+      "powerSensor.power": "W",
+      "R_diode.v": "V",
+      "R_diode2.v": "V",
+      "R_zDiode.v": "V",
+      "R_thyristor.v": "V",
+      "R_triac.v": "V",
+      "R_npn.v": "V",
+      "R_pnp.v": "V",
+      "R_oLine.v": "V",
+      "R_uLine.v": "V",
+      "R_mOLine1.v": "V",
+      "R_tLine.v": "V",
+      "R_tLine1.v": "V",
+      "R_tLine2.v": "V",
+      "R_tLine3.v": "V"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 34186,
+    "record": {
+      "schema": 1,
+      "record_id": "769ea5edba2d647ac4692c07015a9dcc11c8e72b5deae0dc0da19e3b6a1fa095",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:24:41",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "6b1a67df409868e39e5913fd260352bf",
+        "impact_fmu_id": "_st_electrical_analog_analogsemiconductorsandlines_20261031_142437_ff3194e",
+        "model_description_sha256": "69df7553e836d27661cfe0e1a038ce9c002a8be2b983110a2667675276cd7f76"
+      },
+      "experiment": {
+        "case_entry_sha256": "61303b68d2f5bea83ee0fb99b73c8b5974008db638fe3ef792204e5a023a254b",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_st_electrical_analog_analogsemiconductorsandlines_20261031_142437_947c38c",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "ea818c880818b6dcce9682bb57a3d06bf98e18019b7c1db5c1e9f9978286d60c"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Analog.AnalogSemiconductorsAndLines",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 34186,
+        "file": "AnalogSemiconductorsAndLines.npz",
+        "format": "npz",
+        "sha256": "591a12ebf83adb64d5cfed8a941ad0f821c81bc5855f13e85029de934f35aa07"
+      },
+      "run": {
+        "utc": "2026-10-31T14:24:46+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "AnalogSources",
+    "model": "ModelicaTest.Electrical.Analog.AnalogSources",
+    "variables": [
+      "R_cosineCurrent.v",
+      "R_cosineCurrentVF.v",
+      "R_cosineVoltage.v",
+      "R_cosineVoltageVF.v",
+      "R_expSineCurrent.v",
+      "R_expSineVoltage.v",
+      "R_exponentialsCurrent.v",
+      "R_exponentialsVoltage.v",
+      "R_lightningImpulseCurrent.v",
+      "R_lightningImpulseVoltage.v",
+      "R_pulseCurrent.v",
+      "R_pulseVoltage.v",
+      "R_sawToothCurrent.v",
+      "R_sawToothVoltage.v",
+      "R_sineCurrent.v",
+      "R_sineCurrentVF.v",
+      "R_sineVoltageVF.v",
+      "R_stepCurrent.v",
+      "R_supplyN.v",
+      "R_supplyP.v",
+      "R_tableCurrent.v",
+      "R_tableVoltage.v",
+      "R_trapezoidCurrent.v",
+      "R_trapezoidVoltage.v",
+      "time",
+      "variableLoad.i",
+      "variableLoad.v"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.061572188045829535,
+      "steps": 574,
+      "rhs_evaluations": 704,
+      "jacobian_evaluations": 21,
+      "time_events": 16,
+      "error_test_failures": 15,
+      "convergence_failures": 0,
+      "state_events": 1,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "R_supplyP.v": "V",
+      "R_supplyN.v": "V",
+      "R_cosineVoltage.v": "V",
+      "R_exponentialsVoltage.v": "V",
+      "R_expSineVoltage.v": "V",
+      "R_lightningImpulseVoltage.v": "V",
+      "R_pulseVoltage.v": "V",
+      "R_sawToothVoltage.v": "V",
+      "R_tableVoltage.v": "V",
+      "R_trapezoidVoltage.v": "V",
+      "R_cosineCurrent.v": "V",
+      "R_exponentialsCurrent.v": "V",
+      "R_expSineCurrent.v": "V",
+      "R_lightningImpulseCurrent.v": "V",
+      "R_pulseCurrent.v": "V",
+      "R_sawToothCurrent.v": "V",
+      "R_sineCurrent.v": "V",
+      "R_stepCurrent.v": "V",
+      "R_tableCurrent.v": "V",
+      "R_trapezoidCurrent.v": "V",
+      "R_sineVoltageVF.v": "V",
+      "R_cosineVoltageVF.v": "V",
+      "R_sineCurrentVF.v": "V",
+      "R_cosineCurrentVF.v": "V",
+      "variableLoad.v": "V",
+      "variableLoad.i": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 65180,
+    "record": {
+      "schema": 1,
+      "record_id": "1adfa83ec88bc322d8316101cd8a22990a88924e88bc20d327820db9bd0b587d",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:47:29",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "356b92870a053eed6e51c5f8cb889fab",
+        "impact_fmu_id": "modelicatest_electrical_analog_analogsources_20261031_144725_90c0755",
+        "model_description_sha256": "df85eb0d388d6913d3a3bd55674be07d85b6aa6de2d9269ccd91bbf7ef724e9d"
+      },
+      "experiment": {
+        "case_entry_sha256": "62499cb2d329377e9a51989a1c300a8aadc9151090c4deb442abe6e2c8fbb8fa",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_electrical_analog_analogsources_20261031_144725_c9b6e86",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "690b794041170cdd44b6d1857c4cf4d9985807140bbf8a7ce8290853d8d6269b"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Analog.AnalogSources",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 65180,
+        "file": "AnalogSources.npz",
+        "format": "npz",
+        "sha256": "9867118e6313a0647d7174c820bf9c18ac1c3993833304e60ee9fe9a06b16ce6"
+      },
+      "run": {
+        "utc": "2026-10-31T14:47:35+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "BrushRampedRheostatAndThermalAmbientDCCE",
+    "model": "ModelicaTest.Electrical.Machines.BrushRampedRheostatAndThermalAmbientDCCE",
+    "variables": [
+      "brush.v[1]",
+      "load.i[1]",
+      "load.i[2]",
+      "qSeries.port.T",
+      "qShunt.port.T",
+      "rheostat.rheostat.R[1]",
+      "thermalAmbient.Q_flowArmature",
+      "thermalAmbient.Q_flowBrush",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.4200589539250359,
+      "steps": 1506,
+      "rhs_evaluations": 3918,
+      "jacobian_evaluations": 603,
+      "time_events": 2,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "state_events": 600,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "qShunt.port.T": "K",
+      "qSeries.port.T": "K",
+      "thermalAmbient.Q_flowArmature": "W",
+      "brush.v[1]": "V",
+      "load.i[1]": "A",
+      "load.i[2]": "A",
+      "rheostat.rheostat.R[1]": "Ohm",
+      "thermalAmbient.Q_flowBrush": "W"
+    },
+    "display_units": {
+      "qShunt.port.T": "degC",
+      "qSeries.port.T": "degC"
+    },
+    "format": "npz",
+    "bytes": 31229,
+    "record": {
+      "schema": 1,
+      "record_id": "f90919949797cbaa0f06fc57d1d139c0fe4b8d5bfe6332f7cbb1a09acea8b0d7",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:36:46",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "e87dac721792ecab817539a75893540c",
+        "impact_fmu_id": "_machines_brushrampedrheostatandthermalambientdcce_20261031_143643_62160db",
+        "model_description_sha256": "fa3cf6b337503b9f0ee8498f597f991339a0d516077f1ab088e3638550e3970c"
+      },
+      "experiment": {
+        "case_entry_sha256": "b63e358dba37d6a69b1de339570c7309577fa6a1c80d27a6b5812f291ca98348",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_machines_brushrampedrheostatandthermalambientdcce_20261031_143643_6580939",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "d00e155a15fc91af12364c57fddd2e68c720ac6a9b298cfeeb847497eeb9682a"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Machines.BrushRampedRheostatAndThermalAmbientDCCE",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 31229,
+        "file": "BrushRampedRheostatAndThermalAmbientDCCE.npz",
+        "format": "npz",
+        "sha256": "7a776768d800dbd0d9fbdc9252c0e87d8c8479c219fbe8ade3f68de1da6ec662"
+      },
+      "run": {
+        "utc": "2026-10-31T14:36:50+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "CCCV_StackRC_Isc1500",
+    "model": "ModelicaTest.Electrical.Batteries.CCCV_StackRC_Isc1500",
+    "variables": [
+      "energy.y",
+      "stack.cell[1,1].cell.capacitor[1].v",
+      "stack.cell[1,1].cell.limIntegrator.y",
+      "stack.cell[3,2].limIntegrator.y",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.6488189520314336,
+      "steps": 5029,
+      "rhs_evaluations": 5101,
+      "jacobian_evaluations": 97,
+      "error_test_failures": 1,
+      "convergence_failures": 0,
+      "state_events": 15,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "stack.cell[1,1].cell.capacitor[1].v": "V",
+      "energy.y": "J"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 145550,
+    "record": {
+      "schema": 1,
+      "record_id": "681386a11c7cd0166357b8f6fe7a801124e397af537ff5dfef618b6d07b907ef",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:28:46",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "ead735cf55cd18aba5cd40b449055012",
+        "impact_fmu_id": "_icatest_electrical_batteries_cccv_stackrc_isc1500_20261031_142840_c1e25f8",
+        "model_description_sha256": "9c4ef7c3ccfcf409f09dd592921858cdd8230a08e260b57b1f84ebb864139ef6"
+      },
+      "experiment": {
+        "case_entry_sha256": "0e067dee72551aa8064a41ebd89079b5f230d0d2051f652a5f35b6e2769158c6",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_icatest_electrical_batteries_cccv_stackrc_isc1500_20261031_142840_5ffcc78",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "a33a7d0fcfdcc0c1b186ae7d66b373dcd3cf74b61dbdfb22778ff04e3182a1f8"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Batteries.CCCV_StackRC_Isc1500",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 145550,
+        "file": "CCCV_StackRC_Isc1500.npz",
+        "format": "npz",
+        "sha256": "8fde8fae4cedc292f8d3fbfae0c38ef72b552112c47899ee7ecc9f02813cfec8"
+      },
+      "run": {
+        "utc": "2026-10-31T14:28:54+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "CCCV_Stack_Isc1500",
+    "model": "ModelicaTest.Electrical.Batteries.CCCV_Stack_Isc1500",
+    "variables": [
+      "energy.y",
+      "stack.cell[1,1].cell.limIntegrator.y",
+      "stack.cell[3,2].limIntegrator.y",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.5601450219983235,
+      "steps": 5027,
+      "rhs_evaluations": 5108,
+      "jacobian_evaluations": 97,
+      "error_test_failures": 1,
+      "convergence_failures": 0,
+      "state_events": 15,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "energy.y": "J"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 103086,
+    "record": {
+      "schema": 1,
+      "record_id": "f4ac3f69d90d99f167c76eadbce5ce754db02b7f5e981d7e0f2448c599872533",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:29:00",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "bdf2938f741510638457c3e8b9bf8b6a",
+        "impact_fmu_id": "_elicatest_electrical_batteries_cccv_stack_isc1500_20261031_142855_08a7c55",
+        "model_description_sha256": "c53d44f165eb0c00d41874fcd9e141ccf38e32c807000fb838c977a7cd2b8939"
+      },
+      "experiment": {
+        "case_entry_sha256": "de3eaa4b4c0cb47d00f9b27229814cdf1d74654d40193fd8043174afcf6001c7",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_elicatest_electrical_batteries_cccv_stack_isc1500_20261031_142855_c035c82",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "d470eb774c9ea92da9a2e0d5f4cd622a59b97997a6b61eb91f28e633b692424a"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Batteries.CCCV_Stack_Isc1500",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 103086,
+        "file": "CCCV_Stack_Isc1500.npz",
+        "format": "npz",
+        "sha256": "15ae23e300f33248ac7f0e0e62ba860d3b1219965372abd8870881001c5cc83d"
+      },
+      "run": {
+        "utc": "2026-10-31T14:29:05+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ChopperBuckBoost_DutyCycle_36V",
+    "model": "ModelicaTest.Electrical.PowerConverters.ChopperBuckBoost_DutyCycle_36V",
+    "variables": [
+      "mean_iHV.y",
+      "mean_iLV.y",
+      "mean_vHV.y",
+      "mean_vLV.y",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 6.580137220909819,
+      "steps": 293020,
+      "rhs_evaluations": 407254,
+      "jacobian_evaluations": 8013,
+      "time_events": 4000,
+      "error_test_failures": 8122,
+      "convergence_failures": 0,
+      "state_events": 4013,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 151519,
+    "record": {
+      "schema": 1,
+      "record_id": "66fbc675ba454d23e4e191bdafecd345d004fbf175202eaf68eb41beecda9c61",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:31:29",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "bab350d749149cf2e804fd6256c04472",
+        "impact_fmu_id": "_al_powerconverters_chopperbuckboost_dutycycle_36v_20261031_143126_a0bae36",
+        "model_description_sha256": "dee652193bf7d0f122b4fd7f05082b7b9b51bb34c80e6680a7fd93e5ac3e55ae"
+      },
+      "experiment": {
+        "case_entry_sha256": "b7045d3562f8db524e34801e25dd893409837b79c5e601e804fc5acf76abf4e9",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_al_powerconverters_chopperbuckboost_dutycycle_36v_20261031_143126_f8a309e",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "16ecf3f496f5e18eb876814979dfde9868d9670fb9ade6170948091805f8424b"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.PowerConverters.ChopperBuckBoost_DutyCycle_36V",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 151519,
+        "file": "ChopperBuckBoost_DutyCycle_36V.npz",
+        "format": "npz",
+        "sha256": "67c5c5463a5bc51ce70141f91691fc8d4b3230567f6051180e5d33a6e047b8ac"
+      },
+      "run": {
+        "utc": "2026-10-31T14:31:39+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ChopperStepDown_R_2kHz",
+    "model": "ModelicaTest.Electrical.PowerConverters.ChopperStepDown_R_2kHz",
+    "variables": [
+      "chopperStepDown.iDC2",
+      "chopperStepDown.vDC2",
+      "meanCurrent.y",
+      "meanVoltage.y",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 1.1030179819790646,
+      "steps": 13039,
+      "rhs_evaluations": 17076,
+      "jacobian_evaluations": 421,
+      "time_events": 200,
+      "error_test_failures": 525,
+      "convergence_failures": 0,
+      "state_events": 149,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "chopperStepDown.vDC2": "V",
+      "chopperStepDown.iDC2": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 145309,
+    "record": {
+      "schema": 1,
+      "record_id": "6dd583c1635dd03f53e72719656ee9ded71729f0dd93886bf3f5578f5c46006f",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:31:21",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "f4c5be63b527b1e9d1ba199bce91d8ea",
+        "impact_fmu_id": "_electrical_powerconverters_chopperstepdown_r_2khz_20261031_143119_936c5d3",
+        "model_description_sha256": "35919772c4f7aecdf1a90e698b587dd91f2fa4f51805847c1078763bc9c9ad59"
+      },
+      "experiment": {
+        "case_entry_sha256": "376f8f5ad6895fbb1160b3d364eab39f0b3920909bb05ec67d1be4fde5b187cf",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_electrical_powerconverters_chopperstepdown_r_2khz_20261031_143119_d45ab37",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "d217e70974f633ea9d3516a59c519a0dd2d1946774f39fc97ebde76a3cdf9e7a"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.PowerConverters.ChopperStepDown_R_2kHz",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 145309,
+        "file": "ChopperStepDown_R_2kHz.npz",
+        "format": "npz",
+        "sha256": "e1a5f696c4152320b199c3a2d3483c1ad346f3469022ea6f6ad8fe9bfb21bce5"
+      },
+      "run": {
+        "utc": "2026-10-31T14:31:26+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ChopperStepUp_R_2kHz",
+    "model": "ModelicaTest.Electrical.PowerConverters.ChopperStepUp_R_2kHz",
+    "variables": [
+      "capacitor.v",
+      "inductor.i",
+      "meanCurrent.y",
+      "meanVoltage.y",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 1.0813778080046177,
+      "steps": 11615,
+      "rhs_evaluations": 14221,
+      "jacobian_evaluations": 380,
+      "time_events": 200,
+      "error_test_failures": 289,
+      "convergence_failures": 0,
+      "state_events": 150,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "inductor.i": "A",
+      "capacitor.v": "V"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 190912,
+    "record": {
+      "schema": 1,
+      "record_id": "215dd4cd4642271bb72231da9ea2dabf12df2632a4d57425b9e4ec19bd418d39",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:31:13",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "83587b570e3a98d2473596c91c413cc4",
+        "impact_fmu_id": "_t_electrical_powerconverters_chopperstepup_r_2khz_20261031_143111_85d4360",
+        "model_description_sha256": "8513fecc12313423ee6ff58c6b0e3dd31c0b84640dab6a42f2fb1846090db7dd"
+      },
+      "experiment": {
+        "case_entry_sha256": "18d01b69df238b56d55e7c9773c579ccde825ae9488d14194e3f0b90e838f096",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_t_electrical_powerconverters_chopperstepup_r_2khz_20261031_143111_58ec3e5",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "f43154373934aff6e03675b7e90ae2b8178f6a2a75f3d48d829ba909f3fda1f0"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.PowerConverters.ChopperStepUp_R_2kHz",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 190912,
+        "file": "ChopperStepUp_R_2kHz.npz",
+        "format": "npz",
+        "sha256": "3233a42cf1cbf5712e496a265f4d1ef2cc3d3799b855d49d51b4f39937b5a313"
+      },
+      "run": {
+        "utc": "2026-10-31T14:31:18+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ControlledSwitchWithArc_100V",
+    "model": "ModelicaTest.Electrical.Analog.ControlledSwitchWithArc_100V",
+    "variables": [
+      "inductor1.i",
+      "inductor2.i",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.4922427019337192,
+      "steps": 6107,
+      "rhs_evaluations": 6448,
+      "jacobian_evaluations": 110,
+      "error_test_failures": 51,
+      "convergence_failures": 0,
+      "state_events": 12,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "inductor1.i": "A",
+      "inductor2.i": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 63853,
+    "record": {
+      "schema": 1,
+      "record_id": "52f68cb520d9763cb2f9450cf40f255c808e36dc87237283b685fa5b43c880f1",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:25:49",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "3f5386c6d9cc594fa40766114b18d3b5",
+        "impact_fmu_id": "_st_electrical_analog_controlledswitchwitharc_100v_20261031_142547_b491d80",
+        "model_description_sha256": "a4f8c2aafef485777f4cc5c5becd27fd6dce3cd7b66447134c7021dbb4fdaa50"
+      },
+      "experiment": {
+        "case_entry_sha256": "c52f6ce76262c643eb43d86864e3f6a0f75f2e99a0f23e92404fc84c17af053b",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_st_electrical_analog_controlledswitchwitharc_100v_20261031_142547_dd3f072",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "4a1cb2a8affb5ad33562306cf7105863199170485621c431b17549c41eed554c"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Analog.ControlledSwitchWithArc_100V",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 63853,
+        "file": "ControlledSwitchWithArc_100V.npz",
+        "format": "npz",
+        "sha256": "36ea13aca481bb982cc3b1ee520b8c776232116ec64559b20500c2a0c675d45b"
+      },
+      "run": {
+        "utc": "2026-10-31T14:25:53+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "DCPM_Drive_FastRamp",
+    "model": "ModelicaTest.Electrical.Machines.DCPM_Drive_FastRamp",
+    "variables": [
+      "coupling.tau",
+      "coupling.w",
+      "multiSensor.i",
+      "multiSensor.v",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.4265618099598214,
+      "steps": 4164,
+      "rhs_evaluations": 4245,
+      "jacobian_evaluations": 73,
+      "time_events": 5,
+      "error_test_failures": 4,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "coupling.w": "rad/s",
+      "coupling.tau": "N.m",
+      "multiSensor.i": "A",
+      "multiSensor.v": "V"
+    },
+    "display_units": {
+      "coupling.w": "rpm"
+    },
+    "format": "npz",
+    "bytes": 116341,
+    "record": {
+      "schema": 1,
+      "record_id": "00244daf071be0a9a6ae5ca2499c1e10e946edc96a41fe36cb006a60c078e330",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:29:31",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "6e0a854e8b7f3c4842af28daa95c0792",
+        "impact_fmu_id": "_elicatest_electrical_machines_dcpm_drive_fastramp_20261031_142928_73a77a7",
+        "model_description_sha256": "ed3923890b4707dd6294b4421bf70a9e87da7e4ba4e25169ba6ed119b5172d83"
+      },
+      "experiment": {
+        "case_entry_sha256": "3ec6f50e9d5807db1f80b964660d89618f1f5b683c3e63867daf4afe369118a4",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_elicatest_electrical_machines_dcpm_drive_fastramp_20261031_142928_29fd790",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "4ce313b0aced2911517809df1994a488692d20597265ae024a1c6e4232f523b8"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Machines.DCPM_Drive_FastRamp",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 116341,
+        "file": "DCPM_Drive_FastRamp.npz",
+        "format": "npz",
+        "sha256": "6757099681650735f06a5d74f527658b437f8cb3df3c76441b9a1aa9642a9ad9"
+      },
+      "run": {
+        "utc": "2026-10-31T14:29:35+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "DC_CompareCharacteristics_80V",
+    "model": "ModelicaTest.Electrical.Machines.DC_CompareCharacteristics_80V",
+    "variables": [
+      "dcee.ia",
+      "dcee.tauElectrical",
+      "dcpm.ia",
+      "dcpm.tauElectrical",
+      "dcse.ia",
+      "dcse.tauElectrical",
+      "loadInertia1.w",
+      "loadInertia2.w",
+      "loadInertia3.w",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.5011522709392011,
+      "steps": 5012,
+      "rhs_evaluations": 5033,
+      "jacobian_evaluations": 87,
+      "time_events": 2,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "state_events": 1,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "dcpm.ia": "A",
+      "dcpm.tauElectrical": "N.m",
+      "loadInertia1.w": "rad/s",
+      "dcee.ia": "A",
+      "dcee.tauElectrical": "N.m",
+      "loadInertia2.w": "rad/s",
+      "dcse.ia": "A",
+      "dcse.tauElectrical": "N.m",
+      "loadInertia3.w": "rad/s"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 329992,
+    "record": {
+      "schema": 1,
+      "record_id": "2d6bcc856c0a8ee16cc0dcd9d8781a4e0e39629fd0cf062103b1c592472b44f5",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:29:22",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "ec466354a43be4e81a2826365e6b37f5",
+        "impact_fmu_id": "_electrical_machines_dc_comparecharacteristics_80v_20261031_142919_7e4fa1b",
+        "model_description_sha256": "3c4ce807f8e7436ca638265a081d1348a679448c199237a548b78745de1a0360"
+      },
+      "experiment": {
+        "case_entry_sha256": "3a2aba8b36fb17fddbcc56bdd29db1b19ed90f3c88da16648f58407b66eec4d5",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_electrical_machines_dc_comparecharacteristics_80v_20261031_142919_3354487",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "8a6238834c1b12796fa95ab6ec2fe48caac3d34263807ecdec19a13a195d3437"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Machines.DC_CompareCharacteristics_80V",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 329992,
+        "file": "DC_CompareCharacteristics_80V.npz",
+        "format": "npz",
+        "sha256": "2734502a2a889cb36fc3643b126259f950cd93066aec5f0aa8fc325079528b3f"
+      },
+      "run": {
+        "utc": "2026-10-31T14:29:27+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "DFFREGL_Delays",
+    "model": "ModelicaTest.Electrical.Digital.DFFREGL_Delays",
+    "variables": [
+      "dFFREGL.dataOut[1]",
+      "dFFREGL.dataOut[2]",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.20206721301656216,
+      "steps": 2011,
+      "rhs_evaluations": 2055,
+      "jacobian_evaluations": 39,
+      "time_events": 10,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 4580,
+    "record": {
+      "schema": 1,
+      "record_id": "969c06cfc4b2241fe773bc303d8e6de634ab194f89c99fdb8fc7418118166a04",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:27:00",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "90000e9c36c588ff8a8432f6f789ae2b",
+        "impact_fmu_id": "modelicatest_electrical_digital_dffregl_delays_20261031_142658_153b932",
+        "model_description_sha256": "93dc249c6fdb8505c3b6af36d8d4ef67e51611eb6aa30e4f849dd48e3f06045d"
+      },
+      "experiment": {
+        "case_entry_sha256": "711fa1d08284cd0e73a08cbd4957a7dc06a5d1303ca0ecddd9feb505f61f3ffc",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_electrical_digital_dffregl_delays_20261031_142658_85ab772",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "9c5d91cd49e410b328c182a8ec2c06045125100e95aa9808bc5a09111a350f7b"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Digital.DFFREGL_Delays",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 4580,
+        "file": "DFFREGL_Delays.npz",
+        "format": "npz",
+        "sha256": "9a2341c6c457ae9360cbf7567170de786f6f15478282da927ec87f9e9becf93b"
+      },
+      "run": {
+        "utc": "2026-10-31T14:27:03+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "DFFREGSRL_Delays",
+    "model": "ModelicaTest.Electrical.Digital.DFFREGSRL_Delays",
+    "variables": [
+      "dFFREGSRL.dataOut[1]",
+      "dFFREGSRL.dataOut[2]",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.1975861939135939,
+      "steps": 2012,
+      "rhs_evaluations": 2044,
+      "jacobian_evaluations": 39,
+      "time_events": 7,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 5979,
+    "record": {
+      "schema": 1,
+      "record_id": "e9576b4318043571665a879dbf4ac18f78a4cef9d25388d6eb312314a3f044a5",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:27:12",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "69021642c44c012bd7bc5bdc7c2fa2c0",
+        "impact_fmu_id": "modelicatest_electrical_digital_dffregsrl_delays_20261031_142710_89ec818",
+        "model_description_sha256": "8a987cf8480dce38b5e8a9c129aba6f4f47e78c32f83c3b84edf1f256b079239"
+      },
+      "experiment": {
+        "case_entry_sha256": "8872d9d9fc6c0ede63ae39de27d24845629be9eaaf3ab88bb3118fba524d8bdb",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_electrical_digital_dffregsrl_delays_20261031_142709_d234995",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "9a20b7d6a7b2f3ca8d035f4aa13afd8cdc534e0cb73b32fb6684b99dc3fa62a6"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Digital.DFFREGSRL_Delays",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 5979,
+        "file": "DFFREGSRL_Delays.npz",
+        "format": "npz",
+        "sha256": "e3b01218f2e789d227eaf09481cce7960c54b4a8383cadeff976e5e1f15acc12"
+      },
+      "run": {
+        "utc": "2026-10-31T14:27:15+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "DLATREGL_Delays",
+    "model": "ModelicaTest.Electrical.Digital.DLATREGL_Delays",
+    "variables": [
+      "dLATREGL.dataOut[1]",
+      "dLATREGL.dataOut[2]",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.19877049000933766,
+      "steps": 2011,
+      "rhs_evaluations": 2055,
+      "jacobian_evaluations": 39,
+      "time_events": 10,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 4592,
+    "record": {
+      "schema": 1,
+      "record_id": "79d2ee7ad8720c0e7302aa654b3330746feb2526c9b7c56c8c9e928ca9542eb2",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:27:06",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "5260dd0bb0b3f280bb74563e8384f74f",
+        "impact_fmu_id": "modelicatest_electrical_digital_dlatregl_delays_20261031_142704_3a3a203",
+        "model_description_sha256": "9e20cf077ef6f957a97639a25e0080b6f54725df0c68b80c623665ab600f7f90"
+      },
+      "experiment": {
+        "case_entry_sha256": "65c2353fe9e34769c1c2dfe36cc8d4bd7faa1aee4a3a09fd06df629b3f04ca68",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_electrical_digital_dlatregl_delays_20261031_142704_eebd8b1",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "6e1a2c47fe4740eb0d645ea4e79285d210af36fc8f4edaf40c0c57852dc843bc"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Digital.DLATREGL_Delays",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 4592,
+        "file": "DLATREGL_Delays.npz",
+        "format": "npz",
+        "sha256": "4a04da879c88df6754b1d7dc1afce9297338c28b2d6af4ebe1e85ab492b4bf5d"
+      },
+      "run": {
+        "utc": "2026-10-31T14:27:09+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "DLATREGSRL_Delays",
+    "model": "ModelicaTest.Electrical.Digital.DLATREGSRL_Delays",
+    "variables": [
+      "dLATREGSRL.dataOut[1]",
+      "dLATREGSRL.dataOut[2]",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.20129929902032018,
+      "steps": 2014,
+      "rhs_evaluations": 2070,
+      "jacobian_evaluations": 41,
+      "time_events": 13,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 4624,
+    "record": {
+      "schema": 1,
+      "record_id": "181011b5d4a6b6980fc5701c0b099865910d3f19e5db3f1d78147d42b13b5795",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:27:18",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "8582a2a10f1fde24fbb382410c6c9b0f",
+        "impact_fmu_id": "modelicatest_electrical_digital_dlatregsrl_delays_20261031_142716_92becb9",
+        "model_description_sha256": "5e473cfcb8eb10d1d1fbb74015ac9cfe6c0f46447e2aec096fe47dd12100e8aa"
+      },
+      "experiment": {
+        "case_entry_sha256": "bbeaaa311f821861861b16173ddfcc04d4bdc0133358f6514f303286f881fe9c",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_electrical_digital_dlatregsrl_delays_20261031_142716_98cb7d3",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "6a7e1f64b6259b79610a9c9b9ac90a20958c27bbeacc344488242f9a72669b6b"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Digital.DLATREGSRL_Delays",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 4624,
+        "file": "DLATREGSRL_Delays.npz",
+        "format": "npz",
+        "sha256": "5ecbfdcdcd78c5d62214bf39d1a673387deca15daaa9ebc76e0af435a71dd375"
+      },
+      "run": {
+        "utc": "2026-10-31T14:27:21+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "DigitalGatesConvertersAndMemory",
+    "model": "ModelicaTest.Electrical.Digital.DigitalGatesConvertersAndMemory",
+    "variables": [
+      "booleanToLogic.y[1]",
+      "buf3sl.y",
+      "bufGate.y",
+      "inertialDelay.y",
+      "inv3sl.y",
+      "invGate.y",
+      "logicToBoolean.y[1]",
+      "nand1.y",
+      "nandGate.y",
+      "norGate.y",
+      "orGate.y",
+      "prxfer.y",
+      "pxfer.y",
+      "realToLogic.y[1]",
+      "rom.dataOut[1]",
+      "rom.dataOut[4]",
+      "time",
+      "toUX01.y[1]",
+      "toX01.y[1]",
+      "toX01Z.y[1]",
+      "xnor1.y",
+      "xnorGate.y"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.08154724503401667,
+      "steps": 591,
+      "rhs_evaluations": 887,
+      "jacobian_evaluations": 74,
+      "time_events": 72,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "state_events": 2,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 7549,
+    "record": {
+      "schema": 1,
+      "record_id": "a9f508df6dbdf0f2783dc134ee6289cc52d8206068e947ee35e9aa8225690256",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:25:10",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "3ce9d5943debb7738a3b26c09cc57ad3",
+        "impact_fmu_id": "_lectrical_digital_digitalgatesconvertersandmemory_20261031_142507_226a340",
+        "model_description_sha256": "17c596d7e35fbb3d37216ce3f4878990eaea8e81ca5db9049ecfa09c381ed600"
+      },
+      "experiment": {
+        "case_entry_sha256": "3b4c08176aa076677aac72807bb1d1372ef92911074fca2d478389e45dd8437e",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_lectrical_digital_digitalgatesconvertersandmemory_20261031_142507_f894283",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "28a7434d7beaa63c19363c0e4c57b7eabec1af2c04bc241aa11781dd8dbe2992"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Digital.DigitalGatesConvertersAndMemory",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 7549,
+        "file": "DigitalGatesConvertersAndMemory.npz",
+        "format": "npz",
+        "sha256": "33b39ff7f73e52d17da231b40c65456454cd8d2803a97e5e76002d3fd5ef1099"
+      },
+      "run": {
+        "utc": "2026-10-31T14:25:16+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "DiodeBridge2Pulse_60Hz",
+    "model": "ModelicaTest.Electrical.PowerConverters.DiodeBridge2Pulse_60Hz",
+    "variables": [
+      "meanCurrent.y",
+      "meanVoltage.y",
+      "resistor.i",
+      "rootMeanSquareVoltage.y",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.08019588491879404,
+      "steps": 1056,
+      "rhs_evaluations": 1391,
+      "jacobian_evaluations": 36,
+      "time_events": 12,
+      "error_test_failures": 36,
+      "convergence_failures": 0,
+      "state_events": 12,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "resistor.i": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 5700,
+    "record": {
+      "schema": 1,
+      "record_id": "cbf1bb77a1aaf6adb971c6d9120d64ec14ea6a407901f81f09966177652ce802",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:29:53",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "de13f809967b7c8dbe33ea508aa74137",
+        "impact_fmu_id": "_electrical_powerconverters_diodebridge2pulse_60hz_20261031_142951_7577e84",
+        "model_description_sha256": "ebd06f9fe28af8ef51e5f4cd89428b84e3ef41495a32bba6bd9114f9f9c4b8f7"
+      },
+      "experiment": {
+        "case_entry_sha256": "0cef822935871d81de5634bd1d0da802cd22937a66628abcf600adfc2268a640",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_electrical_powerconverters_diodebridge2pulse_60hz_20261031_142951_038a7d7",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "121f17b30f4b3b92dce1e0b7b94039a44b1e189c9088ee91d8645fabe3892984"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.PowerConverters.DiodeBridge2Pulse_60Hz",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 5700,
+        "file": "DiodeBridge2Pulse_60Hz.npz",
+        "format": "npz",
+        "sha256": "515427f61b710a8acb4ae477e5c2dc7603249f7e343b1357cb60a41e448690ee"
+      },
+      "run": {
+        "utc": "2026-10-31T14:29:56+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "DiodeCenterTap2Pulse_60Hz",
+    "model": "ModelicaTest.Electrical.PowerConverters.DiodeCenterTap2Pulse_60Hz",
+    "variables": [
+      "meanCurrent.y",
+      "meanVoltage.y",
+      "resistor.i",
+      "rootMeanSquareVoltage.y",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.060811157105490565,
+      "steps": 1056,
+      "rhs_evaluations": 1391,
+      "jacobian_evaluations": 36,
+      "time_events": 12,
+      "error_test_failures": 36,
+      "convergence_failures": 0,
+      "state_events": 12,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "resistor.i": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 5696,
+    "record": {
+      "schema": 1,
+      "record_id": "a524bb817d09e60aae59515e9e83c56ac929ab562108fa2d1e7f0ac46454142c",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:29:59",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "ced8c2bd91422bc2aea660b27931b084",
+        "impact_fmu_id": "_ctrical_powerconverters_diodecentertap2pulse_60hz_20261031_142957_0bc51e1",
+        "model_description_sha256": "fece01c1b3f832358a0a580cb69e0f1b339cc585a6f80690665285af4bd92eb1"
+      },
+      "experiment": {
+        "case_entry_sha256": "be8c6c28beda0ca9048ec82c31f81306dae509c919ae149f960f668f717156fc",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_ctrical_powerconverters_diodecentertap2pulse_60hz_20261031_142957_7c5e5d1",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "9da095735ea7f7188d92d2dbeebad5bdd6a85126387231a32c92f3bae312241b"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.PowerConverters.DiodeCenterTap2Pulse_60Hz",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 5696,
+        "file": "DiodeCenterTap2Pulse_60Hz.npz",
+        "format": "npz",
+        "sha256": "1733e70b6defc26bd111889f9106c6dd768c2ea77fc998a876bfda190a0bd63a"
+      },
+      "run": {
+        "utc": "2026-10-31T14:30:02+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "DiodeCenterTap2mPulse_5Phase",
+    "model": "ModelicaTest.Electrical.PowerConverters.DiodeCenterTap2mPulse_5Phase",
+    "variables": [
+      "meanCurrent.y",
+      "meanVoltage.y",
+      "resistor.i",
+      "rootMeanSquareVoltage.y",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.10902518301736563,
+      "steps": 2090,
+      "rhs_evaluations": 3540,
+      "jacobian_evaluations": 152,
+      "time_events": 50,
+      "error_test_failures": 196,
+      "convergence_failures": 0,
+      "state_events": 102,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "resistor.i": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 6251,
+    "record": {
+      "schema": 1,
+      "record_id": "a1c77d700fc31dde5427c8faa363750edaed3e0ce74f47212a51ed5df7b2d1f3",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:30:13",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "e00090c571f185df91742bb135bce467",
+        "impact_fmu_id": "_ical_powerconverters_diodecentertap2mpulse_5phase_20261031_143009_406ed56",
+        "model_description_sha256": "b7dff108b736b01a0aa79ced4b9824dda822eefafd05910d47600db869ca7ded"
+      },
+      "experiment": {
+        "case_entry_sha256": "cfdc18df938d8dc927b21c20a59a4d0f796f5e7ab75328cb11ad2a6721b57fa4",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_ical_powerconverters_diodecentertap2mpulse_5phase_20261031_143009_1973bca",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "d07fdaa4fa0d0709819224ca7f8046366ab022f946ce63a7d24677403bded8f3"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.PowerConverters.DiodeCenterTap2mPulse_5Phase",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 6251,
+        "file": "DiodeCenterTap2mPulse_5Phase.npz",
+        "format": "npz",
+        "sha256": "5657f80bb1fe3abce2cc5b2c20c2e85bd5d74b918de84e4f2e3e80471cd65e5d"
+      },
+      "run": {
+        "utc": "2026-10-31T14:30:16+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "DiodeCenterTapmPulse_5Phase",
+    "model": "ModelicaTest.Electrical.PowerConverters.DiodeCenterTapmPulse_5Phase",
+    "variables": [
+      "meanCurrent.y",
+      "meanVoltage.y",
+      "rootMeanSquareVoltage.y",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.08640972303692251,
+      "steps": 1792,
+      "rhs_evaluations": 2711,
+      "jacobian_evaluations": 74,
+      "time_events": 25,
+      "error_test_failures": 149,
+      "convergence_failures": 0,
+      "state_events": 49,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 4068,
+    "record": {
+      "schema": 1,
+      "record_id": "870878a41b7cc82d1c98cc850f2dec09e95944b57d159d21e06f16a19d714a2b",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T17:55:57",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "7378f487fb03c61970bbbee7ca7966ae",
+        "impact_fmu_id": "_rical_powerconverters_diodecentertapmpulse_5phase_20261031_175554_4cec81e",
+        "model_description_sha256": "e1db343ad7096733716e8de691c488960bb889302641144ca811b856d1957377"
+      },
+      "experiment": {
+        "case_entry_sha256": "0314976998b4b0be2250c360d0eac67e9e9f2920be8a8854617be4355830fa4c",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_rical_powerconverters_diodecentertapmpulse_5phase_20261031_175554_eb812c8",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "3fddac50f3cdadb03825d38c0ee7a99ffd8f1178c1e284d1c174492d6b95ef13"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.PowerConverters.DiodeCenterTapmPulse_5Phase",
+        "libraries": [
+          {
+            "git_commit": "58715e9d968279369e6ddccbdb4743b60eed82d1",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 4068,
+        "file": "DiodeCenterTapmPulse_5Phase.npz",
+        "format": "npz",
+        "sha256": "2af383265db431f4e3b7d01370450a12ed5e7753cd46af180bfb56dd042d5350"
+      },
+      "run": {
+        "utc": "2026-10-31T17:56:00+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "FourInverters_4V",
+    "model": "ModelicaTest.Electrical.Spice3.FourInverters_4V",
+    "variables": [
+      "mp1.S.v",
+      "mp2.S.v",
+      "mp3.S.v",
+      "mp4.S.v",
+      "time",
+      "v.p.v"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.22565734398085624,
+      "steps": 2018,
+      "rhs_evaluations": 2075,
+      "jacobian_evaluations": 35,
+      "time_events": 3,
+      "error_test_failures": 4,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "mp1.S.v": "V",
+      "mp2.S.v": "V",
+      "mp3.S.v": "V",
+      "mp4.S.v": "V",
+      "v.p.v": "V"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 65742,
+    "record": {
+      "schema": 1,
+      "record_id": "8cb2fff5451bd086f6c9591ed27eafec9743dc23a9879fe50135ab079b09fd3c",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:26:44",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "3cd163afee6f166841a30b4a79670f2f",
+        "impact_fmu_id": "modelicatest_electrical_spice3_fourinverters_4v_20261031_142639_c65f492",
+        "model_description_sha256": "d1995ceec7f9b1f2ca2d46836cd13ee6e4582e73dbac18bb93d15f69e1a85159"
+      },
+      "experiment": {
+        "case_entry_sha256": "37ae053ff16fe57ea5e697ca38b5a1ad696c5312125eff28d410f895be4d749b",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_electrical_spice3_fourinverters_4v_20261031_142639_3e2c791",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "ce3c51d3dc9993d45acf5dea66bdb2e5623371517bf03fdc9d2a1715baa1e7f7"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Spice3.FourInverters_4V",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 65742,
+        "file": "FourInverters_4V.npz",
+        "format": "npz",
+        "sha256": "7cec12e6422bd49ff9648bfef3ebc4e852023e3afa41763e2b876e68f35318cc"
+      },
+      "run": {
+        "utc": "2026-10-31T14:26:51+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "FullAdder_SlowClock",
+    "model": "ModelicaTest.Electrical.Digital.FullAdder_SlowClock",
+    "variables": [
+      "c_out.y[1]",
+      "s.y[1]",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.22685760504100472,
+      "steps": 2036,
+      "rhs_evaluations": 2124,
+      "jacobian_evaluations": 52,
+      "time_events": 22,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 5431,
+    "record": {
+      "schema": 1,
+      "record_id": "91905ab40e0015d7c5addb32d0a7fb41715a8f90aa57f0e8123ada58a4887970",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:26:54",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "a8507243efdb7d9572e0f596d48f5b67",
+        "impact_fmu_id": "_delicatest_electrical_digital_fulladder_slowclock_20261031_142651_047784d",
+        "model_description_sha256": "dc54c3a03a53dc1794c2acb3b92fe293f68cbc9d461592340f6575becadc4747"
+      },
+      "experiment": {
+        "case_entry_sha256": "e28e091c3650aecda109d01c2cc1b00eba0aa755ca389dea86e8f2287dce193b",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_delicatest_electrical_digital_fulladder_slowclock_20261031_142651_46a49c6",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "7dbc4ca5f0c996bc528de51cac5a3c56446c59c227397d271d966bdc790c7c30"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Digital.FullAdder_SlowClock",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 5431,
+        "file": "FullAdder_SlowClock.npz",
+        "format": "npz",
+        "sha256": "4b8f2556239ac2db1560bebce2aa990355def128d77070d831c7da958e19fe1e"
+      },
+      "run": {
+        "utc": "2026-10-31T14:26:58+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "GenerationOfFMUs_5Hz",
+    "model": "ModelicaTest.Electrical.Analog.GenerationOfFMUs_5Hz",
+    "variables": [
+      "capacitor2a.v",
+      "capacitor2b.v",
+      "directInductor3.inductor.i",
+      "inductor4a.i",
+      "inductor4b.i",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.09667487803380936,
+      "steps": 1025,
+      "rhs_evaluations": 1043,
+      "jacobian_evaluations": 18,
+      "error_test_failures": 2,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "capacitor2a.v": "V",
+      "capacitor2b.v": "V",
+      "directInductor3.inductor.i": "A",
+      "inductor4a.i": "A",
+      "inductor4b.i": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 25678,
+    "record": {
+      "schema": 1,
+      "record_id": "183f2c0de1cc06a535b304d6bde096dcf53ff03c45934312da804e48d7a4f34e",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:25:43",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "23149c7a8295c3c1b5c6121185946ea6",
+        "impact_fmu_id": "_delicatest_electrical_analog_generationoffmus_5hz_20261031_142540_ac7d813",
+        "model_description_sha256": "a4e27b8351690d7a9c1bbf376048a938623971550d713fc599a8304c53a97657"
+      },
+      "experiment": {
+        "case_entry_sha256": "ed7894cfdb8446eccfe255aab65682435428d93921cc0a57a65b3321e1e39949",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_delicatest_electrical_analog_generationoffmus_5hz_20261031_142540_00c3cc7",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "6909f7c3653435a721aa3552b2a0c217ed4d5cde0c1596ab2755f1a7281fa934"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Analog.GenerationOfFMUs_5Hz",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 25678,
+        "file": "GenerationOfFMUs_5Hz.npz",
+        "format": "npz",
+        "sha256": "5ccc3cedca2e6a5e0c1fccba36d5c925f9d04311bdfaaca161e24a621ef8ff2d"
+      },
+      "run": {
+        "utc": "2026-10-31T14:25:47+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "HalfControlledBridge2Pulse_Alpha60",
+    "model": "ModelicaTest.Electrical.PowerConverters.HalfControlledBridge2Pulse_Alpha60",
+    "variables": [
+      "meanCurrent.y",
+      "meanVoltage.y",
+      "resistor.i",
+      "rootMeanSquareVoltage.y",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.06632227497175336,
+      "steps": 787,
+      "rhs_evaluations": 1083,
+      "jacobian_evaluations": 57,
+      "time_events": 8,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "state_events": 39,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "resistor.i": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 5719,
+    "record": {
+      "schema": 1,
+      "record_id": "3d4359597ced429708bc7626ec42da90f1e55c07e342ac3f641b72eafef51650",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:31:04",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "3bf0985a5abd34dc35228aab834abc2e",
+        "impact_fmu_id": "_owerconverters_halfcontrolledbridge2pulse_alpha60_20261031_143101_5df95d5",
+        "model_description_sha256": "984117994ddf3bd1ee9be33e7fe5c9c56ee2b26c51bb21c71571dc91e8fcc5cd"
+      },
+      "experiment": {
+        "case_entry_sha256": "98780c661be272e8141b01acc2002cf4b6657574a9ad643c17a51f27897a4641",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_owerconverters_halfcontrolledbridge2pulse_alpha60_20261031_143101_7a2378d",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "2941ed651b18052e030a476a66282e6b7f39205e0d5e1a9da68f7c9ab9ce31cf"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.PowerConverters.HalfControlledBridge2Pulse_Alpha60",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 5719,
+        "file": "HalfControlledBridge2Pulse_Alpha60.npz",
+        "format": "npz",
+        "sha256": "c70c41c77397d007f92e0875f407ee225177efb414c739c662f5ba3e5fafaf17"
+      },
+      "run": {
+        "utc": "2026-10-31T14:31:10+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "INV3S_Delays",
+    "model": "ModelicaTest.Electrical.Digital.INV3S_Delays",
+    "variables": [
+      "iNV3S.y",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.1961112340213731,
+      "steps": 2010,
+      "rhs_evaluations": 2038,
+      "jacobian_evaluations": 36,
+      "time_events": 6,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 6256,
+    "record": {
+      "schema": 1,
+      "record_id": "0d67fedb7350fa2142efa557dce4c3340c0d8ad2fa688297439af8fdfe645789",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:27:40",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "78f3c152aa698803e5e14d93e74e7f19",
+        "impact_fmu_id": "modelicatest_electrical_digital_inv3s_delays_20261031_142738_a890891",
+        "model_description_sha256": "85d32b776323a8dc41d18c6d62235a76e79668be5b470583a96e8010fc7f8861"
+      },
+      "experiment": {
+        "case_entry_sha256": "4718ce62a2fbc527ab7ac2b30b025f93add7131e8b35e1c56de627c9bf24ca1b",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_electrical_digital_inv3s_delays_20261031_142738_e0b2109",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "955bf9c265ce001d79d6db67aafa6bf394b00e20ed347f9b2a9ae1cf6470e7b7"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Digital.INV3S_Delays",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 6256,
+        "file": "INV3S_Delays.npz",
+        "format": "npz",
+        "sha256": "c0c2d041f525c1fa7e90a2822b2ca7183b2272fb05bc2b95c214451b66068287"
+      },
+      "run": {
+        "utc": "2026-10-31T14:27:43+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "MUX2x1_Delays",
+    "model": "ModelicaTest.Electrical.Digital.MUX2x1_Delays",
+    "variables": [
+      "Mux2x1.out",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.1954781060339883,
+      "steps": 2015,
+      "rhs_evaluations": 2055,
+      "jacobian_evaluations": 40,
+      "time_events": 9,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 5672,
+    "record": {
+      "schema": 1,
+      "record_id": "8fec5acf55334aaa763d061d97634d6fcb62c4040b1e1e7149417496230cff88",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:27:46",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "6788546ba552bec8aea99d2be885b509",
+        "impact_fmu_id": "modelicatest_electrical_digital_mux2x1_delays_20261031_142744_9cb9cd5",
+        "model_description_sha256": "22a8f3671a81af33cf37f52bf1886fe7b26ca60797291b8cf4e93e3c3e9fa0a0"
+      },
+      "experiment": {
+        "case_entry_sha256": "d7c36db14b50ad00b42a22a50dd92c68b54ed5d91b60b90e9d4b929f14db7178",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_electrical_digital_mux2x1_delays_20261031_142744_29df552",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "3d78a9541ffba46a00b0dabd582d58081786501638c47554e26f3eb2a79d6a29"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Digital.MUX2x1_Delays",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 5672,
+        "file": "MUX2x1_Delays.npz",
+        "format": "npz",
+        "sha256": "a17b2c239251b38c01aa964cec616bc40c047a556157cabeeaa4dd27bb114a7b"
+      },
+      "run": {
+        "utc": "2026-10-31T14:27:49+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "MultipleResonance_k08",
+    "model": "ModelicaTest.Electrical.QuasiStatic.SinglePhase.MultipleResonance_k08",
+    "variables": [
+      "currentSensor.abs_i",
+      "currentSensor.arg_i",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.2010987070389092,
+      "steps": 2013,
+      "rhs_evaluations": 2017,
+      "jacobian_evaluations": 34,
+      "time_events": 1,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "currentSensor.abs_i": "A",
+      "currentSensor.arg_i": "rad"
+    },
+    "display_units": {
+      "currentSensor.arg_i": "deg"
+    },
+    "format": "npz",
+    "bytes": 34040,
+    "record": {
+      "schema": 1,
+      "record_id": "b3a9b44a720536d73d0595c58b608b81a891bd66e44309291a95a422d7fa186b",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:31:57",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "e5ccc62a22c926b6686809a096f8542b",
+        "impact_fmu_id": "_cal_quasistatic_singlephase_multipleresonance_k08_20261031_143154_af54de6",
+        "model_description_sha256": "a0957df59006f3a2afb9f4f78db0dbddabd495b8b4080734589c4dc55b1fd8bf"
+      },
+      "experiment": {
+        "case_entry_sha256": "7b6161c27b16b3b955708cd681f5204dfb1ffb7fcaa86a5452d3f1cf455cf1d1",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_cal_quasistatic_singlephase_multipleresonance_k08_20261031_143153_3ecb26a",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "617922a178420b978bc4476ef6e06baf7e66ffac672413993057c1a4bea49b70"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.QuasiStatic.SinglePhase.MultipleResonance_k08",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 34040,
+        "file": "MultipleResonance_k08.npz",
+        "format": "npz",
+        "sha256": "3441351a17e62a2d94a138f54fcf1ef785a910c396172f6073d6749fd39f2ffa"
+      },
+      "run": {
+        "utc": "2026-10-31T14:31:59+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "NRXFER_Delays",
+    "model": "ModelicaTest.Electrical.Digital.NRXFER_Delays",
+    "variables": [
+      "nRXFERGATE.y",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.19801662908867002,
+      "steps": 2010,
+      "rhs_evaluations": 2038,
+      "jacobian_evaluations": 36,
+      "time_events": 6,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 6272,
+    "record": {
+      "schema": 1,
+      "record_id": "cf0b7d0dd7dadd22a40e17231ef030a6b1bbc3d088e3a26e86b538fc948875d6",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:27:35",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "c4392c45d96e43ff777b927af5e8a0ff",
+        "impact_fmu_id": "modelicatest_electrical_digital_nrxfer_delays_20261031_142733_3370bb9",
+        "model_description_sha256": "7ff3875a2f98eb4e1703b9fac516ee7e86a97c38b7a5631492aa9091777c5742"
+      },
+      "experiment": {
+        "case_entry_sha256": "352668095b537ff646c5ff74b00a03162b884266123efbdbd3c213002dac754f",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_electrical_digital_nrxfer_delays_20261031_142733_ffdb5d3",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "ec78953f7c1f6be62daf36511f8267fef01be6860ab5187146b069df98c647d2"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Digital.NRXFER_Delays",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 6272,
+        "file": "NRXFER_Delays.npz",
+        "format": "npz",
+        "sha256": "a4b9ab1ea090250273406af4a3198f891849c1cdb4976b15f47f5598b43426a7"
+      },
+      "run": {
+        "utc": "2026-10-31T14:27:38+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "NXFER_Delays",
+    "model": "ModelicaTest.Electrical.Digital.NXFER_Delays",
+    "variables": [
+      "nXFERGATE.y",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.2001476159784943,
+      "steps": 2010,
+      "rhs_evaluations": 2038,
+      "jacobian_evaluations": 36,
+      "time_events": 6,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 6270,
+    "record": {
+      "schema": 1,
+      "record_id": "92c60c910080183f8587c9aa7b36ba21a3b155540b954c0740d36da70847ce76",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:27:30",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "1375674ad2893a2a2599a105ad3ca832",
+        "impact_fmu_id": "modelicatest_electrical_digital_nxfer_delays_20261031_142728_068d90e",
+        "model_description_sha256": "2dea9c34522980ac82171af425e7b3d9e13658bae56c15e73a207b890db8d9b6"
+      },
+      "experiment": {
+        "case_entry_sha256": "1822e40bcdfa412c89d91381c8c649fd38d3f4b349c836129cb00bdea173e8e4",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_electrical_digital_nxfer_delays_20261031_142728_0033b56",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "74df796a97b5e924619aee4ccc6158fc5edee07c22998a40d8902e9387d2a1f1"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Digital.NXFER_Delays",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 6270,
+        "file": "NXFER_Delays.npz",
+        "format": "npz",
+        "sha256": "dc7a044a067135bdd5d47a878634e1f590ffd5218f5ec4210ad11e336bf0201a"
+      },
+      "run": {
+        "utc": "2026-10-31T14:27:32+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "PolyphaseBasicSourcesAndSensors",
+    "model": "ModelicaTest.Electrical.Polyphase.PolyphaseBasicSourcesAndSensors",
+    "variables": [
+      "R_6.i[1]",
+      "R_6.i[5]",
+      "R_cc.v[2]",
+      "R_cosc.v[1]",
+      "R_cv.v[3]",
+      "R_i1.i[1]",
+      "R_i2.i[1]",
+      "R_itr.i[1]",
+      "R_pin.v",
+      "R_sc.v[1]",
+      "R_tr.i[1]",
+      "aron.power",
+      "backTransformation[2,1].re",
+      "capacitor.i[1]",
+      "reactive.reactivePower",
+      "saturating.i[1]",
+      "time",
+      "varC.i[1]",
+      "varG.i[1]",
+      "varL.i[1]",
+      "varR.i[1]"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.0789110439363867,
+      "steps": 664,
+      "rhs_evaluations": 746,
+      "jacobian_evaluations": 15,
+      "time_events": 5,
+      "error_test_failures": 2,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "R_cv.v[3]": "V",
+      "R_cc.v[2]": "V",
+      "R_6.i[1]": "A",
+      "saturating.i[1]": "A",
+      "aron.power": "W",
+      "reactive.reactivePower": "var",
+      "capacitor.i[1]": "A",
+      "R_itr.i[1]": "A",
+      "varR.i[1]": "A",
+      "varG.i[1]": "A",
+      "varC.i[1]": "A",
+      "varL.i[1]": "A",
+      "R_i1.i[1]": "A",
+      "R_i2.i[1]": "A",
+      "R_cosc.v[1]": "V",
+      "R_sc.v[1]": "V",
+      "R_6.i[5]": "A",
+      "R_pin.v": "V",
+      "R_tr.i[1]": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 40684,
+    "record": {
+      "schema": 1,
+      "record_id": "283527497b64cf4b2626ccce8abf8ac532710ba9d2da7127a1a79f693aa83037",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:48:00",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "a5b620719691860cdee5e128f6d342c3",
+        "impact_fmu_id": "_ctrical_polyphase_polyphasebasicsourcesandsensors_20261031_144753_e513336",
+        "model_description_sha256": "59e8048abf07184f1732a2bfd84363271322f20cec992e6adb65d0651c074124"
+      },
+      "experiment": {
+        "case_entry_sha256": "2976aa9fb6dad96bbf32338d3e8ab3345bf7cbf89c80c7f6cadc7a9516a83a19",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_ctrical_polyphase_polyphasebasicsourcesandsensors_20261031_144753_e8b624a",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "eefffa7e6dbf1e1c2d86858eb3567d38cc2d42ce4e99784df6227274dc10740e"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Polyphase.PolyphaseBasicSourcesAndSensors",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 40684,
+        "file": "PolyphaseBasicSourcesAndSensors.npz",
+        "format": "npz",
+        "sha256": "d2eac34900ba8996bd545e5d228c6cf9bde80a45df7be58b389a267cff863edb"
+      },
+      "run": {
+        "utc": "2026-10-31T14:48:05+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "QuasiStaticTransformersDd",
+    "model": "ModelicaTest.Electrical.QuasiStatic.Machines.QuasiStaticTransformersDd",
+    "variables": [
+      "loadDd00.i[2].re",
+      "loadDd00.v[1].im",
+      "loadDd00.v[1].re",
+      "loadDd02.v[1].im",
+      "loadDd02.v[1].re",
+      "loadDd04.v[1].im",
+      "loadDd04.v[1].re",
+      "loadDd06.v[1].im",
+      "loadDd06.v[1].re",
+      "loadDd08.v[1].im",
+      "loadDd08.v[1].re",
+      "loadDd10.v[1].im",
+      "loadDd10.v[1].re",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.03474231995642185,
+      "steps": 105,
+      "rhs_evaluations": 109,
+      "jacobian_evaluations": 2,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "loadDd00.v[1].re": "V",
+      "loadDd00.v[1].im": "V",
+      "loadDd02.v[1].re": "V",
+      "loadDd02.v[1].im": "V",
+      "loadDd04.v[1].re": "V",
+      "loadDd04.v[1].im": "V",
+      "loadDd06.v[1].re": "V",
+      "loadDd06.v[1].im": "V",
+      "loadDd08.v[1].re": "V",
+      "loadDd08.v[1].im": "V",
+      "loadDd10.v[1].re": "V",
+      "loadDd10.v[1].im": "V",
+      "loadDd00.i[2].re": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 3596,
+    "record": {
+      "schema": 1,
+      "record_id": "6b361b00c39072a3d0e1d53562efaa9837f576d0f8682dec07bfd96caa036ca5",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:34:16",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "d1994c47173fcf00fb47530e65d2f276",
+        "impact_fmu_id": "_al_quasistatic_machines_quasistatictransformersdd_20261031_143359_4b1b2e7",
+        "model_description_sha256": "a416ac9c5d1debcd7e46f1c3982e93da9686bad356cadb0a1b31dcbc9f28b6d8"
+      },
+      "experiment": {
+        "case_entry_sha256": "05856732268228ab77f5fa2114af2d01ceec1eeb5a7f2c3c6945a46ad2795c10",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_al_quasistatic_machines_quasistatictransformersdd_20261031_143359_b134e4c",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "628139456d59a1a9f4957ab26d59165911bdb730db5204cc0dcd68103b3e04ce"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.QuasiStatic.Machines.QuasiStaticTransformersDd",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 3596,
+        "file": "QuasiStaticTransformersDd.npz",
+        "format": "npz",
+        "sha256": "413d4d76d9b2dee8db2c614e79369f2bff8a32637a66fcd2eed13e345947864b"
+      },
+      "run": {
+        "utc": "2026-10-31T14:34:22+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "QuasiStaticTransformersDy",
+    "model": "ModelicaTest.Electrical.QuasiStatic.Machines.QuasiStaticTransformersDy",
+    "variables": [
+      "loadDy01.i[2].re",
+      "loadDy01.v[1].im",
+      "loadDy01.v[1].re",
+      "loadDy03.v[1].im",
+      "loadDy03.v[1].re",
+      "loadDy05.v[1].im",
+      "loadDy05.v[1].re",
+      "loadDy07.v[1].im",
+      "loadDy07.v[1].re",
+      "loadDy09.v[1].im",
+      "loadDy09.v[1].re",
+      "loadDy11.v[1].im",
+      "loadDy11.v[1].re",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.035306385019794106,
+      "steps": 105,
+      "rhs_evaluations": 109,
+      "jacobian_evaluations": 2,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "loadDy01.v[1].re": "V",
+      "loadDy01.v[1].im": "V",
+      "loadDy03.v[1].re": "V",
+      "loadDy03.v[1].im": "V",
+      "loadDy05.v[1].re": "V",
+      "loadDy05.v[1].im": "V",
+      "loadDy07.v[1].re": "V",
+      "loadDy07.v[1].im": "V",
+      "loadDy09.v[1].re": "V",
+      "loadDy09.v[1].im": "V",
+      "loadDy11.v[1].re": "V",
+      "loadDy11.v[1].im": "V",
+      "loadDy01.i[2].re": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 3593,
+    "record": {
+      "schema": 1,
+      "record_id": "27f518802d6f8408e5297409140d5234795fbb9c67c4263c4f01eed2d724ec83",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:34:40",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "93d25bacf14d11fa4074496664ad4f6e",
+        "impact_fmu_id": "_al_quasistatic_machines_quasistatictransformersdy_20261031_143423_6efd4f9",
+        "model_description_sha256": "47ea720f1b9481e440d1ad865e61bc5d4494a79edd88fa87991b4cb8f925b770"
+      },
+      "experiment": {
+        "case_entry_sha256": "0ab3335b0fe53137707db00a842ba3564d1cc8a1592c5c5a8eda879c83860cf8",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_al_quasistatic_machines_quasistatictransformersdy_20261031_143423_3e16de3",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "36451487290554464a8f17ec0bd6cfe744f0fc7babd19c99f12aff5d84103464"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.QuasiStatic.Machines.QuasiStaticTransformersDy",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 3593,
+        "file": "QuasiStaticTransformersDy.npz",
+        "format": "npz",
+        "sha256": "ce36ceef4a02531088730e6280e2e4b7f6068438191638a29dffeca1b3bd7df8"
+      },
+      "run": {
+        "utc": "2026-10-31T14:34:47+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "QuasiStaticTransformersDz",
+    "model": "ModelicaTest.Electrical.QuasiStatic.Machines.QuasiStaticTransformersDz",
+    "variables": [
+      "loadDz00.i[2].re",
+      "loadDz00.v[1].im",
+      "loadDz00.v[1].re",
+      "loadDz02.v[1].im",
+      "loadDz02.v[1].re",
+      "loadDz04.v[1].im",
+      "loadDz04.v[1].re",
+      "loadDz06.v[1].im",
+      "loadDz06.v[1].re",
+      "loadDz08.v[1].im",
+      "loadDz08.v[1].re",
+      "loadDz10.v[1].im",
+      "loadDz10.v[1].re",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.03701302292756736,
+      "steps": 105,
+      "rhs_evaluations": 109,
+      "jacobian_evaluations": 2,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "loadDz00.v[1].re": "V",
+      "loadDz00.v[1].im": "V",
+      "loadDz02.v[1].re": "V",
+      "loadDz02.v[1].im": "V",
+      "loadDz04.v[1].re": "V",
+      "loadDz04.v[1].im": "V",
+      "loadDz06.v[1].re": "V",
+      "loadDz06.v[1].im": "V",
+      "loadDz08.v[1].re": "V",
+      "loadDz08.v[1].im": "V",
+      "loadDz10.v[1].re": "V",
+      "loadDz10.v[1].im": "V",
+      "loadDz00.i[2].re": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 3594,
+    "record": {
+      "schema": 1,
+      "record_id": "ef0116b2e87fa073a6ffb0835b0614bce4d2293f5fa4b509e79c5b33497bf723",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:35:05",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "86492fd63a082b41c4e11d355f42eab9",
+        "impact_fmu_id": "_al_quasistatic_machines_quasistatictransformersdz_20261031_143447_0933955",
+        "model_description_sha256": "50e058f379a91d9fad44f8ec5964033cf8f9f58ae8bf17678d6907fd5e7226a6"
+      },
+      "experiment": {
+        "case_entry_sha256": "ef77e5b2c36e7f45b0bc247ca1b93d2a78f4a2a309d4fe8bf176473d8f5234d6",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_al_quasistatic_machines_quasistatictransformersdz_20261031_143447_9594f47",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "ca1a474c97a01a455bdaaa4e42e9fa543915aa67f472c387a448f50e467400f0"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.QuasiStatic.Machines.QuasiStaticTransformersDz",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 3594,
+        "file": "QuasiStaticTransformersDz.npz",
+        "format": "npz",
+        "sha256": "01b7fe902bab3f2e9ef8b7ef8b5fff56bc0c2817308cc574118365d901cc7fb5"
+      },
+      "run": {
+        "utc": "2026-10-31T14:35:11+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "QuasiStaticTransformersYd",
+    "model": "ModelicaTest.Electrical.QuasiStatic.Machines.QuasiStaticTransformersYd",
+    "variables": [
+      "loadYd01.i[2].re",
+      "loadYd01.v[1].im",
+      "loadYd01.v[1].re",
+      "loadYd03.v[1].im",
+      "loadYd03.v[1].re",
+      "loadYd05.v[1].im",
+      "loadYd05.v[1].re",
+      "loadYd07.v[1].im",
+      "loadYd07.v[1].re",
+      "loadYd09.v[1].im",
+      "loadYd09.v[1].re",
+      "loadYd11.v[1].im",
+      "loadYd11.v[1].re",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.03933345293626189,
+      "steps": 105,
+      "rhs_evaluations": 109,
+      "jacobian_evaluations": 2,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "loadYd01.v[1].re": "V",
+      "loadYd01.v[1].im": "V",
+      "loadYd01.i[2].re": "A",
+      "loadYd03.v[1].re": "V",
+      "loadYd03.v[1].im": "V",
+      "loadYd05.v[1].re": "V",
+      "loadYd05.v[1].im": "V",
+      "loadYd07.v[1].re": "V",
+      "loadYd07.v[1].im": "V",
+      "loadYd09.v[1].re": "V",
+      "loadYd09.v[1].im": "V",
+      "loadYd11.v[1].re": "V",
+      "loadYd11.v[1].im": "V"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 3595,
+    "record": {
+      "schema": 1,
+      "record_id": "3ef1ae24293d1dc92c345edde202713ab28b4d9a3ed05830ebcc330e471dfb0e",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:35:30",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "2f812bcce08f15f53753aa2f8f90c036",
+        "impact_fmu_id": "_al_quasistatic_machines_quasistatictransformersyd_20261031_143512_fa7c96a",
+        "model_description_sha256": "144293b0246d30e704cd54b3ca9fe73bb6fbc28a93be104cfebc0cb918314fec"
+      },
+      "experiment": {
+        "case_entry_sha256": "ba876c6b7835590ca4346cb7f6a2c0f3e64b9d433efbadcc2834c5a073eeee4c",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_al_quasistatic_machines_quasistatictransformersyd_20261031_143512_0db3cd3",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "e6a999dcc0c1d21f135e930a30ae618d34bcd18aa3c5026ecba0e6d4fa46378c"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.QuasiStatic.Machines.QuasiStaticTransformersYd",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 3595,
+        "file": "QuasiStaticTransformersYd.npz",
+        "format": "npz",
+        "sha256": "a03009a8a56385233e14af7ba2797ac0ed008bacf8c17c338ab20929faeadc0c"
+      },
+      "run": {
+        "utc": "2026-10-31T14:35:36+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "QuasiStaticTransformersYy",
+    "model": "ModelicaTest.Electrical.QuasiStatic.Machines.QuasiStaticTransformersYy",
+    "variables": [
+      "loadYy00.i[2].re",
+      "loadYy00.v[1].im",
+      "loadYy00.v[1].re",
+      "loadYy02.v[1].im",
+      "loadYy02.v[1].re",
+      "loadYy04.v[1].im",
+      "loadYy04.v[1].re",
+      "loadYy06.v[1].im",
+      "loadYy06.v[1].re",
+      "loadYy08.v[1].im",
+      "loadYy08.v[1].re",
+      "loadYy10.v[1].im",
+      "loadYy10.v[1].re",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.04956370498985052,
+      "steps": 105,
+      "rhs_evaluations": 109,
+      "jacobian_evaluations": 2,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "loadYy00.v[1].re": "V",
+      "loadYy00.v[1].im": "V",
+      "loadYy00.i[2].re": "A",
+      "loadYy02.v[1].re": "V",
+      "loadYy02.v[1].im": "V",
+      "loadYy04.v[1].re": "V",
+      "loadYy04.v[1].im": "V",
+      "loadYy06.v[1].re": "V",
+      "loadYy06.v[1].im": "V",
+      "loadYy08.v[1].re": "V",
+      "loadYy08.v[1].im": "V",
+      "loadYy10.v[1].re": "V",
+      "loadYy10.v[1].im": "V"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 3596,
+    "record": {
+      "schema": 1,
+      "record_id": "4838e286c10d00d76dec6f2eaf22f9d9ab854f13e8f22581b613077075b98832",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:35:53",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "a8e29bcf23502aab7064efdd6a225a70",
+        "impact_fmu_id": "_al_quasistatic_machines_quasistatictransformersyy_20261031_143537_6afb930",
+        "model_description_sha256": "240baa9ffd80ba7ca98a0bcca882be3ed75cd32159d68f0c3930b5d192a26bea"
+      },
+      "experiment": {
+        "case_entry_sha256": "eb90c1969ea418db8a2aa99be1a5ccd4eaf40340a5a7b89757c30556a19dcf76",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_al_quasistatic_machines_quasistatictransformersyy_20261031_143537_39b1b7f",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "539cff0b25291921936c8c906b94f542060af2825cdc65dd80c6e7ca9189d79e"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.QuasiStatic.Machines.QuasiStaticTransformersYy",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 3596,
+        "file": "QuasiStaticTransformersYy.npz",
+        "format": "npz",
+        "sha256": "bc093912d1f8dd73cfffd1d3f4811b26e9a3cfdc8f4b30b7647dbe5c69191520"
+      },
+      "run": {
+        "utc": "2026-10-31T14:36:01+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "QuasiStaticTransformersYz",
+    "model": "ModelicaTest.Electrical.QuasiStatic.Machines.QuasiStaticTransformersYz",
+    "variables": [
+      "loadYz01.i[2].re",
+      "loadYz01.v[1].im",
+      "loadYz01.v[1].re",
+      "loadYz03.v[1].im",
+      "loadYz03.v[1].re",
+      "loadYz05.v[1].im",
+      "loadYz05.v[1].re",
+      "loadYz07.v[1].im",
+      "loadYz07.v[1].re",
+      "loadYz09.v[1].im",
+      "loadYz09.v[1].re",
+      "loadYz11.v[1].im",
+      "loadYz11.v[1].re",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.040186322992667556,
+      "steps": 105,
+      "rhs_evaluations": 109,
+      "jacobian_evaluations": 2,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "loadYz01.v[1].re": "V",
+      "loadYz01.v[1].im": "V",
+      "loadYz01.i[2].re": "A",
+      "loadYz03.v[1].re": "V",
+      "loadYz03.v[1].im": "V",
+      "loadYz05.v[1].re": "V",
+      "loadYz05.v[1].im": "V",
+      "loadYz07.v[1].re": "V",
+      "loadYz07.v[1].im": "V",
+      "loadYz09.v[1].re": "V",
+      "loadYz09.v[1].im": "V",
+      "loadYz11.v[1].re": "V",
+      "loadYz11.v[1].im": "V"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 3595,
+    "record": {
+      "schema": 1,
+      "record_id": "fcf6c707b59291a6b7db458636bf7969ac22af53af9dc5b1aaf1699fdec3305c",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:36:20",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "40e3b2c411b6dc5da7dbd7e583e8ce80",
+        "impact_fmu_id": "_al_quasistatic_machines_quasistatictransformersyz_20261031_143601_6c63e28",
+        "model_description_sha256": "920f2c8202a45f3e7a803ad88f31b7638ffe70656161097d8d73850a61be9b71"
+      },
+      "experiment": {
+        "case_entry_sha256": "a8b9c3267791169659e94c4ead7ad4bb730632946307c9490f5ae984de769ea9",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_al_quasistatic_machines_quasistatictransformersyz_20261031_143601_d2b6a93",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "e2a24b16d52fed97139d2808634559a539918b5032b2c0cc4a954e70f9936a9c"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.QuasiStatic.Machines.QuasiStaticTransformersYz",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 3595,
+        "file": "QuasiStaticTransformersYz.npz",
+        "format": "npz",
+        "sha256": "ab6ca0b6e618d599cf29e45c095e61045c95990df40970498a100a6b25a68e40"
+      },
+      "run": {
+        "utc": "2026-10-31T14:36:28+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "RAM_Delays",
+    "model": "ModelicaTest.Electrical.Digital.RAM_Delays",
+    "variables": [
+      "dLATRAM.dataOut[1]",
+      "dLATRAM.dataOut[2]",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.24224162893369794,
+      "steps": 2096,
+      "rhs_evaluations": 2480,
+      "jacobian_evaluations": 96,
+      "time_events": 96,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 4853,
+    "record": {
+      "schema": 1,
+      "record_id": "325ee5379b6e7b4d51048c0c10290e07d1dc84002de61832725e7a39e55c2b8c",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:27:24",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "1618a9d10c76424cde117fc1014d1b9f",
+        "impact_fmu_id": "modelicatest_electrical_digital_ram_delays_20261031_142721_eb8acc2",
+        "model_description_sha256": "42901eb5ece984d2079861fb4270471c801c8adcbc33ab839beb168afb1f4853"
+      },
+      "experiment": {
+        "case_entry_sha256": "5df9c718eb73ca9f20409f9948306a419dcc0bac8a1edd548be746f085dfff84",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_electrical_digital_ram_delays_20261031_142721_899a6bd",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "353a2b3044f7c97efefc62d2f32241547d6b470c138171753b30488da20c87a5"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Digital.RAM_Delays",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 4853,
+        "file": "RAM_Delays.npz",
+        "format": "npz",
+        "sha256": "f36a76007fb7589440b491d9c3a60f1257de6afb23cb589bc1615af368e5ce60"
+      },
+      "run": {
+        "utc": "2026-10-31T14:27:27+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "Rectifier_230V",
+    "model": "ModelicaTest.Electrical.QuasiStatic.SinglePhase.Rectifier_230V",
+    "variables": [
+      "iAC.mean1.y",
+      "iAC.mean2.y",
+      "iDC2.mean.y",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.4391033260617405,
+      "steps": 6654,
+      "rhs_evaluations": 8850,
+      "jacobian_evaluations": 214,
+      "time_events": 50,
+      "error_test_failures": 150,
+      "convergence_failures": 0,
+      "state_events": 146,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 8116,
+    "record": {
+      "schema": 1,
+      "record_id": "4d78d7ba55099a16d0a7a246ba3cfba1c387471bfdf15bd02db332db523a6d64",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:31:43",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "578286434090e40e936af51fb8b86d2f",
+        "impact_fmu_id": "_electrical_quasistatic_singlephase_rectifier_230v_20261031_143140_7ffb8c6",
+        "model_description_sha256": "4b54196a34387478d79e62ea2f75a24cb203b2d46f491981720ad4842ca0f823"
+      },
+      "experiment": {
+        "case_entry_sha256": "f48842fb261b8ead3150edf508eec8898de1deec6c8c45f2cbfc1007166c9900",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_electrical_quasistatic_singlephase_rectifier_230v_20261031_143140_53aff70",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "e533187ba391f6ad2e158ada634ca08a09d80bbf3a1b2168a4ca2d90302c12ef"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.QuasiStatic.SinglePhase.Rectifier_230V",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 8116,
+        "file": "Rectifier_230V.npz",
+        "format": "npz",
+        "sha256": "e0436b15167c6a13e2d1e7cf9c07ef2350ba696168c7b50047a5596fc873ca03"
+      },
+      "run": {
+        "utc": "2026-10-31T14:31:47+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ReferenceSourceAndSensors",
+    "model": "ModelicaTest.Electrical.QuasiStatic.Polyphase.ReferenceSourceAndSensors",
+    "variables": [
+      "frequencySensor.f",
+      "frequencySensor1.f",
+      "inductor.i[1].im",
+      "inductor.i[1].re",
+      "load.v[2].re",
+      "load2.v[1].im",
+      "load2.v[1].re",
+      "referenceSensor.gamma",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.056756607023999095,
+      "steps": 505,
+      "rhs_evaluations": 509,
+      "jacobian_evaluations": 9,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "referenceSensor.gamma": "rad",
+      "inductor.i[1].re": "A",
+      "inductor.i[1].im": "A",
+      "load.v[2].re": "V",
+      "frequencySensor.f": "Hz",
+      "frequencySensor1.f": "Hz",
+      "load2.v[1].re": "V",
+      "load2.v[1].im": "V"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 6543,
+    "record": {
+      "schema": 1,
+      "record_id": "2c34ce07c7b58ea3332ecd4602832eb8bf420df9bfc33e2ccf894cbb3d01fda7",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T17:04:39",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "2f03bb95f11ed30060a6df89e5188dd4",
+        "impact_fmu_id": "_l_quasistatic_polyphase_referencesourceandsensors_20261031_170431_e765f05",
+        "model_description_sha256": "18688a7b324829bd27cf187b5a5a452a6f52a44bc9442a257c2cca73544d9e89"
+      },
+      "experiment": {
+        "case_entry_sha256": "5bfd2fdd9ca8409bfcbe65337f2d72695b003759ca3e74af945698f7228c815a",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_l_quasistatic_polyphase_referencesourceandsensors_20261031_170431_dcb19cf",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "b3f1e321ff385974f4428841aa285e2b7915a9b17e816f1a629e126b841314bb"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.QuasiStatic.Polyphase.ReferenceSourceAndSensors",
+        "libraries": [
+          {
+            "git_commit": "a42314653f6260690012acdaf0cd9180e17a0061",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 6543,
+        "file": "ReferenceSourceAndSensors.npz",
+        "format": "npz",
+        "sha256": "ff3a67c3293f086e499edec6971e91d21680ce4fed2a621efbd6d29ad7706953"
+      },
+      "run": {
+        "utc": "2026-10-31T17:04:43+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "SMPM_NoLoad_FastRamp",
+    "model": "ModelicaTest.Electrical.Machines.SMPM_NoLoad_FastRamp",
+    "variables": [
+      "hallSensor.y",
+      "time",
+      "toSpacePhasor.y[1]",
+      "toSpacePhasor.y[2]"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.31968144699931145,
+      "steps": 3220,
+      "rhs_evaluations": 3291,
+      "jacobian_evaluations": 66,
+      "time_events": 2,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "state_events": 14,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "hallSensor.y": "rad"
+    },
+    "display_units": {
+      "hallSensor.y": "deg"
+    },
+    "format": "npz",
+    "bytes": 57525,
+    "record": {
+      "schema": 1,
+      "record_id": "7bd83a5e9cd2022edc6bf6d37f7fe3ad3c50f267f6b20995c7d8734043a81e2d",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:29:47",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "e3abade676dae448c166886175e9ff73",
+        "impact_fmu_id": "_licatest_electrical_machines_smpm_noload_fastramp_20261031_142944_a38f91a",
+        "model_description_sha256": "90e31113ae42b95c4ea40a03913b4f19c6b5ccb7f7cd3b4a9cc49dbd4b16c88f"
+      },
+      "experiment": {
+        "case_entry_sha256": "520ad5068fbe17a80d95c5dc7a2249eebc85796eeb883cc84eef7af2677f6f43",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_licatest_electrical_machines_smpm_noload_fastramp_20261031_142944_cb29bda",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "d6ffc9d233af3a2f065fb78d8192c91a4b73b34ea433330376c27c686865a457"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Machines.SMPM_NoLoad_FastRamp",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 57525,
+        "file": "SMPM_NoLoad_FastRamp.npz",
+        "format": "npz",
+        "sha256": "5c38362642f40e02d39b19f69be7d0b7b63dafeb8d4f56e444d1d2a3de32e86e"
+      },
+      "run": {
+        "utc": "2026-10-31T14:29:50+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "SMPM_VoltageSource_HalfLoad",
+    "model": "ModelicaTest.Electrical.Machines.SMPM_VoltageSource_HalfLoad",
+    "variables": [
+      "inertiaLoad.w",
+      "smpm.idq_sr[1]",
+      "smpm.idq_sr[2]",
+      "smpm.is[1]",
+      "smpm.is[2]",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.42074147099629045,
+      "steps": 4057,
+      "rhs_evaluations": 4094,
+      "jacobian_evaluations": 69,
+      "error_test_failures": 4,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "smpm.idq_sr[1]": "A",
+      "smpm.idq_sr[2]": "A",
+      "inertiaLoad.w": "rad/s",
+      "smpm.is[1]": "A",
+      "smpm.is[2]": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 146343,
+    "record": {
+      "schema": 1,
+      "record_id": "be6e8aeaaa1745a672bd9a2c8c85bc65a189ac913ca218138aec8a1298843cc2",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:29:39",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "58377445f6cbdbd84b741d33e456e277",
+        "impact_fmu_id": "_t_electrical_machines_smpm_voltagesource_halfload_20261031_142935_1a1588c",
+        "model_description_sha256": "4ffd209e5ad9cbe585f515096d3e4eb70a21b3c0646222fe004cd8ff31867111"
+      },
+      "experiment": {
+        "case_entry_sha256": "16f21d09f3f1e52900ac40e09812d515c5aa7bcb5a5a0e156e33a13079c9d850",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_t_electrical_machines_smpm_voltagesource_halfload_20261031_142935_0fb7e41",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "d9d29b42c0ca0829478fb6e5a2d79ebf10b9305ad6103c62f553a10f63f87213"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Machines.SMPM_VoltageSource_HalfLoad",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 146343,
+        "file": "SMPM_VoltageSource_HalfLoad.npz",
+        "format": "npz",
+        "sha256": "231436d8ed7a2844b1cf2976b5a2e0c111c6f2a076faa565a8cbf2a6294288f8"
+      },
+      "run": {
+        "utc": "2026-10-31T14:29:43+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "SM_ElectricalExcitedDataRecord",
+    "model": "ModelicaTest.Electrical.Machines.SM_ElectricalExcitedDataRecord",
+    "variables": [
+      "load.v[1]",
+      "smee.ie",
+      "smee.is[1]",
+      "smee.is[2]",
+      "smee.tauElectrical",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.05380314704962075,
+      "steps": 593,
+      "rhs_evaluations": 627,
+      "jacobian_evaluations": 11,
+      "error_test_failures": 4,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "smee.ie": "A",
+      "smee.tauElectrical": "N.m",
+      "load.v[1]": "V",
+      "smee.is[1]": "A",
+      "smee.is[2]": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 22231,
+    "record": {
+      "schema": 1,
+      "record_id": "8dcb3f15d387b49966978a5971a38e1829a9fe1426b4b9cc71bae78d8f674827",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T18:15:51",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "2d73d5a077b7bd60129cc90f71745b7d",
+        "impact_fmu_id": "_lectrical_machines_sm_electricalexciteddatarecord_20261031_181547_e5bc13f",
+        "model_description_sha256": "ab01597e66221aed9915a331cfa5c86debc025edcda5fdea16a9034c1a11c22d"
+      },
+      "experiment": {
+        "case_entry_sha256": "408d199f7863b61ceddb4cdb1e2109630d4a350e31542a477a4a2e880bb8de4a",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_lectrical_machines_sm_electricalexciteddatarecord_20261031_181547_5f23848",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "61b46897adebc3da4cfb200061b155700cc58fe809dc61410ec9b6747c24c416"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Machines.SM_ElectricalExcitedDataRecord",
+        "libraries": [
+          {
+            "git_commit": "d124e82900796ebdb5d710f1015cc306b153d17a",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 22231,
+        "file": "SM_ElectricalExcitedDataRecord.npz",
+        "format": "npz",
+        "sha256": "19d2ca134c9bfeeffa24acf810e91b9cc0ccc5d88941585b0b128680cd9a566e"
+      },
+      "run": {
+        "utc": "2026-10-31T18:15:54+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "ShowImpedance_Qnom7200",
+    "model": "ModelicaTest.Electrical.Batteries.ShowImpedance_Qnom7200",
+    "variables": [
+      "impedance.z.im",
+      "impedance.z.re",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.4706948479870334,
+      "steps": 5001,
+      "rhs_evaluations": 5005,
+      "jacobian_evaluations": 84,
+      "time_events": 1,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "impedance.z.re": "Ohm",
+      "impedance.z.im": "Ohm"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 82891,
+    "record": {
+      "schema": 1,
+      "record_id": "c2025d72aac8edfae2a73a81a04cfa1654a3b220f25fb18d0ca22743e5dcce8b",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:29:14",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "a89245f179a37153180846fd58088eaa",
+        "impact_fmu_id": "_atest_electrical_batteries_showimpedance_qnom7200_20261031_142912_5dfb131",
+        "model_description_sha256": "3823f46314ff1c70fc0b4f523625ed8007581bad736b6f0662ba407e26e76f20"
+      },
+      "experiment": {
+        "case_entry_sha256": "32f57bf0538a40b51514c7d53d98e165ab67e64dd6b798ba765a19970df45ea0",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_atest_electrical_batteries_showimpedance_qnom7200_20261031_142912_14a1db7",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "71ce7d4088651aa4e8733a7660bc85404cf63c31db1751a3339fc2380cd5edab"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Batteries.ShowImpedance_Qnom7200",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 82891,
+        "file": "ShowImpedance_Qnom7200.npz",
+        "format": "npz",
+        "sha256": "149fa27b187278cd65991532b105a92a32977685f5192579157a35ebc25b48ca"
+      },
+      "run": {
+        "utc": "2026-10-31T14:29:18+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "SpacePhasorAndSymmetricalComponentsBlocks",
+    "model": "ModelicaTest.Electrical.QuasiStatic.Polyphase.SpacePhasorAndSymmetricalComponentsBlocks",
+    "variables": [
+      "fromSpacePhasor.y[1].re",
+      "fromSpacePhasor.y[2].im",
+      "fromSpacePhasor2.y[2].re",
+      "fromSymmetricalComponents.y[2].re",
+      "fromSymmetricalComponents.y[3].im",
+      "symmetricalComponents.y[2].im",
+      "symmetricalComponents.y[2].re",
+      "time",
+      "toSpacePhasor.y[1]",
+      "toSpacePhasor.y[2]"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.05126636300701648,
+      "steps": 501,
+      "rhs_evaluations": 505,
+      "jacobian_evaluations": 9,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 22356,
+    "record": {
+      "schema": 1,
+      "record_id": "0c568fd092841cf255b37bac0cbd963c44e9a3b5f845564b5f61a555bcc6e6ef",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:36:39",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "879d3d66dd5d2578ad6d3f4655c37474",
+        "impact_fmu_id": "_lyphase_spacephasorandsymmetricalcomponentsblocks_20261031_143636_2ed79fd",
+        "model_description_sha256": "1cc4680c2bfcff10a7a70baffe84964d90214e78c858c02dfe13fb3d30e535db"
+      },
+      "experiment": {
+        "case_entry_sha256": "7c1b327ca391b319257ac802484891b94312846d3397f10130048981dde4ee96",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_lyphase_spacephasorandsymmetricalcomponentsblocks_20261031_143636_a1d49ac",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "26a5efef5c57c81926cd619599c95081840fd9389f818c25a0e06c6d9be332a7"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.QuasiStatic.Polyphase.SpacePhasorAndSymmetricalComponentsBlocks",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 22356,
+        "file": "SpacePhasorAndSymmetricalComponentsBlocks.npz",
+        "format": "npz",
+        "sha256": "b01d9e0cc60617b891b662c8b066cb9ff4848299bc9a4cd8aa607859bbb43358"
+      },
+      "run": {
+        "utc": "2026-10-31T14:36:43+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "SpacePhasorsBlocksComponentsAndFunctions",
+    "model": "ModelicaTest.Electrical.Machines.SpacePhasorsBlocksComponentsAndFunctions",
+    "variables": [
+      "fp[1]",
+      "fp[2]",
+      "fromPolar.y[1]",
+      "fromPolar.y[2]",
+      "fsp[1]",
+      "fsp[3]",
+      "load.i[1]",
+      "load.i[2]",
+      "qrms",
+      "quasiRMS.y",
+      "rot[1]",
+      "rot[2]",
+      "rotator.spacePhasor_b.v_[1]",
+      "rotator.spacePhasor_b.v_[2]",
+      "time",
+      "tp"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.05734421394299716,
+      "steps": 501,
+      "rhs_evaluations": 505,
+      "jacobian_evaluations": 9,
+      "time_events": 1,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "rotator.spacePhasor_b.v_[1]": "V",
+      "rotator.spacePhasor_b.v_[2]": "V",
+      "load.i[1]": "A",
+      "load.i[2]": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 45519,
+    "record": {
+      "schema": 1,
+      "record_id": "218bc4c5345059a4ba47117f5b80b2c1b471515eddd21d68791381981c3e6499",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:36:31",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "ceb397075e44ff8964502b5813c58403",
+        "impact_fmu_id": "_machines_spacephasorsblockscomponentsandfunctions_20261031_143628_95c70af",
+        "model_description_sha256": "5095858f4f9e31144fa5347d0060f65d6fc1831e2057fd49ae46cff03b9c4f51"
+      },
+      "experiment": {
+        "case_entry_sha256": "6088215f5807f27c2bf5fac7ae13b4c00070b041df4deaa5656234f47d303e53",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_machines_spacephasorsblockscomponentsandfunctions_20261031_143628_a1a81ea",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "c96a7248c9034f0f06819c75438865bdda0f9b35c4af36b9d459912c24109274"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Machines.SpacePhasorsBlocksComponentsAndFunctions",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 45519,
+        "file": "SpacePhasorsBlocksComponentsAndFunctions.npz",
+        "format": "npz",
+        "sha256": "eca768b62bea33de0588b09c7c9d26ec4e3405b37c96428004b51d4d68add6d8"
+      },
+      "run": {
+        "utc": "2026-10-31T14:36:35+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "Spice3Modelcards",
+    "model": "ModelicaTest.Electrical.Spice3.Spice3Modelcards",
+    "variables": [
+      "cl.v",
+      "cs.v",
+      "rd.v",
+      "re.v",
+      "rj.v",
+      "rs.i",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.17951914796140045,
+      "steps": 1776,
+      "rhs_evaluations": 2813,
+      "jacobian_evaluations": 95,
+      "time_events": 8,
+      "error_test_failures": 130,
+      "convergence_failures": 8,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "cl.v": "V",
+      "re.v": "V",
+      "rj.v": "V",
+      "rd.v": "V",
+      "rs.i": "A",
+      "cs.v": "V"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 9116,
+    "record": {
+      "schema": 1,
+      "record_id": "2a9ab81c80f3c5be745ebd237cff13ec6c425faa190cd9a21936eae23f0c0646",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T18:16:02",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "e133924025566739ed65e6d035b9288f",
+        "impact_fmu_id": "modelicatest_electrical_spice3_spice3modelcards_20261031_181557_5b0a8a1",
+        "model_description_sha256": "8eeadc415b444941095f9d884c2e7139f932a7e83a8b52c0760f5d93fc0622e1"
+      },
+      "experiment": {
+        "case_entry_sha256": "db56f283b617f8fd018ceb255d575fea1affd2c688597c77b4d010f0736ddc35",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_electrical_spice3_spice3modelcards_20261031_181556_4c3e6ab",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "40a6304a3cb845d12d96eba525969b4c992cb14fc6fb1879d3bae0fa5e467e5f"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Spice3.Spice3Modelcards",
+        "libraries": [
+          {
+            "git_commit": "d124e82900796ebdb5d710f1015cc306b153d17a",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 9116,
+        "file": "Spice3Modelcards.npz",
+        "format": "npz",
+        "sha256": "f3f97030edc0ee4a7d502727cf0a6860ec2442cf8a8e083fa8982b7bd8d0de22"
+      },
+      "run": {
+        "utc": "2026-10-31T18:16:06+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "Spice3Semiconductors",
+    "model": "ModelicaTest.Electrical.Spice3.Spice3Semiconductors",
+    "variables": [
+      "cl.v",
+      "cs.v",
+      "rc.v",
+      "rd.v",
+      "rjn.v",
+      "rjp.v",
+      "rs.i",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.24591417599003762,
+      "steps": 1776,
+      "rhs_evaluations": 2813,
+      "jacobian_evaluations": 95,
+      "time_events": 8,
+      "error_test_failures": 130,
+      "convergence_failures": 8,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "cl.v": "V",
+      "rc.v": "V",
+      "rjp.v": "V",
+      "rjn.v": "V",
+      "rd.v": "V",
+      "rs.i": "A",
+      "cs.v": "V"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 9251,
+    "record": {
+      "schema": 1,
+      "record_id": "7c4bcfd16889d787aae908411b747a59f41e5574eeb95bb960937f0b099d3833",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:25:03",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "cef00fbe4cbd20174ecf26d256167a13",
+        "impact_fmu_id": "_delicatest_electrical_spice3_spice3semiconductors_20261031_142457_c1da31f",
+        "model_description_sha256": "21ba469f50c2e95060c9bfa8ce15c10b2e3833b39da1636baaa9b37e0837cc4b"
+      },
+      "experiment": {
+        "case_entry_sha256": "a01a87a1b0a97dc8869bea3874795178181c71b8643ee7223d90df6b9a4e64a0",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_delicatest_electrical_spice3_spice3semiconductors_20261031_142457_850219e",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "95870e82d297a4f0c34682f77481d09eb1828a53d2a1b94f46ef3b6b5a581ffb"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Spice3.Spice3Semiconductors",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 9251,
+        "file": "Spice3Semiconductors.npz",
+        "format": "npz",
+        "sha256": "81cf99ebc95bb61b2fdb5f27865b396ae24187bcc1a590e693ca217fb84f1535"
+      },
+      "run": {
+        "utc": "2026-10-31T14:25:06+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "Spice3SourcesBasicAndPoly",
+    "model": "ModelicaTest.Electrical.Spice3.Spice3SourcesBasicAndPoly",
+    "variables": [
+      "C1.v",
+      "L1.i",
+      "R_L2.v",
+      "R_e.v",
+      "R_epoly.v",
+      "R_fl.v",
+      "R_fpoly.v",
+      "R_g.v",
+      "R_gpoly.v",
+      "R_hl.v",
+      "R_hpoly.v",
+      "R_i_constant.v",
+      "R_i_exp.v",
+      "R_i_pulse.v",
+      "R_i_pwl.v",
+      "R_i_sffm.v",
+      "R_i_sin.v",
+      "R_v_constant.v",
+      "R_v_exp.v",
+      "R_v_pulse.v",
+      "R_v_pwl.v",
+      "R_v_sffm.v",
+      "R_v_sin.v",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.05595207400619984,
+      "steps": 609,
+      "rhs_evaluations": 735,
+      "jacobian_evaluations": 17,
+      "time_events": 11,
+      "error_test_failures": 11,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "R_v_constant.v": "V",
+      "R_i_constant.v": "V",
+      "L1.i": "A",
+      "C1.v": "V",
+      "R_v_sin.v": "V",
+      "R_v_exp.v": "V",
+      "R_v_pulse.v": "V",
+      "R_v_pwl.v": "V",
+      "R_v_sffm.v": "V",
+      "R_i_sin.v": "V",
+      "R_i_exp.v": "V",
+      "R_i_pulse.v": "V",
+      "R_i_pwl.v": "V",
+      "R_i_sffm.v": "V",
+      "R_e.v": "V",
+      "R_g.v": "V",
+      "R_hl.v": "V",
+      "R_fl.v": "V",
+      "R_L2.v": "V",
+      "R_epoly.v": "V",
+      "R_gpoly.v": "V",
+      "R_hpoly.v": "V",
+      "R_fpoly.v": "V"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 62649,
+    "record": {
+      "schema": 1,
+      "record_id": "1219c189b905a04f7b35137aeac6ca5482864adce30f1d9393b2e4680789082a",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:24:51",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "4e0377ade195ccae7e58b340dab93782",
+        "impact_fmu_id": "_atest_electrical_spice3_spice3sourcesbasicandpoly_20261031_142447_4e39ae6",
+        "model_description_sha256": "fd248a7208cd16062209ab7ae0b3ee495c119a7ea14848a070d017e3d8e852ba"
+      },
+      "experiment": {
+        "case_entry_sha256": "16c9b1ff32dff621470f7a1c2df5b131e26195aa37d734c418ebc6f17193edf1",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_atest_electrical_spice3_spice3sourcesbasicandpoly_20261031_142447_027f453",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "2b1ac4e41af81a73a4b88373dabc040df879ba12e2b923ca35148dd41853e78a"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Spice3.Spice3SourcesBasicAndPoly",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 62649,
+        "file": "Spice3SourcesBasicAndPoly.npz",
+        "format": "npz",
+        "sha256": "f1aca67b10a0d99d50a7bb59a046a9de6691c43c8928484a42686721728a369c"
+      },
+      "run": {
+        "utc": "2026-10-31T14:24:56+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "SuperCapDischargeCharge_400A",
+    "model": "ModelicaTest.Electrical.Batteries.SuperCapDischargeCharge_400A",
+    "variables": [
+      "energy.y",
+      "superCap.capacitor.v",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.44411033298820257,
+      "steps": 5067,
+      "rhs_evaluations": 5187,
+      "jacobian_evaluations": 101,
+      "time_events": 20,
+      "error_test_failures": 9,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "superCap.capacitor.v": "V",
+      "energy.y": "J"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 51380,
+    "record": {
+      "schema": 1,
+      "record_id": "06a312aa320da3060b63dd68f5210912baece54d20915563cfb6980f585ff396",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:29:08",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "f8134f7384dfa35255a09a7a733e9ac",
+        "impact_fmu_id": "_electrical_batteries_supercapdischargecharge_400a_20261031_142906_0752c68",
+        "model_description_sha256": "5816515f292e3387c8b561579e29815a76ca0bcf120beef8647a18b1fa458844"
+      },
+      "experiment": {
+        "case_entry_sha256": "a148ab39210a0ee6edce67c895de124c3ecdd56cd31ed5a35a0b1a18c2768200",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_electrical_batteries_supercapdischargecharge_400a_20261031_142905_7e416ff",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "605d137e5d6b4131e3c07fd6bf06a70b48479de8d113d86d3d64f5d323c4372a"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Batteries.SuperCapDischargeCharge_400A",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 51380,
+        "file": "SuperCapDischargeCharge_400A.npz",
+        "format": "npz",
+        "sha256": "091d0b6e5fcfd2b6980d9d628f7b89d0ccfb5b2b1f491c0d5888e518c051d447"
+      },
+      "run": {
+        "utc": "2026-10-31T14:29:12+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "TestSensors_RL",
+    "model": "ModelicaTest.Electrical.QuasiStatic.Polyphase.TestSensors_RL",
+    "variables": [
+      "feedbackPAron.y",
+      "feedbackQ.y",
+      "resistor.i[1].im",
+      "resistor.i[1].re",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.11519993701949716,
+      "steps": 1004,
+      "rhs_evaluations": 1008,
+      "jacobian_evaluations": 17,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "resistor.i[1].re": "A",
+      "resistor.i[1].im": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 5751,
+    "record": {
+      "schema": 1,
+      "record_id": "a20231232ceb601a060ab029acc6cc4b01d43ab24fbd11c39e5cdadcd279154b",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:32:06",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "ab08fccf721b591607ceb4f961853bf7",
+        "impact_fmu_id": "_t_electrical_quasistatic_polyphase_testsensors_rl_20261031_143200_d686a22",
+        "model_description_sha256": "bcbba7b5284df2defb49f2dfb4236d75a4b08e17e55c2c75ee5020bd4f4fb053"
+      },
+      "experiment": {
+        "case_entry_sha256": "cbddb586f739136eacc9b941e63c61602ebe9555227640420fad40399b58022f",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_t_electrical_quasistatic_polyphase_testsensors_rl_20261031_143200_d632060",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "aa663c6337631f7b3c46e68711dc2c388e8fa277faf4e6f55059bbfcffb734ca"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.QuasiStatic.Polyphase.TestSensors_RL",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 5751,
+        "file": "TestSensors_RL.npz",
+        "format": "npz",
+        "sha256": "90367eaebc4478b66682ee07be982dbcde9efac95045b8a0318f1bdc0b3f67a0"
+      },
+      "run": {
+        "utc": "2026-10-31T14:32:10+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "Transformer_n10",
+    "model": "ModelicaTest.Electrical.QuasiStatic.SinglePhase.Transformer_n10",
+    "variables": [
+      "idealTransformer.i1.im",
+      "idealTransformer.i1.re",
+      "idealTransformer.v2.im",
+      "idealTransformer.v2.re",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.048631154000759125,
+      "steps": 505,
+      "rhs_evaluations": 509,
+      "jacobian_evaluations": 9,
+      "time_events": 1,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "idealTransformer.v2.re": "V",
+      "idealTransformer.v2.im": "V",
+      "idealTransformer.i1.re": "A",
+      "idealTransformer.i1.im": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 13534,
+    "record": {
+      "schema": 1,
+      "record_id": "207fd51a04a2188476da513ecf1eaa07c51328262c835621b9c8008a181bb923",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:31:50",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "ea24b5882d56b458a6207fa0c7e140ca",
+        "impact_fmu_id": "_lectrical_quasistatic_singlephase_transformer_n10_20261031_143147_542d405",
+        "model_description_sha256": "04c5774bf34ec72ff7e4be7564735ef3eaabbf0dfadda4811380f75542eedabc"
+      },
+      "experiment": {
+        "case_entry_sha256": "5331101afaf0e95f9d4af8891daee5259e8978b06e512e4131e38c64cb87321b",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_lectrical_quasistatic_singlephase_transformer_n10_20261031_143147_3838664",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "ab1804ca222f5c96e5ca297618c3ef274526a0a6ddfbd09656221f089bc42cd6"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.QuasiStatic.SinglePhase.Transformer_n10",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 13534,
+        "file": "Transformer_n10.npz",
+        "format": "npz",
+        "sha256": "13f149e8bc8cbce61e86e4bc8066f665171ef83aece8771bdbbde930ab5c97f3"
+      },
+      "run": {
+        "utc": "2026-10-31T14:31:53+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "TransformersDd",
+    "model": "ModelicaTest.Electrical.Machines.TransformersDd",
+    "variables": [
+      "loadDd00.i[2]",
+      "loadDd00.v[1]",
+      "loadDd02.v[1]",
+      "loadDd04.v[1]",
+      "loadDd06.v[1]",
+      "loadDd08.v[1]",
+      "loadDd10.v[1]",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.1367129839491099,
+      "steps": 1086,
+      "rhs_evaluations": 1173,
+      "jacobian_evaluations": 19,
+      "error_test_failures": 7,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "loadDd00.v[1]": "V",
+      "loadDd00.i[2]": "A",
+      "loadDd02.v[1]": "V",
+      "loadDd04.v[1]": "V",
+      "loadDd06.v[1]": "V",
+      "loadDd08.v[1]": "V",
+      "loadDd10.v[1]": "V"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 34267,
+    "record": {
+      "schema": 1,
+      "record_id": "cd4707023ee3ec610e9dec147fe634e28d6cdd4cec9d5baf51e7c3bc6067e66a",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:32:16",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "8e0d22bff2c56d3fbcbba05111b5a284",
+        "impact_fmu_id": "modelicatest_electrical_machines_transformersdd_20261031_143211_c1acf73",
+        "model_description_sha256": "9939d5293aef65ac41865e28d850af41cda207b1c813ca1c9748e798531d2f6b"
+      },
+      "experiment": {
+        "case_entry_sha256": "7c1e813ea3cdf620d2301a553db1d4cfea427cbe2b0ca91d66f4081cff03fba1",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_electrical_machines_transformersdd_20261031_143210_a6dce95",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "b47239b2e0d519a2593e3747eb1b736de4ad1866754b1f3ada6e7a619513f425"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Machines.TransformersDd",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 34267,
+        "file": "TransformersDd.npz",
+        "format": "npz",
+        "sha256": "6d928a998050d67e948eabdb8dc932c9d40be10ef6d9c6ec90fad7acff089c3c"
+      },
+      "run": {
+        "utc": "2026-10-31T14:32:20+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "TransformersDy",
+    "model": "ModelicaTest.Electrical.Machines.TransformersDy",
+    "variables": [
+      "loadDy01.i[2]",
+      "loadDy01.v[1]",
+      "loadDy03.v[1]",
+      "loadDy05.v[1]",
+      "loadDy07.v[1]",
+      "loadDy09.v[1]",
+      "loadDy11.v[1]",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.12386073404923081,
+      "steps": 1074,
+      "rhs_evaluations": 1092,
+      "jacobian_evaluations": 18,
+      "error_test_failures": 1,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "loadDy01.v[1]": "V",
+      "loadDy03.v[1]": "V",
+      "loadDy05.v[1]": "V",
+      "loadDy07.v[1]": "V",
+      "loadDy09.v[1]": "V",
+      "loadDy11.v[1]": "V",
+      "loadDy01.i[2]": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 30878,
+    "record": {
+      "schema": 1,
+      "record_id": "3a06e39a8f22ba85d675e2dc50ed94f660093f000dea71bb40ca427f08bd818b",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:32:26",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "f90b5cb102693f11a24f1c1439719691",
+        "impact_fmu_id": "modelicatest_electrical_machines_transformersdy_20261031_143221_852d67a",
+        "model_description_sha256": "d53c343af055e197085a88186fc3b4475868d6b5945bfe09d0cff3e26855002a"
+      },
+      "experiment": {
+        "case_entry_sha256": "251748306be123945929b4d0f1d1dba7104692213539c9288d40def39eee1a24",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_electrical_machines_transformersdy_20261031_143221_df2f963",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "66b01d9d60faff009819ba8412f5fd7570168fdf5e19615774fc10b2796cde8e"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Machines.TransformersDy",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 30878,
+        "file": "TransformersDy.npz",
+        "format": "npz",
+        "sha256": "ff0211675cdde0f228fd4e885a7be5aaa27c233862f8a0cbc8ed284a1a5c6ea7"
+      },
+      "run": {
+        "utc": "2026-10-31T14:32:30+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "TransformersDz",
+    "model": "ModelicaTest.Electrical.Machines.TransformersDz",
+    "variables": [
+      "loadDz00.i[2]",
+      "loadDz00.v[1]",
+      "loadDz02.v[1]",
+      "loadDz04.v[1]",
+      "loadDz06.v[1]",
+      "loadDz08.v[1]",
+      "loadDz10.v[1]",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.11415266699623317,
+      "steps": 1068,
+      "rhs_evaluations": 1096,
+      "jacobian_evaluations": 18,
+      "error_test_failures": 3,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "loadDz00.v[1]": "V",
+      "loadDz02.v[1]": "V",
+      "loadDz04.v[1]": "V",
+      "loadDz06.v[1]": "V",
+      "loadDz08.v[1]": "V",
+      "loadDz10.v[1]": "V",
+      "loadDz00.i[2]": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 31062,
+    "record": {
+      "schema": 1,
+      "record_id": "cd3beb191672791415a628708da6147a4771676f34e75118da230063d265fde2",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:32:37",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "58b4fadf8d64e1e955c943ea8af90340",
+        "impact_fmu_id": "modelicatest_electrical_machines_transformersdz_20261031_143231_84b5e7b",
+        "model_description_sha256": "4c00bffa5b9470d6ffb388027ec4e49973cc77d85668ff1d1737554948360039"
+      },
+      "experiment": {
+        "case_entry_sha256": "9dbb79eab1c452aba6224d97cb0ca6b3e04ec6cbc7ef72f8fc4dc6c0b8086fe7",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_electrical_machines_transformersdz_20261031_143231_7b2ebef",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "55f22cbe4b00faf3a558a0a512883fda1d027c018db743a9a82346b060ea154b"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Machines.TransformersDz",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 31062,
+        "file": "TransformersDz.npz",
+        "format": "npz",
+        "sha256": "4cb792f7894f3c6a38d245a6f4b9b149254b7dd7be4c464e82ac718c9951337c"
+      },
+      "run": {
+        "utc": "2026-10-31T14:32:41+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "TransformersYd",
+    "model": "ModelicaTest.Electrical.Machines.TransformersYd",
+    "variables": [
+      "loadYd01.i[2]",
+      "loadYd01.v[1]",
+      "loadYd03.v[1]",
+      "loadYd05.v[1]",
+      "loadYd07.v[1]",
+      "loadYd09.v[1]",
+      "loadYd11.v[1]",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.1286431309999898,
+      "steps": 1088,
+      "rhs_evaluations": 1171,
+      "jacobian_evaluations": 19,
+      "error_test_failures": 4,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "loadYd01.v[1]": "V",
+      "loadYd01.i[2]": "A",
+      "loadYd03.v[1]": "V",
+      "loadYd05.v[1]": "V",
+      "loadYd07.v[1]": "V",
+      "loadYd09.v[1]": "V",
+      "loadYd11.v[1]": "V"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 34913,
+    "record": {
+      "schema": 1,
+      "record_id": "16f905ef1b315ee3768c6d957916b06b087adbc38ec865d30248ad229c04cd30",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:32:47",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "cb8095f7eb6c6e27744d282ddb46610",
+        "impact_fmu_id": "modelicatest_electrical_machines_transformersyd_20261031_143241_f6ba550",
+        "model_description_sha256": "c85e773c84fa47651c7a2d35bf6a04eb5d42420862c5540304395fd68e412da3"
+      },
+      "experiment": {
+        "case_entry_sha256": "0c6864595c8e6044e7c3888421a4b467016d5ea258b5e0df4d02f67eae6799f7",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_electrical_machines_transformersyd_20261031_143241_de87610",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "04ad7d230937c25dd29e91a4b26394052d40c372fdfa4f979a1afc8dd9a08797"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Machines.TransformersYd",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 34913,
+        "file": "TransformersYd.npz",
+        "format": "npz",
+        "sha256": "a8cb5b39665132e7139fa879d60c3e3411d1748504ca540a2d5508aa6ad7fc2f"
+      },
+      "run": {
+        "utc": "2026-10-31T14:32:51+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "TransformersYy",
+    "model": "ModelicaTest.Electrical.Machines.TransformersYy",
+    "variables": [
+      "loadYy00.i[2]",
+      "loadYy00.v[1]",
+      "loadYy02.v[1]",
+      "loadYy04.v[1]",
+      "loadYy06.v[1]",
+      "loadYy08.v[1]",
+      "loadYy10.v[1]",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.1239289150107652,
+      "steps": 1070,
+      "rhs_evaluations": 1095,
+      "jacobian_evaluations": 18,
+      "error_test_failures": 4,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "loadYy00.v[1]": "V",
+      "loadYy02.v[1]": "V",
+      "loadYy04.v[1]": "V",
+      "loadYy06.v[1]": "V",
+      "loadYy08.v[1]": "V",
+      "loadYy10.v[1]": "V",
+      "loadYy00.i[2]": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 31117,
+    "record": {
+      "schema": 1,
+      "record_id": "c7fdc72de92d7e7daff668b853307258658f92e8f60b42eb062513891776e793",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:33:42",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "9320ffc6f610bb250401ef8ea01844db",
+        "impact_fmu_id": "modelicatest_electrical_machines_transformersyy_20261031_143336_222e289",
+        "model_description_sha256": "2e1c2f7a32b15db74ebd425f0243e1e11e62c40e8f0bd3f199e8a8d85131b3aa"
+      },
+      "experiment": {
+        "case_entry_sha256": "dfd75dead49d4bb9c3aa411cef811521decab14d742d2b6c323f9934b5c096f5",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_electrical_machines_transformersyy_20261031_143336_6fd7770",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "e0abfa3d9a7afa98f707f7c756b82155362072ea683b1b9d5d84761557f802d4"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Machines.TransformersYy",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 31117,
+        "file": "TransformersYy.npz",
+        "format": "npz",
+        "sha256": "40596f2ee699874898310264261cecbd1ae1229385bc95124e7f2f4cb0077989"
+      },
+      "run": {
+        "utc": "2026-10-31T14:33:48+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "TransformersYz",
+    "model": "ModelicaTest.Electrical.Machines.TransformersYz",
+    "variables": [
+      "loadYz01.i[2]",
+      "loadYz01.v[1]",
+      "loadYz03.v[1]",
+      "loadYz05.v[1]",
+      "loadYz07.v[1]",
+      "loadYz09.v[1]",
+      "loadYz11.v[1]",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.1177505140658468,
+      "steps": 1071,
+      "rhs_evaluations": 1120,
+      "jacobian_evaluations": 18,
+      "error_test_failures": 1,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "loadYz01.v[1]": "V",
+      "loadYz03.v[1]": "V",
+      "loadYz05.v[1]": "V",
+      "loadYz07.v[1]": "V",
+      "loadYz09.v[1]": "V",
+      "loadYz11.v[1]": "V",
+      "loadYz01.i[2]": "A"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 31127,
+    "record": {
+      "schema": 1,
+      "record_id": "ad34996ad340404d0db3d5fc97f2bda76da36b58c142f5504b3e343ff1e46366",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:33:54",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "c56853243b32bd8e2cb084dc826f3d0d",
+        "impact_fmu_id": "modelicatest_electrical_machines_transformersyz_20261031_143349_9513636",
+        "model_description_sha256": "ea2cd6fa2623036b02124c542ca8d4abfad5eb3125692bdc133e349b617bee76"
+      },
+      "experiment": {
+        "case_entry_sha256": "db7cf284913f10da341b066a99aa9503eb7640a7efafcaaebab33f68d169b42b",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_electrical_machines_transformersyz_20261031_143348_c3c79b1",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "74eb254adaa6f873d902747cbd9e46807a4379f8c77bc793513a933394616f3d"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Machines.TransformersYz",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 31127,
+        "file": "TransformersYz.npz",
+        "format": "npz",
+        "sha256": "36b539f94d545997ca78ca3f2b83a3c708fc565b98bcdef45f2800ba58db0beb"
+      },
+      "run": {
+        "utc": "2026-10-31T14:33:58+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "WiredX_Delays",
+    "model": "ModelicaTest.Electrical.Digital.WiredX_Delays",
+    "variables": [
+      "time",
+      "wiredX.y"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.19691726693417877,
+      "steps": 2015,
+      "rhs_evaluations": 2059,
+      "jacobian_evaluations": 36,
+      "time_events": 10,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 6302,
+    "record": {
+      "schema": 1,
+      "record_id": "98ef01f7e22c1661529f40f3604caacd4cfb5786a6becebe4b2cea42cad1a5f2",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T14:27:51",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "beae9c1f2b8d933fc97a84761d1183f9",
+        "impact_fmu_id": "modelicatest_electrical_digital_wiredx_delays_20261031_142749_6209654",
+        "model_description_sha256": "04ee5f1bf00c1c82ae34c81b7c23020f11118a463eaa2ef27597076533c11384"
+      },
+      "experiment": {
+        "case_entry_sha256": "311465c2ffab2ccac0f27be8da23f99cd50617f8124ca2998b991c4965330e1c",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_electrical_digital_wiredx_delays_20261031_142749_c436826",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "1d1acf22eb66e0c1584770496cd8bd5c20f8ffb74c8942c1e96b940a1b46b033"
+      },
+      "model": {
+        "class": "ModelicaTest.Electrical.Digital.WiredX_Delays",
+        "libraries": [
+          {
+            "git_commit": "9c2e9031668a73cb09ea990cdd153f686e59e8b5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 6302,
+        "file": "WiredX_Delays.npz",
+        "format": "npz",
+        "sha256": "5fdd0705d59e1805a227a514e487f24c37a20bf84405a9ea456d896b0dc03291"
+      },
+      "run": {
+        "utc": "2026-10-31T14:27:54+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  }
+]

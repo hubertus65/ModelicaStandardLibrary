@@ -1,0 +1,5 @@
+time
+meanCurrent.y
+meanVoltage.y
+resistor.i
+rootMeanSquareVoltage.y

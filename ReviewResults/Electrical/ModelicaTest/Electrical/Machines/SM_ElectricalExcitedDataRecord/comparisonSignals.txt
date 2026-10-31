@@ -1,0 +1,6 @@
+time
+load.v[1]
+smee.ie
+smee.is[1]
+smee.is[2]
+smee.tauElectrical

@@ -1,0 +1,10 @@
+time
+dcee.ia
+dcee.tauElectrical
+dcpm.ia
+dcpm.tauElectrical
+dcse.ia
+dcse.tauElectrical
+loadInertia1.w
+loadInertia2.w
+loadInertia3.w

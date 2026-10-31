@@ -1,0 +1,3 @@
+time
+currentSensor.abs_i
+currentSensor.arg_i

@@ -1,0 +1,4 @@
+time
+iAC.mean1.y
+iAC.mean2.y
+iDC2.mean.y

@@ -1,0 +1,54 @@
+{
+ "experiment": {
+  "base": {
+   "analysis": {
+    "parameters": [
+     {
+      "name": "start_time",
+      "value": 0.0
+     },
+     {
+      "name": "final_time",
+      "value": 0.04
+     },
+     {
+      "name": "interval",
+      "value": 0
+     }
+    ],
+    "simulationLogLevel": "WARNING",
+    "simulationOptions": {
+     "dynamic_diagnostics": false,
+     "filter": "['time', 'load.i[[]1]', 'load.i[[]2]', 'rotator.spacePhasor_b.v_[[]1]', 'rotator.spacePhasor_b.v_[[]2]', 'fromPolar.y[[]1]', 'fromPolar.y[[]2]', 'quasiRMS.y', 'fp[[]1]', 'fp[[]2]', 'tp', 'rot[[]1]', 'rot[[]2]', 'fsp[[]1]', 'fsp[[]3]', 'qrms']",
+     "ncp": 500
+    },
+    "solverOptions": {
+     "rtol": 1e-06
+    },
+    "type": "dynamic"
+   },
+   "expansion": {
+    "algorithm": "FULLFACTORIAL"
+   },
+   "model": {
+    "modelica": {
+     "className": "ModelicaTest.Electrical.Machines.SpacePhasorsBlocksComponentsAndFunctions",
+     "compilerLogLevel": "warning",
+     "compilerOptions": {
+      "generate_html_diagnostics": false,
+      "include_protected_variables": false
+     },
+     "fmiTarget": "me",
+     "fmiVersion": "2.0",
+     "platform": "auto",
+     "runtimeOptions": {}
+    }
+   },
+   "modifiers": {
+    "variables": []
+   }
+  },
+  "extensions": [],
+  "version": 3
+ }
+}

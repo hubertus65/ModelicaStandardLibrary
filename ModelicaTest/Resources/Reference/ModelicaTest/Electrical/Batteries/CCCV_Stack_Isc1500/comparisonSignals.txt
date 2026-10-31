@@ -1,0 +1,4 @@
+time
+energy.y
+stack.cell[1,1].cell.limIntegrator.y
+stack.cell[3,2].limIntegrator.y

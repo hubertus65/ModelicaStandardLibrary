@@ -1,0 +1,14 @@
+time
+R_arc.v
+R_cinter1.v
+R_cinter2.v
+R_inter1.v
+R_inter2.v
+R_opening.v
+R_transformer.v
+R_triac.v
+idealOpAmp.p2.v
+idealOpAmp3Pin.out.v
+idealOpAmpLimited.out.v
+idealizedOpAmpLimited.out.v
+idle.i

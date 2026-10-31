@@ -1,0 +1,54 @@
+{
+ "experiment": {
+  "base": {
+   "analysis": {
+    "parameters": [
+     {
+      "name": "start_time",
+      "value": 0.0
+     },
+     {
+      "name": "final_time",
+      "value": 0.1
+     },
+     {
+      "name": "interval",
+      "value": 0
+     }
+    ],
+    "simulationLogLevel": "WARNING",
+    "simulationOptions": {
+     "dynamic_diagnostics": false,
+     "filter": "['time', 'aron.power', 'reactive.reactivePower', 'capacitor.i[[]1]', 'saturating.i[[]1]', 'R_tr.i[[]1]', 'R_itr.i[[]1]', 'varR.i[[]1]', 'varG.i[[]1]', 'varC.i[[]1]', 'varL.i[[]1]', 'R_i1.i[[]1]', 'R_i2.i[[]1]', 'R_cv.v[[]3]', 'R_cc.v[[]2]', 'R_cosc.v[[]1]', 'R_sc.v[[]1]', 'R_6.i[[]1]', 'R_6.i[[]5]', 'R_pin.v', 'backTransformation[[]2,1].re']",
+     "ncp": 500
+    },
+    "solverOptions": {
+     "rtol": 9.999999999999999e-05
+    },
+    "type": "dynamic"
+   },
+   "expansion": {
+    "algorithm": "FULLFACTORIAL"
+   },
+   "model": {
+    "modelica": {
+     "className": "ModelicaTest.Electrical.Polyphase.PolyphaseBasicSourcesAndSensors",
+     "compilerLogLevel": "warning",
+     "compilerOptions": {
+      "generate_html_diagnostics": false,
+      "include_protected_variables": false
+     },
+     "fmiTarget": "me",
+     "fmiVersion": "2.0",
+     "platform": "auto",
+     "runtimeOptions": {}
+    }
+   },
+   "modifiers": {
+    "variables": []
+   }
+  },
+  "extensions": [],
+  "version": 3
+ }
+}

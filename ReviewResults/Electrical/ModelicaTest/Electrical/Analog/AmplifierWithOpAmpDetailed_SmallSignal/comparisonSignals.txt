@@ -1,0 +1,6 @@
+time
+opAmp.q_fp1
+opAmp.v_in
+opAmp.v_source
+opAmp.x
+resistor2.v

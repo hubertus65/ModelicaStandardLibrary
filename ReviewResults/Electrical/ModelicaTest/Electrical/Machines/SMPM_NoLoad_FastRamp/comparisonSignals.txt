@@ -1,0 +1,4 @@
+time
+hallSensor.y
+toSpacePhasor.y[1]
+toSpacePhasor.y[2]

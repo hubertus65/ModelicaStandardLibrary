@@ -1,0 +1,9 @@
+time
+load.i[1]
+load.i[2]
+brush.v[1]
+rheostat.rheostat.R[1]
+thermalAmbient.Q_flowBrush
+thermalAmbient.Q_flowArmature
+qShunt.port.T
+qSeries.port.T

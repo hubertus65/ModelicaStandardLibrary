@@ -1,0 +1,13 @@
+time
+R_ccc.v
+R_ccv.v
+R_secondary.v
+R_vcc.v
+R_vcv.v
+R_wiper.v
+emf.i
+mass.s
+opAmp.out.v
+variableCapacitor.i
+variableConductor.i
+variableInductor.i

@@ -1,0 +1,3 @@
+time
+s.y[1]
+c_out.y[1]

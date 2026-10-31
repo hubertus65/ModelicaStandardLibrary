@@ -1,0 +1,1078 @@
+# ModCheck case list: new ModelicaTest coverage tests for Modelica.Electrical (branch coverage-improvement).
+#
+# Each case is one new test model, run unmodified on Modelon Impact (MSL 4.1.0 dependency).
+# Variables are the comparison signals of the model, as listed in
+# ModelicaTest/Resources/Reference/ModelicaTest/<Package>/<Model>/comparisonSignals.txt.
+# ncp gives 500 output intervals per second of simulated time (2000 for long runs).
+library: ModelicaTest
+workspace: msl-coverage
+custom_function: dynamic
+tolerance: 0.001
+
+cases:
+  - name: AnalogSources
+    enabled: true
+    model: ModelicaTest.Electrical.Analog.AnalogSources
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    # the variable-frequency sources integrate their phase; at 100x rtol (1e-4) the phase error accumulates to 3 % of the sine outputs, so the check run is capped at 1e-5
+    max_rtol: 1.0e-5
+    modifiers: {}
+    variables:
+      - time
+      - "R_cosineVoltage.v"
+      - "R_exponentialsVoltage.v"
+      - "R_expSineVoltage.v"
+      - "R_lightningImpulseVoltage.v"
+      - "R_pulseVoltage.v"
+      - "R_sawToothVoltage.v"
+      - "R_tableVoltage.v"
+      - "R_trapezoidVoltage.v"
+      - "R_cosineCurrent.v"
+      - "R_exponentialsCurrent.v"
+      - "R_expSineCurrent.v"
+      - "R_lightningImpulseCurrent.v"
+      - "R_pulseCurrent.v"
+      - "R_sawToothCurrent.v"
+      - "R_sineCurrent.v"
+      - "R_stepCurrent.v"
+      - "R_tableCurrent.v"
+      - "R_trapezoidCurrent.v"
+      - "R_sineVoltageVF.v"
+      - "R_cosineVoltageVF.v"
+      - "R_sineCurrentVF.v"
+      - "R_cosineCurrentVF.v"
+      - "R_supplyP.v"
+      - "R_supplyN.v"
+      - "variableLoad.v"
+      - "variableLoad.i"
+  - name: AnalogBasicComponents
+    enabled: true
+    model: ModelicaTest.Electrical.Analog.AnalogBasicComponents
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 500
+    rtol: 1.0e-6
+    # emf.i is sensitive to the integration error of the coupled EMF/inertia states at 100x rtol (1e-4); converges at 1e-5, so the check run is capped at 1e-5
+    max_rtol: 1.0e-5
+    modifiers: {}
+    variables:
+      - time
+      - "R_vcv.v"
+      - "R_vcc.v"
+      - "R_ccv.v"
+      - "R_ccc.v"
+      - "variableCapacitor.i"
+      - "variableInductor.i"
+      - "variableConductor.i"
+      - "R_secondary.v"
+      - "opAmp.out.v"
+      - "R_wiper.v"
+      - "mass.s"
+      - "emf.i"
+  - name: AnalogIdealComponents
+    enabled: true
+    model: ModelicaTest.Electrical.Analog.AnalogIdealComponents
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "R_opening.v"
+      - "R_arc.v"
+      - "R_inter1.v"
+      - "R_inter2.v"
+      - "R_cinter1.v"
+      - "R_cinter2.v"
+      - "idealOpAmp.p2.v"
+      - "idealOpAmp3Pin.out.v"
+      - "idealOpAmpLimited.out.v"
+      - "idealizedOpAmpLimited.out.v"
+      - "R_transformer.v"
+      - "R_triac.v"
+      - "idle.i"
+  - name: AnalogSemiconductorsAndLines
+    enabled: true
+    model: ModelicaTest.Electrical.Analog.AnalogSemiconductorsAndLines
+    start_time: 0.0
+    final_time: 0.04
+    ncp: 500
+    rtol: 1.0e-6
+    # the bipolar transistor switching instants shift with the tolerance at 100x rtol (1e-4); converges at 1e-5, so the check run is capped at 1e-5
+    max_rtol: 1.0e-5
+    modifiers: {}
+    variables:
+      - time
+      - "powerSensor.power"
+      - "R_diode.v"
+      - "R_diode2.v"
+      - "R_zDiode.v"
+      - "R_thyristor.v"
+      - "R_triac.v"
+      - "C_load.v"
+      - "R_npn.v"
+      - "R_pnp.v"
+      - "R_oLine.v"
+      - "R_uLine.v"
+      - "R_mOLine1.v"
+      - "R_tLine.v"
+      - "R_tLine1.v"
+      - "R_tLine2.v"
+      - "R_tLine3.v"
+  - name: Spice3SourcesBasicAndPoly
+    enabled: true
+    model: ModelicaTest.Electrical.Spice3.Spice3SourcesBasicAndPoly
+    start_time: 0.0
+    final_time: 0.02
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "R_v_constant.v"
+      - "R_v_sin.v"
+      - "R_v_exp.v"
+      - "R_v_pulse.v"
+      - "R_v_pwl.v"
+      - "R_v_sffm.v"
+      - "R_i_constant.v"
+      - "R_i_sin.v"
+      - "R_i_exp.v"
+      - "R_i_pulse.v"
+      - "R_i_pwl.v"
+      - "R_i_sffm.v"
+      - "R_e.v"
+      - "R_g.v"
+      - "R_hl.v"
+      - "R_fl.v"
+      - "L1.i"
+      - "R_L2.v"
+      - "C1.v"
+      - "R_epoly.v"
+      - "R_gpoly.v"
+      - "R_hpoly.v"
+      - "R_fpoly.v"
+  - name: Spice3Semiconductors
+    enabled: true
+    model: ModelicaTest.Electrical.Spice3.Spice3Semiconductors
+    start_time: 0.0
+    final_time: 0.002
+    ncp: 500
+    rtol: 1.0e-6
+    # strongly nonlinear Spice3 transistor stages: cl.v deviates at 100x rtol (1e-4) and converges at 1e-5, so the check run is capped at 1e-5
+    max_rtol: 1.0e-5
+    modifiers: {}
+    variables:
+      - time
+      - "cl.v"
+      - "rc.v"
+      - "rjp.v"
+      - "rjn.v"
+      - "rd.v"
+      - "cs.v"
+      - "rs.i"
+  - name: DigitalGatesConvertersAndMemory
+    enabled: true
+    model: ModelicaTest.Electrical.Digital.DigitalGatesConvertersAndMemory
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "nand1.y"
+      - "xnor1.y"
+      - "invGate.y"
+      - "nandGate.y"
+      - "orGate.y"
+      - "norGate.y"
+      - "xnorGate.y"
+      - "bufGate.y"
+      - "inertialDelay.y"
+      - "pxfer.y"
+      - "prxfer.y"
+      - "buf3sl.y"
+      - "inv3sl.y"
+      - "toX01.y[[]1]"
+      - "toX01Z.y[[]1]"
+      - "toUX01.y[[]1]"
+      - "booleanToLogic.y[[]1]"
+      - "logicToBoolean.y[[]1]"
+      - "realToLogic.y[[]1]"
+      - "rom.dataOut[[]1]"
+      - "rom.dataOut[[]4]"
+  - name: PolyphaseBasicSourcesAndSensors
+    enabled: true
+    model: ModelicaTest.Electrical.Polyphase.PolyphaseBasicSourcesAndSensors
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "aron.power"
+      - "reactive.reactivePower"
+      - "capacitor.i[[]1]"
+      - "saturating.i[[]1]"
+      - "R_tr.i[[]1]"
+      - "R_itr.i[[]1]"
+      - "varR.i[[]1]"
+      - "varG.i[[]1]"
+      - "varC.i[[]1]"
+      - "varL.i[[]1]"
+      - "R_i1.i[[]1]"
+      - "R_i2.i[[]1]"
+      - "R_cv.v[[]3]"
+      - "R_cc.v[[]2]"
+      - "R_cosc.v[[]1]"
+      - "R_sc.v[[]1]"
+      - "R_6.i[[]1]"
+      - "R_6.i[[]5]"
+      - "R_pin.v"
+      - "backTransformation[[]2,1].re"
+  - name: AmplifierWithOpAmpDetailed_SmallSignal
+    enabled: true
+    model: ModelicaTest.Electrical.Analog.AmplifierWithOpAmpDetailed_SmallSignal
+    start_time: 0.0
+    final_time: 0.003
+    ncp: 2500
+    rtol: 1.0e-6
+    # opAmp.v_in is a microvolt-level differential input of the detailed op amp, resolved only at tight tolerance; converges at 1e-5, so the check run is capped at 1e-5
+    max_rtol: 1.0e-5
+    modifiers: {}
+    variables:
+      - time
+      - "opAmp.v_in"
+      - "opAmp.v_source"
+      - "opAmp.x"
+      - "opAmp.q_fp1"
+      - "resistor2.v"
+  - name: AD_DA_conversion_N4
+    enabled: true
+    model: ModelicaTest.Electrical.Analog.AD_DA_conversion_N4
+    start_time: 0.0
+    final_time: 0.2
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "aD_Converter.z"
+      - "resistor.v"
+      - "resistor.i"
+  - name: GenerationOfFMUs_5Hz
+    enabled: true
+    model: ModelicaTest.Electrical.Analog.GenerationOfFMUs_5Hz
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 1000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "capacitor2a.v"
+      - "capacitor2b.v"
+      - "directInductor3.inductor.i"
+      - "inductor4a.i"
+      - "inductor4b.i"
+  - name: ControlledSwitchWithArc_100V
+    enabled: true
+    model: ModelicaTest.Electrical.Analog.ControlledSwitchWithArc_100V
+    start_time: 0.0
+    final_time: 6.0
+    ncp: 5000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "inductor1.i"
+      - "inductor2.i"
+  - name: FourInverters_4V
+    enabled: true
+    model: ModelicaTest.Electrical.Spice3.FourInverters_4V
+    start_time: 0.0
+    final_time: 5.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "mp1.S.v"
+      - "mp2.S.v"
+      - "mp3.S.v"
+      - "mp4.S.v"
+      - "v.p.v"
+  - name: FullAdder_SlowClock
+    enabled: true
+    model: ModelicaTest.Electrical.Digital.FullAdder_SlowClock
+    start_time: 0.0
+    final_time: 10.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "s.y[[]1]"
+      - "c_out.y[[]1]"
+  - name: DFFREGL_Delays
+    enabled: true
+    model: ModelicaTest.Electrical.Digital.DFFREGL_Delays
+    start_time: 0.0
+    final_time: 25.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "dFFREGL.dataOut[[]1]"
+      - "dFFREGL.dataOut[[]2]"
+  - name: DLATREGL_Delays
+    enabled: true
+    model: ModelicaTest.Electrical.Digital.DLATREGL_Delays
+    start_time: 0.0
+    final_time: 25.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "dLATREGL.dataOut[[]1]"
+      - "dLATREGL.dataOut[[]2]"
+  - name: DFFREGSRL_Delays
+    enabled: true
+    model: ModelicaTest.Electrical.Digital.DFFREGSRL_Delays
+    start_time: 0.0
+    final_time: 15.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "dFFREGSRL.dataOut[[]1]"
+      - "dFFREGSRL.dataOut[[]2]"
+  - name: DLATREGSRL_Delays
+    enabled: true
+    model: ModelicaTest.Electrical.Digital.DLATREGSRL_Delays
+    start_time: 0.0
+    final_time: 25.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "dLATREGSRL.dataOut[[]1]"
+      - "dLATREGSRL.dataOut[[]2]"
+  - name: RAM_Delays
+    enabled: true
+    model: ModelicaTest.Electrical.Digital.RAM_Delays
+    start_time: 0.0
+    final_time: 400.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "dLATRAM.dataOut[[]1]"
+      - "dLATRAM.dataOut[[]2]"
+  - name: NXFER_Delays
+    enabled: true
+    model: ModelicaTest.Electrical.Digital.NXFER_Delays
+    start_time: 0.0
+    final_time: 12.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "nXFERGATE.y"
+  - name: NRXFER_Delays
+    enabled: true
+    model: ModelicaTest.Electrical.Digital.NRXFER_Delays
+    start_time: 0.0
+    final_time: 12.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "nRXFERGATE.y"
+  - name: INV3S_Delays
+    enabled: true
+    model: ModelicaTest.Electrical.Digital.INV3S_Delays
+    start_time: 0.0
+    final_time: 12.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "iNV3S.y"
+  - name: MUX2x1_Delays
+    enabled: true
+    model: ModelicaTest.Electrical.Digital.MUX2x1_Delays
+    start_time: 0.0
+    final_time: 15.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "Mux2x1.out"
+  - name: WiredX_Delays
+    enabled: true
+    model: ModelicaTest.Electrical.Digital.WiredX_Delays
+    start_time: 0.0
+    final_time: 12.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "wiredX.y"
+  - name: CCCV_StackRC_Isc1500
+    enabled: true
+    model: ModelicaTest.Electrical.Batteries.CCCV_StackRC_Isc1500
+    start_time: 0.0
+    final_time: 1200.0
+    ncp: 5000
+    rtol: 1.0e-6
+    # the CCCV charger holds the cell SOC close to SOCmax; at 100x rtol (1e-4) the SOC overshoots and triggers the MSL assert 'Battery overcharged!', so the check run is capped at 1e-5
+    max_rtol: 1.0e-5
+    modifiers: {}
+    variables:
+      - time
+      - "energy.y"
+      - "stack.cell[[]1,1].cell.capacitor[[]1].v"
+      - "stack.cell[[]1,1].cell.limIntegrator.y"
+      - "stack.cell[[]3,2].limIntegrator.y"
+  - name: CCCV_Stack_Isc1500
+    enabled: true
+    model: ModelicaTest.Electrical.Batteries.CCCV_Stack_Isc1500
+    start_time: 0.0
+    final_time: 1200.0
+    ncp: 5000
+    rtol: 1.0e-6
+    # the CCCV charger holds the cell SOC close to SOCmax; at 100x rtol (1e-4) the SOC overshoots and triggers the MSL assert 'Battery overcharged!', so the check run is capped at 1e-5
+    max_rtol: 1.0e-5
+    modifiers: {}
+    variables:
+      - time
+      - "energy.y"
+      - "stack.cell[[]1,1].cell.limIntegrator.y"
+      - "stack.cell[[]3,2].limIntegrator.y"
+  - name: SuperCapDischargeCharge_400A
+    enabled: true
+    model: ModelicaTest.Electrical.Batteries.SuperCapDischargeCharge_400A
+    start_time: 0.0
+    final_time: 720.0
+    ncp: 5000
+    rtol: 1.0e-6
+    # energy.y ends at +3.2e4 after swinging to -5.4e5, so its final value is a small residual of a large integral; the steady-state check of that residual passes only at the reference tolerance (1e-6)
+    max_rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "energy.y"
+      - "superCap.capacitor.v"
+  - name: ShowImpedance_Qnom7200
+    enabled: true
+    model: ModelicaTest.Electrical.Batteries.ShowImpedance_Qnom7200
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 5000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "impedance.z.re"
+      - "impedance.z.im"
+  - name: DC_CompareCharacteristics_80V
+    enabled: true
+    model: ModelicaTest.Electrical.Machines.DC_CompareCharacteristics_80V
+    start_time: 0.0
+    final_time: 6.0
+    ncp: 5000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "dcpm.ia"
+      - "dcpm.tauElectrical"
+      - "dcee.ia"
+      - "dcee.tauElectrical"
+      - "dcse.ia"
+      - "dcse.tauElectrical"
+      - "loadInertia1.w"
+      - "loadInertia2.w"
+      - "loadInertia3.w"
+  - name: DCPM_Drive_FastRamp
+    enabled: true
+    model: ModelicaTest.Electrical.Machines.DCPM_Drive_FastRamp
+    start_time: 0.0
+    final_time: 2.0
+    ncp: 4000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "coupling.w"
+      - "coupling.tau"
+      - "multiSensor.i"
+      - "multiSensor.v"
+  - name: SMPM_VoltageSource_HalfLoad
+    enabled: true
+    model: ModelicaTest.Electrical.Machines.SMPM_VoltageSource_HalfLoad
+    start_time: 0.0
+    final_time: 2.0
+    ncp: 4000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "inertiaLoad.w"
+      - "smpm.is[[]1]"
+      - "smpm.is[[]2]"
+      - "smpm.idq_sr[[]1]"
+      - "smpm.idq_sr[[]2]"
+  - name: SMPM_NoLoad_FastRamp
+    enabled: true
+    model: ModelicaTest.Electrical.Machines.SMPM_NoLoad_FastRamp
+    start_time: 0.0
+    final_time: 0.32
+    ncp: 3200
+    rtol: 1.0e-6
+    # rotor-angle-dependent signals (Hall sensor, space phasors) accumulate an angle error during the fast speed ramp at 100x rtol (1e-4); converges at 1e-5, so the check run is capped at 1e-5
+    max_rtol: 1.0e-5
+    modifiers: {}
+    variables:
+      - time
+      - "toSpacePhasor.y[[]1]"
+      - "toSpacePhasor.y[[]2]"
+      - "hallSensor.y"
+  - name: DiodeBridge2Pulse_60Hz
+    enabled: true
+    model: ModelicaTest.Electrical.PowerConverters.DiodeBridge2Pulse_60Hz
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "meanVoltage.y"
+      - "meanCurrent.y"
+      - "rootMeanSquareVoltage.y"
+      - "resistor.i"
+  - name: DiodeCenterTap2Pulse_60Hz
+    enabled: true
+    model: ModelicaTest.Electrical.PowerConverters.DiodeCenterTap2Pulse_60Hz
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "meanVoltage.y"
+      - "meanCurrent.y"
+      - "rootMeanSquareVoltage.y"
+      - "resistor.i"
+  - name: DiodeCenterTapmPulse_5Phase
+    enabled: true
+    model: ModelicaTest.Electrical.PowerConverters.DiodeCenterTapmPulse_5Phase
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "meanVoltage.y"
+      - "meanCurrent.y"
+      - "rootMeanSquareVoltage.y"
+  - name: DiodeCenterTap2mPulse_5Phase
+    enabled: true
+    model: ModelicaTest.Electrical.PowerConverters.DiodeCenterTap2mPulse_5Phase
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "meanVoltage.y"
+      - "meanCurrent.y"
+      - "rootMeanSquareVoltage.y"
+      - "resistor.i"
+  - name: HalfControlledBridge2Pulse_Alpha60
+    enabled: true
+    model: ModelicaTest.Electrical.PowerConverters.HalfControlledBridge2Pulse_Alpha60
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "meanVoltage.y"
+      - "meanCurrent.y"
+      - "rootMeanSquareVoltage.y"
+      - "resistor.i"
+  - name: ChopperStepUp_R_2kHz
+    enabled: true
+    model: ModelicaTest.Electrical.PowerConverters.ChopperStepUp_R_2kHz
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 10000
+    rtol: 1.0e-6
+    # 2 kHz PWM switching: the switching instants shift with the tolerance at 100x rtol (1e-4); converges at 1e-5, so the check run is capped at 1e-5
+    max_rtol: 1.0e-5
+    modifiers: {}
+    variables:
+      - time
+      - "meanVoltage.y"
+      - "meanCurrent.y"
+      - "capacitor.v"
+      - "inductor.i"
+  - name: ChopperStepDown_R_2kHz
+    enabled: true
+    model: ModelicaTest.Electrical.PowerConverters.ChopperStepDown_R_2kHz
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 10000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "meanVoltage.y"
+      - "meanCurrent.y"
+      - "chopperStepDown.vDC2"
+      - "chopperStepDown.iDC2"
+  - name: ChopperBuckBoost_DutyCycle_36V
+    enabled: true
+    model: ModelicaTest.Electrical.PowerConverters.ChopperBuckBoost_DutyCycle_36V
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 10000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "mean_vLV.y"
+      - "mean_iLV.y"
+      - "mean_vHV.y"
+      - "mean_iHV.y"
+  - name: Rectifier_230V
+    enabled: true
+    model: ModelicaTest.Electrical.QuasiStatic.SinglePhase.Rectifier_230V
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 2000
+    rtol: 1.0e-6
+    # iAC.mean2.y is the mean of a current component that is nearly zero, so it is ill-conditioned; it passes only at the reference tolerance (1e-6)
+    max_rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "iAC.mean1.y"
+      - "iAC.mean2.y"
+      - "iDC2.mean.y"
+  - name: Transformer_n10
+    enabled: true
+    model: ModelicaTest.Electrical.QuasiStatic.SinglePhase.Transformer_n10
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "idealTransformer.v2.re"
+      - "idealTransformer.v2.im"
+      - "idealTransformer.i1.re"
+      - "idealTransformer.i1.im"
+  - name: MultipleResonance_k08
+    enabled: true
+    model: ModelicaTest.Electrical.QuasiStatic.SinglePhase.MultipleResonance_k08
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "currentSensor.abs_i"
+      - "currentSensor.arg_i"
+  - name: TestSensors_RL
+    enabled: true
+    model: ModelicaTest.Electrical.QuasiStatic.Polyphase.TestSensors_RL
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 1000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "feedbackPAron.y"
+      - "feedbackQ.y"
+      - "resistor.i[[]1].re"
+      - "resistor.i[[]1].im"
+  - name: TransformersDd
+    enabled: true
+    model: ModelicaTest.Electrical.Machines.TransformersDd
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 1000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "loadDd00.v[[]1]"
+      - "loadDd02.v[[]1]"
+      - "loadDd04.v[[]1]"
+      - "loadDd06.v[[]1]"
+      - "loadDd08.v[[]1]"
+      - "loadDd10.v[[]1]"
+      - "loadDd00.i[[]2]"
+  - name: TransformersDy
+    enabled: true
+    model: ModelicaTest.Electrical.Machines.TransformersDy
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 1000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "loadDy01.v[[]1]"
+      - "loadDy03.v[[]1]"
+      - "loadDy05.v[[]1]"
+      - "loadDy07.v[[]1]"
+      - "loadDy09.v[[]1]"
+      - "loadDy11.v[[]1]"
+      - "loadDy01.i[[]2]"
+  - name: TransformersDz
+    enabled: true
+    model: ModelicaTest.Electrical.Machines.TransformersDz
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 1000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "loadDz00.v[[]1]"
+      - "loadDz02.v[[]1]"
+      - "loadDz04.v[[]1]"
+      - "loadDz06.v[[]1]"
+      - "loadDz08.v[[]1]"
+      - "loadDz10.v[[]1]"
+      - "loadDz00.i[[]2]"
+  - name: TransformersYd
+    enabled: true
+    model: ModelicaTest.Electrical.Machines.TransformersYd
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 1000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "loadYd01.v[[]1]"
+      - "loadYd03.v[[]1]"
+      - "loadYd05.v[[]1]"
+      - "loadYd07.v[[]1]"
+      - "loadYd09.v[[]1]"
+      - "loadYd11.v[[]1]"
+      - "loadYd01.i[[]2]"
+  - name: TransformersYy
+    enabled: true
+    model: ModelicaTest.Electrical.Machines.TransformersYy
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 1000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "loadYy00.v[[]1]"
+      - "loadYy02.v[[]1]"
+      - "loadYy04.v[[]1]"
+      - "loadYy06.v[[]1]"
+      - "loadYy08.v[[]1]"
+      - "loadYy10.v[[]1]"
+      - "loadYy00.i[[]2]"
+  - name: TransformersYz
+    enabled: true
+    model: ModelicaTest.Electrical.Machines.TransformersYz
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 1000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "loadYz01.v[[]1]"
+      - "loadYz03.v[[]1]"
+      - "loadYz05.v[[]1]"
+      - "loadYz07.v[[]1]"
+      - "loadYz09.v[[]1]"
+      - "loadYz11.v[[]1]"
+      - "loadYz01.i[[]2]"
+  - name: QuasiStaticTransformersDd
+    enabled: true
+    model: ModelicaTest.Electrical.QuasiStatic.Machines.QuasiStaticTransformersDd
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 100
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "loadDd00.v[[]1].re"
+      - "loadDd00.v[[]1].im"
+      - "loadDd02.v[[]1].re"
+      - "loadDd02.v[[]1].im"
+      - "loadDd04.v[[]1].re"
+      - "loadDd04.v[[]1].im"
+      - "loadDd06.v[[]1].re"
+      - "loadDd06.v[[]1].im"
+      - "loadDd08.v[[]1].re"
+      - "loadDd08.v[[]1].im"
+      - "loadDd10.v[[]1].re"
+      - "loadDd10.v[[]1].im"
+      - "loadDd00.i[[]2].re"
+  - name: QuasiStaticTransformersDy
+    enabled: true
+    model: ModelicaTest.Electrical.QuasiStatic.Machines.QuasiStaticTransformersDy
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 100
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "loadDy01.v[[]1].re"
+      - "loadDy01.v[[]1].im"
+      - "loadDy03.v[[]1].re"
+      - "loadDy03.v[[]1].im"
+      - "loadDy05.v[[]1].re"
+      - "loadDy05.v[[]1].im"
+      - "loadDy07.v[[]1].re"
+      - "loadDy07.v[[]1].im"
+      - "loadDy09.v[[]1].re"
+      - "loadDy09.v[[]1].im"
+      - "loadDy11.v[[]1].re"
+      - "loadDy11.v[[]1].im"
+      - "loadDy01.i[[]2].re"
+  - name: QuasiStaticTransformersDz
+    enabled: true
+    model: ModelicaTest.Electrical.QuasiStatic.Machines.QuasiStaticTransformersDz
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 100
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "loadDz00.v[[]1].re"
+      - "loadDz00.v[[]1].im"
+      - "loadDz02.v[[]1].re"
+      - "loadDz02.v[[]1].im"
+      - "loadDz04.v[[]1].re"
+      - "loadDz04.v[[]1].im"
+      - "loadDz06.v[[]1].re"
+      - "loadDz06.v[[]1].im"
+      - "loadDz08.v[[]1].re"
+      - "loadDz08.v[[]1].im"
+      - "loadDz10.v[[]1].re"
+      - "loadDz10.v[[]1].im"
+      - "loadDz00.i[[]2].re"
+  - name: QuasiStaticTransformersYd
+    enabled: true
+    model: ModelicaTest.Electrical.QuasiStatic.Machines.QuasiStaticTransformersYd
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 100
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "loadYd01.v[[]1].re"
+      - "loadYd01.v[[]1].im"
+      - "loadYd03.v[[]1].re"
+      - "loadYd03.v[[]1].im"
+      - "loadYd05.v[[]1].re"
+      - "loadYd05.v[[]1].im"
+      - "loadYd07.v[[]1].re"
+      - "loadYd07.v[[]1].im"
+      - "loadYd09.v[[]1].re"
+      - "loadYd09.v[[]1].im"
+      - "loadYd11.v[[]1].re"
+      - "loadYd11.v[[]1].im"
+      - "loadYd01.i[[]2].re"
+  - name: QuasiStaticTransformersYy
+    enabled: true
+    model: ModelicaTest.Electrical.QuasiStatic.Machines.QuasiStaticTransformersYy
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 100
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "loadYy00.v[[]1].re"
+      - "loadYy00.v[[]1].im"
+      - "loadYy02.v[[]1].re"
+      - "loadYy02.v[[]1].im"
+      - "loadYy04.v[[]1].re"
+      - "loadYy04.v[[]1].im"
+      - "loadYy06.v[[]1].re"
+      - "loadYy06.v[[]1].im"
+      - "loadYy08.v[[]1].re"
+      - "loadYy08.v[[]1].im"
+      - "loadYy10.v[[]1].re"
+      - "loadYy10.v[[]1].im"
+      - "loadYy00.i[[]2].re"
+  - name: QuasiStaticTransformersYz
+    enabled: true
+    model: ModelicaTest.Electrical.QuasiStatic.Machines.QuasiStaticTransformersYz
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 100
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "loadYz01.v[[]1].re"
+      - "loadYz01.v[[]1].im"
+      - "loadYz03.v[[]1].re"
+      - "loadYz03.v[[]1].im"
+      - "loadYz05.v[[]1].re"
+      - "loadYz05.v[[]1].im"
+      - "loadYz07.v[[]1].re"
+      - "loadYz07.v[[]1].im"
+      - "loadYz09.v[[]1].re"
+      - "loadYz09.v[[]1].im"
+      - "loadYz11.v[[]1].re"
+      - "loadYz11.v[[]1].im"
+      - "loadYz01.i[[]2].re"
+  - name: SpacePhasorsBlocksComponentsAndFunctions
+    enabled: true
+    model: ModelicaTest.Electrical.Machines.SpacePhasorsBlocksComponentsAndFunctions
+    start_time: 0.0
+    final_time: 0.04
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "load.i[[]1]"
+      - "load.i[[]2]"
+      - "rotator.spacePhasor_b.v_[[]1]"
+      - "rotator.spacePhasor_b.v_[[]2]"
+      - "fromPolar.y[[]1]"
+      - "fromPolar.y[[]2]"
+      - "quasiRMS.y"
+      - "fp[[]1]"
+      - "fp[[]2]"
+      - "tp"
+      - "rot[[]1]"
+      - "rot[[]2]"
+      - "fsp[[]1]"
+      - "fsp[[]3]"
+      - "qrms"
+  - name: SpacePhasorAndSymmetricalComponentsBlocks
+    enabled: true
+    model: ModelicaTest.Electrical.QuasiStatic.Polyphase.SpacePhasorAndSymmetricalComponentsBlocks
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "fromSpacePhasor.y[[]1].re"
+      - "fromSpacePhasor.y[[]2].im"
+      - "toSpacePhasor.y[[]1]"
+      - "toSpacePhasor.y[[]2]"
+      - "fromSpacePhasor2.y[[]2].re"
+      - "symmetricalComponents.y[[]2].re"
+      - "symmetricalComponents.y[[]2].im"
+      - "fromSymmetricalComponents.y[[]2].re"
+      - "fromSymmetricalComponents.y[[]3].im"
+  - name: ReferenceSourceAndSensors
+    enabled: true
+    model: ModelicaTest.Electrical.QuasiStatic.Polyphase.ReferenceSourceAndSensors
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "frequencySensor.f"
+      - "frequencySensor1.f"
+      - "referenceSensor.gamma"
+      - "inductor.i[[]1].re"
+      - "inductor.i[[]1].im"
+      - "load.v[[]2].re"
+      - "load2.v[[]1].re"
+      - "load2.v[[]1].im"
+  - name: BrushRampedRheostatAndThermalAmbientDCCE
+    enabled: true
+    model: ModelicaTest.Electrical.Machines.BrushRampedRheostatAndThermalAmbientDCCE
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "load.i[[]1]"
+      - "load.i[[]2]"
+      - "brush.v[[]1]"
+      - "rheostat.rheostat.R[[]1]"
+      - "thermalAmbient.Q_flowBrush"
+      - "thermalAmbient.Q_flowArmature"
+      - "qShunt.port.T"
+      - "qSeries.port.T"
+  - name: SM_ElectricalExcitedDataRecord
+    enabled: true
+    model: ModelicaTest.Electrical.Machines.SM_ElectricalExcitedDataRecord
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "smee.is[[]1]"
+      - "smee.is[[]2]"
+      - "smee.ie"
+      - "smee.tauElectrical"
+      - "load.v[[]1]"
+  - name: Spice3Modelcards
+    enabled: true
+    model: ModelicaTest.Electrical.Spice3.Spice3Modelcards
+    start_time: 0.0
+    final_time: 0.002
+    ncp: 500
+    rtol: 1.0e-6
+    # strongly nonlinear Spice3 transistor stages: cl.v deviates at 100x rtol (1e-4) and converges at 1e-5, so the check run is capped at 1e-5
+    max_rtol: 1.0e-5
+    modifiers: {}
+    variables:
+      - time
+      - "cl.v"
+      - "re.v"
+      - "rj.v"
+      - "rd.v"
+      - "cs.v"
+      - "rs.i"

@@ -1,0 +1,16 @@
+time
+fp[1]
+fp[2]
+fromPolar.y[1]
+fromPolar.y[2]
+fsp[1]
+fsp[3]
+load.i[1]
+load.i[2]
+qrms
+quasiRMS.y
+rot[1]
+rot[2]
+rotator.spacePhasor_b.v_[1]
+rotator.spacePhasor_b.v_[2]
+tp

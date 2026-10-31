@@ -1,3 +1,12 @@
 Ideal
 TestSaturatingInductor
 TestGyrator
+AnalogSources
+AnalogBasicComponents
+AnalogIdealComponents
+AnalogSemiconductorsAndLines
+AnalogOpAmpLimited
+AmplifierWithOpAmpDetailed_SmallSignal
+AD_DA_conversion_N4
+GenerationOfFMUs_5Hz
+ControlledSwitchWithArc_100V

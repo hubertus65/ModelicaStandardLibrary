@@ -1,0 +1,17 @@
+time
+powerSensor.power
+R_diode.v
+R_diode2.v
+R_zDiode.v
+R_thyristor.v
+R_triac.v
+C_load.v
+R_npn.v
+R_pnp.v
+R_oLine.v
+R_uLine.v
+R_mOLine1.v
+R_tLine.v
+R_tLine1.v
+R_tLine2.v
+R_tLine3.v

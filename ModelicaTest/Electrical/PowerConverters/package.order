@@ -2,3 +2,11 @@ Examples
 HalfControlledBridge2mPulse
 ThyristorBridge2mPulse_R
 ExampleTemplates
+DiodeBridge2Pulse_60Hz
+DiodeCenterTap2Pulse_60Hz
+DiodeCenterTapmPulse_5Phase
+DiodeCenterTap2mPulse_5Phase
+HalfControlledBridge2Pulse_Alpha60
+ChopperStepUp_R_2kHz
+ChopperStepDown_R_2kHz
+ChopperBuckBoost_DutyCycle_36V
