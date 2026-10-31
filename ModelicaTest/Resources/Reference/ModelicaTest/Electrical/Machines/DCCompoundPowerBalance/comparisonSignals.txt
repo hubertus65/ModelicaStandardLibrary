@@ -1,0 +1,4 @@
+time
+pbCC.lossPowerTotal
+lossError
+pbCC.powerShuntExcitation

@@ -297,4 +297,42 @@ value in the library, and starting from 0 the initialization fails (division by 
 </p>
 </html>"));
   end BasicElementsShapesAndSensors;
+
+model LinearInductor_R10 = Modelica.Magnetic.QuasiStatic.FluxTubes.Examples.LinearInductor(r(R=10), rQS(R_ref=10))
+  "Variant of LinearInductor with a coil resistance of 10 Ohm"
+  annotation (experiment(StopTime=0.2, Tolerance=1e-07), Documentation(info="<html>
+<p>
+Variant of <a href=\"modelica://Modelica.Magnetic.QuasiStatic.FluxTubes.Examples.LinearInductor\">LinearInductor</a> (FluxTubes.Material.SoftMagnetic.ElectricSheet.M350_50A) with a
+coil resistance of 10 Ohm instead of 7.5 Ohm in the transient and the quasi-static circuit.
+</p>
+</html>"));
+
+model MagneticPortBase
+  "Test of the base connector Modelica.Magnetic.QuasiStatic.FluxTubes.Interfaces.MagneticPort"
+  extends Modelica.Icons.Example;
+  model PotentialProbe "Sets the magnetic potential of its MagneticPort"
+    input Complex V_m "Magnetic potential";
+    Modelica.Magnetic.QuasiStatic.FluxTubes.Interfaces.MagneticPort port "Port";
+  equation
+    port.V_m = V_m;
+  end PotentialProbe;
+  model FluxProbe "Draws a magnetic flux from its MagneticPort"
+    input Complex Phi "Magnetic flux into the port";
+    Modelica.Magnetic.QuasiStatic.FluxTubes.Interfaces.MagneticPort port "Port";
+  equation
+    port.Phi = Phi;
+  end FluxProbe;
+  PotentialProbe a(V_m=Complex(100*time, 50)) "Potential probe";
+  FluxProbe b(Phi=Complex(1e-3, -2e-3*time)) "Flux probe";
+equation
+  connect(a.port, b.port);
+  annotation (experiment(StopTime=1), Documentation(info="<html>
+<p>
+<a href=\"modelica://Modelica.Magnetic.QuasiStatic.FluxTubes.Interfaces.MagneticPort\">QuasiStatic.FluxTubes.Interfaces.MagneticPort</a>
+is not used anywhere in the MSL: the positive and negative ports of QuasiStatic.FluxTubes extend
+the identical QuasiStatic.FundamentalWave.Interfaces.MagneticPort instead. Two probes connect through it: one
+sets the complex magnetic potential, the other the flux, which the connection passes to the first.
+</p>
+</html>"));
+end MagneticPortBase;
 end FluxTubes;

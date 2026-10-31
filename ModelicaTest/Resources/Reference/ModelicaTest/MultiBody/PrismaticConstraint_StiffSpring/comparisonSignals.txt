@@ -1,0 +1,6 @@
+time
+bodyOfConstraint.r_0[1]
+bodyOfConstraint.r_0[2]
+bodyOfConstraint.r_0[3]
+bodyOfConstraint.v_0[1]
+bodyOfConstraint.v_0[2]

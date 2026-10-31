@@ -1,0 +1,5 @@
+time
+junction.ports[1].m_flow
+junction.ports[2].m_flow
+heatJunction.heatPorts[1].Q_flow
+heatJunction.heatPorts[2].T

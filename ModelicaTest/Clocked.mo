@@ -759,4 +759,13 @@ versions now use the clocked when-equation of the Real version
 </p>
 </html>"));
   end AssignClockToSquareWaveHold;
+
+model UniformNoiseXorshift64star_Clock10ms = Modelica.Clocked.Examples.Elementary.RealSignals.UniformNoiseXorshift64star(periodicClock(factor=10))
+  "Variant of UniformNoiseXorshift64star with a 10 ms clock"
+  annotation (experiment(StopTime=1), Documentation(info="<html>
+<p>
+Variant of <a href=\"modelica://Modelica.Clocked.Examples.Elementary.RealSignals.UniformNoiseXorshift64star\">UniformNoiseXorshift64star</a> (RealSignals.Sampler.Utilities.Internal.UniformNoiseXorshift64star)
+with a clock period of 10 ms instead of 20 ms.
+</p>
+</html>"));
 end Clocked;

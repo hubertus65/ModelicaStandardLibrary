@@ -1514,4 +1514,49 @@ ReferenceMoistAir, while pressure and temperature ramp.
 </ul>
 </html>"));
   end MediaCommonFunctions;
+
+model ThermoFluidSpecialRecords
+  "Test of the records Media.Common.BridgmansTables, ThermoFluidSpecial.ThermoProperties and ThermoBaseVars"
+  extends Modelica.Icons.Example;
+  package Medium = Modelica.Media.Water.StandardWater "Medium (IF97)";
+  import Modelica.Media.Common;
+  parameter Modelica.Units.SI.Pressure p=1e5 "Pressure";
+  Modelica.Units.SI.Temperature T=300 + 50*time "Temperature (liquid water)";
+  Medium.ThermodynamicState state=Medium.setState_pT(p, T) "State";
+  constant Modelica.Units.SI.Mass mTot=1 "Mass the extensive properties refer to";
+  constant Modelica.Units.SI.MolarMass MM=Medium.fluidConstants[1].molarMass "Molar mass";
+  Modelica.Units.SI.Density d=Medium.density(state) "Density";
+  Modelica.Units.SI.SpecificEnthalpy h=Medium.specificEnthalpy(state) "Specific enthalpy";
+  Modelica.Units.SI.SpecificEntropy s=Medium.specificEntropy(state) "Specific entropy";
+  Modelica.Units.SI.SpecificHeatCapacity cp=Medium.specificHeatCapacityCp(state) "cp";
+  Modelica.Units.SI.SpecificHeatCapacity cv=Medium.specificHeatCapacityCv(state) "cv";
+  Real alpha(unit="1/K")=Medium.isobaricExpansionCoefficient(state) "Isobaric expansion coefficient";
+  Real kappaT(unit="1/Pa")=Medium.isothermalCompressibility(state) "Isothermal compressibility";
+  Common.BridgmansTables bt(v=1/d, p=p, T=T, s=s, cp=cp, alpha=alpha,
+    gamma=kappaT) "Bridgman's tables of water at (p, T)";
+  Real bridgmanCheck=bt.dhp - bt.cp + bt.dTp - 1 "Must be zero: dhp = cp, dTp = 1";
+  Common.ThermoFluidSpecial.ThermoProperties tp(nspecies=1, T=T, d=d, p=p, V=1/d, h=h, u=h - p/d,
+    s=s, g=h - T*s, cp=cp, cv=cv, R_s=Modelica.Constants.R/MM, MM=MM, mass_x={1}, mole_y={1}, kappa=cp/cv,
+    ddTp=-alpha*d, ddpT=kappaT*d, dupT=0, dudT=0, duTp=cv, ddx={0}, compu={0}, compp={0},
+    a=Medium.velocityOfSound(state), dUTZ=cv*mTot, dUZT={0}, dHMxT={0}, dpT=alpha/kappaT, dpZ={0})
+    "Thermodynamic properties of water at (p, T)";
+  Common.ThermoFluidSpecial.ThermoBaseVars tbv(n=2, nspecies=1, p={p, p}, T={T, T + 10}, d={d, d},
+    h={h, h + 10*cp}, s={s, s}, kappa={cp/cv, cp/cv}, M={1, 1}, U={h - p/d, h - p/d}, dM={0, 0}, dU={0, 0},
+    V={1/d, 1/d}, mass_x=[1; 1], mole_y=[1; 1], M_x=[1; 1], dM_x=[0; 0], dZ=[0; 0], rZ=[0; 0],
+    MM={MM, MM}, Moles={1/MM, 1/MM},
+    Moles_z=[1/MM; 1/MM]) "Two-cell base variables";
+  annotation (experiment(StopTime=1), Documentation(info="<html>
+<p>
+The records
+<a href=\"modelica://Modelica.Media.Common.BridgmansTables\">BridgmansTables</a>,
+<a href=\"modelica://Modelica.Media.Common.ThermoFluidSpecial.ThermoProperties\">ThermoProperties</a> and
+<a href=\"modelica://Modelica.Media.Common.ThermoFluidSpecial.ThermoBaseVars\">ThermoBaseVars</a>
+are not used anywhere in the MSL. They are filled with IF97 properties of liquid water at 1 bar between
+300 K and 350 K. BridgmansTables derives its coefficients from its bindings, e.g. <code>dvp = alpha*v</code>
+and <code>dsT = alpha*v</code>; <code>bridgmanCheck</code> must be zero. The record is filled by a modifier,
+not by a call of its constructor, which Modelon Impact (OCT) evaluates with <code>dTp = -1</code>
+instead of the default <code>dTp = 1</code>.
+</p>
+</html>"));
+end ThermoFluidSpecialRecords;
 end Media;

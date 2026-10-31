@@ -1,0 +1,168 @@
+{
+ "run": {
+  "utc": "2026-10-31T22:19:48+00:00",
+  "rtol_factor": 100.0,
+  "descriptor": "openmodelica v1.27.1 (64-bit), MSL 4.2.0 dev, cvode",
+  "reference_descriptor": "openmodelica v1.27.1 (64-bit), MSL 4.2.0 dev, cvode",
+  "cases": 2,
+  "cases_this_run": 2,
+  "failed_cases": 0,
+  "bytes": 85538
+ },
+ "cases": [
+  {
+   "name": "UniformNoiseXorshift64star_Clock10ms",
+   "model": "ModelicaTest.Clocked.UniformNoiseXorshift64star_Clock10ms",
+   "variables": [
+    "sample1.y",
+    "time",
+    "uniformNoiseXorshift64star.y"
+   ],
+   "metrics": {
+    "state_events": 0,
+    "time_events": 0,
+    "steps": 501,
+    "function_evaluations": 501,
+    "jacobian_evaluations": 0,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "cpu_time": 0.0039479,
+    "simulation_time": 0.0026612,
+    "kind": "dynamic",
+    "solver": "cvode",
+    "wall_time": 0.09473499993328005,
+    "samples": 604,
+    "omc_version": "OpenModelica v1.27.1 (64-bit)",
+    "msl_version": "4.2.0 dev",
+    "spread_applied": true,
+    "rtol": 9.999999999999999e-05
+   },
+   "units": {},
+   "display_units": {},
+   "format": "npz",
+   "bytes": 3450,
+   "record": {
+    "schema": 1,
+    "record_id": "dbfd0b1ded185e474f98e2a9f2e6e57cbae78e48ef742fec3f48a114549ebb55",
+    "executable": {},
+    "experiment": {
+     "case_entry_sha256": "c666dc7e4d7ea53471e005a0e16dc6eee97e211f29bc29813afd7107e1478b58",
+     "descriptor": "openmodelica v1.27.1 (64-bit), MSL 4.2.0 dev, cvode",
+     "rtol_factor": 100.0
+    },
+    "model": {
+     "class": "ModelicaTest.Clocked.UniformNoiseXorshift64star_Clock10ms",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 3450,
+     "file": "UniformNoiseXorshift64star_Clock10ms.npz",
+     "format": "npz",
+     "sha256": "c1e26ae2e2562dc62e337acd3d9e4193c5869e300d7dec1f5b03cba27ac3aae1"
+    },
+    "run": {
+     "utc": "2026-10-31T22:19:48+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "UniversalConstraint_StiffSpring",
+   "model": "ModelicaTest.MultiBody.UniversalConstraint_StiffSpring",
+   "variables": [
+    "bodyOfConstraint.body.w_a[1]",
+    "bodyOfConstraint.body.w_a[2]",
+    "bodyOfConstraint.body.w_a[3]",
+    "joint.phi_a",
+    "joint.phi_b",
+    "time"
+   ],
+   "metrics": {
+    "state_events": 0,
+    "time_events": 0,
+    "steps": 2126,
+    "function_evaluations": 2293,
+    "jacobian_evaluations": 49,
+    "error_test_failures": 22,
+    "convergence_failures": 0,
+    "cpu_time": 0.105069,
+    "simulation_time": 0.0855453,
+    "kind": "dynamic",
+    "solver": "cvode",
+    "wall_time": 0.30143700004555285,
+    "samples": 2002,
+    "omc_version": "OpenModelica v1.27.1 (64-bit)",
+    "msl_version": "4.2.0 dev",
+    "spread_applied": true,
+    "rtol": 1e-05
+   },
+   "units": {
+    "bodyOfConstraint.body.w_a[1]": "rad/s",
+    "bodyOfConstraint.body.w_a[2]": "rad/s",
+    "bodyOfConstraint.body.w_a[3]": "rad/s",
+    "joint.phi_a": "rad",
+    "joint.phi_b": "rad"
+   },
+   "display_units": {
+    "joint.phi_a": "deg",
+    "joint.phi_b": "deg"
+   },
+   "format": "npz",
+   "bytes": 82088,
+   "record": {
+    "schema": 1,
+    "record_id": "a539b4dbadc67082d0bc36ac90ca62f5f836ab338433bcf450177b9d37f7d404",
+    "executable": {},
+    "experiment": {
+     "case_entry_sha256": "9b7e36c2ac3942e8c25d2ffea1b53b331d66433fcae1575286ac3088972cc412",
+     "descriptor": "openmodelica v1.27.1 (64-bit), MSL 4.2.0 dev, cvode",
+     "rtol_factor": 10.000000000000002
+    },
+    "model": {
+     "class": "ModelicaTest.MultiBody.UniversalConstraint_StiffSpring",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 82088,
+     "file": "UniversalConstraint_StiffSpring.npz",
+     "format": "npz",
+     "sha256": "aacc7d4cbff3c9a14496455b4deb4fc41c5b998c531801b9d9391c1cdbcbbd0f"
+    },
+    "run": {
+     "utc": "2026-10-31T22:19:40+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  }
+ ]
+}

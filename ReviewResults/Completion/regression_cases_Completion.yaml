@@ -1,0 +1,299 @@
+# ModCheck case list: new ModelicaTest coverage tests for Modelica.Completion (branch coverage-improvement).
+#
+# Each case is one new test model, run unmodified on Modelon Impact (MSL 4.1.0 dependency).
+# Variables are the comparison signals of the model, as listed in
+# ModelicaTest/Resources/Reference/ModelicaTest/<Package>/<Model>/comparisonSignals.txt.
+# ncp gives 500 output intervals per second of simulated time (2000 for long runs).
+library: ModelicaTest
+workspace: msl-coverage
+custom_function: dynamic
+tolerance: 0.001
+
+cases:
+  - name: RevoluteConstraint_StiffSpring
+    enabled: true
+    model: ModelicaTest.MultiBody.RevoluteConstraint_StiffSpring
+    start_time: 0.0
+    final_time: 10.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "bodyOfConstraint.body.w_a[[]1]"
+      - "bodyOfConstraint.body.w_a[[]2]"
+      - "bodyOfConstraint.body.w_a[[]3]"
+      - "joint.phi"
+  - name: SphericalConstraint_StiffSpring
+    enabled: true
+    model: ModelicaTest.MultiBody.SphericalConstraint_StiffSpring
+    start_time: 0.0
+    final_time: 10.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "bodyOfConstraint.body.w_a[[]1]"
+      - "bodyOfConstraint.body.w_a[[]2]"
+      - "bodyOfConstraint.body.w_a[[]3]"
+  - name: PrismaticConstraint_StiffSpring
+    enabled: true
+    model: ModelicaTest.MultiBody.PrismaticConstraint_StiffSpring
+    start_time: 0.0
+    final_time: 10.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "bodyOfConstraint.r_0[[]1]"
+      - "bodyOfConstraint.r_0[[]2]"
+      - "bodyOfConstraint.r_0[[]3]"
+      - "bodyOfConstraint.v_0[[]1]"
+      - "bodyOfConstraint.v_0[[]2]"
+  - name: RollingWheel_FastSpin
+    enabled: true
+    model: ModelicaTest.MultiBody.RollingWheel_FastSpin
+    start_time: 0.0
+    final_time: 4.0
+    ncp: 2000
+    rtol: 1.0e-6
+    # the fast-spinning wheel rolls on a curved path whose position integrates the error of the angles; at 100x rtol (1e-4) wheel1.y drifts by 0.16 m, so the check run is capped at 1e-5
+    max_rtol: 1.0e-5
+    modifiers: {}
+    variables:
+      - time
+      - "wheel1.x"
+      - "wheel1.y"
+      - "wheel1.angles[[]1]"
+      - "wheel1.angles[[]3]"
+      - "wheel1.der_angles[[]2]"
+  - name: RollingWheelSetDriving_HigherTorque
+    enabled: true
+    model: ModelicaTest.MultiBody.RollingWheelSetDriving_HigherTorque
+    start_time: 0.0
+    final_time: 3.0
+    ncp: 1500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "wheelSet.x"
+      - "wheelSet.y"
+      - "wheelSet.phi"
+      - "wheelSet.theta1"
+      - "wheelSet.theta2"
+  - name: Sensors_20N
+    enabled: true
+    model: ModelicaTest.Translational.Sensors_20N
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 1000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "mass.s"
+      - "mass.v"
+      - "positionSensor1.s"
+      - "speedSensor1.v"
+  - name: GenerationOfFMUs_3Hz
+    enabled: true
+    model: ModelicaTest.Translational.GenerationOfFMUs_3Hz
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 1000
+    rtol: 1.0e-6
+    # variant 3 couples mass3a and mass3b by an undamped spring (c = 1e4) through position-only adaptors; mass3b.v deviates 1.4e-3 at rtol 1e-4 and 1e-5 alike, while rtol 1e-6, 1e-8 and 1e-10 agree to 2e-5, so the check run is capped at the store tolerance
+    max_rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "directMass.mass.s"
+      - "directMass.mass.v"
+      - "mass2a.s"
+      - "mass2b.v"
+      - "mass3a.s"
+      - "mass3b.v"
+  - name: PumpAndValve_20W
+    enabled: true
+    model: ModelicaTest.Thermal.PumpAndValve_20W
+    start_time: 0.0
+    final_time: 2.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "heatCapacitor.T"
+      - "pipe.T"
+      - "speed.phi"
+  - name: TwoTanks_Level07
+    enabled: true
+    model: ModelicaTest.Thermal.TwoTanks_Level07
+    start_time: 0.0
+    final_time: 1.5
+    ncp: 750
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "openTank1.level"
+      - "openTank2.level"
+      - "openTank1.T"
+      - "openTank2.T"
+  - name: TestCylinder_Mass2
+    enabled: true
+    model: ModelicaTest.Thermal.TestCylinder_Mass2
+    start_time: 0.0
+    final_time: 2.0
+    ncp: 2000
+    rtol: 1.0e-6
+    # the doubled mass on the spring-damper (c = 100) oscillates after the force pulse on piston 1; at 100x rtol (1e-4) cylinder1.H deviates by 4.6e-2 and springDamper.v_rel by 9.5e-4, so the check run is capped at 1e-5
+    max_rtol: 1.0e-5
+    modifiers: {}
+    variables:
+      - time
+      - "cylinder1.H"
+      - "cylinder1.m"
+      - "cylinder2.H"
+      - "springDamper.s_rel"
+      - "springDamper.v_rel"
+  - name: HeatTransferGenerationOfFMUs_3Hz
+    enabled: true
+    model: ModelicaTest.Thermal.HeatTransferGenerationOfFMUs_3Hz
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 1000
+    rtol: 1.0e-6
+    # in variant 3 (heat-flow-to-temperature adaptors without derivatives, like variant 3 of the Translational GenerationOfFMUs) capacitor3a.T deviates by 0.10 K at 100x rtol (1e-4), so the check run is capped at 1e-5
+    max_rtol: 1.0e-5
+    modifiers: {}
+    variables:
+      - time
+      - "capacitor3a.T"
+      - "capacitor3b.T"
+      - "directCapacity.heatCapacitor.T"
+  - name: SMPM_OpenCircuit_HalfSpeed
+    enabled: true
+    model: ModelicaTest.Magnetic.QuasiStatic.FundamentalWave.SMPM_OpenCircuit_HalfSpeed
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 1000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "Vtr"
+      - "Vqs"
+  - name: LinearInductor_R10
+    enabled: true
+    model: ModelicaTest.Magnetic.QuasiStatic.FluxTubes.LinearInductor_R10
+    start_time: 0.0
+    final_time: 0.2
+    ncp: 500
+    rtol: 1.0e-6
+    # at 100x rtol (1e-4) the transient coil current of the sine-fed inductor deviates by 3.5e-3 A (coil.i), so the check run is capped at 1e-5
+    max_rtol: 1.0e-5
+    modifiers: {}
+    variables:
+      - time
+      - "coil.Phi"
+      - "coil.i"
+      - "r_mLeak.port_p.Phi"
+      - "rootMeanSquare.mean.x"
+  - name: SolenoidComparisonQuasiStatic_10V
+    enabled: true
+    model: ModelicaTest.Magnetic.FluxTubes.SolenoidComparisonQuasiStatic_10V
+    start_time: 0.0
+    final_time: 10.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "advancedFeed_x.v"
+      - "advancedSolenoid.L_statTot"
+      - "advancedSolenoid.g_mFeArm.Phi"
+      - "comparisonWithFEA.y[[]1]"
+  - name: Spice3InternalRecordsAndFunctions
+    enabled: true
+    model: ModelicaTest.Electrical.Spice3.Spice3InternalRecordsAndFunctions
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "vDiode.m_gradingCoeff"
+      - "vDiode.m_activationEnergy"
+      - "vDiode.m_depletionCapCoeff"
+      - "vDiode.m_conductance"
+      - "dev.m_len"
+      - "dev.m_width"
+      - "nPins"
+      - "rootSum"
+      - "m2.m_vt0"
+      - "m2.m_xd"
+      - "passThroughError"
+  - name: DCCompoundPowerBalance
+    enabled: true
+    model: ModelicaTest.Electrical.Machines.DCCompoundPowerBalance
+    start_time: 0.0
+    final_time: 2.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "pbCC.lossPowerTotal"
+      - "lossError"
+      - "pbCC.powerShuntExcitation"
+  - name: ThermoFluidSpecialRecords
+    enabled: true
+    model: ModelicaTest.Media.ThermoFluidSpecialRecords
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "bt.dvp"
+      - "bt.dsT"
+      - "bt.duT"
+      - "bt.dsv"
+      - "bridgmanCheck"
+      - "tp.h"
+      - "tp.kappa"
+      - "tbv.h[[]2]"
+  - name: VectorizedPortsFluidAndHeat
+    enabled: true
+    model: ModelicaTest.Fluid.TestUtilities.VectorizedPortsFluidAndHeat
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "junction.ports[[]1].m_flow"
+      - "junction.ports[[]2].m_flow"
+      - "heatJunction.heatPorts[[]1].Q_flow"
+      - "heatJunction.heatPorts[[]2].T"
+  - name: MagneticPortBase
+    enabled: true
+    model: ModelicaTest.Magnetic.QuasiStatic.FluxTubes.MagneticPortBase
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "a.port.V_m.re"
+      - "a.port.V_m.im"
+      - "b.port.Phi.re"
+      - "b.port.Phi.im"

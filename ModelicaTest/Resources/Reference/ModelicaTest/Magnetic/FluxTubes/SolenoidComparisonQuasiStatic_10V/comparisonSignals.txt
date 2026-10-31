@@ -1,0 +1,5 @@
+time
+advancedFeed_x.v
+advancedSolenoid.L_statTot
+advancedSolenoid.g_mFeArm.Phi
+comparisonWithFEA.y[1]

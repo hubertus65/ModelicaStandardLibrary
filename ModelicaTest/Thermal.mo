@@ -257,4 +257,39 @@ derived Prandtl number, so that a change of the stored property values is detect
 </p>
 </html>"));
   end FluidHeatFlowMedia;
+
+model PumpAndValve_20W = Modelica.Thermal.FluidHeatFlow.Examples.PumpAndValve(heatFlow(k=20))
+  "Variant of FluidHeatFlow.Examples.PumpAndValve with a heat flow of 20 W"
+  annotation (experiment(StopTime=2.0, Interval=0.001), Documentation(info="<html>
+<p>
+Variant of <a href=\"modelica://Modelica.Thermal.FluidHeatFlow.Examples.PumpAndValve\">PumpAndValve</a> (Sources.IdealPump, HeatTransfer Convection and
+PrescribedHeatFlow) with a heat flow of 20 W instead of 10 W.
+</p>
+</html>"));
+
+model TwoTanks_Level07 = Modelica.Thermal.FluidHeatFlow.Examples.TwoTanks(openTank1(level(start=0.7)))
+  "Variant of FluidHeatFlow.Examples.TwoTanks with an initial level of 0.7 m"
+  annotation (experiment(StopTime=1.5), Documentation(info="<html>
+<p>
+Variant of <a href=\"modelica://Modelica.Thermal.FluidHeatFlow.Examples.TwoTanks\">TwoTanks</a> (Components.OpenTank) with an initial level of 0.7 m instead
+of 0.9 m in the first tank.
+</p>
+</html>"));
+
+model TestCylinder_Mass2 = Modelica.Thermal.FluidHeatFlow.Examples.TestCylinder(mass(m=2))
+  "Variant of FluidHeatFlow.Examples.TestCylinder with a mass of 2 kg"
+  annotation (experiment(StopTime=2, Interval=0.001), Documentation(info="<html>
+<p>
+Variant of <a href=\"modelica://Modelica.Thermal.FluidHeatFlow.Examples.TestCylinder\">TestCylinder</a> (Components.Cylinder) with a mass of 2 kg instead of 1 kg.
+</p>
+</html>"));
+
+model HeatTransferGenerationOfFMUs_3Hz = Modelica.Thermal.HeatTransfer.Examples.GenerationOfFMUs(sine1(f=3))
+  "Variant of HeatTransfer.Examples.GenerationOfFMUs with a heat flow frequency of 3 Hz"
+  annotation (experiment(StopTime=1, Interval=0.001), Documentation(info="<html>
+<p>
+Variant of <a href=\"modelica://Modelica.Thermal.HeatTransfer.Examples.GenerationOfFMUs\">GenerationOfFMUs</a> (GeneralHeatFlowToTemperatureAdaptor,
+GeneralTemperatureToHeatFlowAdaptor) with a heat flow frequency of 3 Hz instead of 2 Hz.
+</p>
+</html>"));
 end Thermal;

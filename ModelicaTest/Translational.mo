@@ -529,4 +529,22 @@ Tests three components of
 </ul>
 </html>"));
   end FrictionStopsAndInitialization;
+
+model Sensors_20N = Modelica.Mechanics.Translational.Examples.Sensors(sineForce(amplitude=20))
+  "Variant of Translational.Examples.Sensors with a force amplitude of 20 N"
+  annotation (experiment(StopTime=1.0, Interval=0.001), Documentation(info="<html>
+<p>
+Variant of <a href=\"modelica://Modelica.Mechanics.Translational.Examples.Sensors\">Sensors</a> (PositionSensor, SpeedSensor) with a force amplitude of 20 N
+instead of 10 N.
+</p>
+</html>"));
+
+model GenerationOfFMUs_3Hz = Modelica.Mechanics.Translational.Examples.GenerationOfFMUs(sine1(f=3))
+  "Variant of Translational.Examples.GenerationOfFMUs with a force frequency of 3 Hz"
+  annotation (experiment(StopTime=1, Interval=0.001), Documentation(info="<html>
+<p>
+Variant of <a href=\"modelica://Modelica.Mechanics.Translational.Examples.GenerationOfFMUs\">GenerationOfFMUs</a> (GeneralForceToPositionAdaptor, GeneralPositionToForceAdaptor)
+with a force frequency of 3 Hz instead of 2 Hz.
+</p>
+</html>"));
 end Translational;

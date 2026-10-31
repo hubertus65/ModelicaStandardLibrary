@@ -390,4 +390,48 @@ C_Capacitor.
 </p>
 </html>"));
   end Spice3Modelcards;
+
+model Spice3InternalRecordsAndFunctions
+  "Test of internal records and functions of Modelica.Electrical.Spice3 that no Spice3 model uses"
+  extends Modelica.Icons.Example;
+  import Modelica.Electrical.Spice3.Internal;
+  parameter Internal.ModelcardDIODE mcDiode "Diode technology parameters (defaults)";
+  parameter Internal.SpiceConstants con "Spice constants";
+  parameter Internal.Diode.DiodeModelLineParams pDiode=Internal.Diode.diodeRenameParameters(mcDiode, con)
+    "Diode model line parameters";
+  parameter Internal.Diode.DiodeModelLineVariables vDiode=Internal.Diode.diodeModelLineInitEquations(pDiode)
+    "Diode model line variables";
+  parameter Internal.Diode.DiodeParams dpDiode=Internal.Diode.diodeRenameParametersDev(300.15, 2, 0, false, false)
+    "Diode device parameters";
+  parameter Internal.Diode.DiodeVariables v0=Internal.Diode.diodeInitEquations(pDiode)
+    "Diode variables after initialization";
+  parameter Internal.Diode.DiodeVariables v1=Internal.Diode.diodeCalcAdditionalValues(v0, pDiode, dpDiode, {0.1, 0.2})
+    "Diode variables after the additional calculations (a pass-through)";
+  parameter Internal.ModelcardMOS2 mcMos "MOS level 2 technology parameters (defaults)";
+  parameter Internal.Mosfet.Mosfet dev=Internal.Mos2.mos2RenameParametersDev(mcMos, 1, 1e-5, 2e-6, 0, 0, 0, 0, 1, 1, 0, 0, 27)
+    "MOSFET device parameters for W = 10 um, L = 2 um";
+  parameter Internal.Mosfet.MosfetModelLine ml=Internal.Mosfet.mosfetModelLineInitEquations(dev)
+    "MOSFET model line";
+  parameter Integer nPins=Internal.Mosfet.getNumberOfElectricalPins() "Number of MOSFET pins";
+  parameter Internal.Mos2.Mos2ModelLineVariables m2=Internal.Mos2.Mos2ModelLineVariables(
+    m_oxideCapFactor=1, m_vt0=2, m_phi=3, m_gamma=4, m_transconductance=5, m_bulkCapFactor=6,
+    m_substrateDoping=7, m_xd=8) "MOS level 2 model line variables";
+  parameter Internal.SpiceRoot.SpiceRoot root=Internal.SpiceRoot.SpiceRoot(
+    m_pCurrentValues=fill(0.5, 6), m_pResJacobi=fill(1, 36), m_pCapJacobi=fill(2, 36))
+    "Currents and Jacobians of the Spice root record";
+  Real rootSum=sum(root.m_pCurrentValues) + sum(root.m_pResJacobi) + sum(root.m_pCapJacobi) "= 111";
+  Real passThroughError=v1.m_pBvIsGiven - v0.m_pBvIsGiven
+    "0 if diodeCalcAdditionalValues passes its input through";
+  annotation (experiment(StopTime=1), Documentation(info="<html>
+<p>
+Internal records and functions of
+<a href=\"modelica://Modelica.Electrical.Spice3.Internal\">Spice3.Internal</a> that no Spice3 model uses
+(leftovers of the model-line implementation): Diode.DiodeModelLineVariables and
+diodeModelLineInitEquations, Diode.diodeCalcAdditionalValues (a pass-through), Mos2.mos2RenameParametersDev,
+Mosfet.MosfetModelLine and mosfetModelLineInitEquations, Mosfet.getNumberOfElectricalPins (4),
+Mos2.Mos2ModelLineVariables and SpiceRoot.SpiceRoot (rootSum = 111). They are evaluated with the default technology
+parameters, the way the Spice3 models evaluate their own internal records.
+</p>
+</html>"));
+end Spice3InternalRecordsAndFunctions;
 end Spice3;

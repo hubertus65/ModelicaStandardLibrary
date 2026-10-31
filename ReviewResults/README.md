@@ -19,6 +19,12 @@ modelica/ModelicaStandardLibrary#4846, #4847, #4848 and #4851. These cases run o
 way. ModCheck runs one source per case list, so they have their own case list, baselines and report in
 `<SubLibrary>/OpenModelica/`. The reason is stated at each case.
 
+`Completion/` holds the 21 tests of the completion round, which spans several sub-libraries (see section 4
+of `CoverageImprovementReport.md`). Two of them run on OpenModelica: the Clocked variant, and
+`UniversalConstraint_StiffSpring`, whose constraint orientation OCT lets drift. Its HTML reports
+(`Completion/HtmlReports/`, `Completion/OpenModelica/HtmlReports/`) were generated but are not committed
+for now; the commands below regenerate them.
+
 Each `<SubLibrary>/` directory holds:
 
 | Path | Content |

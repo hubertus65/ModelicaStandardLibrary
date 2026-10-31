@@ -795,4 +795,13 @@ so that changes of their data are detected:
 </ul>
 </html>"));
   end MaterialRecords;
+
+model SolenoidComparisonQuasiStatic_10V = Modelica.Magnetic.FluxTubes.Examples.SolenoidActuator.ComparisonQuasiStatic(v_step=10)
+  "Variant of SolenoidActuator.ComparisonQuasiStatic with a supply of 10 V"
+  annotation (experiment(StopTime=10, Tolerance=1e-007), Documentation(info="<html>
+<p>
+Variant of <a href=\"modelica://Modelica.Magnetic.FluxTubes.Examples.SolenoidActuator.ComparisonQuasiStatic\">ComparisonQuasiStatic</a> (FluxTubes.Material.SoftMagnetic.Steel.Steel_9SMnPb28) with an
+applied voltage of 10 V instead of 12 V.
+</p>
+</html>"));
 end FluxTubes;

@@ -1,0 +1,12 @@
+time
+vDiode.m_gradingCoeff
+vDiode.m_activationEnergy
+vDiode.m_depletionCapCoeff
+vDiode.m_conductance
+dev.m_len
+dev.m_width
+nPins
+rootSum
+m2.m_vt0
+m2.m_xd
+passThroughError

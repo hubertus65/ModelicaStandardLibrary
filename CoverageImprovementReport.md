@@ -4,43 +4,52 @@ Second report on the coverage of library `Modelica` by `ModelicaTest`, after the
 `coverage-improvement`. The baseline is [TestCoverageReport.md](TestCoverageReport.md), with the same scope,
 definitions and analysis tool (static reference analysis; see *Method* there).
 
+The work had two rounds. The first round added 129 test models, one commit per sub-library, and reached
+97.3 %. The completion round closed the remaining gaps except the partial classes: it extended the analysis
+so that it sees classes the tests already run, and added 21 test models in one commit for the classes used
+only by MSL examples and for the orphans.
+
 ## 1. Summary
 
-| | Before | After |
-|---|---:|---:|
-| Analyzed (non-partial) classes | 3560 | 3560 |
-| Directly used by `ModelicaTest` | 782 (22.0 %) | 1598 (44.9 %) |
-| Directly or indirectly used by `ModelicaTest` | 2432 (68.3 %) | **3464 (97.3 %)** |
-| Not used by `ModelicaTest` | 1128 (31.7 %) | **96 (2.7 %)** |
-| … thereof neither tested nor used in any MSL example | 615 (17.3 %) | **71 (2.0 %)** |
-| Partial classes covered via `ModelicaTest` (of 344) | 259 (75.3 %) | 316 (91.9 %) |
-| Partial classes not covered at all | 32 | 26 |
+| | Before | After round 1 | **After completion** |
+|---|---:|---:|---:|
+| Analyzed (non-partial) classes | 3560 | 3560 | 3560 |
+| Directly used by `ModelicaTest` | 782 (22.0 %) | 1598 (44.9 %) | 1626 (45.7 %) |
+| Directly or indirectly used by `ModelicaTest` | 2432 (68.3 %) | 3464 (97.3 %) | **3548 (99.7 %)** |
+| Not used by `ModelicaTest` | 1128 (31.7 %) | 96 (2.7 %) | **12 (0.3 %)** |
+| … thereof neither tested nor used in any MSL example | 615 (17.3 %) | 71 (2.0 %) | **12 (0.3 %)** |
+| Partial classes covered via `ModelicaTest` (of 344) | 259 (75.3 %) | 316 (91.9 %) | 317 (92.2 %) |
+| Partial classes not covered at all | 32 | 26 | 26 |
 
-None of the 71 classes that are still neither tested nor used in an example needs a new test.
-[Section 4](#4-remaining-gaps) sorts them by reason: some are already run by the new tests without the static
-analysis seeing it, some are excluded deliberately, and the rest are orphans that no MSL class uses.
+The first two columns use the original analysis, the last one the extended analysis (section 4.1). Of the
+84 additional classes in the last step, 41 come from the new completion tests (96 → 55 with the original
+analysis) and 43 from the analysis (55 → 12): the 42 classes of section 4.1 and the default
+`PartialStraightPipe.FlowModel`, now resolved as an inherited local class.
+
+The 12 classes still not used are excluded on purpose ([section 4.2](#42-deliberately-not-tested-12)). Every
+other non-partial class of the MSL is now used by `ModelicaTest`.
 
 ## 2. Coverage by sub-library
 
-| Sub-library | Classes | Used by ModelicaTest before | after | Still not used | … thereof not in examples |
+| Sub-library | Classes | Used by ModelicaTest before | after round 1 | after completion | Still not used |
 |---|---:|---:|---:|---:|---:|
-| `Modelica.Blocks` | 294 | 193 (65.6 %) | 276 (93.9 %) | 18 | 18 |
-| `Modelica.Clocked` | 88 | 0 (0.0 %) | 87 (98.9 %) | 1 | 0 |
-| `Modelica.ComplexBlocks` | 38 | 6 (15.8 %) | 38 (100.0 %) | 0 | 0 |
-| `Modelica.ComplexMath` | 30 | 21 (70.0 %) | 30 (100.0 %) | 0 | 0 |
-| `Modelica.Electrical` | 765 | 281 (36.7 %) | 750 (98.0 %) | 15 | 13 |
-| `Modelica.Fluid` | 336 | 306 (91.1 %) | 326 (97.0 %) | 10 | 10 |
-| `Modelica.Magnetic` | 213 | 126 (59.2 %) | 210 (98.6 %) | 3 | 1 |
-| `Modelica.Math` | 187 | 134 (71.7 %) | 184 (98.4 %) | 3 | 3 |
-| `Modelica.Mechanics` | 336 | 232 (69.0 %) | 312 (92.9 %) | 24 | 11 |
-| `Modelica.Media` | 1049 | 1023 (97.5 %) | 1037 (98.9 %) | 12 | 12 |
-| `Modelica.StateGraph` | 25 | 0 (0.0 %) | 25 (100.0 %) | 0 | 0 |
-| `Modelica.Thermal` | 64 | 15 (23.4 %) | 57 (89.1 %) | 7 | 0 |
-| `Modelica.Units` | 58 | 35 (60.3 %) | 58 (100.0 %) | 0 | 0 |
-| `Modelica.Utilities` | 77 | 60 (77.9 %) | 74 (96.1 %) | 3 | 3 |
+| `Modelica.Blocks` | 294 | 193 (65.6 %) | 276 (93.9 %) | 294 (100.0 %) | 0 |
+| `Modelica.Clocked` | 88 | 0 (0.0 %) | 87 (98.9 %) | 88 (100.0 %) | 0 |
+| `Modelica.ComplexBlocks` | 38 | 6 (15.8 %) | 38 (100.0 %) | 38 (100.0 %) | 0 |
+| `Modelica.ComplexMath` | 30 | 21 (70.0 %) | 30 (100.0 %) | 30 (100.0 %) | 0 |
+| `Modelica.Electrical` | 765 | 281 (36.7 %) | 750 (98.0 %) | 765 (100.0 %) | 0 |
+| `Modelica.Fluid` | 336 | 306 (91.1 %) | 326 (97.0 %) | 336 (100.0 %) | 0 |
+| `Modelica.Magnetic` | 213 | 126 (59.2 %) | 210 (98.6 %) | 213 (100.0 %) | 0 |
+| `Modelica.Math` | 187 | 134 (71.7 %) | 184 (98.4 %) | 187 (100.0 %) | 0 |
+| `Modelica.Mechanics` | 336 | 232 (69.0 %) | 312 (92.9 %) | 336 (100.0 %) | 0 |
+| `Modelica.Media` | 1049 | 1023 (97.5 %) | 1037 (98.9 %) | 1040 (99.1 %) | 9 |
+| `Modelica.StateGraph` | 25 | 0 (0.0 %) | 25 (100.0 %) | 25 (100.0 %) | 0 |
+| `Modelica.Thermal` | 64 | 15 (23.4 %) | 57 (89.1 %) | 64 (100.0 %) | 0 |
+| `Modelica.Units` | 58 | 35 (60.3 %) | 58 (100.0 %) | 58 (100.0 %) | 0 |
+| `Modelica.Utilities` | 77 | 60 (77.9 %) | 74 (96.1 %) | 74 (96.1 %) | 3 |
 
-By class kind, coverage is now 96.7 % for functions, 97.6 % for models, 99.7 % for blocks, 96.5 % for records and
-97.0 % for connectors.
+By class kind, coverage is now 99.4 % for functions, 99.9 % for models, 99.7 % for records and 100 % for
+blocks, connectors and operator records. Round 1 had reached 96.7 %, 97.6 %, 96.5 %, 99.7 % and 97.0 %.
 
 ## 3. New test models
 
@@ -67,14 +76,24 @@ OpenModelica 1.27.1 with the MSL of this repository.
 | Magnetic | 18248f5f8 | 7 | 0 | 0 | 116/116 |
 | Mechanics | 9c2e90316 + follow-up | 8 | 1 | 1 | 49/49 + 1/1 |
 | Electrical | ce660cbb4 | 64 | 2 | 0 | 422/422 + 6/6 |
-| **Total** | | **129** | **12** | **3** | |
+| Completion (all sub-libraries) | one commit | 21 | 2 | 0 | 87/87 + 7/7 |
+| **Total** | | **150** | **14** | **3** | |
 
-Cases that Impact cannot run are on OpenModelica 1.27.1 with the MSL of this repository. There are three
+Cases that Impact cannot run are on OpenModelica 1.27.1 with the MSL of this repository. There are four
 reasons:
 
-- All of `Clocked` runs there, because Impact's MSL has no Clocked library.
+- All of `Clocked` runs there, including the completion variant `UniformNoiseXorshift64star_Clock10ms`,
+  because Impact's MSL has no Clocked library.
 - Two cases use classes that are new in MSL 4.2.
 - Four cases use MSL 4.1.0 code that OCT fails on. This branch fixes that code; see section 5.
+- `MultiBody.UniversalConstraint_StiffSpring`: OCT lets the orientation behind `Joints.Constraints.Universal`
+  drift, already in the unmodified MSL example (section 6.1). There is no workaround in the model.
+
+The completion commit holds the 21 tests of section 4: 16 short-class variants of MSL examples and 5 direct
+tests of orphans. Its case lists, baselines and CSV exports are in `ReviewResults/Completion/` and
+`ReviewResults/Completion/OpenModelica/`. The ModCheck HTML reports of its checking runs were generated in
+`ReviewResults/Completion/HtmlReports/` and `ReviewResults/Completion/OpenModelica/HtmlReports/`, but are
+not committed for now.
 
 ModCheck runs one source per case list, so these cases are in a second list per sub-library,
 `ReviewResults/<SubLibrary>/OpenModelica/`, with its own baselines and report.
@@ -86,7 +105,7 @@ already used a class in a way ModelicaTest lacked, the test is a short-class var
 different parameterization, e.g. `model DiodeBridge2Pulse_60Hz = Modelica.Electrical.PowerConverters.Examples....(f=60)`.
 
 **Check tolerance caps.** ModCheck checks each baseline (rtol 1e-6) against a second run at 100 x rtol. In
-15 cases that run deviates for numerical reasons rather than model errors, so the check rtol is capped by
+21 cases that run deviates for numerical reasons rather than model errors, so the check rtol is capped by
 `max_rtol`. Each case list states the reason next to the cap:
 
 - `Blocks.Statistics` and 10 Electrical cases are capped at **1e-5**. These are integrated phases of
@@ -97,25 +116,41 @@ different parameterization, e.g. `model DiodeBridge2Pulse_60Hz = Modelica.Electr
 - `SuperCapDischargeCharge_400A` and `Rectifier_230V` are capped at **1e-6**. Their MSL comparison signals are
   ill-conditioned: one is the small final residual of an energy integral that swings to -5.4e5, the other is
   the mean of a nearly-zero current. They pass only at the reference tolerance.
+- Five completion cases are capped at **1e-5**: `RollingWheel_FastSpin` (path drift of the contact point),
+  `TestCylinder_Mass2` and `HeatTransferGenerationOfFMUs_3Hz` (oscillation and adaptor coupling),
+  `LinearInductor_R10` (coil-current transient), and on OpenModelica `UniversalConstraint_StiffSpring`
+  (angular velocity over 10 s).
+- `GenerationOfFMUs_3Hz` is capped at **1e-6**. `mass3b.v` deviates by 1.4e-3 at rtol 1e-4 and 1e-5 alike,
+  while rtol 1e-6, 1e-8 and 1e-10 agree to 2e-5, so the baseline is converged and only looser tolerances
+  fail.
 
 In `DiodeCenterTapmPulse_5Phase`, the instantaneous `resistor.i` jumps by about 54 A at commutation events.
 ModCheck's funnel comparison reports a deviation there (0.22) even when the check run is identical to the
 baseline point by point. The test therefore compares the mean and RMS values only, as the MSL example does.
-This looks like a ModCheck limitation with event discontinuities.
+The cause is in the funnel library: exactly repeated time points next to other close time points give a
+nonzero error on identical data ([lbl-srg/funnel#107](https://github.com/lbl-srg/funnel/issues/107)). The
+ModCheck branch of section 6.2 works around it.
 
 Only three cases are disabled. Each tests an MSL bug and fails by design until the bug is fixed (section 5).
 Every case that failed because of a tool problem was reworked until it runs, either with a different but
 equivalent test formulation or with an MSL fix (section 6).
 
-## 4. Remaining gaps
+## 4. Gaps after round 1 and how the completion round closed them
 
-The 96 classes still not used by `ModelicaTest`, by reason (42 + 12 + 17 + 25):
+After round 1, 96 classes were not used by `ModelicaTest` (42 + 12 + 17 + 25). Only the 12 of section 4.2
+remain.
 
-### 4.1 Run by the new tests, but invisible to the static analysis (42)
+### 4.1 Run by the round-1 tests, but invisible to the original analysis (42): analysis extended
+
+These classes were already run by the tests; the analysis did not see it. It now follows `derivative` and
+`inverse` annotations, implicit calls of external-object constructors/destructors and of
+`equalityConstraint`, local classes inherited from base classes, and calls through components (for example
+`world.gravityAcceleration`). All 42 are now counted, plus the default `PartialStraightPipe.FlowModel` of
+section 4.3.
 
 - **Derivative functions** that are referenced only from `derivative` or `inverse` annotations. The tests use
   `der()` of the calling expressions (or flow reversal), so a tool that differentiates symbolically calls
-  them. The reference analysis does not follow annotations:
+  them:
   - `Blocks.Tables.Internal.getDer*` (9) and `Blocks.Interfaces.Adaptors.Functions.state*der*` (3)
   - `Fluid.Utilities.regRoot_der`, `Fluid.Dissipation.Utilities.Functions.General.SmoothPower_der` and
     `Stepsmoother_der`
@@ -140,10 +175,24 @@ The 96 classes still not used by `ModelicaTest`, by reason (42 + 12 + 17 + 25):
 - `Utilities.Internal.PartialModelicaServices.Animation.PartialSurface.surfaceCharacteristic`: a placeholder
   that `ModelicaServices` replaces.
 
-### 4.3 Not used anywhere in the MSL (orphans, 17)
+### 4.3 Not used anywhere in the MSL (orphans, 17): five direct tests
 
-These classes are not referenced by any MSL class. They can be tested only by declaring them in a test model,
-which adds little. They are better reviewed for removal or for wiring into the library:
+These classes are not referenced by any MSL class. Five direct tests now declare them, each with a check
+value that must hold exactly:
+
+| Test | Classes | Check |
+|---|---|---|
+| `Electrical.Spice3.Spice3InternalRecordsAndFunctions` | the 9 Spice3 helpers, evaluated from default model cards | `rootSum` = 111, `passThroughError` = 0, 4 MOSFET pins |
+| `Electrical.Machines.DCCompoundPowerBalance` | `PowerBalanceDCCE`, filled from the power balance of a DCEE machine | `lossError` = 0 |
+| `Media.ThermoFluidSpecialRecords` | `BridgmansTables`, `ThermoBaseVars`, `ThermoProperties`, filled from IF97 water | `bridgmanCheck` = 0 |
+| `Fluid.TestUtilities.VectorizedPortsFluidAndHeat` | `FluidPorts_a`, `HeatPorts_b` as junctions | 60 W at 320 K through the heat junction, as computed by hand |
+| `Magnetic.QuasiStatic.FluxTubes.MagneticPortBase` | `QuasiStatic.FluxTubes.Interfaces.MagneticPort` | potential and flux probes |
+
+The default `Fluid.Pipes.BaseClasses.PartialStraightPipe.FlowModel` is counted by the extended analysis.
+The test of the ThermoFluidSpecial records found a bug in them (#4852, section 5). Writing the tests also
+found two tool problems (section 6.1).
+
+The orphans are still worth a review, for removal or for wiring into the library:
 
 - `Electrical.Machines.Interfaces.DCMachines.PowerBalanceDCCE`. Together with `ThermalAmbientDCCE` and
   `ThermalPortDCCE` (now covered by the test `BrushRampedRheostatAndThermalAmbientDCCE`), it belongs to a DC
@@ -163,13 +212,21 @@ Unused before this work and now covered by a test, but still not used by any MSL
 `Electrical.Machines.Losses.InductionMachines.Brush`, `Electrical.Polyphase.Basic.RampedRheostat`,
 `Electrical.Machines.Utilities.ParameterRecords.SM_ElectricalExcitedData`.
 
-### 4.4 Used only by MSL examples (25)
+### 4.4 Used only by MSL examples (25): 16 example variants
 
 Classes such as `MultiBody.Joints.Constraints.*`, `RollingWheel(Set)`, `Translational.Sensors.PositionSensor`
-and `FluidHeatFlow.Components.Cylinder` are reachable from `Modelica.*.Examples` only. The MSL regression tests
-run them already, so no ModelicaTest test was added.
+and `FluidHeatFlow.Components.Cylinder` were reachable from `Modelica.*.Examples` only. They are now covered
+by short-class variants of those examples with a different parameterization, as in round 1:
 
-### 4.5 Partial classes
+| Sub-library | Variants |
+|---|---|
+| MultiBody | `Revolute/Spherical/Universal/PrismaticConstraint_StiffSpring` (spring c = 40 N/m), `RollingWheel_FastSpin`, `RollingWheelSetDriving_HigherTorque` |
+| Translational | `Sensors_20N`, `GenerationOfFMUs_3Hz` |
+| Thermal | `PumpAndValve_20W`, `TwoTanks_Level07`, `TestCylinder_Mass2`, `HeatTransferGenerationOfFMUs_3Hz` |
+| Magnetic | `SMPM_OpenCircuit_HalfSpeed`, `LinearInductor_R10`, `SolenoidComparisonQuasiStatic_10V` |
+| Clocked | `UniformNoiseXorshift64star_Clock10ms` |
+
+### 4.5 Partial classes (not part of the completion round)
 
 26 of 344 partial classes are not covered. 25 have no subclass anywhere in the repository; they are interfaces
 offered to users (e.g. `Blocks.Interfaces.MVcontrol`, `MultiBody.Interfaces.PartialForce`,
@@ -192,6 +249,7 @@ makes the code work in the tool that failed. All are also cherry-picked onto thi
 | [#4849](https://github.com/modelica/ModelicaStandardLibrary/pull/4849) | `Clocked.IntegerSignals/BooleanSignals...AssignClockToSquareWaveHold` | the "dummy condition" with identical branches can be simplified away; OpenModelica then uses the default 1 s clock. Now the clocked when-equation of the Real version |
 | [#4850](https://github.com/modelica/ModelicaStandardLibrary/pull/4850) | `ComplexBlocks.Routing.Extractor` | record assignment in a when-equation; OpenModelica cannot generate code. Now field-wise assignment |
 | [#4851](https://github.com/modelica/ModelicaStandardLibrary/pull/4851) | `Math.Nonlinear.quadratureNewtonCotes` (new in 4.2) | function argument called in an array constructor; OpenModelica generates C code that does not compile, so the MSL example `MovingIntegral` does not build. Now a for-loop |
+| [#4852](https://github.com/modelica/ModelicaStandardLibrary/pull/4852) | `Media.Common.ThermoFluidSpecial.ThermoBaseVars`, `ThermoProperties` | 24 array declarations with scalar `min`/`max`/`nominal` lack `each`; OpenModelica rejects both records. `dZ`/`rZ` also had `nominal=0`, which OCT rejects in a copy of the record; now 1 |
 
 ### 5.2 Open
 
@@ -214,6 +272,9 @@ makes the code work in the tool that failed. All are also cherry-picked onto thi
 | OCT (Impact) | rejects if-expressions with branches of different sizes (correct per the specification) | MSL fix #4848; test on OpenModelica until Impact ships it |
 | OCT (Impact) | compilation never finishes for two QS reference roots on one ground (a modeling error it should report) | test fixed: one ground per QS system |
 | OCT (Impact) | does not accept a bare function name as a functional argument (`f(integrand, ...)`); `function integrand()` works | tests use the `function name()` form |
+| OCT (Impact) | wrong values without a message: a record constructor call negates a field when another field defaults to its negation (`Real a=1; Real b=-a;` gives `a = -1`, even for `R(a=5)`). Hits `Media.Common.BridgmansTables` (`dTp=1`, `dpT=-dTp`) | test declares the record with a modifier instead of the constructor |
+| OCT (Impact) | wrong values without a message: the orientation of the body behind `Joints.Constraints.Universal` drifts and depends on the tolerance, already in the unmodified MSL example `Constraints.UniversalConstraint` | test on OpenModelica |
+| OpenModelica 1.27.1 | accepts `==` on Real operands in an equation; the specification allows it only in functions, and OCT rejects it correctly | test fixed: compares the difference with 0 |
 | OpenModelica 1.27.1 | no code generation for a record assignment in a when-equation | MSL fix #4850 |
 | OpenModelica 1.27.1 | broken C code for a function argument called in an array constructor | MSL fix #4851 |
 | OpenModelica 1.27.1 | default clock after simplifying a dummy if-expression | MSL fix #4849 |
@@ -228,18 +289,24 @@ record.
 
 Minimal reproducers of the OCT failures are on the fork `hubertus65/ModelicaStandardLibrary`, branch
 `impact-failures`, package `ImpactFailures`, one pull request per failure: #1 Complex sum, #2 Complex
-if-expression, #3 if-expression sizes, #4 QS shared-ground hang.
+if-expression, #3 if-expression sizes, #4 QS shared-ground hang, #5 negated record default, #6 universal
+constraint orientation drift.
 
 ### 6.2 Test infrastructure
 
-| Component | Observation |
-|---|---|
-| Impact server | A compilation that never finishes keeps its worker busy after the experiment is cancelled or deleted. The following cases stay PENDING and run into the 300 s timeout, until the stuck experiment is deleted. |
-| Impact server | Under load ("container memory unavailable"), an experiment can come back without cases. ModCheck then crashes with `IndexError` in `backends/impact.py` (`exp.get_cases()[0]`) instead of retrying. |
-| ModCheck | A per-case `source:` is documented, but each run uses one source; hence the separate OpenModelica case lists. |
-| ModCheck | The funnel comparison reports a deviation at an instantaneous jump (duplicate time points), even for identical data. |
-| ModCheck | If the workspace lacks a case's model, the run "cleans up" by removing that case from the case list. With a workspace holding another sub-library, that wiped three reports; they were restored and regenerated. |
-| Dymola 2026x (local) | The license is size-limited: models translate but stop at "too complex for the current license", so Dymola served as a translation check only. |
+| Component | Observation | Fixed in ModCheck branch |
+|---|---|---|
+| Impact server | A compilation that never finishes keeps its worker busy after the experiment is cancelled or deleted. The following cases stay PENDING and run into the 300 s timeout, until the stuck experiment is deleted. | a timed-out experiment that is still RUNNING 30 s after the cancel is deleted |
+| Impact server | Under load ("container memory unavailable"), an experiment can come back without cases. ModCheck then crashes with `IndexError` in `backends/impact.py` (`exp.get_cases()[0]`) instead of retrying. | retried once, then a clear error |
+| ModCheck | A per-case `source:` is documented, but each run uses one source; hence the separate OpenModelica case lists. | each case runs on its source; one session per source |
+| ModCheck | The funnel comparison reports a deviation at an instantaneous jump (duplicate time points), even for identical data. Cause in the funnel library: [lbl-srg/funnel#107](https://github.com/lbl-srg/funnel/issues/107). | samples that repeat both time and value are dropped before the comparison |
+| ModCheck | If the workspace lacks a case's model, the run "cleans up" by removing that case from the case list. With a workspace holding another sub-library, that wiped three reports; they were restored and regenerated. | a run in which every model is missing stops before pruning; the cleanup handles indented case lists |
+| Dymola 2026x (local) | The license is size-limited: models translate but stop at "too complex for the current license", so Dymola served as a translation check only. | – |
+
+The ModCheck fixes are on branch `fix-coverage-run-findings` of
+[MBILLC/ModCheck](https://github.com/MBILLC/ModCheck), with an acceptance script
+(`run_findings_acceptance.py`, 21 checks). The round-1 runs predate the branch; the completion runs used it,
+with the same separate OpenModelica case lists.
 
 ### A modeling pitfall found while debugging
 
@@ -253,10 +320,12 @@ compiles and simulates in seconds on Impact. Independent quasi-static systems ne
 
 ## 7. Next steps
 
-1. Review and merge PRs #4845-#4851. Fix the open MSL issues of 5.2 and enable their tests.
+1. Review and merge PRs #4845-#4852. Fix the open MSL issues of 5.2 and enable their tests.
 2. Decide on the orphans in 4.3: remove them, wire them into the library, or keep them as documented public API.
-3. Once Impact ships an MSL with #4846-#4848, move the OpenModelica cases back to Impact. Run the whole set
-   with a second tool (a Dymola license without the size limit, or OpenModelica) before moving the baselines
-   from `ReviewResults` into the reference-results repository.
-4. Optionally, teach the coverage analysis to follow `derivative`/`inverse` annotations and external-object
-   constructors, which would remove the 42 false positives of 4.1.
+3. Once Impact ships an MSL with #4846-#4848 and OCT fixes the failures of fork PRs #5-#6, move the
+   OpenModelica cases back to Impact. Run the whole set with a second tool (a Dymola license without the size
+   limit, or OpenModelica) before moving the baselines from `ReviewResults` into the reference-results
+   repository.
+4. Merge the ModCheck branch `fix-coverage-run-findings`; then the separate OpenModelica case lists can be
+   folded back into one list per sub-library.
+5. Cover the 26 partial classes of 4.5 with test models that extend them, if those interfaces are meant to stay.

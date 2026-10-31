@@ -1,0 +1,1701 @@
+{
+ "run": {
+  "utc": "2026-10-31T22:20:24+00:00",
+  "rtol_factor": 100.0,
+  "descriptor": "impact workspace 'msl-coverage'",
+  "reference_descriptor": "impact workspace 'msl-coverage'",
+  "cases": 19,
+  "cases_this_run": 19,
+  "failed_cases": 0,
+  "bytes": 711698
+ },
+ "cases": [
+  {
+   "name": "DCCompoundPowerBalance",
+   "model": "ModelicaTest.Electrical.Machines.DCCompoundPowerBalance",
+   "variables": [
+    "lossError",
+    "pbCC.lossPowerTotal",
+    "pbCC.powerShuntExcitation",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.19048042898066342,
+    "steps": 2027,
+    "rhs_evaluations": 2065,
+    "jacobian_evaluations": 36,
+    "time_events": 3,
+    "error_test_failures": 3,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {
+    "pbCC.lossPowerTotal": "W",
+    "pbCC.powerShuntExcitation": "W"
+   },
+   "display_units": {},
+   "format": "npz",
+   "bytes": 21118,
+   "record": {
+    "schema": 1,
+    "record_id": "e65e5b3f5e273140e91492036e185ae2aaf4ae2911bcc6889c729060691a2fa1",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T22:20:00",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "7125d8c2f905a8e3ff9e097b35376218",
+     "impact_fmu_id": "_catest_electrical_machines_dccompoundpowerbalance_20261031_221957_b30e1d7",
+     "model_description_sha256": "9f9d7794c7873f3cdf156f8ad25c5fab0ef8d673952d434f049f60584da2d708"
+    },
+    "experiment": {
+     "case_entry_sha256": "31b32cc9f44438664ca0ca40032b33fca78516d8cecb0bddd62a887971bb2bca",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "_catest_electrical_machines_dccompoundpowerbalance_20261031_221957_d8d26c8",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "49fd700b67af0e3e7f52d528403e39501e22d1bdc9bd34e61bed2bd53be5c84b"
+    },
+    "model": {
+     "class": "ModelicaTest.Electrical.Machines.DCCompoundPowerBalance",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 21118,
+     "file": "DCCompoundPowerBalance.npz",
+     "format": "npz",
+     "sha256": "235b46586fcd1a81031e15cac099490070c7561497d47fbe608ca28db3edde8d"
+    },
+    "run": {
+     "utc": "2026-10-31T22:20:03+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "GenerationOfFMUs_3Hz",
+   "model": "ModelicaTest.Translational.GenerationOfFMUs_3Hz",
+   "variables": [
+    "directMass.mass.s",
+    "directMass.mass.v",
+    "mass2a.s",
+    "mass2b.v",
+    "mass3a.s",
+    "mass3b.v",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 1e-06,
+    "rtol": 1e-06,
+    "cpu_time": 0.09326712891925126,
+    "steps": 1008,
+    "rhs_evaluations": 1018,
+    "jacobian_evaluations": 17,
+    "error_test_failures": 1,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {
+    "directMass.mass.s": "m",
+    "directMass.mass.v": "m/s",
+    "mass2a.s": "m",
+    "mass2b.v": "m/s",
+    "mass3a.s": "m",
+    "mass3b.v": "m/s"
+   },
+   "display_units": {},
+   "format": "npz",
+   "bytes": 48876,
+   "record": {
+    "schema": 1,
+    "record_id": "87f6533e7af6a696ea51eebdb970b306b9ddfc0f054fa4bbec25cc32cd8a006f",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T22:18:10",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "abcbaa954c17d1fd0253da6b240c6edb",
+     "impact_fmu_id": "modelicatest_translational_generationoffmus_3hz_20261031_221807_8655524",
+     "model_description_sha256": "6254c871595238b15c11d365c750af02f771bee938c150a8e5cf6905192e6481"
+    },
+    "experiment": {
+     "case_entry_sha256": "58d0110b7b44b7d652eae9830fddf5d4a2c00ecb6016be5707569aae8e2bb53e",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "modelicatest_translational_generationoffmus_3hz_20261031_221807_86d0f07",
+     "released": true,
+     "rtol_factor": 1.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "a8a4cec02fe80df224c97cf6895976a8f02b11de8493f4ed1a37e5a3f42ee693"
+    },
+    "model": {
+     "class": "ModelicaTest.Translational.GenerationOfFMUs_3Hz",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 48876,
+     "file": "GenerationOfFMUs_3Hz.npz",
+     "format": "npz",
+     "sha256": "003045e6a2f6cb9614c62b2a9e3d9ea2c885134ec5e0a98abd7887a9a4619de6"
+    },
+    "run": {
+     "utc": "2026-10-31T22:18:13+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "HeatTransferGenerationOfFMUs_3Hz",
+   "model": "ModelicaTest.Thermal.HeatTransferGenerationOfFMUs_3Hz",
+   "variables": [
+    "capacitor3a.T",
+    "capacitor3b.T",
+    "directCapacity.heatCapacitor.T",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 0.003,
+    "rtol": 1e-05,
+    "cpu_time": 0.09066176693886518,
+    "steps": 1001,
+    "rhs_evaluations": 1006,
+    "jacobian_evaluations": 17,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {
+    "directCapacity.heatCapacitor.T": "K",
+    "capacitor3a.T": "K",
+    "capacitor3b.T": "K"
+   },
+   "display_units": {
+    "directCapacity.heatCapacitor.T": "degC",
+    "capacitor3a.T": "degC",
+    "capacitor3b.T": "degC"
+   },
+   "format": "npz",
+   "bytes": 25134,
+   "record": {
+    "schema": 1,
+    "record_id": "15f3fa0bbffa13a9d46dc9b9632c94776c70fdb9707dccca35b49bd1a21fb05e",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T22:18:36",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "eb9fccd4b29bcc5da5056df1409fde0a",
+     "impact_fmu_id": "_licatest_thermal_heattransfergenerationoffmus_3hz_20261031_221834_6be8323",
+     "model_description_sha256": "7c122d751db811b6033cc9f774ada7e484dff2cab66f783bdf4e8001a5078236"
+    },
+    "experiment": {
+     "case_entry_sha256": "9ef069967b2c2fb279176488390ff4367773a52eb219d343e95d3ad271e67f90",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "_licatest_thermal_heattransfergenerationoffmus_3hz_20261031_221834_7b64892",
+     "released": true,
+     "rtol_factor": 10.000000000000002,
+     "workspace": "msl-coverage",
+     "definition_sha256": "63adb92cd35301988b80e128f8a56b58452c74669037f47eda5756c112a7883b"
+    },
+    "model": {
+     "class": "ModelicaTest.Thermal.HeatTransferGenerationOfFMUs_3Hz",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 25134,
+     "file": "HeatTransferGenerationOfFMUs_3Hz.npz",
+     "format": "npz",
+     "sha256": "e8aa0efd238a19a85bb5f768a40a5dc8407ef14049bd2db49f8004a9f0da6c11"
+    },
+    "run": {
+     "utc": "2026-10-31T22:18:39+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "LinearInductor_R10",
+   "model": "ModelicaTest.Magnetic.QuasiStatic.FluxTubes.LinearInductor_R10",
+   "variables": [
+    "coil.Phi",
+    "coil.i",
+    "r_mLeak.port_p.Phi",
+    "rootMeanSquare.mean.x",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 1e-05,
+    "rtol": 1e-05,
+    "cpu_time": 0.057930323062464595,
+    "steps": 599,
+    "rhs_evaluations": 695,
+    "jacobian_evaluations": 20,
+    "time_events": 10,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {
+    "coil.i": "A",
+    "coil.Phi": "Wb",
+    "r_mLeak.port_p.Phi": "Wb"
+   },
+   "display_units": {},
+   "format": "npz",
+   "bytes": 18992,
+   "record": {
+    "schema": 1,
+    "record_id": "ca28f848deddf48835ab332fedf5b5f717af0e03df2e22968f8f34d453897f0f",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T22:19:38",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "a4acc0a03948e1176534ad336fdd3d31",
+     "impact_fmu_id": "_magnetic_quasistatic_fluxtubes_linearinductor_r10_20261031_221935_262596a",
+     "model_description_sha256": "b048d583d5f703b5a8698e8c008dbb654bd38ebbb61bcd5b6534fb26c7253857"
+    },
+    "experiment": {
+     "case_entry_sha256": "06af171d07091dbd811d89b7a8acd964814d2d41441d94b417ea18c048c6347b",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "_magnetic_quasistatic_fluxtubes_linearinductor_r10_20261031_221935_493d70e",
+     "released": true,
+     "rtol_factor": 10.000000000000002,
+     "workspace": "msl-coverage",
+     "definition_sha256": "84f21857a35dc42815ae4083d714030e03ddba36112134be849c208d6ac365d9"
+    },
+    "model": {
+     "class": "ModelicaTest.Magnetic.QuasiStatic.FluxTubes.LinearInductor_R10",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 18992,
+     "file": "LinearInductor_R10.npz",
+     "format": "npz",
+     "sha256": "f44f215737ec5f1407988ce9014cf0228eacd659d1a939f920bde1a326d91530"
+    },
+    "run": {
+     "utc": "2026-10-31T22:19:41+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "MagneticPortBase",
+   "model": "ModelicaTest.Magnetic.QuasiStatic.FluxTubes.MagneticPortBase",
+   "variables": [
+    "a.port.V_m.im",
+    "a.port.V_m.re",
+    "b.port.Phi.im",
+    "b.port.Phi.re",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.046048208023421466,
+    "steps": 501,
+    "rhs_evaluations": 505,
+    "jacobian_evaluations": 9,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {
+    "a.port.V_m.im": "A",
+    "b.port.Phi.re": "Wb",
+    "a.port.V_m.re": "A",
+    "b.port.Phi.im": "Wb"
+   },
+   "display_units": {},
+   "format": "npz",
+   "bytes": 6635,
+   "record": {
+    "schema": 1,
+    "record_id": "9de1f40cb485ce875bba0b578b4268c1ee2e9672c7cc83b794242ee9d701841b",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T22:20:21",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "49f5c2cdff5ce858588c8c5338ac17e1",
+     "impact_fmu_id": "_t_magnetic_quasistatic_fluxtubes_magneticportbase_20261031_222019_ec09c8b",
+     "model_description_sha256": "335bd32d3e817539c930ba3292da77fa87c92379d6360a7208143d6c3a4bb25a"
+    },
+    "experiment": {
+     "case_entry_sha256": "9cf790a35022e912eff269f6d68df816f97feaa5c95ee6112e50d20ee1e04f6e",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "_t_magnetic_quasistatic_fluxtubes_magneticportbase_20261031_222019_304342d",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "1a56c3968e8c4ba71a0a57701d412ce53908bd48d119687d0279376555e1aace"
+    },
+    "model": {
+     "class": "ModelicaTest.Magnetic.QuasiStatic.FluxTubes.MagneticPortBase",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 6635,
+     "file": "MagneticPortBase.npz",
+     "format": "npz",
+     "sha256": "0fd95408ec9348fef6b6dd139b433461d258c47c8f94628a082f51bcdcb7e1f5"
+    },
+    "run": {
+     "utc": "2026-10-31T22:20:24+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "PrismaticConstraint_StiffSpring",
+   "model": "ModelicaTest.MultiBody.PrismaticConstraint_StiffSpring",
+   "variables": [
+    "bodyOfConstraint.r_0[1]",
+    "bodyOfConstraint.r_0[2]",
+    "bodyOfConstraint.r_0[3]",
+    "bodyOfConstraint.v_0[1]",
+    "bodyOfConstraint.v_0[2]",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.33790594001766294,
+    "steps": 2002,
+    "rhs_evaluations": 2007,
+    "jacobian_evaluations": 34,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {
+    "bodyOfConstraint.v_0[2]": "m/s",
+    "bodyOfConstraint.r_0[1]": "m",
+    "bodyOfConstraint.r_0[2]": "m",
+    "bodyOfConstraint.r_0[3]": "m",
+    "bodyOfConstraint.v_0[1]": "m/s"
+   },
+   "display_units": {},
+   "format": "npz",
+   "bytes": 81512,
+   "record": {
+    "schema": 1,
+    "record_id": "82da69f33c5f14eeac6741c593ca706a4c0ab9185b90398b373128cb04259d7f",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T22:17:34",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "f1a533b8dba36d9688c13a414d9a78a8",
+     "impact_fmu_id": "_icatest_multibody_prismaticconstraint_stiffspring_20261031_221728_a5e3bc7",
+     "model_description_sha256": "d832c2d66195e0aa3a92938d6e88609b7109102758669bb62dac43e75837ae8d"
+    },
+    "experiment": {
+     "case_entry_sha256": "b68d386984ba2b02aa672f52950d0d9db685370720860cbfc7969c643f0962fa",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "_icatest_multibody_prismaticconstraint_stiffspring_20261031_221728_d2f2dac",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "1b6288bac50a582dbc3bd0940050e7c8a5f4cd82d48791427cb135a354c16f71"
+    },
+    "model": {
+     "class": "ModelicaTest.MultiBody.PrismaticConstraint_StiffSpring",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 81512,
+     "file": "PrismaticConstraint_StiffSpring.npz",
+     "format": "npz",
+     "sha256": "ff35ef4a2bbed1fe165b0d742a633ab64a4452344b588034056d873896a68876"
+    },
+    "run": {
+     "utc": "2026-10-31T22:17:39+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "PumpAndValve_20W",
+   "model": "ModelicaTest.Thermal.PumpAndValve_20W",
+   "variables": [
+    "heatCapacitor.T",
+    "pipe.T",
+    "speed.phi",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.213361655944027,
+    "steps": 2002,
+    "rhs_evaluations": 2022,
+    "jacobian_evaluations": 35,
+    "time_events": 4,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {
+    "pipe.T": "K",
+    "heatCapacitor.T": "K",
+    "speed.phi": "rad"
+   },
+   "display_units": {
+    "pipe.T": "degC",
+    "heatCapacitor.T": "degC",
+    "speed.phi": "deg"
+   },
+   "format": "npz",
+   "bytes": 39857,
+   "record": {
+    "schema": 1,
+    "record_id": "98733d6ca9c6bb02e1f6ab366662d4eccf46b522a201da2139a75e21fb212657",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T22:18:16",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "d349e2faaf6358ef0b361772872bcbc9",
+     "impact_fmu_id": "modelicatest_thermal_pumpandvalve_20w_20261031_221813_288cf7d",
+     "model_description_sha256": "055c3c53b1ad26a0fccd3e773fd621cb021a279f56b37c245e55e3501039b704"
+    },
+    "experiment": {
+     "case_entry_sha256": "b23f601c85cc7587f3e86d980109f3eb36ecbaaae510dffa2cdd373ff72ce111",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "modelicatest_thermal_pumpandvalve_20w_20261031_221813_4ef6f46",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "e600e5b866246d9de8ed5f087c58f58d72b39951b87bdd9e911c7e2ba20271ad"
+    },
+    "model": {
+     "class": "ModelicaTest.Thermal.PumpAndValve_20W",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 39857,
+     "file": "PumpAndValve_20W.npz",
+     "format": "npz",
+     "sha256": "dc1dd03c5bb4f736538b983edd90e25bfb005a6274a9731483e8ed18f6d928e9"
+    },
+    "run": {
+     "utc": "2026-10-31T22:18:20+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "RevoluteConstraint_StiffSpring",
+   "model": "ModelicaTest.MultiBody.RevoluteConstraint_StiffSpring",
+   "variables": [
+    "bodyOfConstraint.body.w_a[1]",
+    "bodyOfConstraint.body.w_a[2]",
+    "bodyOfConstraint.body.w_a[3]",
+    "joint.phi",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.31492033798713237,
+    "steps": 2002,
+    "rhs_evaluations": 2007,
+    "jacobian_evaluations": 34,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {
+    "joint.phi": "rad",
+    "bodyOfConstraint.body.w_a[1]": "rad/s",
+    "bodyOfConstraint.body.w_a[2]": "rad/s",
+    "bodyOfConstraint.body.w_a[3]": "rad/s"
+   },
+   "display_units": {
+    "joint.phi": "deg"
+   },
+   "format": "npz",
+   "bytes": 64787,
+   "record": {
+    "schema": 1,
+    "record_id": "5c83301685365b7f3654e7d5c51b608254d04c8810c2639cbbdf9364c1440b90",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T22:17:10",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "ec6b59e841b60fbf70850a8603d1a053",
+     "impact_fmu_id": "_licatest_multibody_revoluteconstraint_stiffspring_20261031_221705_5ed1ff9",
+     "model_description_sha256": "e4224962dfafee5c00e5744205d0d1593406a49b724da864d755bee57213f0ca"
+    },
+    "experiment": {
+     "case_entry_sha256": "ec11503a59cca420829860b175e3c16d1c66c5abc886734e414926093917e273",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "_licatest_multibody_revoluteconstraint_stiffspring_20261031_221704_7a161d2",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "bb348dfaaa956500b5442a97e1c521e3da901f8d19915ae78b8b2a8c9e02e671"
+    },
+    "model": {
+     "class": "ModelicaTest.MultiBody.RevoluteConstraint_StiffSpring",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 64787,
+     "file": "RevoluteConstraint_StiffSpring.npz",
+     "format": "npz",
+     "sha256": "a5ca1f253de4c44ad69751aa798db7a761763562c6f0d6be04f525940fade30b"
+    },
+    "run": {
+     "utc": "2026-10-31T22:17:15+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "RollingWheelSetDriving_HigherTorque",
+   "model": "ModelicaTest.MultiBody.RollingWheelSetDriving_HigherTorque",
+   "variables": [
+    "time",
+    "wheelSet.phi",
+    "wheelSet.theta1",
+    "wheelSet.theta2",
+    "wheelSet.x",
+    "wheelSet.y"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.17453534295782447,
+    "steps": 1505,
+    "rhs_evaluations": 1510,
+    "jacobian_evaluations": 26,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {
+    "wheelSet.theta1": "rad",
+    "wheelSet.theta2": "rad",
+    "wheelSet.phi": "rad",
+    "wheelSet.x": "m",
+    "wheelSet.y": "m"
+   },
+   "display_units": {
+    "wheelSet.theta1": "deg",
+    "wheelSet.theta2": "deg",
+    "wheelSet.phi": "deg"
+   },
+   "format": "npz",
+   "bytes": 61768,
+   "record": {
+    "schema": 1,
+    "record_id": "30e9edfa3042cd984116a2380701b59451acb7030102186de7e6c01bba254ea1",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T22:17:56",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "6122b3200a89955b86bb7ad65fc99094",
+     "impact_fmu_id": "_est_multibody_rollingwheelsetdriving_highertorque_20261031_221749_2bccb79",
+     "model_description_sha256": "63373d4a0fffa335747796cb48031fd3c6cc2b6f964ed49c57cef3a8324e594e"
+    },
+    "experiment": {
+     "case_entry_sha256": "08e216f72e3103427b7bf894f669cb9be4d46b31dfa81e80e1396087232e7fb0",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "_est_multibody_rollingwheelsetdriving_highertorque_20261031_221748_e532e40",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "699d94e083f6975c39f8e0726f81a8398008efadb12ac349dd7a9fc81fcb196c"
+    },
+    "model": {
+     "class": "ModelicaTest.MultiBody.RollingWheelSetDriving_HigherTorque",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 61768,
+     "file": "RollingWheelSetDriving_HigherTorque.npz",
+     "format": "npz",
+     "sha256": "8dbbb83a078a55d572ffac3ae20dee3514c76aea83a94f952038c47158984927"
+    },
+    "run": {
+     "utc": "2026-10-31T22:18:00+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "RollingWheel_FastSpin",
+   "model": "ModelicaTest.MultiBody.RollingWheel_FastSpin",
+   "variables": [
+    "time",
+    "wheel1.angles[1]",
+    "wheel1.angles[3]",
+    "wheel1.der_angles[2]",
+    "wheel1.x",
+    "wheel1.y"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 1e-05,
+    "rtol": 1e-05,
+    "cpu_time": 0.25514165102504194,
+    "steps": 2124,
+    "rhs_evaluations": 2211,
+    "jacobian_evaluations": 36,
+    "error_test_failures": 13,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {
+    "wheel1.x": "m",
+    "wheel1.y": "m",
+    "wheel1.angles[1]": "rad",
+    "wheel1.angles[3]": "rad",
+    "wheel1.der_angles[2]": "rad/s"
+   },
+   "display_units": {
+    "wheel1.angles[1]": "deg",
+    "wheel1.angles[3]": "deg"
+   },
+   "format": "npz",
+   "bytes": 81957,
+   "record": {
+    "schema": 1,
+    "record_id": "4fed2cc8f495f4bdc6421dcd2937693b429668c2472a3e0186780e45408f1a03",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T22:17:44",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "3a172f1ecc9d14a42b8e1de0b097dff2",
+     "impact_fmu_id": "modelicatest_multibody_rollingwheel_fastspin_20261031_221740_4b511f8",
+     "model_description_sha256": "4604ee6349efffb037ecca9c7adcb62fbcbbf64411673b7aa4981872056fbc0d"
+    },
+    "experiment": {
+     "case_entry_sha256": "f98fd4e05e4d55d7de025d5ab0a2dbfd95a10a7abbe9a6f61aac4ecdbbda9d30",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "modelicatest_multibody_rollingwheel_fastspin_20261031_221740_eb26caf",
+     "released": true,
+     "rtol_factor": 10.000000000000002,
+     "workspace": "msl-coverage",
+     "definition_sha256": "b579a9c52cb49456a1a5164b290ea6ddc97f72cfa90105b8a1719f24229a8d15"
+    },
+    "model": {
+     "class": "ModelicaTest.MultiBody.RollingWheel_FastSpin",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 81957,
+     "file": "RollingWheel_FastSpin.npz",
+     "format": "npz",
+     "sha256": "94cfbdfb48103a36f07b85d791513d7e1e5227a5f81302b0dd95d6e5b351a29c"
+    },
+    "run": {
+     "utc": "2026-10-31T22:17:48+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "SMPM_OpenCircuit_HalfSpeed",
+   "model": "ModelicaTest.Magnetic.QuasiStatic.FundamentalWave.SMPM_OpenCircuit_HalfSpeed",
+   "variables": [
+    "Vqs",
+    "Vtr",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.12851878791116178,
+    "steps": 1002,
+    "rhs_evaluations": 1006,
+    "jacobian_evaluations": 17,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {
+    "Vtr": "V",
+    "Vqs": "V"
+   },
+   "display_units": {},
+   "format": "npz",
+   "bytes": 9167,
+   "record": {
+    "schema": 1,
+    "record_id": "7018b80309c158407de3cafa97e335b2a559611d4560831433c6801d163b0056",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T22:18:46",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "adf4faca3ce4a4dddefb1c9476b28bbe",
+     "impact_fmu_id": "_static_fundamentalwave_smpm_opencircuit_halfspeed_20261031_221840_a875bad",
+     "model_description_sha256": "39a901a301ad9188d1a3aff89e594b6d41e6e5d5320f91deac0bcf66a5c43c93"
+    },
+    "experiment": {
+     "case_entry_sha256": "3fff2d61eb1db95b97d17f4f384babdadd3e4d607e8b0977b2ac2ce5f53f214a",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "_static_fundamentalwave_smpm_opencircuit_halfspeed_20261031_221840_a11872e",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "557e6e5329a2fe0f77fcbed349832f253e4d927f370c7ffe324c0e1260bdb739"
+    },
+    "model": {
+     "class": "ModelicaTest.Magnetic.QuasiStatic.FundamentalWave.SMPM_OpenCircuit_HalfSpeed",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 9167,
+     "file": "SMPM_OpenCircuit_HalfSpeed.npz",
+     "format": "npz",
+     "sha256": "33d79c9a9ab325c51d33037f385f3ed29366d206ddd3d02daf2efd343c4b4722"
+    },
+    "run": {
+     "utc": "2026-10-31T22:18:49+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "Sensors_20N",
+   "model": "ModelicaTest.Translational.Sensors_20N",
+   "variables": [
+    "mass.s",
+    "mass.v",
+    "positionSensor1.s",
+    "speedSensor1.v",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.08691919001284987,
+    "steps": 1002,
+    "rhs_evaluations": 1008,
+    "jacobian_evaluations": 17,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {
+    "mass.s": "m",
+    "mass.v": "m/s",
+    "speedSensor1.v": "m/s",
+    "positionSensor1.s": "m"
+   },
+   "display_units": {},
+   "format": "npz",
+   "bytes": 27219,
+   "record": {
+    "schema": 1,
+    "record_id": "5b3bb08309b880cc5b449786432b4d9039b5f82c43012563172a96c321fd1ff3",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T22:18:03",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "f4870c728ece161b6c241ceecf524753",
+     "impact_fmu_id": "modelicatest_translational_sensors_20n_20261031_221801_a17071f",
+     "model_description_sha256": "75c635ce917ba61b513b9c26151ba38efd89b6af3ea57c2453c732add52690ce"
+    },
+    "experiment": {
+     "case_entry_sha256": "27180701f59d992a0b396ed283e0eb44d7e36e5363e495d61d305c83bf713f50",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "modelicatest_translational_sensors_20n_20261031_221801_e04564d",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "1a13fbd42a5cbb4e866de73bcc79e514e91f80289dd345592a2ecbd23b850571"
+    },
+    "model": {
+     "class": "ModelicaTest.Translational.Sensors_20N",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 27219,
+     "file": "Sensors_20N.npz",
+     "format": "npz",
+     "sha256": "cd47ab453f0fdd808f8ee0b3029e95b852beaa9975fa530cba5753a82a83bd4a"
+    },
+    "run": {
+     "utc": "2026-10-31T22:18:06+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "SolenoidComparisonQuasiStatic_10V",
+   "model": "ModelicaTest.Magnetic.FluxTubes.SolenoidComparisonQuasiStatic_10V",
+   "variables": [
+    "advancedFeed_x.v",
+    "advancedSolenoid.L_statTot",
+    "advancedSolenoid.g_mFeArm.Phi",
+    "comparisonWithFEA.y[1]",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.3847054550424218,
+    "steps": 2076,
+    "rhs_evaluations": 2106,
+    "jacobian_evaluations": 37,
+    "time_events": 1,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "state_events": 2,
+    "kind": "dynamic"
+   },
+   "units": {
+    "advancedSolenoid.g_mFeArm.Phi": "Wb",
+    "advancedSolenoid.L_statTot": "H",
+    "advancedFeed_x.v": "m/s"
+   },
+   "display_units": {},
+   "format": "npz",
+   "bytes": 55763,
+   "record": {
+    "schema": 1,
+    "record_id": "330eff51aa3f1338e08265b00ac85f07acef5517afb9bca1a2ac4af59163deb6",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T22:19:46",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "3144a55fd27d863a1ffc352ea852b677",
+     "impact_fmu_id": "_netic_fluxtubes_solenoidcomparisonquasistatic_10v_20261031_221942_8c99697",
+     "model_description_sha256": "906a5d0418c9d96dce2c64f18f0bde6411d181e8d447bb4184b07ff8698b98b5"
+    },
+    "experiment": {
+     "case_entry_sha256": "c11646f049618b25a25f1bc19be2dade35d357059e409bc43a3e9d6281bf520f",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "_netic_fluxtubes_solenoidcomparisonquasistatic_10v_20261031_221942_dc77e4c",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "0e11413070014c618b193f0873766cb47aa20e7fdd4ec1ec0180f9af94874bc8"
+    },
+    "model": {
+     "class": "ModelicaTest.Magnetic.FluxTubes.SolenoidComparisonQuasiStatic_10V",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 55763,
+     "file": "SolenoidComparisonQuasiStatic_10V.npz",
+     "format": "npz",
+     "sha256": "8ef102c72f606e1abf16ac5acba3243ee22d7b9ea473f65366e49c95f4ecbefc"
+    },
+    "run": {
+     "utc": "2026-10-31T22:19:50+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "SphericalConstraint_StiffSpring",
+   "model": "ModelicaTest.MultiBody.SphericalConstraint_StiffSpring",
+   "variables": [
+    "bodyOfConstraint.body.w_a[1]",
+    "bodyOfConstraint.body.w_a[2]",
+    "bodyOfConstraint.body.w_a[3]",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.2500136769376695,
+    "steps": 2002,
+    "rhs_evaluations": 2007,
+    "jacobian_evaluations": 34,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {
+    "bodyOfConstraint.body.w_a[1]": "rad/s",
+    "bodyOfConstraint.body.w_a[2]": "rad/s",
+    "bodyOfConstraint.body.w_a[3]": "rad/s"
+   },
+   "display_units": {},
+   "format": "npz",
+   "bytes": 36197,
+   "record": {
+    "schema": 1,
+    "record_id": "4b5f60e5f7bf2f0e3c7054585ad7237b4a9b9358469c05214bb0a85f65a2085a",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T22:17:24",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "47ccef1d763a9d9d764a6a6deb41f98f",
+     "impact_fmu_id": "_icatest_multibody_sphericalconstraint_stiffspring_20261031_221718_39ed9d0",
+     "model_description_sha256": "a35903250031f22f7104a0d0040a8bff99480f02a0d15287f556baad98f59791"
+    },
+    "experiment": {
+     "case_entry_sha256": "d85661749727f81fdff27a19cabb043726a8ee88053f33131aa1aad8120f980e",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "_icatest_multibody_sphericalconstraint_stiffspring_20261031_221718_8d2c9b5",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "e738190ed65d5878b0a923bf088773d91b50a023001509874b7a079ecbcd6369"
+    },
+    "model": {
+     "class": "ModelicaTest.MultiBody.SphericalConstraint_StiffSpring",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 36197,
+     "file": "SphericalConstraint_StiffSpring.npz",
+     "format": "npz",
+     "sha256": "1ae68eae21b48b61c970d8e6916a7668172da72084bd7284ab347797003db4e0"
+    },
+    "run": {
+     "utc": "2026-10-31T22:17:27+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "Spice3InternalRecordsAndFunctions",
+   "model": "ModelicaTest.Electrical.Spice3.Spice3InternalRecordsAndFunctions",
+   "variables": [
+    "dev.m_len",
+    "dev.m_width",
+    "m2.m_vt0",
+    "m2.m_xd",
+    "nPins",
+    "passThroughError",
+    "rootSum",
+    "time",
+    "vDiode.m_activationEnergy",
+    "vDiode.m_conductance",
+    "vDiode.m_depletionCapCoeff",
+    "vDiode.m_gradingCoeff"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.03965958906337619,
+    "steps": 501,
+    "rhs_evaluations": 505,
+    "jacobian_evaluations": 9,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {
+    "m2.m_vt0": "V",
+    "dev.m_len": "m",
+    "dev.m_width": "m",
+    "vDiode.m_conductance": "S"
+   },
+   "display_units": {},
+   "format": "npz",
+   "bytes": 4548,
+   "record": {
+    "schema": 1,
+    "record_id": "a7a67447f33b964a4cd91dbf32535a8ffa093b900ef6427557348699df02cf0e",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T22:19:53",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "648ce77ea2ebe1b8962dc7b8cb5435d3",
+     "impact_fmu_id": "_ectrical_spice3_spice3internalrecordsandfunctions_20261031_221950_43d5b26",
+     "model_description_sha256": "295ff4e9ff2c6c843b5345995fdc135790db37f63fe653dab9a69747ed996245"
+    },
+    "experiment": {
+     "case_entry_sha256": "08073c66c28c9fee25a1584628b31eaf78ec597c26917e58e247e76754fba764",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "_ectrical_spice3_spice3internalrecordsandfunctions_20261031_221950_109d6b6",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "df4f57501351dd095e937682351517c60b82fe66a1e0466d31beb02e359d7876"
+    },
+    "model": {
+     "class": "ModelicaTest.Electrical.Spice3.Spice3InternalRecordsAndFunctions",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 4548,
+     "file": "Spice3InternalRecordsAndFunctions.npz",
+     "format": "npz",
+     "sha256": "24b17f18010335e23acdb19591458a6dccdc11c9e61ec7782f918afc075f5d82"
+    },
+    "run": {
+     "utc": "2026-10-31T22:19:57+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "TestCylinder_Mass2",
+   "model": "ModelicaTest.Thermal.TestCylinder_Mass2",
+   "variables": [
+    "cylinder1.H",
+    "cylinder1.m",
+    "cylinder2.H",
+    "springDamper.s_rel",
+    "springDamper.v_rel",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "rtol": 1e-05,
+    "cpu_time": 0.19592678092885762,
+    "steps": 2015,
+    "rhs_evaluations": 2055,
+    "jacobian_evaluations": 39,
+    "time_events": 3,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "state_events": 5,
+    "kind": "dynamic"
+   },
+   "units": {
+    "cylinder1.m": "kg",
+    "cylinder1.H": "J",
+    "cylinder2.H": "J",
+    "springDamper.s_rel": "m",
+    "springDamper.v_rel": "m/s"
+   },
+   "display_units": {},
+   "format": "npz",
+   "bytes": 68975,
+   "record": {
+    "schema": 1,
+    "record_id": "66a8108795e1638949cd7024136662598f1b6df0844075b9457f403f803a47e3",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T22:18:29",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "f44731b43508b4dfa7b32fa1a31a4de",
+     "impact_fmu_id": "modelicatest_thermal_testcylinder_mass2_20261031_221827_53a6f44",
+     "model_description_sha256": "14c6c73604b313b58121c43468f40beeab9e0b7784028759ec271e936cf7d5c8"
+    },
+    "experiment": {
+     "case_entry_sha256": "160238d5167296e41b0abff8efd949f30154cf98eea34e9b7f15774b1e7e96bc",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "modelicatest_thermal_testcylinder_mass2_20261031_221827_1f9a099",
+     "released": true,
+     "rtol_factor": 10.000000000000002,
+     "workspace": "msl-coverage",
+     "definition_sha256": "3485fed75c4e0a0928ee5aaa40172787dd1df9d09155dbe8e7a76479f19e4038"
+    },
+    "model": {
+     "class": "ModelicaTest.Thermal.TestCylinder_Mass2",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 68975,
+     "file": "TestCylinder_Mass2.npz",
+     "format": "npz",
+     "sha256": "a861f8e2c484ffee849c5eecfa88820967e7347af8f5ce27f77b57958f094380"
+    },
+    "run": {
+     "utc": "2026-10-31T22:18:33+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "ThermoFluidSpecialRecords",
+   "model": "ModelicaTest.Media.ThermoFluidSpecialRecords",
+   "variables": [
+    "bridgmanCheck",
+    "bt.dsT",
+    "bt.dsv",
+    "bt.duT",
+    "bt.dvp",
+    "tbv.h[2]",
+    "time",
+    "tp.h",
+    "tp.kappa"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.05753027799073607,
+    "steps": 501,
+    "rhs_evaluations": 505,
+    "jacobian_evaluations": 9,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {
+    "tp.h": "J/kg",
+    "tp.kappa": "1",
+    "tbv.h[2]": "J/kg"
+   },
+   "display_units": {},
+   "format": "npz",
+   "bytes": 29523,
+   "record": {
+    "schema": 1,
+    "record_id": "6996444d8f34fc609c3a55839b461c075f9bd427588735f58116e9691361e844",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T22:20:08",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "4e33b2acb50e6d82c8927d191d96a29d",
+     "impact_fmu_id": "modelicatest_media_thermofluidspecialrecords_20261031_222004_61537bc",
+     "model_description_sha256": "a476b83885bc94e210a200e006bf253e2bd9ff05ec192dc687b0457195710bb1"
+    },
+    "experiment": {
+     "case_entry_sha256": "61c92375c65290949d939349a416372225eea13d8121c1e2ad11c5ebce2dced3",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "modelicatest_media_thermofluidspecialrecords_20261031_222004_918d522",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "4a3b1177fcc44b48c46479845c9999d80813e5da41a0ec91f1a7ff127d6d1dff"
+    },
+    "model": {
+     "class": "ModelicaTest.Media.ThermoFluidSpecialRecords",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 29523,
+     "file": "ThermoFluidSpecialRecords.npz",
+     "format": "npz",
+     "sha256": "4d754131e11cb840a45831dbe78fbf7388eb7625656644dad45226c2424e8d96"
+    },
+    "run": {
+     "utc": "2026-10-31T22:20:12+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "TwoTanks_Level07",
+   "model": "ModelicaTest.Thermal.TwoTanks_Level07",
+   "variables": [
+    "openTank1.T",
+    "openTank1.level",
+    "openTank2.T",
+    "openTank2.level",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.09706477005966008,
+    "steps": 751,
+    "rhs_evaluations": 756,
+    "jacobian_evaluations": 13,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {
+    "openTank1.level": "m",
+    "openTank1.T": "K",
+    "openTank2.level": "m",
+    "openTank2.T": "K"
+   },
+   "display_units": {
+    "openTank1.T": "degC",
+    "openTank2.T": "degC"
+   },
+   "format": "npz",
+   "bytes": 19242,
+   "record": {
+    "schema": 1,
+    "record_id": "3c4954bbd8bcf00e098f889148721763d1d0834bd17187e173a6efc34869a8e1",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T22:18:22",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "49754875db4ff95644219c44cdc6b6d8",
+     "impact_fmu_id": "modelicatest_thermal_twotanks_level07_20261031_221820_3d81371",
+     "model_description_sha256": "f2cec51aab1638cc6aed507aa4ccd101b64302cb0209984c10f39b026b6c546f"
+    },
+    "experiment": {
+     "case_entry_sha256": "61c447f6c5c398f9f3b9a67dd7f5f8d026af6d63720d6d3b6608ac8a5d5ca51b",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "modelicatest_thermal_twotanks_level07_20261031_221820_83f4590",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "3edcd8660321abc9db1b941b64ec863ecebec80978f43e423163cfb29d940615"
+    },
+    "model": {
+     "class": "ModelicaTest.Thermal.TwoTanks_Level07",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 19242,
+     "file": "TwoTanks_Level07.npz",
+     "format": "npz",
+     "sha256": "e7239517f6c4f4d943c5265b5e79d627a0ab911080fbf971015df84f7f99aab4"
+    },
+    "run": {
+     "utc": "2026-10-31T22:18:26+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "VectorizedPortsFluidAndHeat",
+   "model": "ModelicaTest.Fluid.TestUtilities.VectorizedPortsFluidAndHeat",
+   "variables": [
+    "heatJunction.heatPorts[1].Q_flow",
+    "heatJunction.heatPorts[2].T",
+    "junction.ports[1].m_flow",
+    "junction.ports[2].m_flow",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.05160893709398806,
+    "steps": 501,
+    "rhs_evaluations": 505,
+    "jacobian_evaluations": 9,
+    "time_events": 1,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {
+    "junction.ports[1].m_flow": "kg/s",
+    "heatJunction.heatPorts[1].Q_flow": "W",
+    "heatJunction.heatPorts[2].T": "K",
+    "junction.ports[2].m_flow": "kg/s"
+   },
+   "display_units": {
+    "heatJunction.heatPorts[2].T": "degC"
+   },
+   "format": "npz",
+   "bytes": 10428,
+   "record": {
+    "schema": 1,
+    "record_id": "9fbc09bbcd5de45d6cbb7487e37bc8add2329195bf1656b2eba5738c579b205f",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T22:20:15",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "5059a70d903d169d8f752ab8d001b930",
+     "impact_fmu_id": "_t_fluid_testutilities_vectorizedportsfluidandheat_20261031_222013_a08422f",
+     "model_description_sha256": "aabf9ecb6867838a4564bc7ca2ae5cedec179b30a81d64cbbdb1a760b2b9d9d3"
+    },
+    "experiment": {
+     "case_entry_sha256": "d03745c44b334b61155d55d24e4057fb6aefbf13ae9ee7a31d356100a5edff5b",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "_t_fluid_testutilities_vectorizedportsfluidandheat_20261031_222012_fc72ca8",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "0da44465e3f942ce5b5169a75f0508721619164daeb7c9bb6101c4d45ae74c1c"
+    },
+    "model": {
+     "class": "ModelicaTest.Fluid.TestUtilities.VectorizedPortsFluidAndHeat",
+     "libraries": [
+      {
+       "git_commit": "0e12a4a960f65f41049c92569d3575b7615dbdc2",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 10428,
+     "file": "VectorizedPortsFluidAndHeat.npz",
+     "format": "npz",
+     "sha256": "e111b5343350045f0a648544803048dcbd007a0a30e0a19ebb2ab101c73c1fbd"
+    },
+    "run": {
+     "utc": "2026-10-31T22:20:19+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  }
+ ]
+}

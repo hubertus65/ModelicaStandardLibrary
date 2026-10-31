@@ -11304,4 +11304,63 @@ w is parallel to the rotation axis (e.g. planar rotations).
 
     annotation (experiment(StopTime=0));
   end TestFramesFromTinv;
+
+model RevoluteConstraint_StiffSpring = Modelica.Mechanics.MultiBody.Examples.Constraints.RevoluteConstraint(springOfJoint(c=40))
+  "Variant of RevoluteConstraint with a twice as stiff spring"
+  annotation (experiment(StopTime=10), Documentation(info="<html>
+<p>
+Variant of <a href=\"modelica://Modelica.Mechanics.MultiBody.Examples.Constraints.RevoluteConstraint\">RevoluteConstraint</a> with a spring stiffness of 40 N/m instead of 20 N/m. The
+spring of the body on the Joints.Constraints.Revolute follows through its binding, so the joint and
+the constraint system must still move identically.
+</p>
+</html>"));
+
+model SphericalConstraint_StiffSpring = Modelica.Mechanics.MultiBody.Examples.Constraints.SphericalConstraint(springOfJoint(c=40))
+  "Variant of SphericalConstraint with a twice as stiff spring"
+  annotation (experiment(StopTime=10), Documentation(info="<html>
+<p>
+Variant of <a href=\"modelica://Modelica.Mechanics.MultiBody.Examples.Constraints.SphericalConstraint\">SphericalConstraint</a> with a spring stiffness of 40 N/m instead of 20 N/m. The
+spring of the body on the Joints.Constraints.Spherical follows through its binding, so the joint and
+the constraint system must still move identically.
+</p>
+</html>"));
+
+model UniversalConstraint_StiffSpring = Modelica.Mechanics.MultiBody.Examples.Constraints.UniversalConstraint(springOfJoint(c=40))
+  "Variant of UniversalConstraint with a twice as stiff spring"
+  annotation (experiment(StopTime=10), Documentation(info="<html>
+<p>
+Variant of <a href=\"modelica://Modelica.Mechanics.MultiBody.Examples.Constraints.UniversalConstraint\">UniversalConstraint</a> with a spring stiffness of 40 N/m instead of 20 N/m. The
+spring of the body on the Joints.Constraints.Universal follows through its binding, so the joint and
+the constraint system must still move identically.
+</p>
+</html>"));
+
+model PrismaticConstraint_StiffSpring = Modelica.Mechanics.MultiBody.Examples.Constraints.PrismaticConstraint(springOfJoint(c=40))
+  "Variant of PrismaticConstraint with a twice as stiff spring"
+  annotation (experiment(StopTime=10), Documentation(info="<html>
+<p>
+Variant of <a href=\"modelica://Modelica.Mechanics.MultiBody.Examples.Constraints.PrismaticConstraint\">PrismaticConstraint</a> with a spring stiffness of 40 N/m instead of 20 N/m. The
+spring of the body on the Joints.Constraints.Prismatic follows through its binding, so the joint and
+the constraint system must still move identically.
+</p>
+</html>"));
+
+model RollingWheel_FastSpin = Modelica.Mechanics.MultiBody.Examples.Elementary.RollingWheel(wheel1(der_angles(start={0,8,1})))
+  "Variant of RollingWheel with a faster initial spin"
+  annotation (experiment(StopTime=4), Documentation(info="<html>
+<p>
+Variant of <a href=\"modelica://Modelica.Mechanics.MultiBody.Examples.Elementary.RollingWheel\">RollingWheel</a> (Parts.RollingWheel, Joints.RollingWheel) with an initial
+rolling speed of 8 rad/s instead of 5 rad/s.
+</p>
+</html>"));
+
+model RollingWheelSetDriving_HigherTorque = Modelica.Mechanics.MultiBody.Examples.Elementary.RollingWheelSetDriving(sine1(amplitude=3), sine2(amplitude=3))
+  "Variant of RollingWheelSetDriving with a higher driving torque"
+  annotation (experiment(StopTime=3), Documentation(info="<html>
+<p>
+Variant of <a href=\"modelica://Modelica.Mechanics.MultiBody.Examples.Elementary.RollingWheelSetDriving\">RollingWheelSetDriving</a> (Parts.RollingWheelSet, Joints.RollingWheelSet,
+Joints.Internal.RollingConstraintVerticalWheel) with a driving torque amplitude of 3 Nm instead
+of 2 Nm on both wheels.
+</p>
+</html>"));
 end MultiBody;
