@@ -595,4 +595,123 @@ extends Modelica.Icons.ExamplesPackage;
     annotation (experiment(StopTime=0));
   end TestExamplesCalculator;
 
+  impure function FileSystem "Test file system functions of Modelica.Utilities.Files"
+    extends Modelica.Icons.Function;
+    import Modelica.Utilities.Files;
+    import Modelica.Utilities.Streams;
+
+    input String logFile="ModelicaTestLog.txt"
+      "Filename where the log is stored";
+    output Boolean ok;
+  protected
+    String dir "Temporary test directory";
+    String fileName "Test file in the test directory";
+  algorithm
+    Streams.print("... Test of file system functions of Modelica.Utilities.Files");
+    Streams.print("... Test of file system functions of Modelica.Utilities.Files", logFile);
+
+    dir := Files.temporaryFileName();
+    Files.assertNew(dir, "Files.temporaryFileName returned an existing name");
+
+    Files.createDirectory(dir + "/sub1/sub2");
+    assert(Files.exist(dir + "/sub1/sub2"), "Files.createDirectory failed");
+
+    fileName := dir + "/sub1/test.txt";
+    Streams.print("line 1", fileName);
+    Streams.close(fileName);
+    assert(Files.exist(fileName), "Writing the test file failed");
+
+    Files.copy(fileName, dir + "/sub1/sub2/copy.txt");
+    assert(Files.exist(dir + "/sub1/sub2/copy.txt"), "Files.copy of a file failed");
+
+    Files.copy(dir + "/sub1", dir + "/sub1Copy");
+    assert(Files.exist(dir + "/sub1Copy/sub2/copy.txt"), "Files.copy of a directory failed");
+
+    Files.copy(fileName, dir + "/sub1Copy/test.txt", replace=true);
+    assert(Files.exist(dir + "/sub1Copy/test.txt"), "Files.copy with replace=true failed");
+
+    Files.move(dir + "/sub1Copy", dir + "/sub1Moved");
+    assert(Files.exist(dir + "/sub1Moved/test.txt") and not Files.exist(dir + "/sub1Copy"),
+      "Files.move of a directory failed");
+
+    Modelica.Utilities.Internal.FileSystem.copyFile(fileName, dir + "/copyFile.txt");
+    assert(Files.exist(dir + "/copyFile.txt"), "Internal.FileSystem.copyFile failed");
+
+    Files.remove(dir);
+    assert(not Files.exist(dir), "Files.remove of the test directory failed");
+
+    ok := true;
+  end FileSystem;
+
+  impure function MatrixIO "Test reading and writing of MATLAB MAT files with Modelica.Utilities.Streams"
+    extends Modelica.Icons.Function;
+    import Modelica.Utilities.Files;
+    import Modelica.Utilities.Streams;
+
+    input String logFile="ModelicaTestLog.txt"
+      "Filename where the log is stored";
+    output Boolean ok;
+  protected
+    String fileName "Temporary MAT file";
+    Real A[2,3]=[1, 2, 3; 4, 5, 6] "Matrix written to the file";
+    Real B[3,1]=[-1; 0.5; 1e10] "Second matrix appended to the file";
+    Integer dimA[2] "Size of A read from the file";
+    Integer dimB[2] "Size of B read from the file";
+    Real A2[2,3] "A read from the file";
+    Real B2[3,1] "B read from the file";
+    Boolean success;
+    String formats[3]={"4", "6", "7"} "MAT file versions written and read";
+    String format "Current MAT file version";
+  algorithm
+    Streams.print("... Test of MAT file functions of Modelica.Utilities.Streams");
+    Streams.print("... Test of MAT file functions of Modelica.Utilities.Streams", logFile);
+
+    // loop over an Integer index: iterating directly over the String vector
+    // is translated to invalid C code by OCT (Modelon Impact 2026)
+    for k in 1:size(formats, 1) loop
+      format := formats[k];
+      fileName := Files.temporaryFileName() + ".mat";
+      success := Streams.writeRealMatrix(fileName, "A", A, format=format);
+      assert(success, "Streams.writeRealMatrix failed for format " + format);
+      success := Streams.writeRealMatrix(fileName, "B", B, append=true, format=format);
+      assert(success, "Streams.writeRealMatrix with append=true failed for format " + format);
+
+      dimA := Streams.readMatrixSize(fileName, "A");
+      dimB := Streams.readMatrixSize(fileName, "B");
+      assert(dimA[1] == 2 and dimA[2] == 3 and dimB[1] == 3 and dimB[2] == 1,
+        "Streams.readMatrixSize failed for format " + format);
+
+      A2 := Streams.readRealMatrix(fileName, "A", 2, 3);
+      B2 := Streams.readRealMatrix(fileName, "B", 3, 1, verboseRead=false);
+      assert(max(abs(A2 - A)) < 1e-15 and max(abs(B2 - B)) < 1e-15,
+        "Streams.readRealMatrix failed for format " + format);
+      Files.removeFile(fileName);
+    end for;
+
+    ok := true;
+  end MatrixIO;
+
+  model TestFileSystem
+    extends Modelica.Icons.Example;
+
+    Boolean result;
+  algorithm
+    when initial() then
+      result := ModelicaTest.Utilities.FileSystem();
+    end when;
+
+    annotation (experiment(StopTime=0));
+  end TestFileSystem;
+
+  model TestMatrixIO
+    extends Modelica.Icons.Example;
+
+    Boolean result;
+  algorithm
+    when initial() then
+      result := ModelicaTest.Utilities.MatrixIO();
+    end when;
+
+    annotation (experiment(StopTime=0));
+  end TestMatrixIO;
 end Utilities;

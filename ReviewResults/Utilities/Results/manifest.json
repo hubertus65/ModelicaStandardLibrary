@@ -1,0 +1,172 @@
+{
+ "run": {
+  "utc": "2026-10-31T04:57:23+00:00",
+  "rtol_factor": 100.0,
+  "descriptor": "impact workspace 'msl-coverage'",
+  "reference_descriptor": "impact workspace 'msl-coverage'",
+  "cases": 2,
+  "cases_this_run": 2,
+  "failed_cases": 0,
+  "bytes": 908
+ },
+ "cases": [
+  {
+   "name": "TestFileSystem",
+   "model": "ModelicaTest.Utilities.TestFileSystem",
+   "variables": [
+    "result",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.001115154940634966,
+    "steps": 11,
+    "rhs_evaluations": 15,
+    "jacobian_evaluations": 1,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {},
+   "display_units": {},
+   "format": "npz",
+   "bytes": 454,
+   "record": {
+    "schema": 1,
+    "record_id": "6d021eae1ab74590f6b4c924fd5c68ed0f8b6fa065b9624fd697fc7fc006f3c3",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T04:57:13",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "d1b5990a7676aca37a506fe2bfe3c448",
+     "impact_fmu_id": "modelicatest_utilities_testfilesystem_20261031_045711_2dfae6a",
+     "model_description_sha256": "2bbfa8abb01644db83187ae566001c15eec9378d4ad8771885d70e18ff262c0c"
+    },
+    "experiment": {
+     "case_entry_sha256": "24e8e2d800901e00371e720995f66836988cb42b2cbeeb72da88c7d7c98d26fa",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "modelicatest_utilities_testfilesystem_20261031_045711_9938b0a",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "fbf4e6f0ff4295ac312f8432cb80e9aa33e2fe428acc95f30981c983bf99e3f8"
+    },
+    "model": {
+     "class": "ModelicaTest.Utilities.TestFileSystem",
+     "libraries": [
+      {
+       "git_commit": "1db057b7f601065ce2247e2d6750badec0dad11f",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 454,
+     "file": "TestFileSystem.npz",
+     "format": "npz",
+     "sha256": "b3196d6c1e6ed87825cb921ba453d02daeec5e88a295570259bbe196db938665"
+    },
+    "run": {
+     "utc": "2026-10-31T04:57:16+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "TestMatrixIO",
+   "model": "ModelicaTest.Utilities.TestMatrixIO",
+   "variables": [
+    "result",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.001046034973114729,
+    "steps": 11,
+    "rhs_evaluations": 15,
+    "jacobian_evaluations": 1,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {},
+   "display_units": {},
+   "format": "npz",
+   "bytes": 454,
+   "record": {
+    "schema": 1,
+    "record_id": "82037c55e6d574a86dc734e93286f60bff14c5f43daa40fd5d65bccb591cdb97",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T04:57:20",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "9dbbfe28e9899801de6f1f64373f7417",
+     "impact_fmu_id": "modelicatest_utilities_testmatrixio_20261031_045719_0a0c2aa",
+     "model_description_sha256": "60f018432c27fedd2e758b175089909d4ac5b964897bf92b3193e004336225e7"
+    },
+    "experiment": {
+     "case_entry_sha256": "ec8134b7328bdca717e106a2f459ca383e2fd50750439bc05c4a2ab46d0c3f72",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "modelicatest_utilities_testmatrixio_20261031_045719_85b978f",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "f6f3773a0827cfb1b792d8dee0ff5ec64e13d113810f6c57d3cde1399ae8a09f"
+    },
+    "model": {
+     "class": "ModelicaTest.Utilities.TestMatrixIO",
+     "libraries": [
+      {
+       "git_commit": "1db057b7f601065ce2247e2d6750badec0dad11f",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 454,
+     "file": "TestMatrixIO.npz",
+     "format": "npz",
+     "sha256": "b3196d6c1e6ed87825cb921ba453d02daeec5e88a295570259bbe196db938665"
+    },
+    "run": {
+     "utc": "2026-10-31T04:57:23+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+      "dirty": false
+     }
+    }
+   }
+  }
+ ]
+}

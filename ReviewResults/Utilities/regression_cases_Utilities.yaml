@@ -1,0 +1,34 @@
+# ModCheck case list: new ModelicaTest.Utilities coverage tests (branch coverage-improvement).
+#
+# Each case is one new test model, run unmodified on Modelon Impact (MSL 4.1.0
+# dependency). Variables are the comparison signals of the model, as listed in
+# ModelicaTest/Resources/Reference/ModelicaTest/Utilities/<Model>/comparisonSignals.txt.
+# ncp gives 500 output intervals per second of simulated time.
+library: ModelicaTest
+workspace: msl-coverage
+custom_function: dynamic
+tolerance: 0.001
+
+cases:
+  - name: TestFileSystem
+    enabled: true
+    model: ModelicaTest.Utilities.TestFileSystem
+    start_time: 0.0
+    final_time: 0.01
+    ncp: 10
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "result"
+  - name: TestMatrixIO
+    enabled: true
+    model: ModelicaTest.Utilities.TestMatrixIO
+    start_time: 0.0
+    final_time: 0.01
+    ncp: 10
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "result"
