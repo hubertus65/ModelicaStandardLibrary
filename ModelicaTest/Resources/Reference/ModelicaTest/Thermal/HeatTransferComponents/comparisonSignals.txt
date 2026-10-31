@@ -1,0 +1,8 @@
+time
+capacitor1.T
+capacitor2.T
+conditionalSensor1.Q_flow
+conditionalSensorFixed.Q_flow
+heatFlowSensor1.Q_flow
+relTemperatureSensor1.T_rel
+bodyRadiation1.Q_flow

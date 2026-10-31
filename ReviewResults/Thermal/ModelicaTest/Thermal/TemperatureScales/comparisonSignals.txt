@@ -1,0 +1,13 @@
+time
+capacitorC.T
+capacitorF.T
+capacitorR.T
+fromKelvinC.Celsius
+fromKelvinF.Fahrenheit
+fromKelvinR.Rankine
+sensorC.T
+sensorF.T
+sensorR.T
+toKelvinC.Kelvin
+toKelvinF.Kelvin
+toKelvinR.Kelvin

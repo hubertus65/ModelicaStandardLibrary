@@ -1,0 +1,456 @@
+[
+  {
+    "name": "FluidHeatFlowMedia",
+    "model": "ModelicaTest.Thermal.FluidHeatFlowMedia",
+    "variables": [
+      "Pr[1]",
+      "Pr[2]",
+      "Pr[3]",
+      "Pr[4]",
+      "Pr[5]",
+      "Pr[6]",
+      "Pr[7]",
+      "Pr[8]",
+      "cp[1]",
+      "cp[2]",
+      "cp[3]",
+      "cp[4]",
+      "cp[5]",
+      "cp[6]",
+      "cp[7]",
+      "cp[8]",
+      "nu[1]",
+      "nu[2]",
+      "nu[3]",
+      "nu[4]",
+      "nu[5]",
+      "nu[6]",
+      "nu[7]",
+      "nu[8]",
+      "rho[1]",
+      "rho[2]",
+      "rho[3]",
+      "rho[4]",
+      "rho[5]",
+      "rho[6]",
+      "rho[7]",
+      "rho[8]",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.05134079500567168,
+      "steps": 501,
+      "rhs_evaluations": 505,
+      "jacobian_evaluations": 9,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "rho[1]": "kg/m3",
+      "rho[2]": "kg/m3",
+      "rho[3]": "kg/m3",
+      "rho[4]": "kg/m3",
+      "rho[5]": "kg/m3",
+      "rho[6]": "kg/m3",
+      "rho[7]": "kg/m3",
+      "rho[8]": "kg/m3",
+      "cp[1]": "J/(kg.K)",
+      "cp[2]": "J/(kg.K)",
+      "cp[3]": "J/(kg.K)",
+      "cp[4]": "J/(kg.K)",
+      "cp[5]": "J/(kg.K)",
+      "cp[6]": "J/(kg.K)",
+      "cp[7]": "J/(kg.K)",
+      "cp[8]": "J/(kg.K)",
+      "nu[1]": "m2/s",
+      "nu[2]": "m2/s",
+      "nu[3]": "m2/s",
+      "nu[4]": "m2/s",
+      "nu[5]": "m2/s",
+      "nu[6]": "m2/s",
+      "nu[7]": "m2/s",
+      "nu[8]": "m2/s"
+    },
+    "display_units": {
+      "rho[1]": "g/cm3",
+      "rho[2]": "g/cm3",
+      "rho[3]": "g/cm3",
+      "rho[4]": "g/cm3",
+      "rho[5]": "g/cm3",
+      "rho[6]": "g/cm3",
+      "rho[7]": "g/cm3",
+      "rho[8]": "g/cm3"
+    },
+    "format": "npz",
+    "bytes": 9026,
+    "record": {
+      "schema": 1,
+      "record_id": "740f37b31a1470a8d3585667f3f86ede671e8d1fa2787bb864a7981d703c3da3",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T05:02:37",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "2732b3aae05354e4c017e398cf5ff54d",
+        "impact_fmu_id": "modelicatest_thermal_fluidheatflowmedia_20261031_050235_e2cac5f",
+        "model_description_sha256": "2561c4c32be14d01e9e827aef6dcf509166eedc907c93bedad8d434b4dcf1bf3"
+      },
+      "experiment": {
+        "case_entry_sha256": "6ca0a69fc0fb1577c6283325e3968ea075bd019046117f69324d5d026448d432",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_thermal_fluidheatflowmedia_20261031_050235_90490b8",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "d6bb12fba9241410ae97e86d4211d9a8e7909ab13e7aac922c6949ad8dd54722"
+      },
+      "model": {
+        "class": "ModelicaTest.Thermal.FluidHeatFlowMedia",
+        "libraries": [
+          {
+            "git_commit": "1e03a211998db46b314a56efa82bdc57f6c375e5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 9026,
+        "file": "FluidHeatFlowMedia.npz",
+        "format": "npz",
+        "sha256": "85e3d722186ae8d1ba29994cd037fc1879c0194c339f0ee1685dfb0aa10dc63a"
+      },
+      "run": {
+        "utc": "2026-10-31T05:02:42+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "FluidHeatFlowSensorsAndValves",
+    "model": "ModelicaTest.Thermal.FluidHeatFlowSensorsAndValves",
+    "variables": [
+      "enthalpyFlowSensor1.y",
+      "massFlowSensor1.y",
+      "pipeCooled.T",
+      "pipeHeated.T",
+      "pressureSensor1.y",
+      "relPressureSensor1.y",
+      "relTemperatureSensor1.y",
+      "temperatureSensor1.y",
+      "time",
+      "volumeFlowSensor1.y"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 0.0003,
+      "rtol": 1e-06,
+      "cpu_time": 0.1258933610515669,
+      "steps": 1005,
+      "rhs_evaluations": 1021,
+      "jacobian_evaluations": 20,
+      "time_events": 1,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "state_events": 2,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "pipeHeated.T": "K",
+      "pipeCooled.T": "K",
+      "massFlowSensor1.y": "kg/s",
+      "volumeFlowSensor1.y": "m3/s",
+      "enthalpyFlowSensor1.y": "W",
+      "pressureSensor1.y": "Pa",
+      "temperatureSensor1.y": "K",
+      "relPressureSensor1.y": "Pa",
+      "relTemperatureSensor1.y": "K"
+    },
+    "display_units": {
+      "pipeHeated.T": "degC",
+      "pipeCooled.T": "degC",
+      "pressureSensor1.y": "bar",
+      "relPressureSensor1.y": "bar"
+    },
+    "format": "npz",
+    "bytes": 48713,
+    "record": {
+      "schema": 1,
+      "record_id": "0a06f914b3cc25668f2f6563e93ff11411ab299315c49d6474c12f5801059e74",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T05:02:30",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "c68f8bca6dd80852eeb89302588c3c0c",
+        "impact_fmu_id": "modelicatest_thermal_fluidheatflowsensorsandvalves_20261031_050228_0b9a7e4",
+        "model_description_sha256": "8a96a96236bedf893c19d515f62ec54ee75f6df22f070bde9e902acdcbae11e2"
+      },
+      "experiment": {
+        "case_entry_sha256": "2a602950a893a7a9e4cea4964247f6dbdd4c1ce0e7e8063b7e5de341a4bdc108",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_thermal_fluidheatflowsensorsandvalves_20261031_050228_66e1000",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "4597e758ae8f61ce1d62a0af7910f9f6ebb21bb635fb7d8dab0d07c135e8721c"
+      },
+      "model": {
+        "class": "ModelicaTest.Thermal.FluidHeatFlowSensorsAndValves",
+        "libraries": [
+          {
+            "git_commit": "1e03a211998db46b314a56efa82bdc57f6c375e5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 48713,
+        "file": "FluidHeatFlowSensorsAndValves.npz",
+        "format": "npz",
+        "sha256": "8e391001c17290189d9941261eed020e09b7b215868fc6eccd78670c680abdf8"
+      },
+      "run": {
+        "utc": "2026-10-31T05:02:34+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "HeatTransferComponents",
+    "model": "ModelicaTest.Thermal.HeatTransferComponents",
+    "variables": [
+      "bodyRadiation1.Q_flow",
+      "capacitor1.T",
+      "capacitor2.T",
+      "conditionalSensor1.Q_flow",
+      "conditionalSensorFixed.Q_flow",
+      "heatFlowSensor1.Q_flow",
+      "relTemperatureSensor1.T_rel",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 0.0003,
+      "rtol": 1e-06,
+      "cpu_time": 0.22774728306103498,
+      "steps": 2501,
+      "rhs_evaluations": 2505,
+      "jacobian_evaluations": 42,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "conditionalSensorFixed.Q_flow": "W",
+      "capacitor1.T": "K",
+      "capacitor2.T": "K",
+      "bodyRadiation1.Q_flow": "W",
+      "conditionalSensor1.Q_flow": "W",
+      "heatFlowSensor1.Q_flow": "W",
+      "relTemperatureSensor1.T_rel": "K"
+    },
+    "display_units": {
+      "capacitor1.T": "degC",
+      "capacitor2.T": "degC"
+    },
+    "format": "npz",
+    "bytes": 96908,
+    "record": {
+      "schema": 1,
+      "record_id": "df30d75740edc621f6f94b832650e2a397d55085eeea53edaf5f52b437fd0520",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T05:02:23",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "28e6bf98cbc889c29ce00499d7d125b9",
+        "impact_fmu_id": "modelicatest_thermal_heattransfercomponents_20261031_050221_004629f",
+        "model_description_sha256": "ce7b9eac5ea7d2e230a4dd1de7cd1b9d9a3ff99c2e263322abd376b067b52190"
+      },
+      "experiment": {
+        "case_entry_sha256": "339a3b703fb568c18e815181d2cba0c7ce122fe8923178f369eb340fd2292874",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_thermal_heattransfercomponents_20261031_050221_6f39cfd",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "91c68e338136f48a697397952d98d26d399e883c44f2fda362351cba6abb2ec8"
+      },
+      "model": {
+        "class": "ModelicaTest.Thermal.HeatTransferComponents",
+        "libraries": [
+          {
+            "git_commit": "1e03a211998db46b314a56efa82bdc57f6c375e5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 96908,
+        "file": "HeatTransferComponents.npz",
+        "format": "npz",
+        "sha256": "a61df574e3a996697dd4203579e8aefa0c2a952178dd4a78adae069d22ea0132"
+      },
+      "run": {
+        "utc": "2026-10-31T05:02:27+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "TemperatureScales",
+    "model": "ModelicaTest.Thermal.TemperatureScales",
+    "variables": [
+      "capacitorC.T",
+      "capacitorF.T",
+      "capacitorR.T",
+      "fromKelvinC.Celsius",
+      "fromKelvinF.Fahrenheit",
+      "fromKelvinR.Rankine",
+      "sensorC.T",
+      "sensorF.T",
+      "sensorR.T",
+      "time",
+      "toKelvinC.Kelvin",
+      "toKelvinF.Kelvin",
+      "toKelvinR.Kelvin"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 0.0003,
+      "rtol": 1e-06,
+      "cpu_time": 0.044845134019851685,
+      "steps": 502,
+      "rhs_evaluations": 508,
+      "jacobian_evaluations": 9,
+      "time_events": 1,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "capacitorC.T": "K",
+      "capacitorF.T": "K",
+      "capacitorR.T": "K",
+      "sensorC.T": "degC",
+      "toKelvinC.Kelvin": "K",
+      "fromKelvinC.Celsius": "degC",
+      "toKelvinF.Kelvin": "K",
+      "fromKelvinF.Fahrenheit": "degF",
+      "toKelvinR.Kelvin": "K",
+      "fromKelvinR.Rankine": "degRk"
+    },
+    "display_units": {
+      "capacitorC.T": "degC",
+      "capacitorF.T": "degC",
+      "capacitorR.T": "degC"
+    },
+    "format": "npz",
+    "bytes": 47906,
+    "record": {
+      "schema": 1,
+      "record_id": "187b533d623125132cf6e29efbfac25e5c18afcfcefe1d67b8d1df1312e3c650",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T05:02:16",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "44af2efc234ab78ea5482ac70d0f61cd",
+        "impact_fmu_id": "modelicatest_thermal_temperaturescales_20261031_050214_846b2c3",
+        "model_description_sha256": "9c7361ff0c0f30c6c977538869dbaf6d262f65273eacd657b9d55a06c4050c67"
+      },
+      "experiment": {
+        "case_entry_sha256": "361c7a2ae67258a6edee814a92d48ef706d3ec647a87d582a7fa7584c84675d7",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_thermal_temperaturescales_20261031_050214_78846df",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "ecc3e0d45cfd0a05398155d31b90b9a6afc4251d5bdae379a876117a1247877f"
+      },
+      "model": {
+        "class": "ModelicaTest.Thermal.TemperatureScales",
+        "libraries": [
+          {
+            "git_commit": "1e03a211998db46b314a56efa82bdc57f6c375e5",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 47906,
+        "file": "TemperatureScales.npz",
+        "format": "npz",
+        "sha256": "602b351f7103cbdd3dd5aa7160794f0708bd7825c6f38f4e247aa84365b6e1a0"
+      },
+      "run": {
+        "utc": "2026-10-31T05:02:20+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  }
+]

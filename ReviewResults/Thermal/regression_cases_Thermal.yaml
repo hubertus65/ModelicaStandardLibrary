@@ -1,0 +1,112 @@
+# ModCheck case list: new ModelicaTest.Thermal coverage tests (branch coverage-improvement).
+#
+# Each case is one new test model, run unmodified on Modelon Impact (MSL 4.1.0
+# dependency). Variables are the comparison signals of the model, as listed in
+# ModelicaTest/Resources/Reference/ModelicaTest/Thermal/<Model>/comparisonSignals.txt.
+# ncp gives 500 output intervals per second of simulated time.
+library: ModelicaTest
+workspace: msl-coverage
+custom_function: dynamic
+tolerance: 0.001
+
+cases:
+  - name: TemperatureScales
+    enabled: true
+    model: ModelicaTest.Thermal.TemperatureScales
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "capacitorC.T"
+      - "sensorC.T"
+      - "toKelvinC.Kelvin"
+      - "fromKelvinC.Celsius"
+      - "capacitorF.T"
+      - "sensorF.T"
+      - "toKelvinF.Kelvin"
+      - "fromKelvinF.Fahrenheit"
+      - "capacitorR.T"
+      - "sensorR.T"
+      - "toKelvinR.Kelvin"
+      - "fromKelvinR.Rankine"
+  - name: HeatTransferComponents
+    enabled: true
+    model: ModelicaTest.Thermal.HeatTransferComponents
+    start_time: 0.0
+    final_time: 5.0
+    ncp: 2500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "capacitor1.T"
+      - "capacitor2.T"
+      - "conditionalSensor1.Q_flow"
+      - "conditionalSensorFixed.Q_flow"
+      - "heatFlowSensor1.Q_flow"
+      - "relTemperatureSensor1.T_rel"
+      - "bodyRadiation1.Q_flow"
+  - name: FluidHeatFlowSensorsAndValves
+    enabled: true
+    model: ModelicaTest.Thermal.FluidHeatFlowSensorsAndValves
+    start_time: 0.0
+    final_time: 2.0
+    ncp: 1000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "massFlowSensor1.y"
+      - "volumeFlowSensor1.y"
+      - "enthalpyFlowSensor1.y"
+      - "pressureSensor1.y"
+      - "temperatureSensor1.y"
+      - "relPressureSensor1.y"
+      - "relTemperatureSensor1.y"
+      - "pipeHeated.T"
+      - "pipeCooled.T"
+  - name: FluidHeatFlowMedia
+    enabled: true
+    model: ModelicaTest.Thermal.FluidHeatFlowMedia
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "rho[[]1]"
+      - "rho[[]2]"
+      - "rho[[]3]"
+      - "rho[[]4]"
+      - "rho[[]5]"
+      - "rho[[]6]"
+      - "rho[[]7]"
+      - "rho[[]8]"
+      - "cp[[]1]"
+      - "cp[[]2]"
+      - "cp[[]3]"
+      - "cp[[]4]"
+      - "cp[[]5]"
+      - "cp[[]6]"
+      - "cp[[]7]"
+      - "cp[[]8]"
+      - "nu[[]1]"
+      - "nu[[]2]"
+      - "nu[[]3]"
+      - "nu[[]4]"
+      - "nu[[]5]"
+      - "nu[[]6]"
+      - "nu[[]7]"
+      - "nu[[]8]"
+      - "Pr[[]1]"
+      - "Pr[[]2]"
+      - "Pr[[]3]"
+      - "Pr[[]4]"
+      - "Pr[[]5]"
+      - "Pr[[]6]"
+      - "Pr[[]7]"
+      - "Pr[[]8]"

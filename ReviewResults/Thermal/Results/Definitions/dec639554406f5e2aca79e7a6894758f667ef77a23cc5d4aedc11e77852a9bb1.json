@@ -1,0 +1,54 @@
+{
+ "experiment": {
+  "base": {
+   "analysis": {
+    "parameters": [
+     {
+      "name": "start_time",
+      "value": 0.0
+     },
+     {
+      "name": "final_time",
+      "value": 1.0
+     },
+     {
+      "name": "interval",
+      "value": 0
+     }
+    ],
+    "simulationLogLevel": "WARNING",
+    "simulationOptions": {
+     "dynamic_diagnostics": false,
+     "filter": "['time', 'rho[[]1]', 'rho[[]2]', 'rho[[]3]', 'rho[[]4]', 'rho[[]5]', 'rho[[]6]', 'rho[[]7]', 'rho[[]8]', 'cp[[]1]', 'cp[[]2]', 'cp[[]3]', 'cp[[]4]', 'cp[[]5]', 'cp[[]6]', 'cp[[]7]', 'cp[[]8]', 'nu[[]1]', 'nu[[]2]', 'nu[[]3]', 'nu[[]4]', 'nu[[]5]', 'nu[[]6]', 'nu[[]7]', 'nu[[]8]', 'Pr[[]1]', 'Pr[[]2]', 'Pr[[]3]', 'Pr[[]4]', 'Pr[[]5]', 'Pr[[]6]', 'Pr[[]7]', 'Pr[[]8]']",
+     "ncp": 500
+    },
+    "solverOptions": {
+     "rtol": 9.999999999999999e-05
+    },
+    "type": "dynamic"
+   },
+   "expansion": {
+    "algorithm": "FULLFACTORIAL"
+   },
+   "model": {
+    "modelica": {
+     "className": "ModelicaTest.Thermal.FluidHeatFlowMedia",
+     "compilerLogLevel": "warning",
+     "compilerOptions": {
+      "generate_html_diagnostics": false,
+      "include_protected_variables": false
+     },
+     "fmiTarget": "me",
+     "fmiVersion": "2.0",
+     "platform": "auto",
+     "runtimeOptions": {}
+    }
+   },
+   "modifiers": {
+    "variables": []
+   }
+  },
+  "extensions": [],
+  "version": 3
+ }
+}

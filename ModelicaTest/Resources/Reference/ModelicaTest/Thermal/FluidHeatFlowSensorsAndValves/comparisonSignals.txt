@@ -1,0 +1,10 @@
+time
+massFlowSensor1.y
+volumeFlowSensor1.y
+enthalpyFlowSensor1.y
+pressureSensor1.y
+temperatureSensor1.y
+relPressureSensor1.y
+relTemperatureSensor1.y
+pipeHeated.T
+pipeCooled.T
