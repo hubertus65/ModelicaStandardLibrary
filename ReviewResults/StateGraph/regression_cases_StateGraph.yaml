@@ -1,0 +1,46 @@
+# ModCheck case list: new ModelicaTest.StateGraph coverage tests (branch coverage-improvement).
+#
+# Each case is one new test model, run unmodified on Modelon Impact (MSL 4.1.0
+# dependency). Variables are the comparison signals of the model, as listed in
+# ModelicaTest/Resources/Reference/ModelicaTest/StateGraph/<Model>/comparisonSignals.txt.
+# ncp gives 500 output intervals per second of simulated time.
+library: ModelicaTest
+workspace: msl-coverage
+custom_function: dynamic
+tolerance: 0.001
+
+cases:
+  - name: StepsAndTransitions
+    enabled: true
+    model: ModelicaTest.StateGraph.StepsAndTransitions
+    start_time: 0.0
+    final_time: 3.5
+    ncp: 1750
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "initialStep1.active"
+      - "stepWithSignal1.active"
+      - "step2.active"
+      - "stepAfterAlternative.active"
+      - "step3.active"
+      - "step4.active"
+      - "stepWithSignal2.active"
+      - "step5.active"
+  - name: CompositeStepSuspendResume
+    enabled: true
+    model: ModelicaTest.StateGraph.CompositeStepSuspendResume
+    start_time: 0.0
+    final_time: 3.0
+    ncp: 1500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "initialStep1.active"
+      - "compositeStep1.active"
+      - "compositeStep1.stepA.active"
+      - "compositeStep1.stepB.active"
+      - "stepSuspended.active"
+      - "step1.active"

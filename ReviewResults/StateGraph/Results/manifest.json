@@ -1,0 +1,186 @@
+{
+ "run": {
+  "utc": "2026-10-31T04:56:48+00:00",
+  "rtol_factor": 100.0,
+  "descriptor": "impact workspace 'msl-coverage'",
+  "reference_descriptor": "impact workspace 'msl-coverage'",
+  "cases": 2,
+  "cases_this_run": 2,
+  "failed_cases": 0,
+  "bytes": 13461
+ },
+ "cases": [
+  {
+   "name": "CompositeStepSuspendResume",
+   "model": "ModelicaTest.StateGraph.CompositeStepSuspendResume",
+   "variables": [
+    "compositeStep1.active",
+    "compositeStep1.stepA.active",
+    "compositeStep1.stepB.active",
+    "initialStep1.active",
+    "step1.active",
+    "stepSuspended.active",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.14949924300890416,
+    "steps": 1511,
+    "rhs_evaluations": 1555,
+    "jacobian_evaluations": 31,
+    "time_events": 10,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {},
+   "display_units": {},
+   "format": "npz",
+   "bytes": 6198,
+   "record": {
+    "schema": 1,
+    "record_id": "cf2fbb0a898338247be526ad118c29f53ed28c5f8a423223ca0da6ab1a423afe",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T04:56:45",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "1203f8fc266c4be79c97daebd4db411d",
+     "impact_fmu_id": "modelicatest_stategraph_compositestepsuspendresume_20261031_045643_d7c94b5",
+     "model_description_sha256": "07d0d5a7e59ba1f9102b51ab8fda449fd21b85304ad3fbe4712160ac90f39635"
+    },
+    "experiment": {
+     "case_entry_sha256": "9d6453119e79f852c039bbde93e3dabce9e2fd3f0528c16a6728824e0150d08a",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "modelicatest_stategraph_compositestepsuspendresume_20261031_045643_e1c0836",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "2df3ce0ffc347c7a6ceb59ec1c8379439c8d299feae6fb84fa553c99a1558fc3"
+    },
+    "model": {
+     "class": "ModelicaTest.StateGraph.CompositeStepSuspendResume",
+     "libraries": [
+      {
+       "git_commit": "1db057b7f601065ce2247e2d6750badec0dad11f",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 6198,
+     "file": "CompositeStepSuspendResume.npz",
+     "format": "npz",
+     "sha256": "56abe15669fd3676cf90b1fda233b02958eed6d691e2240bc1946e632f795114"
+    },
+    "run": {
+     "utc": "2026-10-31T04:56:48+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "StepsAndTransitions",
+   "model": "ModelicaTest.StateGraph.StepsAndTransitions",
+   "variables": [
+    "initialStep1.active",
+    "step2.active",
+    "step3.active",
+    "step4.active",
+    "step5.active",
+    "stepAfterAlternative.active",
+    "stepWithSignal1.active",
+    "stepWithSignal2.active",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.1874105050228536,
+    "steps": 1767,
+    "rhs_evaluations": 1835,
+    "jacobian_evaluations": 34,
+    "time_events": 16,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {},
+   "display_units": {},
+   "format": "npz",
+   "bytes": 7263,
+   "record": {
+    "schema": 1,
+    "record_id": "0375138fda32fd9511d1ef5fb3e1865148d1389362e9683ac5f0b2c7d10a1e61",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T04:56:36",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "c49d6c6ee0185ab8520d456d3d0b999d",
+     "impact_fmu_id": "modelicatest_stategraph_stepsandtransitions_20261031_045633_e2a4c05",
+     "model_description_sha256": "d00f2c736d3d6cdc7f4a0b17352fd4fe362329668153385285861d5b85f0e39b"
+    },
+    "experiment": {
+     "case_entry_sha256": "f1546e3ee705cf64ecc96e20c17610ca3d67cb687343d09b7db285b23d2de9ce",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "modelicatest_stategraph_stepsandtransitions_20261031_045633_ff8c112",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "3b7549bf4f8abe15ccff5346aa48c7d96a60206f52e3bf193c83311552d643de"
+    },
+    "model": {
+     "class": "ModelicaTest.StateGraph.StepsAndTransitions",
+     "libraries": [
+      {
+       "git_commit": "1db057b7f601065ce2247e2d6750badec0dad11f",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 7263,
+     "file": "StepsAndTransitions.npz",
+     "format": "npz",
+     "sha256": "65ba60074feed38e5be866d798cc3916d2343958b4c0ee5ea463c8a5713c6278"
+    },
+    "run": {
+     "utc": "2026-10-31T04:56:40+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+      "dirty": false
+     }
+    }
+   }
+  }
+ ]
+}

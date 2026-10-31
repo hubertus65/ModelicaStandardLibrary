@@ -1,0 +1,7 @@
+time
+initialStep1.active
+compositeStep1.active
+compositeStep1.stepA.active
+compositeStep1.stepB.active
+stepSuspended.active
+step1.active
