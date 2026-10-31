@@ -1,9 +1,9 @@
-# ModCheck case list: new ModelicaTest.ComplexBlocks coverage tests (branch coverage-improvement).
+# ModCheck case list: new ModelicaTest coverage tests for Modelica.ComplexBlocks (branch coverage-improvement).
 #
-# Each case is one new test model, run unmodified on Modelon Impact (MSL 4.1.0
-# dependency). Variables are the comparison signals of the model, as listed in
-# ModelicaTest/Resources/Reference/ModelicaTest/ComplexBlocks/<Model>/comparisonSignals.txt.
-# ncp gives 500 output intervals per second of simulated time.
+# Each case is one new test model, run unmodified on Modelon Impact (MSL 4.1.0 dependency).
+# Variables are the comparison signals of the model, as listed in
+# ModelicaTest/Resources/Reference/ModelicaTest/<Package>/<Model>/comparisonSignals.txt.
+# ncp gives 500 output intervals per second of simulated time (2000 for long runs).
 library: ModelicaTest
 workspace: msl-coverage
 custom_function: dynamic
@@ -97,45 +97,3 @@ cases:
       - "extractor1.y.im"
       - "extractor2.y.re"
       - "extractor2.y.im"
-  - name: ComplexStep
-    # disabled: Modelon Impact (OCT) fails to compile ComplexStep (generated C code contains the record constructor Modelica.ComplexBlocks.Interfaces.ComplexOutput)
-    enabled: false
-    model: ModelicaTest.ComplexBlocks.ComplexStep
-    start_time: 0.0
-    final_time: 1.0
-    ncp: 500
-    rtol: 1.0e-6
-    modifiers: {}
-    variables:
-      - time
-      - "complexStep1.y.re"
-      - "complexStep1.y.im"
-      - "complexPassThrough1.y.re"
-      - "complexPassThrough1.y.im"
-  - name: ComplexMathConjugateIfExpressions
-    # disabled: Modelon Impact (OCT) fails to compile 'if useConjugateInput then conj(u) else u' (generated C code contains the record constructor ComplexOutput)
-    enabled: false
-    model: ModelicaTest.ComplexBlocks.ComplexMathConjugateIfExpressions
-    start_time: 0.0
-    final_time: 1.0
-    ncp: 500
-    rtol: 1.0e-6
-    modifiers: {}
-    variables:
-      - time
-      - "feedback1.y.re"
-      - "feedback1.y.im"
-      - "feedback2.y.re"
-      - "feedback2.y.im"
-      - "gain1.y.re"
-      - "gain1.y.im"
-      - "gain2.y.re"
-      - "gain2.y.im"
-      - "division1.y.re"
-      - "division1.y.im"
-      - "division2.y.re"
-      - "division2.y.im"
-      - "add3Default.y.re"
-      - "add3Default.y.im"
-      - "add3Conjugate.y.re"
-      - "add3Conjugate.y.im"

@@ -210,6 +210,8 @@ Note: Modelon Impact (OCT) 2026 fails to compile this model. The generated C
 code contains the record constructor
 <code>Modelica.ComplexBlocks.Interfaces.ComplexOutput(0.0, 0.0)</code> from the
 expression <code>if time &lt; startTime then Complex(0) else height</code> in ComplexStep.
+Assigning the if-expression to an intermediate variable first avoids this
+(modelica/ModelicaStandardLibrary#4847).
 </p>
 </html>"));
   end ComplexStep;
@@ -270,6 +272,7 @@ Note: Modelon Impact (OCT) 2026 fails to compile this model. After inlining
 <code>conj()</code>, the generated C code contains the record constructor
 <code>Modelica.ComplexBlocks.Interfaces.ComplexOutput(...)</code> of the connector
 alias type. The same defect appears for Sources.ComplexStep (see ComplexStep).
+Intermediate variables for the if-expressions avoid this (modelica/ModelicaStandardLibrary#4847).
 </p>
 </html>"));
   end ComplexMathConjugateIfExpressions;

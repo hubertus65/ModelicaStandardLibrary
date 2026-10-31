@@ -1,0 +1,172 @@
+{
+ "run": {
+  "utc": "2026-10-31T18:23:02+00:00",
+  "rtol_factor": 100.0,
+  "descriptor": "openmodelica v1.27.1 (64-bit), MSL 4.2.0 dev, cvode",
+  "reference_descriptor": "openmodelica v1.27.1 (64-bit), MSL 4.2.0 dev, cvode",
+  "cases": 2,
+  "cases_this_run": 2,
+  "failed_cases": 0,
+  "bytes": 48687
+ },
+ "cases": [
+  {
+   "name": "ComplexMathConjugateIfExpressions",
+   "model": "ModelicaTest.ComplexBlocks.ComplexMathConjugateIfExpressions",
+   "variables": [
+    "add3Conjugate.y.im",
+    "add3Conjugate.y.re",
+    "add3Default.y.im",
+    "add3Default.y.re",
+    "division1.y.im",
+    "division1.y.re",
+    "division2.y.im",
+    "division2.y.re",
+    "feedback1.y.im",
+    "feedback1.y.re",
+    "feedback2.y.im",
+    "feedback2.y.re",
+    "gain1.y.im",
+    "gain1.y.re",
+    "gain2.y.im",
+    "gain2.y.re",
+    "time"
+   ],
+   "metrics": {
+    "state_events": 0,
+    "time_events": 0,
+    "steps": 500,
+    "function_evaluations": 500,
+    "jacobian_evaluations": 0,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "cpu_time": 0.0045733,
+    "simulation_time": 0.0023461,
+    "kind": "dynamic",
+    "solver": "cvode",
+    "wall_time": 0.03993199998512864,
+    "samples": 502,
+    "omc_version": "OpenModelica v1.27.1 (64-bit)",
+    "msl_version": "4.2.0 dev",
+    "spread_applied": true,
+    "rtol": 9.999999999999999e-05
+   },
+   "units": {},
+   "display_units": {},
+   "format": "npz",
+   "bytes": 45753,
+   "record": {
+    "schema": 1,
+    "record_id": "3033e428151415137156f0c959d50266754f22401e5d3c5326b9599e0210595b",
+    "executable": {},
+    "experiment": {
+     "case_entry_sha256": "1a6b160f4edbe2439c3de18aa400e8fda53b9a86c53390624f43cf5278040cff",
+     "descriptor": "openmodelica v1.27.1 (64-bit), MSL 4.2.0 dev, cvode",
+     "rtol_factor": 100.0
+    },
+    "model": {
+     "class": "ModelicaTest.ComplexBlocks.ComplexMathConjugateIfExpressions",
+     "libraries": [
+      {
+       "git_commit": "d124e82900796ebdb5d710f1015cc306b153d17a",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 45753,
+     "file": "ComplexMathConjugateIfExpressions.npz",
+     "format": "npz",
+     "sha256": "6cdfb6bab4452dacfafd5a4746d62ad650755437f8b4d44dbc9b166f2bc9ead1"
+    },
+    "run": {
+     "utc": "2026-10-31T18:23:02+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "ComplexStep",
+   "model": "ModelicaTest.ComplexBlocks.ComplexStep",
+   "variables": [
+    "complexPassThrough1.y.im",
+    "complexPassThrough1.y.re",
+    "complexStep1.y.im",
+    "complexStep1.y.re",
+    "time"
+   ],
+   "metrics": {
+    "state_events": 1,
+    "time_events": 0,
+    "steps": 752,
+    "function_evaluations": 752,
+    "jacobian_evaluations": 0,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "cpu_time": 0.005088,
+    "simulation_time": 0.0027955,
+    "kind": "dynamic",
+    "solver": "cvode",
+    "wall_time": 0.05826970003545284,
+    "samples": 504,
+    "omc_version": "OpenModelica v1.27.1 (64-bit)",
+    "msl_version": "4.2.0 dev",
+    "spread_applied": true,
+    "rtol": 9.999999999999999e-05
+   },
+   "units": {},
+   "display_units": {},
+   "format": "npz",
+   "bytes": 2934,
+   "record": {
+    "schema": 1,
+    "record_id": "ed71e96b8d75872a4593c56cd3ad143754df5a66ff715818b9e9d31cfeaa325d",
+    "executable": {},
+    "experiment": {
+     "case_entry_sha256": "d24b145a619422c6537bc14f904b91a6963caaf7c05928080dd60224fe3db42c",
+     "descriptor": "openmodelica v1.27.1 (64-bit), MSL 4.2.0 dev, cvode",
+     "rtol_factor": 100.0
+    },
+    "model": {
+     "class": "ModelicaTest.ComplexBlocks.ComplexStep",
+     "libraries": [
+      {
+       "git_commit": "d124e82900796ebdb5d710f1015cc306b153d17a",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 2934,
+     "file": "ComplexStep.npz",
+     "format": "npz",
+     "sha256": "80b1d53164851998a32969ef08363c1b59f4cfe34223755a12b06c1fa657181d"
+    },
+    "run": {
+     "utc": "2026-10-31T18:23:00+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+      "dirty": false
+     }
+    }
+   }
+  }
+ ]
+}
