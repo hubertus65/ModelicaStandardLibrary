@@ -1,0 +1,7 @@
+time
+realValue1.showNumber
+realValue2.showNumber
+integerValue1.showNumber
+integerValue2.showNumber
+booleanValue1.showActive
+booleanValue2.showActive

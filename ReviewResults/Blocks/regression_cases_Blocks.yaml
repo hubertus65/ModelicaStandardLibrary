@@ -1,0 +1,262 @@
+# ModCheck case list: new ModelicaTest.Blocks coverage tests (branch coverage-improvement).
+#
+# Each case is one new test model, run unmodified on Modelon Impact (MSL 4.1.0
+# dependency). Variables are the comparison signals of the model, as listed in
+# ModelicaTest/Resources/Reference/ModelicaTest/Blocks/<Model>/comparisonSignals.txt.
+# ncp gives 500 output intervals per second of simulated time.
+library: ModelicaTest
+workspace: msl-coverage
+custom_function: dynamic
+tolerance: 0.001
+
+cases:
+  - name: MathFunctions
+    enabled: true
+    model: ModelicaTest.Blocks.MathFunctions
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "cos1.y"
+      - "tan1.y"
+      - "acos1.y"
+      - "sinh1.y"
+      - "cosh1.y"
+      - "tanh1.y"
+      - "exp1.y"
+      - "sign1.y"
+      - "signEvent.y"
+      - "atan2Quadrants.y"
+      - "division1.y"
+      - "logNatural.y"
+      - "logBase2.y"
+      - "logBase10.y"
+      - "powerExp.y"
+      - "powerNoExp.y"
+  - name: MathOperators
+    enabled: true
+    model: ModelicaTest.Blocks.MathOperators
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "min1.y"
+      - "minMax1.yMax"
+      - "minMax1.yMin"
+      - "multiSum1.y"
+      - "linearDependency1.y"
+      - "pythagorasLegs.y"
+      - "pythagorasLegs.valid"
+      - "pythagorasHypotenuse.y"
+      - "pythagorasHypotenuse.valid"
+      - "inverse1.y1"
+      - "multiSwitch1.y"
+  - name: TypeConversionsAndChanges
+    enabled: true
+    model: ModelicaTest.Blocks.TypeConversionsAndChanges
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "sum1.y"
+      - "integerToReal1.y"
+      - "integerToBoolean1.y"
+      - "booleanToReal1.y"
+      - "booleanToInteger1.y"
+      - "countIntegerChanges.y"
+      - "countEdges.y"
+      - "countBooleanChanges.y"
+  - name: MathBooleanBlocks
+    enabled: true
+    model: ModelicaTest.Blocks.MathBooleanBlocks
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "and1.y"
+      - "or1.y"
+      - "xor1.y"
+      - "nand1.y"
+      - "nor1.y"
+      - "not1.y"
+      - "multiSwitch1.y"
+      - "booleanPassThrough1.y"
+      - "countRising.y"
+      - "countFalling.y"
+      - "countChanging.y"
+      - "radioButtonSource1.on"
+      - "radioButtonSource2.on"
+  - name: MathIntegerBlocks
+    enabled: true
+    model: ModelicaTest.Blocks.MathIntegerBlocks
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "sum1.y"
+      - "product1.y"
+      - "multiSwitch1.y"
+      - "triggeredAdd1.y"
+      - "integerPassThrough1.y"
+      - "integerExpression1.y"
+      - "integerReplicator1.y[[]2]"
+  - name: InteractionShow
+    enabled: true
+    model: ModelicaTest.Blocks.InteractionShow
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "realValue1.showNumber"
+      - "realValue2.showNumber"
+      - "integerValue1.showNumber"
+      - "integerValue2.showNumber"
+      - "booleanValue1.showActive"
+      - "booleanValue2.showActive"
+  - name: TerminateSimulation
+    enabled: true
+    model: ModelicaTest.Blocks.TerminateSimulation
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "integrator1.y"
+  - name: Statistics
+    enabled: true
+    model: ModelicaTest.Blocks.Statistics
+    start_time: 0.0
+    final_time: 2.0
+    ncp: 1000
+    rtol: 1.0e-6
+    # mean/variance/THD integrate the signal; at 100x rtol (1e-4) the accumulated integration error reaches 1e-3 relative, so the check run is capped at 1e-5
+    max_rtol: 1.0e-5
+    modifiers: {}
+    variables:
+      - time
+      - "continuousMean1.y"
+      - "variance1.y"
+      - "standardDeviation1.y"
+      - "signalExtrema1.y_min"
+      - "signalExtrema1.y_max"
+      - "continuousSignalExtrema1.y_min"
+      - "continuousSignalExtrema1.y_max"
+      - "totalHarmonicDistortion1.y"
+      - "totalHarmonicDistortion1.valid"
+      - "totalHarmonicDistortion2.y"
+  - name: RealFFT
+    enabled: true
+    model: ModelicaTest.Blocks.RealFFT
+    start_time: 0.0
+    final_time: 2.5
+    ncp: 1250
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "realFFT1.info"
+  - name: RoutingMultiplexing
+    enabled: true
+    model: ModelicaTest.Blocks.RoutingMultiplexing
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "deMultiplex2.y1[[]2]"
+      - "deMultiplex2.y2[[]2]"
+      - "deMultiplex3.y1[[]1]"
+      - "deMultiplex3.y3[[]2]"
+      - "deMultiplex4.y4[[]2]"
+      - "deMultiplex6.y6[[]1]"
+      - "deMultiplex5.y1[[]1]"
+      - "deMultiplex5.y5[[]1]"
+      - "extractor1.y"
+      - "extractor2.y"
+  - name: Delays
+    enabled: true
+    model: ModelicaTest.Blocks.Delays
+    start_time: 0.0
+    final_time: 1.5
+    ncp: 750
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "fixedDelay1.y"
+      - "variableDelay1.y"
+  - name: NoiseGenerators
+    enabled: true
+    model: ModelicaTest.Blocks.NoiseGenerators
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "uniformNoise1.y"
+      - "normalNoise1.y"
+      - "truncatedNormalNoise1.y"
+      - "bandLimitedWhiteNoise1.y"
+      - "meanUniform.y"
+      - "meanNormal.y"
+  - name: VariableSources
+    enabled: true
+    model: ModelicaTest.Blocks.VariableSources
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "sineVariable1.y"
+      - "cosineVariable1.y"
+      - "sineVariable2.y"
+      - "cosineVariable2.y"
+      - "sinc1.y"
+  - name: TableDerivatives
+    enabled: true
+    model: ModelicaTest.Blocks.TableDerivatives
+    start_time: 0.0
+    final_time: 1.5
+    ncp: 750
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "combiTimeTableAkima.y[[]1]"
+      - "combiTable1DsAkima.y[[]1]"
+      - "combiTable2DsAkima.y"
+      - "der_timeTableLinear"
+      - "der_timeTableAkima"
+      - "der2_timeTableAkima"
+      - "der_table1DsLinear"
+      - "der_table1DsAkima"
+      - "der2_table1DsAkima"
+      - "der_table2DsLinear"
+      - "der_table2DsAkima"
+      - "der2_table2DsAkima"

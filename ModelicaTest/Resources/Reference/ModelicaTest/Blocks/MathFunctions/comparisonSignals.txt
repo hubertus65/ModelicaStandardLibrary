@@ -1,0 +1,17 @@
+time
+cos1.y
+tan1.y
+acos1.y
+sinh1.y
+cosh1.y
+tanh1.y
+exp1.y
+sign1.y
+signEvent.y
+atan2Quadrants.y
+division1.y
+logNatural.y
+logBase2.y
+logBase10.y
+powerExp.y
+powerNoExp.y

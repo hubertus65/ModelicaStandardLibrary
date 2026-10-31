@@ -1,0 +1,11 @@
+time
+deMultiplex2.y1[2]
+deMultiplex2.y2[2]
+deMultiplex3.y1[1]
+deMultiplex3.y3[2]
+deMultiplex4.y4[2]
+deMultiplex6.y6[1]
+deMultiplex5.y1[1]
+deMultiplex5.y5[1]
+extractor1.y
+extractor2.y

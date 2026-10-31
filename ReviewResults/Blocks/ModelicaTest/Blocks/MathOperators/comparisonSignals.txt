@@ -1,0 +1,12 @@
+time
+inverse1.y1
+linearDependency1.y
+min1.y
+minMax1.yMax
+minMax1.yMin
+multiSum1.y
+multiSwitch1.y
+pythagorasHypotenuse.valid
+pythagorasHypotenuse.y
+pythagorasLegs.valid
+pythagorasLegs.y

@@ -2155,4 +2155,738 @@ the whole homotopy transformation.</p>
     connect(gain.y, limiterMaxZero.u) annotation (Line(points={{1,-30},{10,-30},{10,-30},{18,-30}}, color={0,0,127}));
     annotation (experiment(StopTime=1.0));
   end ZeroThresholds;
+
+  model MathFunctions "Test of elementary mathematical function blocks of Modelica.Blocks.Math"
+    extends Modelica.Icons.Example;
+
+    Modelica.Blocks.Sources.Ramp ramp1(height=1.8, duration=1, offset=-0.9)
+      annotation (Placement(transformation(extent={{-90,50},{-70,70}})));
+    Modelica.Blocks.Sources.Constant const1(k=0.5)
+      annotation (Placement(transformation(extent={{-90,-10},{-70,10}})));
+    Modelica.Blocks.Sources.Ramp ramp2(height=1.9, duration=1, offset=0.1)
+      annotation (Placement(transformation(extent={{-90,-70},{-70,-50}})));
+    Modelica.Blocks.Math.Cos cos1
+      annotation (Placement(transformation(extent={{-30,80},{-10,100}})));
+    Modelica.Blocks.Math.Tan tan1
+      annotation (Placement(transformation(extent={{-30,50},{-10,70}})));
+    Modelica.Blocks.Math.Acos acos1
+      annotation (Placement(transformation(extent={{-30,20},{-10,40}})));
+    Modelica.Blocks.Math.Sinh sinh1
+      annotation (Placement(transformation(extent={{-30,-10},{-10,10}})));
+    Modelica.Blocks.Math.Cosh cosh1
+      annotation (Placement(transformation(extent={{-30,-40},{-10,-20}})));
+    Modelica.Blocks.Math.Tanh tanh1
+      annotation (Placement(transformation(extent={{-30,-70},{-10,-50}})));
+    Modelica.Blocks.Math.Exp exp1
+      annotation (Placement(transformation(extent={{-30,-100},{-10,-80}})));
+    Modelica.Blocks.Math.Sign sign1
+      annotation (Placement(transformation(extent={{10,80},{30,100}})));
+    Modelica.Blocks.Math.Sign signEvent(generateEvent=true)
+      annotation (Placement(transformation(extent={{10,50},{30,70}})));
+    Modelica.Blocks.Math.Atan2 atan2Quadrants
+      annotation (Placement(transformation(extent={{10,20},{30,40}})));
+    Modelica.Blocks.Math.Division division1
+      annotation (Placement(transformation(extent={{10,-100},{30,-80}})));
+    Modelica.Blocks.Math.Log logNatural
+      annotation (Placement(transformation(extent={{50,80},{70,100}})));
+    Modelica.Blocks.Math.Log logBase2(base=2)
+      annotation (Placement(transformation(extent={{50,50},{70,70}})));
+    Modelica.Blocks.Math.Log10 logBase10
+      annotation (Placement(transformation(extent={{50,20},{70,40}})));
+    Modelica.Blocks.Math.Power powerExp(base=2)
+      annotation (Placement(transformation(extent={{50,-10},{70,10}})));
+    Modelica.Blocks.Math.Power powerNoExp(base=2, useExp=false)
+      annotation (Placement(transformation(extent={{50,-40},{70,-20}})));
+  equation
+    connect(ramp1.y, cos1.u) annotation (Line(points={{-69,60},{-50,60},{-50,90},{-32,90}}, color={0,0,127}));
+    connect(ramp1.y, tan1.u) annotation (Line(points={{-69,60},{-32,60}}, color={0,0,127}));
+    connect(ramp1.y, acos1.u) annotation (Line(points={{-69,60},{-50,60},{-50,30},{-32,30}}, color={0,0,127}));
+    connect(ramp1.y, sinh1.u) annotation (Line(points={{-69,60},{-50,60},{-50,0},{-32,0}}, color={0,0,127}));
+    connect(ramp1.y, cosh1.u) annotation (Line(points={{-69,60},{-50,60},{-50,-30},{-32,-30}}, color={0,0,127}));
+    connect(ramp1.y, tanh1.u) annotation (Line(points={{-69,60},{-50,60},{-50,-60},{-32,-60}}, color={0,0,127}));
+    connect(ramp1.y, exp1.u) annotation (Line(points={{-69,60},{-50,60},{-50,-90},{-32,-90}}, color={0,0,127}));
+    connect(ramp1.y, sign1.u) annotation (Line(points={{-69,60},{-30,60},{-30,90},{8,90}}, color={0,0,127}));
+    connect(ramp1.y, signEvent.u) annotation (Line(points={{-69,60},{8,60}}, color={0,0,127}));
+    connect(const1.y, atan2Quadrants.u1) annotation (Line(points={{-69,0},{-30,0},{-30,36},{8,36}}, color={0,0,127}));
+    connect(ramp1.y, atan2Quadrants.u2) annotation (Line(points={{-69,60},{-30,60},{-30,24},{8,24}}, color={0,0,127}));
+    connect(ramp1.y, division1.u1) annotation (Line(points={{-69,60},{-30,60},{-30,-84},{8,-84}}, color={0,0,127}));
+    connect(ramp2.y, division1.u2) annotation (Line(points={{-69,-60},{-30,-60},{-30,-96},{8,-96}}, color={0,0,127}));
+    connect(ramp2.y, logNatural.u) annotation (Line(points={{-69,-60},{-10,-60},{-10,90},{48,90}}, color={0,0,127}));
+    connect(ramp2.y, logBase2.u) annotation (Line(points={{-69,-60},{-10,-60},{-10,60},{48,60}}, color={0,0,127}));
+    connect(ramp2.y, logBase10.u) annotation (Line(points={{-69,-60},{-10,-60},{-10,30},{48,30}}, color={0,0,127}));
+    connect(ramp1.y, powerExp.u) annotation (Line(points={{-69,60},{-10,60},{-10,0},{48,0}}, color={0,0,127}));
+    connect(ramp1.y, powerNoExp.u) annotation (Line(points={{-69,60},{-10,60},{-10,-30},{48,-30}}, color={0,0,127}));
+    annotation (experiment(StopTime=1),
+      Documentation(info="<html>
+<p>
+Tests the single-input function blocks of
+<a href=\"modelica://Modelica.Blocks.Math\">Modelica.Blocks.Math</a>
+that are not exercised elsewhere: Cos, Tan, Acos, Sinh, Cosh, Tanh, Exp,
+Sign (with and without events), Atan2, Division, Log (natural and base 2),
+Log10 and Power (with and without the exp-based implementation).
+</p>
+<p>
+Input <code>ramp1</code> sweeps (-0.9, 0.9), which stays inside the domain of
+Acos and away from the poles of Tan. Input <code>ramp2</code> sweeps (0.1, 2)
+for the logarithms. Atan2 gets a constant <code>u1</code> and a sign-changing
+<code>u2</code>, so its output moves from the first to the second quadrant
+without a branch jump.
+</p>
+</html>"));
+  end MathFunctions;
+
+  model MathOperators "Test of Min, MinMax, MultiSum, LinearDependency, Pythagoras, MultiSwitch and InverseBlockConstraints"
+    extends Modelica.Icons.Example;
+
+    Modelica.Blocks.Sources.Sine sine1(f=1)
+      annotation (Placement(transformation(extent={{-90,80},{-70,100}})));
+    Modelica.Blocks.Sources.Ramp ramp1(height=2, duration=1, offset=-1)
+      annotation (Placement(transformation(extent={{-90,50},{-70,70}})));
+    Modelica.Blocks.Sources.Constant const1(k=0.3)
+      annotation (Placement(transformation(extent={{-90,20},{-70,40}})));
+    Modelica.Blocks.Sources.Constant const2(k=0.8)
+      annotation (Placement(transformation(extent={{-90,-10},{-70,10}})));
+    Modelica.Blocks.Sources.Ramp ramp2(height=1.9, duration=1, offset=0.1)
+      annotation (Placement(transformation(extent={{-90,-50},{-70,-30}})));
+    Modelica.Blocks.Sources.BooleanPulse booleanPulse1(width=50, period=0.4)
+      annotation (Placement(transformation(extent={{-90,-90},{-70,-70}})));
+    Modelica.Blocks.Sources.BooleanPulse booleanPulse2(width=30, period=0.25, startTime=0.1)
+      annotation (Placement(transformation(extent={{-90,-120},{-70,-100}})));
+    Modelica.Blocks.Math.Min min1
+      annotation (Placement(transformation(extent={{-30,80},{-10,100}})));
+    Modelica.Blocks.Math.MinMax minMax1(nu=3)
+      annotation (Placement(transformation(extent={{-30,50},{-10,70}})));
+    Modelica.Blocks.Math.MultiSum multiSum1(nu=3, k={1,-2,0.5})
+      annotation (Placement(transformation(extent={{-30,20},{-10,40}})));
+    Modelica.Blocks.Math.LinearDependency linearDependency1(y0=1, k1=0.5, k2=-0.2)
+      annotation (Placement(transformation(extent={{-30,-10},{-10,10}})));
+    Modelica.Blocks.Math.Pythagoras pythagorasLegs
+      annotation (Placement(transformation(extent={{30,80},{50,100}})));
+    Modelica.Blocks.Math.Pythagoras pythagorasHypotenuse(u1IsHypotenuse=true)
+      annotation (Placement(transformation(extent={{30,50},{50,70}})));
+    Modelica.Blocks.Math.InverseBlockConstraints inverse1
+      annotation (Placement(transformation(extent={{-20,-50},{40,-30}})));
+    Modelica.Blocks.Math.Exp exp1
+      annotation (Placement(transformation(extent={{0,-50},{20,-30}})));
+    Modelica.Blocks.Math.MultiSwitch multiSwitch1(nu=2, expr={1,2}, y_default=-1)
+      annotation (Placement(transformation(extent={{-30,-105},{-10,-85}})));
+  equation
+    connect(sine1.y, min1.u1) annotation (Line(points={{-69,90},{-50,90},{-50,96},{-32,96}}, color={0,0,127}));
+    connect(ramp1.y, min1.u2) annotation (Line(points={{-69,60},{-50,60},{-50,84},{-32,84}}, color={0,0,127}));
+    connect(sine1.y, minMax1.u[1]) annotation (Line(points={{-69,90},{-50,90},{-50,60},{-32,60}}, color={0,0,127}));
+    connect(ramp1.y, minMax1.u[2]) annotation (Line(points={{-69,60},{-32,60}}, color={0,0,127}));
+    connect(const1.y, minMax1.u[3]) annotation (Line(points={{-69,30},{-50,30},{-50,60},{-32,60}}, color={0,0,127}));
+    connect(sine1.y, multiSum1.u[1]) annotation (Line(points={{-69,90},{-50,90},{-50,30},{-32,30}}, color={0,0,127}));
+    connect(ramp1.y, multiSum1.u[2]) annotation (Line(points={{-69,60},{-50,60},{-50,30},{-32,30}}, color={0,0,127}));
+    connect(const1.y, multiSum1.u[3]) annotation (Line(points={{-69,30},{-32,30}}, color={0,0,127}));
+    connect(sine1.y, linearDependency1.u1) annotation (Line(points={{-69,90},{-50,90},{-50,6},{-32,6}}, color={0,0,127}));
+    connect(ramp1.y, linearDependency1.u2) annotation (Line(points={{-69,60},{-50,60},{-50,-6},{-32,-6}}, color={0,0,127}));
+    connect(ramp1.y, pythagorasLegs.u1) annotation (Line(points={{-69,60},{-20,60},{-20,96},{28,96}}, color={0,0,127}));
+    connect(const1.y, pythagorasLegs.u2) annotation (Line(points={{-69,30},{-20,30},{-20,84},{28,84}}, color={0,0,127}));
+    connect(const2.y, pythagorasHypotenuse.u1) annotation (Line(points={{-69,0},{-20,0},{-20,66},{28,66}}, color={0,0,127}));
+    connect(ramp1.y, pythagorasHypotenuse.u2) annotation (Line(points={{-69,60},{-20,60},{-20,54},{28,54}}, color={0,0,127}));
+    connect(ramp2.y, inverse1.u1) annotation (Line(points={{-69,-40},{-22,-40}}, color={0,0,127}));
+    connect(inverse1.y1, exp1.u) annotation (Line(points={{-12,-40},{-2,-40}}, color={0,0,127}));
+    connect(exp1.y, inverse1.u2) annotation (Line(points={{21,-40},{32,-40}}, color={0,0,127}));
+    connect(booleanPulse1.y, multiSwitch1.u[1]) annotation (Line(points={{-69,-80},{-50,-80},{-50,-95},{-32,-95}}, color={255,0,255}));
+    connect(booleanPulse2.y, multiSwitch1.u[2]) annotation (Line(points={{-69,-110},{-50,-110},{-50,-95},{-32,-95}}, color={255,0,255}));
+    annotation (Diagram(coordinateSystem(extent={{-100,-130},{100,110}})),
+      experiment(StopTime=1),
+      Documentation(info="<html>
+<p>
+Tests multi-input blocks of
+<a href=\"modelica://Modelica.Blocks.Math\">Modelica.Blocks.Math</a>.
+</p>
+<ul>
+<li><code>pythagorasLegs</code> computes a hypotenuse from two legs. <code>pythagorasHypotenuse</code>
+    computes a leg from the hypotenuse 0.8 while |u2| sweeps up to 1, so its
+    <code>valid</code> output switches to false when |u2| &gt; 0.8.</li>
+<li><code>inverse1</code> inverts an Exp block, so <code>inverse1.y1</code> = log(<code>ramp2.y</code>).</li>
+<li><code>multiSwitch1</code> selects 1 or 2 by priority of two Boolean pulses, and -1 when neither is active.</li>
+</ul>
+</html>"));
+  end MathOperators;
+
+  model TypeConversionsAndChanges "Test of Integer/Boolean/Real conversion blocks and change detection blocks of Modelica.Blocks.Math"
+    extends Modelica.Icons.Example;
+
+    Modelica.Blocks.Sources.IntegerStep integerStep1(height=3, startTime=0.3)
+      annotation (Placement(transformation(extent={{-90,70},{-70,90}})));
+    Modelica.Blocks.Sources.IntegerStep integerStep2(height=-2, offset=1, startTime=0.6)
+      annotation (Placement(transformation(extent={{-90,40},{-70,60}})));
+    Modelica.Blocks.MathInteger.Sum sum1(nu=2)
+      annotation (Placement(transformation(extent={{-50,55},{-30,75}})));
+    Modelica.Blocks.Math.IntegerToReal integerToReal1
+      annotation (Placement(transformation(extent={{-10,80},{10,100}})));
+    Modelica.Blocks.Math.IntegerToBoolean integerToBoolean1(threshold=3)
+      annotation (Placement(transformation(extent={{-10,50},{10,70}})));
+    Modelica.Blocks.Math.IntegerChange integerChange1
+      annotation (Placement(transformation(extent={{-10,20},{10,40}})));
+    Modelica.Blocks.Sources.BooleanPulse booleanPulse1(width=50, period=0.2, startTime=0.05)
+      annotation (Placement(transformation(extent={{-90,-50},{-70,-30}})));
+    Modelica.Blocks.Math.BooleanToReal booleanToReal1(realTrue=2, realFalse=-1)
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
+    Modelica.Blocks.Math.BooleanToInteger booleanToInteger1(integerTrue=5, integerFalse=-3)
+      annotation (Placement(transformation(extent={{-10,-40},{10,-20}})));
+    Modelica.Blocks.Math.Edge edge1
+      annotation (Placement(transformation(extent={{-10,-70},{10,-50}})));
+    Modelica.Blocks.Math.BooleanChange booleanChange1
+      annotation (Placement(transformation(extent={{-10,-100},{10,-80}})));
+    Modelica.Blocks.Sources.IntegerConstant integerConstant1(k=1)
+      annotation (Placement(transformation(extent={{10,-140},{30,-120}})));
+    Modelica.Blocks.MathInteger.TriggeredAdd countIntegerChanges
+      annotation (Placement(transformation(extent={{50,20},{70,40}})));
+    Modelica.Blocks.MathInteger.TriggeredAdd countEdges
+      annotation (Placement(transformation(extent={{50,-70},{70,-50}})));
+    Modelica.Blocks.MathInteger.TriggeredAdd countBooleanChanges
+      annotation (Placement(transformation(extent={{50,-100},{70,-80}})));
+  equation
+    connect(integerStep1.y, sum1.u[1]) annotation (Line(points={{-69,80},{-60,80},{-60,65},{-52,65}}, color={255,127,0}));
+    connect(integerStep2.y, sum1.u[2]) annotation (Line(points={{-69,50},{-60,50},{-60,65},{-52,65}}, color={255,127,0}));
+    connect(sum1.y, integerToReal1.u) annotation (Line(points={{-29,65},{-20,65},{-20,90},{-12,90}}, color={255,127,0}));
+    connect(sum1.y, integerToBoolean1.u) annotation (Line(points={{-29,65},{-20,65},{-20,60},{-12,60}}, color={255,127,0}));
+    connect(sum1.y, integerChange1.u) annotation (Line(points={{-29,65},{-20,65},{-20,30},{-12,30}}, color={255,127,0}));
+    connect(booleanPulse1.y, booleanToReal1.u) annotation (Line(points={{-69,-40},{-40,-40},{-40,0},{-12,0}}, color={255,0,255}));
+    connect(booleanPulse1.y, booleanToInteger1.u) annotation (Line(points={{-69,-40},{-40,-40},{-40,-30},{-12,-30}}, color={255,0,255}));
+    connect(booleanPulse1.y, edge1.u) annotation (Line(points={{-69,-40},{-40,-40},{-40,-60},{-12,-60}}, color={255,0,255}));
+    connect(booleanPulse1.y, booleanChange1.u) annotation (Line(points={{-69,-40},{-40,-40},{-40,-90},{-12,-90}}, color={255,0,255}));
+    connect(integerChange1.y, countIntegerChanges.trigger) annotation (Line(points={{11,30},{54,30},{54,18}}, color={255,0,255}));
+    connect(edge1.y, countEdges.trigger) annotation (Line(points={{11,-60},{54,-60},{54,-72}}, color={255,0,255}));
+    connect(booleanChange1.y, countBooleanChanges.trigger) annotation (Line(points={{11,-90},{54,-90},{54,-102}}, color={255,0,255}));
+    connect(integerConstant1.y, countIntegerChanges.u) annotation (Line(points={{31,-130},{40,-130},{40,30},{48,30}}, color={255,127,0}));
+    connect(integerConstant1.y, countEdges.u) annotation (Line(points={{31,-130},{40,-130},{40,-60},{48,-60}}, color={255,127,0}));
+    connect(integerConstant1.y, countBooleanChanges.u) annotation (Line(points={{31,-130},{40,-130},{40,-90},{48,-90}}, color={255,127,0}));
+    annotation (Diagram(coordinateSystem(extent={{-100,-150},{100,110}})),
+      experiment(StopTime=1),
+      Documentation(info="<html>
+<p>
+Tests IntegerToReal, IntegerToBoolean, BooleanToReal, BooleanToInteger and
+the event-detection blocks Edge, BooleanChange and IntegerChange of
+<a href=\"modelica://Modelica.Blocks.Math\">Modelica.Blocks.Math</a>.
+</p>
+<p>
+The detection blocks are true only at an event instant, which cannot be
+compared reliably in a result file. Each one therefore drives a
+<a href=\"modelica://Modelica.Blocks.MathInteger.TriggeredAdd\">TriggeredAdd</a>
+counter, and the counters are the comparison signals. Expected final values:
+2 integer changes, 5 rising edges and 10 Boolean changes.
+</p>
+</html>"));
+  end TypeConversionsAndChanges;
+
+  model MathBooleanBlocks "Test of the vectorized Boolean blocks of Modelica.Blocks.MathBoolean and Boolean sources"
+    extends Modelica.Icons.Example;
+
+    Modelica.Blocks.Sources.BooleanTable booleanTable1(table={0.1,0.3,0.5,0.7})
+      annotation (Placement(transformation(extent={{-90,70},{-70,90}})));
+    Modelica.Blocks.Sources.BooleanTable booleanTable2(table={0.2,0.6,0.8})
+      annotation (Placement(transformation(extent={{-90,30},{-70,50}})));
+    Modelica.Blocks.Sources.BooleanPulse booleanPulse1(width=40, period=0.3)
+      annotation (Placement(transformation(extent={{-90,-10},{-70,10}})));
+    Modelica.Blocks.MathBoolean.And and1(nu=3)
+      annotation (Placement(transformation(extent={{-30,90},{-10,110}})));
+    Modelica.Blocks.MathBoolean.Or or1(nu=3)
+      annotation (Placement(transformation(extent={{-30,60},{-10,80}})));
+    Modelica.Blocks.MathBoolean.Xor xor1(nu=2)
+      annotation (Placement(transformation(extent={{-30,30},{-10,50}})));
+    Modelica.Blocks.MathBoolean.Nand nand1(nu=2)
+      annotation (Placement(transformation(extent={{-30,0},{-10,20}})));
+    Modelica.Blocks.MathBoolean.Nor nor1(nu=2)
+      annotation (Placement(transformation(extent={{-30,-30},{-10,-10}})));
+    Modelica.Blocks.MathBoolean.Not not1
+      annotation (Placement(transformation(extent={{-30,-60},{-10,-40}})));
+    Modelica.Blocks.MathBoolean.MultiSwitch multiSwitch1(nu=2, expr={true,false})
+      annotation (Placement(transformation(extent={{-30,-90},{-10,-70}})));
+    Modelica.Blocks.Routing.BooleanPassThrough booleanPassThrough1
+      annotation (Placement(transformation(extent={{10,90},{30,110}})));
+    Modelica.Blocks.MathBoolean.RisingEdge risingEdge1
+      annotation (Placement(transformation(extent={{10,30},{30,50}})));
+    Modelica.Blocks.MathBoolean.FallingEdge fallingEdge1
+      annotation (Placement(transformation(extent={{10,0},{30,20}})));
+    Modelica.Blocks.MathBoolean.ChangingEdge changingEdge1
+      annotation (Placement(transformation(extent={{10,-30},{30,-10}})));
+    Modelica.Blocks.Sources.IntegerConstant integerConstant1(k=1)
+      annotation (Placement(transformation(extent={{10,-70},{30,-50}})));
+    Modelica.Blocks.MathInteger.TriggeredAdd countRising
+      annotation (Placement(transformation(extent={{50,30},{70,50}})));
+    Modelica.Blocks.MathInteger.TriggeredAdd countFalling
+      annotation (Placement(transformation(extent={{50,0},{70,20}})));
+    Modelica.Blocks.MathInteger.TriggeredAdd countChanging
+      annotation (Placement(transformation(extent={{50,-30},{70,-10}})));
+    Modelica.Blocks.Sources.RadioButtonSource radioButtonSource1(buttonTimeTable={0.2,0.7}, reset={radioButtonSource2.on})
+      annotation (Placement(transformation(extent={{-90,-130},{-70,-110}})));
+    Modelica.Blocks.Sources.RadioButtonSource radioButtonSource2(buttonTimeTable={0.45}, reset={radioButtonSource1.on})
+      annotation (Placement(transformation(extent={{-50,-130},{-30,-110}})));
+  equation
+    connect(booleanTable1.y, and1.u[1]) annotation (Line(points={{-69,80},{-50,80},{-50,100},{-32,100}}, color={255,0,255}));
+    connect(booleanTable2.y, and1.u[2]) annotation (Line(points={{-69,40},{-50,40},{-50,100},{-32,100}}, color={255,0,255}));
+    connect(booleanPulse1.y, and1.u[3]) annotation (Line(points={{-69,0},{-50,0},{-50,100},{-32,100}}, color={255,0,255}));
+    connect(booleanTable1.y, or1.u[1]) annotation (Line(points={{-69,80},{-50,80},{-50,70},{-32,70}}, color={255,0,255}));
+    connect(booleanTable2.y, or1.u[2]) annotation (Line(points={{-69,40},{-50,40},{-50,70},{-32,70}}, color={255,0,255}));
+    connect(booleanPulse1.y, or1.u[3]) annotation (Line(points={{-69,0},{-50,0},{-50,70},{-32,70}}, color={255,0,255}));
+    connect(booleanTable1.y, xor1.u[1]) annotation (Line(points={{-69,80},{-50,80},{-50,40},{-32,40}}, color={255,0,255}));
+    connect(booleanTable2.y, xor1.u[2]) annotation (Line(points={{-69,40},{-32,40}}, color={255,0,255}));
+    connect(booleanTable1.y, nand1.u[1]) annotation (Line(points={{-69,80},{-50,80},{-50,10},{-32,10}}, color={255,0,255}));
+    connect(booleanTable2.y, nand1.u[2]) annotation (Line(points={{-69,40},{-50,40},{-50,10},{-32,10}}, color={255,0,255}));
+    connect(booleanTable1.y, nor1.u[1]) annotation (Line(points={{-69,80},{-50,80},{-50,-20},{-32,-20}}, color={255,0,255}));
+    connect(booleanTable2.y, nor1.u[2]) annotation (Line(points={{-69,40},{-50,40},{-50,-20},{-32,-20}}, color={255,0,255}));
+    connect(booleanTable1.y, not1.u) annotation (Line(points={{-69,80},{-50,80},{-50,-50},{-32,-50}}, color={255,0,255}));
+    connect(booleanTable1.y, multiSwitch1.u[1]) annotation (Line(points={{-69,80},{-50,80},{-50,-80},{-32,-80}}, color={255,0,255}));
+    connect(booleanTable2.y, multiSwitch1.u[2]) annotation (Line(points={{-69,40},{-50,40},{-50,-80},{-32,-80}}, color={255,0,255}));
+    connect(and1.y, booleanPassThrough1.u) annotation (Line(points={{-9,100},{8,100}}, color={255,0,255}));
+    connect(booleanPulse1.y, risingEdge1.u) annotation (Line(points={{-69,0},{-30,0},{-30,40},{8,40}}, color={255,0,255}));
+    connect(booleanPulse1.y, fallingEdge1.u) annotation (Line(points={{-69,0},{-30,0},{-30,10},{8,10}}, color={255,0,255}));
+    connect(booleanPulse1.y, changingEdge1.u) annotation (Line(points={{-69,0},{-30,0},{-30,-20},{8,-20}}, color={255,0,255}));
+    connect(risingEdge1.y, countRising.trigger) annotation (Line(points={{31,40},{54,40},{54,28}}, color={255,0,255}));
+    connect(fallingEdge1.y, countFalling.trigger) annotation (Line(points={{31,10},{54,10},{54,-2}}, color={255,0,255}));
+    connect(changingEdge1.y, countChanging.trigger) annotation (Line(points={{31,-20},{54,-20},{54,-32}}, color={255,0,255}));
+    connect(integerConstant1.y, countRising.u) annotation (Line(points={{31,-60},{40,-60},{40,40},{48,40}}, color={255,127,0}));
+    connect(integerConstant1.y, countFalling.u) annotation (Line(points={{31,-60},{40,-60},{40,10},{48,10}}, color={255,127,0}));
+    connect(integerConstant1.y, countChanging.u) annotation (Line(points={{31,-60},{40,-60},{40,-20},{48,-20}}, color={255,127,0}));
+    annotation (Diagram(coordinateSystem(extent={{-100,-140},{100,120}})),
+      experiment(StopTime=1),
+      Documentation(info="<html>
+<p>
+Tests the logical operators (And, Or, Xor, Nand, Nor, Not), the edge
+detectors (RisingEdge, FallingEdge, ChangingEdge) and MultiSwitch of
+<a href=\"modelica://Modelica.Blocks.MathBoolean\">Modelica.Blocks.MathBoolean</a>.
+It also tests Routing.BooleanPassThrough and two mutually resetting
+Sources.RadioButtonSource blocks.
+</p>
+<p>
+As in TypeConversionsAndChanges, each edge detector drives a TriggeredAdd
+counter, and the counters are compared instead of the momentary edge
+signals. <code>booleanPulse1</code> (period 0.3 s, width 40 %) gives 3 rising
+(0.3, 0.6, 0.9 s), 3 falling and 6 changing edges in 1 s. The rise at t = 0 is not
+counted, because when-equations do not trigger during initialization.
+</p>
+</html>"));
+  end MathBooleanBlocks;
+
+  model MathIntegerBlocks "Test of Modelica.Blocks.MathInteger, Integer sources and Integer routing blocks"
+    extends Modelica.Icons.Example;
+
+    Modelica.Blocks.Sources.IntegerStep integerStep1(height=2, offset=1, startTime=0.25)
+      annotation (Placement(transformation(extent={{-90,70},{-70,90}})));
+    Modelica.Blocks.Sources.IntegerConstant integerConstant1(k=3)
+      annotation (Placement(transformation(extent={{-90,40},{-70,60}})));
+    Modelica.Blocks.Sources.IntegerExpression integerExpression1(y=integer(4*time))
+      annotation (Placement(transformation(extent={{-90,10},{-70,30}})));
+    Modelica.Blocks.MathInteger.Sum sum1(nu=3, k={1,-1,2})
+      annotation (Placement(transformation(extent={{-30,70},{-10,90}})));
+    Modelica.Blocks.MathInteger.Product product1(nu=3)
+      annotation (Placement(transformation(extent={{-30,40},{-10,60}})));
+    Modelica.Blocks.Sources.BooleanTable booleanTable1(table={0.3,0.6})
+      annotation (Placement(transformation(extent={{-90,-30},{-70,-10}})));
+    Modelica.Blocks.Sources.BooleanPulse booleanPulse1(width=50, period=0.4, startTime=0.1)
+      annotation (Placement(transformation(extent={{-90,-60},{-70,-40}})));
+    Modelica.Blocks.MathInteger.MultiSwitch multiSwitch1(nu=2, expr={10,20}, y_default=-1, use_pre_as_default=false)
+      annotation (Placement(transformation(extent={{-30,-45},{-10,-25}})));
+    Modelica.Blocks.Sources.SampleTrigger sampleTrigger1(period=0.1, startTime=0.05)
+      annotation (Placement(transformation(extent={{-90,-100},{-70,-80}})));
+    Modelica.Blocks.Sources.BooleanTable resetTable(table={0.52,0.54})
+      annotation (Placement(transformation(extent={{-90,-130},{-70,-110}})));
+    Modelica.Blocks.MathInteger.TriggeredAdd triggeredAdd1(use_reset=true, use_set=true, y_start=2)
+      annotation (Placement(transformation(extent={{10,-100},{30,-80}})));
+    Modelica.Blocks.Routing.IntegerReplicator integerReplicator1(nout=2)
+      annotation (Placement(transformation(extent={{30,70},{50,90}})));
+    Modelica.Blocks.Routing.IntegerPassThrough integerPassThrough1
+      annotation (Placement(transformation(extent={{30,40},{50,60}})));
+  equation
+    connect(integerStep1.y, sum1.u[1]) annotation (Line(points={{-69,80},{-32,80}}, color={255,127,0}));
+    connect(integerConstant1.y, sum1.u[2]) annotation (Line(points={{-69,50},{-50,50},{-50,80},{-32,80}}, color={255,127,0}));
+    connect(integerExpression1.y, sum1.u[3]) annotation (Line(points={{-69,20},{-50,20},{-50,80},{-32,80}}, color={255,127,0}));
+    connect(integerStep1.y, product1.u[1]) annotation (Line(points={{-69,80},{-50,80},{-50,50},{-32,50}}, color={255,127,0}));
+    connect(integerConstant1.y, product1.u[2]) annotation (Line(points={{-69,50},{-32,50}}, color={255,127,0}));
+    connect(integerExpression1.y, product1.u[3]) annotation (Line(points={{-69,20},{-50,20},{-50,50},{-32,50}}, color={255,127,0}));
+    connect(booleanTable1.y, multiSwitch1.u[1]) annotation (Line(points={{-69,-20},{-50,-20},{-50,-35},{-32,-35}}, color={255,0,255}));
+    connect(booleanPulse1.y, multiSwitch1.u[2]) annotation (Line(points={{-69,-50},{-50,-50},{-50,-35},{-32,-35}}, color={255,0,255}));
+    connect(integerConstant1.y, triggeredAdd1.u) annotation (Line(points={{-69,50},{-30,50},{-30,-90},{8,-90}}, color={255,127,0}));
+    connect(sampleTrigger1.y, triggeredAdd1.trigger) annotation (Line(points={{-69,-90},{14,-90},{14,-102}}, color={255,0,255}));
+    connect(resetTable.y, triggeredAdd1.reset) annotation (Line(points={{-69,-120},{26,-120},{26,-102}}, color={255,0,255}));
+    connect(integerStep1.y, triggeredAdd1.set) annotation (Line(points={{-69,80},{-24,80},{-24,-78},{20,-78}}, color={255,127,0}));
+    connect(sum1.y, integerReplicator1.u) annotation (Line(points={{-9,80},{28,80}}, color={255,127,0}));
+    connect(product1.y, integerPassThrough1.u) annotation (Line(points={{-9,50},{28,50}}, color={255,127,0}));
+    annotation (Diagram(coordinateSystem(extent={{-100,-140},{100,100}})),
+      experiment(StopTime=1),
+      Documentation(info="<html>
+<p>
+Tests Sum, Product, MultiSwitch and TriggeredAdd (with reset and set ports) of
+<a href=\"modelica://Modelica.Blocks.MathInteger\">Modelica.Blocks.MathInteger</a>,
+the Integer sources IntegerStep, IntegerConstant and IntegerExpression,
+Sources.SampleTrigger, and Routing.IntegerReplicator and
+Routing.IntegerPassThrough.
+</p>
+<p>
+<code>triggeredAdd1</code> starts at 2 and adds 3 at every sample of
+<code>sampleTrigger1</code> (period 0.1 s, from 0.05 s). The short pulse of
+<code>resetTable</code> at 0.52 s sets it back to <code>integerStep1.y</code> = 3.
+</p>
+</html>"));
+  end MathIntegerBlocks;
+
+  model InteractionShow "Test of the animation blocks of Modelica.Blocks.Interaction.Show"
+    extends Modelica.Icons.Example;
+
+    Modelica.Blocks.Sources.Sine sine1(f=2)
+      annotation (Placement(transformation(extent={{-90,50},{-70,70}})));
+    Modelica.Blocks.Sources.IntegerStep integerStep1(height=5, startTime=0.5)
+      annotation (Placement(transformation(extent={{-90,-10},{-70,10}})));
+    Modelica.Blocks.Sources.BooleanPulse booleanPulse1(period=0.25)
+      annotation (Placement(transformation(extent={{-90,-70},{-70,-50}})));
+    Modelica.Blocks.Interaction.Show.RealValue realValue1
+      annotation (Placement(transformation(extent={{-30,50},{-10,70}})));
+    Modelica.Blocks.Interaction.Show.RealValue realValue2(use_numberPort=false, number=2*time)
+      annotation (Placement(transformation(extent={{-30,80},{-10,100}})));
+    Modelica.Blocks.Interaction.Show.IntegerValue integerValue1
+      annotation (Placement(transformation(extent={{-30,-10},{-10,10}})));
+    Modelica.Blocks.Interaction.Show.IntegerValue integerValue2(use_numberPort=false, number=integer(10*time))
+      annotation (Placement(transformation(extent={{-30,20},{-10,40}})));
+    Modelica.Blocks.Interaction.Show.BooleanValue booleanValue1
+      annotation (Placement(transformation(extent={{-30,-70},{-10,-50}})));
+    Modelica.Blocks.Interaction.Show.BooleanValue booleanValue2(use_activePort=false, active=time > 0.5)
+      annotation (Placement(transformation(extent={{-30,-40},{-10,-20}})));
+  equation
+    connect(sine1.y, realValue1.numberPort) annotation (Line(points={{-69,60},{-32,60}}, color={0,0,127}));
+    connect(integerStep1.y, integerValue1.numberPort) annotation (Line(points={{-69,0},{-32,0}}, color={255,127,0}));
+    connect(booleanPulse1.y, booleanValue1.activePort) annotation (Line(points={{-69,-60},{-32,-60}}, color={255,0,255}));
+    annotation (experiment(StopTime=1),
+      Documentation(info="<html>
+<p>
+Tests RealValue, IntegerValue and BooleanValue of
+<a href=\"modelica://Modelica.Blocks.Interaction.Show\">Modelica.Blocks.Interaction.Show</a>,
+each once with the input port enabled and once with the value given by a
+binding equation (<code>use_numberPort=false</code> / <code>use_activePort=false</code>).
+The displayed values <code>showNumber</code> and <code>showActive</code> are compared.
+</p>
+</html>"));
+  end InteractionShow;
+
+  model TerminateSimulation "Test of Modelica.Blocks.Logical.TerminateSimulation"
+    extends Modelica.Icons.Example;
+
+    Modelica.Blocks.Sources.Constant constant1(k=1)
+      annotation (Placement(transformation(extent={{-90,-10},{-70,10}})));
+    Modelica.Blocks.Continuous.Integrator integrator1
+      annotation (Placement(transformation(extent={{-50,-10},{-30,10}})));
+    Modelica.Blocks.Logical.TerminateSimulation terminateSimulation1(condition=integrator1.y >= 0.5, terminationText="... integrator output reached 0.5")
+      annotation (Placement(transformation(extent={{-10,-10},{50,10}})));
+  equation
+    connect(constant1.y, integrator1.u) annotation (Line(points={{-69,0},{-52,0}}, color={0,0,127}));
+    annotation (experiment(StopTime=1),
+      Documentation(info="<html>
+<p>
+An integrator of the constant 1 reaches 0.5 at t = 0.5 s. At that point
+<a href=\"modelica://Modelica.Blocks.Logical.TerminateSimulation\">TerminateSimulation</a>
+stops the simulation, before the stop time of 1 s. The reference result
+therefore has to end at t = 0.5 s.
+</p>
+</html>"));
+  end TerminateSimulation;
+
+  model Statistics "Test of the statistics and signal-analysis blocks of Modelica.Blocks.Math"
+    extends Modelica.Icons.Example;
+
+    Modelica.Blocks.Sources.Sine sine1(amplitude=1, f=2, offset=0.5)
+      annotation (Placement(transformation(extent={{-90,50},{-70,70}})));
+    Modelica.Blocks.Sources.Sine sineBase(amplitude=1, f=2)
+      annotation (Placement(transformation(extent={{-90,-30},{-70,-10}})));
+    Modelica.Blocks.Sources.Sine sineHarmonic(amplitude=0.2, f=6)
+      annotation (Placement(transformation(extent={{-90,-70},{-70,-50}})));
+    Modelica.Blocks.Math.Add add1
+      annotation (Placement(transformation(extent={{-50,-50},{-30,-30}})));
+    Modelica.Blocks.Math.ContinuousMean continuousMean1
+      annotation (Placement(transformation(extent={{-10,80},{10,100}})));
+    Modelica.Blocks.Math.Variance variance1
+      annotation (Placement(transformation(extent={{-10,50},{10,70}})));
+    Modelica.Blocks.Math.StandardDeviation standardDeviation1
+      annotation (Placement(transformation(extent={{-10,20},{10,40}})));
+    Modelica.Blocks.Math.SignalExtrema signalExtrema1(Ts=0.01)
+      annotation (Placement(transformation(extent={{-10,-20},{10,0}})));
+    Modelica.Blocks.Math.ContinuousSignalExtrema continuousSignalExtrema1
+      annotation (Placement(transformation(extent={{-10,-50},{10,-30}})));
+    Modelica.Blocks.Math.TotalHarmonicDistortion totalHarmonicDistortion1(f=2)
+      annotation (Placement(transformation(extent={{-10,-80},{10,-60}})));
+    Modelica.Blocks.Math.TotalHarmonicDistortion totalHarmonicDistortion2(f=2, useFirstHarmonic=false)
+      annotation (Placement(transformation(extent={{-10,-110},{10,-90}})));
+  equation
+    connect(sineBase.y, add1.u1) annotation (Line(points={{-69,-20},{-60,-20},{-60,-34},{-52,-34}}, color={0,0,127}));
+    connect(sineHarmonic.y, add1.u2) annotation (Line(points={{-69,-60},{-60,-60},{-60,-46},{-52,-46}}, color={0,0,127}));
+    connect(sine1.y, continuousMean1.u) annotation (Line(points={{-69,60},{-40,60},{-40,90},{-12,90}}, color={0,0,127}));
+    connect(sine1.y, variance1.u) annotation (Line(points={{-69,60},{-12,60}}, color={0,0,127}));
+    connect(sine1.y, standardDeviation1.u) annotation (Line(points={{-69,60},{-40,60},{-40,30},{-12,30}}, color={0,0,127}));
+    connect(add1.y, signalExtrema1.u) annotation (Line(points={{-29,-40},{-20,-40},{-20,-10},{-12,-10}}, color={0,0,127}));
+    connect(add1.y, continuousSignalExtrema1.u) annotation (Line(points={{-29,-40},{-12,-40}}, color={0,0,127}));
+    connect(add1.y, totalHarmonicDistortion1.u) annotation (Line(points={{-29,-40},{-20,-40},{-20,-70},{-12,-70}}, color={0,0,127}));
+    connect(add1.y, totalHarmonicDistortion2.u) annotation (Line(points={{-29,-40},{-20,-40},{-20,-100},{-12,-100}}, color={0,0,127}));
+    annotation (Diagram(coordinateSystem(extent={{-100,-120},{100,110}})),
+      experiment(StopTime=2),
+      Documentation(info="<html>
+<p>
+Tests ContinuousMean, Variance, StandardDeviation, SignalExtrema,
+ContinuousSignalExtrema and TotalHarmonicDistortion of
+<a href=\"modelica://Modelica.Blocks.Math\">Modelica.Blocks.Math</a>.
+</p>
+<ul>
+<li><code>sine1</code> = 0.5 + sin(2&pi;&middot;2&middot;t). After whole periods, the mean tends
+    to 0.5, the variance to 0.5 and the standard deviation to 0.707.</li>
+<li><code>add1</code> = sin(2&pi;&middot;2&middot;t) + 0.2&middot;sin(2&pi;&middot;6&middot;t). Its
+    THD relative to the first harmonic is 0.2 (<code>totalHarmonicDistortion1</code>).
+    Relative to the total RMS it is 0.2/sqrt(1.04) = 0.196
+    (<code>totalHarmonicDistortion2</code>). Both are valid after the first period of 0.5 s.</li>
+</ul>
+</html>"));
+  end Statistics;
+
+  model RealFFT "Test of Modelica.Blocks.Math.RealFFT"
+    extends Modelica.Icons.Example;
+
+    Modelica.Blocks.Sources.Sine sineBase(amplitude=1, f=2)
+      annotation (Placement(transformation(extent={{-90,10},{-70,30}})));
+    Modelica.Blocks.Sources.Sine sineHarmonic(amplitude=0.2, f=6)
+      annotation (Placement(transformation(extent={{-90,-30},{-70,-10}})));
+    Modelica.Blocks.Math.Add add1
+      annotation (Placement(transformation(extent={{-50,-10},{-30,10}})));
+    Modelica.Blocks.Math.RealFFT realFFT1(f_max=10, f_res=0.5, resultFileName="realFFT.mat")
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
+  equation
+    connect(sineBase.y, add1.u1) annotation (Line(points={{-69,20},{-60,20},{-60,6},{-52,6}}, color={0,0,127}));
+    connect(sineHarmonic.y, add1.u2) annotation (Line(points={{-69,-20},{-60,-20},{-60,-6},{-52,-6}}, color={0,0,127}));
+    connect(add1.y, realFFT1.u) annotation (Line(points={{-29,0},{-12,0}}, color={0,0,127}));
+    annotation (experiment(StopTime=2.5),
+      Documentation(info="<html>
+<p>
+<a href=\"modelica://Modelica.Blocks.Math.RealFFT\">RealFFT</a> samples
+sin(2&pi;&middot;2&middot;t) + 0.2&middot;sin(2&pi;&middot;6&middot;t) with a frequency resolution of
+0.5 Hz up to 10 Hz, so sampling ends after 2 s. The FFT is computed
+once and written to <code>realFFT.mat</code>. That file holds the amplitudes
+at 2 Hz (expected 1) and 6 Hz (expected 0.2). The buffers <code>abs</code> and
+<code>arg</code> are protected, so the comparison signal is the FFT status flag
+<code>info</code> (0 = success).
+</p>
+</html>"));
+  end RealFFT;
+
+  model RoutingMultiplexing "Test of the multiplexer, demultiplexer and extraction blocks of Modelica.Blocks.Routing"
+    extends Modelica.Icons.Example;
+
+    Modelica.Blocks.Sources.Sine sine[6](amplitude={1,2,3,4,5,6}, each f=1)
+      annotation (Placement(transformation(extent={{-100,-10},{-80,10}})));
+    Modelica.Blocks.Routing.Multiplex4 multiplex4
+      annotation (Placement(transformation(extent={{-50,70},{-30,90}})));
+    Modelica.Blocks.Routing.Multiplex5 multiplex5
+      annotation (Placement(transformation(extent={{-50,10},{-30,30}})));
+    Modelica.Blocks.Routing.Multiplex6 multiplex6
+      annotation (Placement(transformation(extent={{-50,-50},{-30,-30}})));
+    Modelica.Blocks.Routing.DeMultiplex2 deMultiplex2(n1=2, n2=2)
+      annotation (Placement(transformation(extent={{10,70},{30,90}})));
+    Modelica.Blocks.Routing.DeMultiplex3 deMultiplex3(n1=1, n2=2, n3=2)
+      annotation (Placement(transformation(extent={{10,10},{30,30}})));
+    Modelica.Blocks.Routing.DeMultiplex4 deMultiplex4(n1=1, n2=1, n3=2, n4=2)
+      annotation (Placement(transformation(extent={{10,-30},{30,-10}})));
+    Modelica.Blocks.Routing.DeMultiplex6 deMultiplex6
+      annotation (Placement(transformation(extent={{10,-70},{30,-50}})));
+    Modelica.Blocks.Routing.ExtractSignal extractSignal1(nin=6, nout=5, extract={6,4,2,1,1})
+      annotation (Placement(transformation(extent={{10,-110},{30,-90}})));
+    Modelica.Blocks.Routing.DeMultiplex5 deMultiplex5
+      annotation (Placement(transformation(extent={{50,-110},{70,-90}})));
+    Modelica.Blocks.Sources.IntegerStep integerStep1(height=4, offset=1, startTime=0.5)
+      annotation (Placement(transformation(extent={{-50,-120},{-30,-100}})));
+    Modelica.Blocks.Sources.IntegerStep integerStep2(height=7, offset=1, startTime=0.5)
+      annotation (Placement(transformation(extent={{-50,-160},{-30,-140}})));
+    Modelica.Blocks.Routing.Extractor extractor1(nin=6)
+      annotation (Placement(transformation(extent={{10,-150},{30,-130}})));
+    Modelica.Blocks.Routing.Extractor extractor2(nin=6, allowOutOfRange=true, outOfRangeValue=-10)
+      annotation (Placement(transformation(extent={{50,-150},{70,-130}})));
+  equation
+    connect(sine[1].y, multiplex4.u1[1]) annotation (Line(points={{-79,0},{-66,0},{-66,88},{-52,88}}, color={0,0,127}));
+    connect(sine[2].y, multiplex4.u2[1]) annotation (Line(points={{-79,0},{-66,0},{-66,82.7},{-52,82.7}}, color={0,0,127}));
+    connect(sine[3].y, multiplex4.u3[1]) annotation (Line(points={{-79,0},{-66,0},{-66,77.3},{-52,77.3}}, color={0,0,127}));
+    connect(sine[4].y, multiplex4.u4[1]) annotation (Line(points={{-79,0},{-66,0},{-66,72},{-52,72}}, color={0,0,127}));
+    connect(sine[1].y, multiplex5.u1[1]) annotation (Line(points={{-79,0},{-66,0},{-66,28},{-52,28}}, color={0,0,127}));
+    connect(sine[2].y, multiplex5.u2[1]) annotation (Line(points={{-79,0},{-66,0},{-66,24},{-52,24}}, color={0,0,127}));
+    connect(sine[3].y, multiplex5.u3[1]) annotation (Line(points={{-79,0},{-66,0},{-66,20},{-52,20}}, color={0,0,127}));
+    connect(sine[4].y, multiplex5.u4[1]) annotation (Line(points={{-79,0},{-66,0},{-66,16},{-52,16}}, color={0,0,127}));
+    connect(sine[5].y, multiplex5.u5[1]) annotation (Line(points={{-79,0},{-66,0},{-66,12},{-52,12}}, color={0,0,127}));
+    connect(sine[1].y, multiplex6.u1[1]) annotation (Line(points={{-79,0},{-66,0},{-66,-32},{-52,-32}}, color={0,0,127}));
+    connect(sine[2].y, multiplex6.u2[1]) annotation (Line(points={{-79,0},{-66,0},{-66,-35.2},{-52,-35.2}}, color={0,0,127}));
+    connect(sine[3].y, multiplex6.u3[1]) annotation (Line(points={{-79,0},{-66,0},{-66,-38.4},{-52,-38.4}}, color={0,0,127}));
+    connect(sine[4].y, multiplex6.u4[1]) annotation (Line(points={{-79,0},{-66,0},{-66,-41.6},{-52,-41.6}}, color={0,0,127}));
+    connect(sine[5].y, multiplex6.u5[1]) annotation (Line(points={{-79,0},{-66,0},{-66,-44.8},{-52,-44.8}}, color={0,0,127}));
+    connect(sine[6].y, multiplex6.u6[1]) annotation (Line(points={{-79,0},{-66,0},{-66,-48},{-52,-48}}, color={0,0,127}));
+    connect(multiplex4.y, deMultiplex2.u) annotation (Line(points={{-29,80},{8,80}}, color={0,0,127}));
+    connect(multiplex5.y, deMultiplex3.u) annotation (Line(points={{-29,20},{8,20}}, color={0,0,127}));
+    connect(multiplex6.y, deMultiplex4.u) annotation (Line(points={{-29,-40},{-10,-40},{-10,-20},{8,-20}}, color={0,0,127}));
+    connect(multiplex6.y, deMultiplex6.u) annotation (Line(points={{-29,-40},{-10,-40},{-10,-60},{8,-60}}, color={0,0,127}));
+    connect(multiplex6.y, extractSignal1.u) annotation (Line(points={{-29,-40},{-10,-40},{-10,-100},{8,-100}}, color={0,0,127}));
+    connect(extractSignal1.y, deMultiplex5.u) annotation (Line(points={{31,-100},{48,-100}}, color={0,0,127}));
+    connect(multiplex6.y, extractor1.u) annotation (Line(points={{-29,-40},{-10,-40},{-10,-140},{8,-140}}, color={0,0,127}));
+    connect(multiplex6.y, extractor2.u) annotation (Line(points={{-29,-40},{10,-40},{10,-140},{48,-140}}, color={0,0,127}));
+    connect(integerStep1.y, extractor1.index) annotation (Line(points={{-29,-110},{20,-110},{20,-152}}, color={255,127,0}));
+    connect(integerStep2.y, extractor2.index) annotation (Line(points={{-29,-150},{60,-150},{60,-152}}, color={255,127,0}));
+    annotation (Diagram(coordinateSystem(extent={{-100,-170},{100,100}})),
+      experiment(StopTime=1),
+      Documentation(info="<html>
+<p>
+Six sine signals of amplitudes 1&hellip;6 are combined by Multiplex4, Multiplex5 and
+Multiplex6 and split again by DeMultiplex2&hellip;DeMultiplex6 with different
+port dimensions. ExtractSignal reorders the vector ({6,4,2,1,1}). Extractor picks
+element 1 and then element 5 after 0.5 s. A second Extractor with
+<code>allowOutOfRange=true</code> switches to an index out of range and
+outputs <code>outOfRangeValue</code> = -10.
+</p>
+</html>"));
+  end RoutingMultiplexing;
+
+  model Delays "Test of Modelica.Blocks.Nonlinear.FixedDelay and VariableDelay"
+    extends Modelica.Icons.Example;
+
+    Modelica.Blocks.Sources.Sine sine1(f=2)
+      annotation (Placement(transformation(extent={{-90,30},{-70,50}})));
+    Modelica.Blocks.Sources.Ramp ramp1(height=0.4, duration=1, startTime=0.2)
+      annotation (Placement(transformation(extent={{-90,-30},{-70,-10}})));
+    Modelica.Blocks.Nonlinear.FixedDelay fixedDelay1(delayTime=0.2)
+      annotation (Placement(transformation(extent={{-30,30},{-10,50}})));
+    Modelica.Blocks.Nonlinear.VariableDelay variableDelay1(delayMax=0.5)
+      annotation (Placement(transformation(extent={{-30,-20},{-10,0}})));
+  equation
+    connect(sine1.y, fixedDelay1.u) annotation (Line(points={{-69,40},{-32,40}}, color={0,0,127}));
+    connect(sine1.y, variableDelay1.u) annotation (Line(points={{-69,40},{-50,40},{-50,-10},{-32,-10}}, color={0,0,127}));
+    connect(ramp1.y, variableDelay1.delayTime) annotation (Line(points={{-69,-20},{-50,-20},{-50,-16},{-32,-16}}, color={0,0,127}));
+    annotation (experiment(StopTime=1.5),
+      Documentation(info="<html>
+<p>
+A 2 Hz sine is delayed by a constant 0.2 s
+(<a href=\"modelica://Modelica.Blocks.Nonlinear.FixedDelay\">FixedDelay</a>)
+and by a delay that ramps from 0 to 0.4 s
+(<a href=\"modelica://Modelica.Blocks.Nonlinear.VariableDelay\">VariableDelay</a>,
+<code>delayMax</code> = 0.5 s).
+</p>
+</html>"));
+  end Delays;
+
+  model NoiseGenerators "Test of the noise generators of Modelica.Blocks.Noise with fixed seeds"
+    extends Modelica.Icons.Example;
+
+    inner Modelica.Blocks.Noise.GlobalSeed globalSeed(fixedSeed=1234)
+      annotation (Placement(transformation(extent={{-90,70},{-70,90}})));
+    Modelica.Blocks.Noise.UniformNoise uniformNoise1(samplePeriod=0.01, y_min=-1, y_max=1, useAutomaticLocalSeed=false, fixedLocalSeed=10)
+      annotation (Placement(transformation(extent={{-50,30},{-30,50}})));
+    Modelica.Blocks.Noise.NormalNoise normalNoise1(samplePeriod=0.01, mu=0.5, sigma=0.2, useAutomaticLocalSeed=false, fixedLocalSeed=20)
+      annotation (Placement(transformation(extent={{-50,0},{-30,20}})));
+    Modelica.Blocks.Noise.TruncatedNormalNoise truncatedNormalNoise1(samplePeriod=0.01, y_min=0, y_max=2, useAutomaticLocalSeed=false, fixedLocalSeed=30)
+      annotation (Placement(transformation(extent={{-50,-30},{-30,-10}})));
+    Modelica.Blocks.Noise.BandLimitedWhiteNoise bandLimitedWhiteNoise1(samplePeriod=0.01, noisePower=0.1, useAutomaticLocalSeed=false, fixedLocalSeed=40)
+      annotation (Placement(transformation(extent={{-50,-60},{-30,-40}})));
+    Modelica.Blocks.Math.ContinuousMean meanUniform
+      annotation (Placement(transformation(extent={{10,30},{30,50}})));
+    Modelica.Blocks.Math.ContinuousMean meanNormal
+      annotation (Placement(transformation(extent={{10,0},{30,20}})));
+  equation
+    connect(uniformNoise1.y, meanUniform.u) annotation (Line(points={{-29,40},{8,40}}, color={0,0,127}));
+    connect(normalNoise1.y, meanNormal.u) annotation (Line(points={{-29,10},{8,10}}, color={0,0,127}));
+    annotation (experiment(StopTime=1),
+      Documentation(info="<html>
+<p>
+Tests GlobalSeed, UniformNoise, NormalNoise, TruncatedNormalNoise and
+BandLimitedWhiteNoise of
+<a href=\"modelica://Modelica.Blocks.Noise\">Modelica.Blocks.Noise</a>.
+The global seed and all local seeds are fixed
+(<code>useAutomaticLocalSeed=false</code>), so the sequences are
+reproducible and the noise outputs can be compared directly. The running means
+of the uniform (expected 0) and normal (expected 0.5) noise are compared as
+well.
+</p>
+</html>"));
+  end NoiseGenerators;
+
+  model VariableSources "Test of sine/cosine sources with variable frequency and amplitude, and of Sinc"
+    extends Modelica.Icons.Example;
+
+    Modelica.Blocks.Sources.Ramp amplitudeRamp(height=1, duration=1, offset=0.5)
+      annotation (Placement(transformation(extent={{-90,30},{-70,50}})));
+    Modelica.Blocks.Sources.Ramp frequencyRamp(height=4, duration=1, offset=1)
+      annotation (Placement(transformation(extent={{-90,-10},{-70,10}})));
+    Modelica.Blocks.Sources.SineVariableFrequencyAndAmplitude sineVariable1
+      annotation (Placement(transformation(extent={{-30,50},{-10,70}})));
+    Modelica.Blocks.Sources.CosineVariableFrequencyAndAmplitude cosineVariable1
+      annotation (Placement(transformation(extent={{-30,20},{-10,40}})));
+    Modelica.Blocks.Sources.SineVariableFrequencyAndAmplitude sineVariable2(useConstantAmplitude=true, constantAmplitude=2)
+      annotation (Placement(transformation(extent={{-30,-10},{-10,10}})));
+    Modelica.Blocks.Sources.CosineVariableFrequencyAndAmplitude cosineVariable2(useConstantFrequency=true, constantFrequency=3)
+      annotation (Placement(transformation(extent={{-30,-40},{-10,-20}})));
+    Modelica.Blocks.Sources.Sinc sinc1(amplitude=2, f=5)
+      annotation (Placement(transformation(extent={{-30,-80},{-10,-60}})));
+  equation
+    connect(amplitudeRamp.y, sineVariable1.amplitude) annotation (Line(points={{-69,40},{-50,40},{-50,66},{-32,66}}, color={0,0,127}));
+    connect(frequencyRamp.y, sineVariable1.f) annotation (Line(points={{-69,0},{-50,0},{-50,54},{-32,54}}, color={0,0,127}));
+    connect(amplitudeRamp.y, cosineVariable1.amplitude) annotation (Line(points={{-69,40},{-50,40},{-50,36},{-32,36}}, color={0,0,127}));
+    connect(frequencyRamp.y, cosineVariable1.f) annotation (Line(points={{-69,0},{-50,0},{-50,24},{-32,24}}, color={0,0,127}));
+    connect(frequencyRamp.y, sineVariable2.f) annotation (Line(points={{-69,0},{-50,0},{-50,-6},{-32,-6}}, color={0,0,127}));
+    connect(amplitudeRamp.y, cosineVariable2.amplitude) annotation (Line(points={{-69,40},{-50,40},{-50,-24},{-32,-24}}, color={0,0,127}));
+    annotation (experiment(StopTime=1),
+      Documentation(info="<html>
+<p>
+Tests
+<a href=\"modelica://Modelica.Blocks.Sources.SineVariableFrequencyAndAmplitude\">SineVariableFrequencyAndAmplitude</a>
+and
+<a href=\"modelica://Modelica.Blocks.Sources.CosineVariableFrequencyAndAmplitude\">CosineVariableFrequencyAndAmplitude</a>
+with both inputs variable, and with a constant amplitude or a constant
+frequency. It also tests
+<a href=\"modelica://Modelica.Blocks.Sources.Sinc\">Sinc</a>.
+</p>
+</html>"));
+  end VariableSources;
+
+  model TableDerivatives "Test of the derivative functions of the table blocks (Modelica.Blocks.Tables.Internal)"
+    extends Modelica.Icons.Example;
+
+    Modelica.Blocks.Sources.CombiTimeTable combiTimeTableLinear(table=[0,0; 0.5,1; 1,0.5; 1.5,2], smoothness=Modelica.Blocks.Types.Smoothness.LinearSegments)
+      annotation (Placement(transformation(extent={{-50,70},{-30,90}})));
+    Modelica.Blocks.Sources.CombiTimeTable combiTimeTableAkima(table=[0,0; 0.5,1; 1,0.5; 1.5,2], smoothness=Modelica.Blocks.Types.Smoothness.ContinuousDerivative)
+      annotation (Placement(transformation(extent={{-50,40},{-30,60}})));
+    Modelica.Blocks.Sources.Ramp ramp1(height=1.5, duration=1.5)
+      annotation (Placement(transformation(extent={{-90,-10},{-70,10}})));
+    Modelica.Blocks.Sources.Ramp ramp2(height=1, duration=1.5)
+      annotation (Placement(transformation(extent={{-90,-80},{-70,-60}})));
+    Modelica.Blocks.Tables.CombiTable1Ds combiTable1DsLinear(table=[0,0; 0.5,1; 1,0.5; 1.5,2], smoothness=Modelica.Blocks.Types.Smoothness.LinearSegments)
+      annotation (Placement(transformation(extent={{-50,0},{-30,20}})));
+    Modelica.Blocks.Tables.CombiTable1Ds combiTable1DsAkima(table=[0,0; 0.5,1; 1,0.5; 1.5,2], smoothness=Modelica.Blocks.Types.Smoothness.ContinuousDerivative)
+      annotation (Placement(transformation(extent={{-50,-30},{-30,-10}})));
+    Modelica.Blocks.Tables.CombiTable2Ds combiTable2DsLinear(table=[0,0,1; 0,0,1; 1,1,3], smoothness=Modelica.Blocks.Types.Smoothness.LinearSegments)
+      annotation (Placement(transformation(extent={{-50,-70},{-30,-50}})));
+    Modelica.Blocks.Tables.CombiTable2Ds combiTable2DsAkima(table=[0,0,1; 0,0,1; 1,1,3], smoothness=Modelica.Blocks.Types.Smoothness.ContinuousDerivative)
+      annotation (Placement(transformation(extent={{-50,-100},{-30,-80}})));
+    Real der_timeTableLinear = der(combiTimeTableLinear.y[1]) "First derivative of linear time table";
+    Real der_timeTableAkima = der(combiTimeTableAkima.y[1]) "First derivative of Akima time table";
+    Real der2_timeTableAkima = der(der_timeTableAkima) "Second derivative of Akima time table";
+    Real der_table1DsLinear = der(combiTable1DsLinear.y[1]) "First derivative of linear 1D table";
+    Real der_table1DsAkima = der(combiTable1DsAkima.y[1]) "First derivative of Akima 1D table";
+    Real der2_table1DsAkima = der(der_table1DsAkima) "Second derivative of Akima 1D table";
+    Real der_table2DsLinear = der(combiTable2DsLinear.y) "First derivative of linear 2D table";
+    Real der_table2DsAkima = der(combiTable2DsAkima.y) "First derivative of Akima 2D table";
+    Real der2_table2DsAkima = der(der_table2DsAkima) "Second derivative of Akima 2D table";
+  equation
+    connect(ramp1.y, combiTable1DsLinear.u) annotation (Line(points={{-69,0},{-60,0},{-60,10},{-52,10}}, color={0,0,127}));
+    connect(ramp1.y, combiTable1DsAkima.u) annotation (Line(points={{-69,0},{-60,0},{-60,-20},{-52,-20}}, color={0,0,127}));
+    connect(ramp1.y, combiTable2DsLinear.u1) annotation (Line(points={{-69,0},{-60,0},{-60,-54},{-52,-54}}, color={0,0,127}));
+    connect(ramp2.y, combiTable2DsLinear.u2) annotation (Line(points={{-69,-70},{-60,-70},{-60,-66},{-52,-66}}, color={0,0,127}));
+    connect(ramp1.y, combiTable2DsAkima.u1) annotation (Line(points={{-69,0},{-60,0},{-60,-84},{-52,-84}}, color={0,0,127}));
+    connect(ramp2.y, combiTable2DsAkima.u2) annotation (Line(points={{-69,-70},{-60,-70},{-60,-96},{-52,-96}}, color={0,0,127}));
+    annotation (experiment(StopTime=1.5),
+      Documentation(info="<html>
+<p>
+Differentiates the outputs of CombiTimeTable, CombiTable1Ds and CombiTable2Ds
+explicitly with <code>der()</code>, so the tool has to use the
+<code>derivative</code> annotations of the table interpolation functions in
+<a href=\"modelica://Modelica.Blocks.Tables.Internal\">Modelica.Blocks.Tables.Internal</a>.
+</p>
+<ul>
+<li>With <code>LinearSegments</code>, only a first derivative is available
+    (<code>getDer*ValueNoDer</code>).</li>
+<li>With <code>ContinuousDerivative</code> (Akima), first and second derivatives are available
+    (<code>getDer*Value</code>, <code>getDer2*Value</code>).</li>
+</ul>
+</html>"));
+  end TableDerivatives;
 end Blocks;

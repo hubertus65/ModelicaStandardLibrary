@@ -1,0 +1,8 @@
+time
+sum1.y
+product1.y
+multiSwitch1.y
+triggeredAdd1.y
+integerPassThrough1.y
+integerExpression1.y
+integerReplicator1.y[2]

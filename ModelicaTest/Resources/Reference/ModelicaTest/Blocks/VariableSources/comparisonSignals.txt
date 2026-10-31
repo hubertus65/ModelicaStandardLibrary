@@ -1,0 +1,6 @@
+time
+sineVariable1.y
+cosineVariable1.y
+sineVariable2.y
+cosineVariable2.y
+sinc1.y

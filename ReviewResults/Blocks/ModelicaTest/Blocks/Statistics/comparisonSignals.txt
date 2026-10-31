@@ -1,0 +1,11 @@
+time
+continuousMean1.y
+continuousSignalExtrema1.y_max
+continuousSignalExtrema1.y_min
+signalExtrema1.y_max
+signalExtrema1.y_min
+standardDeviation1.y
+totalHarmonicDistortion1.valid
+totalHarmonicDistortion1.y
+totalHarmonicDistortion2.y
+variance1.y

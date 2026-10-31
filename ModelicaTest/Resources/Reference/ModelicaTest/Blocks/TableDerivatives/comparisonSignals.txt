@@ -1,0 +1,13 @@
+time
+combiTimeTableAkima.y[1]
+combiTable1DsAkima.y[1]
+combiTable2DsAkima.y
+der_timeTableLinear
+der_timeTableAkima
+der2_timeTableAkima
+der_table1DsLinear
+der_table1DsAkima
+der2_table1DsAkima
+der_table2DsLinear
+der_table2DsAkima
+der2_table2DsAkima

@@ -1,0 +1,9 @@
+time
+sum1.y
+integerToReal1.y
+integerToBoolean1.y
+booleanToReal1.y
+booleanToInteger1.y
+countIntegerChanges.y
+countEdges.y
+countBooleanChanges.y

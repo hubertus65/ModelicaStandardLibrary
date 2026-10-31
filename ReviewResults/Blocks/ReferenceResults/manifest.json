@@ -1,0 +1,1238 @@
+[
+  {
+    "name": "Delays",
+    "model": "ModelicaTest.Blocks.Delays",
+    "variables": [
+      "fixedDelay1.y",
+      "time",
+      "variableDelay1.y"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.10374691605102271,
+      "steps": 753,
+      "rhs_evaluations": 765,
+      "jacobian_evaluations": 14,
+      "time_events": 2,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 11548,
+    "record": {
+      "schema": 1,
+      "record_id": "cf5eca1fe9c724af256a3db06c2d5b599a190963563dd7f1ed5e823b2948936e",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T04:29:31",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "f59adf6de743a57fc8866b4ddaeeab40",
+        "impact_fmu_id": "modelicatest_blocks_delays_20261031_042930_5887949",
+        "model_description_sha256": "8ffe61ba9bfc3d0ae75038d72b3392d4a7f664ee702776cb657b476f218a8820"
+      },
+      "experiment": {
+        "case_entry_sha256": "f27d570b6059e412cff25779df42f3a7455b5a0550eca91f15e082557654e841",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_blocks_delays_20261031_042930_57b877f",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "822fe000235c67bd9b4606e43389ffb5475a1cf1c89f3e1189f3df557e72c13a"
+      },
+      "model": {
+        "class": "ModelicaTest.Blocks.Delays",
+        "libraries": [
+          {
+            "git_commit": "0eabd391b5f3c3e6d3200b3304751e8a05956728",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 11548,
+        "file": "Delays.npz",
+        "format": "npz",
+        "sha256": "14f7503e2d776e1acec0ba4ee11cb9567819fbef0889574a6d12f7d3040e8918"
+      },
+      "run": {
+        "utc": "2026-10-31T04:29:34+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "InteractionShow",
+    "model": "ModelicaTest.Blocks.InteractionShow",
+    "variables": [
+      "booleanValue1.showActive",
+      "booleanValue2.showActive",
+      "integerValue1.showNumber",
+      "integerValue2.showNumber",
+      "realValue1.showNumber",
+      "realValue2.showNumber",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.05305005400441587,
+      "steps": 520,
+      "rhs_evaluations": 584,
+      "jacobian_evaluations": 16,
+      "time_events": 6,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "state_events": 10,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 7107,
+    "record": {
+      "schema": 1,
+      "record_id": "eda89c74965b4bff70ca9ff8f91cb2be1cb77671217dc294fb4b7e1ac16104be",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T04:28:58",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "e44d70cafa976c9fa16b7786ed660be",
+        "impact_fmu_id": "modelicatest_blocks_interactionshow_20261031_042856_5e8efc4",
+        "model_description_sha256": "5744ea4ec791bcc23d4954f52043cebc19968fbc064aecb9f0fe41b3313703ab"
+      },
+      "experiment": {
+        "case_entry_sha256": "9266804b57a9acb0b926363482368199a56fb5699b5ac375e21b04f6575a69cc",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_blocks_interactionshow_20261031_042856_6d76110",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "dea8da8604681d2c5ba6679355384773b9e31f869fa92880d85b5413fd11e43f"
+      },
+      "model": {
+        "class": "ModelicaTest.Blocks.InteractionShow",
+        "libraries": [
+          {
+            "git_commit": "0eabd391b5f3c3e6d3200b3304751e8a05956728",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 7107,
+        "file": "InteractionShow.npz",
+        "format": "npz",
+        "sha256": "ee4da0fdd6fcfbc4c7b145eb64659f50fdeeca5e6367920784a1108d609dc666"
+      },
+      "run": {
+        "utc": "2026-10-31T04:29:02+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "MathBooleanBlocks",
+    "model": "ModelicaTest.Blocks.MathBooleanBlocks",
+    "variables": [
+      "and1.y",
+      "booleanPassThrough1.y",
+      "countChanging.y",
+      "countFalling.y",
+      "countRising.y",
+      "multiSwitch1.y",
+      "nand1.y",
+      "nor1.y",
+      "not1.y",
+      "or1.y",
+      "radioButtonSource1.on",
+      "radioButtonSource2.on",
+      "time",
+      "xor1.y"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.07912640692666173,
+      "steps": 513,
+      "rhs_evaluations": 565,
+      "jacobian_evaluations": 13,
+      "time_events": 12,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 5094,
+    "record": {
+      "schema": 1,
+      "record_id": "989312be9e883a6dd297b4e456a96a471f31f1a6cacb215d6256b59e208b77e2",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T04:28:44",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "774c558852b8d04ec47c68729a51c063",
+        "impact_fmu_id": "modelicatest_blocks_mathbooleanblocks_20261031_042841_3f4f8d8",
+        "model_description_sha256": "bf3e60f148db03cffde21e3745ed80ccd9e9a71171215160f3e76e6c88f9dc20"
+      },
+      "experiment": {
+        "case_entry_sha256": "20517c64b8a27401df9e74fa70badc37a8b4fd471733b4f7b0c6041d253eac59",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_blocks_mathbooleanblocks_20261031_042841_fd39b20",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "601c6d4d0d2129f92539015fdfaae1fc61ed6a099d8602d7a40eccae83e25465"
+      },
+      "model": {
+        "class": "ModelicaTest.Blocks.MathBooleanBlocks",
+        "libraries": [
+          {
+            "git_commit": "0eabd391b5f3c3e6d3200b3304751e8a05956728",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 5094,
+        "file": "MathBooleanBlocks.npz",
+        "format": "npz",
+        "sha256": "68c3cdaff24cee3c0f6adee4e751df3928fd5a2472d752d5156b5afdc6b31f2c"
+      },
+      "run": {
+        "utc": "2026-10-31T04:28:48+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "MathFunctions",
+    "model": "ModelicaTest.Blocks.MathFunctions",
+    "variables": [
+      "acos1.y",
+      "atan2Quadrants.y",
+      "cos1.y",
+      "cosh1.y",
+      "division1.y",
+      "exp1.y",
+      "logBase10.y",
+      "logBase2.y",
+      "logNatural.y",
+      "powerExp.y",
+      "powerNoExp.y",
+      "sign1.y",
+      "signEvent.y",
+      "sinh1.y",
+      "tan1.y",
+      "tanh1.y",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.04855380405206233,
+      "steps": 503,
+      "rhs_evaluations": 515,
+      "jacobian_evaluations": 11,
+      "time_events": 1,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "state_events": 2,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "acos1.y": "rad",
+      "atan2Quadrants.y": "rad"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 53282,
+    "record": {
+      "schema": 1,
+      "record_id": "47785e5d58d391f6eec61ef7ade472fd9fe5a1bad91ac8d0ea4b30a71ef44f93",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T04:28:23",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "14d82764d388dc313dc93ef220d7e1e2",
+        "impact_fmu_id": "modelicatest_blocks_mathfunctions_20261031_042821_73b1d31",
+        "model_description_sha256": "7ceb001a1c62497d12195d5368591a27074dc2932776daa3d754adf471c26be0"
+      },
+      "experiment": {
+        "case_entry_sha256": "fba609bd15faadc1dfd7d5edfad467639343753fe89abaf37fbd8cc39a3c6046",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_blocks_mathfunctions_20261031_042820_82d92f4",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "338ce4bde0cd5b9e717e4bfa28d2eb694b576accb221b5a0d3a3d74369d4a779"
+      },
+      "model": {
+        "class": "ModelicaTest.Blocks.MathFunctions",
+        "libraries": [
+          {
+            "git_commit": "0eabd391b5f3c3e6d3200b3304751e8a05956728",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 53282,
+        "file": "MathFunctions.npz",
+        "format": "npz",
+        "sha256": "8ca1b04416b3d69f2be49a4d8ce1d4e79beddda72b3370c4dba2d2cb93ae32d7"
+      },
+      "run": {
+        "utc": "2026-10-31T04:28:27+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "MathIntegerBlocks",
+    "model": "ModelicaTest.Blocks.MathIntegerBlocks",
+    "variables": [
+      "integerExpression1.y",
+      "integerPassThrough1.y",
+      "integerReplicator1.y[2]",
+      "multiSwitch1.y",
+      "product1.y",
+      "sum1.y",
+      "time",
+      "triggeredAdd1.y"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.06442844192497432,
+      "steps": 519,
+      "rhs_evaluations": 595,
+      "jacobian_evaluations": 19,
+      "time_events": 15,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "state_events": 4,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 3789,
+    "record": {
+      "schema": 1,
+      "record_id": "6754aea2ce99688adee97b425ace2d799e060673fd17c343b5cd25c20f2cdc49",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T04:28:51",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "edfa9ec7981ef3f28a280f434bffc41f",
+        "impact_fmu_id": "modelicatest_blocks_mathintegerblocks_20261031_042849_c49065f",
+        "model_description_sha256": "6a12fafcb670f8ba1240b4840b0938f9989bf5516a555ff0277b2d5aa03efd86"
+      },
+      "experiment": {
+        "case_entry_sha256": "829125e7d891d765ebc0e7f761199fdbe5ee753be9802335cb401c9a841a7c01",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_blocks_mathintegerblocks_20261031_042849_8658667",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "9e4dc52403788b815f5106c62c32e7099a31ae9c12d6a4e6972c97489a233750"
+      },
+      "model": {
+        "class": "ModelicaTest.Blocks.MathIntegerBlocks",
+        "libraries": [
+          {
+            "git_commit": "0eabd391b5f3c3e6d3200b3304751e8a05956728",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 3789,
+        "file": "MathIntegerBlocks.npz",
+        "format": "npz",
+        "sha256": "1cdb4db5258da617d8fdb7744562ae844781bb27a2054d2a82d7f54636c3961b"
+      },
+      "run": {
+        "utc": "2026-10-31T04:28:55+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "MathOperators",
+    "model": "ModelicaTest.Blocks.MathOperators",
+    "variables": [
+      "inverse1.y1",
+      "linearDependency1.y",
+      "min1.y",
+      "minMax1.yMax",
+      "minMax1.yMin",
+      "multiSum1.y",
+      "multiSwitch1.y",
+      "pythagorasHypotenuse.valid",
+      "pythagorasHypotenuse.y",
+      "pythagorasLegs.valid",
+      "pythagorasLegs.y",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.055234625935554504,
+      "steps": 517,
+      "rhs_evaluations": 569,
+      "jacobian_evaluations": 16,
+      "time_events": 11,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "state_events": 2,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 27879,
+    "record": {
+      "schema": 1,
+      "record_id": "9aad2f41aa5840d3677596e19e6cee9952a1c5226062e77471388202695716ee",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T04:28:30",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "514df04f13313acb6240780ef67a3a47",
+        "impact_fmu_id": "modelicatest_blocks_mathoperators_20261031_042828_f8bce91",
+        "model_description_sha256": "e5e575f6783f75da028e465a5e66851efe754b5b5588c334ecc3d71929f243d4"
+      },
+      "experiment": {
+        "case_entry_sha256": "c8974a20675545a579408694c8fdd370df9747db1991c550c98a582741908c3f",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_blocks_mathoperators_20261031_042828_93971cd",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "22c29eecafdc02497c1a941be9900c967bdb32cef65f38e9dba1c73492386fcb"
+      },
+      "model": {
+        "class": "ModelicaTest.Blocks.MathOperators",
+        "libraries": [
+          {
+            "git_commit": "0eabd391b5f3c3e6d3200b3304751e8a05956728",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 27879,
+        "file": "MathOperators.npz",
+        "format": "npz",
+        "sha256": "34b5e0a8bd350b5fefffd931639406f4e1d0a05a30979ea199164502e1aa6084"
+      },
+      "run": {
+        "utc": "2026-10-31T04:28:34+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "NoiseGenerators",
+    "model": "ModelicaTest.Blocks.NoiseGenerators",
+    "variables": [
+      "bandLimitedWhiteNoise1.y",
+      "meanNormal.y",
+      "meanUniform.y",
+      "normalNoise1.y",
+      "time",
+      "truncatedNormalNoise1.y",
+      "uniformNoise1.y"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.059054024051874876,
+      "steps": 604,
+      "rhs_evaluations": 1004,
+      "jacobian_evaluations": 100,
+      "time_events": 100,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 14493,
+    "record": {
+      "schema": 1,
+      "record_id": "50c51cac3fa8e965d37c0076691c22079c50e84c3a0f2803b34f986dfd3c237a",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T04:29:38",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "a19d6d146d5633d32313b8a71f5e65b3",
+        "impact_fmu_id": "modelicatest_blocks_noisegenerators_20261031_042935_6d853e5",
+        "model_description_sha256": "4f58908338552ef0128dfc4424b6cc81102cf9d1ccdaf6e7a300191a7dd92fdd"
+      },
+      "experiment": {
+        "case_entry_sha256": "d68809c8988b3fa1166dd39898b6ea388f29bafb05c70daf5c495ce1d3f8727f",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_blocks_noisegenerators_20261031_042935_d419fd5",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "df07b2b2bba80af72285240344885c4c935d7e5f057469ac93ee390820227b4b"
+      },
+      "model": {
+        "class": "ModelicaTest.Blocks.NoiseGenerators",
+        "libraries": [
+          {
+            "git_commit": "0eabd391b5f3c3e6d3200b3304751e8a05956728",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 14493,
+        "file": "NoiseGenerators.npz",
+        "format": "npz",
+        "sha256": "89943ba2bab5fd81b216d9ae34c021b819d349762db4927e7d77f14b5e7f442a"
+      },
+      "run": {
+        "utc": "2026-10-31T04:29:41+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "RealFFT",
+    "model": "ModelicaTest.Blocks.RealFFT",
+    "variables": [
+      "realFFT1.info",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.18596946203615516,
+      "steps": 1500,
+      "rhs_evaluations": 2500,
+      "jacobian_evaluations": 250,
+      "time_events": 250,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 4351,
+    "record": {
+      "schema": 1,
+      "record_id": "8502f6c8fd4e4c2296c0cc721475084e9e6f71a78846be4f34c7615d702dca58",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T04:29:18",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "f084cc7cbe864429768d78af5125d379",
+        "impact_fmu_id": "modelicatest_blocks_realfft_20261031_042916_c703453",
+        "model_description_sha256": "feb46242cbce72e32080ac63fd7404ea534ce200909de462688c33d054575d7f"
+      },
+      "experiment": {
+        "case_entry_sha256": "d34eeb107488050ba7cd53891bb7aa69835c1fb0fd01c53e2cdf9dae203622e1",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_blocks_realfft_20261031_042915_b877f48",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "7c79fa6dc5ceeba2b2ec1f934d3a073197191e50141bf71b3e370b63fe52fd95"
+      },
+      "model": {
+        "class": "ModelicaTest.Blocks.RealFFT",
+        "libraries": [
+          {
+            "git_commit": "0eabd391b5f3c3e6d3200b3304751e8a05956728",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 4351,
+        "file": "RealFFT.npz",
+        "format": "npz",
+        "sha256": "fba5f689a5bcf6f17a3e06f7623517ef3233f43751c864eaf17df7d87dcd1037"
+      },
+      "run": {
+        "utc": "2026-10-31T04:29:22+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "RoutingMultiplexing",
+    "model": "ModelicaTest.Blocks.RoutingMultiplexing",
+    "variables": [
+      "deMultiplex2.y1[2]",
+      "deMultiplex2.y2[2]",
+      "deMultiplex3.y1[1]",
+      "deMultiplex3.y3[2]",
+      "deMultiplex4.y4[2]",
+      "deMultiplex5.y1[1]",
+      "deMultiplex5.y5[1]",
+      "deMultiplex6.y6[1]",
+      "extractor1.y",
+      "extractor2.y",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.07791811600327492,
+      "steps": 502,
+      "rhs_evaluations": 510,
+      "jacobian_evaluations": 10,
+      "time_events": 1,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 25304,
+    "record": {
+      "schema": 1,
+      "record_id": "bc596e6e49301f31ff655ab8b6e2113b7066d14959c9907fb5da5d695be0b0b4",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T04:29:25",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "9464f5f2cd00fa9fa518e250bee94a8d",
+        "impact_fmu_id": "modelicatest_blocks_routingmultiplexing_20261031_042923_b5e08a5",
+        "model_description_sha256": "bfd0eedc3f33264ab63d557d04b36ab03845e96694c52c843c7693aae5749c74"
+      },
+      "experiment": {
+        "case_entry_sha256": "6a8263a9774ebe0888fb6d97e04d81d80c4e096ba316ac522c364de93eb34951",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_blocks_routingmultiplexing_20261031_042923_3de503d",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "090bf08c4401d5894ce3703baa7f81653fd6580b6f92f42430d9e12066440f1b"
+      },
+      "model": {
+        "class": "ModelicaTest.Blocks.RoutingMultiplexing",
+        "libraries": [
+          {
+            "git_commit": "0eabd391b5f3c3e6d3200b3304751e8a05956728",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 25304,
+        "file": "RoutingMultiplexing.npz",
+        "format": "npz",
+        "sha256": "d14a76bf15ba5a73d5bf4b173dd840be8747de661060d7e2c54408c2e79f6b51"
+      },
+      "run": {
+        "utc": "2026-10-31T04:29:29+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "Statistics",
+    "model": "ModelicaTest.Blocks.Statistics",
+    "variables": [
+      "continuousMean1.y",
+      "continuousSignalExtrema1.y_max",
+      "continuousSignalExtrema1.y_min",
+      "signalExtrema1.y_max",
+      "signalExtrema1.y_min",
+      "standardDeviation1.y",
+      "time",
+      "totalHarmonicDistortion1.valid",
+      "totalHarmonicDistortion1.y",
+      "totalHarmonicDistortion2.y",
+      "variance1.y"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.2775169729720801,
+      "steps": 3355,
+      "rhs_evaluations": 6092,
+      "jacobian_evaluations": 367,
+      "time_events": 200,
+      "error_test_failures": 103,
+      "convergence_failures": 0,
+      "state_events": 167,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 33092,
+    "record": {
+      "schema": 1,
+      "record_id": "595275369085ff4bde80dfd1308b50ae81ec13e6e3ce53a4953b3481dda2723e",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T04:29:10",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "b2fd69d4102417735f7e0b594605d18d",
+        "impact_fmu_id": "modelicatest_blocks_statistics_20261031_042907_cd2569c",
+        "model_description_sha256": "1bd98c961c58df2a83dc9fdf4be4768f2f21729bb4f54e7ea5fbf84871d742ee"
+      },
+      "experiment": {
+        "case_entry_sha256": "3c87f03a1fcb4e38afac640222d68a006043b6d549997c31f751cc3c6e10fd11",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_blocks_statistics_20261031_042907_5aadd1a",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "0021964cc4aaddde04c8c199c73629b7d3d617623aaff7d2bf2735ef38449248"
+      },
+      "model": {
+        "class": "ModelicaTest.Blocks.Statistics",
+        "libraries": [
+          {
+            "git_commit": "0eabd391b5f3c3e6d3200b3304751e8a05956728",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 33092,
+        "file": "Statistics.npz",
+        "format": "npz",
+        "sha256": "711faa8917d9e1d01811673459d19be3cb0b3314a4b0d8f40e785f9c8824f203"
+      },
+      "run": {
+        "utc": "2026-10-31T04:29:15+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "TableDerivatives",
+    "model": "ModelicaTest.Blocks.TableDerivatives",
+    "variables": [
+      "combiTable1DsAkima.y[1]",
+      "combiTable2DsAkima.y",
+      "combiTimeTableAkima.y[1]",
+      "der2_table1DsAkima",
+      "der2_table2DsAkima",
+      "der2_timeTableAkima",
+      "der_table1DsAkima",
+      "der_table1DsLinear",
+      "der_table2DsAkima",
+      "der_table2DsLinear",
+      "der_timeTableAkima",
+      "der_timeTableLinear",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.12769737606868148,
+      "steps": 753,
+      "rhs_evaluations": 765,
+      "jacobian_evaluations": 15,
+      "time_events": 3,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 47366,
+    "record": {
+      "schema": 1,
+      "record_id": "04f61e44a61f9d29288cfcc520e0aa283b4dea47532c433666bc29bb4002e05f",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T04:30:35",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "35d6f3da4b17049a796e4a3454e1a01c",
+        "impact_fmu_id": "modelicatest_blocks_tablederivatives_20261031_043033_b6eef51",
+        "model_description_sha256": "3bb92a414d5b7bfa16acd3bfd1463777b28ffe11cd14c00df4deab9842f073c0"
+      },
+      "experiment": {
+        "case_entry_sha256": "45e891db8d0033a48921d73bfa25e0dc9579e271210c6c0871fa962ea8e0859c",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_blocks_tablederivatives_20261031_043033_fc95dd3",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "e73c39f0bd8c0d767dc749421e66aa14c024558e893c5d504fe3ab7234d1673b"
+      },
+      "model": {
+        "class": "ModelicaTest.Blocks.TableDerivatives",
+        "libraries": [
+          {
+            "git_commit": "0eabd391b5f3c3e6d3200b3304751e8a05956728",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 47366,
+        "file": "TableDerivatives.npz",
+        "format": "npz",
+        "sha256": "1d86f57a239f4a28ce9bb5a3ffe2798297e0566c1c7ff3d4ea9fa97694f5d706"
+      },
+      "run": {
+        "utc": "2026-10-31T04:30:40+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "TerminateSimulation",
+    "model": "ModelicaTest.Blocks.TerminateSimulation",
+    "variables": [
+      "integrator1.y",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.026175195001997054,
+      "steps": 253,
+      "rhs_evaluations": 257,
+      "jacobian_evaluations": 5,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "state_events": 1,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 2608,
+    "record": {
+      "schema": 1,
+      "record_id": "24a06fbbc2483619fcea3963c3f3e87e10d3797376f06d54768dbd341c1e0f49",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T04:29:04",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "43ca8113f310e9fef00c9231cdd0659",
+        "impact_fmu_id": "modelicatest_blocks_terminatesimulation_20261031_042902_d3bccef",
+        "model_description_sha256": "17eb65277de64d2c0cb5d343f708adfa148519da68a4c9d6c5213c8576d257c7"
+      },
+      "experiment": {
+        "case_entry_sha256": "cd4169ba7b399b44e1f23816ebc63230fe60949861cbc131c54bb0a5712d896a",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_blocks_terminatesimulation_20261031_042902_e53fe0b",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "fdfb250051f5dfe0d1feb562b6e2deec8f91a9c22c74eb0c732337b13a4e2aeb"
+      },
+      "model": {
+        "class": "ModelicaTest.Blocks.TerminateSimulation",
+        "libraries": [
+          {
+            "git_commit": "0eabd391b5f3c3e6d3200b3304751e8a05956728",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 2608,
+        "file": "TerminateSimulation.npz",
+        "format": "npz",
+        "sha256": "d9d45d2ddb2d412fc7e487aa5a65e22557bfade12fce3c6c2d0fd8922c7c3812"
+      },
+      "run": {
+        "utc": "2026-10-31T04:29:07+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "TypeConversionsAndChanges",
+    "model": "ModelicaTest.Blocks.TypeConversionsAndChanges",
+    "variables": [
+      "booleanToInteger1.y",
+      "booleanToReal1.y",
+      "countBooleanChanges.y",
+      "countEdges.y",
+      "countIntegerChanges.y",
+      "integerToBoolean1.y",
+      "integerToReal1.y",
+      "sum1.y",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.054800444981083274,
+      "steps": 513,
+      "rhs_evaluations": 565,
+      "jacobian_evaluations": 13,
+      "time_events": 12,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 4061,
+    "record": {
+      "schema": 1,
+      "record_id": "f6f1bd0d3d74b4a837133dae54409c3af07127aac687b3ec604fe70d9ea7da0f",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T04:28:37",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "b14f3202d594f73931adb1bb9f4ea4d9",
+        "impact_fmu_id": "modelicatest_blocks_typeconversionsandchanges_20261031_042835_f401659",
+        "model_description_sha256": "e08523f91b8f511a5690124971fa6a60037a6aff02f61d9d803c6795e83caba4"
+      },
+      "experiment": {
+        "case_entry_sha256": "91de1b6741cf8acdf486fa0d09a09bd0461aa5d42718088b63fc357d21a5533e",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_blocks_typeconversionsandchanges_20261031_042835_be0a10f",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "ca854e47f55fe1e89b49d4ca123fa286111e08ea92f4df3af60a162f79edd05e"
+      },
+      "model": {
+        "class": "ModelicaTest.Blocks.TypeConversionsAndChanges",
+        "libraries": [
+          {
+            "git_commit": "0eabd391b5f3c3e6d3200b3304751e8a05956728",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 4061,
+        "file": "TypeConversionsAndChanges.npz",
+        "format": "npz",
+        "sha256": "429f37fd5cfa8c3a1b2f4443eae9cbfa7b84f5d782da9345ef7e2b1e5d012b0e"
+      },
+      "run": {
+        "utc": "2026-10-31T04:28:41+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "VariableSources",
+    "model": "ModelicaTest.Blocks.VariableSources",
+    "variables": [
+      "cosineVariable1.y",
+      "cosineVariable2.y",
+      "sinc1.y",
+      "sineVariable1.y",
+      "sineVariable2.y",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.056329195969738066,
+      "steps": 507,
+      "rhs_evaluations": 511,
+      "jacobian_evaluations": 9,
+      "time_events": 1,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 22286,
+    "record": {
+      "schema": 1,
+      "record_id": "2b3395a9134fc915446dca509693aecd1d55e97dea4b516d59dad2d628ec8c2c",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T04:30:29",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "c652334cfdaad3d65f343855506bc71f",
+        "impact_fmu_id": "modelicatest_blocks_variablesources_20261031_043027_b64ddc3",
+        "model_description_sha256": "6db06b909bff948361e9ef6fcbf582c64c50f5bc23ee3b1af48a810ef3d538bb"
+      },
+      "experiment": {
+        "case_entry_sha256": "6eff4a8c5579b7e5d325aac30a9a2a5928f2e8d5590ecea9f554a32e0abd11be",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_blocks_variablesources_20261031_043027_e40b2f6",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "8ed16bcebc6e4266e4a37248b91241ed70d4aace8951af9b31230febc7c85933"
+      },
+      "model": {
+        "class": "ModelicaTest.Blocks.VariableSources",
+        "libraries": [
+          {
+            "git_commit": "0eabd391b5f3c3e6d3200b3304751e8a05956728",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 22286,
+        "file": "VariableSources.npz",
+        "format": "npz",
+        "sha256": "ce4546bd226ac5f859d84210591e31c0ab599e79ed1a1c2e939421abc08bc81e"
+      },
+      "run": {
+        "utc": "2026-10-31T04:30:32+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,54 @@
+{
+ "experiment": {
+  "base": {
+   "analysis": {
+    "parameters": [
+     {
+      "name": "start_time",
+      "value": 0.0
+     },
+     {
+      "name": "final_time",
+      "value": 1.0
+     },
+     {
+      "name": "interval",
+      "value": 0
+     }
+    ],
+    "simulationLogLevel": "WARNING",
+    "simulationOptions": {
+     "dynamic_diagnostics": false,
+     "filter": "['time', 'and1.y', 'or1.y', 'xor1.y', 'nand1.y', 'nor1.y', 'not1.y', 'multiSwitch1.y', 'booleanPassThrough1.y', 'countRising.y', 'countFalling.y', 'countChanging.y', 'radioButtonSource1.on', 'radioButtonSource2.on']",
+     "ncp": 500
+    },
+    "solverOptions": {
+     "rtol": 9.999999999999999e-05
+    },
+    "type": "dynamic"
+   },
+   "expansion": {
+    "algorithm": "FULLFACTORIAL"
+   },
+   "model": {
+    "modelica": {
+     "className": "ModelicaTest.Blocks.MathBooleanBlocks",
+     "compilerLogLevel": "warning",
+     "compilerOptions": {
+      "generate_html_diagnostics": false,
+      "include_protected_variables": false
+     },
+     "fmiTarget": "me",
+     "fmiVersion": "2.0",
+     "platform": "auto",
+     "runtimeOptions": {}
+    }
+   },
+   "modifiers": {
+    "variables": []
+   }
+  },
+  "extensions": [],
+  "version": 3
+ }
+}

@@ -1,0 +1,4 @@
+# Raw funnel traces written beside the HTML report; not linked from the report
+# pages (plots are embedded) and regenerable with ModCheck restore_reports.py.
+*/HtmlReports/data/
+*/HtmlReports/report_state.json

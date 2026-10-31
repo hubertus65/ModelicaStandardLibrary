@@ -1,0 +1,14 @@
+time
+and1.y
+booleanPassThrough1.y
+countChanging.y
+countFalling.y
+countRising.y
+multiSwitch1.y
+nand1.y
+nor1.y
+not1.y
+or1.y
+radioButtonSource1.on
+radioButtonSource2.on
+xor1.y
