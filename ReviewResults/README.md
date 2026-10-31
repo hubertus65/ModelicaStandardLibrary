@@ -13,6 +13,12 @@ libraries of this repository (MSL 4.2.0 dev). omc loads them through
 directory with entries `Modelica 4.2.0 dev`, `ModelicaServices 4.2.0 dev` (junctions
 or symlinks to this repository) and `Complex 4.2.0 dev.mo`.
 
+Some single cases of other sub-libraries cannot run on Impact either. They use a class that is new in
+MSL 4.2, or MSL 4.1.0 code that OCT fails on and that this branch fixes. Each fix is also an upstream PR:
+modelica/ModelicaStandardLibrary#4846, #4847, #4848 and #4851. These cases run on OpenModelica the same
+way. ModCheck runs one source per case list, so they have their own case list, baselines and report in
+`<SubLibrary>/OpenModelica/`. The reason is stated at each case.
+
 Each `<SubLibrary>/` directory holds:
 
 | Path | Content |
