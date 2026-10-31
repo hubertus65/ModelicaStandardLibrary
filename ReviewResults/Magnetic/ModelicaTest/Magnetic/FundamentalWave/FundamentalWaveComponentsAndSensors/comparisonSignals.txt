@@ -1,0 +1,17 @@
+time
+fluxSensor.Phi.im
+fluxSensor.Phi.re
+iSalient.d
+iSalient.q
+potentialDifferenceSensor.V_m.im
+potentialDifferenceSensor.V_m.re
+potentialDifferenceSensor3.V_m.im
+potentialDifferenceSensor3.V_m.re
+potentialSensor.V_m.im
+potentialSensor.V_m.re
+reluctanceIm.V_m
+reluctanceRe.V_m
+stateSelector.x0
+stateSelector.xr[1].im
+stateSelector.xr[1].re
+vSalient.d

@@ -1,0 +1,200 @@
+# ModCheck case list: new ModelicaTest coverage tests for Modelica.Magnetic (branch coverage-improvement).
+#
+# Each case is one new test model, run unmodified on Modelon Impact (MSL 4.1.0 dependency).
+# Variables are the comparison signals of the model, as listed in
+# ModelicaTest/Resources/Reference/ModelicaTest/<Package>/<Model>/comparisonSignals.txt.
+# ncp gives 500 output intervals per second of simulated time (2000 for long runs).
+library: ModelicaTest
+workspace: msl-coverage
+custom_function: dynamic
+tolerance: 0.001
+
+cases:
+  - name: MaterialRecords
+    enabled: true
+    model: ModelicaTest.Magnetic.FluxTubes.MaterialRecords
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "B"
+      - "mu_r[[]1]"
+      - "mu_r[[]2]"
+      - "mu_r[[]3]"
+      - "mu_r[[]4]"
+      - "mu_r[[]5]"
+      - "mu_r[[]6]"
+      - "mu_r[[]7]"
+      - "mu_r[[]8]"
+      - "mu_r[[]9]"
+      - "mu_r[[]10]"
+      - "mu_r[[]11]"
+      - "mu_r[[]12]"
+      - "mu_r[[]13]"
+      - "mu_r[[]14]"
+      - "hardFerrite20.B_r"
+      - "hardFerrite20.H_cB"
+      - "hardFerrite100.B_r"
+      - "hardFerrite100.H_cB"
+      - "plasticHardFerrite20.B_r"
+      - "plasticHardFerrite20.H_cB"
+      - "plasticHardFerrite100.B_r"
+      - "plasticHardFerrite100.H_cB"
+      - "plasticNdFeB20.B_r"
+      - "plasticNdFeB20.H_cB"
+      - "plasticNdFeB100.B_r"
+      - "plasticNdFeB100.H_cB"
+      - "plasticSmCo20.B_r"
+      - "plasticSmCo20.H_cB"
+      - "plasticSmCo100.B_r"
+      - "plasticSmCo100.H_cB"
+      - "sm2Co1720.B_r"
+      - "sm2Co1720.H_cB"
+      - "sm2Co17100.B_r"
+      - "sm2Co17100.H_cB"
+      - "smCo520.B_r"
+      - "smCo520.H_cB"
+      - "smCo5100.B_r"
+      - "smCo5100.H_cB"
+      - "everett_M270_50A.Hc"
+      - "everett_M270_50A.M"
+      - "everett_M400_50A.Hc"
+      - "everett_M400_50A.M"
+      - "everett_M400_50AP.Hc"
+      - "everett_M400_50AP.M"
+      - "everett_M800_65A.Hc"
+      - "everett_M800_65A.M"
+      - "everett_Vacodur50.Hc"
+      - "everett_Vacodur50.M"
+      - "everett_Vacoflux17.Hc"
+      - "everett_Vacoflux17.M"
+      - "tabrisEnd_M270_50A"
+      - "tabrisEnd_M400_50A"
+      - "tabrisEnd_M400_50AP"
+      - "tabrisEnd_M800_65A"
+      - "tabrisEnd_Vacodur50"
+      - "tabrisEnd_Vacoflux17"
+      - "tabrisEnd_Vacoflux48"
+  - name: TransientShapesAndPermeability
+    enabled: true
+    model: ModelicaTest.Magnetic.QuasiStatic.FluxTubes.TransientShapesAndPermeability
+    start_time: 0.0
+    final_time: 0.1
+    ncp: 50
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "fluxSensor.Phi"
+      - "potentialSensor.V_m"
+      - "permeability.mur"
+      - "permeabilitySensor.mur"
+      - "toroid.mu_r"
+      - "hollowCylinder.mu_r"
+  - name: BasicElementsShapesAndSensors
+    enabled: true
+    model: ModelicaTest.Magnetic.QuasiStatic.FluxTubes.BasicElementsShapesAndSensors
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "fluxSensor.y.re"
+      - "fluxSensor.y.im"
+      - "potentialDifferenceSensor.y.re"
+      - "potentialDifferenceSensor.y.im"
+      - "potentialSensor.y.re"
+      - "potentialSensor.y.im"
+      - "frequencySensor.y"
+      - "referenceSensor.y"
+      - "resistor.i.re"
+      - "resistor.i.im"
+      - "eddyCurrent.Phi.re"
+      - "quarterCylinder.Phi.re"
+      - "leakageWithCoefficient.Phi.re"
+      - "fluxSensor2.y.re"
+      - "fluxSensor2.y.im"
+  - name: FundamentalWaveComponentsAndSensors
+    enabled: true
+    model: ModelicaTest.Magnetic.FundamentalWave.FundamentalWaveComponentsAndSensors
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "fluxSensor.Phi.re"
+      - "fluxSensor.Phi.im"
+      - "potentialDifferenceSensor.V_m.re"
+      - "potentialDifferenceSensor.V_m.im"
+      - "potentialSensor.V_m.re"
+      - "potentialSensor.V_m.im"
+      - "potentialDifferenceSensor3.V_m.re"
+      - "potentialDifferenceSensor3.V_m.im"
+      - "reluctanceRe.V_m"
+      - "reluctanceIm.V_m"
+      - "iSalient.d"
+      - "iSalient.q"
+      - "vSalient.d"
+      - "stateSelector.xr[[]1].re"
+      - "stateSelector.xr[[]1].im"
+      - "stateSelector.x0"
+  - name: QuasiStaticFundamentalWaveComponentsAndSensors
+    enabled: true
+    model: ModelicaTest.Magnetic.QuasiStatic.FundamentalWave.QuasiStaticFundamentalWaveComponentsAndSensors
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "fluxSensor.Phi.re"
+      - "fluxSensor.Phi.im"
+      - "potentialDifferenceSensor.V_m.re"
+      - "potentialDifferenceSensor.V_m.im"
+      - "potentialSensor.V_m.re"
+      - "potentialSensor.V_m.im"
+      - "potentialDifferenceSensor3.V_m.re"
+      - "potentialDifferenceSensor3.V_m.im"
+      - "fluxSensor4.Phi.re"
+      - "fluxSensor4.Phi.im"
+      - "potentialDifferenceSensor5.V_m.re"
+      - "potentialDifferenceSensor5.V_m.im"
+  - name: IMS_StartLowLoadHighResistance
+    enabled: true
+    model: ModelicaTest.Magnetic.QuasiStatic.FundamentalWave.IMS_StartLowLoadHighResistance
+    start_time: 0.0
+    final_time: 1.5
+    ncp: 750
+    rtol: 1.0e-6
+    # the RMS current Itr of the transient machine (simulated beside the quasi-static one) deviates by 1 % at 100x rtol (1e-4), so the check run is capped at 1e-5
+    max_rtol: 1.0e-5
+    modifiers: {}
+    variables:
+      - time
+      - "imsQS.wMechanical"
+      - "imsQS.tauElectrical"
+      - "Iqs"
+      - "ims.wMechanical"
+      - "Itr"
+  - name: SMR_CurrentSourceLowLoad
+    enabled: true
+    model: ModelicaTest.Magnetic.QuasiStatic.FundamentalWave.SMR_CurrentSourceLowLoad
+    start_time: 0.0
+    final_time: 2.0
+    ncp: 1000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "smrQS.wMechanical"
+      - "smrQS.tauElectrical"
+      - "smr.wMechanical"
+      - "smr.tauElectrical"

@@ -1,0 +1,7 @@
+time
+fluxSensor.Phi
+potentialSensor.V_m
+permeability.mur
+permeabilitySensor.mur
+toroid.mu_r
+hollowCylinder.mu_r

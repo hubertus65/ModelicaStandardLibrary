@@ -1,0 +1,54 @@
+{
+ "experiment": {
+  "base": {
+   "analysis": {
+    "parameters": [
+     {
+      "name": "start_time",
+      "value": 0.0
+     },
+     {
+      "name": "final_time",
+      "value": 1.0
+     },
+     {
+      "name": "interval",
+      "value": 0
+     }
+    ],
+    "simulationLogLevel": "WARNING",
+    "simulationOptions": {
+     "dynamic_diagnostics": false,
+     "filter": "['time', 'B', 'mu_r[[]1]', 'mu_r[[]2]', 'mu_r[[]3]', 'mu_r[[]4]', 'mu_r[[]5]', 'mu_r[[]6]', 'mu_r[[]7]', 'mu_r[[]8]', 'mu_r[[]9]', 'mu_r[[]10]', 'mu_r[[]11]', 'mu_r[[]12]', 'mu_r[[]13]', 'mu_r[[]14]', 'hardFerrite20.B_r', 'hardFerrite20.H_cB', 'hardFerrite100.B_r', 'hardFerrite100.H_cB', 'plasticHardFerrite20.B_r', 'plasticHardFerrite20.H_cB', 'plasticHardFerrite100.B_r', 'plasticHardFerrite100.H_cB', 'plasticNdFeB20.B_r', 'plasticNdFeB20.H_cB', 'plasticNdFeB100.B_r', 'plasticNdFeB100.H_cB', 'plasticSmCo20.B_r', 'plasticSmCo20.H_cB', 'plasticSmCo100.B_r', 'plasticSmCo100.H_cB', 'sm2Co1720.B_r', 'sm2Co1720.H_cB', 'sm2Co17100.B_r', 'sm2Co17100.H_cB', 'smCo520.B_r', 'smCo520.H_cB', 'smCo5100.B_r', 'smCo5100.H_cB', 'everett_M270_50A.Hc', 'everett_M270_50A.M', 'everett_M400_50A.Hc', 'everett_M400_50A.M', 'everett_M400_50AP.Hc', 'everett_M400_50AP.M', 'everett_M800_65A.Hc', 'everett_M800_65A.M', 'everett_Vacodur50.Hc', 'everett_Vacodur50.M', 'everett_Vacoflux17.Hc', 'everett_Vacoflux17.M', 'tabrisEnd_M270_50A', 'tabrisEnd_M400_50A', 'tabrisEnd_M400_50AP', 'tabrisEnd_M800_65A', 'tabrisEnd_Vacodur50', 'tabrisEnd_Vacoflux17', 'tabrisEnd_Vacoflux48']",
+     "ncp": 500
+    },
+    "solverOptions": {
+     "rtol": 1e-06
+    },
+    "type": "dynamic"
+   },
+   "expansion": {
+    "algorithm": "FULLFACTORIAL"
+   },
+   "model": {
+    "modelica": {
+     "className": "ModelicaTest.Magnetic.FluxTubes.MaterialRecords",
+     "compilerLogLevel": "warning",
+     "compilerOptions": {
+      "generate_html_diagnostics": false,
+      "include_protected_variables": false
+     },
+     "fmiTarget": "me",
+     "fmiVersion": "2.0",
+     "platform": "auto",
+     "runtimeOptions": {}
+    }
+   },
+   "modifiers": {
+    "variables": []
+   }
+  },
+  "extensions": [],
+  "version": 3
+ }
+}

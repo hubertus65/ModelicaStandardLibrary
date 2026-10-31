@@ -1,0 +1,6 @@
+time
+Iqs
+Itr
+ims.wMechanical
+imsQS.tauElectrical
+imsQS.wMechanical

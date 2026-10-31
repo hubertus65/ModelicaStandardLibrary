@@ -1,0 +1,13 @@
+time
+fluxSensor.Phi.im
+fluxSensor.Phi.re
+fluxSensor4.Phi.im
+fluxSensor4.Phi.re
+potentialDifferenceSensor.V_m.im
+potentialDifferenceSensor.V_m.re
+potentialDifferenceSensor3.V_m.im
+potentialDifferenceSensor3.V_m.re
+potentialDifferenceSensor5.V_m.im
+potentialDifferenceSensor5.V_m.re
+potentialSensor.V_m.im
+potentialSensor.V_m.re

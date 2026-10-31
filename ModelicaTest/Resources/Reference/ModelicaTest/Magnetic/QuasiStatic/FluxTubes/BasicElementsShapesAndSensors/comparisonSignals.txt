@@ -1,0 +1,16 @@
+time
+fluxSensor.y.re
+fluxSensor.y.im
+potentialDifferenceSensor.y.re
+potentialDifferenceSensor.y.im
+potentialSensor.y.re
+potentialSensor.y.im
+frequencySensor.y
+referenceSensor.y
+resistor.i.re
+resistor.i.im
+eddyCurrent.Phi.re
+quarterCylinder.Phi.re
+leakageWithCoefficient.Phi.re
+fluxSensor2.y.re
+fluxSensor2.y.im

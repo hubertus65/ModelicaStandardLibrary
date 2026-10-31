@@ -1,0 +1,5 @@
+time
+smrQS.wMechanical
+smrQS.tauElectrical
+smr.wMechanical
+smr.tauElectrical

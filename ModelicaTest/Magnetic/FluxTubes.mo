@@ -721,4 +721,78 @@ package FluxTubes "Test library for Modelica.Magnetic.FluxTubes"
     connect(ground.port, magFluxSource.port_p) annotation (Line(points={{0,-30},{-40,-30},{-40,-10}}, color={255,127,0}));
     annotation (experiment(StopTime=1));
   end VariableComponents;
+
+  model MaterialRecords
+    "Test of the material records of Modelica.Magnetic.FluxTubes.Material and of SoftMagnetic.mu_rApprox"
+    extends Modelica.Icons.Example;
+    import Modelica.Magnetic.FluxTubes.Material;
+
+    Modelica.Units.SI.MagneticFluxDensity B=2*time "Flux density ramp 0 ... 2 T";
+    parameter Material.SoftMagnetic.BaseData softMaterials[14]={
+      Material.SoftMagnetic.CobaltIron.Vacoflux50(),
+      Material.SoftMagnetic.ElectricSheet.M530_50A(),
+      Material.SoftMagnetic.ElectricSheet.M700_100A(),
+      Material.SoftMagnetic.ElectricSheet.M940_100A(),
+      Material.SoftMagnetic.NickelIron.MuMetall(),
+      Material.SoftMagnetic.NickelIron.Permenorm3601K3(),
+      Material.SoftMagnetic.PureIron.RFe80(),
+      Material.SoftMagnetic.PureIron.VacoferS2(),
+      Material.SoftMagnetic.Steel.AISI_1008(),
+      Material.SoftMagnetic.Steel.AISI_12L14(),
+      Material.SoftMagnetic.Steel.DC01(),
+      Material.SoftMagnetic.Steel.DC03(),
+      Material.SoftMagnetic.Steel.Steel_9SMn28K(),
+      Material.SoftMagnetic.Steel.X6Cr17()} "Soft magnetic materials";
+    Modelica.Units.SI.RelativePermeability mu_r[14]={Material.SoftMagnetic.mu_rApprox(B, softMaterials[i].mu_i,
+      softMaterials[i].B_myMax, softMaterials[i].c_a, softMaterials[i].c_b, softMaterials[i].n)
+      for i in 1:14} "Relative permeability of the soft magnetic materials";
+    parameter Material.HardMagnetic.HardFerrite hardFerrite20 "HardFerrite at 20 degC";
+    parameter Material.HardMagnetic.HardFerrite hardFerrite100(T_op=373.15) "HardFerrite at 100 degC";
+    parameter Material.HardMagnetic.PlasticHardFerrite plasticHardFerrite20 "PlasticHardFerrite at 20 degC";
+    parameter Material.HardMagnetic.PlasticHardFerrite plasticHardFerrite100(T_op=373.15) "PlasticHardFerrite at 100 degC";
+    parameter Material.HardMagnetic.PlasticNdFeB plasticNdFeB20 "PlasticNdFeB at 20 degC";
+    parameter Material.HardMagnetic.PlasticNdFeB plasticNdFeB100(T_op=373.15) "PlasticNdFeB at 100 degC";
+    parameter Material.HardMagnetic.PlasticSmCo plasticSmCo20 "PlasticSmCo at 20 degC";
+    parameter Material.HardMagnetic.PlasticSmCo plasticSmCo100(T_op=373.15) "PlasticSmCo at 100 degC";
+    parameter Material.HardMagnetic.Sm2Co17 sm2Co1720 "Sm2Co17 at 20 degC";
+    parameter Material.HardMagnetic.Sm2Co17 sm2Co17100(T_op=373.15) "Sm2Co17 at 100 degC";
+    parameter Material.HardMagnetic.SmCo5 smCo520 "SmCo5 at 20 degC";
+    parameter Material.HardMagnetic.SmCo5 smCo5100(T_op=373.15) "SmCo5 at 100 degC";
+    parameter Material.HysteresisEverettParameter.M270_50A everett_M270_50A "Everett parameters of M270_50A";
+    parameter Material.HysteresisEverettParameter.M400_50A everett_M400_50A "Everett parameters of M400_50A";
+    parameter Material.HysteresisEverettParameter.M400_50AP everett_M400_50AP "Everett parameters of M400_50AP";
+    parameter Material.HysteresisEverettParameter.M800_65A everett_M800_65A "Everett parameters of M800_65A";
+    parameter Material.HysteresisEverettParameter.Vacodur50 everett_Vacodur50 "Everett parameters of Vacodur50";
+    parameter Material.HysteresisEverettParameter.Vacoflux17 everett_Vacoflux17 "Everett parameters of Vacoflux17";
+    parameter Material.HysteresisTableData.M270_50A table_M270_50A "Hysteresis table of M270_50A";
+    parameter Material.HysteresisTableData.M400_50A table_M400_50A "Hysteresis table of M400_50A";
+    parameter Material.HysteresisTableData.M400_50AP table_M400_50AP "Hysteresis table of M400_50AP";
+    parameter Material.HysteresisTableData.M800_65A table_M800_65A "Hysteresis table of M800_65A";
+    parameter Material.HysteresisTableData.Vacodur50 table_Vacodur50 "Hysteresis table of Vacodur50";
+    parameter Material.HysteresisTableData.Vacoflux17 table_Vacoflux17 "Hysteresis table of Vacoflux17";
+    parameter Material.HysteresisTableData.Vacoflux48 table_Vacoflux48 "Hysteresis table of Vacoflux48";
+    Real tabrisEnd_M270_50A=table_M270_50A.tabris[size(table_M270_50A.tabris, 1), 2] "Last flux density of the rising branch";
+    Real tabrisEnd_M400_50A=table_M400_50A.tabris[size(table_M400_50A.tabris, 1), 2] "Last flux density of the rising branch";
+    Real tabrisEnd_M400_50AP=table_M400_50AP.tabris[size(table_M400_50AP.tabris, 1), 2] "Last flux density of the rising branch";
+    Real tabrisEnd_M800_65A=table_M800_65A.tabris[size(table_M800_65A.tabris, 1), 2] "Last flux density of the rising branch";
+    Real tabrisEnd_Vacodur50=table_Vacodur50.tabris[size(table_Vacodur50.tabris, 1), 2] "Last flux density of the rising branch";
+    Real tabrisEnd_Vacoflux17=table_Vacoflux17.tabris[size(table_Vacoflux17.tabris, 1), 2] "Last flux density of the rising branch";
+    Real tabrisEnd_Vacoflux48=table_Vacoflux48.tabris[size(table_Vacoflux48.tabris, 1), 2] "Last flux density of the rising branch";
+    annotation (experiment(StopTime=1.0), Documentation(info="<html>
+<p>
+Uses the material records of
+<a href=\"modelica://Modelica.Magnetic.FluxTubes.Material\">Modelica.Magnetic.FluxTubes.Material</a>,
+so that changes of their data are detected:
+</p>
+<ul>
+<li>SoftMagnetic: the relative permeability of all materials that are not used elsewhere, evaluated
+    with <a href=\"modelica://Modelica.Magnetic.FluxTubes.Material.SoftMagnetic.mu_rApprox\">mu_rApprox</a>
+    while the flux density ramps from 0 T to 2 T.</li>
+<li>HardMagnetic: remanence B_r and coercivity H_cB of the permanent magnet materials at the
+    operating temperatures 20 &deg;C and 100 &deg;C.</li>
+<li>HysteresisEverettParameter: coercivity Hc and magnetization M.</li>
+<li>HysteresisTableData: the last flux density of the rising branch of each table.</li>
+</ul>
+</html>"));
+  end MaterialRecords;
 end FluxTubes;
