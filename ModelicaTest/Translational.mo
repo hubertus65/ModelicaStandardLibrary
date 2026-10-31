@@ -383,4 +383,150 @@ extends Modelica.Icons.ExamplesPackage;
     connect(position1.flange, supportFriction2.flange_a) annotation (Line(points={{10,0},{46,0}}, color={0,127,0}));
     annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(coordinateSystem(preserveAspectRatio=false)));
   end TestFrictionPosition;
+
+  model SensorsAndSources "Test of the sensors and sources of Modelica.Mechanics.Translational"
+    extends Modelica.Icons.Example;
+
+    Modelica.Mechanics.Translational.Components.Fixed fixed1
+      annotation (Placement(transformation(extent={{70,50},{90,70}})));
+    Modelica.Mechanics.Translational.Sources.ForceStep forceStep1(stepForce=10, offsetForce=1, startTime=0.2)
+      annotation (Placement(transformation(extent={{-100,50},{-80,70}})));
+    Modelica.Mechanics.Translational.Sensors.ForceSensor forceSensor1
+      annotation (Placement(transformation(extent={{-70,50},{-50,70}})));
+    Modelica.Mechanics.Translational.Components.Mass mass1(m=1, s(start=0, fixed=true), v(start=0, fixed=true))
+      annotation (Placement(transformation(extent={{-40,50},{-20,70}})));
+    Modelica.Mechanics.Translational.Sensors.MultiSensor multiSensor1
+      annotation (Placement(transformation(extent={{-10,50},{10,70}})));
+    Modelica.Mechanics.Translational.Components.SpringDamper spring1(c=100, d=2)
+      annotation (Placement(transformation(extent={{15,50},{35,70}})));
+    Modelica.Mechanics.Translational.Sensors.PowerSensor powerSensor1
+      annotation (Placement(transformation(extent={{40,50},{60,70}})));
+    Modelica.Blocks.Sources.Sine sine1(amplitude=5, f=1)
+      annotation (Placement(transformation(extent={{-40,90},{-20,110}})));
+    Modelica.Mechanics.Translational.Sources.Force2 force2
+      annotation (Placement(transformation(extent={{-10,10},{10,30}})));
+    Modelica.Mechanics.Translational.Components.SpringDamper spring2(c=50, d=1, s_rel0=0.5)
+      annotation (Placement(transformation(extent={{-10,-20},{10,0}})));
+    Modelica.Mechanics.Translational.Components.Mass mass2(m=2, s(start=0.5, fixed=true), v(start=0, fixed=true))
+      annotation (Placement(transformation(extent={{30,10},{50,30}})));
+    Modelica.Mechanics.Translational.Sensors.AccSensor accSensor1
+      annotation (Placement(transformation(extent={{60,10},{80,30}})));
+    Modelica.Mechanics.Translational.Sensors.RelPositionSensor relPositionSensor1
+      annotation (Placement(transformation(extent={{-10,-50},{10,-30}})));
+    Modelica.Mechanics.Translational.Sensors.RelSpeedSensor relSpeedSensor1
+      annotation (Placement(transformation(extent={{-10,-75},{10,-55}})));
+    Modelica.Mechanics.Translational.Sensors.RelAccSensor relAccSensor1
+      annotation (Placement(transformation(extent={{-10,-100},{10,-80}})));
+    Modelica.Mechanics.Translational.Sources.ConstantSpeed constantSpeed1(v_fixed=0.5)
+      annotation (Placement(transformation(extent={{-100,-130},{-80,-110}})));
+    Modelica.Mechanics.Translational.Components.Damper damper3(d=10)
+      annotation (Placement(transformation(extent={{-70,-130},{-50,-110}})));
+    Modelica.Mechanics.Translational.Components.Fixed fixed3
+      annotation (Placement(transformation(extent={{-40,-130},{-20,-110}})));
+    Modelica.Blocks.Sources.Sine s(amplitude=0.1, f=1)
+      annotation (Placement(transformation(extent={{-100,-170},{-80,-150}})));
+    Modelica.Blocks.Sources.Cosine v(amplitude=0.1*2*Modelica.Constants.pi, f=1)
+      annotation (Placement(transformation(extent={{-100,-195},{-80,-175}})));
+    Modelica.Blocks.Sources.Sine a(amplitude=-0.1*(2*Modelica.Constants.pi)^2, f=1)
+      annotation (Placement(transformation(extent={{-100,-220},{-80,-200}})));
+    Modelica.Blocks.Routing.Multiplex3 multiplex3
+      annotation (Placement(transformation(extent={{-70,-195},{-50,-175}})));
+    Modelica.Mechanics.Translational.Sources.Move move1
+      annotation (Placement(transformation(extent={{-40,-195},{-20,-175}})));
+    Modelica.Mechanics.Translational.Components.Mass mass6(m=1)
+      annotation (Placement(transformation(extent={{-10,-195},{10,-175}})));
+    Modelica.Mechanics.Translational.Components.Spring spring6(c=100)
+      annotation (Placement(transformation(extent={{20,-195},{40,-175}})));
+    Modelica.Mechanics.Translational.Components.Fixed fixed6
+      annotation (Placement(transformation(extent={{50,-195},{70,-175}})));
+  equation
+    connect(forceStep1.flange, forceSensor1.flange_a) annotation (Line(points={{-79,60},{-72,60}}, color={0,127,0}));
+    connect(forceSensor1.flange_b, mass1.flange_a) annotation (Line(points={{-49,60},{-42,60}}, color={0,127,0}));
+    connect(mass1.flange_b, multiSensor1.flange_a) annotation (Line(points={{-19,60},{-12,60}}, color={0,127,0}));
+    connect(multiSensor1.flange_b, spring1.flange_a) annotation (Line(points={{11,60},{13,60}}, color={0,127,0}));
+    connect(spring1.flange_b, powerSensor1.flange_a) annotation (Line(points={{36,60},{38,60}}, color={0,127,0}));
+    connect(powerSensor1.flange_b, fixed1.flange) annotation (Line(points={{61,60},{68,60}}, color={0,127,0}));
+    connect(sine1.y, force2.f) annotation (Line(points={{-19,100},{-16,100},{-16,14},{-12,14}}, color={0,0,127}));
+    connect(mass1.flange_b, force2.flange_a) annotation (Line(points={{-19,60},{-16,60},{-16,20},{-12,20}}, color={0,127,0}));
+    connect(force2.flange_b, mass2.flange_a) annotation (Line(points={{11,20},{28,20}}, color={0,127,0}));
+    connect(mass1.flange_b, spring2.flange_a) annotation (Line(points={{-19,60},{-16,60},{-16,-10},{-12,-10}}, color={0,127,0}));
+    connect(spring2.flange_b, mass2.flange_a) annotation (Line(points={{11,-10},{20,-10},{20,20},{28,20}}, color={0,127,0}));
+    connect(mass2.flange_b, accSensor1.flange) annotation (Line(points={{51,20},{58,20}}, color={0,127,0}));
+    connect(mass1.flange_b, relPositionSensor1.flange_a) annotation (Line(points={{-19,60},{-16,60},{-16,-40},{-12,-40}}, color={0,127,0}));
+    connect(relPositionSensor1.flange_b, mass2.flange_a) annotation (Line(points={{11,-40},{20,-40},{20,20},{28,20}}, color={0,127,0}));
+    connect(mass1.flange_b, relSpeedSensor1.flange_a) annotation (Line(points={{-19,60},{-16,60},{-16,-65},{-12,-65}}, color={0,127,0}));
+    connect(relSpeedSensor1.flange_b, mass2.flange_a) annotation (Line(points={{11,-65},{20,-65},{20,20},{28,20}}, color={0,127,0}));
+    connect(mass1.flange_b, relAccSensor1.flange_a) annotation (Line(points={{-19,60},{-16,60},{-16,-90},{-12,-90}}, color={0,127,0}));
+    connect(relAccSensor1.flange_b, mass2.flange_a) annotation (Line(points={{11,-90},{20,-90},{20,20},{28,20}}, color={0,127,0}));
+    connect(constantSpeed1.flange, damper3.flange_a) annotation (Line(points={{-79,-120},{-72,-120}}, color={0,127,0}));
+    connect(damper3.flange_b, fixed3.flange) annotation (Line(points={{-49,-120},{-42,-120}}, color={0,127,0}));
+    connect(s.y, multiplex3.u1[1]) annotation (Line(points={{-79,-160},{-76,-160},{-76,-177},{-72,-177}}, color={0,0,127}));
+    connect(v.y, multiplex3.u2[1]) annotation (Line(points={{-79,-185},{-72,-185}}, color={0,0,127}));
+    connect(a.y, multiplex3.u3[1]) annotation (Line(points={{-79,-210},{-76,-210},{-76,-193},{-72,-193}}, color={0,0,127}));
+    connect(multiplex3.y, move1.u) annotation (Line(points={{-49,-185},{-42,-185}}, color={0,0,127}));
+    connect(move1.flange, mass6.flange_a) annotation (Line(points={{-19,-185},{-12,-185}}, color={0,127,0}));
+    connect(mass6.flange_b, spring6.flange_a) annotation (Line(points={{11,-185},{18,-185}}, color={0,127,0}));
+    connect(spring6.flange_b, fixed6.flange) annotation (Line(points={{41,-185},{48,-185}}, color={0,127,0}));
+    annotation (Diagram(coordinateSystem(extent={{-100,-230},{100,120}})),
+      experiment(StopTime=2),
+      Documentation(info="<html>
+<p>
+Two masses coupled by a spring damper and an internal force (Force2), driven by a ForceStep,
+and measured with all sensors of
+<a href=\"modelica://Modelica.Mechanics.Translational.Sensors\">Modelica.Mechanics.Translational.Sensors</a>
+that are not used elsewhere: ForceSensor, MultiSensor, PowerSensor, AccSensor, RelPositionSensor,
+RelSpeedSensor and RelAccSensor. ConstantSpeed drives a damper. Sources.Move prescribes the
+position, velocity and acceleration of a mass on a spring, so the tool has to use the derivative
+functions position_der and position_der2 of Move.
+</p>
+</html>"));
+  end SensorsAndSources;
+
+  model FrictionStopsAndInitialization "Test of Brake, MassWithStopAndFriction and InitializeFlange of Modelica.Mechanics.Translational"
+    extends Modelica.Icons.Example;
+
+    Modelica.Mechanics.Translational.Components.Mass mass3(m=1, s(start=0, fixed=true), v(start=2, fixed=true))
+      annotation (Placement(transformation(extent={{-70,50},{-50,70}})));
+    Modelica.Mechanics.Translational.Components.Brake brake1(mu_pos=[0, 0.5], fn_max=5)
+      annotation (Placement(transformation(extent={{-30,50},{-10,70}})));
+    Modelica.Blocks.Sources.Step engage(height=1, startTime=0.5)
+      annotation (Placement(transformation(extent={{-30,90},{-10,110}})));
+    Modelica.Blocks.Sources.Sine sineForce(amplitude=5, f=1)
+      annotation (Placement(transformation(extent={{-100,-10},{-80,10}})));
+    Modelica.Mechanics.Translational.Sources.Force force1
+      annotation (Placement(transformation(extent={{-70,-10},{-50,10}})));
+    Modelica.Mechanics.Translational.Components.MassWithStopAndFriction massWithStop1(m=1, F_prop=0.5, F_Coulomb=1, F_Stribeck=2, fexp=2, smax=0.1, smin=-0.1, s(start=0, fixed=true), v(start=0, fixed=true))
+      annotation (Placement(transformation(extent={{-30,-10},{-10,10}})));
+    Modelica.Blocks.Sources.Constant sStart(k=0.5)
+      annotation (Placement(transformation(extent={{-100,-60},{-80,-40}})));
+    Modelica.Blocks.Sources.Constant vStart(k=1)
+      annotation (Placement(transformation(extent={{-100,-90},{-80,-70}})));
+    Modelica.Mechanics.Translational.Components.InitializeFlange initializeFlange1(use_a_start=false)
+      annotation (Placement(transformation(extent={{-60,-75},{-40,-55}})));
+    Modelica.Mechanics.Translational.Components.Mass mass4(m=1)
+      annotation (Placement(transformation(extent={{-20,-75},{0,-55}})));
+  equation
+    connect(mass3.flange_b, brake1.flange_a) annotation (Line(points={{-49,60},{-32,60}}, color={0,127,0}));
+    connect(engage.y, brake1.f_normalized) annotation (Line(points={{-9,100},{-36,100},{-36,60},{-32,60}}, color={0,0,127}));
+    connect(sineForce.y, force1.f) annotation (Line(points={{-79,0},{-76,0},{-76,-6},{-72,-6}}, color={0,0,127}));
+    connect(force1.flange, massWithStop1.flange_a) annotation (Line(points={{-49,0},{-32,0}}, color={0,127,0}));
+    connect(sStart.y, initializeFlange1.s_start) annotation (Line(points={{-79,-50},{-70,-50},{-70,-65},{-62,-65}}, color={0,0,127}));
+    connect(vStart.y, initializeFlange1.v_start) annotation (Line(points={{-79,-80},{-70,-80},{-70,-65},{-62,-65}}, color={0,0,127}));
+    connect(initializeFlange1.flange, mass4.flange_a) annotation (Line(points={{-39,-65},{-22,-65}}, color={0,127,0}));
+    annotation (Diagram(coordinateSystem(extent={{-100,-100},{100,120}})),
+      experiment(StopTime=2),
+      Documentation(info="<html>
+<p>
+Tests three components of
+<a href=\"modelica://Modelica.Mechanics.Translational.Components\">Modelica.Mechanics.Translational.Components</a>:
+</p>
+<ul>
+<li>A mass moving at 2 m/s is stopped by a Brake (friction against its fixed housing) that is engaged
+    at t = 0.5 s (normal force 5 N, friction coefficient 0.5), so it decelerates at 2.5 m/s<sup>2</sup>
+    and sticks at t = 1.3 s.</li>
+<li>MassWithStopAndFriction is driven by a sinusoidal force of 5 N amplitude, so it hits both stops at &plusmn;0.1 m.</li>
+<li>InitializeFlange sets the initial position (0.5 m) and velocity (1 m/s) of a free mass.</li>
+</ul>
+</html>"));
+  end FrictionStopsAndInitialization;
 end Translational;

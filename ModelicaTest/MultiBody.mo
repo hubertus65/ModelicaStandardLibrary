@@ -10983,4 +10983,324 @@ they were not deleted yet.")}));
     end Bodies;
 
   end InitializationConversion;
+
+  function FramesFunctions
+    "Test of the orientation functions of Modelica.Mechanics.MultiBody.Frames, Frames.TransformationMatrices and Frames.Quaternions"
+    extends Modelica.Icons.Function;
+    import Modelica.Mechanics.MultiBody.Frames;
+    import TM = Modelica.Mechanics.MultiBody.Frames.TransformationMatrices;
+    import Q = Modelica.Mechanics.MultiBody.Frames.Quaternions;
+    import Modelica.Math.Vectors;
+    import Modelica.Math.Matrices;
+    import Modelica.Utilities.Streams;
+
+    input String logFile="ModelicaTestLog.txt"
+      "Filename where the log is stored";
+    output Boolean ok;
+  protected
+    constant Real eps=1e-12 "Tolerance of the checks";
+    Real e[3]=Vectors.normalize({1, 1, 0}) "Rotation axis";
+    Real v[3]={0.3, -1.2, 2.5} "Test vector";
+    Real D[3,3]=[1, 2, 0; 2, 3, 1; 0, 1, 4] "Test dyade";
+    Real phi=0.4 "Test angle";
+    Real w=1.5 "Test angular velocity";
+    Real T1[3,3] "Orientation object of TransformationMatrices";
+    Real T2[3,3];
+    Real Trel[3,3];
+    Real dT[3,3] "Derivative of a planar rotation about the z-axis";
+    Real Q1[4] "Quaternions";
+    Real Q2[4];
+    Real dQ[4];
+    Real angles[3];
+    Frames.Orientation R1 "Orientation object of Frames";
+    Frames.Orientation R2;
+  algorithm
+    Streams.print("... Test of the orientation functions of Modelica.Mechanics.MultiBody.Frames");
+    Streams.print("... Test of the orientation functions of Modelica.Mechanics.MultiBody.Frames", logFile);
+
+    // TransformationMatrices
+    T1 := TM.axesRotations({1, 2, 3}, {0.3, -0.2, 0.5});
+    angles := TM.axesRotationsAngles(T1, {1, 2, 3});
+    assert(Vectors.norm(angles - {0.3, -0.2, 0.5}) < eps, "TM.axesRotations/axesRotationsAngles failed");
+    T2 := TM.planarRotation(e, 0.7);
+    Trel := TM.relativeRotation(T1, T2);
+    assert(Matrices.norm(TM.absoluteRotation(T1, Trel) - T2) < eps, "TM.relativeRotation failed");
+    assert(Matrices.norm(TM.absoluteRotation(T1, TM.inverseRotation(T1)) - TM.nullRotation()) < eps,
+      "TM.inverseRotation/nullRotation failed");
+    assert(Matrices.norm(TM.to_T(T1) - T1) < eps and Matrices.norm(TM.from_T(T1) - T1) < eps,
+      "TM.to_T/from_T failed");
+    assert(Matrices.norm(TM.to_T_inv(T1) - transpose(T1)) < eps and
+      Matrices.norm(TM.from_T_inv(transpose(T1)) - T1) < eps, "TM.to_T_inv/from_T_inv failed");
+    assert(Matrices.norm(TM.from_Q(TM.to_Q(T1)) - T1) < eps, "TM.to_Q/from_Q failed");
+    assert(Matrices.norm(TM.to_exy(T1) - [T1[1, :], T1[2, :]]) < eps, "TM.to_exy failed");
+    assert(Matrices.norm(TM.from_nxz(T1[1, :], T1[3, :]) - T1) < eps, "TM.from_nxz failed");
+    assert(abs(sum(TM.to_vector(T1)) - sum(T1)) < eps and abs(Vectors.norm(TM.to_vector(T1)) - sqrt(3)) < eps,
+      "TM.to_vector failed");
+    assert(Matrices.norm(TM.multipleResolve1(T1, [v, 2*v]) - [transpose(T1)*v, 2*transpose(T1)*v]) < eps and
+      Matrices.norm(TM.multipleResolve2(T1, [v, 2*v]) - [T1*v, 2*T1*v]) < eps, "TM.multipleResolve1/2 failed");
+    assert(Matrices.norm(TM.resolveDyade1(T1, D) - transpose(T1)*D*T1) < eps and
+      Matrices.norm(TM.resolveDyade2(T1, D) - T1*D*transpose(T1)) < eps, "TM.resolveDyade1/2 failed");
+    assert(Vectors.norm(TM.orientationConstraint(T1)) < eps, "TM.orientationConstraint failed");
+    assert(Vectors.norm(TM.Orientation.equalityConstraint(T1, T1)) < eps,
+      "TM.Orientation.equalityConstraint failed");
+    assert(abs(TM.planarRotationAngle({0, 0, 1}, v, TM.resolve2(TM.planarRotation({0, 0, 1}, 0.7), v)) - 0.7) < eps,
+      "TM.planarRotationAngle failed");
+    dT := w*[-sin(phi), cos(phi), 0; -cos(phi), -sin(phi), 0; 0, 0, 0];
+    assert(Vectors.norm(TM.angularVelocity1(TM.axisRotation(3, phi), dT) - {0, 0, w}) < eps and
+      Vectors.norm(TM.angularVelocity2(TM.axisRotation(3, phi), dT) - {0, 0, w}) < eps,
+      "TM.angularVelocity1/2 failed");
+
+    // Quaternions
+    Q1 := Q.planarRotation(e, 0.7);
+    assert(Matrices.norm(Q.to_T(Q1) - T2) < eps and Matrices.norm(Q.to_T_inv(Q1) - transpose(T2)) < eps,
+      "Q.planarRotation/to_T/to_T_inv failed");
+    assert(Matrices.norm(Q.to_T(Q.from_T_inv(transpose(T2))) - T2) < eps, "Q.from_T_inv failed");
+    Q2 := TM.to_Q(T1);
+    assert(Matrices.norm(Q.to_T(Q.absoluteRotation(Q2, Q.relativeRotation(Q2, Q1))) - T2) < eps,
+      "Q.relativeRotation/absoluteRotation failed");
+    assert(Matrices.norm(Q.to_T(Q.absoluteRotation(Q1, Q.inverseRotation(Q1))) - identity(3)) < eps,
+      "Q.inverseRotation failed");
+    assert(Vectors.norm(Q.resolve1(Q1, v) - transpose(T2)*v) < eps and Vectors.norm(Q.resolve2(Q1, v) - T2*v) < eps,
+      "Q.resolve1/resolve2 failed");
+    assert(Matrices.norm(Q.multipleResolve1(Q1, [v, 2*v]) - [transpose(T2)*v, 2*transpose(T2)*v]) < eps and
+      Matrices.norm(Q.multipleResolve2(Q1, [v, 2*v]) - [T2*v, 2*T2*v]) < eps, "Q.multipleResolve1/2 failed");
+    assert(Vectors.norm(Q.smallRotation(Q.planarRotation({1, 0, 0}, 1e-5)) - {1e-5, 0, 0}) < 1e-12,
+      "Q.smallRotation failed");
+    Q1 := Q.planarRotation({0, 0, 1}, phi);
+    dQ := w/2*{0, 0, cos(phi/2), -sin(phi/2)};
+    assert(Vectors.norm(Q.angularVelocity1(Q1, dQ) - {0, 0, w}) < eps, "Q.angularVelocity1 failed");
+
+    // Frames (orientation object with angular velocity)
+    R1 := Frames.axisRotation(3, phi, w);
+    assert(Vectors.norm(Frames.orientationConstraint(R1)) < eps, "Frames.axisRotation/orientationConstraint failed");
+    assert(Matrices.norm(Frames.to_T(R1) - TM.axisRotation(3, phi)) < eps and
+      Matrices.norm(Frames.to_T_inv(R1) - transpose(TM.axisRotation(3, phi))) < eps, "Frames.to_T/to_T_inv failed");
+    // Frames.from_T_inv is tested in FramesFromTinv
+    R2 := Frames.from_T2(TM.axisRotation(3, phi), dT);
+    assert(Matrices.norm(R2.T - TM.axisRotation(3, phi)) < eps and Vectors.norm(R2.w - {0, 0, w}) < eps,
+      "Frames.from_T2 failed");
+    R2 := Frames.from_nxz(T1[1, :], T1[3, :]);
+    assert(Matrices.norm(R2.T - T1) < eps and Vectors.norm(R2.w) < eps, "Frames.from_nxz failed");
+    R2 := Frames.from_T(T1, zeros(3));
+    assert(Matrices.norm(Frames.to_exy(R2) - TM.to_exy(T1)) < eps and
+      abs(sum(Frames.to_vector(R2)) - sum(T1)) < eps, "Frames.to_exy/to_vector failed");
+    assert(Matrices.norm(Frames.resolveDyade2(R2, D) - T1*D*transpose(T1)) < eps, "Frames.resolveDyade2 failed");
+
+    ok := true;
+  end FramesFunctions;
+
+  model TestFramesFunctions
+    extends Modelica.Icons.Example;
+
+    Boolean result;
+  algorithm
+    when initial() then
+      result := ModelicaTest.MultiBody.FramesFunctions();
+    end when;
+
+    annotation (experiment(StopTime=0));
+  end TestFramesFunctions;
+
+  model FramesDerivativesAndGravity
+    "Test of the derivative functions of Modelica.Mechanics.MultiBody.Frames.Internal and of the gravity functions"
+    extends Modelica.Icons.Example;
+    import Modelica.Mechanics.MultiBody.Frames;
+    import Modelica.Math.Vectors;
+
+    inner Modelica.Mechanics.MultiBody.World world(n={0, -1, 0})
+      annotation (Placement(transformation(extent={{-80,60},{-60,80}})));
+    Real phi=sin(time) "Rotation angle";
+    Real w=cos(time) "Rotation speed";
+    Frames.Orientation R=Frames.planarRotation({0, 0, 1}, phi, w) "Time-varying rotation about z";
+    Frames.Orientation R2=Frames.planarRotation({1, 0, 0}, 0.5*phi, 0.5*w) "Time-varying rotation about x";
+    Real v2[3]={time, 1, 2*time} "Vector resolved in frame 2";
+    Real v1[3]=Frames.resolve1(R, v2) "Vector resolved in frame 1";
+    Real der_v1[3]=der(v1) "Uses Frames.Internal.resolve1_der";
+    Real der_v1Error=Vectors.norm(der_v1 - Frames.resolve1(R, der(v2) + cross(R.w, v2))) "Must be zero";
+    Real v2b[3]=Frames.resolve2(R, v1) "v1 resolved back in frame 2";
+    Real der_v2bError=Vectors.norm(der(v2b) - der(v2)) "Must be zero (uses Frames.Internal.resolve2_der)";
+    Real vRel[3]=Frames.resolveRelative(v2, R, R2) "v2 resolved in the frame of R2";
+    Real der_vRelError=Vectors.norm(der(vRel) - Frames.resolve2(R2, der(v1) - Frames.resolve1(R2, cross(R2.w,
+      Frames.resolve2(R2, v1))))) "Must be zero (uses Frames.Internal.resolveRelative_der)";
+    Real m=Frames.Internal.maxWithoutEvent(sin(3*time), 0.2) "Maximum without event";
+    Real der_m=der(m) "Uses Frames.Internal.maxWithoutEvent_d";
+    Real der2_m=der(der_m) "Uses Frames.Internal.maxWithoutEvent_dd";
+    Modelica.Units.SI.Acceleration g[3]=world.gravityAcceleration({1, 2, 3}) "Uniform gravity of the world";
+    Modelica.Units.SI.Acceleration gPoint[3]=Modelica.Mechanics.MultiBody.Forces.Internal.standardGravityAcceleration(
+      {7e6*cos(time), 0, 7e6*sin(time)}, Modelica.Mechanics.MultiBody.Types.GravityTypes.PointGravity, zeros(3),
+      3.986004418e14) "Point gravity on a circular orbit";
+    annotation (experiment(StopTime=2.0), Documentation(info="<html>
+<p>
+Differentiates vectors resolved with time-varying orientation objects explicitly with
+<code>der()</code>, so the tool has to use the derivative functions resolve1_der, resolve2_der
+and resolveRelative_der of
+<a href=\"modelica://Modelica.Mechanics.MultiBody.Frames.Internal\">Frames.Internal</a>.
+The errors against the analytic expressions (using the angular velocity <code>R.w</code>) must
+be zero. maxWithoutEvent is differentiated twice (maxWithoutEvent_d and maxWithoutEvent_dd).
+</p>
+<p>
+The replaceable function <code>gravityAcceleration</code> of
+<a href=\"modelica://Modelica.Mechanics.MultiBody.World\">World</a> is called directly. Forces.Internal.standardGravityAcceleration
+is evaluated for point gravity on a circular orbit of 7000 km radius (magnitude 8.13 m/s<sup>2</sup>).
+</p>
+</html>"));
+  end FramesDerivativesAndGravity;
+
+  model SensorsVisualizersAndAdaptor "Test of MultiBody sensors, visualizers and the FlangeWithBearingAdaptor"
+    extends Modelica.Icons.Example;
+
+    inner Modelica.Mechanics.MultiBody.World world
+      annotation (Placement(transformation(extent={{-100,70},{-80,90}})));
+    Modelica.Mechanics.MultiBody.Joints.Revolute revolute1(phi(start=1, fixed=true), w(start=0, fixed=true))
+      annotation (Placement(transformation(extent={{-60,30},{-40,50}})));
+    Modelica.Mechanics.MultiBody.Sensors.Power power1
+      annotation (Placement(transformation(extent={{-30,30},{-10,50}})));
+    Modelica.Mechanics.MultiBody.Parts.BodyBox bodyBox1(r={0.5, 0, 0})
+      annotation (Placement(transformation(extent={{0,30},{20,50}})));
+    Modelica.Mechanics.MultiBody.Sensors.RelativeVelocity relativeVelocity1
+      annotation (Placement(transformation(extent={{0,70},{20,90}})));
+    Modelica.Mechanics.MultiBody.Visualizers.FixedShape2 fixedShape2(length=0.1, width=0.05, height=0.05)
+      annotation (Placement(transformation(extent={{30,30},{50,50}})));
+    Modelica.Mechanics.MultiBody.Visualizers.Advanced.Arrow arrow1(r_head={0, 0.2, 0})
+      annotation (Placement(transformation(extent={{-60,70},{-40,90}})));
+    Modelica.Mechanics.MultiBody.Visualizers.Advanced.DoubleArrow doubleArrow1(r_head={0.2, 0, 0})
+      annotation (Placement(transformation(extent={{-30,70},{-10,90}})));
+    Modelica.Mechanics.MultiBody.Visualizers.Internal.FixedLines fixedLines1
+      annotation (Placement(transformation(extent={{-60,-10},{-40,10}})));
+    Modelica.Blocks.Sources.Sine torqueSignal(amplitude=2, f=1)
+      annotation (Placement(transformation(extent={{-100,-70},{-80,-50}})));
+    Modelica.Mechanics.Rotational.Sources.Torque torque1
+      annotation (Placement(transformation(extent={{-70,-70},{-50,-50}})));
+    Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearingAdaptor adaptorA
+      annotation (Placement(transformation(extent={{-40,-70},{-20,-50}})));
+    Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearingAdaptor adaptorB
+      annotation (Placement(transformation(extent={{-10,-70},{10,-50}})));
+    Modelica.Mechanics.Rotational.Components.Inertia inertia1(J=1, phi(start=0, fixed=true), w(start=0, fixed=true))
+      annotation (Placement(transformation(extent={{20,-70},{40,-50}})));
+  equation
+    connect(world.frame_b, revolute1.frame_a) annotation (Line(points={{-79,80},{-70,80},{-70,40},{-62,40}}, color={95,95,95}));
+    connect(revolute1.frame_b, power1.frame_a) annotation (Line(points={{-39,40},{-32,40}}, color={95,95,95}));
+    connect(power1.frame_b, bodyBox1.frame_a) annotation (Line(points={{-9,40},{-2,40}}, color={95,95,95}));
+    connect(world.frame_b, relativeVelocity1.frame_a) annotation (Line(points={{-79,80},{-2,80}}, color={95,95,95}));
+    connect(bodyBox1.frame_b, relativeVelocity1.frame_b) annotation (Line(points={{21,40},{-6,40},{-6,80},{-2,80}}, color={95,95,95}));
+    connect(bodyBox1.frame_b, fixedShape2.frame_a) annotation (Line(points={{21,40},{28,40}}, color={95,95,95}));
+    connect(world.frame_b, fixedLines1.frame_a) annotation (Line(points={{-79,80},{-70,80},{-70,0},{-62,0}}, color={95,95,95}));
+    connect(torqueSignal.y, torque1.tau) annotation (Line(points={{-79,-60},{-72,-60}}, color={0,0,127}));
+    connect(torque1.flange, adaptorA.flange) annotation (Line(points={{-49,-60},{-42,-60}}, color={0,0,0}));
+    connect(adaptorA.flangeAndFrame, adaptorB.flangeAndFrame) annotation (Line(points={{-19,-60},{-12,-60}}, color={0,0,0}));
+    connect(adaptorB.flange, inertia1.flange_a) annotation (Line(points={{11,-60},{18,-60}}, color={0,0,0}));
+    annotation (experiment(StopTime=2),
+      Documentation(info="<html>
+<p>
+A pendulum (revolute joint and body box) of
+<a href=\"modelica://Modelica.Mechanics.MultiBody\">Modelica.Mechanics.MultiBody</a>,
+measured with Sensors.Power (power flow from the joint into the body) and Sensors.RelativeVelocity
+(velocity of the body tip relative to the world). It is decorated with the visualizers FixedShape2,
+Advanced.Arrow, Advanced.DoubleArrow and Internal.FixedLines; these have no effect on the dynamics.
+</p>
+<p>
+Two Interfaces.FlangeWithBearingAdaptor connected through their FlangeWithBearing connectors transmit
+a torque from a source to a rotational inertia.
+</p>
+</html>"));
+  end SensorsVisualizersAndAdaptor;
+
+  function FramesSmallRotation
+    "Test of smallRotation of Modelica.Mechanics.MultiBody.Frames and Frames.TransformationMatrices"
+    extends Modelica.Icons.Function;
+    import Modelica.Mechanics.MultiBody.Frames;
+    import TM = Modelica.Mechanics.MultiBody.Frames.TransformationMatrices;
+    import Modelica.Math.Vectors;
+    import Modelica.Utilities.Streams;
+
+    input String logFile="ModelicaTestLog.txt"
+      "Filename where the log is stored";
+    output Boolean ok;
+  algorithm
+    Streams.print("... Test of Frames.smallRotation and TransformationMatrices.smallRotation");
+    Streams.print("... Test of Frames.smallRotation and TransformationMatrices.smallRotation", logFile);
+    assert(Vectors.norm(TM.smallRotation(TM.axisRotation(1, 1e-5)) - {1e-5, 0, 0}) < 1e-12,
+      "TM.smallRotation failed");
+    assert(Vectors.norm(Frames.smallRotation(Frames.axisRotation(2, 1e-5, 0)) - {0, 1e-5, 0}) < 1e-12,
+      "Frames.smallRotation failed");
+    ok := true;
+    annotation (Documentation(info="<html>
+<p>
+Tests smallRotation of
+<a href=\"modelica://Modelica.Mechanics.MultiBody.Frames\">Frames</a> and
+<a href=\"modelica://Modelica.Mechanics.MultiBody.Frames.TransformationMatrices\">Frames.TransformationMatrices</a>
+for a rotation of 1e-5 rad.
+</p>
+<p>
+Note: Modelon Impact (OCT) rejects both functions. Their output size depends on the input
+<code>withResidues</code>, and the assignment
+<code>phi := if withResidues then {...6 elements...} else {...3 elements...}</code> is an
+if-expression whose branches have different sizes but whose condition is not a parameter expression.
+</p>
+</html>"));
+  end FramesSmallRotation;
+
+  model TestFramesSmallRotation
+    extends Modelica.Icons.Example;
+
+    Boolean result;
+  algorithm
+    when initial() then
+      result := ModelicaTest.MultiBody.FramesSmallRotation();
+    end when;
+
+    annotation (experiment(StopTime=0));
+  end TestFramesSmallRotation;
+
+  function FramesFromTinv "Test of Modelica.Mechanics.MultiBody.Frames.from_T_inv"
+    extends Modelica.Icons.Function;
+    import Modelica.Mechanics.MultiBody.Frames;
+    import TM = Modelica.Mechanics.MultiBody.Frames.TransformationMatrices;
+    import Modelica.Math.Vectors;
+    import Modelica.Math.Matrices;
+    import Modelica.Utilities.Streams;
+
+    input String logFile="ModelicaTestLog.txt"
+      "Filename where the log is stored";
+    output Boolean ok;
+  protected
+    Real T[3,3]=TM.axesRotations({1, 2, 3}, {0.3, -0.2, 0.5}) "Transformation matrix";
+    Real w[3]={0.1, 0.2, 0.3}
+      "Angular velocity of frame 1 w.r.t. frame 2, resolved in frame 1, as defined for from_T_inv";
+    Frames.Orientation R;
+  algorithm
+    Streams.print("... Test of Modelica.Mechanics.MultiBody.Frames.from_T_inv");
+    Streams.print("... Test of Modelica.Mechanics.MultiBody.Frames.from_T_inv", logFile);
+    R := Frames.from_T_inv(transpose(T), w);
+    assert(Matrices.norm(R.T - T) < 1e-12, "Frames.from_T_inv: wrong transformation matrix");
+    // R.w is the angular velocity of frame 2 w.r.t. frame 1, resolved in frame 2: R.w = -T*w
+    assert(Vectors.norm(R.w + T*w) < 1e-12, "Frames.from_T_inv: wrong angular velocity");
+    ok := true;
+    annotation (Documentation(info="<html>
+<p>
+Tests <a href=\"modelica://Modelica.Mechanics.MultiBody.Frames.from_T_inv\">Frames.from_T_inv</a>
+for a general orientation.
+</p>
+<p>
+Note: this test currently fails. The input <code>w</code> is defined by
+skew(w) = T_inv*der(transpose(T_inv)), i.e. it is the angular velocity of frame 1
+with respect to frame 2, resolved in frame 1. The angular velocity stored in the orientation
+object (frame 2 with respect to frame 1, resolved in frame 2) is therefore
+<code>R.w = -T*w</code>. from_T_inv returns <code>R.w = -w</code>, which is only correct if
+w is parallel to the rotation axis (e.g. planar rotations).
+</p>
+</html>"));
+  end FramesFromTinv;
+
+  model TestFramesFromTinv
+    extends Modelica.Icons.Example;
+
+    Boolean result;
+  algorithm
+    when initial() then
+      result := ModelicaTest.MultiBody.FramesFromTinv();
+    end when;
+
+    annotation (experiment(StopTime=0));
+  end TestFramesFromTinv;
 end MultiBody;

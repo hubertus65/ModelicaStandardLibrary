@@ -1,0 +1,7 @@
+time
+revolute1.phi
+revolute1.w
+power1.power
+relativeVelocity1.v_rel[1]
+relativeVelocity1.v_rel[2]
+inertia1.w

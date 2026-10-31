@@ -1,0 +1,147 @@
+# ModCheck case list: new ModelicaTest coverage tests for Modelica.Mechanics (branch coverage-improvement).
+#
+# Each case is one new test model, run unmodified on Modelon Impact (MSL 4.1.0 dependency).
+# Variables are the comparison signals of the model, as listed in
+# ModelicaTest/Resources/Reference/ModelicaTest/<Package>/<Model>/comparisonSignals.txt.
+# ncp gives 500 output intervals per second of simulated time (2000 for long runs).
+library: ModelicaTest
+workspace: msl-coverage
+custom_function: dynamic
+tolerance: 0.001
+
+cases:
+  - name: SensorsAndSources
+    enabled: true
+    model: ModelicaTest.Translational.SensorsAndSources
+    start_time: 0.0
+    final_time: 2.0
+    ncp: 1000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "forceSensor1.f"
+      - "mass1.s"
+      - "mass1.v"
+      - "multiSensor1.power"
+      - "multiSensor1.f"
+      - "multiSensor1.v"
+      - "mass2.s"
+      - "relPositionSensor1.s_rel"
+      - "relSpeedSensor1.v_rel"
+      - "relAccSensor1.a_rel"
+      - "powerSensor1.power"
+      - "accSensor1.a"
+      - "damper3.f"
+      - "mass6.s"
+      - "spring6.f"
+  - name: FrictionStopsAndInitialization
+    enabled: true
+    model: ModelicaTest.Translational.FrictionStopsAndInitialization
+    start_time: 0.0
+    final_time: 2.0
+    ncp: 1000
+    rtol: 1.0e-6
+    # MassWithStopAndFriction hits its stops repeatedly (stick-slip with impacts); at 100x rtol (1e-4) the shifted impact instants change the velocity trajectory, so the check run is capped at 1e-5
+    max_rtol: 1.0e-5
+    modifiers: {}
+    variables:
+      - time
+      - "mass3.s"
+      - "mass3.v"
+      - "massWithStop1.s"
+      - "massWithStop1.v"
+      - "mass4.s"
+      - "mass4.v"
+  - name: DiscMoveAndAngleAdaptor
+    enabled: true
+    model: ModelicaTest.Rotational.DiscMoveAndAngleAdaptor
+    start_time: 0.0
+    final_time: 2.0
+    ncp: 1000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "inertia1.phi"
+      - "inertia2.phi"
+      - "spring1.tau"
+      - "inertia3.phi"
+      - "spring3.tau"
+      - "angleToTorqueAdaptor1.tau"
+      - "inertia4.w"
+      - "inertia5.phi"
+      - "inertia5.w"
+  - name: TestFramesFunctions
+    enabled: true
+    model: ModelicaTest.MultiBody.TestFramesFunctions
+    start_time: 0.0
+    final_time: 0.01
+    ncp: 10
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "result"
+  - name: FramesDerivativesAndGravity
+    enabled: true
+    model: ModelicaTest.MultiBody.FramesDerivativesAndGravity
+    start_time: 0.0
+    final_time: 2.0
+    ncp: 1000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "v1[[]1]"
+      - "der_v1[[]1]"
+      - "der_v1Error"
+      - "der_v2bError"
+      - "der_vRelError"
+      - "m"
+      - "der_m"
+      - "der2_m"
+      - "g[[]1]"
+      - "g[[]2]"
+      - "gPoint[[]1]"
+      - "gPoint[[]3]"
+  - name: SensorsVisualizersAndAdaptor
+    enabled: true
+    model: ModelicaTest.MultiBody.SensorsVisualizersAndAdaptor
+    start_time: 0.0
+    final_time: 2.0
+    ncp: 1000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "revolute1.phi"
+      - "revolute1.w"
+      - "power1.power"
+      - "relativeVelocity1.v_rel[[]1]"
+      - "relativeVelocity1.v_rel[[]2]"
+      - "inertia1.w"
+  - name: TestFramesSmallRotation
+    # disabled: Modelon Impact (OCT) rejects Frames.smallRotation and TransformationMatrices.smallRotation (if-expression with branches of different sizes and a non-parameter condition)
+    enabled: false
+    model: ModelicaTest.MultiBody.TestFramesSmallRotation
+    start_time: 0.0
+    final_time: 0.01
+    ncp: 10
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "result"
+  - name: TestFramesFromTinv
+    # disabled: fails by design until the MSL bug is fixed: Frames.from_T_inv returns R.w = -w instead of -T*w
+    enabled: false
+    model: ModelicaTest.MultiBody.TestFramesFromTinv
+    start_time: 0.0
+    final_time: 0.01
+    ncp: 10
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "result"

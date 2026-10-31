@@ -1,0 +1,16 @@
+time
+forceSensor1.f
+mass1.s
+mass1.v
+multiSensor1.power
+multiSensor1.f
+multiSensor1.v
+mass2.s
+relPositionSensor1.s_rel
+relSpeedSensor1.v_rel
+relAccSensor1.a_rel
+powerSensor1.power
+accSensor1.a
+damper3.f
+mass6.s
+spring6.f

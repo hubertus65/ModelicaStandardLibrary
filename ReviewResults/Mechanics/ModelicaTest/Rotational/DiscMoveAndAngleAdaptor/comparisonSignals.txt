@@ -1,0 +1,10 @@
+time
+angleToTorqueAdaptor1.tau
+inertia1.phi
+inertia2.phi
+inertia3.phi
+inertia4.w
+inertia5.phi
+inertia5.w
+spring1.tau
+spring3.tau
