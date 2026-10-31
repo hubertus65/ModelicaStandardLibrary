@@ -1,5 +1,77 @@
 [
   {
+    "name": "AssignClockToSquareWaveHold",
+    "model": "ModelicaTest.Clocked.AssignClockToSquareWaveHold",
+    "variables": [
+      "squareWaveBoolean.y",
+      "squareWaveInteger.y",
+      "time"
+    ],
+    "metrics": {
+      "state_events": 11,
+      "time_events": 11,
+      "steps": 16601,
+      "function_evaluations": 16601,
+      "jacobian_evaluations": 0,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "cpu_time": 0.0054431,
+      "simulation_time": 0.003479,
+      "kind": "dynamic",
+      "solver": "cvode",
+      "wall_time": 0.1546046999283135,
+      "samples": 628,
+      "omc_version": "OpenModelica v1.27.1 (64-bit)",
+      "msl_version": "4.2.0 dev",
+      "spread_applied": true,
+      "rtol": 1e-06
+    },
+    "descriptor": "openmodelica v1.27.1 (64-bit), MSL 4.2.0 dev, cvode",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 2778,
+    "record": {
+      "schema": 1,
+      "record_id": "1a51ea6bc30a312a13ac823fa3fe7f8768167165ccf72635ded8d3a1445f4756",
+      "executable": {},
+      "experiment": {
+        "case_entry_sha256": "1897f308744a3f78744d17e7cd796c02e28fa7ee997f01a89650dfa1cce220aa",
+        "descriptor": "openmodelica v1.27.1 (64-bit), MSL 4.2.0 dev, cvode",
+        "rtol_factor": 1.0
+      },
+      "model": {
+        "class": "ModelicaTest.Clocked.AssignClockToSquareWaveHold",
+        "libraries": [
+          {
+            "git_commit": "d124e82900796ebdb5d710f1015cc306b153d17a",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 2778,
+        "file": "AssignClockToSquareWaveHold.npz",
+        "format": "npz",
+        "sha256": "307e2d184c49546fc68dff2d417169644ed66e84a46fb21a6c54e5abe7feb1a3"
+      },
+      "run": {
+        "utc": "2026-10-31T18:24:09+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
     "name": "BooleanSamplersAndHolds",
     "model": "ModelicaTest.Clocked.BooleanSamplersAndHolds",
     "variables": [

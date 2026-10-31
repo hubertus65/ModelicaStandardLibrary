@@ -749,11 +749,13 @@ square wave with AssignClockToSquareWaveHold of
 The output must toggle at every tick, i.e. every 20 ms.
 </p>
 <p>
-Note: with OpenModelica 1.27.1, the output toggles only every second. The square wave is
+Note: with the original MSL code and OpenModelica 1.27.1, the output toggled only every second. The square wave is
 assigned the default clock (1 s) instead of the clock of the input, because the
 \"dummy condition\" <code>y2 = if u &gt; 0 then not previous(y2) else not previous(y2)</code>
 has identical branches and does not tie the clock of <code>y2</code> to <code>u</code> after
-simplification. The Real version (tested in RealSamplersAndHolds) works.
+simplification. The Real version (tested in RealSamplersAndHolds) works. The Integer and Boolean
+versions now use the clocked when-equation of the Real version
+(modelica/ModelicaStandardLibrary#4849), and the output toggles every 20 ms.
 </p>
 </html>"));
   end AssignClockToSquareWaveHold;

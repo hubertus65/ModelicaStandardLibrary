@@ -146,8 +146,7 @@ cases:
       - "rotationalClock1.direction"
       - "fixedRotationalClock1.direction"
   - name: AssignClockToSquareWaveHold
-    # disabled: OpenModelica 1.27.1 assigns the default clock (1 s) to the Integer and Boolean AssignClockToSquareWaveHold instead of the clock of their input
-    enabled: false
+    enabled: true
     model: ModelicaTest.Clocked.AssignClockToSquareWaveHold
     start_time: 0.0
     final_time: 1.0
