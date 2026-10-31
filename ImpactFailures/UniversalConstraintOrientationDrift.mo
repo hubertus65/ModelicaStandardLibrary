@@ -26,7 +26,7 @@ to the joint side nor to OpenModelica:
 tolerances; only the body behind the constraint is wrong. The constraint fixes the relative position and one
 relative angle, so its orientation residue closes a kinematic loop, and that residue is apparently not kept
 during integration. Variants of RevoluteConstraint, SphericalConstraint and PrismaticConstraint (stiffer
-spring) give consistent results in Impact at rtol 1e-6 and 1e-5.
+spring) give consistent results in Impact at rtol 1e-6 and 1e-4.
 </p>
 <p>
 <strong>Workaround:</strong> none in the model. The ModelicaTest test
