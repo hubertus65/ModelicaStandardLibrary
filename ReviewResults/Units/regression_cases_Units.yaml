@@ -1,0 +1,36 @@
+# ModCheck case list: new ModelicaTest.Units coverage tests (branch coverage-improvement).
+#
+# Each case is one new test model, run unmodified on Modelon Impact (MSL 4.1.0
+# dependency). Variables are the comparison signals of the model, as listed in
+# ModelicaTest/Resources/Reference/ModelicaTest/Units/<Model>/comparisonSignals.txt.
+# ncp gives 500 output intervals per second of simulated time.
+library: ModelicaTest
+workspace: msl-coverage
+custom_function: dynamic
+tolerance: 0.001
+
+cases:
+  - name: ComplexUnitsAndConversions
+    enabled: true
+    model: ModelicaTest.Units.ComplexUnitsAndConversions
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "power.re"
+      - "power.im"
+      - "impedancePerLength.re"
+      - "reluctance.im"
+      - "magneticFieldStrength.re"
+      - "perUnit.re"
+      - "charge_Ah"
+      - "chargeBack"
+      - "energy_Wh"
+      - "energyBack"
+      - "f_Hz"
+      - "wBack"
+      - "area_cm2"
+      - "areaBack"

@@ -1,0 +1,15 @@
+time
+areaBack
+area_cm2
+chargeBack
+charge_Ah
+energyBack
+energy_Wh
+f_Hz
+impedancePerLength.re
+magneticFieldStrength.re
+perUnit.re
+power.im
+power.re
+reluctance.im
+wBack

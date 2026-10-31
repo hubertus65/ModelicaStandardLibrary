@@ -1,0 +1,106 @@
+[
+  {
+    "name": "ComplexUnitsAndConversions",
+    "model": "ModelicaTest.Units.ComplexUnitsAndConversions",
+    "variables": [
+      "areaBack",
+      "area_cm2",
+      "chargeBack",
+      "charge_Ah",
+      "energyBack",
+      "energy_Wh",
+      "f_Hz",
+      "impedancePerLength.re",
+      "magneticFieldStrength.re",
+      "perUnit.re",
+      "power.im",
+      "power.re",
+      "reluctance.im",
+      "time",
+      "wBack"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.04746246803551912,
+      "steps": 501,
+      "rhs_evaluations": 505,
+      "jacobian_evaluations": 9,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "magneticFieldStrength.re": "A/m",
+      "reluctance.im": "H-1",
+      "power.re": "W",
+      "power.im": "var",
+      "impedancePerLength.re": "Ohm/m",
+      "perUnit.re": "1",
+      "chargeBack": "C",
+      "energyBack": "J",
+      "wBack": "rad/s",
+      "areaBack": "m2"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 31274,
+    "record": {
+      "schema": 1,
+      "record_id": "46321e5cc05bc2fd93bc26f769522fff8be36704065c78128c8d5a23ba9253ab",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T04:57:32",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "559f2f3587fa2b00f47ea22b467d54a3",
+        "impact_fmu_id": "modelicatest_units_complexunitsandconversions_20261031_045730_740e88c",
+        "model_description_sha256": "537d9b53776507f5e6e4b78984a770dddc09fa1d89a508eba0acb3f163511fb5"
+      },
+      "experiment": {
+        "case_entry_sha256": "f1d61e8f9cae5ea58bd740efb056ab53c76d4010ec741e181ddb5c95d1dbcd36",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_units_complexunitsandconversions_20261031_045730_eaf0932",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "5f55bc2f636ee850b3ee743a6eefef2e2967fe1a39971d245edc35cfd6fb7ff7"
+      },
+      "model": {
+        "class": "ModelicaTest.Units.ComplexUnitsAndConversions",
+        "libraries": [
+          {
+            "git_commit": "1db057b7f601065ce2247e2d6750badec0dad11f",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 31274,
+        "file": "ComplexUnitsAndConversions.npz",
+        "format": "npz",
+        "sha256": "2fbfeb60f2dc14891e28750c1398be2afd0b224164e2eb0e1ec153a5d85d3965"
+      },
+      "run": {
+        "utc": "2026-10-31T04:57:36+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  }
+]
