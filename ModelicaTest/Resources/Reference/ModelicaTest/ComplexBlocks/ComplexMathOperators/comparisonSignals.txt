@@ -1,0 +1,16 @@
+time
+add1.y.re
+add1.y.im
+product1.y.re
+product1.y.im
+complexToReal1.re
+complexToReal1.im
+complexToPolar1.len
+complexToPolar1.phi
+polarToComplex1.y.re
+polarToComplex1.y.im
+bode1.abs_y
+bode1.arg_y
+bode1.dB_y
+transferFunction1.y.re
+transferFunction1.y.im

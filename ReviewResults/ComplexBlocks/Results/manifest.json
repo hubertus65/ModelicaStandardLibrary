@@ -1,0 +1,311 @@
+{
+ "run": {
+  "utc": "2026-10-31T04:46:39+00:00",
+  "rtol_factor": 100.0,
+  "descriptor": "impact workspace 'msl-coverage'",
+  "reference_descriptor": "",
+  "cases": 3,
+  "cases_this_run": 3,
+  "failed_cases": 0,
+  "bytes": 148254
+ },
+ "cases": [
+  {
+   "name": "ComplexMathFunctions",
+   "model": "ModelicaTest.ComplexBlocks.ComplexMathFunctions",
+   "variables": [
+    "acos1.y.im",
+    "acos1.y.re",
+    "asin1.y.im",
+    "asin1.y.re",
+    "atan1.y.im",
+    "atan1.y.re",
+    "conj1.y.im",
+    "conj1.y.re",
+    "cos1.y.im",
+    "cos1.y.re",
+    "cosh1.y.im",
+    "cosh1.y.re",
+    "exp1.y.im",
+    "exp1.y.re",
+    "log1.y.im",
+    "log1.y.re",
+    "sin1.y.im",
+    "sin1.y.re",
+    "sinConjugate.y.im",
+    "sinConjugate.y.re",
+    "sinh1.y.im",
+    "sinh1.y.re",
+    "sqrt1.y.im",
+    "sqrt1.y.re",
+    "tan1.y.im",
+    "tan1.y.re",
+    "tanh1.y.im",
+    "tanh1.y.re",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.05482824798673391,
+    "steps": 501,
+    "rhs_evaluations": 505,
+    "jacobian_evaluations": 9,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {},
+   "display_units": {},
+   "format": "npz",
+   "bytes": 69983,
+   "record": {
+    "schema": 1,
+    "record_id": "cb1455150b0099a8b0e9da65b07048c45ddd6a246318e9944de5bdd71dc222d9",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T04:46:15",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "86424bb168e8bbbdac5be90fb8c906ac",
+     "impact_fmu_id": "modelicatest_complexblocks_complexmathfunctions_20261031_044612_371135a",
+     "model_description_sha256": "ebef84303ecce67fcce6a5ceb960712cdd66cf5a15428aecc69363bc1856e04f"
+    },
+    "experiment": {
+     "case_entry_sha256": "7f1141906db9c3202a4bdf6f3dcb91b31519491ebe963815c26f9489b2f3d3ba",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "modelicatest_complexblocks_complexmathfunctions_20261031_044611_72f5b23",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "3cdbb0ad276792954afcafc1d41cbcbf6f1977c80e45b0bc704a936729996da1"
+    },
+    "model": {
+     "class": "ModelicaTest.ComplexBlocks.ComplexMathFunctions",
+     "libraries": [
+      {
+       "git_commit": "53588f97db9f1ed5a7265250b1d6d3e2c3177a1c",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 69983,
+     "file": "ComplexMathFunctions.npz",
+     "format": "npz",
+     "sha256": "6a3bdac67699028d5f566bb98ff02f923347984aa2e30dd1daa4da4306b91624"
+    },
+    "run": {
+     "utc": "2026-10-31T04:46:21+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "ComplexMathOperators",
+   "model": "ModelicaTest.ComplexBlocks.ComplexMathOperators",
+   "variables": [
+    "add1.y.im",
+    "add1.y.re",
+    "bode1.abs_y",
+    "bode1.arg_y",
+    "bode1.dB_y",
+    "complexToPolar1.len",
+    "complexToPolar1.phi",
+    "complexToReal1.im",
+    "complexToReal1.re",
+    "polarToComplex1.y.im",
+    "polarToComplex1.y.re",
+    "product1.y.im",
+    "product1.y.re",
+    "time",
+    "transferFunction1.y.im",
+    "transferFunction1.y.re"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.05152806406840682,
+    "steps": 502,
+    "rhs_evaluations": 510,
+    "jacobian_evaluations": 10,
+    "time_events": 2,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {
+    "complexToPolar1.phi": "rad",
+    "bode1.arg_y": "rad",
+    "bode1.dB_y": "dB"
+   },
+   "display_units": {},
+   "format": "npz",
+   "bytes": 54547,
+   "record": {
+    "schema": 1,
+    "record_id": "6945d5b13e38c4a5ac006997622776377235fb595e2eaa527bcd279bb96cbb5e",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T04:46:27",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "1fe9fd10757664821c2960aace92db6e",
+     "impact_fmu_id": "modelicatest_complexblocks_complexmathoperators_20261031_044624_820408b",
+     "model_description_sha256": "2d392ba5ceab3668e1974dbccd4bea84cb3d450cdcfbf6c6c65e17b287af4bfe"
+    },
+    "experiment": {
+     "case_entry_sha256": "6fcff95547a0fa3876cd05d2f8566e8eab4cebfeefacdf647583dcd9db8b2b7c",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "modelicatest_complexblocks_complexmathoperators_20261031_044624_ebaf0c3",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "7e64b51ba1a24f6f064322e414dec5361b917051125a248cc4e7cac15dda9453"
+    },
+    "model": {
+     "class": "ModelicaTest.ComplexBlocks.ComplexMathOperators",
+     "libraries": [
+      {
+       "git_commit": "53588f97db9f1ed5a7265250b1d6d3e2c3177a1c",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 54547,
+     "file": "ComplexMathOperators.npz",
+     "format": "npz",
+     "sha256": "83c2801e13600340b6d0168615e9ee114ec2f76a8a270aeac6ebae0405e120fc"
+    },
+    "run": {
+     "utc": "2026-10-31T04:46:32+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "ComplexRouting",
+   "model": "ModelicaTest.ComplexBlocks.ComplexRouting",
+   "variables": [
+    "complexPassThrough1.y.im",
+    "complexPassThrough1.y.re",
+    "extractSignal1.y[1].im",
+    "extractSignal1.y[1].re",
+    "extractSignal1.y[2].im",
+    "extractSignal1.y[2].re",
+    "extractor1.y.im",
+    "extractor1.y.re",
+    "extractor2.y.im",
+    "extractor2.y.re",
+    "replicator1.y[3].im",
+    "replicator1.y[3].re",
+    "replicator2.y[1].im",
+    "replicator2.y[1].re",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.052000208059325814,
+    "steps": 502,
+    "rhs_evaluations": 510,
+    "jacobian_evaluations": 10,
+    "time_events": 1,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {},
+   "display_units": {},
+   "format": "npz",
+   "bytes": 23724,
+   "record": {
+    "schema": 1,
+    "record_id": "aef66af1e8c1a633a380d5a15c42a2e94e871b1fa81938b079a8519ea464c941",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T04:46:35",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "1c7a7e2f9bfb0225476fb94d5612dda3",
+     "impact_fmu_id": "modelicatest_complexblocks_complexrouting_20261031_044632_9623033",
+     "model_description_sha256": "3bfdb5d7addcfe7883f2cf4fb128fae4ad9d06585d9ceac999a31119eebdceb4"
+    },
+    "experiment": {
+     "case_entry_sha256": "80f344e905ee41297bb4144646f34f4a9c1a9f4a99663ec0c902d311d6f9aa45",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "modelicatest_complexblocks_complexrouting_20261031_044632_82b4e0b",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "c18eaaad09d10b7335dd5ad3ae41a92d907f3b42d0028d883ab4c9d175265198"
+    },
+    "model": {
+     "class": "ModelicaTest.ComplexBlocks.ComplexRouting",
+     "libraries": [
+      {
+       "git_commit": "53588f97db9f1ed5a7265250b1d6d3e2c3177a1c",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 23724,
+     "file": "ComplexRouting.npz",
+     "format": "npz",
+     "sha256": "eb1124f796bed4f024bec435e7006fe32cb431ee4be77e0c24c52e7908fe3b43"
+    },
+    "run": {
+     "utc": "2026-10-31T04:46:39+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+      "dirty": false
+     }
+    }
+   }
+  }
+ ]
+}

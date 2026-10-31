@@ -1,0 +1,54 @@
+{
+ "experiment": {
+  "base": {
+   "analysis": {
+    "parameters": [
+     {
+      "name": "start_time",
+      "value": 0.0
+     },
+     {
+      "name": "final_time",
+      "value": 1.0
+     },
+     {
+      "name": "interval",
+      "value": 0
+     }
+    ],
+    "simulationLogLevel": "WARNING",
+    "simulationOptions": {
+     "dynamic_diagnostics": false,
+     "filter": "['time', 'sin1.y.re', 'sin1.y.im', 'cos1.y.re', 'cos1.y.im', 'tan1.y.re', 'tan1.y.im', 'asin1.y.re', 'asin1.y.im', 'acos1.y.re', 'acos1.y.im', 'atan1.y.re', 'atan1.y.im', 'sinh1.y.re', 'sinh1.y.im', 'cosh1.y.re', 'cosh1.y.im', 'tanh1.y.re', 'tanh1.y.im', 'conj1.y.re', 'conj1.y.im', 'sinConjugate.y.re', 'sinConjugate.y.im', 'exp1.y.re', 'exp1.y.im', 'log1.y.re', 'log1.y.im', 'sqrt1.y.re', 'sqrt1.y.im']",
+     "ncp": 500
+    },
+    "solverOptions": {
+     "rtol": 9.999999999999999e-05
+    },
+    "type": "dynamic"
+   },
+   "expansion": {
+    "algorithm": "FULLFACTORIAL"
+   },
+   "model": {
+    "modelica": {
+     "className": "ModelicaTest.ComplexBlocks.ComplexMathFunctions",
+     "compilerLogLevel": "warning",
+     "compilerOptions": {
+      "generate_html_diagnostics": false,
+      "include_protected_variables": false
+     },
+     "fmiTarget": "me",
+     "fmiVersion": "2.0",
+     "platform": "auto",
+     "runtimeOptions": {}
+    }
+   },
+   "modifiers": {
+    "variables": []
+   }
+  },
+  "extensions": [],
+  "version": 3
+ }
+}

@@ -1,0 +1,17 @@
+time
+feedback1.y.re
+feedback1.y.im
+feedback2.y.re
+feedback2.y.im
+gain1.y.re
+gain1.y.im
+gain2.y.re
+gain2.y.im
+division1.y.re
+division1.y.im
+division2.y.re
+division2.y.im
+add3Default.y.re
+add3Default.y.im
+add3Conjugate.y.re
+add3Conjugate.y.im

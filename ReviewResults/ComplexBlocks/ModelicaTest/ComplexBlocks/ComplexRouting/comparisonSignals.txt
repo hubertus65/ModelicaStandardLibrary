@@ -1,0 +1,15 @@
+time
+complexPassThrough1.y.im
+complexPassThrough1.y.re
+extractSignal1.y[1].im
+extractSignal1.y[1].re
+extractSignal1.y[2].im
+extractSignal1.y[2].re
+extractor1.y.im
+extractor1.y.re
+extractor2.y.im
+extractor2.y.re
+replicator1.y[3].im
+replicator1.y[3].re
+replicator2.y[1].im
+replicator2.y[1].re

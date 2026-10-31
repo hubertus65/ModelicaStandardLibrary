@@ -1,0 +1,141 @@
+# ModCheck case list: new ModelicaTest.ComplexBlocks coverage tests (branch coverage-improvement).
+#
+# Each case is one new test model, run unmodified on Modelon Impact (MSL 4.1.0
+# dependency). Variables are the comparison signals of the model, as listed in
+# ModelicaTest/Resources/Reference/ModelicaTest/ComplexBlocks/<Model>/comparisonSignals.txt.
+# ncp gives 500 output intervals per second of simulated time.
+library: ModelicaTest
+workspace: msl-coverage
+custom_function: dynamic
+tolerance: 0.001
+
+cases:
+  - name: ComplexMathFunctions
+    enabled: true
+    model: ModelicaTest.ComplexBlocks.ComplexMathFunctions
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "sin1.y.re"
+      - "sin1.y.im"
+      - "cos1.y.re"
+      - "cos1.y.im"
+      - "tan1.y.re"
+      - "tan1.y.im"
+      - "asin1.y.re"
+      - "asin1.y.im"
+      - "acos1.y.re"
+      - "acos1.y.im"
+      - "atan1.y.re"
+      - "atan1.y.im"
+      - "sinh1.y.re"
+      - "sinh1.y.im"
+      - "cosh1.y.re"
+      - "cosh1.y.im"
+      - "tanh1.y.re"
+      - "tanh1.y.im"
+      - "conj1.y.re"
+      - "conj1.y.im"
+      - "sinConjugate.y.re"
+      - "sinConjugate.y.im"
+      - "exp1.y.re"
+      - "exp1.y.im"
+      - "log1.y.re"
+      - "log1.y.im"
+      - "sqrt1.y.re"
+      - "sqrt1.y.im"
+  - name: ComplexMathOperators
+    enabled: true
+    model: ModelicaTest.ComplexBlocks.ComplexMathOperators
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "add1.y.re"
+      - "add1.y.im"
+      - "product1.y.re"
+      - "product1.y.im"
+      - "complexToReal1.re"
+      - "complexToReal1.im"
+      - "complexToPolar1.len"
+      - "complexToPolar1.phi"
+      - "polarToComplex1.y.re"
+      - "polarToComplex1.y.im"
+      - "bode1.abs_y"
+      - "bode1.arg_y"
+      - "bode1.dB_y"
+      - "transferFunction1.y.re"
+      - "transferFunction1.y.im"
+  - name: ComplexRouting
+    enabled: true
+    model: ModelicaTest.ComplexBlocks.ComplexRouting
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "replicator1.y[[]3].re"
+      - "replicator1.y[[]3].im"
+      - "replicator2.y[[]1].re"
+      - "replicator2.y[[]1].im"
+      - "complexPassThrough1.y.re"
+      - "complexPassThrough1.y.im"
+      - "extractSignal1.y[[]1].re"
+      - "extractSignal1.y[[]1].im"
+      - "extractSignal1.y[[]2].re"
+      - "extractSignal1.y[[]2].im"
+      - "extractor1.y.re"
+      - "extractor1.y.im"
+      - "extractor2.y.re"
+      - "extractor2.y.im"
+  - name: ComplexStep
+    # disabled: Modelon Impact (OCT) fails to compile ComplexStep (generated C code contains the record constructor Modelica.ComplexBlocks.Interfaces.ComplexOutput)
+    enabled: false
+    model: ModelicaTest.ComplexBlocks.ComplexStep
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "complexStep1.y.re"
+      - "complexStep1.y.im"
+      - "complexPassThrough1.y.re"
+      - "complexPassThrough1.y.im"
+  - name: ComplexMathConjugateIfExpressions
+    # disabled: Modelon Impact (OCT) fails to compile 'if useConjugateInput then conj(u) else u' (generated C code contains the record constructor ComplexOutput)
+    enabled: false
+    model: ModelicaTest.ComplexBlocks.ComplexMathConjugateIfExpressions
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "feedback1.y.re"
+      - "feedback1.y.im"
+      - "feedback2.y.re"
+      - "feedback2.y.im"
+      - "gain1.y.re"
+      - "gain1.y.im"
+      - "gain2.y.re"
+      - "gain2.y.im"
+      - "division1.y.re"
+      - "division1.y.im"
+      - "division2.y.re"
+      - "division2.y.im"
+      - "add3Default.y.re"
+      - "add3Default.y.im"
+      - "add3Conjugate.y.re"
+      - "add3Conjugate.y.im"

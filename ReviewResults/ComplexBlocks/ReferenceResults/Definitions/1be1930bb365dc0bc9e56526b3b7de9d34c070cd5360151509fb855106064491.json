@@ -1,0 +1,54 @@
+{
+ "experiment": {
+  "base": {
+   "analysis": {
+    "parameters": [
+     {
+      "name": "start_time",
+      "value": 0.0
+     },
+     {
+      "name": "final_time",
+      "value": 1.0
+     },
+     {
+      "name": "interval",
+      "value": 0
+     }
+    ],
+    "simulationLogLevel": "WARNING",
+    "simulationOptions": {
+     "dynamic_diagnostics": false,
+     "filter": "['time', 'add1.y.re', 'add1.y.im', 'product1.y.re', 'product1.y.im', 'complexToReal1.re', 'complexToReal1.im', 'complexToPolar1.len', 'complexToPolar1.phi', 'polarToComplex1.y.re', 'polarToComplex1.y.im', 'bode1.abs_y', 'bode1.arg_y', 'bode1.dB_y', 'transferFunction1.y.re', 'transferFunction1.y.im']",
+     "ncp": 500
+    },
+    "solverOptions": {
+     "rtol": 1e-06
+    },
+    "type": "dynamic"
+   },
+   "expansion": {
+    "algorithm": "FULLFACTORIAL"
+   },
+   "model": {
+    "modelica": {
+     "className": "ModelicaTest.ComplexBlocks.ComplexMathOperators",
+     "compilerLogLevel": "warning",
+     "compilerOptions": {
+      "generate_html_diagnostics": false,
+      "include_protected_variables": false
+     },
+     "fmiTarget": "me",
+     "fmiVersion": "2.0",
+     "platform": "auto",
+     "runtimeOptions": {}
+    }
+   },
+   "modifiers": {
+    "variables": []
+   }
+  },
+  "extensions": [],
+  "version": 3
+ }
+}

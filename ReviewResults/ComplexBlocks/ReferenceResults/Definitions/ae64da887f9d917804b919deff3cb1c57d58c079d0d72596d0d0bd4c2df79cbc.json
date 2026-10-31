@@ -1,0 +1,54 @@
+{
+ "experiment": {
+  "base": {
+   "analysis": {
+    "parameters": [
+     {
+      "name": "start_time",
+      "value": 0.0
+     },
+     {
+      "name": "final_time",
+      "value": 1.0
+     },
+     {
+      "name": "interval",
+      "value": 0
+     }
+    ],
+    "simulationLogLevel": "WARNING",
+    "simulationOptions": {
+     "dynamic_diagnostics": false,
+     "filter": "['time', 'replicator1.y[[]3].re', 'replicator1.y[[]3].im', 'replicator2.y[[]1].re', 'replicator2.y[[]1].im', 'complexPassThrough1.y.re', 'complexPassThrough1.y.im', 'extractSignal1.y[[]1].re', 'extractSignal1.y[[]1].im', 'extractSignal1.y[[]2].re', 'extractSignal1.y[[]2].im', 'extractor1.y.re', 'extractor1.y.im', 'extractor2.y.re', 'extractor2.y.im']",
+     "ncp": 500
+    },
+    "solverOptions": {
+     "rtol": 1e-06
+    },
+    "type": "dynamic"
+   },
+   "expansion": {
+    "algorithm": "FULLFACTORIAL"
+   },
+   "model": {
+    "modelica": {
+     "className": "ModelicaTest.ComplexBlocks.ComplexRouting",
+     "compilerLogLevel": "warning",
+     "compilerOptions": {
+      "generate_html_diagnostics": false,
+      "include_protected_variables": false
+     },
+     "fmiTarget": "me",
+     "fmiVersion": "2.0",
+     "platform": "auto",
+     "runtimeOptions": {}
+    }
+   },
+   "modifiers": {
+    "variables": []
+   }
+  },
+  "extensions": [],
+  "version": 3
+ }
+}
