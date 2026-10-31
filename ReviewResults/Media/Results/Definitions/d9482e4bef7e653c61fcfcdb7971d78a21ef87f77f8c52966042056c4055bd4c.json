@@ -1,0 +1,54 @@
+{
+ "experiment": {
+  "base": {
+   "analysis": {
+    "parameters": [
+     {
+      "name": "start_time",
+      "value": 0.0
+     },
+     {
+      "name": "final_time",
+      "value": 1.0
+     },
+     {
+      "name": "interval",
+      "value": 0
+     }
+    ],
+    "simulationLogLevel": "WARNING",
+    "simulationOptions": {
+     "dynamic_diagnostics": false,
+     "filter": "['time', 'v', 'vError', 'cpError', 'alpha', 'gamma', 'p3', 's3', 'boundaryDiff', 'cv2ph', 'dpT', 'dpTRelDiff', 'pro_ph.d', 'pro_ph.ddhp', 'pro_ph.duph', 'pro_dT.p', 'pro_dT.dpT', 'nderivs_ph.cp', 'nderivs_dT.vp', 'nderivs_ps.cp', 'satBoundary.dTp', 'twoPhaseTransport.eta_liq', 'igProps.R_s[[]1]', 'transport.lam']",
+     "ncp": 500
+    },
+    "solverOptions": {
+     "rtol": 9.999999999999999e-05
+    },
+    "type": "dynamic"
+   },
+   "expansion": {
+    "algorithm": "FULLFACTORIAL"
+   },
+   "model": {
+    "modelica": {
+     "className": "ModelicaTest.Media.MediaCommonFunctions",
+     "compilerLogLevel": "warning",
+     "compilerOptions": {
+      "generate_html_diagnostics": false,
+      "include_protected_variables": false
+     },
+     "fmiTarget": "me",
+     "fmiVersion": "2.0",
+     "platform": "auto",
+     "runtimeOptions": {}
+    }
+   },
+   "modifiers": {
+    "variables": []
+   }
+  },
+  "extensions": [],
+  "version": 3
+ }
+}

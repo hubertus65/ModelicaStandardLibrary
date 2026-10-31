@@ -1399,4 +1399,119 @@ is given to compare the approximation.
 
 </html>"));
   end TestsWithFluid;
+
+  model MediaCommonFunctions "Test of property conversion functions and records of Modelica.Media.Common"
+    extends Modelica.Icons.Example;
+    import SI = Modelica.Units.SI;
+    import Modelica.Media.Common;
+    import IF97 = Modelica.Media.Water.IF97_Utilities.BaseIF97;
+    package Ice = Modelica.Media.Air.ReferenceMoistAir.Utilities.Ice09_Utilities "Ice equation of state";
+
+    SI.Pressure p=1e5 + 9e5*time "Pressure ramp from 1 bar to 10 bar";
+    SI.Temperature T=300 + 50*time "Temperature of compressed liquid water";
+
+    // Bridgman's tables from the region 1 Gibbs function, checked against IF97_Utilities
+    Common.GibbsDerivs g=IF97.Basic.g1(p, T) "Gibbs function derivatives of liquid water";
+    SI.SpecificVolume v "Specific volume";
+    SI.Pressure p_g "Pressure from Bridgman's tables";
+    SI.Temperature T_g "Temperature from Bridgman's tables";
+    SI.SpecificEntropy s "Specific entropy";
+    SI.SpecificHeatCapacity cp "Specific heat capacity at constant pressure";
+    Common.IsobaricVolumeExpansionCoefficient alpha "Isobaric volume expansion coefficient";
+    Common.IsothermalCompressibility gamma "Isothermal compressibility";
+    Real vError=v*Modelica.Media.Water.IF97_Utilities.rho_pT(p, T) - 1 "Must be zero";
+    Real cpError=cp/Modelica.Media.Water.IF97_Utilities.cp_pT(p, T) - 1 "Must be zero";
+
+    // Bridgman's tables from the region 3 Helmholtz function (near-critical water)
+    Common.HelmholtzDerivs f=IF97.Basic.f3(400 + 100*time, 660) "Helmholtz function derivatives in region 3";
+    SI.SpecificVolume v3 "Specific volume in region 3";
+    SI.Pressure p3 "Pressure in region 3";
+    SI.Temperature T3 "Temperature in region 3";
+    SI.SpecificEntropy s3 "Specific entropy in region 3";
+    SI.SpecificHeatCapacity cp3 "Specific heat capacity in region 3";
+    Common.IsobaricVolumeExpansionCoefficient alpha3 "Isobaric volume expansion coefficient in region 3";
+    Common.IsothermalCompressibility gamma3 "Isothermal compressibility in region 3";
+
+    // phase boundary properties: Common and ThermoFluidSpecial versions must agree
+    Common.PhaseBoundaryProperties boundary=Common.gibbsToBoundaryProps(g) "Common.gibbsToBoundaryProps";
+    Common.PhaseBoundaryProperties boundarySpecial=Common.ThermoFluidSpecial.gibbsToBoundaryProps(g)
+      "ThermoFluidSpecial.gibbsToBoundaryProps";
+    Real boundaryDiff=abs(boundary.d - boundarySpecial.d) + abs(boundary.h - boundarySpecial.h)
+      + abs(boundary.cv - boundarySpecial.cv) "Must be zero";
+
+    // two-phase mixture at saturation
+    SI.Temperature Tsat=IF97.Basic.tsat(p) "Saturation temperature";
+    Common.PhaseBoundaryProperties liq=Common.gibbsToBoundaryProps(IF97.Basic.g1(p, Tsat)) "Saturated liquid";
+    Common.PhaseBoundaryProperties vap=Common.gibbsToBoundaryProps(IF97.Basic.g2(p, Tsat)) "Saturated vapour";
+    SI.MassFraction x=0.5 "Vapour mass fraction";
+    SI.SpecificHeatCapacity cv2ph "Isochoric specific heat capacity of the two-phase mixture";
+    Real dpT(unit="Pa/K") "Slope of the vapour pressure curve (Clausius-Clapeyron)";
+    Real dpTRelDiff=dpT*IF97.Basic.dtsatofp(p) - 1
+      "Relative difference to the IF97 saturation line (small, not zero)";
+    Common.SaturationProperties sat=Common.SaturationProperties(
+      T=Tsat, d=1/(x/vap.d + (1 - x)/liq.d), p=p, u=liq.u + x*(vap.u - liq.u),
+      h=liq.h + x*(vap.h - liq.h), s=liq.s + x*(vap.s - liq.s), cp=liq.cp, cv=cv2ph,
+      R_s=IF97.data.RH2O, kappa=1.3, dpT=dpT, x=x, liq=liq, vap=vap) "Two-phase state";
+    Common.ThermoFluidSpecial.ThermoProperties_ph pro_ph=Common.ThermoFluidSpecial.TwoPhaseToProps_ph(sat)
+      "Properties for (p, h) states";
+    Common.ThermoFluidSpecial.ThermoProperties_dT pro_dT=Common.ThermoFluidSpecial.TwoPhaseToProps_dT(sat)
+      "Properties for (d, T) states";
+
+    // Newton derivatives from the Gibbs function of ice
+    Common.GibbsDerivs2 gIce=Ice.Basic.Gibbs(p, 250 + 20*time) "Gibbs function derivatives of ice";
+    Common.NewtonDerivatives_ph nderivs_ph=Common.Gibbs2_ph(gIce) "Derivatives for (p, h) iterations";
+    Common.NewtonDerivatives_dT nderivs_dT=Common.Gibbs2_dT(gIce) "Derivatives for (d, T) iterations";
+    Common.NewtonDerivatives_ps nderivs_ps=Common.Gibbs2_ps(gIce) "Derivatives for (p, s) iterations";
+
+    // records without a producing function in the library
+    Common.SaturationBoundaryProperties satBoundary=Common.SaturationBoundaryProperties(
+      T=Tsat, dl=IF97.Regions.rhol_p(p), dv=IF97.Regions.rhov_p(p), hl=IF97.Regions.hl_p(p),
+      hv=IF97.Regions.hv_p(p), dTp=IF97.Basic.dtsatofp(p), ddldp=IF97.Regions.drhol_dp(p),
+      ddvdp=IF97.Regions.drhov_dp(p), dhldp=IF97.Regions.dhl_dp(p), dhvdp=IF97.Regions.dhv_dp(p), x=x)
+      "Saturation boundary properties";
+    Common.TwoPhaseTransportProps twoPhaseTransport=Common.TwoPhaseTransportProps(
+      d_vap=vap.d, d_liq=liq.d,
+      eta_vap=IF97.Transport.visc_dTp(vap.d, Tsat, p, phase=1),
+      eta_liq=IF97.Transport.visc_dTp(liq.d, Tsat, p, phase=1),
+      lam_vap=IF97.Transport.cond_dTp(vap.d, Tsat, p, phase=1),
+      lam_liq=IF97.Transport.cond_dTp(liq.d, Tsat, p, phase=1),
+      cp_vap=vap.cp, cp_liq=liq.cp, x=x) "Transport properties of the two-phase mixture";
+    Common.ThermoFluidSpecial.TransportProps transport=Common.ThermoFluidSpecial.TransportProps(
+      eta=IF97.Transport.visc_dTp(1/v, T, p), lam=IF97.Transport.cond_dTp(1/v, T, p))
+      "Transport properties of the compressed liquid";
+    Common.ThermoFluidSpecial.FixedIGProperties igProps(
+      nspecies=2,
+      MM={Modelica.Media.IdealGases.Common.SingleGasesData.N2.MM, Modelica.Media.IdealGases.Common.SingleGasesData.O2.MM},
+      invMM={1/Modelica.Media.IdealGases.Common.SingleGasesData.N2.MM, 1/Modelica.Media.IdealGases.Common.SingleGasesData.O2.MM},
+      R_s={Modelica.Media.IdealGases.Common.SingleGasesData.N2.R_s, Modelica.Media.IdealGases.Common.SingleGasesData.O2.R_s},
+      Hf={Modelica.Media.IdealGases.Common.SingleGasesData.N2.Hf, Modelica.Media.IdealGases.Common.SingleGasesData.O2.Hf},
+      H0={Modelica.Media.IdealGases.Common.SingleGasesData.N2.H0, Modelica.Media.IdealGases.Common.SingleGasesData.O2.H0})
+      "Fixed ideal gas properties of N2 and O2";
+  equation
+    (v, p_g, T_g, s, cp, alpha, gamma) = Common.gibbsToBridgmansTables(g);
+    (v3, p3, T3, s3, cp3, alpha3, gamma3) = Common.helmholtzToBridgmansTables(f);
+    (cv2ph, dpT) = Common.cvdpT2Phase(liq, vap, x, Tsat, p);
+    annotation (experiment(StopTime=1.0), Documentation(info="<html>
+<p>
+Exercises the property conversion functions of
+<a href=\"modelica://Modelica.Media.Common\">Modelica.Media.Common</a>
+with inputs from the IF97 water functions and the ice equation of state of
+ReferenceMoistAir, while pressure and temperature ramp.
+</p>
+<ul>
+<li>gibbsToBridgmansTables (liquid, region 1): <code>vError</code> and <code>cpError</code>
+    compare with IF97_Utilities.rho_pT and cp_pT and must be zero.</li>
+<li>helmholtzToBridgmansTables: near-critical water (region 3).</li>
+<li>gibbsToBoundaryProps and ThermoFluidSpecial.gibbsToBoundaryProps must agree
+    (<code>boundaryDiff</code> = 0).</li>
+<li>cvdpT2Phase: the Clausius-Clapeyron slope <code>dpT</code> must agree with the slope of
+    the IF97 saturation line up to the IF97 consistency error (<code>dpTRelDiff</code>).</li>
+<li>ThermoFluidSpecial.TwoPhaseToProps_ph/_dT: a 50 % two-phase state.</li>
+<li>Gibbs2_ph, Gibbs2_dT, Gibbs2_ps: derivatives of the ice Gibbs function.</li>
+<li>The records SaturationBoundaryProperties, TwoPhaseTransportProps,
+    ThermoFluidSpecial.TransportProps and ThermoFluidSpecial.FixedIGProperties are not
+    produced by any function of the library. They are filled here with consistent data.</li>
+</ul>
+</html>"));
+  end MediaCommonFunctions;
 end Media;

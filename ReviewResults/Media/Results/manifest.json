@@ -1,0 +1,131 @@
+{
+ "run": {
+  "utc": "2026-10-31T05:25:33+00:00",
+  "rtol_factor": 100.0,
+  "descriptor": "impact workspace 'msl-coverage'",
+  "reference_descriptor": "impact workspace 'msl-coverage'",
+  "cases": 1,
+  "cases_this_run": 1,
+  "failed_cases": 0,
+  "bytes": 57114
+ },
+ "cases": [
+  {
+   "name": "MediaCommonFunctions",
+   "model": "ModelicaTest.Media.MediaCommonFunctions",
+   "variables": [
+    "alpha",
+    "boundaryDiff",
+    "cpError",
+    "cv2ph",
+    "dpT",
+    "dpTRelDiff",
+    "gamma",
+    "igProps.R_s[1]",
+    "nderivs_dT.vp",
+    "p3",
+    "pro_dT.p",
+    "pro_ph.d",
+    "pro_ph.ddhp",
+    "pro_ph.duph",
+    "s3",
+    "satBoundary.dTp",
+    "time",
+    "transport.lam",
+    "twoPhaseTransport.eta_liq",
+    "v",
+    "vError"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.09716935700271279,
+    "steps": 501,
+    "rhs_evaluations": 505,
+    "jacobian_evaluations": 9,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {
+    "igProps.R_s[1]": "J/(kg.K)",
+    "pro_dT.p": "Pa",
+    "v": "m3/kg",
+    "alpha": "1/K",
+    "gamma": "1/Pa",
+    "p3": "Pa",
+    "s3": "J/(kg.K)",
+    "cv2ph": "J/(kg.K)",
+    "dpT": "Pa/K",
+    "pro_ph.d": "kg/m3",
+    "pro_ph.ddhp": "kg.s2/m5",
+    "pro_ph.duph": "m3/kg",
+    "twoPhaseTransport.eta_liq": "Pa.s",
+    "transport.lam": "W/(m.K)"
+   },
+   "display_units": {
+    "pro_dT.p": "bar",
+    "p3": "bar",
+    "pro_ph.d": "g/cm3"
+   },
+   "format": "npz",
+   "bytes": 57114,
+   "record": {
+    "schema": 1,
+    "record_id": "8fcfc3f5972ab1c2a00f354b0223e8d9a6bdacc3c3dcd09dfef783fba73fec1d",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-10-31T05:25:25",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "67b24bb04ad268cf0ca11c0204590489",
+     "impact_fmu_id": "modelicatest_media_mediacommonfunctions_20261031_052521_9abce29",
+     "model_description_sha256": "f1983c2ecfe3588cf47efacb123c5d212ec3800a8c3333a970e1f98f64309dad"
+    },
+    "experiment": {
+     "case_entry_sha256": "f839032f42fc02c8e81ad7693293815aac89eb7802cc80345944f53eaefd26c6",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "modelicatest_media_mediacommonfunctions_20261031_052521_037a74b",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "d9482e4bef7e653c61fcfcdb7971d78a21ef87f77f8c52966042056c4055bd4c"
+    },
+    "model": {
+     "class": "ModelicaTest.Media.MediaCommonFunctions",
+     "libraries": [
+      {
+       "git_commit": "1f73ec962865e3e7c79a2f42a83c267bb531385a",
+       "git_dirty": true,
+       "name": "ModelicaTest",
+       "uses": {
+        "Complex": "4.2.0 dev",
+        "Modelica": "4.2.0 dev"
+       },
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 57114,
+     "file": "MediaCommonFunctions.npz",
+     "format": "npz",
+     "sha256": "eddc5ad1bde371c5491904f65e31ec2666b6cc5bed05c291de8ee9f41a45866f"
+    },
+    "run": {
+     "utc": "2026-10-31T05:25:30+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+      "dirty": false
+     }
+    }
+   }
+  }
+ ]
+}
