@@ -1,0 +1,6 @@
+time
+pipeDefault.port_a.m_flow
+pipeNoFriction.port_a.m_flow
+pipeNoFriction.port_b.p
+pipeNoFrictionCentral.port_a.m_flow
+pipeNoFrictionCentral.port_b.p

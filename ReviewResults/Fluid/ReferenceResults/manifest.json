@@ -1,0 +1,636 @@
+[
+  {
+    "name": "TestBendsAndOrifices",
+    "model": "ModelicaTest.Fluid.TestComponents.Fittings.TestBendsAndOrifices",
+    "variables": [
+      "curvedBend.m_flow",
+      "edgedBend.m_flow",
+      "orificeGeneral.m_flow",
+      "orificeRectangular.m_flow",
+      "time",
+      "volumeFlowRate.m_flow"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.24510357901453972,
+      "steps": 2001,
+      "rhs_evaluations": 2005,
+      "jacobian_evaluations": 34,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "curvedBend.m_flow": "kg/s",
+      "edgedBend.m_flow": "kg/s",
+      "orificeRectangular.m_flow": "kg/s",
+      "orificeGeneral.m_flow": "kg/s",
+      "volumeFlowRate.m_flow": "kg/s"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 76135,
+    "record": {
+      "schema": 1,
+      "record_id": "95415c386d83cf428c49515a14c20e4dea326ded8e627487f85ceec02e7378f4",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T05:25:49",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "4a3c659911adc07ad414927cd0a87c5f",
+        "impact_fmu_id": "_luid_testcomponents_fittings_testbendsandorifices_20261031_052545_54f8696",
+        "model_description_sha256": "5c4892f837d1016f52c9b22aadb84503411eda6e9e6b503c977a0ba7f7c0bf48"
+      },
+      "experiment": {
+        "case_entry_sha256": "a885d5af6cb33d5d4f23ef55ad33b0c49bc0144ee3def29326f2a328fef8d245",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_luid_testcomponents_fittings_testbendsandorifices_20261031_052545_77ef4b9",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "ecba9090f7fd5c42d4b1b9497d61d0a407740d17aaabbe5ba1bffdf22c2aa421"
+      },
+      "model": {
+        "class": "ModelicaTest.Fluid.TestComponents.Fittings.TestBendsAndOrifices",
+        "libraries": [
+          {
+            "git_commit": "1f73ec962865e3e7c79a2f42a83c267bb531385a",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 76135,
+        "file": "TestBendsAndOrifices.npz",
+        "format": "npz",
+        "sha256": "a7f709b61c47ce373e44c82a7c21576988cedba8fb154a3fbd05c7c53b74bca9"
+      },
+      "run": {
+        "utc": "2026-10-31T05:25:53+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "TestConstantHeatTransfer",
+    "model": "ModelicaTest.Fluid.TestComponents.Vessels.TestConstantHeatTransfer",
+    "variables": [
+      "time",
+      "volume.heatTransfer.Q_flows[1]",
+      "volume.medium.T"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 0.0003,
+      "rtol": 1e-06,
+      "cpu_time": 0.18624303105752915,
+      "steps": 2000,
+      "rhs_evaluations": 2004,
+      "jacobian_evaluations": 34,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "volume.medium.T": "K",
+      "volume.heatTransfer.Q_flows[1]": "W"
+    },
+    "display_units": {
+      "volume.medium.T": "degC"
+    },
+    "format": "npz",
+    "bytes": 32707,
+    "record": {
+      "schema": 1,
+      "record_id": "e81fc40ef90512f5a28562cff8c7784d47d32bba02a671c97b765b9d64e93c78",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T05:26:20",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "365c6cf714c4a979888583a6552acac9",
+        "impact_fmu_id": "_d_testcomponents_vessels_testconstantheattransfer_20261031_052617_7cfc8cd",
+        "model_description_sha256": "2a1225f4b5446f837891b94f9655189d5eb5c1be4448c42886fcf3695d714ab6"
+      },
+      "experiment": {
+        "case_entry_sha256": "eab767070072e843bbaaa62a190f46d953fab8fd7bfaf1973da6477101e08806",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_d_testcomponents_vessels_testconstantheattransfer_20261031_052617_5909c6f",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "de20bcea279e43427bcdcdac8a5bdc5d89348e0c58b96acb605ecbe7b49a918f"
+      },
+      "model": {
+        "class": "ModelicaTest.Fluid.TestComponents.Vessels.TestConstantHeatTransfer",
+        "libraries": [
+          {
+            "git_commit": "1f73ec962865e3e7c79a2f42a83c267bb531385a",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 32707,
+        "file": "TestConstantHeatTransfer.npz",
+        "format": "npz",
+        "sha256": "f5fd4cf18fe13d1d67fd4908fce29d237cbf7ce8c955394c596b4dc29bda7190"
+      },
+      "run": {
+        "utc": "2026-10-31T05:26:23+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "TestMassFractionsAndRelativeTemperature",
+    "model": "ModelicaTest.Fluid.TestComponents.Sensors.TestMassFractionsAndRelativeTemperature",
+    "variables": [
+      "massFractions1.Xi",
+      "massFractionsTwoPort1.Xi",
+      "orifice1.m_flow",
+      "relativeTemperature1.T_rel",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.06930242199450731,
+      "steps": 501,
+      "rhs_evaluations": 505,
+      "jacobian_evaluations": 9,
+      "time_events": 1,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "orifice1.m_flow": "kg/s",
+      "relativeTemperature1.T_rel": "K"
+    },
+    "display_units": {
+      "relativeTemperature1.T_rel": "degC"
+    },
+    "format": "npz",
+    "bytes": 13993,
+    "record": {
+      "schema": 1,
+      "record_id": "4ee1ab86dfbc94162e7186884f108f00865c38cec61b422f9b76ec144fd67ded",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T05:25:58",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "6257c639069fd5ba3c29e499eee51bb5",
+        "impact_fmu_id": "_s_sensors_testmassfractionsandrelativetemperature_20261031_052554_f8ec236",
+        "model_description_sha256": "c3dbf88004dc8318eb08583528fee69feef16932ba54f25c17b7496c4eca6794"
+      },
+      "experiment": {
+        "case_entry_sha256": "cf09fe3bb8f5095235d56bab6cefebd212d9650992bf11a9e510ee4b9bf5dc54",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_s_sensors_testmassfractionsandrelativetemperature_20261031_052554_a96d7fb",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "9b79ab41ee67a96ed5af1471f0a5d7c2b112ef6e4441c7425ce2e7188a455d0c"
+      },
+      "model": {
+        "class": "ModelicaTest.Fluid.TestComponents.Sensors.TestMassFractionsAndRelativeTemperature",
+        "libraries": [
+          {
+            "git_commit": "1f73ec962865e3e7c79a2f42a83c267bb531385a",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 13993,
+        "file": "TestMassFractionsAndRelativeTemperature.npz",
+        "format": "npz",
+        "sha256": "3fa65f5eb75650c89c29584565c17e81e41191ea77f15057769269060853f8a3"
+      },
+      "run": {
+        "utc": "2026-10-31T05:26:01+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "TestRegRootDerAndCubicHermite",
+    "model": "ModelicaTest.Fluid.TestUtilities.TestRegRootDerAndCubicHermite",
+    "variables": [
+      "der_y",
+      "der_yError",
+      "h",
+      "hError1",
+      "hError2",
+      "time",
+      "y"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.044272940955124795,
+      "steps": 501,
+      "rhs_evaluations": 505,
+      "jacobian_evaluations": 9,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 12329,
+    "record": {
+      "schema": 1,
+      "record_id": "fb9431e46154317a5f22bbc245d3e071053b2fd538e32a1b13fdacb3797fd624",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T05:26:33",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "c52379cad6ba78e391b88e9d39b60de5",
+        "impact_fmu_id": "_fluid_testutilities_testregrootderandcubichermite_20261031_052631_4003674",
+        "model_description_sha256": "9ee511722c664d74b61304e81fad65541794f64289f768d48393b6e195ea8d66"
+      },
+      "experiment": {
+        "case_entry_sha256": "2a0d2382acf2c789515c4d4f99d86654e9b236370555f0435946ceb4ce96070a",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_fluid_testutilities_testregrootderandcubichermite_20261031_052631_f46eed2",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "249a00c59ef8e52ad83028928328a416b9ec749e557236e99e968553a675f5a4"
+      },
+      "model": {
+        "class": "ModelicaTest.Fluid.TestUtilities.TestRegRootDerAndCubicHermite",
+        "libraries": [
+          {
+            "git_commit": "1f73ec962865e3e7c79a2f42a83c267bb531385a",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 12329,
+        "file": "TestRegRootDerAndCubicHermite.npz",
+        "format": "npz",
+        "sha256": "d32051e4836ede05f11cd7fd9ca815bde308e1dd3837d1623fef0ba6f6a78f52"
+      },
+      "run": {
+        "utc": "2026-10-31T05:26:36+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "TestStaticPipeFlowModels",
+    "model": "ModelicaTest.Fluid.TestComponents.Pipes.TestStaticPipeFlowModels",
+    "variables": [
+      "pipeDefault.port_a.m_flow",
+      "pipeNoFriction.port_a.m_flow",
+      "pipeNoFriction.port_b.p",
+      "pipeNoFrictionCentral.port_a.m_flow",
+      "pipeNoFrictionCentral.port_b.p",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.12904462998267263,
+      "steps": 1001,
+      "rhs_evaluations": 1005,
+      "jacobian_evaluations": 17,
+      "time_events": 1,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "pipeDefault.port_a.m_flow": "kg/s",
+      "pipeNoFriction.port_a.m_flow": "kg/s",
+      "pipeNoFriction.port_b.p": "Pa",
+      "pipeNoFrictionCentral.port_a.m_flow": "kg/s",
+      "pipeNoFrictionCentral.port_b.p": "Pa"
+    },
+    "display_units": {
+      "pipeNoFriction.port_b.p": "bar",
+      "pipeNoFrictionCentral.port_b.p": "bar"
+    },
+    "format": "npz",
+    "bytes": 28971,
+    "record": {
+      "schema": 1,
+      "record_id": "dbfef757da8136c1cd0c5942a9060f520a00070fd531b106051b29c8a5cace10",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T05:26:06",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "ddcd2e2bb9fd8c1ab4568276294d3f9e",
+        "impact_fmu_id": "_uid_testcomponents_pipes_teststaticpipeflowmodels_20261031_052602_cc7cd36",
+        "model_description_sha256": "adace92bfee48331ff837cd31799bb03025af4225f3afed3348b417c70671371"
+      },
+      "experiment": {
+        "case_entry_sha256": "1f318c863d0241ed4e4e7497ac356586b1f8fddd43c999eba7794212b55fe79e",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_uid_testcomponents_pipes_teststaticpipeflowmodels_20261031_052602_7e0bb60",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "dae00875a3dab1bcd79819d8df48beddf74faf676dd094bac72617f18b8c07ba"
+      },
+      "model": {
+        "class": "ModelicaTest.Fluid.TestComponents.Pipes.TestStaticPipeFlowModels",
+        "libraries": [
+          {
+            "git_commit": "1f73ec962865e3e7c79a2f42a83c267bb531385a",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 28971,
+        "file": "TestStaticPipeFlowModels.npz",
+        "format": "npz",
+        "sha256": "df8b90a46124391b03708b1bfa647c2673eaa03847ff1a6ed72ad7f1f086f3bd"
+      },
+      "run": {
+        "utc": "2026-10-31T05:26:10+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "TestValveDiscreteRamp",
+    "model": "ModelicaTest.Fluid.TestComponents.Valves.TestValveDiscreteRamp",
+    "variables": [
+      "time",
+      "valve.m_flow"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.10938671592157334,
+      "steps": 1005,
+      "rhs_evaluations": 1025,
+      "jacobian_evaluations": 20,
+      "time_events": 4,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "valve.m_flow": "kg/s"
+    },
+    "display_units": {},
+    "format": "npz",
+    "bytes": 5236,
+    "record": {
+      "schema": 1,
+      "record_id": "cb49ae09f4c03bbd10a0b964882af22f131344bc3b12ec086a665fca49ec967f",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T05:26:13",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "dc3cb4a95b98ed080b6a2d675c0975e7",
+        "impact_fmu_id": "_fluid_testcomponents_valves_testvalvediscreteramp_20261031_052610_3b1e689",
+        "model_description_sha256": "9a0fdef64d149ebe63773ab051b3365a372641d6a5d0a716075879e2eea8d342"
+      },
+      "experiment": {
+        "case_entry_sha256": "be6fd82bc72a5ff0d9c505c24761d900d7fe3df2c1b917c228d29eb41a8038cb",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_fluid_testcomponents_valves_testvalvediscreteramp_20261031_052610_6639dce",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "791a507bb65e5afbf84e07c76d675b47f4082ee9486a84afd30ebb2d6096f845"
+      },
+      "model": {
+        "class": "ModelicaTest.Fluid.TestComponents.Valves.TestValveDiscreteRamp",
+        "libraries": [
+          {
+            "git_commit": "1f73ec962865e3e7c79a2f42a83c267bb531385a",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 5236,
+        "file": "TestValveDiscreteRamp.npz",
+        "format": "npz",
+        "sha256": "5920a8d332010554ec3f3d18470052bc2e6bc0c328ecb1394b5b84ec68fc3895"
+      },
+      "run": {
+        "utc": "2026-10-31T05:26:17+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "UtilitiesFunctionsAndRecords",
+    "model": "ModelicaTest.Fluid.Dissipation.UtilitiesFunctionsAndRecords",
+    "variables": [
+      "der_yPow",
+      "der_yPowError",
+      "der_yStep",
+      "der_yStepError",
+      "diffuser.A_2",
+      "idealGas.rho_m",
+      "iter",
+      "nominalLaw.zeta_TOT",
+      "pressureLossInput.dp",
+      "time",
+      "tjunction.d_hyd[3]",
+      "twoPhaseFlow.x",
+      "w",
+      "wIter",
+      "wIterError",
+      "wRelDev",
+      "yPow",
+      "yStep"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.05676113208755851,
+      "steps": 514,
+      "rhs_evaluations": 550,
+      "jacobian_evaluations": 11,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "state_events": 8,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {
+      "twoPhaseFlow.x": "1",
+      "pressureLossInput.dp": "Pa",
+      "tjunction.d_hyd[3]": "m",
+      "idealGas.rho_m": "kg/m3",
+      "nominalLaw.zeta_TOT": "1",
+      "diffuser.A_2": "m2"
+    },
+    "display_units": {
+      "pressureLossInput.dp": "bar",
+      "idealGas.rho_m": "g/cm3"
+    },
+    "format": "npz",
+    "bytes": 25143,
+    "record": {
+      "schema": 1,
+      "record_id": "bfcc175db5b8881ba93c0dcdbfe37feda710445104447373dfb446c345d0e715",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-10-31T05:26:26",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "2029a558f20b75b9a736338091b4f612",
+        "impact_fmu_id": "_st_fluid_dissipation_utilitiesfunctionsandrecords_20261031_052624_3441351",
+        "model_description_sha256": "bb6916013795da52a643f45aaabb7ecba4f940b5a64c1667facdc50f26b5214f"
+      },
+      "experiment": {
+        "case_entry_sha256": "efc2a401b5298931e14286ab375be7acb62daba8c92cedbea30d58fe3a46b907",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "_st_fluid_dissipation_utilitiesfunctionsandrecords_20261031_052624_06cabfd",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "46575481b70db3811cf6d27826f5a9b39872c62eb8fb7e677c1faaef9ad760cb"
+      },
+      "model": {
+        "class": "ModelicaTest.Fluid.Dissipation.UtilitiesFunctionsAndRecords",
+        "libraries": [
+          {
+            "git_commit": "1f73ec962865e3e7c79a2f42a83c267bb531385a",
+            "git_dirty": true,
+            "name": "ModelicaTest",
+            "uses": {
+              "Complex": "4.2.0 dev",
+              "Modelica": "4.2.0 dev"
+            },
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 25143,
+        "file": "UtilitiesFunctionsAndRecords.npz",
+        "format": "npz",
+        "sha256": "9c4886761cf19f1bef36a2fd3a078ac86c437c062dcf6c95f28c015ee147edcf"
+      },
+      "run": {
+        "utc": "2026-10-31T05:26:31+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "dirty": false
+        }
+      }
+    }
+  }
+]

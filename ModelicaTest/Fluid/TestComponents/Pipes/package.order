@@ -5,3 +5,4 @@ DynamicPipeEnergyConservationCheck
 DynamicPipeEnergyConservationCheck2
 StaticPipe
 IdealMixing1
+TestStaticPipeFlowModels

@@ -1,0 +1,122 @@
+# ModCheck case list: new ModelicaTest coverage tests for Modelica.Fluid (branch coverage-improvement).
+#
+# Each case is one new test model, run unmodified on Modelon Impact (MSL 4.1.0
+# dependency). Variables are the comparison signals of the model, as listed in
+# ModelicaTest/Resources/Reference/ModelicaTest/<Package>/<Model>/comparisonSignals.txt.
+# ncp gives 500 output intervals per second of simulated time (2000 for long runs).
+library: ModelicaTest
+workspace: msl-coverage
+custom_function: dynamic
+tolerance: 0.001
+
+cases:
+  - name: TestBendsAndOrifices
+    enabled: true
+    model: ModelicaTest.Fluid.TestComponents.Fittings.TestBendsAndOrifices
+    start_time: 0.0
+    final_time: 10.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "curvedBend.m_flow"
+      - "edgedBend.m_flow"
+      - "orificeRectangular.m_flow"
+      - "orificeGeneral.m_flow"
+      - "volumeFlowRate.m_flow"
+  - name: TestMassFractionsAndRelativeTemperature
+    enabled: true
+    model: ModelicaTest.Fluid.TestComponents.Sensors.TestMassFractionsAndRelativeTemperature
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "massFractions1.Xi"
+      - "massFractionsTwoPort1.Xi"
+      - "relativeTemperature1.T_rel"
+      - "orifice1.m_flow"
+  - name: TestStaticPipeFlowModels
+    enabled: true
+    model: ModelicaTest.Fluid.TestComponents.Pipes.TestStaticPipeFlowModels
+    start_time: 0.0
+    final_time: 2.0
+    ncp: 1000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "pipeDefault.port_a.m_flow"
+      - "pipeNoFriction.port_a.m_flow"
+      - "pipeNoFrictionCentral.port_a.m_flow"
+      - "pipeNoFriction.port_b.p"
+      - "pipeNoFrictionCentral.port_b.p"
+  - name: TestValveDiscreteRamp
+    enabled: true
+    model: ModelicaTest.Fluid.TestComponents.Valves.TestValveDiscreteRamp
+    start_time: 0.0
+    final_time: 2.0
+    ncp: 1000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "valve.m_flow"
+  - name: TestConstantHeatTransfer
+    enabled: true
+    model: ModelicaTest.Fluid.TestComponents.Vessels.TestConstantHeatTransfer
+    start_time: 0.0
+    final_time: 600.0
+    ncp: 2000
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "volume.medium.T"
+      - "volume.heatTransfer.Q_flows[[]1]"
+  - name: UtilitiesFunctionsAndRecords
+    enabled: true
+    model: ModelicaTest.Fluid.Dissipation.UtilitiesFunctionsAndRecords
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "w"
+      - "wIter"
+      - "iter"
+      - "wIterError"
+      - "wRelDev"
+      - "yPow"
+      - "der_yPow"
+      - "der_yPowError"
+      - "yStep"
+      - "der_yStep"
+      - "der_yStepError"
+      - "idealGas.rho_m"
+      - "nominalLaw.zeta_TOT"
+      - "twoPhaseFlow.x"
+      - "pressureLossInput.dp"
+      - "tjunction.d_hyd[[]3]"
+      - "diffuser.A_2"
+  - name: TestRegRootDerAndCubicHermite
+    enabled: true
+    model: ModelicaTest.Fluid.TestUtilities.TestRegRootDerAndCubicHermite
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "y"
+      - "der_y"
+      - "der_yError"
+      - "h"
+      - "hError1"
+      - "hError2"

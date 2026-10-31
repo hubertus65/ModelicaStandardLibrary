@@ -4,3 +4,4 @@ TestMixingVolumesPressureStates
 TestSimpleTank
 TestTankWithTopPorts
 TestVolume
+TestConstantHeatTransfer

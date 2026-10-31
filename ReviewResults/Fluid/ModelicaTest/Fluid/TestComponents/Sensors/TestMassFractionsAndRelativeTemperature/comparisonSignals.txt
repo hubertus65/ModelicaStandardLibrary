@@ -1,0 +1,5 @@
+time
+massFractions1.Xi
+massFractionsTwoPort1.Xi
+orifice1.m_flow
+relativeTemperature1.T_rel

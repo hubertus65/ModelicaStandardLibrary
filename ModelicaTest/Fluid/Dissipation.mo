@@ -7102,4 +7102,55 @@ This model executes pressure loss calculations out of the <strong> Fluid.Dissipa
 
     end PressureLoss;
   end TestCases;
+
+  model UtilitiesFunctionsAndRecords
+    "Test of utility functions and records of Modelica.Fluid.Dissipation.Utilities"
+    extends Modelica.Icons.Example;
+    import Modelica.Fluid.Dissipation.Utilities.Functions.General;
+    import Modelica.Fluid.Dissipation.Utilities.Records;
+
+    Real y=10*time "Argument of the Lambert W function";
+    Real w=General.LambertW(y) "Lambert W function, closed approximation";
+    Real wIter "Lambert W function, iterative solution";
+    Integer iter "Number of iterations";
+    Real wIterError=wIter*exp(wIter) - y "Must be zero";
+    Real wRelDev=w/max(wIter, 1e-10) - 1 "Relative deviation of the closed approximation";
+    Real x=sin(2*Modelica.Constants.pi*time) "Argument of SmoothPower and Stepsmoother";
+    Real yPow=General.SmoothPower(x, 0.2, 1.5) "Power x^1.5, smoothed around zero";
+    Real der_yPow=der(yPow) "Time derivative, uses SmoothPower_der";
+    Real der_yPowError=der_yPow - (if abs(x) > 0.2 then 1.5*abs(x)^0.5*der(x) else der_yPow) "Must be zero outside the smoothing range";
+    Real yStep=General.Stepsmoother(0.8, -0.8, x) "Smooth step from 0 (x <= -0.8) to 1 (x >= 0.8)";
+    Real der_yStep=der(yStep) "Time derivative, uses Stepsmoother_der";
+    Real der_yStepError=der_yStep - (if abs(x) >= 0.8 then 0 else der_yStep) "Must be zero outside the step range";
+
+    parameter Records.General.IdealGas idealGas(exp=2, R_s=287, Km=1, T_m=300, p_m=1e5)
+      "Ideal gas record";
+    parameter Records.General.NominalPressureLossLawDensity nominalLaw(
+      dp_nom=100, m_flow_nom=1, exp=2, V_flow_nom=1e-3, rho_nom=1000) "Nominal pressure loss law";
+    parameter Records.General.TwoPhaseFlow twoPhaseFlow(
+      rho_l=958, rho_g=0.6, eta_l=2.8e-4, eta_g=1.2e-5, sigma=0.059) "Two-phase flow properties of water at 1 bar";
+    parameter Records.PressureLoss.PressureLossInput pressureLossInput "Pressure loss input (defaults)";
+    parameter Records.PressureLoss.Tjunction tjunction(d_hyd={0.1, 0.1, 0.05}) "T-junction geometry";
+    parameter Records.PressureLoss.Diffuser diffuser "Diffuser geometry (defaults)";
+  equation
+    (wIter, iter) = General.LambertWIter(y);
+    annotation (experiment(StopTime=1.0), Documentation(info="<html>
+<p>
+Evaluates LambertW and LambertWIter, and differentiates SmoothPower and
+Stepsmoother explicitly with <code>der()</code>, so that their derivative functions
+SmoothPower_der and Stepsmoother_der of
+<a href=\"modelica://Modelica.Fluid.Dissipation.Utilities.Functions.General\">Dissipation.Utilities.Functions.General</a>
+are used. <code>wIterError</code> checks w&middot;exp(w) = y for the iterative solution
+and must be zero. <code>wRelDev</code> is the relative deviation of the closed approximation
+LambertW, which its documentation states as below 2 % for y &gt; 10. The derivative errors compare with the
+analytic derivative outside the smoothing ranges and must be zero.
+</p>
+<p>
+The records IdealGas, NominalPressureLossLawDensity, TwoPhaseFlow, PressureLossInput,
+Tjunction and Diffuser of
+<a href=\"modelica://Modelica.Fluid.Dissipation.Utilities.Records\">Dissipation.Utilities.Records</a>
+are instantiated, so that changes of their defaults and derived fields are detected.
+</p>
+</html>"));
+  end UtilitiesFunctionsAndRecords;
 end Dissipation;

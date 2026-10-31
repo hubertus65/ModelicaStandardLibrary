@@ -1,0 +1,3 @@
+time
+volume.heatTransfer.Q_flows[1]
+volume.medium.T
