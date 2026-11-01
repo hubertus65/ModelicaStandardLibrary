@@ -134,10 +134,10 @@ equation
   connect(uLine.p2, R_uLine.p) annotation (Line(points={{-40,-140},{-30,-140}}, color={0,0,255}));
   connect(R_uLine.n, ground.p) annotation (Line(points={{-10,-140},{0,-140},{0,-280}}, color={0,0,255}));
   connect(uLine.p3, ground.p) annotation (Line(points={{-50,-150},{-50,-154},{0,-154},{0,-280}}, color={0,0,255}));
-  connect(step.p, mOLine.p[1]) annotation (Line(points={{-80,-130},{-64,-130},{-64,-180},{-60,-180}}, color={0,0,255}));
-  connect(step.p, mOLine.p[2]) annotation (Line(points={{-80,-130},{-64,-130},{-64,-180},{-60,-180}}, color={0,0,255}));
-  connect(mOLine.n[1], R_mOLine1.p) annotation (Line(points={{-40,-180},{-30,-180}}, color={0,0,255}));
-  connect(mOLine.n[2], R_mOLine2.p) annotation (Line(points={{-40,-180},{-36,-180},{-36,-210},{-30,-210}}, color={0,0,255}));
+  connect(step.p, mOLine.p[1]) annotation (Line(points={{-80,-130},{-64,-130},{-64,-177},{-60,-177}}, color={0,0,255}));
+  connect(step.p, mOLine.p[2]) annotation (Line(points={{-80,-130},{-64,-130},{-64,-183},{-60,-183}}, color={0,0,255}));
+  connect(mOLine.n[1], R_mOLine1.p) annotation (Line(points={{-40,-177},{-34,-177},{-34,-180},{-30,-180}}, color={0,0,255}));
+  connect(mOLine.n[2], R_mOLine2.p) annotation (Line(points={{-40,-183},{-34,-183},{-34,-210},{-30,-210}}, color={0,0,255}));
   connect(R_mOLine1.n, ground.p) annotation (Line(points={{-10,-180},{0,-180},{0,-280}}, color={0,0,255}));
   connect(R_mOLine2.n, ground.p) annotation (Line(points={{-10,-210},{0,-210},{0,-280}}, color={0,0,255}));
   connect(mOLine.refPin, ground.p) annotation (Line(points={{-50,-190},{-50,-230},{0,-230},{0,-280}}, color={0,0,255}));

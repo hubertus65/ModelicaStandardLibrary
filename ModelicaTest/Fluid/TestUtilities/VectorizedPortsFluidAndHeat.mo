@@ -60,9 +60,9 @@ model VectorizedPortsFluidAndHeat
     annotation (Placement(transformation(extent={{-10,-80},{10,-60}})));
 equation
   connect(source.ports[1], junction.ports[1])
-    annotation (Line(points={{-70,40},{-30,40},{-30,20}}, color={0,127,255}));
+    annotation (Line(points={{-70,40},{-32,40},{-32,20}}, color={0,127,255}));
   connect(junction.ports[2], orifice.port_a)
-    annotation (Line(points={{-30,20},{-30,40},{-10,40}}, color={0,127,255}));
+    annotation (Line(points={{-28,20},{-28,40},{-10,40}}, color={0,127,255}));
   connect(orifice.port_b, sink.ports[1])
     annotation (Line(points={{10,40},{50,40}}, color={0,127,255}));
   connect(pSink.y, sink.p_in)
@@ -70,12 +70,13 @@ equation
   connect(hot.port, conductor.port_a)
     annotation (Line(points={{-70,-40},{-50,-40}}, color={191,0,0}));
   connect(conductor.port_b, heatJunction.heatPorts[1])
-    annotation (Line(points={{-30,-40},{0,-40},{0,-60}}, color={191,0,0}));
+    annotation (Line(points={{-30,-40},{-2,-40},{-2,-60}}, color={191,0,0}));
   connect(heatJunction.heatPorts[2], conductor2.port_a)
-    annotation (Line(points={{0,-60},{0,-40},{30,-40}}, color={191,0,0}));
+    annotation (Line(points={{2,-60},{2,-40},{30,-40}}, color={191,0,0}));
   connect(conductor2.port_b, cold.port)
     annotation (Line(points={{50,-40},{70,-40}}, color={191,0,0}));
-  annotation (experiment(StopTime=1), Documentation(info="<html>
+  annotation (Diagram(coordinateSystem(extent={{-100,-100},{120,100}})),
+    experiment(StopTime=1), Documentation(info="<html>
 <p>
 The vectorized connectors
 <a href=\"modelica://Modelica.Fluid.Interfaces.FluidPorts_a\">FluidPorts_a</a> and

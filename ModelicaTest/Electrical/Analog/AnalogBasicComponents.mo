@@ -108,11 +108,11 @@ equation
   connect(sine.p, variableConductor.p) annotation (Line(points={{-80,0},{-74,0},{-74,-6},{46,-6},{46,30},{50,30}}, color={0,0,255}));
   connect(variableConductor.n, ground.p) annotation (Line(points={{70,30},{74,30},{74,12},{48,12},{48,-80},{18,-80},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
   connect(sine.p, R_primary.p) annotation (Line(points={{-80,0},{-74,0},{-74,-30},{-70,-30}}, color={0,0,255}));
-  connect(R_primary.n, mTransformer.p[1]) annotation (Line(points={{-50,-30},{-40,-30}}, color={0,0,255}));
-  connect(mTransformer.n[1], ground.p) annotation (Line(points={{-20,-30},{-16,-30},{-16,-42},{14,-42},{14,-112},{18,-112},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
-  connect(mTransformer.p[2], R_secondary.p) annotation (Line(points={{-40,-30},{-44,-30},{-44,-18},{-14,-18},{-14,-30},{-10,-30}}, color={0,0,255}));
-  connect(R_secondary.n, mTransformer.n[2]) annotation (Line(points={{10,-30},{14,-30},{14,-42},{-16,-42},{-16,-30},{-20,-30}}, color={0,0,255}));
-  connect(mTransformer.n[2], ground.p) annotation (Line(points={{-20,-30},{-16,-30},{-16,-42},{14,-42},{14,-112},{18,-112},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
+  connect(R_primary.n, mTransformer.p[1]) annotation (Line(points={{-50,-30},{-44,-30},{-44,-26.5},{-40,-26.5}}, color={0,0,255}));
+  connect(mTransformer.n[1], ground.p) annotation (Line(points={{-20,-26.5},{-16,-26.5},{-16,-42},{14,-42},{14,-112},{18,-112},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
+  connect(mTransformer.p[2], R_secondary.p) annotation (Line(points={{-40,-33.5},{-44,-33.5},{-44,-44},{-14,-44},{-14,-30},{-10,-30}}, color={0,0,255}));
+  connect(R_secondary.n, mTransformer.n[2]) annotation (Line(points={{10,-30},{14,-30},{14,-42},{-16,-42},{-16,-33.5},{-20,-33.5}}, color={0,0,255}));
+  connect(mTransformer.n[2], ground.p) annotation (Line(points={{-20,-33.5},{-16,-33.5},{-16,-42},{14,-42},{14,-112},{18,-112},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
   connect(sine.p, opAmp.in_p) annotation (Line(points={{-80,0},{-74,0},{-74,-86},{-40,-86}}, color={0,0,255}));
   connect(opAmp.out, R_feedback.p) annotation (Line(points={{-20,-80},{-12,-80},{-12,-84},{0,-84},{0,-80}}, color={0,0,255}));
   connect(R_feedback.n, opAmp.in_n) annotation (Line(points={{0,-60},{0,-56},{-44,-56},{-44,-74},{-40,-74}}, color={0,0,255}));

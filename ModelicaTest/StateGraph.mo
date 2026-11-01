@@ -47,26 +47,26 @@ package StateGraph "Test models for Modelica.StateGraph"
       annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={270,-30})));
   equation
     connect(initialStep1.outPort[1], alternative1.inPort) annotation (Line(points={{-69.5,-30},{-60.9,-30}}, color={0,0,0}));
-    connect(alternative1.split[1], transitionWithSignal1.inPort) annotation (Line(points={{-53.7,-30},{-53.7,2},{-54,2},{-54,8},{-24,8},{-24,20}}, color={0,0,0}));
+    connect(alternative1.split[1], transitionWithSignal1.inPort) annotation (Line(points={{-53.7,-15},{-53.7,8},{-24,8},{-24,20}}, color={0,0,0}));
     connect(transitionWithSignal1.outPort, stepWithSignal1.inPort[1]) annotation (Line(points={{-18.5,20},{0,20},{0,34},{76,34},{76,20},{79,20}}, color={0,0,0}));
     connect(stepWithSignal1.outPort[1], transition2.inPort) annotation (Line(points={{100.5,20},{104,20},{104,32},{32,32},{32,20},{16,20}}, color={0,0,0}));
-    connect(transition2.outPort, alternative1.join[1]) annotation (Line(points={{21.5,20},{21.5,8},{22,8},{22,2},{-6.3,2},{-6.3,-30}}, color={0,0,0}));
-    connect(alternative1.split[2], transition3.inPort) annotation (Line(points={{-53.7,-30},{-53.7,-62},{-54,-62},{-54,-68},{-24,-68},{-24,-80}}, color={0,0,0}));
+    connect(transition2.outPort, alternative1.join[1]) annotation (Line(points={{21.5,20},{21.5,2},{-6.3,2},{-6.3,-15}}, color={0,0,0}));
+    connect(alternative1.split[2], transition3.inPort) annotation (Line(points={{-53.7,-45},{-53.7,-68},{-24,-68},{-24,-80}}, color={0,0,0}));
     connect(transition3.outPort, step2.inPort[1]) annotation (Line(points={{-18.5,-80},{0,-80},{0,-92},{44,-92},{44,-80},{49,-80}}, color={0,0,0}));
     connect(step2.outPort[1], transition4.inPort) annotation (Line(points={{70.5,-80},{74,-80},{74,-68},{32,-68},{32,-80},{16,-80}}, color={0,0,0}));
-    connect(transition4.outPort, alternative1.join[2]) annotation (Line(points={{21.5,-80},{21.5,-68},{22,-68},{22,-62},{-6.3,-62},{-6.3,-30}}, color={0,0,0}));
+    connect(transition4.outPort, alternative1.join[2]) annotation (Line(points={{21.5,-80},{21.5,-62},{-6.3,-62},{-6.3,-45}}, color={0,0,0}));
     connect(booleanExpression1.y, transitionWithSignal1.condition) annotation (Line(points={{-19,-120},{2,-120},{2,4},{-20,4},{-20,8}}, color={255,0,255}));
     connect(alternative1.outPort, stepAfterAlternative.inPort[1]) annotation (Line(points={{0.6,-30},{89,-30}}, color={0,0,0}));
     connect(stepAfterAlternative.outPort[1], transition1.inPort) annotation (Line(points={{110.5,-30},{136,-30}}, color={0,0,0}));
     connect(transition1.outPort, parallel1.inPort) annotation (Line(points={{141.5,-30},{194.25,-30}}, color={0,0,0}));
-    connect(parallel1.split[1], step3.inPort[1]) annotation (Line(points={{200.62,-30},{200.62,2},{200,2},{200,6},{164,6},{164,20},{169,20}}, color={0,0,0}));
+    connect(parallel1.split[1], step3.inPort[1]) annotation (Line(points={{200.62,-15},{200.62,6},{164,6},{164,20},{169,20}}, color={0,0,0}));
     connect(step3.outPort[1], transition5.inPort) annotation (Line(points={{190.5,20},{194,20},{194,8},{238,8},{238,20},{246,20}}, color={0,0,0}));
     connect(transition5.outPort, step4.inPort[1]) annotation (Line(points={{251.5,20},{230,20},{230,32},{196,32},{196,20},{199,20}}, color={0,0,0}));
-    connect(step4.outPort[1], parallel1.join[1]) annotation (Line(points={{220.5,20},{228,20},{228,2},{239.38,2},{239.38,-30}}, color={0,0,0}));
-    connect(parallel1.split[2], stepWithSignal2.inPort[1]) annotation (Line(points={{200.62,-30},{200.62,-62},{200,-62},{200,-66},{164,-66},{164,-80},{169,-80}}, color={0,0,0}));
+    connect(step4.outPort[1], parallel1.join[1]) annotation (Line(points={{220.5,20},{228,20},{228,2},{239.38,2},{239.38,-15}}, color={0,0,0}));
+    connect(parallel1.split[2], stepWithSignal2.inPort[1]) annotation (Line(points={{200.62,-45},{200.62,-66},{164,-66},{164,-80},{169,-80}}, color={0,0,0}));
     connect(stepWithSignal2.outPort[1], transition6.inPort) annotation (Line(points={{190.5,-80},{194,-80},{194,-92},{238,-92},{238,-80},{246,-80}}, color={0,0,0}));
     connect(transition6.outPort, step5.inPort[1]) annotation (Line(points={{251.5,-80},{230,-80},{230,-68},{196,-68},{196,-80},{199,-80}}, color={0,0,0}));
-    connect(step5.outPort[1], parallel1.join[2]) annotation (Line(points={{220.5,-80},{228,-80},{228,-62},{239.38,-62},{239.38,-30}}, color={0,0,0}));
+    connect(step5.outPort[1], parallel1.join[2]) annotation (Line(points={{220.5,-80},{228,-80},{228,-62},{239.38,-62},{239.38,-45}}, color={0,0,0}));
     connect(parallel1.outPort, transition7.inPort) annotation (Line(points={{245.5,-30},{266,-30}}, color={0,0,0}));
     connect(transition7.outPort, initialStep1.inPort[1]) annotation (Line(points={{271.5,-30},{258,-30},{258,8},{262,8},{262,36},{-96,36},{-96,-30},{-91,-30}}, color={0,0,0}));
     annotation (Diagram(coordinateSystem(extent={{-100,-140},{280,100}})),

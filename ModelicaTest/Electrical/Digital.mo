@@ -62,19 +62,19 @@ package Digital "Test models for Modelica.Electrical.Digital"
     Modelica.Electrical.Digital.Sources.Table addr2(x={Modelica.Electrical.Digital.Interfaces.Logic.'1', Modelica.Electrical.Digital.Interfaces.Logic.'0'}, t={0.25, 0.75})
       annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-10,-170})));
   equation
-    connect(clock.y, nand1.x[1]) annotation (Line(points={{-80,100},{-56,100}}, color={127,0,127}));
-    connect(step.y, nand1.x[2]) annotation (Line(points={{-80,60},{-70,60},{-70,88},{-56,88},{-56,100}}, color={127,0,127}));
-    connect(clock.y, xnor1.x[1]) annotation (Line(points={{-80,100},{-62,100},{-62,72},{-56,72},{-56,60}}, color={127,0,127}));
-    connect(pulse.y, xnor1.x[2]) annotation (Line(points={{-80,20},{-56,20},{-56,60}}, color={127,0,127}));
+    connect(clock.y, nand1.x[1]) annotation (Line(points={{-80,100},{-62,100},{-62,104},{-56,104}}, color={127,0,127}));
+    connect(step.y, nand1.x[2]) annotation (Line(points={{-80,60},{-70,60},{-70,88},{-56,88},{-56,96}}, color={127,0,127}));
+    connect(clock.y, xnor1.x[1]) annotation (Line(points={{-80,100},{-62,100},{-62,72},{-56,72},{-56,64}}, color={127,0,127}));
+    connect(pulse.y, xnor1.x[2]) annotation (Line(points={{-80,20},{-56,20},{-56,56}}, color={127,0,127}));
     connect(clock.y, invGate.x) annotation (Line(points={{-80,100},{-62,100},{-62,112},{-22,112},{-22,100},{-16,100}}, color={127,0,127}));
-    connect(clock.y, nandGate.x[1]) annotation (Line(points={{-80,100},{-62,100},{-62,72},{-30,72},{-30,60},{-16,60}}, color={127,0,127}));
-    connect(step.y, nandGate.x[2]) annotation (Line(points={{-80,60},{-70,60},{-70,88},{-22,88},{-22,60},{-16,60}}, color={127,0,127}));
-    connect(clock.y, orGate.x[1]) annotation (Line(points={{-80,100},{-62,100},{-62,72},{-30,72},{-30,42},{-16,42},{-16,30}}, color={127,0,127}));
-    connect(pulse.y, orGate.x[2]) annotation (Line(points={{-80,20},{-56,20},{-56,30},{-16,30}}, color={127,0,127}));
-    connect(step.y, norGate.x[1]) annotation (Line(points={{-80,60},{-70,60},{-70,0},{-16,0}}, color={127,0,127}));
-    connect(pulse.y, norGate.x[2]) annotation (Line(points={{-80,20},{-22,20},{-22,0},{-16,0}}, color={127,0,127}));
-    connect(clock.y, xnorGate.x[1]) annotation (Line(points={{-80,100},{-62,100},{-62,72},{-30,72},{-30,42},{14,42},{14,-28},{-16,-28},{-16,-40}}, color={127,0,127}));
-    connect(step.y, xnorGate.x[2]) annotation (Line(points={{-80,60},{-70,60},{-70,0},{-24,0},{-24,-28},{-16,-28},{-16,-40}}, color={127,0,127}));
+    connect(clock.y, nandGate.x[1]) annotation (Line(points={{-80,100},{-62,100},{-62,72},{-30,72},{-30,64},{-16,64}}, color={127,0,127}));
+    connect(step.y, nandGate.x[2]) annotation (Line(points={{-80,60},{-70,60},{-70,88},{-22,88},{-22,56},{-16,56}}, color={127,0,127}));
+    connect(clock.y, orGate.x[1]) annotation (Line(points={{-80,100},{-62,100},{-62,112},{8,112},{8,42},{-16,42},{-16,34}}, color={127,0,127}));
+    connect(pulse.y, orGate.x[2]) annotation (Line(points={{-80,20},{-22,20},{-22,26},{-16,26}}, color={127,0,127}));
+    connect(step.y, norGate.x[1]) annotation (Line(points={{-80,60},{-70,60},{-70,4},{-16,4}}, color={127,0,127}));
+    connect(pulse.y, norGate.x[2]) annotation (Line(points={{-80,20},{-22,20},{-22,-4},{-16,-4}}, color={127,0,127}));
+    connect(clock.y, xnorGate.x[1]) annotation (Line(points={{-80,100},{-62,100},{-62,112},{8,112},{8,42},{14,42},{14,-28},{-16,-28},{-16,-36}}, color={127,0,127}));
+    connect(step.y, xnorGate.x[2]) annotation (Line(points={{-80,60},{-70,60},{-70,4},{-24,4},{-24,-28},{-16,-28},{-16,-44}}, color={127,0,127}));
     connect(pulse.y, bufGate.x) annotation (Line(points={{-80,20},{-22,20},{-22,12},{2,12},{2,-66},{-16,-66},{-16,-80}}, color={127,0,127}));
     connect(pulse.y, inertialDelay.x) annotation (Line(points={{-80,20},{-22,20},{-22,12},{2,12},{2,-98},{-16,-98},{-16,-110}}, color={127,0,127}));
     connect(clock.y, pxfer.x) annotation (Line(points={{-80,100},{-62,100},{-62,112},{16,112},{16,99},{21,99}}, color={127,0,127}));
@@ -91,8 +91,8 @@ package Digital "Test models for Modelica.Electrical.Digital"
     connect(booleanPulse.y, booleanToLogic.x[1]) annotation (Line(points={{-79,-120},{-55,-120}}, color={255,0,255}));
     connect(booleanToLogic.y[1], logicToBoolean.x[1]) annotation (Line(points={{-45,-120},{-45,-132},{-44,-132},{-44,-138},{-55,-138},{-55,-150}}, color={127,0,127}));
     connect(ramp.y, realToLogic.x[1]) annotation (Line(points={{-79,-180},{-55,-180}}, color={0,0,127}));
-    connect(clock.y, rom.addr[1]) annotation (Line(points={{-80,100},{-62,100},{-62,112},{8,112},{8,42},{14,42},{14,-154},{21,-154}}, color={127,0,127}));
-    connect(addr2.y, rom.addr[2]) annotation (Line(points={{0,-170},{16,-170},{16,-154},{21,-154}}, color={127,0,127}));
+    connect(clock.y, rom.addr[1]) annotation (Line(points={{-80,100},{-62,100},{-62,112},{8,112},{8,42},{14,42},{14,-153.5},{21,-153.5}}, color={127,0,127}));
+    connect(addr2.y, rom.addr[2]) annotation (Line(points={{0,-170},{14,-170},{14,-154.5},{21,-154.5}}, color={127,0,127}));
     connect(setX.y, rom.RE) annotation (Line(points={{-80,-30},{-22,-30},{-22,-150},{10,-150},{10,-162},{16.8,-162},{16.8,-162.2},{20.8,-162.2}}, color={127,0,127}));
     annotation (Diagram(coordinateSystem(extent={{-100,-200},{100,120}})),
       experiment(StopTime=1),

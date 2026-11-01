@@ -165,15 +165,15 @@ Sources.ComplexStep is tested separately in
     connect(complexRotatingPhasor1.y, replicator1.u) annotation (Line(points={{-69,60},{-50,60},{-50,90},{-32,90}}, color={85,170,255}));
     connect(complexRotatingPhasor1.y, replicator2.u) annotation (Line(points={{-69,60},{-32,60}}, color={85,170,255}));
     connect(complexStep1.y, complexPassThrough1.u) annotation (Line(points={{-69,20},{-50,20},{-50,30},{-32,30}}, color={85,170,255}));
-    connect(complexRotatingPhasor1.y, extractSignal1.u[1]) annotation (Line(points={{-69,60},{-30,60},{-30,0},{8,0}}, color={85,170,255}));
-    connect(complexStep1.y, extractSignal1.u[2]) annotation (Line(points={{-69,20},{-30,20},{-30,0},{8,0}}, color={85,170,255}));
-    connect(complexConstant1.y, extractSignal1.u[3]) annotation (Line(points={{-69,-20},{-30,-20},{-30,0},{8,0}}, color={85,170,255}));
-    connect(complexRotatingPhasor1.y, extractor1.u[1]) annotation (Line(points={{-69,60},{-32,60},{-32,42},{46,42},{46,-28},{4,-28},{4,-40},{8,-40}}, color={85,170,255}));
-    connect(complexStep1.y, extractor1.u[2]) annotation (Line(points={{-69,20},{-30,20},{-30,-40},{8,-40}}, color={85,170,255}));
-    connect(complexConstant1.y, extractor1.u[3]) annotation (Line(points={{-69,-20},{-30,-20},{-30,-40},{8,-40}}, color={85,170,255}));
-    connect(complexRotatingPhasor1.y, extractor2.u[1]) annotation (Line(points={{-69,60},{-32,60},{-32,42},{46,42},{46,-40},{48,-40}}, color={85,170,255}));
-    connect(complexStep1.y, extractor2.u[2]) annotation (Line(points={{-69,20},{-32,20},{-32,-28},{40,-28},{40,-40},{48,-40}}, color={85,170,255}));
-    connect(complexConstant1.y, extractor2.u[3]) annotation (Line(points={{-69,-20},{44,-20},{44,-40},{48,-40}}, color={85,170,255}));
+    connect(complexRotatingPhasor1.y, extractSignal1.u[1]) annotation (Line(points={{-69,60},{-32,60},{-32,42},{4,42},{4,1.33},{8,1.33}}, color={85,170,255}));
+    connect(complexStep1.y, extractSignal1.u[2]) annotation (Line(points={{-69,20},{-40,20},{-40,0},{8,0}}, color={85,170,255}));
+    connect(complexConstant1.y, extractSignal1.u[3]) annotation (Line(points={{-69,-20},{4,-20},{4,-1.33},{8,-1.33}}, color={85,170,255}));
+    connect(complexRotatingPhasor1.y, extractor1.u[1]) annotation (Line(points={{-69,60},{-32,60},{-32,42},{4,42},{4,0},{2,0},{2,-38.67},{8,-38.67}}, color={85,170,255}));
+    connect(complexStep1.y, extractor1.u[2]) annotation (Line(points={{-69,20},{-40,20},{-40,0},{0,0},{0,-40},{8,-40}}, color={85,170,255}));
+    connect(complexConstant1.y, extractor1.u[3]) annotation (Line(points={{-69,-20},{4,-20},{4,-41.33},{8,-41.33}}, color={85,170,255}));
+    connect(complexRotatingPhasor1.y, extractor2.u[1]) annotation (Line(points={{-69,60},{-32,60},{-32,42},{4,42},{4,12},{46,12},{46,-38.67},{48,-38.67}}, color={85,170,255}));
+    connect(complexStep1.y, extractor2.u[2]) annotation (Line(points={{-69,20},{-40,20},{-40,0},{0,0},{0,-52},{40,-52},{40,-40},{48,-40}}, color={85,170,255}));
+    connect(complexConstant1.y, extractor2.u[3]) annotation (Line(points={{-69,-20},{44,-20},{44,-41.33},{48,-41.33}}, color={85,170,255}));
     connect(integerStep1.y, extractor1.index) annotation (Line(points={{-9,-80},{0,-80},{0,-56},{20,-56},{20,-52}}, color={255,127,0}));
     connect(integerStep2.y, extractor2.index) annotation (Line(points={{31,-80},{60,-80},{60,-52}}, color={255,127,0}));
     annotation (experiment(StopTime=1),

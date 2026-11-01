@@ -260,11 +260,11 @@ R = 1 Ohm and L = 2 mH.
     Modelica.Electrical.QuasiStatic.Polyphase.Blocks.FromSymmetricalComponents fromSymmetricalComponents(m=3)
       annotation (Placement(transformation(extent={{20,-90},{40,-70}})));
   equation
-    connect(cosine.y, fromSpacePhasor.u[1]) annotation (Line(points={{-79,30},{-70,30},{-70,10},{-62,10}}, color={0,0,127}));
-    connect(sine.y, fromSpacePhasor.u[2]) annotation (Line(points={{-79,-10},{-70,-10},{-70,10},{-62,10}}, color={0,0,127}));
+    connect(cosine.y, fromSpacePhasor.u[1]) annotation (Line(points={{-79,30},{-66,30},{-66,11},{-62,11}}, color={0,0,127}));
+    connect(sine.y, fromSpacePhasor.u[2]) annotation (Line(points={{-79,-10},{-66,-10},{-66,9},{-62,9}}, color={0,0,127}));
     connect(fromSpacePhasor.y, toSpacePhasor.u) annotation (Line(points={{-39,10},{-22,10}}, color={85,170,255}));
-    connect(cosine2.y, fromSpacePhasor2.u[1]) annotation (Line(points={{-79,-60},{-70,-60},{-70,-80},{-62,-80}}, color={0,0,127}));
-    connect(sine2.y, fromSpacePhasor2.u[2]) annotation (Line(points={{-79,-100},{-70,-100},{-70,-80},{-62,-80}}, color={0,0,127}));
+    connect(cosine2.y, fromSpacePhasor2.u[1]) annotation (Line(points={{-79,-60},{-66,-60},{-66,-79},{-62,-79}}, color={0,0,127}));
+    connect(sine2.y, fromSpacePhasor2.u[2]) annotation (Line(points={{-79,-100},{-66,-100},{-66,-81},{-62,-81}}, color={0,0,127}));
     connect(fromSpacePhasor2.y, symmetricalComponents.u) annotation (Line(points={{-39,-80},{-22,-80}}, color={85,170,255}));
     connect(symmetricalComponents.y, fromSymmetricalComponents.u) annotation (Line(points={{1,-80},{18,-80}}, color={85,170,255}));
     annotation (Diagram(coordinateSystem(extent={{-100,-120},{100,100}})),

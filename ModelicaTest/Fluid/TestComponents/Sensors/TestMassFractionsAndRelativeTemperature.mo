@@ -25,14 +25,14 @@ model TestMassFractionsAndRelativeTemperature "Test of the MassFractions, MassFr
   replaceable package Medium = Modelica.Media.Air.MoistAir constrainedby Modelica.Media.Interfaces.PartialMedium "Medium in all components";
 equation
   connect(TRamp.y, source.T_in) annotation (Line(points={{-79,40},{-66,40},{-66,4},{-62,4}}, color={0,0,127}));
-  connect(xWater.y, source.X_in[1]) annotation (Line(points={{-79,0},{-66,0},{-66,-4},{-62,-4}}, color={0,0,127}));
-  connect(xAir.y, source.X_in[2]) annotation (Line(points={{-79,-30},{-66,-30},{-66,-4},{-62,-4}}, color={0,0,127}));
-  connect(source.ports[1], massFractionsTwoPort1.port_a) annotation (Line(points={{-39,0},{-22,0}}, color={0,127,255}));
+  connect(xWater.y, source.X_in[1]) annotation (Line(points={{-79,0},{-66,0},{-66,-3},{-62,-3}}, color={0,0,127}));
+  connect(xAir.y, source.X_in[2]) annotation (Line(points={{-79,-30},{-66,-30},{-66,-5},{-62,-5}}, color={0,0,127}));
+  connect(source.ports[1], massFractionsTwoPort1.port_a) annotation (Line(points={{-40,2.67},{-36,2.67},{-36,0},{-20,0}}, color={0,127,255}));
   connect(massFractionsTwoPort1.port_b, orifice1.port_a) annotation (Line(points={{0,0},{10,0}}, color={0,127,255}));
-  connect(orifice1.port_b, sink.ports[1]) annotation (Line(points={{30,0},{60,0}}, color={0,127,255}));
-  connect(source.ports[2], massFractions1.port) annotation (Line(points={{-40,0},{-36,0},{-36,36},{-10,36},{-10,40}}, color={0,127,255}));
-  connect(source.ports[3], relativeTemperature1.port_a) annotation (Line(points={{-40,0},{-36,0},{-36,-50},{10,-50}}, color={0,127,255}));
-  connect(relativeTemperature1.port_b, sink.ports[2]) annotation (Line(points={{30,-50},{56,-50},{56,0},{60,0}}, color={0,127,255}));
+  connect(orifice1.port_b, sink.ports[1]) annotation (Line(points={{30,0},{56,0},{56,-2},{60,-2}}, color={0,127,255}));
+  connect(source.ports[2], massFractions1.port) annotation (Line(points={{-40,0},{-34,0},{-34,36},{-10,36},{-10,40}}, color={0,127,255}));
+  connect(source.ports[3], relativeTemperature1.port_a) annotation (Line(points={{-40,-2.67},{-30,-2.67},{-30,-50},{10,-50}}, color={0,127,255}));
+  connect(relativeTemperature1.port_b, sink.ports[2]) annotation (Line(points={{30,-50},{50,-50},{50,2},{60,2}}, color={0,127,255}));
   annotation (experiment(StopTime=1),
     Documentation(info="<html>
 <p>

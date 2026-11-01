@@ -23,16 +23,16 @@ model TestBendsAndOrifices "Test of the bend, thick edged orifice and volume flo
   replaceable package Medium = Modelica.Media.Water.ConstantPropertyLiquidWater constrainedby Modelica.Media.Interfaces.PartialMedium "Medium in all components";
 equation
   connect(p_table.y, source.p_in) annotation (Line(points={{-79,0},{-76,0},{-76,8},{-72,8}}, color={0,0,127}));
-  connect(source.ports[1], curvedBend.port_a) annotation (Line(points={{-49,0},{-30,0},{-30,80},{-12,80}}, color={0,127,255}));
-  connect(source.ports[2], edgedBend.port_a) annotation (Line(points={{-49,0},{-30,0},{-30,40},{-12,40}}, color={0,127,255}));
-  connect(source.ports[3], orificeRectangular.port_a) annotation (Line(points={{-49,0},{-12,0}}, color={0,127,255}));
-  connect(source.ports[4], orificeGeneral.port_a) annotation (Line(points={{-49,0},{-30,0},{-30,-40},{-12,-40}}, color={0,127,255}));
-  connect(source.ports[5], volumeFlowRate.port_a) annotation (Line(points={{-49,0},{-30,0},{-30,-80},{-12,-80}}, color={0,127,255}));
-  connect(curvedBend.port_b, sink.ports[1]) annotation (Line(points={{10,80},{78,80},{78,-2},{74,-2},{74,0},{70,0}}, color={0,127,255}));
-  connect(edgedBend.port_b, sink.ports[2]) annotation (Line(points={{10,40},{76,40},{76,0},{70,0}}, color={0,127,255}));
-  connect(orificeRectangular.port_b, sink.ports[3]) annotation (Line(points={{10,0},{40,0},{40,12},{74,12},{74,0},{70,0}}, color={0,127,255}));
-  connect(orificeGeneral.port_b, sink.ports[4]) annotation (Line(points={{10,-40},{74,-40},{74,0},{70,0}}, color={0,127,255}));
-  connect(volumeFlowRate.port_b, sink.ports[5]) annotation (Line(points={{10,-80},{50,-80},{50,-20},{72,-20},{72,0},{70,0}}, color={0,127,255}));
+  connect(source.ports[1], curvedBend.port_a) annotation (Line(points={{-50,3.2},{-14,3.2},{-14,80},{-10,80}}, color={0,127,255}));
+  connect(source.ports[2], edgedBend.port_a) annotation (Line(points={{-50,1.6},{-12,1.6},{-12,40},{-10,40}}, color={0,127,255}));
+  connect(source.ports[3], orificeRectangular.port_a) annotation (Line(points={{-50,0},{-10,0}}, color={0,127,255}));
+  connect(source.ports[4], orificeGeneral.port_a) annotation (Line(points={{-50,-1.6},{-14,-1.6},{-14,-40},{-10,-40}}, color={0,127,255}));
+  connect(source.ports[5], volumeFlowRate.port_a) annotation (Line(points={{-50,-3.2},{-20,-3.2},{-20,-80},{-10,-80}}, color={0,127,255}));
+  connect(curvedBend.port_b, sink.ports[1]) annotation (Line(points={{10,80},{74,80},{74,3.2},{70,3.2}}, color={0,127,255}));
+  connect(edgedBend.port_b, sink.ports[2]) annotation (Line(points={{10,40},{72,40},{72,1.6},{70,1.6}}, color={0,127,255}));
+  connect(orificeRectangular.port_b, sink.ports[3]) annotation (Line(points={{10,0},{40,0},{40,-12},{72,-12},{72,0},{70,0}}, color={0,127,255}));
+  connect(orificeGeneral.port_b, sink.ports[4]) annotation (Line(points={{10,-40},{74,-40},{74,-1.6},{70,-1.6}}, color={0,127,255}));
+  connect(volumeFlowRate.port_b, sink.ports[5]) annotation (Line(points={{10,-80},{50,-80},{50,-50},{76,-50},{76,-3.2},{70,-3.2}}, color={0,127,255}));
   annotation (experiment(StopTime=10),
     Documentation(info="<html>
 <p>

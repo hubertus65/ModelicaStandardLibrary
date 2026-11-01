@@ -53,8 +53,8 @@ equation
   connect(starL.pin_n, ground.p) annotation (Line(points={{60,-30},{60,-64},{-60,-64},{-60,-70}}, color={0,0,255}));
   connect(spacePhasorB.zero, rZeroB.p) annotation (Line(points={{30,20},{36,20},{36,-32},{6,-32},{6,-20},{10,-20}}, color={0,0,255}));
   connect(rZeroB.n, spacePhasorB.ground) annotation (Line(points={{30,-20},{34,-20},{34,10},{30,10}}, color={0,0,255}));
-  connect(absolute.y, fromPolar.u[1]) annotation (Line(points={{-49,-120},{-40,-120},{-40,-130},{-32,-130}}, color={0,0,127}));
-  connect(phi.y, fromPolar.u[2]) annotation (Line(points={{-49,-150},{-40,-150},{-40,-130},{-32,-130}}, color={0,0,127}));
+  connect(absolute.y, fromPolar.u[1]) annotation (Line(points={{-49,-120},{-36,-120},{-36,-129},{-32,-129}}, color={0,0,127}));
+  connect(phi.y, fromPolar.u[2]) annotation (Line(points={{-49,-150},{-36,-150},{-36,-131},{-32,-131}}, color={0,0,127}));
   connect(fromPolar.y, quasiRMS.u) annotation (Line(points={{-9,-130},{8,-130}}, color={0,0,127}));
   annotation (Diagram(coordinateSystem(extent={{-100,-170},{100,100}})),
     experiment(StopTime=0),
