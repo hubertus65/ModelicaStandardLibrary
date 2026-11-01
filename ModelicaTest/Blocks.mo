@@ -2162,9 +2162,9 @@ the whole homotopy transformation.</p>
     Modelica.Blocks.Sources.Ramp ramp1(height=1.8, duration=1, offset=-0.9)
       annotation (Placement(transformation(extent={{-90,50},{-70,70}})));
     Modelica.Blocks.Sources.Constant const1(k=0.5)
-      annotation (Placement(transformation(extent={{-90,-10},{-70,10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-80,-10})));
     Modelica.Blocks.Sources.Ramp ramp2(height=1.9, duration=1, offset=0.1)
-      annotation (Placement(transformation(extent={{-90,-70},{-70,-50}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-80,-70})));
     Modelica.Blocks.Math.Cos cos1
       annotation (Placement(transformation(extent={{-30,80},{-10,100}})));
     Modelica.Blocks.Math.Tan tan1
@@ -2172,51 +2172,52 @@ the whole homotopy transformation.</p>
     Modelica.Blocks.Math.Acos acos1
       annotation (Placement(transformation(extent={{-30,20},{-10,40}})));
     Modelica.Blocks.Math.Sinh sinh1
-      annotation (Placement(transformation(extent={{-29.46,-9.73},{-9.46,10.27}},rotation = 0.0,origin = {0.0,0.0})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-20,-10})));
     Modelica.Blocks.Math.Cosh cosh1
-      annotation (Placement(transformation(extent={{-30,-40},{-10,-20}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-20,-40})));
     Modelica.Blocks.Math.Tanh tanh1
-      annotation (Placement(transformation(extent={{-30,-70},{-10,-50}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-20,-70})));
     Modelica.Blocks.Math.Exp exp1
-      annotation (Placement(transformation(extent={{-30,-100},{-10,-80}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-20,-100})));
     Modelica.Blocks.Math.Sign sign1
-      annotation (Placement(transformation(extent={{35.26,79.73},{55.26,99.73}},rotation = 0.0,origin = {0.0,0.0})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={50,90})));
     Modelica.Blocks.Math.Sign signEvent(generateEvent=true)
-      annotation (Placement(transformation(extent={{35.26,49.73},{55.26,69.73}},rotation = 0.0,origin = {0.0,0.0})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={50,60})));
     Modelica.Blocks.Math.Atan2 atan2Quadrants
-      annotation (Placement(transformation(extent={{35.26,19.73},{55.26,39.73}},rotation = 0.0,origin = {0.0,0.0})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={50,30})));
     Modelica.Blocks.Math.Division division1
-      annotation (Placement(transformation(extent={{10,-100},{30,-80}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={20,-100})));
     Modelica.Blocks.Math.Log logNatural
-      annotation (Placement(transformation(extent={{79.06,79.73},{99.06,99.73}},rotation = 0.0,origin = {0.0,0.0})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={90,90})));
     Modelica.Blocks.Math.Log logBase2(base=2)
-      annotation (Placement(transformation(extent={{79.06,49.73},{99.06,69.73}},rotation = 0.0,origin = {0.0,0.0})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={90,60})));
     Modelica.Blocks.Math.Log10 logBase10
-      annotation (Placement(transformation(extent={{79.06,19.73},{99.06,39.73}},rotation = 0.0,origin = {0.0,0.0})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={90,30})));
     Modelica.Blocks.Math.Power powerExp(base=2)
-      annotation (Placement(transformation(extent={{79.06,-10.27},{99.06,9.73}},rotation = 0.0,origin = {0.0,0.0})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={90,-10})));
     Modelica.Blocks.Math.Power powerNoExp(base=2, useExp=false)
-      annotation (Placement(transformation(extent={{79.06,-40.27},{99.06,-20.27}},rotation = 0.0,origin = {0.0,0.0})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={90,-40})));
   equation
     connect(ramp1.y, cos1.u) annotation (Line(points={{-69,60},{-50,60},{-50,90},{-32,90}}, color={0,0,127}));
     connect(ramp1.y, tan1.u) annotation (Line(points={{-69,60},{-32,60}}, color={0,0,127}));
     connect(ramp1.y, acos1.u) annotation (Line(points={{-69,60},{-50,60},{-50,30},{-32,30}}, color={0,0,127}));
-    connect(ramp1.y, sinh1.u) annotation (Line(points={{-69,60},{-50,60},{-50,0.27},{-31.46,0.27}}, color={0,0,127}));
-    connect(ramp1.y, cosh1.u) annotation (Line(points={{-69,60},{-50,60},{-50,-30},{-32,-30}}, color={0,0,127}));
-    connect(ramp1.y, tanh1.u) annotation (Line(points={{-69,60},{-50,60},{-50,-60},{-32,-60}}, color={0,0,127}));
-    connect(ramp1.y, exp1.u) annotation (Line(points={{-69,60},{-50,60},{-50,-90},{-32,-90}}, color={0,0,127}));
-    connect(ramp1.y, sign1.u) annotation (Line(points={{-69,60},{-30,60},{-30,89.73},{33.26,89.73}}, color={0,0,127}));
-    connect(ramp1.y, signEvent.u) annotation (Line(points={{-69,60},{33.26,60},{33.26,59.73}}, color={0,0,127}));
-    connect(const1.y, atan2Quadrants.u1) annotation (Line(points={{-69,0},{-40.05,0},{-40.05,35.73},{33.26,35.73}}, color={0,0,127}));
-    connect(ramp1.y, atan2Quadrants.u2) annotation (Line(points={{-69,60},{-54.72,60},{-54.72,23.73},{33.26,23.73}}, color={0,0,127}));
-    connect(ramp1.y, division1.u1) annotation (Line(points={{-69,60},{-44.39,60},{-44.39,-84},{8,-84}}, color={0,0,127}));
-    connect(ramp2.y, division1.u2) annotation (Line(points={{-69,-60},{-30,-60},{-30,-96},{8,-96}}, color={0,0,127}));
-    connect(ramp2.y, logNatural.u) annotation (Line(points={{-69,-60},{25.31,-60},{25.31,77.24},{67.83,77.24},{67.83,89.73},{77.06,89.73}}, color={0,0,127}));
-    connect(ramp2.y, logBase2.u) annotation (Line(points={{-69,-60},{19.88,-60},{19.88,59.73},{77.06,59.73}}, color={0,0,127}));
-    connect(ramp2.y, logBase10.u) annotation (Line(points={{-69,-60},{63.06,-60},{63.06,29.73},{77.06,29.73}}, color={0,0,127}));
-    connect(ramp1.y, powerExp.u) annotation (Line(points={{-69,60},{-0.22,60},{-0.22,-0.27},{77.06,-0.27}}, color={0,0,127}));
-    connect(ramp1.y, powerNoExp.u) annotation (Line(points={{-69,60},{9.56,60},{9.56,-30.27},{77.06,-30.27}}, color={0,0,127}));
-    annotation (experiment(StopTime=1),
+    connect(ramp1.y, sinh1.u) annotation (Line(points={{-69,60},{-50,60},{-50,30},{-36,30},{-36,-10},{-32,-10}}, color={0,0,127}));
+    connect(ramp1.y, cosh1.u) annotation (Line(points={{-69,60},{-50,60},{-50,30},{-36,30},{-36,-40},{-32,-40}}, color={0,0,127}));
+    connect(ramp1.y, tanh1.u) annotation (Line(points={{-69,60},{-50,60},{-50,30},{-36,30},{-36,-70},{-32,-70}}, color={0,0,127}));
+    connect(ramp1.y, exp1.u) annotation (Line(points={{-69,60},{-50,60},{-50,30},{-36,30},{-36,-100},{-32,-100}}, color={0,0,127}));
+    connect(ramp1.y, sign1.u) annotation (Line(points={{-69,60},{-50,60},{-50,72},{34,72},{34,90},{38,90}}, color={0,0,127}));
+    connect(ramp1.y, signEvent.u) annotation (Line(points={{-69,60},{-50,60},{-50,72},{34,72},{34,60},{38,60}}, color={0,0,127}));
+    connect(const1.y, atan2Quadrants.u1) annotation (Line(points={{-69,-10},{-40,-10},{-40,42},{34,42},{34,36},{38,36}}, color={0,0,127}));
+    connect(ramp1.y, atan2Quadrants.u2) annotation (Line(points={{-69,60},{-50,60},{-50,30},{-36,30},{-36,18},{34,18},{34,24},{38,24}}, color={0,0,127}));
+    connect(ramp1.y, division1.u1) annotation (Line(points={{-69,60},{-50,60},{-50,30},{-36,30},{-36,-86},{6,-86},{6,-94},{8,-94}}, color={0,0,127}));
+    connect(ramp2.y, division1.u2) annotation (Line(points={{-69,-70},{-40,-70},{-40,-88},{4,-88},{4,-106},{8,-106}}, color={0,0,127}));
+    connect(ramp2.y, logNatural.u) annotation (Line(points={{-69,-70},{-40,-70},{-40,-88},{70,-88},{70,30},{74,30},{74,90},{78,90}}, color={0,0,127}));
+    connect(ramp2.y, logBase2.u) annotation (Line(points={{-69,-70},{-40,-70},{-40,-88},{70,-88},{70,30},{74,30},{74,60},{78,60}}, color={0,0,127}));
+    connect(ramp2.y, logBase10.u) annotation (Line(points={{-69,-70},{-40,-70},{-40,-88},{70,-88},{70,30},{78,30}}, color={0,0,127}));
+    connect(ramp1.y, powerExp.u) annotation (Line(points={{-69,60},{-50,60},{-50,30},{-36,30},{-36,18},{74,18},{74,-10},{78,-10}}, color={0,0,127}));
+    connect(ramp1.y, powerNoExp.u) annotation (Line(points={{-69,60},{-50,60},{-50,30},{-36,30},{-36,18},{74,18},{74,-40},{78,-40}}, color={0,0,127}));
+    annotation (Diagram(coordinateSystem(extent={{-100,-120},{100,100}})),
+      experiment(StopTime=1),
       Documentation(info="<html>
 <p>
 Tests the single-input function blocks of
@@ -2245,51 +2246,51 @@ without a branch jump.
     Modelica.Blocks.Sources.Constant const1(k=0.3)
       annotation (Placement(transformation(extent={{-90,20},{-70,40}})));
     Modelica.Blocks.Sources.Constant const2(k=0.8)
-      annotation (Placement(transformation(extent={{-90,-10},{-70,10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-80,-10})));
     Modelica.Blocks.Sources.Ramp ramp2(height=1.9, duration=1, offset=0.1)
-      annotation (Placement(transformation(extent={{-90,-50},{-70,-30}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-80,-50})));
     Modelica.Blocks.Sources.BooleanPulse booleanPulse1(width=50, period=0.4)
-      annotation (Placement(transformation(extent={{-90,-90},{-70,-70}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-80,-90})));
     Modelica.Blocks.Sources.BooleanPulse booleanPulse2(width=30, period=0.25, startTime=0.1)
-      annotation (Placement(transformation(extent={{-90,-120},{-70,-100}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-80,-120})));
     Modelica.Blocks.Math.Min min1
       annotation (Placement(transformation(extent={{-30,80},{-10,100}})));
     Modelica.Blocks.Math.MinMax minMax1(nu=3)
       annotation (Placement(transformation(extent={{-30,50},{-10,70}})));
     Modelica.Blocks.Math.MultiSum multiSum1(nu=3, k={1,-2,0.5})
-      annotation (Placement(transformation(extent={{-28.35,19.76},{-8.35,39.76}},rotation = 0.0,origin = {0.0,0.0})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-20,30})));
     Modelica.Blocks.Math.LinearDependency linearDependency1(y0=1, k1=0.5, k2=-0.2)
-      annotation (Placement(transformation(extent={{-30,-10},{-10,10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-20,-10})));
     Modelica.Blocks.Math.Pythagoras pythagorasLegs
-      annotation (Placement(transformation(extent={{30,80},{50,100}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={90,90})));
     Modelica.Blocks.Math.Pythagoras pythagorasHypotenuse(u1IsHypotenuse=true)
-      annotation (Placement(transformation(extent={{30,50},{50,70}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={90,60})));
     Modelica.Blocks.Math.InverseBlockConstraints inverse1
-      annotation (Placement(transformation(extent={{-21.89,-50.0},{38.11,-30.0}},rotation = 0.0,origin = {0.0,0.0})));
+      annotation (Placement(transformation(extent={{-30,-10},{30,10}}, origin={10,-50})));
     Modelica.Blocks.Math.Exp exp1
-      annotation (Placement(transformation(extent={{0,-50},{20,-30}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={60,-50})));
     Modelica.Blocks.Math.MultiSwitch multiSwitch1(nu=2, expr={1,2}, y_default=-1)
-      annotation (Placement(transformation(extent={{-30,-105},{-10,-85}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-20,-100})));
   equation
     connect(sine1.y, min1.u1) annotation (Line(points={{-69,90},{-50,90},{-50,96},{-32,96}}, color={0,0,127}));
     connect(ramp1.y, min1.u2) annotation (Line(points={{-69,60},{-50,60},{-50,84},{-32,84}}, color={0,0,127}));
-    connect(sine1.y, minMax1.u[1]) annotation (Line(points={{-69,90},{-50,90},{-50,60},{-32,60}}, color={0,0,127}));
+    connect(sine1.y, minMax1.u[1]) annotation (Line(points={{-69,90},{-54,90},{-54,62},{-34,62},{-34,60},{-30,60}}, color={0,0,127}));
     connect(ramp1.y, minMax1.u[2]) annotation (Line(points={{-69,60},{-32,60}}, color={0,0,127}));
     connect(const1.y, minMax1.u[3]) annotation (Line(points={{-69,30},{-50,30},{-50,60},{-32,60}}, color={0,0,127}));
-    connect(sine1.y, multiSum1.u[1]) annotation (Line(points={{-69,90},{-50,90},{-50,29.76},{-28.35,29.76}}, color={0,0,127}));
-    connect(ramp1.y, multiSum1.u[2]) annotation (Line(points={{-69,60},{-50,60},{-50,29.76},{-28.35,29.76}}, color={0,0,127}));
-    connect(const1.y, multiSum1.u[3]) annotation (Line(points={{-69,30},{-28.35,30},{-28.35,29.76}}, color={0,0,127}));
-    connect(sine1.y, linearDependency1.u1) annotation (Line(points={{-69,90},{-60.15,90},{-60.15,6},{-32,6}}, color={0,0,127}));
-    connect(ramp1.y, linearDependency1.u2) annotation (Line(points={{-69,60},{-50,60},{-50,-6},{-32,-6}}, color={0,0,127}));
-    connect(ramp1.y, pythagorasLegs.u1) annotation (Line(points={{-69,60},{2.89,60},{2.89,96},{28,96}}, color={0,0,127}));
-    connect(const1.y, pythagorasLegs.u2) annotation (Line(points={{-69,30},{-20,30},{-20,84},{28,84}}, color={0,0,127}));
-    connect(const2.y, pythagorasHypotenuse.u1) annotation (Line(points={{-69,0},{-40.05,0},{-40.05,66},{28,66}}, color={0,0,127}));
-    connect(ramp1.y, pythagorasHypotenuse.u2) annotation (Line(points={{-69,60},{-20,60},{-20,54},{28,54}}, color={0,0,127}));
-    connect(ramp2.y, inverse1.u1) annotation (Line(points={{-69,-40},{-24.89,-40}}, color={0,0,127}));
-    connect(inverse1.y1, exp1.u) annotation (Line(points={{39.61,-40},{-2,-40}}, color={0,0,127}));
-    connect(exp1.y, inverse1.u2) annotation (Line(points={{21,-40},{-15.89,-40}}, color={0,0,127}));
-    connect(booleanPulse1.y, multiSwitch1.u[1]) annotation (Line(points={{-69,-80},{-50,-80},{-50,-95},{-32,-95}}, color={255,0,255}));
-    connect(booleanPulse2.y, multiSwitch1.u[2]) annotation (Line(points={{-69,-110},{-50,-110},{-50,-95},{-32,-95}}, color={255,0,255}));
+    connect(sine1.y, multiSum1.u[1]) annotation (Line(points={{-69,90},{-54,90},{-54,28},{-34,28},{-34,30},{-30,30}}, color={0,0,127}));
+    connect(ramp1.y, multiSum1.u[2]) annotation (Line(points={{-69,60},{-52,60},{-52,32},{-34,32},{-34,30},{-30,30}}, color={0,0,127}));
+    connect(const1.y, multiSum1.u[3]) annotation (Line(points={{-69,30},{-30,30}}, color={0,0,127}));
+    connect(sine1.y, linearDependency1.u1) annotation (Line(points={{-69,90},{-54,90},{-54,28},{-36,28},{-36,-4},{-32,-4}}, color={0,0,127}));
+    connect(ramp1.y, linearDependency1.u2) annotation (Line(points={{-69,60},{-56,60},{-56,-16},{-32,-16}}, color={0,0,127}));
+    connect(ramp1.y, pythagorasLegs.u1) annotation (Line(points={{-69,60},{-52,60},{-52,48},{74,48},{74,96},{78,96}}, color={0,0,127}));
+    connect(const1.y, pythagorasLegs.u2) annotation (Line(points={{-69,30},{-50,30},{-50,46},{72,46},{72,84},{78,84}}, color={0,0,127}));
+    connect(const2.y, pythagorasHypotenuse.u1) annotation (Line(points={{-69,-10},{-60,-10},{-60,-22},{76,-22},{76,66},{78,66}}, color={0,0,127}));
+    connect(ramp1.y, pythagorasHypotenuse.u2) annotation (Line(points={{-69,60},{-52,60},{-52,48},{74,48},{74,54},{78,54}}, color={0,0,127}));
+    connect(ramp2.y, inverse1.u1) annotation (Line(points={{-69,-50},{-23,-50}}, color={0,0,127}));
+    connect(inverse1.y1, exp1.u) annotation (Line(points={{41.5,-50},{46,-50},{46,-48},{44,-48},{44,-50},{48,-50}}, color={0,0,127}));
+    connect(exp1.y, inverse1.u2) annotation (Line(points={{71,-50},{76,-50},{76,-38},{42,-38},{42,-50},{-14,-50}}, color={0,0,127}));
+    connect(booleanPulse1.y, multiSwitch1.u[1]) annotation (Line(points={{-69,-90},{-34,-90},{-34,-100},{-30,-100}}, color={255,0,255}));
+    connect(booleanPulse2.y, multiSwitch1.u[2]) annotation (Line(points={{-69,-120},{-34,-120},{-34,-100},{-30,-100}}, color={255,0,255}));
     annotation (Diagram(coordinateSystem(extent={{-100,-130},{100,110}})),
       experiment(StopTime=1),
       Documentation(info="<html>
@@ -2315,7 +2316,7 @@ Tests multi-input blocks of
     Modelica.Blocks.Sources.IntegerStep integerStep2(height=-2, offset=1, startTime=0.6)
       annotation (Placement(transformation(extent={{-90,40},{-70,60}})));
     Modelica.Blocks.MathInteger.Sum sum1(nu=2)
-      annotation (Placement(transformation(extent={{-50,55},{-30,75}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-40,60})));
     Modelica.Blocks.Math.IntegerToReal integerToReal1
       annotation (Placement(transformation(extent={{-10,80},{10,100}})));
     Modelica.Blocks.Math.IntegerToBoolean integerToBoolean1(threshold=3)
@@ -2341,18 +2342,18 @@ Tests multi-input blocks of
     Modelica.Blocks.MathInteger.TriggeredAdd countBooleanChanges
       annotation (Placement(transformation(extent={{50,-100},{70,-80}})));
   equation
-    connect(integerStep1.y, sum1.u[1]) annotation (Line(points={{-69,80},{-60,80},{-60,65},{-52,65}}, color={255,127,0}));
-    connect(integerStep2.y, sum1.u[2]) annotation (Line(points={{-69,50},{-60,50},{-60,65},{-52,65}}, color={255,127,0}));
-    connect(sum1.y, integerToReal1.u) annotation (Line(points={{-29,65},{-20,65},{-20,90},{-12,90}}, color={255,127,0}));
-    connect(sum1.y, integerToBoolean1.u) annotation (Line(points={{-29,65},{-20,65},{-20,60},{-12,60}}, color={255,127,0}));
-    connect(sum1.y, integerChange1.u) annotation (Line(points={{-29,65},{-20,65},{-20,30},{-12,30}}, color={255,127,0}));
+    connect(integerStep1.y, sum1.u[1]) annotation (Line(points={{-69,80},{-54,80},{-54,60},{-50,60}}, color={255,127,0}));
+    connect(integerStep2.y, sum1.u[2]) annotation (Line(points={{-69,50},{-54,50},{-54,60},{-50,60}}, color={255,127,0}));
+    connect(sum1.y, integerToReal1.u) annotation (Line(points={{-28.5,60},{-16,60},{-16,90},{-12,90}}, color={255,127,0}));
+    connect(sum1.y, integerToBoolean1.u) annotation (Line(points={{-28.5,60},{-12,60}}, color={255,127,0}));
+    connect(sum1.y, integerChange1.u) annotation (Line(points={{-28.5,60},{-16,60},{-16,30},{-12,30}}, color={255,127,0}));
     connect(booleanPulse1.y, booleanToReal1.u) annotation (Line(points={{-69,-40},{-40,-40},{-40,0},{-12,0}}, color={255,0,255}));
     connect(booleanPulse1.y, booleanToInteger1.u) annotation (Line(points={{-69,-40},{-40,-40},{-40,-30},{-12,-30}}, color={255,0,255}));
     connect(booleanPulse1.y, edge1.u) annotation (Line(points={{-69,-40},{-40,-40},{-40,-60},{-12,-60}}, color={255,0,255}));
     connect(booleanPulse1.y, booleanChange1.u) annotation (Line(points={{-69,-40},{-40,-40},{-40,-90},{-12,-90}}, color={255,0,255}));
-    connect(integerChange1.y, countIntegerChanges.trigger) annotation (Line(points={{11,30},{54,30},{54,18}}, color={255,0,255}));
-    connect(edge1.y, countEdges.trigger) annotation (Line(points={{11,-60},{54,-60},{54,-72}}, color={255,0,255}));
-    connect(booleanChange1.y, countBooleanChanges.trigger) annotation (Line(points={{11,-90},{54,-90},{54,-102}}, color={255,0,255}));
+    connect(integerChange1.y, countIntegerChanges.trigger) annotation (Line(points={{11,30},{30,30},{30,14},{54,14},{54,18}}, color={255,0,255}));
+    connect(edge1.y, countEdges.trigger) annotation (Line(points={{11,-60},{30,-60},{30,-76},{54,-76},{54,-72}}, color={255,0,255}));
+    connect(booleanChange1.y, countBooleanChanges.trigger) annotation (Line(points={{11,-90},{30,-90},{30,-106},{54,-106},{54,-102}}, color={255,0,255}));
     connect(integerConstant1.y, countIntegerChanges.u) annotation (Line(points={{31,-130},{40,-130},{40,30},{48,30}}, color={255,127,0}));
     connect(integerConstant1.y, countEdges.u) annotation (Line(points={{31,-130},{40,-130},{40,-60},{48,-60}}, color={255,127,0}));
     connect(integerConstant1.y, countBooleanChanges.u) annotation (Line(points={{31,-130},{40,-130},{40,-90},{48,-90}}, color={255,127,0}));
@@ -2408,41 +2409,41 @@ counter, and the counters are the comparison signals. Expected final values:
     Modelica.Blocks.Sources.IntegerConstant integerConstant1(k=1)
       annotation (Placement(transformation(extent={{10,-70},{30,-50}})));
     Modelica.Blocks.MathInteger.TriggeredAdd countRising
-      annotation (Placement(transformation(extent={{60.32,47.2},{80.32,67.2}},rotation = 0.0,origin = {0.0,0.0})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={70,60})));
     Modelica.Blocks.MathInteger.TriggeredAdd countFalling
-      annotation (Placement(transformation(extent={{60.32,17.2},{80.32,37.2}},rotation = 0.0,origin = {0.0,0.0})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={70,30})));
     Modelica.Blocks.MathInteger.TriggeredAdd countChanging
-      annotation (Placement(transformation(extent={{60.32,-12.8},{80.32,7.2}},rotation = 0.0,origin = {0.0,0.0})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={70,0})));
     Modelica.Blocks.Sources.RadioButtonSource radioButtonSource1(buttonTimeTable={0.2,0.7}, reset={radioButtonSource2.on})
-      annotation (Placement(transformation(extent={{-79.91,-129.54},{-59.91,-109.54}},rotation = 0.0,origin = {0.0,0.0})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-70,-120})));
     Modelica.Blocks.Sources.RadioButtonSource radioButtonSource2(buttonTimeTable={0.45}, reset={radioButtonSource1.on})
-      annotation (Placement(transformation(extent={{-19.5,-130.23},{0.5,-110.23}},rotation = 0.0,origin = {0.0,0.0})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-10,-120})));
   equation
     connect(booleanTable1.y, and1.u[1]) annotation (Line(points={{-69,80},{-50,80},{-50,100},{-32,100}}, color={255,0,255}));
     connect(booleanTable2.y, and1.u[2]) annotation (Line(points={{-69,40},{-50,40},{-50,100},{-32,100}}, color={255,0,255}));
-    connect(booleanPulse1.y, and1.u[3]) annotation (Line(points={{-69,0},{-50,0},{-50,100},{-32,100}}, color={255,0,255}));
-    connect(booleanTable1.y, or1.u[1]) annotation (Line(points={{-69,80},{-50,80},{-50,70},{-32,70}}, color={255,0,255}));
+    connect(booleanPulse1.y, and1.u[3]) annotation (Line(points={{-69,0},{-40,0},{-40,-2},{-32,-2},{-32,100},{-30,100}}, color={255,0,255}));
+    connect(booleanTable1.y, or1.u[1]) annotation (Line(points={{-69,80},{-40,80},{-40,70},{-30,70}}, color={255,0,255}));
     connect(booleanTable2.y, or1.u[2]) annotation (Line(points={{-69,40},{-50,40},{-50,70},{-32,70}}, color={255,0,255}));
     connect(booleanPulse1.y, or1.u[3]) annotation (Line(points={{-69,0},{-50,0},{-50,70},{-32,70}}, color={255,0,255}));
-    connect(booleanTable1.y, xor1.u[1]) annotation (Line(points={{-69,80},{-50,80},{-50,40},{-32,40}}, color={255,0,255}));
+    connect(booleanTable1.y, xor1.u[1]) annotation (Line(points={{-69,80},{-40,80},{-40,42},{-34,42},{-34,40},{-30,40}}, color={255,0,255}));
     connect(booleanTable2.y, xor1.u[2]) annotation (Line(points={{-69,40},{-32,40}}, color={255,0,255}));
-    connect(booleanTable1.y, nand1.u[1]) annotation (Line(points={{-69,80},{-50,80},{-50,10},{-32,10}}, color={255,0,255}));
+    connect(booleanTable1.y, nand1.u[1]) annotation (Line(points={{-69,80},{-40,80},{-40,10},{-30,10}}, color={255,0,255}));
     connect(booleanTable2.y, nand1.u[2]) annotation (Line(points={{-69,40},{-50,40},{-50,10},{-32,10}}, color={255,0,255}));
-    connect(booleanTable1.y, nor1.u[1]) annotation (Line(points={{-69,80},{-50,80},{-50,-20},{-32,-20}}, color={255,0,255}));
+    connect(booleanTable1.y, nor1.u[1]) annotation (Line(points={{-69,80},{-52,80},{-52,-20},{-30,-20}}, color={255,0,255}));
     connect(booleanTable2.y, nor1.u[2]) annotation (Line(points={{-69,40},{-50,40},{-50,-20},{-32,-20}}, color={255,0,255}));
-    connect(booleanTable1.y, not1.u) annotation (Line(points={{-69,80},{-50,80},{-50,-50},{-32,-50}}, color={255,0,255}));
-    connect(booleanTable1.y, multiSwitch1.u[1]) annotation (Line(points={{-69,80},{-50,80},{-50,-80},{-32,-80}}, color={255,0,255}));
+    connect(booleanTable1.y, not1.u) annotation (Line(points={{-69,80},{-52,80},{-52,-50},{-34,-50}}, color={255,0,255}));
+    connect(booleanTable1.y, multiSwitch1.u[1]) annotation (Line(points={{-69,80},{-52,80},{-52,-50},{-34,-50},{-34,-80},{-30,-80}}, color={255,0,255}));
     connect(booleanTable2.y, multiSwitch1.u[2]) annotation (Line(points={{-69,40},{-50,40},{-50,-80},{-32,-80}}, color={255,0,255}));
     connect(and1.y, booleanPassThrough1.u) annotation (Line(points={{-9,100},{8,100}}, color={255,0,255}));
-    connect(booleanPulse1.y, risingEdge1.u) annotation (Line(points={{-69,0},{-30,0},{-30,40},{8,40}}, color={255,0,255}));
-    connect(booleanPulse1.y, fallingEdge1.u) annotation (Line(points={{-69,0},{-30,0},{-30,10},{8,10}}, color={255,0,255}));
-    connect(booleanPulse1.y, changingEdge1.u) annotation (Line(points={{-69,0},{-30,0},{-30,-20},{8,-20}}, color={255,0,255}));
-    connect(risingEdge1.y, countRising.trigger) annotation (Line(points={{31,40},{64.32,40},{64.32,45.2}}, color={255,0,255}));
-    connect(fallingEdge1.y, countFalling.trigger) annotation (Line(points={{31,10},{64.32,10},{64.32,15.2}}, color={255,0,255}));
-    connect(changingEdge1.y, countChanging.trigger) annotation (Line(points={{31,-20},{64.32,-20},{64.32,-14.8}}, color={255,0,255}));
-    connect(integerConstant1.y, countRising.u) annotation (Line(points={{31,-60},{40,-60},{40,57.2},{56.32,57.2}}, color={255,127,0}));
-    connect(integerConstant1.y, countFalling.u) annotation (Line(points={{31,-60},{40,-60},{40,27.2},{56.32,27.2}}, color={255,127,0}));
-    connect(integerConstant1.y, countChanging.u) annotation (Line(points={{31,-60},{40,-60},{40,-2.8},{56.32,-2.8}}, color={255,127,0}));
+    connect(booleanPulse1.y, risingEdge1.u) annotation (Line(points={{-69,0},{-40,0},{-40,-2},{2,-2},{2,40},{6,40}}, color={255,0,255}));
+    connect(booleanPulse1.y, fallingEdge1.u) annotation (Line(points={{-69,0},{-40,0},{-40,-2},{2,-2},{2,10},{6,10}}, color={255,0,255}));
+    connect(booleanPulse1.y, changingEdge1.u) annotation (Line(points={{-69,0},{-40,0},{-40,-2},{2,-2},{2,-20},{6,-20}}, color={255,0,255}));
+    connect(risingEdge1.y, countRising.trigger) annotation (Line(points={{32,40},{50,40},{50,44},{64,44},{64,48}}, color={255,0,255}));
+    connect(fallingEdge1.y, countFalling.trigger) annotation (Line(points={{32,10},{50,10},{50,14},{64,14},{64,18}}, color={255,0,255}));
+    connect(changingEdge1.y, countChanging.trigger) annotation (Line(points={{32,-20},{64,-20},{64,-12}}, color={255,0,255}));
+    connect(integerConstant1.y, countRising.u) annotation (Line(points={{31,-60},{52,-60},{52,60},{56,60}}, color={255,127,0}));
+    connect(integerConstant1.y, countFalling.u) annotation (Line(points={{31,-60},{52,-60},{52,30},{56,30}}, color={255,127,0}));
+    connect(integerConstant1.y, countChanging.u) annotation (Line(points={{31,-60},{52,-60},{52,0},{56,0}}, color={255,127,0}));
     annotation (Diagram(coordinateSystem(extent={{-100,-140},{100,120}})),
       experiment(StopTime=1),
       Documentation(info="<html>
@@ -2496,7 +2497,7 @@ counted, because when-equations do not trigger during initialization.
     connect(integerStep1.y, sum1.u[1]) annotation (Line(points={{-69,80},{-11.44,80}}, color={255,127,0}));
     connect(integerConstant1.y, sum1.u[2]) annotation (Line(points={{-69,50},{-50,50},{-50,80},{-11.44,80}}, color={255,127,0}));
     connect(integerExpression1.y, sum1.u[3]) annotation (Line(points={{-69,20},{-50,20},{-50,80},{-11.44,80}}, color={255,127,0}));
-    connect(integerStep1.y, product1.u[1]) annotation (Line(points={{-69,80},{-50,80},{-50,50.26},{-11.18,50.26}}, color={255,127,0}));
+    connect(integerStep1.y, product1.u[1]) annotation (Line(points={{-69,80},{-52,80},{-52,82},{-14,82},{-14,50},{-15.18,50},{-15.18,50.26},{-11.18,50.26}}, color={255,127,0}));
     connect(integerConstant1.y, product1.u[2]) annotation (Line(points={{-69,50},{-11.18,50},{-11.18,50.26}}, color={255,127,0}));
     connect(integerExpression1.y, product1.u[3]) annotation (Line(points={{-69,20},{-50,20},{-50,50.26},{-11.18,50.26}}, color={255,127,0}));
     connect(booleanTable1.y, multiSwitch1.u[1]) annotation (Line(points={{-69,-20},{-50,-20},{-50,-35},{-12.22,-35}}, color={255,0,255}));
@@ -2504,7 +2505,7 @@ counted, because when-equations do not trigger during initialization.
     connect(integerConstant1.y, triggeredAdd1.u) annotation (Line(points={{-69,50},{-30,50},{-30,-70.13},{16.2,-70.13}}, color={255,127,0}));
     connect(sampleTrigger1.y, triggeredAdd1.trigger) annotation (Line(points={{-69,-90},{24.2,-90},{24.2,-82.13}}, color={255,0,255}));
     connect(resetTable.y, triggeredAdd1.reset) annotation (Line(points={{-69,-120},{36.2,-120},{36.2,-82.13}}, color={255,0,255}));
-    connect(integerStep1.y, triggeredAdd1.set) annotation (Line(points={{-69,80},{-39.95,80},{-39.95,-60.33},{33,-60.33}}, color={255,127,0}));
+    connect(integerStep1.y, triggeredAdd1.set) annotation (Line(points={{-69,80},{-52,80},{-52,82},{-14,82},{-14,-22},{32,-22},{32,-56.33},{33,-56.33},{33,-60.33}}, color={255,127,0}));
     connect(sum1.y, integerReplicator1.u) annotation (Line(points={{10.06,80},{28,80}}, color={255,127,0}));
     connect(product1.y, integerPassThrough1.u) annotation (Line(points={{10.32,50.26},{10.32,50},{28,50}}, color={255,127,0}));
     annotation (Diagram(coordinateSystem(extent={{-100,-140},{100,100}})),
@@ -2819,11 +2820,11 @@ well.
       annotation (Placement(transformation(extent={{-30,-80},{-10,-60}})));
   equation
     connect(amplitudeRamp.y, sineVariable1.amplitude) annotation (Line(points={{-69,40},{-50,40},{-50,66},{-32,66}}, color={0,0,127}));
-    connect(frequencyRamp.y, sineVariable1.f) annotation (Line(points={{-69,0},{-50,0},{-50,54},{-32,54}}, color={0,0,127}));
-    connect(amplitudeRamp.y, cosineVariable1.amplitude) annotation (Line(points={{-69,40},{-50,40},{-50,36},{-32,36}}, color={0,0,127}));
+    connect(frequencyRamp.y, sineVariable1.f) annotation (Line(points={{-69,0},{-50,0},{-50,24},{-36,24},{-36,54},{-32,54}}, color={0,0,127}));
+    connect(amplitudeRamp.y, cosineVariable1.amplitude) annotation (Line(points={{-69,40},{-40,40},{-40,36},{-32,36}}, color={0,0,127}));
     connect(frequencyRamp.y, cosineVariable1.f) annotation (Line(points={{-69,0},{-50,0},{-50,24},{-32,24}}, color={0,0,127}));
     connect(frequencyRamp.y, sineVariable2.f) annotation (Line(points={{-69,0},{-50,0},{-50,-6},{-32,-6}}, color={0,0,127}));
-    connect(amplitudeRamp.y, cosineVariable2.amplitude) annotation (Line(points={{-69,40},{-50,40},{-50,-24},{-32,-24}}, color={0,0,127}));
+    connect(amplitudeRamp.y, cosineVariable2.amplitude) annotation (Line(points={{-69,40},{-52,40},{-52,-24},{-32,-24}}, color={0,0,127}));
     annotation (experiment(StopTime=1),
       Documentation(info="<html>
 <p>
@@ -2871,7 +2872,7 @@ frequency. It also tests
     connect(ramp1.y, combiTable1DsAkima.u) annotation (Line(points={{-69,0},{-60,0},{-60,-20},{-52,-20}}, color={0,0,127}));
     connect(ramp1.y, combiTable2DsLinear.u1) annotation (Line(points={{-69,0},{-60,0},{-60,-54},{-52,-54}}, color={0,0,127}));
     connect(ramp2.y, combiTable2DsLinear.u2) annotation (Line(points={{-69,-70},{-60,-70},{-60,-66},{-52,-66}}, color={0,0,127}));
-    connect(ramp1.y, combiTable2DsAkima.u1) annotation (Line(points={{-69,0},{-60,0},{-60,-84},{-52,-84}}, color={0,0,127}));
+    connect(ramp1.y, combiTable2DsAkima.u1) annotation (Line(points={{-69,0},{-60,0},{-60,-54},{-56,-54},{-56,-84},{-52,-84}}, color={0,0,127}));
     connect(ramp2.y, combiTable2DsAkima.u2) annotation (Line(points={{-69,-70},{-60,-70},{-60,-96},{-52,-96}}, color={0,0,127}));
     annotation (experiment(StopTime=1.5),
       Documentation(info="<html>

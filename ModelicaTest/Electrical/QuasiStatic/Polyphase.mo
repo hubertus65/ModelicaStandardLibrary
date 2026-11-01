@@ -262,11 +262,11 @@ R = 1 Ohm and L = 2 mH.
   equation
     connect(cosine.y, fromSpacePhasor.u[1]) annotation (Line(points={{-79,30},{-70,30},{-70,10},{-62,10}}, color={0,0,127}));
     connect(sine.y, fromSpacePhasor.u[2]) annotation (Line(points={{-79,-10},{-70,-10},{-70,10},{-62,10}}, color={0,0,127}));
-    connect(fromSpacePhasor.y, toSpacePhasor.u) annotation (Line(points={{-39,10},{-22,10}}, color={0,0,127}));
+    connect(fromSpacePhasor.y, toSpacePhasor.u) annotation (Line(points={{-39,10},{-22,10}}, color={85,170,255}));
     connect(cosine2.y, fromSpacePhasor2.u[1]) annotation (Line(points={{-79,-60},{-70,-60},{-70,-80},{-62,-80}}, color={0,0,127}));
     connect(sine2.y, fromSpacePhasor2.u[2]) annotation (Line(points={{-79,-100},{-70,-100},{-70,-80},{-62,-80}}, color={0,0,127}));
-    connect(fromSpacePhasor2.y, symmetricalComponents.u) annotation (Line(points={{-39,-80},{-22,-80}}, color={0,0,127}));
-    connect(symmetricalComponents.y, fromSymmetricalComponents.u) annotation (Line(points={{1,-80},{18,-80}}, color={0,0,127}));
+    connect(fromSpacePhasor2.y, symmetricalComponents.u) annotation (Line(points={{-39,-80},{-22,-80}}, color={85,170,255}));
+    connect(symmetricalComponents.y, fromSymmetricalComponents.u) annotation (Line(points={{1,-80},{18,-80}}, color={85,170,255}));
     annotation (Diagram(coordinateSystem(extent={{-100,-120},{100,100}})),
       experiment(StopTime=1),
       Documentation(info="<html>
@@ -289,46 +289,46 @@ symmetrical components and recomposed by FromSymmetricalComponents.
     Modelica.Electrical.QuasiStatic.Polyphase.Sources.ReferenceVoltageSource voltageSource(m=3, V={Complex(100, 0), Complex(-50, -86.60254037844386), Complex(-50, 86.60254037844386)})
       annotation (Placement(transformation(extent={{-70,20},{-50,40}})));
     Modelica.Electrical.QuasiStatic.Polyphase.Basic.Star starS(m=3)
-      annotation (Placement(transformation(extent={{-70,-30},{-50,-10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={-60,-20})));
     Modelica.Electrical.QuasiStatic.Polyphase.Basic.Inductor inductor(m=3, L=fill(0.1, 3))
-      annotation (Placement(transformation(extent={{-30,40},{-10,60}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=90, origin={-20,50})));
     Modelica.Electrical.QuasiStatic.Polyphase.Basic.Resistor load(m=3, R_ref=fill(10, 3))
-      annotation (Placement(transformation(extent={{10,40},{30,60}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={30,50})));
     Modelica.Electrical.QuasiStatic.Polyphase.Basic.MultiStarResistance multiStar(m=3, R=1)
-      annotation (Placement(transformation(extent={{10,0},{30,20}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={30,10})));
     Modelica.Electrical.QuasiStatic.Polyphase.Sensors.FrequencySensor frequencySensor(m=3)
       annotation (Placement(transformation(extent={{-30,80},{-10,100}})));
     Modelica.Electrical.QuasiStatic.Polyphase.Basic.PlugToPin_p plugToPin(m=3, k=1)
       annotation (Placement(transformation(extent={{-40,-10},{-20,10}})));
     Modelica.Electrical.QuasiStatic.SinglePhase.Sensors.FrequencySensor frequencySensor1
-      annotation (Placement(transformation(extent={{-20,-20},{0,0}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={0,-10})));
     Modelica.Electrical.QuasiStatic.SinglePhase.Sensors.ReferenceSensor referenceSensor
-      annotation (Placement(transformation(extent={{-20,-50},{0,-30}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={0,-40})));
     Modelica.Electrical.QuasiStatic.Polyphase.Sources.CurrentSource currentSource(m=3, f=60, I=fill(2, 3), gamma(fixed=true, start=0))
-      annotation (Placement(transformation(extent={{50,-60},{70,-40}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={70,-50})));
     Modelica.Electrical.QuasiStatic.Polyphase.Basic.Resistor load2(m=3, R_ref=fill(5, 3))
-      annotation (Placement(transformation(extent={{80,-60},{100,-40}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={100,-50})));
     Modelica.Electrical.QuasiStatic.Polyphase.Basic.Star starC(m=3)
-      annotation (Placement(transformation(extent={{50,-100},{70,-80}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={70,-90})));
     Modelica.Electrical.QuasiStatic.SinglePhase.Basic.Ground groundC
-      annotation (Placement(transformation(extent={{50,-130},{70,-110}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={70,-120})));
   equation
-    connect(gammaRamp.y, voltageSource.gamma) annotation (Line(points={{-79,70},{-76,70},{-76,30},{-72,30}}, color={0,0,127}));
-    connect(voltageSource.plug_n, starS.plug_p) annotation (Line(points={{-49,30},{-76,30},{-76,-20},{-72,-20}}, color={0,0,127}));
-    connect(starS.pin_n, ground.pin) annotation (Line(points={{-49,-20},{-76,-20},{-76,-90},{-72,-90}}, color={0,0,127}));
-    connect(voltageSource.plug_p, inductor.plug_p) annotation (Line(points={{-49,30},{-40,30},{-40,50},{-32,50}}, color={0,0,127}));
-    connect(inductor.plug_n, load.plug_p) annotation (Line(points={{-9,50},{8,50}}, color={0,0,127}));
-    connect(load.plug_n, multiStar.plug) annotation (Line(points={{31,50},{4,50},{4,10},{8,10}}, color={0,0,127}));
-    connect(multiStar.pin, ground.pin) annotation (Line(points={{31,10},{-76,10},{-76,-90},{-72,-90}}, color={0,0,127}));
-    connect(voltageSource.plug_p, frequencySensor.plug_p) annotation (Line(points={{-49,30},{-40,30},{-40,90},{-32,90}}, color={0,0,127}));
-    connect(voltageSource.plug_p, plugToPin.plug_p) annotation (Line(points={{-49,30},{-46,30},{-46,0},{-42,0}}, color={0,0,127}));
-    connect(plugToPin.pin_p, frequencySensor1.pin) annotation (Line(points={{-19,0},{-26,0},{-26,-10},{-22,-10}}, color={0,0,127}));
-    connect(plugToPin.pin_p, referenceSensor.pin) annotation (Line(points={{-19,0},{-26,0},{-26,-40},{-22,-40}}, color={0,0,127}));
-    connect(currentSource.plug_p, load2.plug_p) annotation (Line(points={{71,-50},{78,-50}}, color={0,0,127}));
-    connect(currentSource.plug_n, starC.plug_p) annotation (Line(points={{71,-50},{44,-50},{44,-90},{48,-90}}, color={0,0,127}));
-    connect(load2.plug_n, starC.plug_p) annotation (Line(points={{101,-50},{44,-50},{44,-90},{48,-90}}, color={0,0,127}));
-    connect(starC.pin_n, groundC.pin) annotation (Line(points={{71,-90},{44,-90},{44,-120},{48,-120}}, color={0,0,127}));
-    annotation (Diagram(coordinateSystem(extent={{-100,-140},{100,110}})),
+    connect(gammaRamp.y, voltageSource.gamma) annotation (Line(points={{-79,70},{-54,70},{-54,42}}, color={0,0,127}));
+    connect(voltageSource.plug_n, starS.plug_p) annotation (Line(points={{-50,30},{-46,30},{-46,-6},{-60,-6},{-60,-10}}, color={85,170,255}));
+    connect(starS.pin_n, ground.pin) annotation (Line(points={{-60,-30},{-60,-80}}, color={85,170,255}));
+    connect(voltageSource.plug_p, inductor.plug_p) annotation (Line(points={{-70,30},{-74,30},{-74,42},{-32,42},{-32,36},{-20,36},{-20,40}}, color={85,170,255}));
+    connect(inductor.plug_n, load.plug_p) annotation (Line(points={{-20,60},{-20,64},{30,64},{30,60}}, color={85,170,255}));
+    connect(load.plug_n, multiStar.plug) annotation (Line(points={{30,40},{30,20}}, color={85,170,255}));
+    connect(multiStar.pin, ground.pin) annotation (Line(points={{30,0},{30,-60},{-60,-60},{-60,-80}}, color={85,170,255}));
+    connect(voltageSource.plug_p, frequencySensor.plug_p) annotation (Line(points={{-70,30},{-74,30},{-74,42},{-34,42},{-34,90},{-30,90}}, color={85,170,255}));
+    connect(voltageSource.plug_p, plugToPin.plug_p) annotation (Line(points={{-70,30},{-74,30},{-74,42},{-42,42},{-42,0},{-32,0}}, color={85,170,255}));
+    connect(plugToPin.pin_p, frequencySensor1.pin) annotation (Line(points={{-28,0},{-14,0},{-14,-10},{-10,-10}}, color={85,170,255}));
+    connect(plugToPin.pin_p, referenceSensor.pin) annotation (Line(points={{-28,0},{-28,-40},{-10,-40}}, color={85,170,255}));
+    connect(currentSource.plug_p, load2.plug_p) annotation (Line(points={{70,-40},{70,-36},{100,-36},{100,-40}}, color={85,170,255}));
+    connect(currentSource.plug_n, starC.plug_p) annotation (Line(points={{70,-60},{70,-80}}, color={85,170,255}));
+    connect(load2.plug_n, starC.plug_p) annotation (Line(points={{100,-60},{100,-70},{70,-70},{70,-80}}, color={85,170,255}));
+    connect(starC.pin_n, groundC.pin) annotation (Line(points={{70,-100},{70,-110}}, color={85,170,255}));
+    annotation (Diagram(coordinateSystem(extent={{-100,-140},{120,120}})),
       experiment(StopTime=1),
       Documentation(info="<html>
 <p>
@@ -349,22 +349,22 @@ FrequencySensor, the reference angle by the single-phase ReferenceSensor.
     Modelica.Electrical.QuasiStatic.SinglePhase.Basic.Ground ground
       annotation (Placement(transformation(extent={{-70,-70},{-50,-50}})));
     Modelica.Electrical.QuasiStatic.Polyphase.Sources.VoltageSource source(m=3, f=50, V=fill(100, 3), gamma(fixed=true, start=0))
-      annotation (Placement(transformation(extent={{-70,10},{-50,30}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={-60,20})));
     Modelica.Electrical.QuasiStatic.Polyphase.Basic.Star starS(m=3)
-      annotation (Placement(transformation(extent={{-70,-30},{-50,-10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={-60,-20})));
     Modelica.Electrical.QuasiStatic.Polyphase.Basic.MutualInductor mutualInductor(m=3, L=[0.1, 0.02, 0.02; 0.02, 0.1, 0.02; 0.02, 0.02, 0.1])
-      annotation (Placement(transformation(extent={{-30,30},{-10,50}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=90, origin={-20,40})));
     Modelica.Electrical.QuasiStatic.Polyphase.Basic.Resistor load(m=3, R_ref=fill(10, 3))
-      annotation (Placement(transformation(extent={{10,30},{30,50}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={20,40})));
     Modelica.Electrical.QuasiStatic.Polyphase.Basic.Star starL(m=3)
-      annotation (Placement(transformation(extent={{10,-30},{30,-10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={20,-20})));
   equation
-    connect(source.plug_n, starS.plug_p) annotation (Line(points={{-49,20},{-76,20},{-76,-20},{-72,-20}}, color={0,0,127}));
-    connect(starS.pin_n, ground.pin) annotation (Line(points={{-49,-20},{-76,-20},{-76,-60},{-72,-60}}, color={0,0,127}));
-    connect(source.plug_p, mutualInductor.plug_p) annotation (Line(points={{-49,20},{-40,20},{-40,40},{-32,40}}, color={0,0,127}));
-    connect(mutualInductor.plug_n, load.plug_p) annotation (Line(points={{-9,40},{8,40}}, color={0,0,127}));
-    connect(load.plug_n, starL.plug_p) annotation (Line(points={{31,40},{4,40},{4,-20},{8,-20}}, color={0,0,127}));
-    connect(starL.pin_n, ground.pin) annotation (Line(points={{31,-20},{-76,-20},{-76,-60},{-72,-60}}, color={0,0,127}));
+    connect(source.plug_n, starS.plug_p) annotation (Line(points={{-60,10},{-60,-10}}, color={85,170,255}));
+    connect(starS.pin_n, ground.pin) annotation (Line(points={{-60,-30},{-60,-50}}, color={85,170,255}));
+    connect(source.plug_p, mutualInductor.plug_p) annotation (Line(points={{-60,30},{-60,34},{-32,34},{-32,26},{-20,26},{-20,30}}, color={85,170,255}));
+    connect(mutualInductor.plug_n, load.plug_p) annotation (Line(points={{-20,50},{-20,54},{20,54},{20,50}}, color={85,170,255}));
+    connect(load.plug_n, starL.plug_p) annotation (Line(points={{20,30},{20,-10}}, color={85,170,255}));
+    connect(starL.pin_n, ground.pin) annotation (Line(points={{20,-30},{20,-40},{-60,-40},{-60,-50}}, color={85,170,255}));
     annotation (experiment(StopTime=1),
       Documentation(info="<html>
 <p>

@@ -5,9 +5,9 @@ model SpacePhasorsBlocksComponentsAndFunctions "Test of blocks, components and f
   Modelica.Electrical.Analog.Basic.Ground ground
     annotation (Placement(transformation(extent={{-70,-90},{-50,-70}})));
   Modelica.Electrical.Polyphase.Sources.SineVoltage source(m=3, V=fill(100, 3), f=fill(50, 3))
-    annotation (Placement(transformation(extent={{-100,10},{-80,30}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={-90,20})));
   Modelica.Electrical.Polyphase.Basic.Star starS(m=3)
-    annotation (Placement(transformation(extent={{-100,-30},{-80,-10}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={-90,-20})));
   Modelica.Electrical.Machines.SpacePhasors.Components.SpacePhasor spacePhasorA
     annotation (Placement(transformation(extent={{-70,10},{-50,30}})));
   Modelica.Electrical.Analog.Basic.Resistor rZeroA(R=1)
@@ -21,9 +21,9 @@ model SpacePhasorsBlocksComponentsAndFunctions "Test of blocks, components and f
   Modelica.Electrical.Analog.Basic.Resistor rZeroB(R=1)
     annotation (Placement(transformation(extent={{10,-30},{30,-10}})));
   Modelica.Electrical.Polyphase.Basic.Resistor load(m=3, R=fill(10, 3))
-    annotation (Placement(transformation(extent={{50,10},{70,30}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={60,20})));
   Modelica.Electrical.Polyphase.Basic.Star starL(m=3)
-    annotation (Placement(transformation(extent={{50,-30},{70,-10}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={60,-20})));
   Modelica.Blocks.Sources.Constant absolute(k=2)
     annotation (Placement(transformation(extent={{-70,-130},{-50,-110}})));
   Modelica.Blocks.Sources.Ramp phi(height=2*Modelica.Constants.pi, duration=0.04)
@@ -38,21 +38,21 @@ model SpacePhasorsBlocksComponentsAndFunctions "Test of blocks, components and f
   Real fsp[3] = Modelica.Electrical.Machines.SpacePhasors.Functions.FromSpacePhasor({cos(100*time), sin(100*time)}, 0.1, 3) "Function FromSpacePhasor";
   Real qrms = Modelica.Electrical.Machines.SpacePhasors.Functions.quasiRMS(fsp) "Function quasiRMS";
 equation
-  connect(source.plug_n, starS.plug_p) annotation (Line(points={{-79,20},{-106,20},{-106,-20},{-102,-20}}, color={0,0,127}));
-  connect(starS.pin_n, ground.p) annotation (Line(points={{-79,-20},{-76,-20},{-76,-80},{-72,-80}}, color={0,0,127}));
-  connect(source.plug_p, spacePhasorA.plug_p) annotation (Line(points={{-79,20},{-72,20}}, color={0,0,127}));
-  connect(spacePhasorA.plug_n, starS.plug_p) annotation (Line(points={{-49,20},{-106,20},{-106,-20},{-102,-20}}, color={0,0,127}));
-  connect(spacePhasorA.zero, rZeroA.p) annotation (Line(points={{-49,20},{-76,20},{-76,-20},{-72,-20}}, color={0,0,127}));
-  connect(rZeroA.n, spacePhasorA.ground) annotation (Line(points={{-49,-20},{-76,-20},{-76,20},{-72,20}}, color={0,0,127}));
-  connect(spacePhasorA.spacePhasor, rotator.spacePhasor_a) annotation (Line(points={{-49,20},{-32,20}}, color={0,0,127}));
-  connect(angle.y, rotator.angle) annotation (Line(points={{-9,60},{-36,60},{-36,20},{-32,20}}, color={0,0,127}));
-  connect(rotator.spacePhasor_b, spacePhasorB.spacePhasor) annotation (Line(points={{-9,20},{8,20}}, color={0,0,127}));
-  connect(spacePhasorB.plug_p, load.plug_p) annotation (Line(points={{31,20},{48,20}}, color={0,0,127}));
-  connect(load.plug_n, starL.plug_p) annotation (Line(points={{71,20},{44,20},{44,-20},{48,-20}}, color={0,0,127}));
-  connect(spacePhasorB.plug_n, starL.plug_p) annotation (Line(points={{31,20},{40,20},{40,-20},{48,-20}}, color={0,0,127}));
-  connect(starL.pin_n, ground.p) annotation (Line(points={{71,-20},{-76,-20},{-76,-80},{-72,-80}}, color={0,0,127}));
-  connect(spacePhasorB.zero, rZeroB.p) annotation (Line(points={{31,20},{4,20},{4,-20},{8,-20}}, color={0,0,127}));
-  connect(rZeroB.n, spacePhasorB.ground) annotation (Line(points={{31,-20},{4,-20},{4,20},{8,20}}, color={0,0,127}));
+  connect(source.plug_n, starS.plug_p) annotation (Line(points={{-90,10},{-90,-10}}, color={0,0,255}));
+  connect(starS.pin_n, ground.p) annotation (Line(points={{-90,-30},{-90,-66},{-60,-66},{-60,-70}}, color={0,0,255}));
+  connect(source.plug_p, spacePhasorA.plug_p) annotation (Line(points={{-90,30},{-90,34},{-74,34},{-74,30},{-70,30}}, color={0,0,255}));
+  connect(spacePhasorA.plug_n, starS.plug_p) annotation (Line(points={{-70,10},{-78,10},{-78,6},{-90,6},{-90,-10}}, color={0,0,255}));
+  connect(spacePhasorA.zero, rZeroA.p) annotation (Line(points={{-50,20},{-44,20},{-44,-32},{-74,-32},{-74,-20},{-70,-20}}, color={0,0,255}));
+  connect(rZeroA.n, spacePhasorA.ground) annotation (Line(points={{-50,-20},{-46,-20},{-46,10},{-50,10}}, color={0,0,255}));
+  connect(spacePhasorA.spacePhasor, rotator.spacePhasor_a) annotation (Line(points={{-50,30},{-30,30}}, color={0,0,255}));
+  connect(angle.y, rotator.angle) annotation (Line(points={{-9,60},{-4,60},{-4,4},{-20,4},{-20,8}}, color={0,0,127}));
+  connect(rotator.spacePhasor_b, spacePhasorB.spacePhasor) annotation (Line(points={{-10,30},{0,30},{0,32},{34,32},{34,30},{30,30}}, color={0,0,255}));
+  connect(spacePhasorB.plug_p, load.plug_p) annotation (Line(points={{10,30},{6,30},{6,34},{60,34},{60,30}}, color={0,0,255}));
+  connect(load.plug_n, starL.plug_p) annotation (Line(points={{60,10},{60,-10}}, color={0,0,255}));
+  connect(spacePhasorB.plug_n, starL.plug_p) annotation (Line(points={{10,10},{6,10},{6,6},{60,6},{60,-10}}, color={0,0,255}));
+  connect(starL.pin_n, ground.p) annotation (Line(points={{60,-30},{60,-64},{-60,-64},{-60,-70}}, color={0,0,255}));
+  connect(spacePhasorB.zero, rZeroB.p) annotation (Line(points={{30,20},{36,20},{36,-32},{6,-32},{6,-20},{10,-20}}, color={0,0,255}));
+  connect(rZeroB.n, spacePhasorB.ground) annotation (Line(points={{30,-20},{34,-20},{34,10},{30,10}}, color={0,0,255}));
   connect(absolute.y, fromPolar.u[1]) annotation (Line(points={{-49,-120},{-40,-120},{-40,-130},{-32,-130}}, color={0,0,127}));
   connect(phi.y, fromPolar.u[2]) annotation (Line(points={{-49,-150},{-40,-150},{-40,-130},{-32,-130}}, color={0,0,127}));
   connect(fromPolar.y, quasiRMS.u) annotation (Line(points={{-9,-130},{8,-130}}, color={0,0,127}));

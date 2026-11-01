@@ -15,24 +15,24 @@ model TestMassFractionsAndRelativeTemperature "Test of the MassFractions, MassFr
   Modelica.Fluid.Sensors.MassFractionsTwoPort massFractionsTwoPort1(redeclare package Medium = Medium, substanceName="water")
     annotation (Placement(transformation(extent={{-20,-10},{0,10}})));
   Modelica.Fluid.Fittings.SimpleGenericOrifice orifice1(redeclare package Medium = Medium, diameter=0.05, zeta=2)
-    annotation (Placement(transformation(extent={{15,-10},{35,10}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={20,0})));
   Modelica.Fluid.Sensors.RelativeTemperature relativeTemperature1(redeclare package Medium = Medium)
-    annotation (Placement(transformation(extent={{15,-60},{35,-40}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={20,-50})));
   Modelica.Fluid.Sources.Boundary_pT sink(redeclare package Medium = Medium, p=1e5, T=290, nPorts=2)
-    annotation (Placement(transformation(extent={{60,-10},{80,10}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=180, origin={70,0})));
   inner Modelica.Fluid.System system
     annotation (Placement(transformation(extent={{60,-90},{80,-70}})));
   replaceable package Medium = Modelica.Media.Air.MoistAir constrainedby Modelica.Media.Interfaces.PartialMedium "Medium in all components";
 equation
-  connect(TRamp.y, source.T_in) annotation (Line(points={{-79,40},{-70,40},{-70,0},{-62,0}}, color={0,0,127}));
-  connect(xWater.y, source.X_in[1]) annotation (Line(points={{-79,0},{-62,0}}, color={0,0,127}));
-  connect(xAir.y, source.X_in[2]) annotation (Line(points={{-79,-30},{-70,-30},{-70,0},{-62,0}}, color={0,0,127}));
+  connect(TRamp.y, source.T_in) annotation (Line(points={{-79,40},{-66,40},{-66,4},{-62,4}}, color={0,0,127}));
+  connect(xWater.y, source.X_in[1]) annotation (Line(points={{-79,0},{-66,0},{-66,-4},{-62,-4}}, color={0,0,127}));
+  connect(xAir.y, source.X_in[2]) annotation (Line(points={{-79,-30},{-66,-30},{-66,-4},{-62,-4}}, color={0,0,127}));
   connect(source.ports[1], massFractionsTwoPort1.port_a) annotation (Line(points={{-39,0},{-22,0}}, color={0,127,255}));
-  connect(massFractionsTwoPort1.port_b, orifice1.port_a) annotation (Line(points={{1,0},{13,0}}, color={0,127,255}));
-  connect(orifice1.port_b, sink.ports[1]) annotation (Line(points={{36,0},{58,0}}, color={0,127,255}));
-  connect(source.ports[2], massFractions1.port) annotation (Line(points={{-39,0},{-30,0},{-30,50},{-22,50}}, color={0,127,255}));
-  connect(source.ports[3], relativeTemperature1.port_a) annotation (Line(points={{-39,0},{-13,0},{-13,-50},{13,-50}}, color={0,127,255}));
-  connect(relativeTemperature1.port_b, sink.ports[2]) annotation (Line(points={{36,-50},{47,-50},{47,0},{58,0}}, color={0,127,255}));
+  connect(massFractionsTwoPort1.port_b, orifice1.port_a) annotation (Line(points={{0,0},{10,0}}, color={0,127,255}));
+  connect(orifice1.port_b, sink.ports[1]) annotation (Line(points={{30,0},{60,0}}, color={0,127,255}));
+  connect(source.ports[2], massFractions1.port) annotation (Line(points={{-40,0},{-36,0},{-36,36},{-10,36},{-10,40}}, color={0,127,255}));
+  connect(source.ports[3], relativeTemperature1.port_a) annotation (Line(points={{-40,0},{-36,0},{-36,-50},{10,-50}}, color={0,127,255}));
+  connect(relativeTemperature1.port_b, sink.ports[2]) annotation (Line(points={{30,-50},{56,-50},{56,0},{60,0}}, color={0,127,255}));
   annotation (experiment(StopTime=1),
     Documentation(info="<html>
 <p>

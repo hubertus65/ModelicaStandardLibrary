@@ -388,7 +388,7 @@ extends Modelica.Icons.ExamplesPackage;
     extends Modelica.Icons.Example;
 
     Modelica.Mechanics.Translational.Components.Fixed fixed1
-      annotation (Placement(transformation(extent={{70,50},{90,70}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={100,60})));
     Modelica.Mechanics.Translational.Sources.ForceStep forceStep1(stepForce=10, offsetForce=1, startTime=0.2)
       annotation (Placement(transformation(extent={{-100,50},{-80,70}})));
     Modelica.Mechanics.Translational.Sensors.ForceSensor forceSensor1
@@ -398,9 +398,9 @@ extends Modelica.Icons.ExamplesPackage;
     Modelica.Mechanics.Translational.Sensors.MultiSensor multiSensor1
       annotation (Placement(transformation(extent={{-10,50},{10,70}})));
     Modelica.Mechanics.Translational.Components.SpringDamper spring1(c=100, d=2)
-      annotation (Placement(transformation(extent={{15,50},{35,70}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={40,60})));
     Modelica.Mechanics.Translational.Sensors.PowerSensor powerSensor1
-      annotation (Placement(transformation(extent={{40,50},{60,70}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={70,60})));
     Modelica.Blocks.Sources.Sine sine1(amplitude=5, f=1)
       annotation (Placement(transformation(extent={{-40,90},{-20,110}})));
     Modelica.Mechanics.Translational.Sources.Force2 force2
@@ -408,66 +408,66 @@ extends Modelica.Icons.ExamplesPackage;
     Modelica.Mechanics.Translational.Components.SpringDamper spring2(c=50, d=1, s_rel0=0.5)
       annotation (Placement(transformation(extent={{-10,-20},{10,0}})));
     Modelica.Mechanics.Translational.Components.Mass mass2(m=2, s(start=0.5, fixed=true), v(start=0, fixed=true))
-      annotation (Placement(transformation(extent={{30,10},{50,30}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={60,20})));
     Modelica.Mechanics.Translational.Sensors.AccSensor accSensor1
-      annotation (Placement(transformation(extent={{60,10},{80,30}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={90,20})));
     Modelica.Mechanics.Translational.Sensors.RelPositionSensor relPositionSensor1
       annotation (Placement(transformation(extent={{-10,-50},{10,-30}})));
     Modelica.Mechanics.Translational.Sensors.RelSpeedSensor relSpeedSensor1
-      annotation (Placement(transformation(extent={{-10,-75},{10,-55}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={0,-80})));
     Modelica.Mechanics.Translational.Sensors.RelAccSensor relAccSensor1
-      annotation (Placement(transformation(extent={{-10,-100},{10,-80}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={0,-110})));
     Modelica.Mechanics.Translational.Sources.ConstantSpeed constantSpeed1(v_fixed=0.5)
-      annotation (Placement(transformation(extent={{-100,-130},{-80,-110}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-90,-140})));
     Modelica.Mechanics.Translational.Components.Damper damper3(d=10)
-      annotation (Placement(transformation(extent={{-70,-130},{-50,-110}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-60,-140})));
     Modelica.Mechanics.Translational.Components.Fixed fixed3
-      annotation (Placement(transformation(extent={{-40,-130},{-20,-110}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-30,-140})));
     Modelica.Blocks.Sources.Sine s(amplitude=0.1, f=1)
-      annotation (Placement(transformation(extent={{-100,-170},{-80,-150}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-90,-180})));
     Modelica.Blocks.Sources.Cosine v(amplitude=0.1*2*Modelica.Constants.pi, f=1)
-      annotation (Placement(transformation(extent={{-100,-195},{-80,-175}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-90,-220})));
     Modelica.Blocks.Sources.Sine a(amplitude=-0.1*(2*Modelica.Constants.pi)^2, f=1)
-      annotation (Placement(transformation(extent={{-100,-220},{-80,-200}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-90,-250})));
     Modelica.Blocks.Routing.Multiplex3 multiplex3
-      annotation (Placement(transformation(extent={{-70,-195},{-50,-175}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-60,-220})));
     Modelica.Mechanics.Translational.Sources.Move move1
-      annotation (Placement(transformation(extent={{-40,-195},{-20,-175}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-30,-220})));
     Modelica.Mechanics.Translational.Components.Mass mass6(m=1)
-      annotation (Placement(transformation(extent={{-10,-195},{10,-175}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={0,-220})));
     Modelica.Mechanics.Translational.Components.Spring spring6(c=100)
-      annotation (Placement(transformation(extent={{20,-195},{40,-175}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={40,-220})));
     Modelica.Mechanics.Translational.Components.Fixed fixed6
-      annotation (Placement(transformation(extent={{50,-195},{70,-175}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={80,-220})));
   equation
     connect(forceStep1.flange, forceSensor1.flange_a) annotation (Line(points={{-79,60},{-72,60}}, color={0,127,0}));
     connect(forceSensor1.flange_b, mass1.flange_a) annotation (Line(points={{-49,60},{-42,60}}, color={0,127,0}));
     connect(mass1.flange_b, multiSensor1.flange_a) annotation (Line(points={{-19,60},{-12,60}}, color={0,127,0}));
-    connect(multiSensor1.flange_b, spring1.flange_a) annotation (Line(points={{11,60},{13,60}}, color={0,127,0}));
-    connect(spring1.flange_b, powerSensor1.flange_a) annotation (Line(points={{36,60},{38,60}}, color={0,127,0}));
-    connect(powerSensor1.flange_b, fixed1.flange) annotation (Line(points={{61,60},{68,60}}, color={0,127,0}));
-    connect(sine1.y, force2.f) annotation (Line(points={{-19,100},{-16,100},{-16,14},{-12,14}}, color={0,0,127}));
+    connect(multiSensor1.flange_b, spring1.flange_a) annotation (Line(points={{10,60},{30,60}}, color={0,127,0}));
+    connect(spring1.flange_b, powerSensor1.flange_a) annotation (Line(points={{50,60},{60,60}}, color={0,127,0}));
+    connect(powerSensor1.flange_b, fixed1.flange) annotation (Line(points={{80,60},{100,60}}, color={0,127,0}));
+    connect(sine1.y, force2.f) annotation (Line(points={{-19,100},{-12,100},{-12,32},{0,32},{0,24}}, color={0,0,127}));
     connect(mass1.flange_b, force2.flange_a) annotation (Line(points={{-19,60},{-16,60},{-16,20},{-12,20}}, color={0,127,0}));
-    connect(force2.flange_b, mass2.flange_a) annotation (Line(points={{11,20},{28,20}}, color={0,127,0}));
+    connect(force2.flange_b, mass2.flange_a) annotation (Line(points={{10,20},{50,20}}, color={0,127,0}));
     connect(mass1.flange_b, spring2.flange_a) annotation (Line(points={{-19,60},{-16,60},{-16,-10},{-12,-10}}, color={0,127,0}));
-    connect(spring2.flange_b, mass2.flange_a) annotation (Line(points={{11,-10},{20,-10},{20,20},{28,20}}, color={0,127,0}));
-    connect(mass2.flange_b, accSensor1.flange) annotation (Line(points={{51,20},{58,20}}, color={0,127,0}));
+    connect(spring2.flange_b, mass2.flange_a) annotation (Line(points={{10,-10},{20,-10},{20,20},{50,20}}, color={0,127,0}));
+    connect(mass2.flange_b, accSensor1.flange) annotation (Line(points={{70,20},{80,20}}, color={0,127,0}));
     connect(mass1.flange_b, relPositionSensor1.flange_a) annotation (Line(points={{-19,60},{-16,60},{-16,-40},{-12,-40}}, color={0,127,0}));
-    connect(relPositionSensor1.flange_b, mass2.flange_a) annotation (Line(points={{11,-40},{20,-40},{20,20},{28,20}}, color={0,127,0}));
-    connect(mass1.flange_b, relSpeedSensor1.flange_a) annotation (Line(points={{-19,60},{-16,60},{-16,-65},{-12,-65}}, color={0,127,0}));
-    connect(relSpeedSensor1.flange_b, mass2.flange_a) annotation (Line(points={{11,-65},{20,-65},{20,20},{28,20}}, color={0,127,0}));
-    connect(mass1.flange_b, relAccSensor1.flange_a) annotation (Line(points={{-19,60},{-16,60},{-16,-90},{-12,-90}}, color={0,127,0}));
-    connect(relAccSensor1.flange_b, mass2.flange_a) annotation (Line(points={{11,-90},{20,-90},{20,20},{28,20}}, color={0,127,0}));
-    connect(constantSpeed1.flange, damper3.flange_a) annotation (Line(points={{-79,-120},{-72,-120}}, color={0,127,0}));
-    connect(damper3.flange_b, fixed3.flange) annotation (Line(points={{-49,-120},{-42,-120}}, color={0,127,0}));
-    connect(s.y, multiplex3.u1[1]) annotation (Line(points={{-79,-160},{-76,-160},{-76,-177},{-72,-177}}, color={0,0,127}));
-    connect(v.y, multiplex3.u2[1]) annotation (Line(points={{-79,-185},{-72,-185}}, color={0,0,127}));
-    connect(a.y, multiplex3.u3[1]) annotation (Line(points={{-79,-210},{-76,-210},{-76,-193},{-72,-193}}, color={0,0,127}));
-    connect(multiplex3.y, move1.u) annotation (Line(points={{-49,-185},{-42,-185}}, color={0,0,127}));
-    connect(move1.flange, mass6.flange_a) annotation (Line(points={{-19,-185},{-12,-185}}, color={0,127,0}));
-    connect(mass6.flange_b, spring6.flange_a) annotation (Line(points={{11,-185},{18,-185}}, color={0,127,0}));
-    connect(spring6.flange_b, fixed6.flange) annotation (Line(points={{41,-185},{48,-185}}, color={0,127,0}));
-    annotation (Diagram(coordinateSystem(extent={{-100,-230},{100,120}})),
+    connect(relPositionSensor1.flange_b, mass2.flange_a) annotation (Line(points={{10,-40},{20,-40},{20,20},{50,20}}, color={0,127,0}));
+    connect(mass1.flange_b, relSpeedSensor1.flange_a) annotation (Line(points={{-20,60},{-16,60},{-16,-40},{-14,-40},{-14,-80},{-10,-80}}, color={0,127,0}));
+    connect(relSpeedSensor1.flange_b, mass2.flange_a) annotation (Line(points={{10,-80},{20,-80},{20,20},{50,20}}, color={0,127,0}));
+    connect(mass1.flange_b, relAccSensor1.flange_a) annotation (Line(points={{-20,60},{-16,60},{-16,-40},{-14,-40},{-14,-110},{-10,-110}}, color={0,127,0}));
+    connect(relAccSensor1.flange_b, mass2.flange_a) annotation (Line(points={{10,-110},{20,-110},{20,20},{50,20}}, color={0,127,0}));
+    connect(constantSpeed1.flange, damper3.flange_a) annotation (Line(points={{-80,-140},{-70,-140}}, color={0,127,0}));
+    connect(damper3.flange_b, fixed3.flange) annotation (Line(points={{-50,-140},{-30,-140}}, color={0,127,0}));
+    connect(s.y, multiplex3.u1[1]) annotation (Line(points={{-79,-180},{-76,-180},{-76,-213},{-72,-213}}, color={0,0,127}));
+    connect(v.y, multiplex3.u2[1]) annotation (Line(points={{-79,-220},{-72,-220}}, color={0,0,127}));
+    connect(a.y, multiplex3.u3[1]) annotation (Line(points={{-79,-250},{-76,-250},{-76,-227},{-72,-227}}, color={0,0,127}));
+    connect(multiplex3.y, move1.u) annotation (Line(points={{-49,-220},{-44,-220},{-44,-218},{-46,-218},{-46,-220},{-42,-220}}, color={0,0,127}));
+    connect(move1.flange, mass6.flange_a) annotation (Line(points={{-20,-220},{-10,-220}}, color={0,127,0}));
+    connect(mass6.flange_b, spring6.flange_a) annotation (Line(points={{10,-220},{30,-220}}, color={0,127,0}));
+    connect(spring6.flange_b, fixed6.flange) annotation (Line(points={{50,-220},{80,-220}}, color={0,127,0}));
+    annotation (Diagram(coordinateSystem(extent={{-100,-260},{120,120}})),
       experiment(StopTime=2),
       Documentation(info="<html>
 <p>
@@ -502,17 +502,17 @@ functions position_der and position_der2 of Move.
     Modelica.Blocks.Sources.Constant vStart(k=1)
       annotation (Placement(transformation(extent={{-100,-90},{-80,-70}})));
     Modelica.Mechanics.Translational.Components.InitializeFlange initializeFlange1(use_a_start=false)
-      annotation (Placement(transformation(extent={{-60,-75},{-40,-55}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-50,-60})));
     Modelica.Mechanics.Translational.Components.Mass mass4(m=1)
-      annotation (Placement(transformation(extent={{-20,-75},{0,-55}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-10,-60})));
   equation
     connect(mass3.flange_b, brake1.flange_a) annotation (Line(points={{-49,60},{-32,60}}, color={0,127,0}));
-    connect(engage.y, brake1.f_normalized) annotation (Line(points={{-9,100},{-36,100},{-36,60},{-32,60}}, color={0,0,127}));
-    connect(sineForce.y, force1.f) annotation (Line(points={{-79,0},{-76,0},{-76,-6},{-72,-6}}, color={0,0,127}));
+    connect(engage.y, brake1.f_normalized) annotation (Line(points={{-9,100},{-4,100},{-4,76},{-20,76},{-20,71}}, color={0,0,127}));
+    connect(sineForce.y, force1.f) annotation (Line(points={{-79,0},{-72,0}}, color={0,0,127}));
     connect(force1.flange, massWithStop1.flange_a) annotation (Line(points={{-49,0},{-32,0}}, color={0,127,0}));
-    connect(sStart.y, initializeFlange1.s_start) annotation (Line(points={{-79,-50},{-70,-50},{-70,-65},{-62,-65}}, color={0,0,127}));
-    connect(vStart.y, initializeFlange1.v_start) annotation (Line(points={{-79,-80},{-70,-80},{-70,-65},{-62,-65}}, color={0,0,127}));
-    connect(initializeFlange1.flange, mass4.flange_a) annotation (Line(points={{-39,-65},{-22,-65}}, color={0,127,0}));
+    connect(sStart.y, initializeFlange1.s_start) annotation (Line(points={{-79,-50},{-66,-50},{-66,-54},{-62,-54}}, color={0,0,127}));
+    connect(vStart.y, initializeFlange1.v_start) annotation (Line(points={{-79,-80},{-66,-80},{-66,-60},{-62,-60}}, color={0,0,127}));
+    connect(initializeFlange1.flange, mass4.flange_a) annotation (Line(points={{-40,-60},{-20,-60}}, color={0,127,0}));
     annotation (Diagram(coordinateSystem(extent={{-100,-100},{100,120}})),
       experiment(StopTime=2),
       Documentation(info="<html>

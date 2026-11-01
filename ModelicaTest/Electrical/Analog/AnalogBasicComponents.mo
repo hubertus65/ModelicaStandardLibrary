@@ -3,136 +3,136 @@ model AnalogBasicComponents "Test of controlled sources, variable elements, M_Tr
   extends Modelica.Icons.Example;
 
   Modelica.Electrical.Analog.Basic.Ground ground
-    annotation (Placement(transformation(extent={{-10,-210},{10,-190}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={30,-200})));
   Modelica.Electrical.Analog.Sources.SineVoltage sine(V=1, f=50)
-    annotation (Placement(transformation(extent={{-100,-10},{-80,10}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=180, origin={-90,0})));
   Modelica.Electrical.Analog.Basic.VCV vcv(gain=2)
-    annotation (Placement(transformation(extent={{-60,90},{-40,110}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-30,100})));
   Modelica.Electrical.Analog.Basic.Resistor R_vcv(R=1)
-    annotation (Placement(transformation(extent={{-30,90},{-10,110}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={0,100})));
   Modelica.Electrical.Analog.Basic.VCC vcc(transConductance=0.5)
-    annotation (Placement(transformation(extent={{-60,60},{-40,80}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-30,70})));
   Modelica.Electrical.Analog.Basic.Resistor R_vcc(R=1)
-    annotation (Placement(transformation(extent={{-30,60},{-10,80}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={0,70})));
   Modelica.Electrical.Analog.Basic.Resistor R_sense(R=2)
-    annotation (Placement(transformation(extent={{-80,30},{-60,50}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-60,40})));
   Modelica.Electrical.Analog.Basic.CCV ccv(transResistance=3)
-    annotation (Placement(transformation(extent={{-60,30},{-40,50}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-30,40})));
   Modelica.Electrical.Analog.Basic.Resistor R_ccv(R=1)
-    annotation (Placement(transformation(extent={{-30,30},{-10,50}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={0,40})));
   Modelica.Electrical.Analog.Basic.Resistor R_sense2(R=2)
-    annotation (Placement(transformation(extent={{-80,0},{-60,20}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-60,10})));
   Modelica.Electrical.Analog.Basic.CCC ccc(gain=4)
-    annotation (Placement(transformation(extent={{-60,0},{-40,20}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-30,10})));
   Modelica.Electrical.Analog.Basic.Resistor R_ccc(R=1)
-    annotation (Placement(transformation(extent={{-30,0},{-10,20}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={0,10})));
   Modelica.Blocks.Sources.Ramp ramp(height=1e-3, duration=0.1, offset=1e-4)
-    annotation (Placement(transformation(extent={{10,110},{30,130}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={60,120})));
   Modelica.Blocks.Sources.Ramp rampL(height=1e-3, duration=0.1, offset=1e-4)
-    annotation (Placement(transformation(extent={{40,110},{60,130}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={90,120})));
   Modelica.Electrical.Analog.Basic.VariableCapacitor variableCapacitor
-    annotation (Placement(transformation(extent={{10,80},{30,100}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={60,90})));
   Modelica.Electrical.Analog.Basic.VariableInductor variableInductor
-    annotation (Placement(transformation(extent={{10,50},{30,70}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={60,60})));
   Modelica.Electrical.Analog.Basic.VariableConductor variableConductor
-    annotation (Placement(transformation(extent={{10,20},{30,40}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={60,30})));
   Modelica.Blocks.Sources.Ramp conductance(height=1, duration=0.1, offset=0.1)
-    annotation (Placement(transformation(extent={{40,20},{60,40}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={90,30})));
   Modelica.Electrical.Analog.Basic.Resistor R_cap(R=10)
-    annotation (Placement(transformation(extent={{40.0,80.0},{60.0,100.0}},rotation = 0.0,origin = {0.0,0.0})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={90,90})));
   Modelica.Electrical.Analog.Basic.Resistor R_ind(R=1)
-    annotation (Placement(transformation(extent={{40,50},{60,70}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={90,60})));
   Modelica.Electrical.Analog.Basic.M_Transformer mTransformer(N=2, L={1e-2, 0.9e-2, 1e-2})
-    annotation (Placement(transformation(extent={{-60,-40},{-40,-20}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-30,-30})));
   Modelica.Electrical.Analog.Basic.Resistor R_secondary(R=10)
-    annotation (Placement(transformation(extent={{-30,-40},{-10,-20}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={0,-30})));
   Modelica.Electrical.Analog.Basic.Resistor R_primary(R=1)
-    annotation (Placement(transformation(extent={{-80,-40},{-60,-20}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-60,-30})));
   Modelica.Electrical.Analog.Basic.OpAmp opAmp(Slope=1e4)
-    annotation (Placement(transformation(extent={{-60,-90},{-40,-70}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-30,-80})));
   Modelica.Electrical.Analog.Sources.SupplyVoltage supply(Vps=15, Vns=-15)
     annotation (Placement(transformation(extent={{-90,-120},{-70,-100}})));
   Modelica.Electrical.Analog.Basic.Resistor R_feedback(R=1e4)
-    annotation (Placement(transformation(extent={{-30,-80},{-10,-60}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=90, origin={0,-70})));
   Modelica.Electrical.Analog.Basic.Resistor R_ground(R=1e4)
-    annotation (Placement(transformation(extent={{-30,-110},{-10,-90}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={0,-100})));
   Modelica.Electrical.Analog.Basic.Potentiometer potentiometer(R=100, useRinput=true)
-    annotation (Placement(transformation(extent={{10,-40},{30,-20}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={60,-30})));
   Modelica.Blocks.Sources.Ramp wiper(height=1, duration=0.1)
-    annotation (Placement(transformation(extent={{10,-10},{30,10}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={60,0})));
   Modelica.Electrical.Analog.Basic.Resistor R_wiper(R=100)
-    annotation (Placement(transformation(extent={{40,-60},{60,-40}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={90,-50})));
   Modelica.Electrical.Analog.Basic.TranslationalEMF emf(k=2)
-    annotation (Placement(transformation(extent={{10,-110},{30,-90}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={60,-100})));
   Modelica.Electrical.Analog.Basic.Resistor R_emf(R=1)
-    annotation (Placement(transformation(extent={{-10,-110},{10,-90}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={30,-100})));
   Modelica.Mechanics.Translational.Components.Mass mass(m=0.01, s(start=0, fixed=true), v(start=0, fixed=true))
-    annotation (Placement(transformation(extent={{40,-110},{60,-90}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={90,-100})));
   Modelica.Mechanics.Translational.Components.Spring spring(c=1000)
-    annotation (Placement(transformation(extent={{60,-110},{80,-90}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={120,-100})));
   Modelica.Mechanics.Translational.Components.Fixed fixed
-    annotation (Placement(transformation(extent={{80,-110},{100,-90}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={150,-100})));
 equation
-  connect(sine.n, ground.p) annotation (Line(points={{-79,0},{-46,0},{-46,-200},{-12,-200}}, color={0,0,127}));
-  connect(sine.p, vcv.p1) annotation (Line(points={{-79,0},{-70,0},{-70,100},{-62,100}}, color={0,0,127}));
-  connect(vcv.n1, ground.p) annotation (Line(points={{-39,100},{-26,100},{-26,-200},{-12,-200}}, color={0,0,127}));
-  connect(vcv.p2, R_vcv.p) annotation (Line(points={{-39,100},{-32,100}}, color={0,0,127}));
-  connect(R_vcv.n, vcv.n2) annotation (Line(points={{-9,100},{-62,100}}, color={0,0,127}));
-  connect(vcv.n2, ground.p) annotation (Line(points={{-39,100},{-26,100},{-26,-200},{-12,-200}}, color={0,0,127}));
-  connect(sine.p, vcc.p1) annotation (Line(points={{-79,0},{-70,0},{-70,70},{-62,70}}, color={0,0,127}));
-  connect(vcc.n1, ground.p) annotation (Line(points={{-39,70},{-26,70},{-26,-200},{-12,-200}}, color={0,0,127}));
-  connect(vcc.p2, R_vcc.p) annotation (Line(points={{-39,70},{-32,70}}, color={0,0,127}));
-  connect(R_vcc.n, vcc.n2) annotation (Line(points={{-9,70},{-62,70}}, color={0,0,127}));
-  connect(vcc.n2, ground.p) annotation (Line(points={{-39,70},{-26,70},{-26,-200},{-12,-200}}, color={0,0,127}));
-  connect(sine.p, R_sense.p) annotation (Line(points={{-79,0},{-86,0},{-86,40},{-82,40}}, color={0,0,127}));
-  connect(R_sense.n, ccv.p1) annotation (Line(points={{-59,40},{-62,40}}, color={0,0,127}));
-  connect(ccv.n1, ground.p) annotation (Line(points={{-39,40},{-26,40},{-26,-200},{-12,-200}}, color={0,0,127}));
-  connect(ccv.p2, R_ccv.p) annotation (Line(points={{-39,40},{-32,40}}, color={0,0,127}));
-  connect(R_ccv.n, ccv.n2) annotation (Line(points={{-9,40},{-62,40}}, color={0,0,127}));
-  connect(ccv.n2, ground.p) annotation (Line(points={{-39,40},{-26,40},{-26,-200},{-12,-200}}, color={0,0,127}));
-  connect(sine.p, R_sense2.p) annotation (Line(points={{-79,0},{-86,0},{-86,10},{-82,10}}, color={0,0,127}));
-  connect(R_sense2.n, ccc.p1) annotation (Line(points={{-59,10},{-62,10}}, color={0,0,127}));
-  connect(ccc.n1, ground.p) annotation (Line(points={{-39,10},{-26,10},{-26,-200},{-12,-200}}, color={0,0,127}));
-  connect(ccc.p2, R_ccc.p) annotation (Line(points={{-39,10},{-32,10}}, color={0,0,127}));
-  connect(R_ccc.n, ccc.n2) annotation (Line(points={{-9,10},{-62,10}}, color={0,0,127}));
-  connect(ccc.n2, ground.p) annotation (Line(points={{-39,10},{-26,10},{-26,-200},{-12,-200}}, color={0,0,127}));
-  connect(ramp.y, variableCapacitor.C) annotation (Line(points={{31,120},{4,120},{4,90},{8,90}}, color={0,0,127}));
-  connect(sine.p, variableCapacitor.p) annotation (Line(points={{-79,0},{-36,0},{-36,90},{8,90}}, color={0,0,127}));
-  connect(variableCapacitor.n, R_cap.p) annotation (Line(points={{31,90},{38,90}}, color={0,0,127}));
-  connect(R_cap.n, ground.p) annotation (Line(points={{61,90},{-16,90},{-16,-200},{-12,-200}}, color={0,0,127}));
-  connect(rampL.y, variableInductor.L) annotation (Line(points={{61,120},{4,120},{4,60},{8,60}}, color={0,0,127}));
-  connect(sine.p, variableInductor.p) annotation (Line(points={{-79,0},{-36,0},{-36,60},{8,60}}, color={0,0,127}));
-  connect(variableInductor.n, R_ind.p) annotation (Line(points={{31,60},{38,60}}, color={0,0,127}));
-  connect(R_ind.n, ground.p) annotation (Line(points={{61,60},{-16,60},{-16,-200},{-12,-200}}, color={0,0,127}));
-  connect(conductance.y, variableConductor.G) annotation (Line(points={{61,30},{8,30}}, color={0,0,127}));
-  connect(sine.p, variableConductor.p) annotation (Line(points={{-79,0},{-36,0},{-36,30},{8,30}}, color={0,0,127}));
-  connect(variableConductor.n, ground.p) annotation (Line(points={{31,30},{-16,30},{-16,-200},{-12,-200}}, color={0,0,127}));
-  connect(sine.p, R_primary.p) annotation (Line(points={{-79,0},{-86,0},{-86,-30},{-82,-30}}, color={0,0,127}));
-  connect(R_primary.n, mTransformer.p[1]) annotation (Line(points={{-59,-30},{-62,-30}}, color={0,0,127}));
-  connect(mTransformer.n[1], ground.p) annotation (Line(points={{-39,-30},{-26,-30},{-26,-200},{-12,-200}}, color={0,0,127}));
-  connect(mTransformer.p[2], R_secondary.p) annotation (Line(points={{-39,-30},{-32,-30}}, color={0,0,127}));
-  connect(R_secondary.n, mTransformer.n[2]) annotation (Line(points={{-9,-30},{-62,-30}}, color={0,0,127}));
-  connect(mTransformer.n[2], ground.p) annotation (Line(points={{-39,-30},{-26,-30},{-26,-200},{-12,-200}}, color={0,0,127}));
-  connect(sine.p, opAmp.in_p) annotation (Line(points={{-79,0},{-70,0},{-70,-80},{-62,-80}}, color={0,0,127}));
-  connect(opAmp.out, R_feedback.p) annotation (Line(points={{-39,-80},{-36,-80},{-36,-70},{-32,-70}}, color={0,0,127}));
-  connect(R_feedback.n, opAmp.in_n) annotation (Line(points={{-9,-70},{-66,-70},{-66,-80},{-62,-80}}, color={0,0,127}));
-  connect(opAmp.in_n, R_ground.p) annotation (Line(points={{-39,-80},{-36,-80},{-36,-100},{-32,-100}}, color={0,0,127}));
-  connect(R_ground.n, ground.p) annotation (Line(points={{-9,-100},{-16,-100},{-16,-200},{-12,-200}}, color={0,0,127}));
-  connect(supply.pin_p, opAmp.VMax) annotation (Line(points={{-69,-110},{-66,-110},{-66,-80},{-62,-80}}, color={0,0,127}));
-  connect(supply.pin_n, opAmp.VMin) annotation (Line(points={{-69,-110},{-66,-110},{-66,-80},{-62,-80}}, color={0,0,127}));
-  connect(supply.ground, ground.p) annotation (Line(points={{-69,-110},{-40,-110},{-40,-200},{-12,-200}}, color={0,0,127}));
-  connect(wiper.y, potentiometer.r) annotation (Line(points={{31,0},{4,0},{4,-30},{8,-30}}, color={0,0,127}));
-  connect(sine.p, potentiometer.pin_p) annotation (Line(points={{-79,0},{-36,0},{-36,-30},{8,-30}}, color={0,0,127}));
-  connect(potentiometer.pin_n, ground.p) annotation (Line(points={{31,-30},{-16,-30},{-16,-200},{-12,-200}}, color={0,0,127}));
-  connect(potentiometer.contact, R_wiper.p) annotation (Line(points={{31,-30},{34,-30},{34,-50},{38,-50}}, color={0,0,127}));
-  connect(R_wiper.n, ground.p) annotation (Line(points={{61,-50},{-16,-50},{-16,-200},{-12,-200}}, color={0,0,127}));
-  connect(sine.p, R_emf.p) annotation (Line(points={{-79,0},{-46,0},{-46,-100},{-12,-100}}, color={0,0,127}));
-  connect(R_emf.n, emf.p) annotation (Line(points={{11,-100},{8,-100}}, color={0,0,127}));
-  connect(emf.n, ground.p) annotation (Line(points={{31,-100},{-16,-100},{-16,-200},{-12,-200}}, color={0,0,127}));
-  connect(emf.flange, mass.flange_a) annotation (Line(points={{31,-100},{38,-100}}, color={0,0,0}));
-  connect(mass.flange_b, spring.flange_a) annotation (Line(points={{61,-100},{58,-100}}, color={0,127,0}));
-  connect(spring.flange_b, fixed.flange) annotation (Line(points={{81,-100},{78,-100}}, color={0,127,0}));
-  annotation (Diagram(coordinateSystem(extent={{-100,-220},{100,140}})),
+  connect(sine.n, ground.p) annotation (Line(points={{-100,0},{-104,0},{-104,-122},{18,-122},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
+  connect(sine.p, vcv.p1) annotation (Line(points={{-80,0},{-74,0},{-74,80},{-44,80},{-44,110},{-40,110}}, color={0,0,255}));
+  connect(vcv.n1, ground.p) annotation (Line(points={{-40,90},{-46,90},{-46,60},{-44,60},{-44,56},{12,56},{12,-30},{14,-30},{14,-112},{18,-112},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
+  connect(vcv.p2, R_vcv.p) annotation (Line(points={{-20,110},{-12,110},{-12,114},{0,114},{0,110}}, color={0,0,255}));
+  connect(R_vcv.n, vcv.n2) annotation (Line(points={{0,90},{0,86},{-16,86},{-16,90},{-20,90}}, color={0,0,255}));
+  connect(vcv.n2, ground.p) annotation (Line(points={{-20,90},{-16,90},{-16,86},{12,86},{12,-30},{14,-30},{14,-112},{18,-112},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
+  connect(sine.p, vcc.p1) annotation (Line(points={{-80,0},{-74,0},{-74,80},{-40,80}}, color={0,0,255}));
+  connect(vcc.n1, ground.p) annotation (Line(points={{-40,60},{-44,60},{-44,56},{12,56},{12,-30},{14,-30},{14,-112},{18,-112},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
+  connect(vcc.p2, R_vcc.p) annotation (Line(points={{-20,80},{-12,80},{-12,84},{0,84},{0,80}}, color={0,0,255}));
+  connect(R_vcc.n, vcc.n2) annotation (Line(points={{0,60},{0,56},{-16,56},{-16,60},{-20,60}}, color={0,0,255}));
+  connect(vcc.n2, ground.p) annotation (Line(points={{-20,60},{-16,60},{-16,56},{12,56},{12,-30},{14,-30},{14,-112},{18,-112},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
+  connect(sine.p, R_sense.p) annotation (Line(points={{-80,0},{-74,0},{-74,40},{-70,40}}, color={0,0,255}));
+  connect(R_sense.n, ccv.p1) annotation (Line(points={{-50,40},{-44,40},{-44,50},{-40,50}}, color={0,0,255}));
+  connect(ccv.n1, ground.p) annotation (Line(points={{-40,30},{-44,30},{-44,26},{12,26},{12,-30},{14,-30},{14,-112},{18,-112},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
+  connect(ccv.p2, R_ccv.p) annotation (Line(points={{-20,50},{-12,50},{-12,54},{0,54},{0,50}}, color={0,0,255}));
+  connect(R_ccv.n, ccv.n2) annotation (Line(points={{0,30},{0,26},{-16,26},{-16,30},{-20,30}}, color={0,0,255}));
+  connect(ccv.n2, ground.p) annotation (Line(points={{-20,30},{-16,30},{-16,26},{12,26},{12,-30},{14,-30},{14,-112},{18,-112},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
+  connect(sine.p, R_sense2.p) annotation (Line(points={{-80,0},{-74,0},{-74,10},{-70,10}}, color={0,0,255}));
+  connect(R_sense2.n, ccc.p1) annotation (Line(points={{-50,10},{-44,10},{-44,20},{-40,20}}, color={0,0,255}));
+  connect(ccc.n1, ground.p) annotation (Line(points={{-40,0},{-44,0},{-44,-4},{12,-4},{12,-30},{14,-30},{14,-112},{18,-112},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
+  connect(ccc.p2, R_ccc.p) annotation (Line(points={{-20,20},{-12,20},{-12,24},{0,24},{0,20}}, color={0,0,255}));
+  connect(R_ccc.n, ccc.n2) annotation (Line(points={{0,0},{0,-4},{-16,-4},{-16,0},{-20,0}}, color={0,0,255}));
+  connect(ccc.n2, ground.p) annotation (Line(points={{-20,0},{-16,0},{-16,-4},{12,-4},{12,-30},{14,-30},{14,-112},{18,-112},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
+  connect(ramp.y, variableCapacitor.C) annotation (Line(points={{71,120},{76,120},{76,106},{60,106},{60,102}}, color={0,0,127}));
+  connect(sine.p, variableCapacitor.p) annotation (Line(points={{-80,0},{-74,0},{-74,80},{-44,80},{-44,116},{46,116},{46,90},{50,90}}, color={0,0,255}));
+  connect(variableCapacitor.n, R_cap.p) annotation (Line(points={{70,90},{78,90},{78,104},{90,104},{90,100}}, color={0,0,255}));
+  connect(R_cap.n, ground.p) annotation (Line(points={{90,80},{90,76},{88,76},{88,78},{12,78},{12,-30},{14,-30},{14,-112},{18,-112},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
+  connect(rampL.y, variableInductor.L) annotation (Line(points={{101,120},{104,120},{104,72},{60,72}}, color={0,0,127}));
+  connect(sine.p, variableInductor.p) annotation (Line(points={{-80,0},{-74,0},{-74,-6},{46,-6},{46,60},{50,60}}, color={0,0,255}));
+  connect(variableInductor.n, R_ind.p) annotation (Line(points={{70,60},{78,60},{78,74},{90,74},{90,70}}, color={0,0,255}));
+  connect(R_ind.n, ground.p) annotation (Line(points={{90,50},{90,42},{74,42},{74,12},{48,12},{48,-80},{18,-80},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
+  connect(conductance.y, variableConductor.G) annotation (Line(points={{101,30},{104,30},{104,46},{60,46},{60,42}}, color={0,0,127}));
+  connect(sine.p, variableConductor.p) annotation (Line(points={{-80,0},{-74,0},{-74,-6},{46,-6},{46,30},{50,30}}, color={0,0,255}));
+  connect(variableConductor.n, ground.p) annotation (Line(points={{70,30},{74,30},{74,12},{48,12},{48,-80},{18,-80},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
+  connect(sine.p, R_primary.p) annotation (Line(points={{-80,0},{-74,0},{-74,-30},{-70,-30}}, color={0,0,255}));
+  connect(R_primary.n, mTransformer.p[1]) annotation (Line(points={{-50,-30},{-40,-30}}, color={0,0,255}));
+  connect(mTransformer.n[1], ground.p) annotation (Line(points={{-20,-30},{-16,-30},{-16,-42},{14,-42},{14,-112},{18,-112},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
+  connect(mTransformer.p[2], R_secondary.p) annotation (Line(points={{-40,-30},{-44,-30},{-44,-18},{-14,-18},{-14,-30},{-10,-30}}, color={0,0,255}));
+  connect(R_secondary.n, mTransformer.n[2]) annotation (Line(points={{10,-30},{14,-30},{14,-42},{-16,-42},{-16,-30},{-20,-30}}, color={0,0,255}));
+  connect(mTransformer.n[2], ground.p) annotation (Line(points={{-20,-30},{-16,-30},{-16,-42},{14,-42},{14,-112},{18,-112},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
+  connect(sine.p, opAmp.in_p) annotation (Line(points={{-80,0},{-74,0},{-74,-86},{-40,-86}}, color={0,0,255}));
+  connect(opAmp.out, R_feedback.p) annotation (Line(points={{-20,-80},{-12,-80},{-12,-84},{0,-84},{0,-80}}, color={0,0,255}));
+  connect(R_feedback.n, opAmp.in_n) annotation (Line(points={{0,-60},{0,-56},{-44,-56},{-44,-74},{-40,-74}}, color={0,0,255}));
+  connect(opAmp.in_n, R_ground.p) annotation (Line(points={{-40,-74},{-44,-74},{-44,-100},{-10,-100}}, color={0,0,255}));
+  connect(R_ground.n, ground.p) annotation (Line(points={{10,-100},{18,-100},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
+  connect(supply.pin_p, opAmp.VMax) annotation (Line(points={{-90,-110},{-94,-110},{-94,-66},{-30,-66},{-30,-70}}, color={0,0,255}));
+  connect(supply.pin_n, opAmp.VMin) annotation (Line(points={{-70,-110},{-30,-110},{-30,-90}}, color={0,0,255}));
+  connect(supply.ground, ground.p) annotation (Line(points={{-80,-110},{-68,-110},{-68,-112},{18,-112},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
+  connect(wiper.y, potentiometer.r) annotation (Line(points={{71,0},{76,0},{76,-46},{50,-46},{50,-42}}, color={0,0,127}));
+  connect(sine.p, potentiometer.pin_p) annotation (Line(points={{-80,0},{-74,0},{-74,-6},{46,-6},{46,-30},{50,-30}}, color={0,0,255}));
+  connect(potentiometer.pin_n, ground.p) annotation (Line(points={{70,-30},{74,-30},{74,-80},{18,-80},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
+  connect(potentiometer.contact, R_wiper.p) annotation (Line(points={{70,-40},{78,-40},{78,-36},{90,-36},{90,-40}}, color={0,0,255}));
+  connect(R_wiper.n, ground.p) annotation (Line(points={{90,-60},{90,-80},{18,-80},{18,-186},{30,-186},{30,-190}}, color={0,0,255}));
+  connect(sine.p, R_emf.p) annotation (Line(points={{-80,0},{-74,0},{-74,-6},{16,-6},{16,-100},{20,-100}}, color={0,0,255}));
+  connect(R_emf.n, emf.p) annotation (Line(points={{40,-100},{48,-100},{48,-86},{60,-86},{60,-90}}, color={0,0,255}));
+  connect(emf.n, ground.p) annotation (Line(points={{60,-110},{60,-184},{30,-184},{30,-190}}, color={0,0,255}));
+  connect(emf.flange, mass.flange_a) annotation (Line(points={{70,-100},{80,-100}}, color={0,127,0}));
+  connect(mass.flange_b, spring.flange_a) annotation (Line(points={{100,-100},{110,-100}}, color={0,127,0}));
+  connect(spring.flange_b, fixed.flange) annotation (Line(points={{130,-100},{150,-100}}, color={0,127,0}));
+  annotation (Diagram(coordinateSystem(extent={{-120,-220},{160,140}})),
     experiment(StopTime=0.1),
     Documentation(info="<html>
 <p>

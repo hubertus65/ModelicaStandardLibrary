@@ -5,17 +5,17 @@ model AnalogOpAmpLimited "Test of Modelica.Electrical.Analog.Ideal.OpAmpLimited"
   Modelica.Electrical.Analog.Basic.Ground ground
     annotation (Placement(transformation(extent={{-10,-70},{10,-50}})));
   Modelica.Electrical.Analog.Sources.SineVoltage sine(V=1, f=50)
-    annotation (Placement(transformation(extent={{-70,-10},{-50,10}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={-60,0})));
   Modelica.Electrical.Analog.Ideal.OpAmpLimited opAmpLimited(V0=1e4, Vps=3, Vns=-3)
-    annotation (Placement(transformation(extent={{-10,10},{10,30}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=90, origin={0,20})));
   Modelica.Electrical.Analog.Ideal.OpAmpLimited opAmpFirstOrder(V0=1e4, Vps=3, Vns=-3, useFirstOrder=true, Tau=1e-3)
     annotation (Placement(transformation(extent={{-10,-30},{10,-10}})));
 equation
-  connect(sine.n, ground.p) annotation (Line(points={{-49,0},{-30,0},{-30,-60},{-12,-60}}, color={0,0,127}));
-  connect(sine.p, opAmpLimited.in_p) annotation (Line(points={{-49,0},{-30,0},{-30,20},{-12,20}}, color={0,0,127}));
-  connect(opAmpLimited.in_n, ground.p) annotation (Line(points={{11,20},{-16,20},{-16,-60},{-12,-60}}, color={0,0,127}));
-  connect(sine.p, opAmpFirstOrder.in_p) annotation (Line(points={{-49,0},{-30,0},{-30,-20},{-12,-20}}, color={0,0,127}));
-  connect(opAmpFirstOrder.in_n, ground.p) annotation (Line(points={{11,-20},{-16,-20},{-16,-60},{-12,-60}}, color={0,0,127}));
+  connect(sine.n, ground.p) annotation (Line(points={{-60,-10},{-60,-30},{-14,-30},{-14,-46},{0,-46},{0,-50}}, color={0,0,255}));
+  connect(sine.p, opAmpLimited.in_p) annotation (Line(points={{-60,10},{-60,14},{-12,14},{-12,6},{6,6},{6,10}}, color={0,0,255}));
+  connect(opAmpLimited.in_n, ground.p) annotation (Line(points={{-6,10},{-6,-8},{-12,-8},{-12,-46},{0,-46},{0,-50}}, color={0,0,255}));
+  connect(sine.p, opAmpFirstOrder.in_p) annotation (Line(points={{-60,10},{-60,14},{-16,14},{-16,-26},{-10,-26}}, color={0,0,255}));
+  connect(opAmpFirstOrder.in_n, ground.p) annotation (Line(points={{-10,-14},{-14,-14},{-14,-46},{0,-46},{0,-50}}, color={0,0,255}));
   annotation (experiment(StopTime=0),
     Documentation(info="<html>
 <p>

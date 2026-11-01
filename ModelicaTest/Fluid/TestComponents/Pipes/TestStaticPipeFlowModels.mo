@@ -22,15 +22,15 @@ model TestStaticPipeFlowModels "Test of the default flow model of StaticPipe and
     annotation (Placement(transformation(extent={{60,-90},{80,-70}})));
   replaceable package Medium = Modelica.Media.Water.ConstantPropertyLiquidWater constrainedby Modelica.Media.Interfaces.PartialMedium "Medium in all components";
 equation
-  connect(pRamp.y, source.p_in) annotation (Line(points={{-79,0},{-72,0}}, color={0,0,127}));
+  connect(pRamp.y, source.p_in) annotation (Line(points={{-79,0},{-76,0},{-76,8},{-72,8}}, color={0,0,127}));
   connect(source.ports[1], pipeDefault.port_a) annotation (Line(points={{-49,0},{-36,0},{-36,50},{-22,50}}, color={0,127,255}));
-  connect(pipeDefault.port_b, sink.ports[1]) annotation (Line(points={{1,50},{30,50},{30,0},{58,0}}, color={0,127,255}));
+  connect(pipeDefault.port_b, sink.ports[1]) annotation (Line(points={{0,50},{86,50},{86,0},{80,0}}, color={0,127,255}));
   connect(source.ports[2], pipeNoFriction.port_a) annotation (Line(points={{-49,0},{-32,0}}, color={0,127,255}));
   connect(pipeNoFriction.port_b, orifice1.port_a) annotation (Line(points={{-9,0},{8,0}}, color={0,127,255}));
-  connect(orifice1.port_b, sink.ports[2]) annotation (Line(points={{31,0},{58,0}}, color={0,127,255}));
+  connect(orifice1.port_b, sink.ports[2]) annotation (Line(points={{30,0},{50,0},{50,12},{84,12},{84,0},{80,0}}, color={0,127,255}));
   connect(source.ports[3], pipeNoFrictionCentral.port_a) annotation (Line(points={{-49,0},{-40,0},{-40,-50},{-32,-50}}, color={0,127,255}));
   connect(pipeNoFrictionCentral.port_b, orifice2.port_a) annotation (Line(points={{-9,-50},{8,-50}}, color={0,127,255}));
-  connect(orifice2.port_b, sink.ports[3]) annotation (Line(points={{31,-50},{44,-50},{44,0},{58,0}}, color={0,127,255}));
+  connect(orifice2.port_b, sink.ports[3]) annotation (Line(points={{30,-50},{84,-50},{84,0},{80,0}}, color={0,127,255}));
   annotation (experiment(StopTime=2),
     Documentation(info="<html>
 <p>

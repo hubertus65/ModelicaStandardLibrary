@@ -43,12 +43,12 @@ package ComplexBlocks "Test models for Modelica.ComplexBlocks"
     connect(complexRotatingPhasor1.y, tan1.u) annotation (Line(points={{-69,60},{-50,60},{-50,40},{-32,40}}, color={85,170,255}));
     connect(complexRotatingPhasor1.y, asin1.u) annotation (Line(points={{-69,60},{-50,60},{-50,10},{-32,10}}, color={85,170,255}));
     connect(complexRotatingPhasor1.y, acos1.u) annotation (Line(points={{-69,60},{-50,60},{-50,-20},{-32,-20}}, color={85,170,255}));
-    connect(complexRotatingPhasor1.y, atan1.u) annotation (Line(points={{-69,60},{-30,60},{-30,100},{8,100}}, color={85,170,255}));
-    connect(complexRotatingPhasor1.y, sinh1.u) annotation (Line(points={{-69,60},{-30,60},{-30,70},{8,70}}, color={85,170,255}));
-    connect(complexRotatingPhasor1.y, cosh1.u) annotation (Line(points={{-69,60},{-30,60},{-30,40},{8,40}}, color={85,170,255}));
-    connect(complexRotatingPhasor1.y, tanh1.u) annotation (Line(points={{-69,60},{-30,60},{-30,10},{8,10}}, color={85,170,255}));
-    connect(complexRotatingPhasor1.y, conj1.u) annotation (Line(points={{-69,60},{-30,60},{-30,-20},{8,-20}}, color={85,170,255}));
-    connect(complexRotatingPhasor1.y, sinConjugate.u) annotation (Line(points={{-69,60},{-10,60},{-10,100},{48,100}}, color={85,170,255}));
+    connect(complexRotatingPhasor1.y, atan1.u) annotation (Line(points={{-69,60},{-50,60},{-50,88},{4,88},{4,100},{8,100}}, color={85,170,255}));
+    connect(complexRotatingPhasor1.y, sinh1.u) annotation (Line(points={{-69,60},{-50,60},{-50,58},{4,58},{4,70},{8,70}}, color={85,170,255}));
+    connect(complexRotatingPhasor1.y, cosh1.u) annotation (Line(points={{-69,60},{-50,60},{-50,58},{4,58},{4,40},{8,40}}, color={85,170,255}));
+    connect(complexRotatingPhasor1.y, tanh1.u) annotation (Line(points={{-69,60},{-50,60},{-50,22},{4,22},{4,10},{8,10}}, color={85,170,255}));
+    connect(complexRotatingPhasor1.y, conj1.u) annotation (Line(points={{-69,60},{-50,60},{-50,-8},{4,-8},{4,-20},{8,-20}}, color={85,170,255}));
+    connect(complexRotatingPhasor1.y, sinConjugate.u) annotation (Line(points={{-69,60},{-50,60},{-50,88},{44,88},{44,100},{48,100}}, color={85,170,255}));
     connect(complexExpression1.y, exp1.u) annotation (Line(points={{-69,-90},{-50,-90},{-50,-60},{-32,-60}}, color={85,170,255}));
     connect(complexExpression1.y, log1.u) annotation (Line(points={{-69,-90},{-32,-90}}, color={85,170,255}));
     connect(complexExpression1.y, sqrt1.u) annotation (Line(points={{-69,-90},{-50,-90},{-50,-120},{-32,-120}}, color={85,170,255}));
@@ -102,15 +102,15 @@ Tests the elementary function blocks of
       annotation (Placement(transformation(extent={{20,-100},{40,-80}})));
   equation
     connect(complexRotatingPhasor1.y, add1.u1) annotation (Line(points={{-69,90},{-50,90},{-50,106},{-32,106}}, color={85,170,255}));
-    connect(complexStep1.y, add1.u2) annotation (Line(points={{-69,40},{-50,40},{-50,94},{-32,94}}, color={85,170,255}));
-    connect(complexRotatingPhasor1.y, product1.u1) annotation (Line(points={{-69,90},{-26,90},{-26,106},{18,106}}, color={85,170,255}));
-    connect(complexConstant1.y, product1.u2) annotation (Line(points={{-69,-10},{-26,-10},{-26,94},{18,94}}, color={85,170,255}));
+    connect(complexStep1.y, add1.u2) annotation (Line(points={{-69,40},{-36,40},{-36,94},{-32,94}}, color={85,170,255}));
+    connect(complexRotatingPhasor1.y, product1.u1) annotation (Line(points={{-69,90},{-52,90},{-52,106},{-32,106},{-32,112},{14,112},{14,106},{18,106}}, color={85,170,255}));
+    connect(complexConstant1.y, product1.u2) annotation (Line(points={{-69,-10},{-30,-10},{-30,80},{14,80},{14,94},{18,94}}, color={85,170,255}));
     connect(add1.y, complexToReal1.u) annotation (Line(points={{-9,100},{4,100},{4,40},{18,40}}, color={85,170,255}));
     connect(upperHalfPlane1.y, complexToPolar1.u) annotation (Line(points={{-69,-50},{-26,-50},{-26,10},{18,10}}, color={85,170,255}));
     connect(complexToPolar1.len, polarToComplex1.len) annotation (Line(points={{41,16},{58,16}}, color={0,0,127}));
     connect(complexToPolar1.phi, polarToComplex1.phi) annotation (Line(points={{41,4},{58,4}}, color={0,0,127}));
     connect(upperHalfPlane1.y, bode1.u) annotation (Line(points={{-69,-50},{-26,-50},{-26,-24},{18,-24}}, color={85,170,255}));
-    connect(complexConstant1.y, bode1.divisor) annotation (Line(points={{-69,-10},{-26,-10},{-26,-36},{18,-36}}, color={85,170,255}));
+    connect(complexConstant1.y, bode1.divisor) annotation (Line(points={{-69,-10},{-30,-10},{-30,-36},{18,-36}}, color={85,170,255}));
     connect(complexConstant2.y, transferFunction1.u) annotation (Line(points={{-69,-90},{18,-90}}, color={85,170,255}));
     connect(frequencyRamp.y, transferFunction1.w) annotation (Line(points={{-9,-130},{30,-130},{30,-102}}, color={0,0,127}));
     annotation (Diagram(coordinateSystem(extent={{-100,-150},{100,120}})),
@@ -168,13 +168,13 @@ Sources.ComplexStep is tested separately in
     connect(complexRotatingPhasor1.y, extractSignal1.u[1]) annotation (Line(points={{-69,60},{-30,60},{-30,0},{8,0}}, color={85,170,255}));
     connect(complexStep1.y, extractSignal1.u[2]) annotation (Line(points={{-69,20},{-30,20},{-30,0},{8,0}}, color={85,170,255}));
     connect(complexConstant1.y, extractSignal1.u[3]) annotation (Line(points={{-69,-20},{-30,-20},{-30,0},{8,0}}, color={85,170,255}));
-    connect(complexRotatingPhasor1.y, extractor1.u[1]) annotation (Line(points={{-69,60},{-30,60},{-30,-40},{8,-40}}, color={85,170,255}));
+    connect(complexRotatingPhasor1.y, extractor1.u[1]) annotation (Line(points={{-69,60},{-32,60},{-32,42},{46,42},{46,-28},{4,-28},{4,-40},{8,-40}}, color={85,170,255}));
     connect(complexStep1.y, extractor1.u[2]) annotation (Line(points={{-69,20},{-30,20},{-30,-40},{8,-40}}, color={85,170,255}));
     connect(complexConstant1.y, extractor1.u[3]) annotation (Line(points={{-69,-20},{-30,-20},{-30,-40},{8,-40}}, color={85,170,255}));
-    connect(complexRotatingPhasor1.y, extractor2.u[1]) annotation (Line(points={{-69,60},{-10,60},{-10,-40},{48,-40}}, color={85,170,255}));
-    connect(complexStep1.y, extractor2.u[2]) annotation (Line(points={{-69,20},{-10,20},{-10,-40},{48,-40}}, color={85,170,255}));
-    connect(complexConstant1.y, extractor2.u[3]) annotation (Line(points={{-69,-20},{-10,-20},{-10,-40},{48,-40}}, color={85,170,255}));
-    connect(integerStep1.y, extractor1.index) annotation (Line(points={{-9,-80},{20,-80},{20,-52}}, color={255,127,0}));
+    connect(complexRotatingPhasor1.y, extractor2.u[1]) annotation (Line(points={{-69,60},{-32,60},{-32,42},{46,42},{46,-40},{48,-40}}, color={85,170,255}));
+    connect(complexStep1.y, extractor2.u[2]) annotation (Line(points={{-69,20},{-32,20},{-32,-28},{40,-28},{40,-40},{48,-40}}, color={85,170,255}));
+    connect(complexConstant1.y, extractor2.u[3]) annotation (Line(points={{-69,-20},{44,-20},{44,-40},{48,-40}}, color={85,170,255}));
+    connect(integerStep1.y, extractor1.index) annotation (Line(points={{-9,-80},{0,-80},{0,-56},{20,-56},{20,-52}}, color={255,127,0}));
     connect(integerStep2.y, extractor2.index) annotation (Line(points={{31,-80},{60,-80},{60,-52}}, color={255,127,0}));
     annotation (experiment(StopTime=1),
       Documentation(info="<html>
@@ -242,21 +242,21 @@ Assigning the if-expression to an intermediate variable first avoids this
     Modelica.ComplexBlocks.ComplexMath.Add3 add3Conjugate(k2=Complex(-1,0), k3=Complex(0,2), useConjugateInput3=true)
       annotation (Placement(transformation(extent={{20,-50},{40,-30}})));
   equation
-    connect(complexRotatingPhasor1.y, feedback1.u1) annotation (Line(points={{-69,60},{-50,60},{-50,96},{-32,96}}, color={85,170,255}));
-    connect(complexConstant2.y, feedback1.u2) annotation (Line(points={{-69,-60},{-20,-60},{-20,78}}, color={85,170,255}));
-    connect(complexRotatingPhasor1.y, feedback2.u1) annotation (Line(points={{-69,60},{-50,60},{-50,66},{-32,66}}, color={85,170,255}));
-    connect(complexConstant2.y, feedback2.u2) annotation (Line(points={{-69,-60},{-20,-60},{-20,48}}, color={85,170,255}));
+    connect(complexRotatingPhasor1.y, feedback1.u1) annotation (Line(points={{-69,60},{-32,60},{-32,90},{-28,90}}, color={85,170,255}));
+    connect(complexConstant2.y, feedback1.u2) annotation (Line(points={{-69,-60},{-26,-60},{-26,-48},{12,-48},{12,48},{-8,48},{-8,78},{-20,78},{-20,82}}, color={85,170,255}));
+    connect(complexRotatingPhasor1.y, feedback2.u1) annotation (Line(points={{-69,60},{-28,60}}, color={85,170,255}));
+    connect(complexConstant2.y, feedback2.u2) annotation (Line(points={{-69,-60},{-26,-60},{-26,-48},{12,-48},{12,48},{-20,48},{-20,52}}, color={85,170,255}));
     connect(complexRotatingPhasor1.y, gain1.u) annotation (Line(points={{-69,60},{-50,60},{-50,30},{-32,30}}, color={85,170,255}));
     connect(complexRotatingPhasor1.y, gain2.u) annotation (Line(points={{-69,60},{-50,60},{-50,0},{-32,0}}, color={85,170,255}));
-    connect(complexRotatingPhasor1.y, division1.u1) annotation (Line(points={{-69,60},{-26,60},{-26,96},{18,96}}, color={85,170,255}));
-    connect(complexConstant2.y, division1.u2) annotation (Line(points={{-69,-60},{-26,-60},{-26,84},{18,84}}, color={85,170,255}));
-    connect(complexRotatingPhasor1.y, division2.u1) annotation (Line(points={{-69,60},{-26,60},{-26,66},{18,66}}, color={85,170,255}));
-    connect(complexConstant2.y, division2.u2) annotation (Line(points={{-69,-60},{-26,-60},{-26,54},{18,54}}, color={85,170,255}));
-    connect(complexRotatingPhasor1.y, add3Default.u1) annotation (Line(points={{-69,60},{-26,60},{-26,8},{18,8}}, color={85,170,255}));
-    connect(complexConstant1.y, add3Default.u2) annotation (Line(points={{-69,0},{18,0}}, color={85,170,255}));
-    connect(complexConstant2.y, add3Default.u3) annotation (Line(points={{-69,-60},{-26,-60},{-26,-8},{18,-8}}, color={85,170,255}));
-    connect(complexRotatingPhasor1.y, add3Conjugate.u1) annotation (Line(points={{-69,60},{-26,60},{-26,-32},{18,-32}}, color={85,170,255}));
-    connect(complexConstant1.y, add3Conjugate.u2) annotation (Line(points={{-69,0},{-26,0},{-26,-40},{18,-40}}, color={85,170,255}));
+    connect(complexRotatingPhasor1.y, division1.u1) annotation (Line(points={{-69,60},{-32,60},{-32,72},{14,72},{14,96},{18,96}}, color={85,170,255}));
+    connect(complexConstant2.y, division1.u2) annotation (Line(points={{-69,-60},{-26,-60},{-26,-48},{12,-48},{12,84},{18,84}}, color={85,170,255}));
+    connect(complexRotatingPhasor1.y, division2.u1) annotation (Line(points={{-69,60},{-32,60},{-32,72},{14,72},{14,66},{18,66}}, color={85,170,255}));
+    connect(complexConstant2.y, division2.u2) annotation (Line(points={{-69,-60},{-26,-60},{-26,-48},{12,-48},{12,54},{18,54}}, color={85,170,255}));
+    connect(complexRotatingPhasor1.y, add3Default.u1) annotation (Line(points={{-69,60},{-50,60},{-50,12},{14,12},{14,8},{18,8}}, color={85,170,255}));
+    connect(complexConstant1.y, add3Default.u2) annotation (Line(points={{-69,0},{-60,0},{-60,-12},{14,-12},{14,0},{18,0}}, color={85,170,255}));
+    connect(complexConstant2.y, add3Default.u3) annotation (Line(points={{-69,-60},{-26,-60},{-26,-48},{12,-48},{12,-8},{18,-8}}, color={85,170,255}));
+    connect(complexRotatingPhasor1.y, add3Conjugate.u1) annotation (Line(points={{-69,60},{-50,60},{-50,12},{10,12},{10,-32},{18,-32}}, color={85,170,255}));
+    connect(complexConstant1.y, add3Conjugate.u2) annotation (Line(points={{-69,0},{-60,0},{-60,-12},{14,-12},{14,-40},{18,-40}}, color={85,170,255}));
     connect(complexConstant2.y, add3Conjugate.u3) annotation (Line(points={{-69,-60},{-26,-60},{-26,-48},{18,-48}}, color={85,170,255}));
     annotation (experiment(StopTime=1),
       Documentation(info="<html>

@@ -11172,7 +11172,7 @@ is evaluated for point gravity on a circular orbit of 7000 km radius (magnitude 
     Modelica.Mechanics.Rotational.Sources.Torque torque1
       annotation (Placement(transformation(extent={{-70,-70},{-50,-50}})));
     Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearingAdaptor adaptorA
-      annotation (Placement(transformation(extent={{-40,-70},{-20,-50}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=180, origin={-30,-60})));
     Modelica.Mechanics.MultiBody.Interfaces.FlangeWithBearingAdaptor adaptorB
       annotation (Placement(transformation(extent={{-10,-70},{10,-50}})));
     Modelica.Mechanics.Rotational.Components.Inertia inertia1(J=1, phi(start=0, fixed=true), w(start=0, fixed=true))
@@ -11181,14 +11181,14 @@ is evaluated for point gravity on a circular orbit of 7000 km radius (magnitude 
     connect(world.frame_b, revolute1.frame_a) annotation (Line(points={{-79,80},{-70,80},{-70,40},{-62,40}}, color={95,95,95}));
     connect(revolute1.frame_b, power1.frame_a) annotation (Line(points={{-39,40},{-32,40}}, color={95,95,95}));
     connect(power1.frame_b, bodyBox1.frame_a) annotation (Line(points={{-9,40},{-2,40}}, color={95,95,95}));
-    connect(world.frame_b, relativeVelocity1.frame_a) annotation (Line(points={{-79,80},{-2,80}}, color={95,95,95}));
-    connect(bodyBox1.frame_b, relativeVelocity1.frame_b) annotation (Line(points={{21,40},{-6,40},{-6,80},{-2,80}}, color={95,95,95}));
+    connect(world.frame_b, relativeVelocity1.frame_a) annotation (Line(points={{-80,80},{-70,80},{-70,68},{-4,68},{-4,80},{0,80}}, color={95,95,95}));
+    connect(bodyBox1.frame_b, relativeVelocity1.frame_b) annotation (Line(points={{20,40},{24,40},{24,80},{20,80}}, color={95,95,95}));
     connect(bodyBox1.frame_b, fixedShape2.frame_a) annotation (Line(points={{21,40},{28,40}}, color={95,95,95}));
     connect(world.frame_b, fixedLines1.frame_a) annotation (Line(points={{-79,80},{-70,80},{-70,0},{-62,0}}, color={95,95,95}));
     connect(torqueSignal.y, torque1.tau) annotation (Line(points={{-79,-60},{-72,-60}}, color={0,0,127}));
-    connect(torque1.flange, adaptorA.flange) annotation (Line(points={{-49,-60},{-42,-60}}, color={0,0,0}));
-    connect(adaptorA.flangeAndFrame, adaptorB.flangeAndFrame) annotation (Line(points={{-19,-60},{-12,-60}}, color={0,0,0}));
-    connect(adaptorB.flange, inertia1.flange_a) annotation (Line(points={{11,-60},{18,-60}}, color={0,0,0}));
+    connect(torque1.flange, adaptorA.flange) annotation (Line(points={{-50,-60},{-30,-60}}, color={0,0,0}));
+    connect(adaptorA.flangeAndFrame, adaptorB.flangeAndFrame) annotation (Line(points={{-20,-60},{-10,-60}}, color={0,0,0}));
+    connect(adaptorB.flange, inertia1.flange_a) annotation (Line(points={{0,-60},{20,-60}}, color={0,0,0}));
     annotation (experiment(StopTime=2),
       Documentation(info="<html>
 <p>

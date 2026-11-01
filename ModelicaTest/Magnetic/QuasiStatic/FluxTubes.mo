@@ -125,29 +125,29 @@ package FluxTubes "Test examples of Modelica.Magnetic.QuasiStatic.FluxTubes"
     Modelica.Magnetic.FluxTubes.Shapes.FixedShape.Toroid toroid(nonLinearPermeability=true, material=Modelica.Magnetic.FluxTubes.Material.SoftMagnetic.CobaltIron.Vacoflux50(), r=0.05, d=0.01, alpha=Modelica.Constants.pi/2)
       annotation (Placement(transformation(extent={{10,30},{30,50}})));
     Modelica.Magnetic.FluxTubes.Shapes.FixedShape.HollowCylinderCircumferentialFlux hollowCylinder(nonLinearPermeability=true, material=Modelica.Magnetic.FluxTubes.Material.SoftMagnetic.ElectricSheet.M530_50A(), l=0.02, r_i=0.01, r_o=0.02, alpha=Modelica.Constants.pi/2)
-      annotation (Placement(transformation(extent={{50,0},{70,20}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={60,10})));
     Modelica.Magnetic.FluxTubes.Sensors.MagneticFluxSensor fluxSensor
       annotation (Placement(transformation(extent={{50,-40},{70,-20}})));
     Modelica.Magnetic.FluxTubes.Sensors.MagneticPotentialDifferenceSensor potentialSensor
       annotation (Placement(transformation(extent={{10,70},{30,90}})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Sensors.Transient.Permeability permeability(A=Modelica.Constants.pi*0.01^2/4, l=0.05*Modelica.Constants.pi/2)
-      annotation (Placement(transformation(extent={{50,70},{70,90}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=90, origin={60,80})));
     Modelica.Magnetic.FluxTubes.Basic.Ground ground
       annotation (Placement(transformation(extent={{-70,-70},{-50,-50}})));
   equation
-    connect(mmf.y, source.V_m) annotation (Line(points={{-79,40},{-76,40},{-76,10},{-72,10}}, color={0,0,127}));
-    connect(source.port_p, permeabilitySensor.fluxP) annotation (Line(points={{-49,10},{-40,10},{-40,40},{-32,40}}, color={255,128,0}));
-    connect(permeabilitySensor.fluxN, toroid.port_p) annotation (Line(points={{-9,40},{8,40}}, color={255,128,0}));
-    connect(toroid.port_n, hollowCylinder.port_p) annotation (Line(points={{31,40},{40,40},{40,10},{48,10}}, color={255,128,0}));
-    connect(hollowCylinder.port_n, fluxSensor.port_p) annotation (Line(points={{71,10},{44,10},{44,-30},{48,-30}}, color={255,128,0}));
-    connect(fluxSensor.port_n, source.port_n) annotation (Line(points={{71,-30},{-76,-30},{-76,10},{-72,10}}, color={255,128,0}));
-    connect(source.port_n, ground.port) annotation (Line(points={{-49,10},{-76,10},{-76,-60},{-72,-60}}, color={255,128,0}));
-    connect(toroid.port_p, permeabilitySensor.potentialP) annotation (Line(points={{31,40},{-32,40}}, color={255,128,0}));
-    connect(toroid.port_n, permeabilitySensor.potentialN) annotation (Line(points={{31,40},{-32,40}}, color={255,128,0}));
-    connect(toroid.port_p, potentialSensor.port_p) annotation (Line(points={{31,40},{4,40},{4,80},{8,80}}, color={255,128,0}));
-    connect(toroid.port_n, potentialSensor.port_n) annotation (Line(points={{31,40},{4,40},{4,80},{8,80}}, color={255,128,0}));
-    connect(fluxSensor.Phi, permeability.Phi) annotation (Line(points={{71,-30},{44,-30},{44,80},{48,80}}, color={0,0,127}));
-    connect(potentialSensor.V_m, permeability.V_m) annotation (Line(points={{31,80},{48,80}}, color={0,0,127}));
+    connect(mmf.y, source.V_m) annotation (Line(points={{-79,40},{-60,40},{-60,21}}, color={0,0,127}));
+    connect(source.port_p, permeabilitySensor.fluxP) annotation (Line(points={{-70,10},{-74,10},{-74,-2},{-34,-2},{-34,40},{-30,40}}, color={255,127,0}));
+    connect(permeabilitySensor.fluxN, toroid.port_p) annotation (Line(points={{-9,40},{8,40}}, color={255,127,0}));
+    connect(toroid.port_n, hollowCylinder.port_p) annotation (Line(points={{30,40},{60,40},{60,20}}, color={255,127,0}));
+    connect(hollowCylinder.port_n, fluxSensor.port_p) annotation (Line(points={{60,0},{60,-10},{46,-10},{46,-30},{50,-30}}, color={255,127,0}));
+    connect(fluxSensor.port_n, source.port_n) annotation (Line(points={{70,-30},{74,-30},{74,-46},{-46,-46},{-46,10},{-50,10}}, color={255,127,0}));
+    connect(source.port_n, ground.port) annotation (Line(points={{-50,10},{-46,10},{-46,-46},{-60,-46},{-60,-50}}, color={255,127,0}));
+    connect(toroid.port_p, permeabilitySensor.potentialP) annotation (Line(points={{10,40},{-8,40},{-8,54},{-20,54},{-20,50}}, color={255,127,0}));
+    connect(toroid.port_n, permeabilitySensor.potentialN) annotation (Line(points={{30,40},{34,40},{34,26},{-20,26},{-20,30}}, color={255,127,0}));
+    connect(toroid.port_p, potentialSensor.port_p) annotation (Line(points={{10,40},{6,40},{6,80},{10,80}}, color={255,127,0}));
+    connect(toroid.port_n, potentialSensor.port_n) annotation (Line(points={{30,40},{34,40},{34,80},{30,80}}, color={255,127,0}));
+    connect(fluxSensor.Phi, permeability.Phi) annotation (Line(points={{60,-40},{60,-44},{72,-44},{72,62},{54,62},{54,68}}, color={0,0,127}));
+    connect(potentialSensor.V_m, permeability.V_m) annotation (Line(points={{20,70},{20,64},{66,64},{66,68}}, color={0,0,127}));
     annotation (experiment(StopTime=0.1),
       Documentation(info="<html>
 <p>
@@ -177,49 +177,49 @@ in series. The effective permeability of the toroid is measured twice:
     Modelica.Magnetic.QuasiStatic.FluxTubes.Basic.ConstantReluctance constantReluctance(R_m=1e5)
       annotation (Placement(transformation(extent={{-50,60},{-30,80}})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Basic.ConstantPermeance constantPermeance(G_m=1e-5)
-      annotation (Placement(transformation(extent={{-30,60},{-10,80}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-10,70})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Shapes.FixedShape.Cuboid cuboid(mu_rConst=1000, l=0.02, a=0.01, b=0.01)
-      annotation (Placement(transformation(extent={{-10,60},{10,80}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={20,70})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Shapes.FixedShape.GenericFluxTube genericFluxTube(mu_rConst=1000, l=0.02, area=1e-4)
-      annotation (Placement(transformation(extent={{10,60},{30,80}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={50,70})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Shapes.FixedShape.HollowCylinderAxialFlux hollowAxial(mu_rConst=1000)
-      annotation (Placement(transformation(extent={{30,60},{50,80}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={80,70})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Shapes.FixedShape.HollowCylinderCircumferentialFlux hollowCircumferential(mu_rConst=1000)
-      annotation (Placement(transformation(extent={{50,60},{70,80}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={110,70})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Shapes.FixedShape.HollowCylinderRadialFlux hollowRadial(mu_rConst=1000)
-      annotation (Placement(transformation(extent={{70,60},{90,80}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={140,70})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Shapes.FixedShape.Toroid toroid(mu_rConst=1000)
-      annotation (Placement(transformation(extent={{70,30},{90,50}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={140,40})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Basic.EddyCurrent eddyCurrent(rho=0.098e-6, l=0.1, A=1e-4)
-      annotation (Placement(transformation(extent={{70,0},{90,20}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={140,10})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Basic.Short short
-      annotation (Placement(transformation(extent={{70,-30},{90,-10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=180, origin={140,-20})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Basic.Crossing crossing
-      annotation (Placement(transformation(extent={{50,-30},{70,-10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={110,-20})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Basic.ElectroMagneticConverter converter(N=10)
-      annotation (Placement(transformation(extent={{20,-30},{40,-10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={60,-20})));
     Modelica.Electrical.QuasiStatic.SinglePhase.Basic.Resistor resistor(R_ref=1)
-      annotation (Placement(transformation(extent={{20,-70},{40,-50}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={60,-60})));
     Modelica.Electrical.QuasiStatic.SinglePhase.Basic.Ground electricalGround
-      annotation (Placement(transformation(extent={{-10,-90},{10,-70}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={20,-80})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Sensors.MagneticFluxSensor fluxSensor
-      annotation (Placement(transformation(extent={{-10,-30},{10,-10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=90, origin={20,-20})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Shapes.Leakage.QuarterCylinder quarterCylinder(l=0.05)
-      annotation (Placement(transformation(extent={{-30,0},{-10,20}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-10,10})));
     Modelica.Blocks.Sources.Constant usefulReluctance(k=1e6)
       annotation (Placement(transformation(extent={{-50,-60},{-30,-40}})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Basic.LeakageWithCoefficient leakageWithCoefficient(c_usefulFlux=0.9, G_m(start=1e-7))
-      annotation (Placement(transformation(extent={{-30,-30},{-10,-10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-10,-20})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Basic.Idle idle
-      annotation (Placement(transformation(extent={{-30,-60},{-10,-40}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={-10,-50})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Sensors.MagneticPotentialDifferenceSensor potentialDifferenceSensor
       annotation (Placement(transformation(extent={{-50,90},{-30,110}})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Sensors.MagneticPotentialSensor potentialSensor
-      annotation (Placement(transformation(extent={{-10,90},{10,110}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=90, origin={20,100})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Sensors.FrequencySensor frequencySensor
-      annotation (Placement(transformation(extent={{10,90},{30,110}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=90, origin={50,100})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Sensors.ReferenceSensor referenceSensor
-      annotation (Placement(transformation(extent={{30,90},{50,110}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=90, origin={80,100})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Basic.Ground ground
       annotation (Placement(transformation(extent={{-70,-90},{-50,-70}})));
     Modelica.ComplexBlocks.Sources.ComplexExpression fluxSignal(y=Complex(1e-4*(1 + time), -5e-5))
@@ -231,49 +231,49 @@ in series. The effective permeability of the toroid is measured twice:
     Modelica.Magnetic.QuasiStatic.FluxTubes.Sensors.MagneticPotentialDifferenceSensor fluxSensor2
       annotation (Placement(transformation(extent={{-40,-150},{-20,-130}})));
     Modelica.Magnetic.QuasiStatic.FluxTubes.Basic.Ground ground2
-      annotation (Placement(transformation(extent={{-10,-140},{10,-120}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={20,-130})));
   equation
-    connect(frequency.y, source.f) annotation (Line(points={{-79,80},{-76,80},{-76,34},{-72,34}}, color={0,0,127}));
-    connect(vmSignal.y, source.V_m) annotation (Line(points={{-79,40},{-72,40}}, color={85,170,255}));
-    connect(source.port_p, constantReluctance.port_p) annotation (Line(points={{-49,40},{-56,40},{-56,70},{-52,70}}, color={255,128,0}));
-    connect(constantReluctance.port_n, constantPermeance.port_p) annotation (Line(points={{-29,70},{-32,70}}, color={255,128,0}));
-    connect(constantPermeance.port_n, cuboid.port_p) annotation (Line(points={{-9,70},{-12,70}}, color={255,128,0}));
-    connect(cuboid.port_n, genericFluxTube.port_p) annotation (Line(points={{11,70},{8,70}}, color={255,128,0}));
-    connect(genericFluxTube.port_n, hollowAxial.port_p) annotation (Line(points={{31,70},{28,70}}, color={255,128,0}));
-    connect(hollowAxial.port_n, hollowCircumferential.port_p) annotation (Line(points={{51,70},{48,70}}, color={255,128,0}));
-    connect(hollowCircumferential.port_n, hollowRadial.port_p) annotation (Line(points={{71,70},{68,70}}, color={255,128,0}));
-    connect(hollowRadial.port_n, toroid.port_p) annotation (Line(points={{91,70},{64,70},{64,40},{68,40}}, color={255,128,0}));
-    connect(toroid.port_n, eddyCurrent.port_p) annotation (Line(points={{91,40},{64,40},{64,10},{68,10}}, color={255,128,0}));
-    connect(eddyCurrent.port_n, short.port_p) annotation (Line(points={{91,10},{64,10},{64,-20},{68,-20}}, color={255,128,0}));
-    connect(short.port_n, crossing.port_p1) annotation (Line(points={{91,-20},{48,-20}}, color={255,128,0}));
-    connect(crossing.port_p2, converter.port_p) annotation (Line(points={{71,-20},{18,-20}}, color={255,128,0}));
-    connect(converter.port_n, fluxSensor.port_p) annotation (Line(points={{41,-20},{-12,-20}}, color={255,128,0}));
-    connect(fluxSensor.port_n, crossing.port_n2) annotation (Line(points={{11,-20},{48,-20}}, color={255,128,0}));
-    connect(crossing.port_n1, source.port_n) annotation (Line(points={{71,-20},{-76,-20},{-76,40},{-72,40}}, color={255,128,0}));
-    connect(converter.pin_p, resistor.pin_p) annotation (Line(points={{41,-20},{14,-20},{14,-60},{18,-60}}, color={0,0,127}));
-    connect(resistor.pin_n, converter.pin_n) annotation (Line(points={{41,-60},{14,-60},{14,-20},{18,-20}}, color={0,0,127}));
-    connect(converter.pin_n, electricalGround.pin) annotation (Line(points={{41,-20},{-16,-20},{-16,-80},{-12,-80}}, color={0,0,127}));
-    connect(converter.port_p, idle.port_p) annotation (Line(points={{41,-20},{-36,-20},{-36,-50},{-32,-50}}, color={255,128,0}));
-    connect(idle.port_n, converter.port_n) annotation (Line(points={{-9,-50},{4,-50},{4,-20},{18,-20}}, color={255,128,0}));
-    connect(source.port_p, quarterCylinder.port_p) annotation (Line(points={{-49,40},{-40,40},{-40,10},{-32,10}}, color={255,128,0}));
-    connect(quarterCylinder.port_n, source.port_n) annotation (Line(points={{-9,10},{-76,10},{-76,40},{-72,40}}, color={255,128,0}));
-    connect(usefulReluctance.y, leakageWithCoefficient.R_mUsefulTot) annotation (Line(points={{-29,-50},{-36,-50},{-36,-20},{-32,-20}}, color={0,0,127}));
-    connect(source.port_p, leakageWithCoefficient.port_p) annotation (Line(points={{-49,40},{-40,40},{-40,-20},{-32,-20}}, color={255,128,0}));
-    connect(leakageWithCoefficient.port_n, source.port_n) annotation (Line(points={{-9,-20},{-76,-20},{-76,40},{-72,40}}, color={255,128,0}));
-    connect(source.port_n, ground.port) annotation (Line(points={{-49,40},{-76,40},{-76,-80},{-72,-80}}, color={255,128,0}));
-    connect(constantReluctance.port_p, potentialDifferenceSensor.port_p) annotation (Line(points={{-29,70},{-56,70},{-56,100},{-52,100}}, color={255,128,0}));
-    connect(constantReluctance.port_n, potentialDifferenceSensor.port_n) annotation (Line(points={{-29,70},{-56,70},{-56,100},{-52,100}}, color={255,128,0}));
-    connect(toroid.port_p, potentialSensor.port) annotation (Line(points={{91,40},{-16,40},{-16,100},{-12,100}}, color={255,128,0}));
-    connect(toroid.port_p, frequencySensor.port) annotation (Line(points={{91,40},{4,40},{4,100},{8,100}}, color={255,128,0}));
-    connect(toroid.port_p, referenceSensor.port) annotation (Line(points={{91,40},{24,40},{24,100},{28,100}}, color={255,128,0}));
-    connect(fluxSignal.y, fluxSource.Phi) annotation (Line(points={{-79,-110},{-72,-110}}, color={85,170,255}));
-    connect(frequency.y, fluxSource.f) annotation (Line(points={{-79,80},{-76,80},{-76,-116},{-72,-116}}, color={0,0,127}));
-    connect(fluxSource.port_p, reluctance2.port_p) annotation (Line(points={{-49,-110},{-42,-110}}, color={255,128,0}));
-    connect(reluctance2.port_n, fluxSource.port_n) annotation (Line(points={{-19,-110},{-72,-110}}, color={255,128,0}));
-    connect(reluctance2.port_p, fluxSensor2.port_p) annotation (Line(points={{-19,-110},{-46,-110},{-46,-140},{-42,-140}}, color={255,128,0}));
-    connect(reluctance2.port_n, fluxSensor2.port_n) annotation (Line(points={{-19,-110},{-46,-110},{-46,-140},{-42,-140}}, color={255,128,0}));
-    connect(fluxSource.port_n, ground2.port) annotation (Line(points={{-49,-110},{-30,-110},{-30,-130},{-12,-130}}, color={255,128,0}));
-    annotation (Diagram(coordinateSystem(extent={{-100,-160},{100,120}})),
+    connect(frequency.y, source.f) annotation (Line(points={{-79,80},{-60,80},{-60,56},{-54,56},{-54,52}}, color={0,0,127}));
+    connect(vmSignal.y, source.V_m) annotation (Line(points={{-79,40},{-72,40},{-72,56},{-66,56},{-66,52}}, color={85,170,255}));
+    connect(source.port_p, constantReluctance.port_p) annotation (Line(points={{-70,40},{-74,40},{-74,70},{-50,70}}, color={255,170,85}));
+    connect(constantReluctance.port_n, constantPermeance.port_p) annotation (Line(points={{-30,70},{-20,70}}, color={255,170,85}));
+    connect(constantPermeance.port_n, cuboid.port_p) annotation (Line(points={{0,70},{10,70}}, color={255,170,85}));
+    connect(cuboid.port_n, genericFluxTube.port_p) annotation (Line(points={{30,70},{40,70}}, color={255,170,85}));
+    connect(genericFluxTube.port_n, hollowAxial.port_p) annotation (Line(points={{60,70},{70,70}}, color={255,170,85}));
+    connect(hollowAxial.port_n, hollowCircumferential.port_p) annotation (Line(points={{90,70},{100,70}}, color={255,170,85}));
+    connect(hollowCircumferential.port_n, hollowRadial.port_p) annotation (Line(points={{120,70},{128,70},{128,84},{140,84},{140,80}}, color={255,170,85}));
+    connect(hollowRadial.port_n, toroid.port_p) annotation (Line(points={{140,60},{140,50}}, color={255,170,85}));
+    connect(toroid.port_n, eddyCurrent.port_p) annotation (Line(points={{140,30},{140,20}}, color={255,170,85}));
+    connect(eddyCurrent.port_n, short.port_p) annotation (Line(points={{140,0},{140,-8},{154,-8},{154,-20},{150,-20}}, color={255,170,85}));
+    connect(short.port_n, crossing.port_p1) annotation (Line(points={{130,-20},{122,-20},{122,-8},{96,-8},{96,-10},{100,-10}}, color={255,170,85}));
+    connect(crossing.port_p2, converter.port_p) annotation (Line(points={{120,-30},{124,-30},{124,-32},{80,-32},{80,-10},{70,-10}}, color={255,170,85}));
+    connect(converter.port_n, fluxSensor.port_p) annotation (Line(points={{70,-30},{74,-30},{74,-34},{20,-34},{20,-30}}, color={255,170,85}));
+    connect(fluxSensor.port_n, crossing.port_n2) annotation (Line(points={{20,-10},{20,-6},{124,-6},{124,-10},{120,-10}}, color={255,170,85}));
+    connect(crossing.port_n1, source.port_n) annotation (Line(points={{100,-30},{90,-30},{90,0},{4,0},{4,40},{-50,40}}, color={255,170,85}));
+    connect(converter.pin_p, resistor.pin_p) annotation (Line(points={{50,-10},{46,-10},{46,-60},{50,-60}}, color={85,170,255}));
+    connect(resistor.pin_n, converter.pin_n) annotation (Line(points={{70,-60},{74,-60},{74,-36},{48,-36},{48,-30},{50,-30}}, color={85,170,255}));
+    connect(converter.pin_n, electricalGround.pin) annotation (Line(points={{50,-30},{40,-30},{40,-66},{20,-66},{20,-70}}, color={85,170,255}));
+    connect(converter.port_p, idle.port_p) annotation (Line(points={{70,-10},{74,-10},{74,-8},{2,-8},{2,-36},{-10,-36},{-10,-40}}, color={255,170,85}));
+    connect(idle.port_n, converter.port_n) annotation (Line(points={{-10,-60},{-10,-64},{18,-64},{18,-34},{74,-34},{74,-30},{70,-30}}, color={255,170,85}));
+    connect(source.port_p, quarterCylinder.port_p) annotation (Line(points={{-70,40},{-74,40},{-74,10},{-20,10}}, color={255,170,85}));
+    connect(quarterCylinder.port_n, source.port_n) annotation (Line(points={{0,10},{4,10},{4,40},{-50,40}}, color={255,170,85}));
+    connect(usefulReluctance.y, leakageWithCoefficient.R_mUsefulTot) annotation (Line(points={{-29,-50},{-22,-50},{-22,-4},{-10,-4},{-10,-8}}, color={0,0,127}));
+    connect(source.port_p, leakageWithCoefficient.port_p) annotation (Line(points={{-70,40},{-74,40},{-74,10},{-24,10},{-24,-20},{-20,-20}}, color={255,170,85}));
+    connect(leakageWithCoefficient.port_n, source.port_n) annotation (Line(points={{0,-20},{4,-20},{4,40},{-50,40}}, color={255,170,85}));
+    connect(source.port_n, ground.port) annotation (Line(points={{-50,40},{-46,40},{-46,-30},{-60,-30},{-60,-70}}, color={255,170,85}));
+    connect(constantReluctance.port_p, potentialDifferenceSensor.port_p) annotation (Line(points={{-50,70},{-54,70},{-54,100},{-50,100}}, color={255,170,85}));
+    connect(constantReluctance.port_n, potentialDifferenceSensor.port_n) annotation (Line(points={{-30,70},{-26,70},{-26,100},{-30,100}}, color={255,170,85}));
+    connect(toroid.port_p, potentialSensor.port) annotation (Line(points={{140,50},{140,58},{152,58},{152,86},{20,86},{20,90}}, color={255,170,85}));
+    connect(toroid.port_p, frequencySensor.port) annotation (Line(points={{140,50},{140,58},{152,58},{152,86},{50,86},{50,90}}, color={255,170,85}));
+    connect(toroid.port_p, referenceSensor.port) annotation (Line(points={{140,50},{140,58},{152,58},{152,86},{80,86},{80,90}}, color={255,170,85}));
+    connect(fluxSignal.y, fluxSource.Phi) annotation (Line(points={{-79,-110},{-72,-110},{-72,-94},{-66,-94},{-66,-98}}, color={85,170,255}));
+    connect(frequency.y, fluxSource.f) annotation (Line(points={{-79,80},{-76,80},{-76,-92},{-54,-92},{-54,-98}}, color={0,0,127}));
+    connect(fluxSource.port_p, reluctance2.port_p) annotation (Line(points={{-70,-110},{-74,-110},{-74,-122},{-44,-122},{-44,-110},{-40,-110}}, color={255,170,85}));
+    connect(reluctance2.port_n, fluxSource.port_n) annotation (Line(points={{-20,-110},{-16,-110},{-16,-98},{-46,-98},{-46,-110},{-50,-110}}, color={255,170,85}));
+    connect(reluctance2.port_p, fluxSensor2.port_p) annotation (Line(points={{-40,-110},{-44,-110},{-44,-140},{-40,-140}}, color={255,170,85}));
+    connect(reluctance2.port_n, fluxSensor2.port_n) annotation (Line(points={{-20,-110},{-16,-110},{-16,-140},{-20,-140}}, color={255,170,85}));
+    connect(fluxSource.port_n, ground2.port) annotation (Line(points={{-50,-110},{-46,-110},{-46,-98},{-16,-98},{-16,-116},{20,-116},{20,-120}}, color={255,170,85}));
+    annotation (Diagram(coordinateSystem(extent={{-100,-160},{160,120}})),
       experiment(StopTime=1),
       Documentation(info="<html>
 <p>
@@ -312,20 +312,33 @@ model MagneticPortBase
   extends Modelica.Icons.Example;
   model PotentialProbe "Sets the magnetic potential of its MagneticPort"
     input Complex V_m "Magnetic potential";
-    Modelica.Magnetic.QuasiStatic.FluxTubes.Interfaces.MagneticPort port "Port";
+    Modelica.Magnetic.QuasiStatic.FluxTubes.Interfaces.MagneticPort port "Port"
+      annotation (Placement(transformation(extent={{90,-10},{110,10}})));
   equation
     port.V_m = V_m;
+    annotation (Icon(graphics={
+          Rectangle(extent={{-80,40},{80,-40}}, lineColor={255,170,85}, fillColor={255,255,255},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-150,-50},{150,-90}}, textString="%name", textColor={0,0,255})}));
   end PotentialProbe;
   model FluxProbe "Draws a magnetic flux from its MagneticPort"
     input Complex Phi "Magnetic flux into the port";
-    Modelica.Magnetic.QuasiStatic.FluxTubes.Interfaces.MagneticPort port "Port";
+    Modelica.Magnetic.QuasiStatic.FluxTubes.Interfaces.MagneticPort port "Port"
+      annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
   equation
     port.Phi = Phi;
+    annotation (Icon(graphics={
+          Rectangle(extent={{-80,40},{80,-40}}, lineColor={255,170,85}, fillColor={255,255,255},
+            fillPattern=FillPattern.Solid),
+          Text(extent={{-150,-50},{150,-90}}, textString="%name", textColor={0,0,255})}));
   end FluxProbe;
-  PotentialProbe a(V_m=Complex(100*time, 50)) "Potential probe";
-  FluxProbe b(Phi=Complex(1e-3, -2e-3*time)) "Flux probe";
+  PotentialProbe a(V_m=Complex(100*time, 50)) "Potential probe"
+    annotation (Placement(transformation(extent={{-40,-10},{-20,10}})));
+  FluxProbe b(Phi=Complex(1e-3, -2e-3*time)) "Flux probe"
+    annotation (Placement(transformation(extent={{20,-10},{40,10}})));
 equation
-  connect(a.port, b.port);
+  connect(a.port, b.port)
+    annotation (Line(points={{-20,0},{20,0}}, color={255,170,85}));
   annotation (experiment(StopTime=1), Documentation(info="<html>
 <p>
 <a href=\"modelica://Modelica.Magnetic.QuasiStatic.FluxTubes.Interfaces.MagneticPort\">QuasiStatic.FluxTubes.Interfaces.MagneticPort</a>

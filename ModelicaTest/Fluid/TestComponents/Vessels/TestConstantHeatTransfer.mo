@@ -7,13 +7,13 @@ model TestConstantHeatTransfer "Test of Modelica.Fluid.Vessels.BaseClasses.HeatT
   Modelica.Thermal.HeatTransfer.Sources.FixedTemperature wall(T=353.15)
     annotation (Placement(transformation(extent={{-70,-10},{-50,10}})));
   Modelica.Fluid.Sources.Boundary_pT pressure(redeclare package Medium = Medium, p=1e5, T=293.15, nPorts=1)
-    annotation (Placement(transformation(extent={{50,-10},{70,10}})));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=270, origin={60,0})));
   inner Modelica.Fluid.System system
     annotation (Placement(transformation(extent={{60,-90},{80,-70}})));
   replaceable package Medium = Modelica.Media.Water.ConstantPropertyLiquidWater constrainedby Modelica.Media.Interfaces.PartialMedium "Medium in all components";
 equation
   connect(wall.port, volume.heatPort) annotation (Line(points={{-49,0},{-12,0}}, color={191,0,0}));
-  connect(pressure.ports[1], volume.ports[1]) annotation (Line(points={{71,0},{-12,0}}, color={0,127,255}));
+  connect(pressure.ports[1], volume.ports[1]) annotation (Line(points={{60,-10},{60,-14},{0,-14},{0,-10}}, color={0,127,255}));
   annotation (experiment(StopTime=600),
     Documentation(info="<html>
 <p>

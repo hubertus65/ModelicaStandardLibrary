@@ -8,93 +8,93 @@ package Digital "Test models for Modelica.Electrical.Digital"
     Modelica.Electrical.Digital.Sources.DigitalClock clock(period=0.2, width=50)
       annotation (Placement(transformation(extent={{-100,90},{-80,110}})));
     Modelica.Electrical.Digital.Sources.Step step(before=Modelica.Electrical.Digital.Interfaces.Logic.'0', after=Modelica.Electrical.Digital.Interfaces.Logic.'1', stepTime=0.35)
-      annotation (Placement(transformation(extent={{-100,60},{-80,80}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-90,60})));
     Modelica.Electrical.Digital.Sources.Pulse pulse(width=30, period=0.15, pulse=Modelica.Electrical.Digital.Interfaces.Logic.'1', quiet=Modelica.Electrical.Digital.Interfaces.Logic.'0')
-      annotation (Placement(transformation(extent={{-100,30},{-80,50}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-90,20})));
     Modelica.Electrical.Digital.Sources.Set setX(x=Modelica.Electrical.Digital.Interfaces.Logic.'X')
-      annotation (Placement(transformation(extent={{-100,0},{-80,20}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-90,-30})));
     Modelica.Electrical.Digital.Sources.Table table(x={Modelica.Electrical.Digital.Interfaces.Logic.'1', Modelica.Electrical.Digital.Interfaces.Logic.'0', Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'Z', Modelica.Electrical.Digital.Interfaces.Logic.'1'}, t={0.1, 0.3, 0.5, 0.7, 0.9})
-      annotation (Placement(transformation(extent={{-100,-30},{-80,-10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-90,-70})));
     Modelica.Electrical.Digital.Basic.Nand nand1(n=2)
       annotation (Placement(transformation(extent={{-60,90},{-40,110}})));
     Modelica.Electrical.Digital.Basic.Xnor xnor1(n=2)
-      annotation (Placement(transformation(extent={{-60,60},{-40,80}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-50,60})));
     Modelica.Electrical.Digital.Gates.InvGate invGate(tLH=0.01, tHL=0.02)
       annotation (Placement(transformation(extent={{-20,90},{0,110}})));
     Modelica.Electrical.Digital.Gates.NandGate nandGate(n=2, tLH=0.01, tHL=0.02)
-      annotation (Placement(transformation(extent={{-20,65},{0,85}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-10,60})));
     Modelica.Electrical.Digital.Gates.OrGate orGate(n=2, tLH=0.01, tHL=0.02)
-      annotation (Placement(transformation(extent={{-20,40},{0,60}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-10,30})));
     Modelica.Electrical.Digital.Gates.NorGate norGate(n=2, tLH=0.01, tHL=0.02)
-      annotation (Placement(transformation(extent={{-20,15},{0,35}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-10,0})));
     Modelica.Electrical.Digital.Gates.XnorGate xnorGate(n=2, tLH=0.01, tHL=0.02)
-      annotation (Placement(transformation(extent={{-20,-10},{0,10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-10,-40})));
     Modelica.Electrical.Digital.Gates.BufGate bufGate(tLH=0.03, tHL=0.01)
-      annotation (Placement(transformation(extent={{-20,-35},{0,-15}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-10,-80})));
     Modelica.Electrical.Digital.Delay.InertialDelay inertialDelay(delayTime=0.05)
-      annotation (Placement(transformation(extent={{-20,-60},{0,-40}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-10,-110})));
     Modelica.Electrical.Digital.Tristates.PXFERGATE pxfer
       annotation (Placement(transformation(extent={{20,90},{40,110}})));
     Modelica.Electrical.Digital.Tristates.PRXFERGATE prxfer
-      annotation (Placement(transformation(extent={{20,65},{40,85}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={30,60})));
     Modelica.Electrical.Digital.Tristates.BUF3SL buf3sl
-      annotation (Placement(transformation(extent={{20,40},{40,60}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={30,30})));
     Modelica.Electrical.Digital.Tristates.INV3SL inv3sl
-      annotation (Placement(transformation(extent={{20,15},{40,35}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={30,0})));
     Modelica.Electrical.Digital.Converters.LogicToX01 toX01(n=1)
-      annotation (Placement(transformation(extent={{20,-20},{40,0}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={30,-50})));
     Modelica.Electrical.Digital.Converters.LogicToX01Z toX01Z(n=1)
-      annotation (Placement(transformation(extent={{20,-45},{40,-25}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={30,-80})));
     Modelica.Electrical.Digital.Converters.LogicToUX01 toUX01(n=1)
-      annotation (Placement(transformation(extent={{20,-70},{40,-50}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={30,-120})));
     Modelica.Blocks.Sources.BooleanPulse booleanPulse(width=50, period=0.25)
-      annotation (Placement(transformation(extent={{-100,-70},{-80,-50}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-90,-120})));
     Modelica.Electrical.Digital.Converters.BooleanToLogic booleanToLogic(n=1)
-      annotation (Placement(transformation(extent={{-60,-70},{-40,-50}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-50,-120})));
     Modelica.Electrical.Digital.Converters.LogicToBoolean logicToBoolean(n=1)
-      annotation (Placement(transformation(extent={{-60,-100},{-40,-80}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-50,-150})));
     Modelica.Blocks.Sources.Ramp ramp(height=1.5, duration=1, offset=-0.2)
-      annotation (Placement(transformation(extent={{-100,-130},{-80,-110}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-90,-180})));
     Modelica.Electrical.Digital.Converters.RealToLogic realToLogic(n=1, upper_limit=0.7, lower_limit=0.3)
-      annotation (Placement(transformation(extent={{-60,-130},{-40,-110}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-50,-180})));
     Modelica.Electrical.Digital.Memories.DLATROM rom(n_addr=2, n_data=4)
-      annotation (Placement(transformation(extent={{20,-110},{40,-90}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={30,-160})));
     Modelica.Electrical.Digital.Sources.Table addr2(x={Modelica.Electrical.Digital.Interfaces.Logic.'1', Modelica.Electrical.Digital.Interfaces.Logic.'0'}, t={0.25, 0.75})
-      annotation (Placement(transformation(extent={{-20,-120},{0,-100}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-10,-170})));
   equation
-    connect(clock.y, nand1.x[1]) annotation (Line(points={{-79,100},{-62,100}}, color={0,0,127}));
-    connect(step.y, nand1.x[2]) annotation (Line(points={{-79,70},{-70,70},{-70,100},{-62,100}}, color={0,0,127}));
-    connect(clock.y, xnor1.x[1]) annotation (Line(points={{-79,100},{-70,100},{-70,70},{-62,70}}, color={0,0,127}));
-    connect(pulse.y, xnor1.x[2]) annotation (Line(points={{-79,40},{-70,40},{-70,70},{-62,70}}, color={0,0,127}));
-    connect(clock.y, invGate.x) annotation (Line(points={{-79,100},{-22,100}}, color={0,0,127}));
-    connect(clock.y, nandGate.x[1]) annotation (Line(points={{-79,100},{-50,100},{-50,75},{-22,75}}, color={0,0,127}));
-    connect(step.y, nandGate.x[2]) annotation (Line(points={{-79,70},{-50,70},{-50,75},{-22,75}}, color={0,0,127}));
-    connect(clock.y, orGate.x[1]) annotation (Line(points={{-79,100},{-50,100},{-50,50},{-22,50}}, color={0,0,127}));
-    connect(pulse.y, orGate.x[2]) annotation (Line(points={{-79,40},{-50,40},{-50,50},{-22,50}}, color={0,0,127}));
-    connect(step.y, norGate.x[1]) annotation (Line(points={{-79,70},{-50,70},{-50,25},{-22,25}}, color={0,0,127}));
-    connect(pulse.y, norGate.x[2]) annotation (Line(points={{-79,40},{-50,40},{-50,25},{-22,25}}, color={0,0,127}));
-    connect(clock.y, xnorGate.x[1]) annotation (Line(points={{-79,100},{-50,100},{-50,0},{-22,0}}, color={0,0,127}));
-    connect(step.y, xnorGate.x[2]) annotation (Line(points={{-79,70},{-50,70},{-50,0},{-22,0}}, color={0,0,127}));
-    connect(pulse.y, bufGate.x) annotation (Line(points={{-79,40},{-50,40},{-50,-25},{-22,-25}}, color={0,0,127}));
-    connect(pulse.y, inertialDelay.x) annotation (Line(points={{-79,40},{-50,40},{-50,-50},{-22,-50}}, color={0,0,127}));
-    connect(clock.y, pxfer.x) annotation (Line(points={{-79,100},{18,100}}, color={0,0,127}));
-    connect(step.y, pxfer.enable) annotation (Line(points={{-79,70},{-30,70},{-30,100},{18,100}}, color={0,0,127}));
-    connect(clock.y, prxfer.x) annotation (Line(points={{-79,100},{-30,100},{-30,75},{18,75}}, color={0,0,127}));
-    connect(step.y, prxfer.enable) annotation (Line(points={{-79,70},{-30,70},{-30,75},{18,75}}, color={0,0,127}));
-    connect(clock.y, buf3sl.x) annotation (Line(points={{-79,100},{-30,100},{-30,50},{18,50}}, color={0,0,127}));
-    connect(pulse.y, buf3sl.enable) annotation (Line(points={{-79,40},{-30,40},{-30,50},{18,50}}, color={0,0,127}));
-    connect(clock.y, inv3sl.x) annotation (Line(points={{-79,100},{-30,100},{-30,25},{18,25}}, color={0,0,127}));
-    connect(pulse.y, inv3sl.enable) annotation (Line(points={{-79,40},{-30,40},{-30,25},{18,25}}, color={0,0,127}));
-    connect(table.y, toX01.x[1]) annotation (Line(points={{-79,-20},{-30,-20},{-30,-10},{18,-10}}, color={0,0,127}));
-    connect(table.y, toX01Z.x[1]) annotation (Line(points={{-79,-20},{-30,-20},{-30,-35},{18,-35}}, color={0,0,127}));
-    connect(table.y, toUX01.x[1]) annotation (Line(points={{-79,-20},{-30,-20},{-30,-60},{18,-60}}, color={0,0,127}));
-    connect(booleanPulse.y, booleanToLogic.x[1]) annotation (Line(points={{-79,-60},{-62,-60}}, color={255,0,255}));
-    connect(booleanToLogic.y[1], logicToBoolean.x[1]) annotation (Line(points={{-39,-60},{-66,-60},{-66,-90},{-62,-90}}, color={0,0,127}));
-    connect(ramp.y, realToLogic.x[1]) annotation (Line(points={{-79,-120},{-62,-120}}, color={0,0,127}));
-    connect(clock.y, rom.addr[1]) annotation (Line(points={{-79,100},{-30,100},{-30,-100},{18,-100}}, color={0,0,127}));
-    connect(addr2.y, rom.addr[2]) annotation (Line(points={{1,-110},{10,-110},{10,-100},{18,-100}}, color={0,0,127}));
-    connect(setX.y, rom.RE) annotation (Line(points={{-79,10},{-30,10},{-30,-100},{18,-100}}, color={0,0,127}));
-    annotation (Diagram(coordinateSystem(extent={{-100,-140},{100,120}})),
+    connect(clock.y, nand1.x[1]) annotation (Line(points={{-80,100},{-56,100}}, color={127,0,127}));
+    connect(step.y, nand1.x[2]) annotation (Line(points={{-80,60},{-70,60},{-70,88},{-56,88},{-56,100}}, color={127,0,127}));
+    connect(clock.y, xnor1.x[1]) annotation (Line(points={{-80,100},{-62,100},{-62,72},{-56,72},{-56,60}}, color={127,0,127}));
+    connect(pulse.y, xnor1.x[2]) annotation (Line(points={{-80,20},{-56,20},{-56,60}}, color={127,0,127}));
+    connect(clock.y, invGate.x) annotation (Line(points={{-80,100},{-62,100},{-62,112},{-22,112},{-22,100},{-16,100}}, color={127,0,127}));
+    connect(clock.y, nandGate.x[1]) annotation (Line(points={{-80,100},{-62,100},{-62,72},{-30,72},{-30,60},{-16,60}}, color={127,0,127}));
+    connect(step.y, nandGate.x[2]) annotation (Line(points={{-80,60},{-70,60},{-70,88},{-22,88},{-22,60},{-16,60}}, color={127,0,127}));
+    connect(clock.y, orGate.x[1]) annotation (Line(points={{-80,100},{-62,100},{-62,72},{-30,72},{-30,42},{-16,42},{-16,30}}, color={127,0,127}));
+    connect(pulse.y, orGate.x[2]) annotation (Line(points={{-80,20},{-56,20},{-56,30},{-16,30}}, color={127,0,127}));
+    connect(step.y, norGate.x[1]) annotation (Line(points={{-80,60},{-70,60},{-70,0},{-16,0}}, color={127,0,127}));
+    connect(pulse.y, norGate.x[2]) annotation (Line(points={{-80,20},{-22,20},{-22,0},{-16,0}}, color={127,0,127}));
+    connect(clock.y, xnorGate.x[1]) annotation (Line(points={{-80,100},{-62,100},{-62,72},{-30,72},{-30,42},{14,42},{14,-28},{-16,-28},{-16,-40}}, color={127,0,127}));
+    connect(step.y, xnorGate.x[2]) annotation (Line(points={{-80,60},{-70,60},{-70,0},{-24,0},{-24,-28},{-16,-28},{-16,-40}}, color={127,0,127}));
+    connect(pulse.y, bufGate.x) annotation (Line(points={{-80,20},{-22,20},{-22,12},{2,12},{2,-66},{-16,-66},{-16,-80}}, color={127,0,127}));
+    connect(pulse.y, inertialDelay.x) annotation (Line(points={{-80,20},{-22,20},{-22,12},{2,12},{2,-98},{-16,-98},{-16,-110}}, color={127,0,127}));
+    connect(clock.y, pxfer.x) annotation (Line(points={{-80,100},{-62,100},{-62,112},{16,112},{16,99},{21,99}}, color={127,0,127}));
+    connect(step.y, pxfer.enable) annotation (Line(points={{-80,60},{-70,60},{-70,88},{-22,88},{-22,72},{14,72},{14,108},{17,108},{17,107},{21,107}}, color={127,0,127}));
+    connect(clock.y, prxfer.x) annotation (Line(points={{-80,100},{-62,100},{-62,112},{16,112},{16,100},{18,100},{18,60},{17,60},{17,59},{21,59}}, color={127,0,127}));
+    connect(step.y, prxfer.enable) annotation (Line(points={{-80,60},{-70,60},{-70,88},{-22,88},{-22,72},{16,72},{16,67},{21,67}}, color={127,0,127}));
+    connect(clock.y, buf3sl.x) annotation (Line(points={{-80,100},{-62,100},{-62,72},{-30,72},{-30,42},{14,42},{14,28},{17,28},{17,29},{21,29}}, color={127,0,127}));
+    connect(pulse.y, buf3sl.enable) annotation (Line(points={{-80,20},{-22,20},{-22,12},{16,12},{16,37},{21,37}}, color={127,0,127}));
+    connect(clock.y, inv3sl.x) annotation (Line(points={{-80,100},{-62,100},{-62,112},{8,112},{8,42},{14,42},{14,0},{17,0},{17,-1},{21,-1}}, color={127,0,127}));
+    connect(pulse.y, inv3sl.enable) annotation (Line(points={{-80,20},{-22,20},{-22,12},{16,12},{16,7},{21,7}}, color={127,0,127}));
+    connect(table.y, toX01.x[1]) annotation (Line(points={{-80,-70},{-30,-70},{-30,-68},{18,-68},{18,-50},{25,-50}}, color={127,0,127}));
+    connect(table.y, toX01Z.x[1]) annotation (Line(points={{-80,-70},{-30,-70},{-30,-68},{18,-68},{18,-80},{25,-80}}, color={127,0,127}));
+    connect(table.y, toUX01.x[1]) annotation (Line(points={{-80,-70},{-30,-70},{-30,-68},{18,-68},{18,-120},{25,-120}}, color={127,0,127}));
+    connect(booleanPulse.y, booleanToLogic.x[1]) annotation (Line(points={{-79,-120},{-55,-120}}, color={255,0,255}));
+    connect(booleanToLogic.y[1], logicToBoolean.x[1]) annotation (Line(points={{-45,-120},{-45,-132},{-44,-132},{-44,-138},{-55,-138},{-55,-150}}, color={127,0,127}));
+    connect(ramp.y, realToLogic.x[1]) annotation (Line(points={{-79,-180},{-55,-180}}, color={0,0,127}));
+    connect(clock.y, rom.addr[1]) annotation (Line(points={{-80,100},{-62,100},{-62,112},{8,112},{8,42},{14,42},{14,-154},{21,-154}}, color={127,0,127}));
+    connect(addr2.y, rom.addr[2]) annotation (Line(points={{0,-170},{16,-170},{16,-154},{21,-154}}, color={127,0,127}));
+    connect(setX.y, rom.RE) annotation (Line(points={{-80,-30},{-22,-30},{-22,-150},{10,-150},{10,-162},{16.8,-162},{16.8,-162.2},{20.8,-162.2}}, color={127,0,127}));
+    annotation (Diagram(coordinateSystem(extent={{-100,-200},{100,120}})),
       experiment(StopTime=1),
       Documentation(info="<html>
 <p>

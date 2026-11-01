@@ -8,68 +8,69 @@ package StateGraph "Test models for Modelica.StateGraph"
     inner Modelica.StateGraph.StateGraphRoot stateGraphRoot
       annotation (Placement(transformation(extent={{-90,70},{-70,90}})));
     Modelica.StateGraph.InitialStepWithSignal initialStep1(nIn=1, nOut=1)
-      annotation (Placement(transformation(extent={{-95,-10},{-75,10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-80,-30})));
     Modelica.StateGraph.Alternative alternative1(nBranches=2)
-      annotation (Placement(transformation(extent={{-70,-30},{-10,30}})));
+      annotation (Placement(transformation(extent={{-30,-30},{30,30}}, origin={-30,-30})));
     Modelica.StateGraph.TransitionWithSignal transitionWithSignal1
-      annotation (Placement(transformation(extent={{-65,10},{-45,30}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-20,20})));
     Modelica.StateGraph.StepWithSignal stepWithSignal1(nIn=1, nOut=1)
-      annotation (Placement(transformation(extent={{-50,10},{-30,30}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={90,20})));
     Modelica.StateGraph.Transition transition2(enableTimer=true, waitTime=0.3)
-      annotation (Placement(transformation(extent={{-35,10},{-15,30}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={20,20})));
     Modelica.StateGraph.Transition transition3(enableTimer=true, waitTime=0.6)
-      annotation (Placement(transformation(extent={{-65,-30},{-45,-10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-20,-80})));
     Modelica.StateGraph.Step step2(nIn=1, nOut=1)
-      annotation (Placement(transformation(extent={{-50,-30},{-30,-10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={60,-80})));
     Modelica.StateGraph.Transition transition4(enableTimer=true, waitTime=0.1)
-      annotation (Placement(transformation(extent={{-35,-30},{-15,-10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={20,-80})));
     Modelica.StateGraph.Step stepAfterAlternative(nIn=1, nOut=1)
-      annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={100,-30})));
     Modelica.StateGraph.Transition transition1(enableTimer=true, waitTime=0.1)
-      annotation (Placement(transformation(extent={{5,-10},{25,10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={140,-30})));
     Modelica.Blocks.Sources.BooleanExpression booleanExpression1(y=time > 0.5 and time < 1.5)
-      annotation (Placement(transformation(extent={{-70,-70},{-50,-50}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-30,-120})));
     Modelica.StateGraph.Parallel parallel1(nBranches=2)
-      annotation (Placement(transformation(extent={{25,-30},{75,30}})));
+      annotation (Placement(transformation(extent={{-25,-30},{25,30}}, origin={220,-30})));
     Modelica.StateGraph.Step step3(nIn=1, nOut=1)
-      annotation (Placement(transformation(extent={{25,10},{45,30}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={180,20})));
     Modelica.StateGraph.Transition transition5(enableTimer=true, waitTime=0.2)
-      annotation (Placement(transformation(extent={{40,10},{60,30}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={250,20})));
     Modelica.StateGraph.Step step4(nIn=1, nOut=1)
-      annotation (Placement(transformation(extent={{55,10},{75,30}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={210,20})));
     Modelica.StateGraph.StepWithSignal stepWithSignal2(nIn=1, nOut=1)
-      annotation (Placement(transformation(extent={{25,-30},{45,-10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={180,-80})));
     Modelica.StateGraph.Transition transition6(enableTimer=true, waitTime=0.4)
-      annotation (Placement(transformation(extent={{40,-30},{60,-10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={250,-80})));
     Modelica.StateGraph.Step step5(nIn=1, nOut=1)
-      annotation (Placement(transformation(extent={{55,-30},{75,-10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={210,-80})));
     Modelica.StateGraph.Transition transition7(enableTimer=true, waitTime=0.1)
-      annotation (Placement(transformation(extent={{75,-10},{95,10}})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={270,-30})));
   equation
-    connect(initialStep1.outPort[1], alternative1.inPort) annotation (Line(points={{-74,0},{-72,0}}, color={0,0,0}));
-    connect(alternative1.split[1], transitionWithSignal1.inPort) annotation (Line(points={{-66,20},{-67,20}}, color={0,0,0}));
-    connect(transitionWithSignal1.outPort, stepWithSignal1.inPort[1]) annotation (Line(points={{-44,20},{-52,20}}, color={0,0,0}));
-    connect(stepWithSignal1.outPort[1], transition2.inPort) annotation (Line(points={{-29,20},{-37,20}}, color={0,0,0}));
-    connect(transition2.outPort, alternative1.join[1]) annotation (Line(points={{-14,20},{-14,20}}, color={0,0,0}));
-    connect(alternative1.split[2], transition3.inPort) annotation (Line(points={{-66,0},{-71,0},{-71,-20},{-67,-20}}, color={0,0,0}));
-    connect(transition3.outPort, step2.inPort[1]) annotation (Line(points={{-44,-20},{-52,-20}}, color={0,0,0}));
-    connect(step2.outPort[1], transition4.inPort) annotation (Line(points={{-29,-20},{-37,-20}}, color={0,0,0}));
-    connect(transition4.outPort, alternative1.join[2]) annotation (Line(points={{-14,-20},{-18,-20},{-18,0},{-14,0}}, color={0,0,0}));
-    connect(booleanExpression1.y, transitionWithSignal1.condition) annotation (Line(points={{-49,-60},{-55,-60},{-55,8}}, color={0,0,127}));
-    connect(alternative1.outPort, stepAfterAlternative.inPort[1]) annotation (Line(points={{-9,0},{-12,0}}, color={0,0,0}));
-    connect(stepAfterAlternative.outPort[1], transition1.inPort) annotation (Line(points={{11,0},{3,0}}, color={0,0,0}));
-    connect(transition1.outPort, parallel1.inPort) annotation (Line(points={{26,0},{23,0}}, color={0,0,0}));
-    connect(parallel1.split[1], step3.inPort[1]) annotation (Line(points={{29,20},{23,20}}, color={0,0,0}));
-    connect(step3.outPort[1], transition5.inPort) annotation (Line(points={{46,20},{38,20}}, color={0,0,0}));
-    connect(transition5.outPort, step4.inPort[1]) annotation (Line(points={{61,20},{53,20}}, color={0,0,0}));
-    connect(step4.outPort[1], parallel1.join[1]) annotation (Line(points={{76,20},{71,20}}, color={0,0,0}));
-    connect(parallel1.split[2], stepWithSignal2.inPort[1]) annotation (Line(points={{29,0},{19,0},{19,-20},{23,-20}}, color={0,0,0}));
-    connect(stepWithSignal2.outPort[1], transition6.inPort) annotation (Line(points={{46,-20},{38,-20}}, color={0,0,0}));
-    connect(transition6.outPort, step5.inPort[1]) annotation (Line(points={{61,-20},{53,-20}}, color={0,0,0}));
-    connect(step5.outPort[1], parallel1.join[2]) annotation (Line(points={{76,-20},{67,-20},{67,0},{71,0}}, color={0,0,0}));
-    connect(parallel1.outPort, transition7.inPort) annotation (Line(points={{76,0},{73,0}}, color={0,0,0}));
-    connect(transition7.outPort, initialStep1.inPort[1]) annotation (Line(points={{96,0},{-97,0}}, color={0,0,0}));
-    annotation (experiment(StopTime=3.5),
+    connect(initialStep1.outPort[1], alternative1.inPort) annotation (Line(points={{-69.5,-30},{-60.9,-30}}, color={0,0,0}));
+    connect(alternative1.split[1], transitionWithSignal1.inPort) annotation (Line(points={{-53.7,-30},{-53.7,2},{-54,2},{-54,8},{-24,8},{-24,20}}, color={0,0,0}));
+    connect(transitionWithSignal1.outPort, stepWithSignal1.inPort[1]) annotation (Line(points={{-18.5,20},{0,20},{0,34},{76,34},{76,20},{79,20}}, color={0,0,0}));
+    connect(stepWithSignal1.outPort[1], transition2.inPort) annotation (Line(points={{100.5,20},{104,20},{104,32},{32,32},{32,20},{16,20}}, color={0,0,0}));
+    connect(transition2.outPort, alternative1.join[1]) annotation (Line(points={{21.5,20},{21.5,8},{22,8},{22,2},{-6.3,2},{-6.3,-30}}, color={0,0,0}));
+    connect(alternative1.split[2], transition3.inPort) annotation (Line(points={{-53.7,-30},{-53.7,-62},{-54,-62},{-54,-68},{-24,-68},{-24,-80}}, color={0,0,0}));
+    connect(transition3.outPort, step2.inPort[1]) annotation (Line(points={{-18.5,-80},{0,-80},{0,-92},{44,-92},{44,-80},{49,-80}}, color={0,0,0}));
+    connect(step2.outPort[1], transition4.inPort) annotation (Line(points={{70.5,-80},{74,-80},{74,-68},{32,-68},{32,-80},{16,-80}}, color={0,0,0}));
+    connect(transition4.outPort, alternative1.join[2]) annotation (Line(points={{21.5,-80},{21.5,-68},{22,-68},{22,-62},{-6.3,-62},{-6.3,-30}}, color={0,0,0}));
+    connect(booleanExpression1.y, transitionWithSignal1.condition) annotation (Line(points={{-19,-120},{2,-120},{2,4},{-20,4},{-20,8}}, color={255,0,255}));
+    connect(alternative1.outPort, stepAfterAlternative.inPort[1]) annotation (Line(points={{0.6,-30},{89,-30}}, color={0,0,0}));
+    connect(stepAfterAlternative.outPort[1], transition1.inPort) annotation (Line(points={{110.5,-30},{136,-30}}, color={0,0,0}));
+    connect(transition1.outPort, parallel1.inPort) annotation (Line(points={{141.5,-30},{194.25,-30}}, color={0,0,0}));
+    connect(parallel1.split[1], step3.inPort[1]) annotation (Line(points={{200.62,-30},{200.62,2},{200,2},{200,6},{164,6},{164,20},{169,20}}, color={0,0,0}));
+    connect(step3.outPort[1], transition5.inPort) annotation (Line(points={{190.5,20},{194,20},{194,8},{238,8},{238,20},{246,20}}, color={0,0,0}));
+    connect(transition5.outPort, step4.inPort[1]) annotation (Line(points={{251.5,20},{230,20},{230,32},{196,32},{196,20},{199,20}}, color={0,0,0}));
+    connect(step4.outPort[1], parallel1.join[1]) annotation (Line(points={{220.5,20},{228,20},{228,2},{239.38,2},{239.38,-30}}, color={0,0,0}));
+    connect(parallel1.split[2], stepWithSignal2.inPort[1]) annotation (Line(points={{200.62,-30},{200.62,-62},{200,-62},{200,-66},{164,-66},{164,-80},{169,-80}}, color={0,0,0}));
+    connect(stepWithSignal2.outPort[1], transition6.inPort) annotation (Line(points={{190.5,-80},{194,-80},{194,-92},{238,-92},{238,-80},{246,-80}}, color={0,0,0}));
+    connect(transition6.outPort, step5.inPort[1]) annotation (Line(points={{251.5,-80},{230,-80},{230,-68},{196,-68},{196,-80},{199,-80}}, color={0,0,0}));
+    connect(step5.outPort[1], parallel1.join[2]) annotation (Line(points={{220.5,-80},{228,-80},{228,-62},{239.38,-62},{239.38,-30}}, color={0,0,0}));
+    connect(parallel1.outPort, transition7.inPort) annotation (Line(points={{245.5,-30},{266,-30}}, color={0,0,0}));
+    connect(transition7.outPort, initialStep1.inPort[1]) annotation (Line(points={{271.5,-30},{258,-30},{258,8},{262,8},{262,36},{-96,36},{-96,-30},{-91,-30}}, color={0,0,0}));
+    annotation (Diagram(coordinateSystem(extent={{-100,-140},{280,100}})),
+      experiment(StopTime=3.5),
       Documentation(info="<html>
 <p>
 A looping state graph built from the basic elements of
@@ -147,25 +148,25 @@ stepA is active for 0.4 s, then stepB until the transition after the composite s
     connect(initialStep1.outPort[1], transition1.inPort)
       annotation (Line(points={{-69.5,0},{-54,0}}));
     connect(transition1.outPort, compositeStep1.inPort)
-      annotation (Line(points={{-48.5,0},{-20,0}}));
+      annotation (Line(points={{-48.5,0},{-21.33,0}}));
     connect(compositeStep1.outPort, transition2.inPort)
-      annotation (Line(points={{20.2,0},{46,0}}));
+      annotation (Line(points={{20.67,0},{46,0}}));
     connect(transition2.outPort, step1.inPort[1])
       annotation (Line(points={{51.5,0},{69,0}}));
     connect(step1.outPort[1], transition3.inPort)
-      annotation (Line(points={{90.5,0},{96,0},{96,-40},{64,-40}}));
+      annotation (Line(points={{90.5,0},{94,0},{94,-28},{64,-28},{64,-40}}));
     connect(transition3.outPort, initialStep1.inPort[1])
       annotation (Line(points={{58.5,-40},{-96,-40},{-96,0},{-91,0}}));
     connect(compositeStep1.suspend[1], transitionSuspend.inPort)
-      annotation (Line(points={{-10,10.2},{-10,40},{-4,40}}));
+      annotation (Line(points={{-10,-10.33},{-10,-14},{-22,-14},{-22,28},{-4,28},{-4,40}}));
     connect(transitionSuspend.outPort, stepSuspended.inPort[1])
       annotation (Line(points={{1.5,40},{19,40}}));
     connect(stepSuspended.outPort[1], transitionResume.inPort)
       annotation (Line(points={{40.5,40},{56,40}}));
     connect(transitionResume.outPort, compositeStep1.resume[1])
-      annotation (Line(points={{61.5,40},{80,40},{80,20},{10,20},{10,10.2}}));
+      annotation (Line(points={{61.5,40},{48,40},{48,20},{30,20},{30,-14},{10,-14},{10,-10.67}}));
     connect(suspendCondition.y, transitionSuspend.condition)
-      annotation (Line(points={{-19,70},{0,70},{0,52}}, color={255,0,255}));
+      annotation (Line(points={{-19,70},{-12,70},{-12,24},{0,24},{0,28}}, color={255,0,255}));
     annotation (experiment(StopTime=3.0), Documentation(info="<html>
 <p>
 Tests InitialStep and the composite-step machinery of
