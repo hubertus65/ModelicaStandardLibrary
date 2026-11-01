@@ -75,7 +75,7 @@ equation
   connect(control.n, ground.p) annotation (Line(points={{-79,80},{-46,80},{-46,-200},{-12,-200}}, color={0,0,127}));
   connect(sine.p, openingSwitch.p) annotation (Line(points={{-79,0},{-70,0},{-70,100},{-62,100}}, color={0,0,127}));
   connect(openingSwitch.n, R_opening.p) annotation (Line(points={{-39,100},{-32,100}}, color={0,0,127}));
-  connect(R_opening.n, ground.p) annotation (Line(points={{-9,100},{-16,100},{-16,-200},{-12,-200}}, color={0,0,127}));
+  connect(R_opening.n, ground.p) annotation (Line(points={{-9,100},{-9,-200},{-12,-200}}, color={0,0,127}));
   connect(control.p, openingSwitch.control) annotation (Line(points={{-79,80},{-70,80},{-70,100},{-62,100}}, color={0,0,127}));
   connect(dcArc.p, L_arc.p) annotation (Line(points={{-79,130},{-82,130}}, color={0,0,127}));
   connect(L_arc.n, openerWithArc.p) annotation (Line(points={{-59,130},{-66,130},{-66,70},{-62,70}}, color={0,0,127}));
@@ -99,7 +99,7 @@ equation
   connect(control.p, controlledIntermediateSwitch.control) annotation (Line(points={{-79,80},{-70,80},{-70,10},{-62,10}}, color={0,0,127}));
   connect(sine.p, R_in1.p) annotation (Line(points={{-79,0},{-40,0},{-40,100},{-2,100}}, color={0,0,127}));
   connect(R_in1.n, idealOpAmp.n1) annotation (Line(points={{21,100},{28,100}}, color={0,0,127}));
-  connect(idealOpAmp.p1, ground.p) annotation (Line(points={{51,100},{-16,100},{-16,-200},{-12,-200}}, color={0,0,127}));
+  connect(idealOpAmp.p1, ground.p) annotation (Line(points={{51,100},{-4.5,100},{-4.5,-200},{-12,-200}}, color={0,0,127}));
   connect(idealOpAmp.p2, R_fb1.n) annotation (Line(points={{51,100},{24,100},{24,110},{28,110}}, color={0,0,127}));
   connect(R_fb1.p, idealOpAmp.n1) annotation (Line(points={{51,110},{24,110},{24,100},{28,100}}, color={0,0,127}));
   connect(idealOpAmp.n2, ground.p) annotation (Line(points={{51,100},{-16,100},{-16,-200},{-12,-200}}, color={0,0,127}));

@@ -55,7 +55,6 @@ end testAllFunctions;
        versionDate="20xx-xx-xx",
        dateModified = "2025-05-23 15:00:00Z",
        revisionId="$Format:%h %ci$",
-       uses(Modelica(version="4.2.0 dev"), Complex(version="4.2.0 dev")),
     Documentation(info="<html>
 <p>
 This library provides models and functions to test components of
@@ -95,5 +94,5 @@ Copyright &copy; 1998-2025, Modelica Association and contributors
           points={{-70,0},{-44,0},{-24,-34},{50,56},{78,56},{-24,-74},{-70,0}},
           lineColor={75,138,73},
           fillColor={75,138,73},
-          fillPattern=FillPattern.Solid)}));
+          fillPattern=FillPattern.Solid)}),uses(Modelica(version = "4.2.0 dev")));
 end ModelicaTest;

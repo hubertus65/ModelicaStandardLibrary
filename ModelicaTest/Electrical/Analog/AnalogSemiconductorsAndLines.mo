@@ -21,7 +21,7 @@ model AnalogSemiconductorsAndLines "Test of semiconductors, transmission lines a
   Modelica.Electrical.Analog.Basic.Resistor R_zDiode(R=10)
     annotation (Placement(transformation(extent={{-10,50},{10,70}})));
   Modelica.Electrical.Analog.Sources.PulseCurrent gate(I=0.05, width=10, period=0.01, startTime=0.001)
-    annotation (Placement(transformation(extent={{-100,20},{-80,40}})));
+    annotation (Placement(transformation(extent={{-10.0,-10.0},{10.0,10.0}},rotation = 90.0,origin = {-90.0,30.0})));
   Modelica.Electrical.Analog.Sources.PulseCurrent gateTriac(I=0.05, width=10, period=0.01, startTime=0.001)
     annotation (Placement(transformation(extent={{-100,-20},{-80,0}})));
   Modelica.Electrical.Analog.Semiconductors.Thyristor thyristor
@@ -102,8 +102,8 @@ equation
   connect(sine.p, thyristor.Anode) annotation (Line(points={{-79,0},{-60,0},{-60,30},{-42,30}}, color={0,0,127}));
   connect(thyristor.Cathode, R_thyristor.p) annotation (Line(points={{-19,30},{-12,30}}, color={0,0,127}));
   connect(R_thyristor.n, ground.p) annotation (Line(points={{11,30},{-16,30},{-16,-200},{-12,-200}}, color={0,0,127}));
-  connect(gate.p, thyristor.Gate) annotation (Line(points={{-79,30},{-42,30}}, color={0,0,127}));
-  connect(gate.n, thyristor.Cathode) annotation (Line(points={{-79,30},{-42,30}}, color={0,0,127}));
+  connect(gate.p, thyristor.Gate) annotation (Line(points={{-90,20},{-90,14},{-55,14},{-55,46},{-20,46},{-20,40}}, color={0,0,127}));
+  connect(gate.n, thyristor.Cathode) annotation (Line(points={{-90,40},{-90,48.55},{-14,48.55},{-14,30},{-20,30}}, color={0,0,127}));
   connect(sine.p, simpleTriac.p) annotation (Line(points={{-79,0},{-42,0}}, color={0,0,127}));
   connect(simpleTriac.n, R_triac.p) annotation (Line(points={{-19,0},{-12,0}}, color={0,0,127}));
   connect(R_triac.n, ground.p) annotation (Line(points={{11,0},{-16,0},{-16,-200},{-12,-200}}, color={0,0,127}));

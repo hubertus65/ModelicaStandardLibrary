@@ -39,7 +39,7 @@ model AnalogBasicComponents "Test of controlled sources, variable elements, M_Tr
   Modelica.Blocks.Sources.Ramp conductance(height=1, duration=0.1, offset=0.1)
     annotation (Placement(transformation(extent={{40,20},{60,40}})));
   Modelica.Electrical.Analog.Basic.Resistor R_cap(R=10)
-    annotation (Placement(transformation(extent={{40,80},{60,100}})));
+    annotation (Placement(transformation(extent={{40.0,80.0},{60.0,100.0}},rotation = 0.0,origin = {0.0,0.0})));
   Modelica.Electrical.Analog.Basic.Resistor R_ind(R=1)
     annotation (Placement(transformation(extent={{40,50},{60,70}})));
   Modelica.Electrical.Analog.Basic.M_Transformer mTransformer(N=2, L={1e-2, 0.9e-2, 1e-2})
