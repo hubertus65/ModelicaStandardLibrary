@@ -2110,6 +2110,7 @@ sinusoid is |X_k|&middot;2/N, so the divisor must be N/2. The relative error is
 2/(N+2): about 1 % for the 200 sample points of
 <a href=\"modelica://Modelica.Math.FastFourierTransform.Examples.RealFFT1\">Examples.RealFFT1</a>.
 It also affects <a href=\"modelica://Modelica.Blocks.Math.RealFFT\">Blocks.Math.RealFFT</a>.
+Reported as <a href=\"https://github.com/modelica/ModelicaStandardLibrary/issues/4856\">#4856</a>.
 </p>
 </html>"));
   end RealFFTAmplitudes;
