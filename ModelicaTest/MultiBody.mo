@@ -11282,14 +11282,6 @@ Assigning <code>phi</code> in an if-statement avoids this (modelica/ModelicaStan
 Tests <a href=\"modelica://Modelica.Mechanics.MultiBody.Frames.from_T_inv\">Frames.from_T_inv</a>
 for a general orientation.
 </p>
-<p>
-Note: this test currently fails. The input <code>w</code> is defined by
-skew(w) = T_inv*der(transpose(T_inv)), i.e. it is the angular velocity of frame 1
-with respect to frame 2, resolved in frame 1. The angular velocity stored in the orientation
-object (frame 2 with respect to frame 1, resolved in frame 2) is therefore
-<code>R.w = -T*w</code>. from_T_inv returns <code>R.w = -w</code>, which is only correct if
-w is parallel to the rotation axis (e.g. planar rotations).
-</p>
 </html>"));
   end FramesFromTinv;
 
