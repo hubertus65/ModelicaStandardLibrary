@@ -2012,12 +2012,6 @@ the analytic chain rule and must be zero.
 Computes the generalized eigenvalues of a 2x2 pencil with
 <a href=\"modelica://Modelica.Math.Matrices.LAPACK.dhgeqz\">LAPACK.dhgeqz</a>.
 </p>
-<p>
-Note: this test currently fails. In dhgeqz the protected variable
-<code>Real Q[1, 1]=fill(0, 1, n)</code> has inconsistent sizes for every
-n &gt; 1, so the function can only be called for 1x1 systems. Q is not referenced
-(compq = \"N\", ldq = 1), so <code>fill(0, 1, 1)</code> would be sufficient.
-</p>
 </html>"));
   end LAPACKdhgeqz;
 
