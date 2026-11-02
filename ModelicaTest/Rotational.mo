@@ -2215,9 +2215,9 @@ of the example models from the rotational mechanics package.
     Modelica.Mechanics.Rotational.Components.Fixed fixed3
       annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={60,0})));
     Modelica.Blocks.Sources.Sine adaptorAngle(amplitude=1, f=0.5)
-      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-90,-80})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-90,-72})));
     Modelica.Mechanics.Rotational.Components.AngleToTorqueAdaptor angleToTorqueAdaptor1(use_w=false, use_a=false)
-      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=90, origin={-50,-80})));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-50,-80})));
     Modelica.Mechanics.Rotational.Components.Inertia inertia4(J=2)
       annotation (Placement(transformation(extent={{-10,-10},{10,10}}, origin={-10,-80})));
     Modelica.Blocks.Sources.Constant phiStart(k=0.2)
@@ -2237,12 +2237,12 @@ of the example models from the rotational mechanics package.
     connect(phi.y, multiplex3.u1[1]) annotation (Line(points={{-79,30},{-76,30},{-76,7},{-72,7}}, color={0,0,127}));
     connect(w.y, multiplex3.u2[1]) annotation (Line(points={{-79,0},{-72,0}}, color={0,0,127}));
     connect(a.y, multiplex3.u3[1]) annotation (Line(points={{-79,-40},{-76,-40},{-76,-7},{-72,-7}}, color={0,0,127}));
-    connect(multiplex3.y, move1.u) annotation (Line(points={{-49,0},{-44,0},{-44,2},{-46,2},{-46,0},{-42,0}}, color={0,0,127}));
+    connect(multiplex3.y, move1.u) annotation (Line(points={{-49,0},{-42,0}}, color={0,0,127}));
     connect(move1.flange, inertia3.flange_a) annotation (Line(points={{-20,0},{-10,0}}, color={0,0,0}));
     connect(inertia3.flange_b, spring3.flange_a) annotation (Line(points={{10,0},{20,0}}, color={0,0,0}));
     connect(spring3.flange_b, fixed3.flange) annotation (Line(points={{40,0},{60,0}}, color={0,0,0}));
-    connect(adaptorAngle.y, angleToTorqueAdaptor1.phi) annotation (Line(points={{-79,-80},{-62,-80},{-62,-83},{-58,-83}}, color={0,0,127}));
-    connect(angleToTorqueAdaptor1.flange, inertia4.flange_a) annotation (Line(points={{-50,-78},{-24,-78},{-24,-80},{-20,-80}}, color={0,0,0}));
+    connect(adaptorAngle.y, angleToTorqueAdaptor1.phi) annotation (Line(points={{-79,-72},{-53,-72}}, color={0,0,127}));
+    connect(angleToTorqueAdaptor1.flange, inertia4.flange_a) annotation (Line(points={{-48,-80},{-20,-80}}, color={0,0,0}));
     connect(phiStart.y, initializeFlange1.phi_start) annotation (Line(points={{-79,-120},{-66,-120},{-66,-122},{-62,-122}}, color={0,0,127}));
     connect(wStart.y, initializeFlange1.w_start) annotation (Line(points={{-79,-160},{-66,-160},{-66,-130},{-62,-130}}, color={0,0,127}));
     connect(initializeFlange1.flange, inertia5.flange_a) annotation (Line(points={{-40,-130},{-20,-130}}, color={0,0,0}));
