@@ -2052,11 +2052,13 @@ n &gt; 1, so the function can only be called for 1x1 systems. Q is not reference
 
     // integral of u^3 over [0, 2] = 4; Simpson's rule (d = 2) and higher degrees are exact for u^3
     for d in 2:6 loop
-      assert(abs(Modelica.Math.Nonlinear.quadratureNewtonCotes(quadratureIntegrand, 0, 2, N=12, d=d) - 4) < 1e-12,
+      assert(abs(Modelica.Math.Nonlinear.quadratureNewtonCotes(
+        function ModelicaTest.Math.quadratureIntegrand(), 0, 2, N=12, d=d) - 4) < 1e-12,
         "Nonlinear.quadratureNewtonCotes failed for d = " + String(d));
     end for;
     // trapezoidal rule (d = 1): error = (b - a)*h^2/12*f''(xi) <= 2*(2/360)^2/12*12 = 6.2e-5
-    assert(abs(Modelica.Math.Nonlinear.quadratureNewtonCotes(quadratureIntegrand, 0, 2, N=360, d=1) - 4) < 1e-4,
+    assert(abs(Modelica.Math.Nonlinear.quadratureNewtonCotes(
+        function ModelicaTest.Math.quadratureIntegrand(), 0, 2, N=360, d=1) - 4) < 1e-4,
       "Nonlinear.quadratureNewtonCotes failed for d = 1");
 
     ok := true;
