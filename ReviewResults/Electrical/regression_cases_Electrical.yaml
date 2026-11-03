@@ -585,6 +585,7 @@ cases:
       - "rootMeanSquareVoltage.y"
       - "resistor.i"
   - name: DiodeCenterTapmPulse_5Phase
+    # Known Impact defect kept in the baseline: in the first averaging period meanVoltage/meanCurrent/rootMeanSquareVoltage differ from OpenModelica (meanCurrent 14.04 A vs 7.28 A), the same period as the failed event iteration in DiodeCenterTap2mPulse_5Phase (not analysed separately); from the second period on the tools agree
     enabled: true
     model: ModelicaTest.Electrical.PowerConverters.DiodeCenterTapmPulse_5Phase
     start_time: 0.0
@@ -598,6 +599,7 @@ cases:
       - "meanCurrent.y"
       - "rootMeanSquareVoltage.y"
   - name: DiodeCenterTap2mPulse_5Phase
+    # Known Impact defect kept in the baseline (hubertus65/ModelicaStandardLibrary#7): OCT logs a failed event iteration at commutations that coincide with an event (t = 0 and some 2 ms mean samples) and continues with an outgoing diode left conducting, so resistor.i reaches ~2e6 A and meanCurrent.y is 6.7e5 A instead of 7.65 A for one averaging period; OpenModelica is correct
     enabled: true
     model: ModelicaTest.Electrical.PowerConverters.DiodeCenterTap2mPulse_5Phase
     start_time: 0.0
