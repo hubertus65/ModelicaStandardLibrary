@@ -1,13 +1,13 @@
 {
  "run": {
-  "utc": "2026-10-31T18:33:52+00:00",
+  "utc": "2026-11-02T22:00:17+00:00",
   "rtol_factor": 100.0,
   "descriptor": "impact workspace 'msl-coverage'",
   "reference_descriptor": "impact workspace 'msl-coverage'",
-  "cases": 4,
-  "cases_this_run": 4,
+  "cases": 6,
+  "cases_this_run": 6,
   "failed_cases": 0,
-  "bytes": 43700
+  "bytes": 44608
  },
  "cases": [
   {
@@ -34,7 +34,7 @@
     "linear_solver_type": "DENSE",
     "atol": 9.999999999999999e-05,
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.09783969400450587,
+    "cpu_time": 0.09662062099960167,
     "steps": 1001,
     "rhs_evaluations": 1005,
     "jacobian_evaluations": 17,
@@ -48,21 +48,21 @@
    "bytes": 42338,
    "record": {
     "schema": 1,
-    "record_id": "974e43b2a41f60eb20cc036242baa6eaa53d7657db4b3ceecfae2e42dca44e14",
+    "record_id": "bfcf480dde9dfacf9b11d5383d189ea824e186d8b46a41b2c3da3aea4ab06ecb",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-10-31T18:33:47",
+     "generation_date": "2026-11-02T22:00:01",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "c2bba3137950d4130d6a23ef95601822",
-     "impact_fmu_id": "modelicatest_math_polynomialderivatives_20261031_183346_0a1417e",
-     "model_description_sha256": "baa6873f51dc880cea0253119e890b9ab6f7713f142b81b80be271e0ce3a3aa0"
+     "impact_fmu_id": "modelicatest_math_polynomialderivatives_20261102_215959_b545601",
+     "model_description_sha256": "67faf3e45da436a3b742ad3fff6c8da3dd205f7ad5e073166a0bea729879f1ac"
     },
     "experiment": {
      "case_entry_sha256": "9fdc47649a2f0c72d888210dd3143074f15bc3446e1cc5a5eff3a383646d58ae",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "modelicatest_math_polynomialderivatives_20261031_183345_a233441",
+     "impact_experiment_id": "modelicatest_math_polynomialderivatives_20261102_215959_9d9e666",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -72,13 +72,9 @@
      "class": "ModelicaTest.Math.PolynomialDerivatives",
      "libraries": [
       {
-       "git_commit": "8adbd3bdd4a468fe516e8680479c8018661e6b03",
-       "git_dirty": true,
+       "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+       "git_dirty": false,
        "name": "ModelicaTest",
-       "uses": {
-        "Complex": "4.2.0 dev",
-        "Modelica": "4.2.0 dev"
-       },
        "version": "4.2.0 dev"
       }
      ]
@@ -90,10 +86,10 @@
      "sha256": "ea607b75bd1f1174b812d81886d1111664563149af3d829ccd8292c00cc8fa97"
     },
     "run": {
-     "utc": "2026-10-31T18:33:52+00:00",
+     "utc": "2026-11-02T22:00:05+00:00",
      "modcheck": {
       "api": 1,
-      "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
       "dirty": false
      }
     }
@@ -113,7 +109,7 @@
     "linear_solver_type": "DENSE",
     "atol": 9.999999999999999e-05,
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.001066934084519744,
+    "cpu_time": 0.0011312740098219365,
     "steps": 11,
     "rhs_evaluations": 15,
     "jacobian_evaluations": 1,
@@ -127,21 +123,21 @@
    "bytes": 454,
    "record": {
     "schema": 1,
-    "record_id": "0367529f42ee766e57ec99bb991918471dd289f444928fd23b702e9c21d7cbeb",
+    "record_id": "2e8b66b85785bdc5c1084894c20ec27040f982f5ed7b3c4f274aa070d30ebf36",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-10-31T18:33:42",
+     "generation_date": "2026-11-02T21:59:56",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "4a067a95b102f6ae5754e681aacacc5e",
-     "impact_fmu_id": "modelicatest_math_testfftandmisc_20261031_183339_4d4373b",
-     "model_description_sha256": "b9c28d04650d6bd0d0c3e94e661830b80912959cc423f398c991db6fbd1b7faa"
+     "impact_fmu_id": "modelicatest_math_testfftandmisc_20261102_215954_c7e7bc1",
+     "model_description_sha256": "712e260350dba5ca04385d02c3bcd82133e19473f3afb70c7eb219b277bc6be7"
     },
     "experiment": {
      "case_entry_sha256": "be244defdf7df8e613bf434221356cf7337652f1faaa4bd8ba008772b97a70bb",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "modelicatest_math_testfftandmisc_20261031_183339_fbb0cfb",
+     "impact_experiment_id": "modelicatest_math_testfftandmisc_20261102_215954_305e5aa",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -151,13 +147,9 @@
      "class": "ModelicaTest.Math.TestFFTAndMisc",
      "libraries": [
       {
-       "git_commit": "8adbd3bdd4a468fe516e8680479c8018661e6b03",
-       "git_dirty": true,
+       "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+       "git_dirty": false,
        "name": "ModelicaTest",
-       "uses": {
-        "Complex": "4.2.0 dev",
-        "Modelica": "4.2.0 dev"
-       },
        "version": "4.2.0 dev"
       }
      ]
@@ -169,10 +161,10 @@
      "sha256": "b3196d6c1e6ed87825cb921ba453d02daeec5e88a295570259bbe196db938665"
     },
     "run": {
-     "utc": "2026-10-31T18:33:45+00:00",
+     "utc": "2026-11-02T21:59:59+00:00",
      "modcheck": {
       "api": 1,
-      "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
       "dirty": false
      }
     }
@@ -192,7 +184,7 @@
     "linear_solver_type": "DENSE",
     "atol": 9.999999999999999e-05,
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.0010494319722056389,
+    "cpu_time": 0.0010698789992602542,
     "steps": 11,
     "rhs_evaluations": 15,
     "jacobian_evaluations": 1,
@@ -206,21 +198,21 @@
    "bytes": 454,
    "record": {
     "schema": 1,
-    "record_id": "412a6c5e0373180ddc92b67d56298e39f51ebe7e1b793620d1dece1213361cee",
+    "record_id": "36a14a6043fc3c9192046257bd904e2451e8e4abf6dc81c5dc8bd0efdde56d9f",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-10-31T18:33:35",
+     "generation_date": "2026-11-02T21:59:50",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "812cdd497e6ea8fafb712fcdadf9f087",
-     "impact_fmu_id": "modelicatest_math_testlapack2_20261031_183332_f09be83",
-     "model_description_sha256": "e0d6add03634c3f0a503a63fd65c94dcdf0fe2a6935961381b8ccb1d7a97e013"
+     "impact_fmu_id": "modelicatest_math_testlapack2_20261102_215947_f3fc3fa",
+     "model_description_sha256": "c3fdf100d9faae7a9f26ab95c8737e933e1cb7856d40ea59f17cdedfce56b777"
     },
     "experiment": {
      "case_entry_sha256": "397ba2eaeb0193af505240eb44d317cb7b6074840406bb45f8e6959d783fb50f",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "modelicatest_math_testlapack2_20261031_183332_10d2c3b",
+     "impact_experiment_id": "modelicatest_math_testlapack2_20261102_215947_4844793",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -230,13 +222,9 @@
      "class": "ModelicaTest.Math.TestLAPACK2",
      "libraries": [
       {
-       "git_commit": "8adbd3bdd4a468fe516e8680479c8018661e6b03",
-       "git_dirty": true,
+       "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+       "git_dirty": false,
        "name": "ModelicaTest",
-       "uses": {
-        "Complex": "4.2.0 dev",
-        "Modelica": "4.2.0 dev"
-       },
        "version": "4.2.0 dev"
       }
      ]
@@ -248,10 +236,85 @@
      "sha256": "b3196d6c1e6ed87825cb921ba453d02daeec5e88a295570259bbe196db938665"
     },
     "run": {
-     "utc": "2026-10-31T18:33:39+00:00",
+     "utc": "2026-11-02T21:59:53+00:00",
      "modcheck": {
       "api": 1,
-      "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "TestLAPACKdhgeqz",
+   "model": "ModelicaTest.Math.TestLAPACKdhgeqz",
+   "variables": [
+    "result",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.001086121003027074,
+    "steps": 11,
+    "rhs_evaluations": 15,
+    "jacobian_evaluations": 1,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {},
+   "display_units": {},
+   "format": "npz",
+   "bytes": 454,
+   "record": {
+    "schema": 1,
+    "record_id": "e37b376e364fb97cb72f21923cc87df6d1d46bc0ece0d9de5896d78b474c263f",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-11-02T22:00:09",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "2d244ce8886bee2b8311e4f0c626a6e6",
+     "impact_fmu_id": "modelicatest_math_testlapackdhgeqz_20261102_220007_6d203e7",
+     "model_description_sha256": "33677035fd6f660c8dc87fa93fdc473d1a8dc06556c67795feae3c9de991e3b8"
+    },
+    "experiment": {
+     "case_entry_sha256": "bc1550e8e6c1773345d31fd3cd563d1143f07db0d0682ca6ab3c11940536edb7",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "modelicatest_math_testlapackdhgeqz_20261102_220006_42decd6",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "84198b334af4f933a30999b9f2313c6d87aa03b2101af1a44b1acc02012c1c29"
+    },
+    "model": {
+     "class": "ModelicaTest.Math.TestLAPACKdhgeqz",
+     "libraries": [
+      {
+       "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+       "git_dirty": false,
+       "name": "ModelicaTest",
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 454,
+     "file": "TestLAPACKdhgeqz.npz",
+     "format": "npz",
+     "sha256": "b3196d6c1e6ed87825cb921ba453d02daeec5e88a295570259bbe196db938665"
+    },
+    "run": {
+     "utc": "2026-11-02T22:00:12+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
       "dirty": false
      }
     }
@@ -271,7 +334,7 @@
     "linear_solver_type": "DENSE",
     "atol": 9.999999999999999e-05,
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.0010735959513112903,
+    "cpu_time": 0.001126325994846411,
     "steps": 11,
     "rhs_evaluations": 15,
     "jacobian_evaluations": 1,
@@ -285,21 +348,21 @@
    "bytes": 454,
    "record": {
     "schema": 1,
-    "record_id": "bdeba6d1bcd55e99d57fc61f806916f262c01f3df0be29a1bb75c58d711bf115",
+    "record_id": "d697a7154923632ae7351fc26ed4a87aae42cdffd2be375ab9b20cf8455385f3",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-10-31T18:33:26",
+     "generation_date": "2026-11-02T21:59:40",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "ca8ce51ab53ff2c8c25e99b9c3ab2095",
-     "impact_fmu_id": "modelicatest_math_testmatrices4_20261031_183324_b90dc73",
-     "model_description_sha256": "f2d5c634ee8bf2829f47d015a9403f15dabadbdbb71a4f9f10afcc02fe7220d5"
+     "impact_fmu_id": "modelicatest_math_testmatrices4_20261102_215938_c149536",
+     "model_description_sha256": "68d9a6349a656a669420e45dc40bab4e24f6ab7063777f3f9d340e06117f077b"
     },
     "experiment": {
      "case_entry_sha256": "c3de65b0862a73f87901d22d71bdc52d5489711dfaf71aff83b64a68b50a6fec",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "modelicatest_math_testmatrices4_20261031_183324_eb01722",
+     "impact_experiment_id": "modelicatest_math_testmatrices4_20261102_215938_c962376",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -309,13 +372,9 @@
      "class": "ModelicaTest.Math.TestMatrices4",
      "libraries": [
       {
-       "git_commit": "8adbd3bdd4a468fe516e8680479c8018661e6b03",
-       "git_dirty": true,
+       "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+       "git_dirty": false,
        "name": "ModelicaTest",
-       "uses": {
-        "Complex": "4.2.0 dev",
-        "Modelica": "4.2.0 dev"
-       },
        "version": "4.2.0 dev"
       }
      ]
@@ -327,10 +386,85 @@
      "sha256": "b3196d6c1e6ed87825cb921ba453d02daeec5e88a295570259bbe196db938665"
     },
     "run": {
-     "utc": "2026-10-31T18:33:30+00:00",
+     "utc": "2026-11-02T21:59:43+00:00",
      "modcheck": {
       "api": 1,
-      "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "TestQuadrature",
+   "model": "ModelicaTest.Math.TestQuadrature",
+   "variables": [
+    "result",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.0011003170075127855,
+    "steps": 11,
+    "rhs_evaluations": 15,
+    "jacobian_evaluations": 1,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {},
+   "display_units": {},
+   "format": "npz",
+   "bytes": 454,
+   "record": {
+    "schema": 1,
+    "record_id": "9405e5d545e6c5db0e84223d41dc4aae85e68d9eeaff915042e22a0d8bdedc3d",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-11-02T22:00:15",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "725080b4cafa9ccfd38b45aaa5171f00",
+     "impact_fmu_id": "modelicatest_math_testquadrature_20261102_220013_9b388b9",
+     "model_description_sha256": "ac42b007b68ffb8214067c1be7494e572653933d447ea89a90671460fdfd1cf3"
+    },
+    "experiment": {
+     "case_entry_sha256": "aaebb2bf9b832e5609894276aba92da674a4bac367de4c4ab75b2ff8976845a8",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "modelicatest_math_testquadrature_20261102_220013_a4f701f",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "74d83bea49e9345f46c4ffc25fcb2535902ec1b8893ae0942c44c55ebd319808"
+    },
+    "model": {
+     "class": "ModelicaTest.Math.TestQuadrature",
+     "libraries": [
+      {
+       "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+       "git_dirty": false,
+       "name": "ModelicaTest",
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 454,
+     "file": "TestQuadrature.npz",
+     "format": "npz",
+     "sha256": "b3196d6c1e6ed87825cb921ba453d02daeec5e88a295570259bbe196db938665"
+    },
+    "run": {
+     "utc": "2026-11-02T22:00:17+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
       "dirty": false
      }
     }

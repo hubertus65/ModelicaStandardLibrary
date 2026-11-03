@@ -26,7 +26,7 @@
       "linear_solver_type": "DENSE",
       "atol": 1e-06,
       "rtol": 1e-06,
-      "cpu_time": 0.04746246803551912,
+      "cpu_time": 0.048262801006785594,
       "steps": 501,
       "rhs_evaluations": 505,
       "jacobian_evaluations": 9,
@@ -52,21 +52,21 @@
     "bytes": 31274,
     "record": {
       "schema": 1,
-      "record_id": "46321e5cc05bc2fd93bc26f769522fff8be36704065c78128c8d5a23ba9253ab",
+      "record_id": "e7aaf14840d5b18fc338c1fab7e3994411a5ab2c60262d1023d66f49372470a4",
       "executable": {
         "fmi_version": "2.0",
-        "generation_date": "2026-10-31T04:57:32",
+        "generation_date": "2026-11-03T02:53:50",
         "generation_tool": "Optimica Compiler Toolkit",
-        "guid": "559f2f3587fa2b00f47ea22b467d54a3",
-        "impact_fmu_id": "modelicatest_units_complexunitsandconversions_20261031_045730_740e88c",
-        "model_description_sha256": "537d9b53776507f5e6e4b78984a770dddc09fa1d89a508eba0acb3f163511fb5"
+        "guid": "d2c0ae01072b2120021f6760f7ffb56",
+        "impact_fmu_id": "modelicatest_units_complexunitsandconversions_20261103_025348_831dcb1",
+        "model_description_sha256": "3dd168847ac194970dfbe54e8d5915f45ef051c1d86d1bc64cad7a69db7c66a2"
       },
       "experiment": {
         "case_entry_sha256": "f1d61e8f9cae5ea58bd740efb056ab53c76d4010ec741e181ddb5c95d1dbcd36",
         "descriptor": "impact workspace 'msl-coverage'",
         "engine": "impact",
         "impact_case_id": "case_1",
-        "impact_experiment_id": "modelicatest_units_complexunitsandconversions_20261031_045730_eaf0932",
+        "impact_experiment_id": "modelicatest_units_complexunitsandconversions_20261103_025348_aefd91e",
         "released": true,
         "rtol_factor": 1.0,
         "workspace": "msl-coverage",
@@ -76,13 +76,9 @@
         "class": "ModelicaTest.Units.ComplexUnitsAndConversions",
         "libraries": [
           {
-            "git_commit": "1db057b7f601065ce2247e2d6750badec0dad11f",
-            "git_dirty": true,
+            "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+            "git_dirty": false,
             "name": "ModelicaTest",
-            "uses": {
-              "Complex": "4.2.0 dev",
-              "Modelica": "4.2.0 dev"
-            },
             "version": "4.2.0 dev"
           }
         ]
@@ -94,10 +90,10 @@
         "sha256": "2fbfeb60f2dc14891e28750c1398be2afd0b224164e2eb0e1ec153a5d85d3965"
       },
       "run": {
-        "utc": "2026-10-31T04:57:36+00:00",
+        "utc": "2026-11-03T02:53:55+00:00",
         "modcheck": {
           "api": 1,
-          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
           "dirty": false
         }
       }

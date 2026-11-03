@@ -1,15 +1,105 @@
 {
  "run": {
-  "utc": "2026-10-31T18:32:59+00:00",
+  "utc": "2026-11-02T22:07:50+00:00",
   "rtol_factor": 100.0,
   "descriptor": "impact workspace 'msl-coverage'",
-  "reference_descriptor": "",
-  "cases": 3,
-  "cases_this_run": 3,
+  "reference_descriptor": "impact workspace 'msl-coverage'",
+  "cases": 5,
+  "cases_this_run": 5,
   "failed_cases": 0,
-  "bytes": 148254
+  "bytes": 196839
  },
  "cases": [
+  {
+   "name": "ComplexMathConjugateIfExpressions",
+   "model": "ModelicaTest.ComplexBlocks.ComplexMathConjugateIfExpressions",
+   "variables": [
+    "add3Conjugate.y.im",
+    "add3Conjugate.y.re",
+    "add3Default.y.im",
+    "add3Default.y.re",
+    "division1.y.im",
+    "division1.y.re",
+    "division2.y.im",
+    "division2.y.re",
+    "feedback1.y.im",
+    "feedback1.y.re",
+    "feedback2.y.im",
+    "feedback2.y.re",
+    "gain1.y.im",
+    "gain1.y.re",
+    "gain2.y.im",
+    "gain2.y.re",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.047401000003446825,
+    "steps": 501,
+    "rhs_evaluations": 505,
+    "jacobian_evaluations": 9,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {},
+   "display_units": {},
+   "format": "npz",
+   "bytes": 45608,
+   "record": {
+    "schema": 1,
+    "record_id": "5f855368a030d4f026f3538fb8788740c3b9c7d4e2a24ed2bd11e16e929340a1",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-11-02T22:07:45",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "d6a4c24de42b91d8e7dc7cd63680e01a",
+     "impact_fmu_id": "_t_complexblocks_complexmathconjugateifexpressions_20261102_220743_7435736",
+     "model_description_sha256": "9ed32c8b15f750eb0904bdf04acb2e425880aefde7c67207ba179285b70094bf"
+    },
+    "experiment": {
+     "case_entry_sha256": "1a6b160f4edbe2439c3de18aa400e8fda53b9a86c53390624f43cf5278040cff",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "_t_complexblocks_complexmathconjugateifexpressions_20261102_220743_52e116a",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "2263fa26d1c8b503d6ec20b336329e51c0defbcfa63fca68970782fd642cca78"
+    },
+    "model": {
+     "class": "ModelicaTest.ComplexBlocks.ComplexMathConjugateIfExpressions",
+     "libraries": [
+      {
+       "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+       "git_dirty": false,
+       "name": "ModelicaTest",
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 45608,
+     "file": "ComplexMathConjugateIfExpressions.npz",
+     "format": "npz",
+     "sha256": "55756141fb4681089ef58981f51b4084cafc97352bb2cd223c8bf83f63fd2c7b"
+    },
+    "run": {
+     "utc": "2026-11-02T22:07:50+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
   {
    "name": "ComplexMathFunctions",
    "model": "ModelicaTest.ComplexBlocks.ComplexMathFunctions",
@@ -51,7 +141,7 @@
     "linear_solver_type": "DENSE",
     "atol": 9.999999999999999e-05,
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.052568147890269756,
+    "cpu_time": 0.05204969800252002,
     "steps": 501,
     "rhs_evaluations": 505,
     "jacobian_evaluations": 9,
@@ -65,21 +155,21 @@
    "bytes": 69983,
    "record": {
     "schema": 1,
-    "record_id": "c7dd0643b72ec766a1ccb6cf046fa9091f39062f846bc2d37cd75498c2c3af10",
+    "record_id": "38ea373312a5a600c8ce9cd3f3e8575a703397b99c5babbc736d78ceb67f9543",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-10-31T18:32:36",
+     "generation_date": "2026-11-02T22:07:13",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "86424bb168e8bbbdac5be90fb8c906ac",
-     "impact_fmu_id": "modelicatest_complexblocks_complexmathfunctions_20261031_183233_bad0a21",
-     "model_description_sha256": "4a801722dd85f2fe25fe02725c8af1c5892135a125642f12f20525aa0f6455e3"
+     "impact_fmu_id": "modelicatest_complexblocks_complexmathfunctions_20261102_220710_b9bc507",
+     "model_description_sha256": "8042d4526533df81d8d9607eb1c55b0cec2aa1b5d25a60c6e1ec5c115ef7b3e4"
     },
     "experiment": {
      "case_entry_sha256": "7f1141906db9c3202a4bdf6f3dcb91b31519491ebe963815c26f9489b2f3d3ba",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "modelicatest_complexblocks_complexmathfunctions_20261031_183233_a47b7d8",
+     "impact_experiment_id": "modelicatest_complexblocks_complexmathfunctions_20261102_220710_ee24902",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -89,13 +179,9 @@
      "class": "ModelicaTest.ComplexBlocks.ComplexMathFunctions",
      "libraries": [
       {
-       "git_commit": "8adbd3bdd4a468fe516e8680479c8018661e6b03",
-       "git_dirty": true,
+       "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+       "git_dirty": false,
        "name": "ModelicaTest",
-       "uses": {
-        "Complex": "4.2.0 dev",
-        "Modelica": "4.2.0 dev"
-       },
        "version": "4.2.0 dev"
       }
      ]
@@ -107,10 +193,10 @@
      "sha256": "6a3bdac67699028d5f566bb98ff02f923347984aa2e30dd1daa4da4306b91624"
     },
     "run": {
-     "utc": "2026-10-31T18:32:41+00:00",
+     "utc": "2026-11-02T22:07:20+00:00",
      "modcheck": {
       "api": 1,
-      "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
       "dirty": false
      }
     }
@@ -144,7 +230,7 @@
     "linear_solver_type": "DENSE",
     "atol": 9.999999999999999e-05,
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.049214779981411994,
+    "cpu_time": 0.05184352200012654,
     "steps": 502,
     "rhs_evaluations": 510,
     "jacobian_evaluations": 10,
@@ -163,21 +249,21 @@
    "bytes": 54547,
    "record": {
     "schema": 1,
-    "record_id": "735dd008e62241b8d750d4d5b1cc40d88109d3287a9c06f1b6cf23253cd9fb15",
+    "record_id": "a94d5e4be03f5dd59c923c66f3d2b3edd3b16e00b88d918e733116337d0c7f91",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-10-31T18:32:47",
+     "generation_date": "2026-11-02T22:07:25",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "1fe9fd10757664821c2960aace92db6e",
-     "impact_fmu_id": "modelicatest_complexblocks_complexmathoperators_20261031_183244_ebbc8e3",
-     "model_description_sha256": "2edc681b4459d0ff6137e683f75e8445bde045a0573e260be83bc3efbbe9b414"
+     "impact_fmu_id": "modelicatest_complexblocks_complexmathoperators_20261102_220723_ed39471",
+     "model_description_sha256": "46e98d54ce160dcaa5c544608707fb94c38e9d0dc1fc836ad349c24b552930cd"
     },
     "experiment": {
      "case_entry_sha256": "6fcff95547a0fa3876cd05d2f8566e8eab4cebfeefacdf647583dcd9db8b2b7c",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "modelicatest_complexblocks_complexmathoperators_20261031_183244_b545bec",
+     "impact_experiment_id": "modelicatest_complexblocks_complexmathoperators_20261102_220723_c34a940",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -187,13 +273,9 @@
      "class": "ModelicaTest.ComplexBlocks.ComplexMathOperators",
      "libraries": [
       {
-       "git_commit": "8adbd3bdd4a468fe516e8680479c8018661e6b03",
-       "git_dirty": true,
+       "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+       "git_dirty": false,
        "name": "ModelicaTest",
-       "uses": {
-        "Complex": "4.2.0 dev",
-        "Modelica": "4.2.0 dev"
-       },
        "version": "4.2.0 dev"
       }
      ]
@@ -205,10 +287,10 @@
      "sha256": "83c2801e13600340b6d0168615e9ee114ec2f76a8a270aeac6ebae0405e120fc"
     },
     "run": {
-     "utc": "2026-10-31T18:32:51+00:00",
+     "utc": "2026-11-02T22:07:30+00:00",
      "modcheck": {
       "api": 1,
-      "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
       "dirty": false
      }
     }
@@ -241,7 +323,7 @@
     "linear_solver_type": "DENSE",
     "atol": 9.999999999999999e-05,
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.048559240996837616,
+    "cpu_time": 0.04933285899460316,
     "steps": 502,
     "rhs_evaluations": 510,
     "jacobian_evaluations": 10,
@@ -256,21 +338,21 @@
    "bytes": 23724,
    "record": {
     "schema": 1,
-    "record_id": "566f8fca5f82dd28631f698ca5c1c4a9824baf2c9a94f63a3d718b9fc07ebeb1",
+    "record_id": "188997cf48796c17993052eb64e4feb76178602d96ac536aa44ab2d4469b3b30",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-10-31T18:32:54",
+     "generation_date": "2026-11-02T22:07:33",
      "generation_tool": "Optimica Compiler Toolkit",
-     "guid": "1c7a7e2f9bfb0225476fb94d5612dda3",
-     "impact_fmu_id": "modelicatest_complexblocks_complexrouting_20261031_183252_aa78811",
-     "model_description_sha256": "a82f8a3ffb26fe7944caedac705c7dcee237616b901c10ec3a418621ed578bf3"
+     "guid": "87041befe799b919dcb7566dc41b54a5",
+     "impact_fmu_id": "modelicatest_complexblocks_complexrouting_20261102_220731_6fcceae",
+     "model_description_sha256": "a396ebd44a26739c90c3a6578bd0b021b1805b3752c7d4b02f5c0724517949c1"
     },
     "experiment": {
      "case_entry_sha256": "80f344e905ee41297bb4144646f34f4a9c1a9f4a99663ec0c902d311d6f9aa45",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "modelicatest_complexblocks_complexrouting_20261031_183252_8609c76",
+     "impact_experiment_id": "modelicatest_complexblocks_complexrouting_20261102_220730_5720518",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -280,13 +362,9 @@
      "class": "ModelicaTest.ComplexBlocks.ComplexRouting",
      "libraries": [
       {
-       "git_commit": "8adbd3bdd4a468fe516e8680479c8018661e6b03",
-       "git_dirty": true,
+       "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+       "git_dirty": false,
        "name": "ModelicaTest",
-       "uses": {
-        "Complex": "4.2.0 dev",
-        "Modelica": "4.2.0 dev"
-       },
        "version": "4.2.0 dev"
       }
      ]
@@ -298,10 +376,89 @@
      "sha256": "eb1124f796bed4f024bec435e7006fe32cb431ee4be77e0c24c52e7908fe3b43"
     },
     "run": {
-     "utc": "2026-10-31T18:32:58+00:00",
+     "utc": "2026-11-02T22:07:37+00:00",
      "modcheck": {
       "api": 1,
-      "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+      "dirty": false
+     }
+    }
+   }
+  },
+  {
+   "name": "ComplexStep",
+   "model": "ModelicaTest.ComplexBlocks.ComplexStep",
+   "variables": [
+    "complexPassThrough1.y.im",
+    "complexPassThrough1.y.re",
+    "complexStep1.y.im",
+    "complexStep1.y.re",
+    "time"
+   ],
+   "metrics": {
+    "solver": "CVode",
+    "linear_multistep_method": "BDF",
+    "nonlinear_solver": "Newton",
+    "linear_solver_type": "DENSE",
+    "atol": 9.999999999999999e-05,
+    "rtol": 9.999999999999999e-05,
+    "cpu_time": 0.04531822699937038,
+    "steps": 502,
+    "rhs_evaluations": 510,
+    "jacobian_evaluations": 10,
+    "time_events": 1,
+    "error_test_failures": 0,
+    "convergence_failures": 0,
+    "kind": "dynamic"
+   },
+   "units": {},
+   "display_units": {},
+   "format": "npz",
+   "bytes": 2977,
+   "record": {
+    "schema": 1,
+    "record_id": "105cbf96cc6a868d2b317c4537f7b86621a378a5c8d6ff1e4212def97c165869",
+    "executable": {
+     "fmi_version": "2.0",
+     "generation_date": "2026-11-02T22:07:40",
+     "generation_tool": "Optimica Compiler Toolkit",
+     "guid": "6eb8aede5aeb2a9d0d9182c5c8745197",
+     "impact_fmu_id": "modelicatest_complexblocks_complexstep_20261102_220738_529037d",
+     "model_description_sha256": "bdde07de3a3aefff8bf27b82b2b6d37a443b048785da774de238bc5e7bec1a93"
+    },
+    "experiment": {
+     "case_entry_sha256": "d24b145a619422c6537bc14f904b91a6963caaf7c05928080dd60224fe3db42c",
+     "descriptor": "impact workspace 'msl-coverage'",
+     "engine": "impact",
+     "impact_case_id": "case_1",
+     "impact_experiment_id": "modelicatest_complexblocks_complexstep_20261102_220738_5eab680",
+     "released": true,
+     "rtol_factor": 100.0,
+     "workspace": "msl-coverage",
+     "definition_sha256": "a8336dd0402f8c7012b54d813f34f18f79ff9c087c0d753fd8fabeb53365bd95"
+    },
+    "model": {
+     "class": "ModelicaTest.ComplexBlocks.ComplexStep",
+     "libraries": [
+      {
+       "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+       "git_dirty": false,
+       "name": "ModelicaTest",
+       "version": "4.2.0 dev"
+      }
+     ]
+    },
+    "result": {
+     "bytes": 2977,
+     "file": "ComplexStep.npz",
+     "format": "npz",
+     "sha256": "869bb870ab31a106c2ea151ed9b24721a3013aca5a05f807de18c82992709cae"
+    },
+    "run": {
+     "utc": "2026-11-02T22:07:42+00:00",
+     "modcheck": {
+      "api": 1,
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
       "dirty": false
      }
     }

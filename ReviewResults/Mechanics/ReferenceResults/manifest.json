@@ -20,7 +20,7 @@
       "nonlinear_solver": "Newton",
       "linear_solver_type": "DENSE",
       "rtol": 1e-06,
-      "cpu_time": 0.1020953580737114,
+      "cpu_time": 0.09719145199051127,
       "steps": 1012,
       "rhs_evaluations": 1023,
       "jacobian_evaluations": 18,
@@ -50,21 +50,21 @@
     "bytes": 46302,
     "record": {
       "schema": 1,
-      "record_id": "3fcb979f3f53cd0821f95c4c0f38fb637a18d9af79b35c3c22aafb7368e6df69",
+      "record_id": "1f5be265f31f67b6285a74f30a490a6262e69d4a897adcff00c84ffceb1c87cd",
       "executable": {
         "fmi_version": "2.0",
-        "generation_date": "2026-10-31T06:19:59",
+        "generation_date": "2026-11-03T02:48:26",
         "generation_tool": "Optimica Compiler Toolkit",
         "guid": "87e7667134dca18d99adc03e9d9bc46f",
-        "impact_fmu_id": "modelicatest_rotational_discmoveandangleadaptor_20261031_061957_6a8de5f",
-        "model_description_sha256": "3df8fef47339a312aeb79c1c74ef66ee2dec89dfd8793f6a5e663c1b53512aca"
+        "impact_fmu_id": "modelicatest_rotational_discmoveandangleadaptor_20261103_024824_ba426be",
+        "model_description_sha256": "224c96bc2d00111176a7c02377935facfa01cb3ac08deeae075f80bb53249589"
       },
       "experiment": {
         "case_entry_sha256": "cda6a87f2c5fb66a081329b4bd101daacc6016313ed4c8c9f58fe1a06f4b35e4",
         "descriptor": "impact workspace 'msl-coverage'",
         "engine": "impact",
         "impact_case_id": "case_1",
-        "impact_experiment_id": "modelicatest_rotational_discmoveandangleadaptor_20261031_061957_72ccb0f",
+        "impact_experiment_id": "modelicatest_rotational_discmoveandangleadaptor_20261103_024824_da66293",
         "released": true,
         "rtol_factor": 1.0,
         "workspace": "msl-coverage",
@@ -74,13 +74,9 @@
         "class": "ModelicaTest.Rotational.DiscMoveAndAngleAdaptor",
         "libraries": [
           {
-            "git_commit": "18248f5f89a84d9ad05f58c46ab87b2bc4c7a44e",
-            "git_dirty": true,
+            "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+            "git_dirty": false,
             "name": "ModelicaTest",
-            "uses": {
-              "Complex": "4.2.0 dev",
-              "Modelica": "4.2.0 dev"
-            },
             "version": "4.2.0 dev"
           }
         ]
@@ -92,10 +88,10 @@
         "sha256": "af6ab3095b8071bb92489d01c4b1fca09d24bdd1cbf6427f1f7655ea8a2fa687"
       },
       "run": {
-        "utc": "2026-10-31T06:20:02+00:00",
+        "utc": "2026-11-03T02:48:31+00:00",
         "modcheck": {
           "api": 1,
-          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
           "dirty": false
         }
       }
@@ -126,7 +122,7 @@
       "linear_solver_type": "DENSE",
       "atol": 1e-06,
       "rtol": 1e-06,
-      "cpu_time": 0.10682309698313475,
+      "cpu_time": 0.10209737300465349,
       "steps": 1001,
       "rhs_evaluations": 1005,
       "jacobian_evaluations": 17,
@@ -146,21 +142,21 @@
     "bytes": 48579,
     "record": {
       "schema": 1,
-      "record_id": "fa460a5f48b701fdfb7411b7dc90555cefe1ce49533387bff71e44502f129ee4",
+      "record_id": "86ae585e4496dcf79be5a2f247b4c7fab05273d61e9109488a97f2aca962ecbd",
       "executable": {
         "fmi_version": "2.0",
-        "generation_date": "2026-10-31T06:20:13",
+        "generation_date": "2026-11-03T02:48:45",
         "generation_tool": "Optimica Compiler Toolkit",
-        "guid": "fd8113500c6b0f17c0a6cb8c40a39c1",
-        "impact_fmu_id": "modelicatest_multibody_framesderivativesandgravity_20261031_062010_e1b32ba",
-        "model_description_sha256": "7a133ad716486213b3471cb89b6f49f61191fffae0f5744b994435b4857e33b3"
+        "guid": "cb0e548bc50c8a466706b21e3fa5df0",
+        "impact_fmu_id": "modelicatest_multibody_framesderivativesandgravity_20261103_024842_779b2de",
+        "model_description_sha256": "10acadd6872d4cdd8e11116c169dac68462bfd74e5ec122cdc3af752bb689f21"
       },
       "experiment": {
         "case_entry_sha256": "2b3f17e042245660f8ec1b0daa2cd69ce283082f19775191cd7ebb631d48d42a",
         "descriptor": "impact workspace 'msl-coverage'",
         "engine": "impact",
         "impact_case_id": "case_1",
-        "impact_experiment_id": "modelicatest_multibody_framesderivativesandgravity_20261031_062010_ce25e9d",
+        "impact_experiment_id": "modelicatest_multibody_framesderivativesandgravity_20261103_024842_235d2f6",
         "released": true,
         "rtol_factor": 1.0,
         "workspace": "msl-coverage",
@@ -170,13 +166,9 @@
         "class": "ModelicaTest.MultiBody.FramesDerivativesAndGravity",
         "libraries": [
           {
-            "git_commit": "18248f5f89a84d9ad05f58c46ab87b2bc4c7a44e",
-            "git_dirty": true,
+            "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+            "git_dirty": false,
             "name": "ModelicaTest",
-            "uses": {
-              "Complex": "4.2.0 dev",
-              "Modelica": "4.2.0 dev"
-            },
             "version": "4.2.0 dev"
           }
         ]
@@ -188,10 +180,10 @@
         "sha256": "1ebc3e16496078e61a410603f321b2427b68067d8436da8179b8f1a752b41e0d"
       },
       "run": {
-        "utc": "2026-10-31T06:20:18+00:00",
+        "utc": "2026-11-03T02:48:51+00:00",
         "modcheck": {
           "api": 1,
-          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
           "dirty": false
         }
       }
@@ -216,7 +208,7 @@
       "linear_solver_type": "DENSE",
       "atol": 1e-06,
       "rtol": 1e-06,
-      "cpu_time": 0.10894160403404385,
+      "cpu_time": 0.11316944900318049,
       "steps": 1041,
       "rhs_evaluations": 1142,
       "jacobian_evaluations": 25,
@@ -240,21 +232,21 @@
     "bytes": 27836,
     "record": {
       "schema": 1,
-      "record_id": "7fb2b4e0c4958d69de4117aa22c87771c6fc5dfc0bbe2c38a303fc30b3399398",
+      "record_id": "e1197b2a75dd5e7f5e4afb5b626c292fb30929b3cd7049937da28bf30d89fa16",
       "executable": {
         "fmi_version": "2.0",
-        "generation_date": "2026-10-31T06:19:52",
+        "generation_date": "2026-11-03T02:48:19",
         "generation_tool": "Optimica Compiler Toolkit",
         "guid": "4a85d036269d2c0819dc342b5f266021",
-        "impact_fmu_id": "_test_translational_frictionstopsandinitialization_20261031_061950_4223ca0",
-        "model_description_sha256": "846b2bdada980a88e70e7f4b7879fa6ba8044ab88ab8c74f52e7ac0b662c2ae9"
+        "impact_fmu_id": "_test_translational_frictionstopsandinitialization_20261103_024816_9388b1f",
+        "model_description_sha256": "50eee3d8a2867d24d4ab814ccb0406bd4ed764d4095e85c70e87a4617f58869e"
       },
       "experiment": {
         "case_entry_sha256": "b3e4e16eb42e9c1655b33ff84022f9332584e03b64dfa76b8ca48b1f21b61bfa",
         "descriptor": "impact workspace 'msl-coverage'",
         "engine": "impact",
         "impact_case_id": "case_1",
-        "impact_experiment_id": "_test_translational_frictionstopsandinitialization_20261031_061950_7d5de3c",
+        "impact_experiment_id": "_test_translational_frictionstopsandinitialization_20261103_024816_39a4ad0",
         "released": true,
         "rtol_factor": 1.0,
         "workspace": "msl-coverage",
@@ -264,13 +256,9 @@
         "class": "ModelicaTest.Translational.FrictionStopsAndInitialization",
         "libraries": [
           {
-            "git_commit": "18248f5f89a84d9ad05f58c46ab87b2bc4c7a44e",
-            "git_dirty": true,
+            "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+            "git_dirty": false,
             "name": "ModelicaTest",
-            "uses": {
-              "Complex": "4.2.0 dev",
-              "Modelica": "4.2.0 dev"
-            },
             "version": "4.2.0 dev"
           }
         ]
@@ -282,10 +270,10 @@
         "sha256": "536fc18388033d41a3d3a75a6ecd72dbddf1200b941e182472670b574fa1e60a"
       },
       "run": {
-        "utc": "2026-10-31T06:19:56+00:00",
+        "utc": "2026-11-03T02:48:23+00:00",
         "modcheck": {
           "api": 1,
-          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
           "dirty": false
         }
       }
@@ -318,7 +306,7 @@
       "nonlinear_solver": "Newton",
       "linear_solver_type": "DENSE",
       "rtol": 1e-06,
-      "cpu_time": 0.11522325500845909,
+      "cpu_time": 0.10823565800092183,
       "steps": 1029,
       "rhs_evaluations": 1052,
       "jacobian_evaluations": 18,
@@ -350,21 +338,21 @@
     "bytes": 89150,
     "record": {
       "schema": 1,
-      "record_id": "ff544f8f9935d1c3d8211e8be9d00e83d1be32df46ef27716181bdd39b76cfde",
+      "record_id": "dc2a833f9575d684601c9309146fdc34a18c892df7d521d1b133c81cdbb3d93f",
       "executable": {
         "fmi_version": "2.0",
-        "generation_date": "2026-10-31T06:19:45",
+        "generation_date": "2026-11-03T02:48:09",
         "generation_tool": "Optimica Compiler Toolkit",
         "guid": "7f049bc80b9fdb6b8fb924b08f880f16",
-        "impact_fmu_id": "modelicatest_translational_sensorsandsources_20261031_061942_3620464",
-        "model_description_sha256": "c8b57fbf4e8cfef57716172e236225731ee5ccf01ab3b964785d1c28376b0e6a"
+        "impact_fmu_id": "modelicatest_translational_sensorsandsources_20261103_024806_990c50d",
+        "model_description_sha256": "fd8d3655ebce39df81c63927283cd507d0345a7ed874ae688de233c0dbf7b80c"
       },
       "experiment": {
         "case_entry_sha256": "7f3af7dc80519e1620216bc6d9fd6f6016145724bb031a682f0035185b2d6fe7",
         "descriptor": "impact workspace 'msl-coverage'",
         "engine": "impact",
         "impact_case_id": "case_1",
-        "impact_experiment_id": "modelicatest_translational_sensorsandsources_20261031_061942_1c66f89",
+        "impact_experiment_id": "modelicatest_translational_sensorsandsources_20261103_024806_c8326ba",
         "released": true,
         "rtol_factor": 1.0,
         "workspace": "msl-coverage",
@@ -374,13 +362,9 @@
         "class": "ModelicaTest.Translational.SensorsAndSources",
         "libraries": [
           {
-            "git_commit": "18248f5f89a84d9ad05f58c46ab87b2bc4c7a44e",
-            "git_dirty": true,
+            "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+            "git_dirty": false,
             "name": "ModelicaTest",
-            "uses": {
-              "Complex": "4.2.0 dev",
-              "Modelica": "4.2.0 dev"
-            },
             "version": "4.2.0 dev"
           }
         ]
@@ -392,10 +376,10 @@
         "sha256": "c8d476f3939e0066fa094a03014ab9b5461ed073ba3b99aa794785aa60fa6e14"
       },
       "run": {
-        "utc": "2026-10-31T06:19:49+00:00",
+        "utc": "2026-11-03T02:48:15+00:00",
         "modcheck": {
           "api": 1,
-          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
           "dirty": false
         }
       }
@@ -420,7 +404,7 @@
       "linear_solver_type": "DENSE",
       "atol": 1e-06,
       "rtol": 1e-06,
-      "cpu_time": 0.10586607991717756,
+      "cpu_time": 0.09656135100522079,
       "steps": 1007,
       "rhs_evaluations": 1012,
       "jacobian_evaluations": 17,
@@ -444,21 +428,21 @@
     "bytes": 40806,
     "record": {
       "schema": 1,
-      "record_id": "0d878d3a91812355f38b79f9a174ddf345173e872001c10f2c33369ef0f7de59",
+      "record_id": "2458001ff01dbb13e6d01f4794eafb827fcb47e9f74507cf86a73897b2f9fe96",
       "executable": {
         "fmi_version": "2.0",
-        "generation_date": "2026-10-31T06:20:23",
+        "generation_date": "2026-11-03T02:48:56",
         "generation_tool": "Optimica Compiler Toolkit",
-        "guid": "33a246355c025b98d48dc26bcf794fb1",
-        "impact_fmu_id": "_delicatest_multibody_sensorsvisualizersandadaptor_20261031_062018_e29cdd4",
-        "model_description_sha256": "a61aaf8208c1162bdfd28f4f7f63fe2b881c911cac3f8df8b9bbb41157deb14c"
+        "guid": "3c34d242eb16523b99b89e848a432c0e",
+        "impact_fmu_id": "_delicatest_multibody_sensorsvisualizersandadaptor_20261103_024852_11339ba",
+        "model_description_sha256": "adaed67d644382aaeedd138b2a398ee0d3aa08dc52d27d55a71758cfeebb5284"
       },
       "experiment": {
         "case_entry_sha256": "6e0ff7dbfc379941bf9bfdc314644dfb6a22374f95f5f3c85c284b64da9e6f6a",
         "descriptor": "impact workspace 'msl-coverage'",
         "engine": "impact",
         "impact_case_id": "case_1",
-        "impact_experiment_id": "_delicatest_multibody_sensorsvisualizersandadaptor_20261031_062018_8b407e9",
+        "impact_experiment_id": "_delicatest_multibody_sensorsvisualizersandadaptor_20261103_024851_5ee922a",
         "released": true,
         "rtol_factor": 1.0,
         "workspace": "msl-coverage",
@@ -468,13 +452,9 @@
         "class": "ModelicaTest.MultiBody.SensorsVisualizersAndAdaptor",
         "libraries": [
           {
-            "git_commit": "18248f5f89a84d9ad05f58c46ab87b2bc4c7a44e",
-            "git_dirty": true,
+            "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+            "git_dirty": false,
             "name": "ModelicaTest",
-            "uses": {
-              "Complex": "4.2.0 dev",
-              "Modelica": "4.2.0 dev"
-            },
             "version": "4.2.0 dev"
           }
         ]
@@ -486,10 +466,86 @@
         "sha256": "797fac4a674522b56ee1bc5ab4bece0c8125058f1b7adf093ad28c1154683b92"
       },
       "run": {
-        "utc": "2026-10-31T06:20:27+00:00",
+        "utc": "2026-11-03T02:49:02+00:00",
         "modcheck": {
           "api": 1,
-          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "TestFramesFromTinv",
+    "model": "ModelicaTest.MultiBody.TestFramesFromTinv",
+    "variables": [
+      "result",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.0010620469984132797,
+      "steps": 11,
+      "rhs_evaluations": 15,
+      "jacobian_evaluations": 1,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 454,
+    "record": {
+      "schema": 1,
+      "record_id": "b8995d4b66a6fe6b788f6b0b0c77f4d5d273d675527135a4f45a73ed4e56e021",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-11-03T02:49:04",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "ccd711d23fd1211a83c0ef390fd41a0f",
+        "impact_fmu_id": "modelicatest_multibody_testframesfromtinv_20261103_024902_6b454b3",
+        "model_description_sha256": "3d9afd8dbc03e01e4ff8e76f78fa417c0bfe14ca4c82ca36c1318e05cf903a27"
+      },
+      "experiment": {
+        "case_entry_sha256": "56a06ee4d39a7a6a7b65aecef2403d832912c65c3f3fc9aad4a70eab48cd5018",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_multibody_testframesfromtinv_20261103_024902_4db1d94",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "c940a90c020d035ff55b33adac93e2109d4320d35c40f8aa631eb3a6c474059f"
+      },
+      "model": {
+        "class": "ModelicaTest.MultiBody.TestFramesFromTinv",
+        "libraries": [
+          {
+            "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+            "git_dirty": false,
+            "name": "ModelicaTest",
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 454,
+        "file": "TestFramesFromTinv.npz",
+        "format": "npz",
+        "sha256": "b3196d6c1e6ed87825cb921ba453d02daeec5e88a295570259bbe196db938665"
+      },
+      "run": {
+        "utc": "2026-11-03T02:49:08+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
           "dirty": false
         }
       }
@@ -509,7 +565,7 @@
       "linear_solver_type": "DENSE",
       "atol": 1e-06,
       "rtol": 1e-06,
-      "cpu_time": 0.0010864789364859462,
+      "cpu_time": 0.0016806569910841063,
       "steps": 11,
       "rhs_evaluations": 15,
       "jacobian_evaluations": 1,
@@ -524,21 +580,21 @@
     "bytes": 454,
     "record": {
       "schema": 1,
-      "record_id": "290592abb725aa69aab5166273d9ac5536247e88cafb9f2ed5806ba0c29f622b",
+      "record_id": "69f66f13ee5f8fabf2ddaff7bd51d648f0f59b0c4c1f447044766851be84df07",
       "executable": {
         "fmi_version": "2.0",
-        "generation_date": "2026-10-31T06:20:06",
+        "generation_date": "2026-11-03T02:48:37",
         "generation_tool": "Optimica Compiler Toolkit",
         "guid": "d144ff46fb9f4bf9aedc05a8aa4aafa3",
-        "impact_fmu_id": "modelicatest_multibody_testframesfunctions_20261031_062003_bea0ef4",
-        "model_description_sha256": "e59c45eaa49ec34569718eafaba3e4f53e68b430ed6445c106125d8e8757f279"
+        "impact_fmu_id": "modelicatest_multibody_testframesfunctions_20261103_024832_b44d94a",
+        "model_description_sha256": "198db8107c2f7a2aeac1f420f6f2eadb35ee21a9f5781e37c34aca80fffdf171"
       },
       "experiment": {
         "case_entry_sha256": "7f5ebf49eb50ec71d35b33a56d4bb37d8b5905671d5b1ee642c7925266cb3e13",
         "descriptor": "impact workspace 'msl-coverage'",
         "engine": "impact",
         "impact_case_id": "case_1",
-        "impact_experiment_id": "modelicatest_multibody_testframesfunctions_20261031_062003_34cdf06",
+        "impact_experiment_id": "modelicatest_multibody_testframesfunctions_20261103_024832_2199d6d",
         "released": true,
         "rtol_factor": 1.0,
         "workspace": "msl-coverage",
@@ -548,13 +604,9 @@
         "class": "ModelicaTest.MultiBody.TestFramesFunctions",
         "libraries": [
           {
-            "git_commit": "18248f5f89a84d9ad05f58c46ab87b2bc4c7a44e",
-            "git_dirty": true,
+            "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+            "git_dirty": false,
             "name": "ModelicaTest",
-            "uses": {
-              "Complex": "4.2.0 dev",
-              "Modelica": "4.2.0 dev"
-            },
             "version": "4.2.0 dev"
           }
         ]
@@ -566,10 +618,86 @@
         "sha256": "b3196d6c1e6ed87825cb921ba453d02daeec5e88a295570259bbe196db938665"
       },
       "run": {
-        "utc": "2026-10-31T06:20:09+00:00",
+        "utc": "2026-11-03T02:48:41+00:00",
         "modcheck": {
           "api": 1,
-          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+          "dirty": false
+        }
+      }
+    }
+  },
+  {
+    "name": "TestFramesSmallRotation",
+    "model": "ModelicaTest.MultiBody.TestFramesSmallRotation",
+    "variables": [
+      "result",
+      "time"
+    ],
+    "metrics": {
+      "solver": "CVode",
+      "linear_multistep_method": "BDF",
+      "nonlinear_solver": "Newton",
+      "linear_solver_type": "DENSE",
+      "atol": 1e-06,
+      "rtol": 1e-06,
+      "cpu_time": 0.0012334549974184483,
+      "steps": 11,
+      "rhs_evaluations": 15,
+      "jacobian_evaluations": 1,
+      "error_test_failures": 0,
+      "convergence_failures": 0,
+      "kind": "dynamic"
+    },
+    "descriptor": "impact workspace 'msl-coverage'",
+    "units": {},
+    "display_units": {},
+    "format": "npz",
+    "bytes": 454,
+    "record": {
+      "schema": 1,
+      "record_id": "bca912616c80f821b4f0fa9b8f8adff38e6ec0f74b22fdc225170df9809ccb91",
+      "executable": {
+        "fmi_version": "2.0",
+        "generation_date": "2026-11-03T02:49:11",
+        "generation_tool": "Optimica Compiler Toolkit",
+        "guid": "15eb1890a75e4671de13dd401e0ffe8",
+        "impact_fmu_id": "modelicatest_multibody_testframessmallrotation_20261103_024909_f08279c",
+        "model_description_sha256": "ae8c50e0cb3cdbf137517f2124fd422c5a81bfa0118aeeaf8d027101a5e6052a"
+      },
+      "experiment": {
+        "case_entry_sha256": "ee81d9716e5bd334e890b97a9cb6ef3b7ac0a9cf5fe0610edeb32036498fab94",
+        "descriptor": "impact workspace 'msl-coverage'",
+        "engine": "impact",
+        "impact_case_id": "case_1",
+        "impact_experiment_id": "modelicatest_multibody_testframessmallrotation_20261103_024909_44b3b84",
+        "released": true,
+        "rtol_factor": 1.0,
+        "workspace": "msl-coverage",
+        "definition_sha256": "c6a00b28597377f69cbfebed6338607eb9375fff6aa014ba810a78cbf7a5826a"
+      },
+      "model": {
+        "class": "ModelicaTest.MultiBody.TestFramesSmallRotation",
+        "libraries": [
+          {
+            "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+            "git_dirty": false,
+            "name": "ModelicaTest",
+            "version": "4.2.0 dev"
+          }
+        ]
+      },
+      "result": {
+        "bytes": 454,
+        "file": "TestFramesSmallRotation.npz",
+        "format": "npz",
+        "sha256": "b3196d6c1e6ed87825cb921ba453d02daeec5e88a295570259bbe196db938665"
+      },
+      "run": {
+        "utc": "2026-11-03T02:49:14+00:00",
+        "modcheck": {
+          "api": 1,
+          "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
           "dirty": false
         }
       }

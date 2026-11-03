@@ -27,7 +27,7 @@
       "linear_solver_type": "DENSE",
       "atol": 1e-06,
       "rtol": 1e-06,
-      "cpu_time": 0.0638779200380668,
+      "cpu_time": 0.05926024800282903,
       "steps": 505,
       "rhs_evaluations": 509,
       "jacobian_evaluations": 9,
@@ -50,21 +50,21 @@
     "bytes": 50706,
     "record": {
       "schema": 1,
-      "record_id": "0660437181e9ce740804c9c046a83f6e96d8b860ed9787151ea66c978f8dc349",
+      "record_id": "89af6a298de67ab6efe376b4ce52dad6f37b8754d7889dbef62a28808cded993",
       "executable": {
         "fmi_version": "2.0",
-        "generation_date": "2026-10-31T06:03:18",
+        "generation_date": "2026-11-03T02:45:05",
         "generation_tool": "Optimica Compiler Toolkit",
-        "guid": "8d335b63b5711c769dd15b5dec686d05",
-        "impact_fmu_id": "_asistatic_fluxtubes_basicelementsshapesandsensors_20261031_060314_e65ad9a",
-        "model_description_sha256": "053e8d619d1c2ffc526429b27c7f4b775c15112e07885356d780bdfc6b395868"
+        "guid": "fdb6fde3101d5047baa4951b1d92483f",
+        "impact_fmu_id": "_asistatic_fluxtubes_basicelementsshapesandsensors_20261103_024502_800dd7a",
+        "model_description_sha256": "9ed4f694c46360535cd395bf6c5d6983db1730c8f18ca5eac07615f013c39a58"
       },
       "experiment": {
         "case_entry_sha256": "1c74191a0870df9fcfcb96d14536256684207371c7858a4284a39a6be11efe34",
         "descriptor": "impact workspace 'msl-coverage'",
         "engine": "impact",
         "impact_case_id": "case_1",
-        "impact_experiment_id": "_asistatic_fluxtubes_basicelementsshapesandsensors_20261031_060314_2f9a408",
+        "impact_experiment_id": "_asistatic_fluxtubes_basicelementsshapesandsensors_20261103_024501_35e17ea",
         "released": true,
         "rtol_factor": 1.0,
         "workspace": "msl-coverage",
@@ -74,13 +74,9 @@
         "class": "ModelicaTest.Magnetic.QuasiStatic.FluxTubes.BasicElementsShapesAndSensors",
         "libraries": [
           {
-            "git_commit": "38c9e4e4ae9f0fa0e826cfddea26f90a5b9a89ed",
-            "git_dirty": true,
+            "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+            "git_dirty": false,
             "name": "ModelicaTest",
-            "uses": {
-              "Complex": "4.2.0 dev",
-              "Modelica": "4.2.0 dev"
-            },
             "version": "4.2.0 dev"
           }
         ]
@@ -92,10 +88,10 @@
         "sha256": "ebce54ce127f0622c7e641ff69dac9ad6451f0335d713c56aea6702efb088a1b"
       },
       "run": {
-        "utc": "2026-10-31T06:03:22+00:00",
+        "utc": "2026-11-03T02:45:11+00:00",
         "modcheck": {
           "api": 1,
-          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
           "dirty": false
         }
       }
@@ -130,7 +126,7 @@
       "linear_solver_type": "DENSE",
       "atol": 1e-06,
       "rtol": 1e-06,
-      "cpu_time": 0.05659843306057155,
+      "cpu_time": 0.05239360000996385,
       "steps": 501,
       "rhs_evaluations": 505,
       "jacobian_evaluations": 9,
@@ -151,21 +147,21 @@
     "bytes": 27303,
     "record": {
       "schema": 1,
-      "record_id": "2184ab9669342b3ebd74cdf7e0903eb590139828e9509477044b9da33b934175",
+      "record_id": "5312e816951f655097a41c6982befc2c7319c049b1a3e080d0b336f78decb2f4",
       "executable": {
         "fmi_version": "2.0",
-        "generation_date": "2026-10-31T06:03:26",
+        "generation_date": "2026-11-03T02:45:14",
         "generation_tool": "Optimica Compiler Toolkit",
         "guid": "4199717c76a33e7291159228f68b5e7f",
-        "impact_fmu_id": "_ndamentalwave_fundamentalwavecomponentsandsensors_20261031_060323_5900ad4",
-        "model_description_sha256": "6a381a88820cb7e37a1f7b03706e898f20269c8e7fc5fe5973a9f8b23c5a97ad"
+        "impact_fmu_id": "_ndamentalwave_fundamentalwavecomponentsandsensors_20261103_024512_4f68961",
+        "model_description_sha256": "3efda08ed51614c9e7e53bdfae10a726e0931ae5395d93be68979c0a6136981c"
       },
       "experiment": {
         "case_entry_sha256": "e5ddf71c62dd3620c7b8f63e48562cecfe95e20d1daca71bc2dbba45119e9a1c",
         "descriptor": "impact workspace 'msl-coverage'",
         "engine": "impact",
         "impact_case_id": "case_1",
-        "impact_experiment_id": "_ndamentalwave_fundamentalwavecomponentsandsensors_20261031_060323_cf9ed8c",
+        "impact_experiment_id": "_ndamentalwave_fundamentalwavecomponentsandsensors_20261103_024511_400f9de",
         "released": true,
         "rtol_factor": 1.0,
         "workspace": "msl-coverage",
@@ -175,13 +171,9 @@
         "class": "ModelicaTest.Magnetic.FundamentalWave.FundamentalWaveComponentsAndSensors",
         "libraries": [
           {
-            "git_commit": "38c9e4e4ae9f0fa0e826cfddea26f90a5b9a89ed",
-            "git_dirty": true,
+            "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+            "git_dirty": false,
             "name": "ModelicaTest",
-            "uses": {
-              "Complex": "4.2.0 dev",
-              "Modelica": "4.2.0 dev"
-            },
             "version": "4.2.0 dev"
           }
         ]
@@ -193,10 +185,10 @@
         "sha256": "25c5b148083479d4ae83baad0c819573a301eed6f3c6688e5dad948b6b1d78dd"
       },
       "run": {
-        "utc": "2026-10-31T06:03:30+00:00",
+        "utc": "2026-11-03T02:45:19+00:00",
         "modcheck": {
           "api": 1,
-          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
           "dirty": false
         }
       }
@@ -220,7 +212,7 @@
       "linear_solver_type": "DENSE",
       "atol": 1e-06,
       "rtol": 1e-06,
-      "cpu_time": 0.31048877991270274,
+      "cpu_time": 0.3510598190041492,
       "steps": 3323,
       "rhs_evaluations": 3425,
       "jacobian_evaluations": 58,
@@ -245,21 +237,21 @@
     "bytes": 28228,
     "record": {
       "schema": 1,
-      "record_id": "8bb0decec1e00f07e06ff65f278e0f25ca650ffd530c19fccdcde54869f8e044",
+      "record_id": "704ecb5a0e670c43624f91a5045ec2ca9bc6d931af44be854c18956c638357e6",
       "executable": {
         "fmi_version": "2.0",
-        "generation_date": "2026-10-31T06:03:50",
+        "generation_date": "2026-11-03T02:45:39",
         "generation_tool": "Optimica Compiler Toolkit",
-        "guid": "de1b89751a2d98bcf9629b15a9b2b514",
-        "impact_fmu_id": "_ic_fundamentalwave_ims_startlowloadhighresistance_20261031_060340_29eee46",
-        "model_description_sha256": "db1fd861f132c0cbdfd8ccc1e95fb2c505eaf8955521db24d1b01c5e0770a166"
+        "guid": "8efdcff9c70439cdf6e9347287dfa8c3",
+        "impact_fmu_id": "_ic_fundamentalwave_ims_startlowloadhighresistance_20261103_024528_63532ac",
+        "model_description_sha256": "37847d90735a14fe60623043c16fe8beca6cfe3e4f7a8f591f9ff5ed8955f001"
       },
       "experiment": {
         "case_entry_sha256": "47a241d4e3a94a6963ae5f4a3631d9c0b9327970a2f4019de2399bc527f5d7c9",
         "descriptor": "impact workspace 'msl-coverage'",
         "engine": "impact",
         "impact_case_id": "case_1",
-        "impact_experiment_id": "_ic_fundamentalwave_ims_startlowloadhighresistance_20261031_060340_9be92cc",
+        "impact_experiment_id": "_ic_fundamentalwave_ims_startlowloadhighresistance_20261103_024528_e1a224f",
         "released": true,
         "rtol_factor": 1.0,
         "workspace": "msl-coverage",
@@ -269,13 +261,9 @@
         "class": "ModelicaTest.Magnetic.QuasiStatic.FundamentalWave.IMS_StartLowLoadHighResistance",
         "libraries": [
           {
-            "git_commit": "38c9e4e4ae9f0fa0e826cfddea26f90a5b9a89ed",
-            "git_dirty": true,
+            "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+            "git_dirty": false,
             "name": "ModelicaTest",
-            "uses": {
-              "Complex": "4.2.0 dev",
-              "Modelica": "4.2.0 dev"
-            },
             "version": "4.2.0 dev"
           }
         ]
@@ -287,10 +275,10 @@
         "sha256": "923cf960234dbb0c7befdd24e6c43c24a2c3da8437f536c46b81a434284804f0"
       },
       "run": {
-        "utc": "2026-10-31T06:03:55+00:00",
+        "utc": "2026-11-03T02:45:45+00:00",
         "modcheck": {
           "api": 1,
-          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
           "dirty": false
         }
       }
@@ -367,7 +355,7 @@
       "linear_solver_type": "DENSE",
       "atol": 1e-06,
       "rtol": 1e-06,
-      "cpu_time": 0.04876142705325037,
+      "cpu_time": 0.07580751700152177,
       "steps": 501,
       "rhs_evaluations": 505,
       "jacobian_evaluations": 9,
@@ -434,21 +422,21 @@
     "bytes": 70199,
     "record": {
       "schema": 1,
-      "record_id": "42d851bf39d833177095fba39ffdff2b69a93e4753dedcf771aeb530767cda86",
+      "record_id": "7c67d283332782e62942f6eba71080585c4fef3aa788dd792a2662f15e304c63",
       "executable": {
         "fmi_version": "2.0",
-        "generation_date": "2026-10-31T06:02:57",
+        "generation_date": "2026-11-03T02:44:42",
         "generation_tool": "Optimica Compiler Toolkit",
         "guid": "b33cc07a9a97032b0d9c13e147f37204",
-        "impact_fmu_id": "modelicatest_magnetic_fluxtubes_materialrecords_20261031_060255_518c6e8",
-        "model_description_sha256": "84f0019dcc5a25deb524c2a657f0c2f1c13ce3bc8baf44ee81f9b7df142fe8c6"
+        "impact_fmu_id": "modelicatest_magnetic_fluxtubes_materialrecords_20261103_024439_0486336",
+        "model_description_sha256": "603291c014990124200bb71246d32aaa61081deac83647f9ea4eeab4b436681c"
       },
       "experiment": {
         "case_entry_sha256": "8a718ae1da10cedca76d6115d708eb76e82abbe371396b891e2df854804a4478",
         "descriptor": "impact workspace 'msl-coverage'",
         "engine": "impact",
         "impact_case_id": "case_1",
-        "impact_experiment_id": "modelicatest_magnetic_fluxtubes_materialrecords_20261031_060254_c63abdf",
+        "impact_experiment_id": "modelicatest_magnetic_fluxtubes_materialrecords_20261103_024439_a9681bd",
         "released": true,
         "rtol_factor": 1.0,
         "workspace": "msl-coverage",
@@ -458,13 +446,9 @@
         "class": "ModelicaTest.Magnetic.FluxTubes.MaterialRecords",
         "libraries": [
           {
-            "git_commit": "38c9e4e4ae9f0fa0e826cfddea26f90a5b9a89ed",
-            "git_dirty": true,
+            "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+            "git_dirty": false,
             "name": "ModelicaTest",
-            "uses": {
-              "Complex": "4.2.0 dev",
-              "Modelica": "4.2.0 dev"
-            },
             "version": "4.2.0 dev"
           }
         ]
@@ -476,10 +460,10 @@
         "sha256": "f87193f2219682ec936fd0be4f7fd578fe77cfb6b3eb7d60490203a2acabf8f0"
       },
       "run": {
-        "utc": "2026-10-31T06:03:07+00:00",
+        "utc": "2026-11-03T02:44:53+00:00",
         "modcheck": {
           "api": 1,
-          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
           "dirty": false
         }
       }
@@ -510,7 +494,7 @@
       "linear_solver_type": "DENSE",
       "atol": 1e-06,
       "rtol": 1e-06,
-      "cpu_time": 0.04980527306906879,
+      "cpu_time": 0.04924156299966853,
       "steps": 505,
       "rhs_evaluations": 509,
       "jacobian_evaluations": 9,
@@ -525,21 +509,21 @@
     "bytes": 11493,
     "record": {
       "schema": 1,
-      "record_id": "8329a9b381ecdd4dc6e156bb197c7ed0ad3b85cf0991e37625d7702d90b4a914",
+      "record_id": "5be2c21e281b10236aed0e7ccd804cce15fea7d33ea5b3ffcc73389cccabdc49",
       "executable": {
         "fmi_version": "2.0",
-        "generation_date": "2026-10-31T06:03:35",
+        "generation_date": "2026-11-03T02:45:23",
         "generation_tool": "Optimica Compiler Toolkit",
         "guid": "181830aa81931894fd424d69f477d78d",
-        "impact_fmu_id": "_ve_quasistaticfundamentalwavecomponentsandsensors_20261031_060331_a6ec861",
-        "model_description_sha256": "c991dd2a8a1dfa9a0152a88c747619668f9f80a97c55db9c7896fe90eb89ad78"
+        "impact_fmu_id": "_ve_quasistaticfundamentalwavecomponentsandsensors_20261103_024520_e06d160",
+        "model_description_sha256": "da6c226efdbec9418fe78c056e05ae9d08b4762a3899bd16718b611885adef7a"
       },
       "experiment": {
         "case_entry_sha256": "6719550023af58243cd28d352b5310df5d862dd8dc45f1bc0cfed8126a3f6b41",
         "descriptor": "impact workspace 'msl-coverage'",
         "engine": "impact",
         "impact_case_id": "case_1",
-        "impact_experiment_id": "_ve_quasistaticfundamentalwavecomponentsandsensors_20261031_060331_e851b59",
+        "impact_experiment_id": "_ve_quasistaticfundamentalwavecomponentsandsensors_20261103_024520_c1477af",
         "released": true,
         "rtol_factor": 1.0,
         "workspace": "msl-coverage",
@@ -549,13 +533,9 @@
         "class": "ModelicaTest.Magnetic.QuasiStatic.FundamentalWave.QuasiStaticFundamentalWaveComponentsAndSensors",
         "libraries": [
           {
-            "git_commit": "38c9e4e4ae9f0fa0e826cfddea26f90a5b9a89ed",
-            "git_dirty": true,
+            "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+            "git_dirty": false,
             "name": "ModelicaTest",
-            "uses": {
-              "Complex": "4.2.0 dev",
-              "Modelica": "4.2.0 dev"
-            },
             "version": "4.2.0 dev"
           }
         ]
@@ -567,10 +547,10 @@
         "sha256": "e4c7784807d5e5907f2001a326dbca9b358bbdc26bd7af1b599e9007ad70427f"
       },
       "run": {
-        "utc": "2026-10-31T06:03:39+00:00",
+        "utc": "2026-11-03T02:45:28+00:00",
         "modcheck": {
           "api": 1,
-          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
           "dirty": false
         }
       }
@@ -593,7 +573,7 @@
       "linear_solver_type": "DENSE",
       "atol": 1e-06,
       "rtol": 1e-06,
-      "cpu_time": 0.15061811893247068,
+      "cpu_time": 0.14027192701178137,
       "steps": 1011,
       "rhs_evaluations": 1016,
       "jacobian_evaluations": 18,
@@ -616,21 +596,21 @@
     "bytes": 23374,
     "record": {
       "schema": 1,
-      "record_id": "dfd6fb4d31a9c02898c01f5de84952356bf0debbd2f636d2983a1c1120d5464d",
+      "record_id": "0a925b21b0f760ab339bc2ad31feb32a11a5540143af6f9a85cabe7257dca7d9",
       "executable": {
         "fmi_version": "2.0",
-        "generation_date": "2026-10-31T06:04:06",
+        "generation_date": "2026-11-03T02:45:55",
         "generation_tool": "Optimica Compiler Toolkit",
-        "guid": "517c43c84e29997e022c063b40c6b10e",
-        "impact_fmu_id": "_sistatic_fundamentalwave_smr_currentsourcelowload_20261031_060356_f86be14",
-        "model_description_sha256": "d47d2c8fd8b0b2dbfd85b5470b839ffaf6177849df74de57261d7408c0dfa2ea"
+        "guid": "a12656d843962643347157b2d4030b67",
+        "impact_fmu_id": "_sistatic_fundamentalwave_smr_currentsourcelowload_20261103_024546_1c327d0",
+        "model_description_sha256": "93ba4f8e8f34e5fd0172d0cccd0593656e9375e244cde5ff123c4213a77d84dd"
       },
       "experiment": {
         "case_entry_sha256": "3f6ebc0e43a8eb26abeef19a405b77b9054fd44a7d1f90ee6b60af5bdc488ec0",
         "descriptor": "impact workspace 'msl-coverage'",
         "engine": "impact",
         "impact_case_id": "case_1",
-        "impact_experiment_id": "_sistatic_fundamentalwave_smr_currentsourcelowload_20261031_060356_b495615",
+        "impact_experiment_id": "_sistatic_fundamentalwave_smr_currentsourcelowload_20261103_024545_72db65e",
         "released": true,
         "rtol_factor": 1.0,
         "workspace": "msl-coverage",
@@ -640,13 +620,9 @@
         "class": "ModelicaTest.Magnetic.QuasiStatic.FundamentalWave.SMR_CurrentSourceLowLoad",
         "libraries": [
           {
-            "git_commit": "38c9e4e4ae9f0fa0e826cfddea26f90a5b9a89ed",
-            "git_dirty": true,
+            "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+            "git_dirty": false,
             "name": "ModelicaTest",
-            "uses": {
-              "Complex": "4.2.0 dev",
-              "Modelica": "4.2.0 dev"
-            },
             "version": "4.2.0 dev"
           }
         ]
@@ -658,10 +634,10 @@
         "sha256": "24999b5e66ad8cddd16219311d2d218345c2df6115570c76094e3e70d8f32e4d"
       },
       "run": {
-        "utc": "2026-10-31T06:04:09+00:00",
+        "utc": "2026-11-03T02:46:00+00:00",
         "modcheck": {
           "api": 1,
-          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
           "dirty": false
         }
       }
@@ -686,7 +662,7 @@
       "linear_solver_type": "DENSE",
       "atol": 1e-06,
       "rtol": 1e-06,
-      "cpu_time": 0.026714631007052958,
+      "cpu_time": 0.022322664997773245,
       "steps": 675,
       "rhs_evaluations": 880,
       "jacobian_evaluations": 15,
@@ -709,21 +685,21 @@
     "bytes": 2425,
     "record": {
       "schema": 1,
-      "record_id": "680830f07fc553b5840f7b62fba560f404355b3ee3b851852f5e38b7435c46f8",
+      "record_id": "8b5c914950d62f593e35686cbd4e73262171bf29bd7e993537a31cf12d4e126e",
       "executable": {
         "fmi_version": "2.0",
-        "generation_date": "2026-10-31T06:03:10",
+        "generation_date": "2026-11-03T02:44:57",
         "generation_tool": "Optimica Compiler Toolkit",
         "guid": "d25b464db707fee30723b2c8fd581134",
-        "impact_fmu_id": "_sistatic_fluxtubes_transientshapesandpermeability_20261031_060308_d2cdbfa",
-        "model_description_sha256": "45f2ccc8bb75fb8c983a370f2d7dbcc37ff72695dbb8f4ac640cd3d4da12042f"
+        "impact_fmu_id": "_sistatic_fluxtubes_transientshapesandpermeability_20261103_024454_f1ecdf7",
+        "model_description_sha256": "76216da355b67e66b7aaf628efd1f2a74e23f307292431c682e646a7837a62de"
       },
       "experiment": {
         "case_entry_sha256": "8bad2b5d629837a7738f65bb9d7d39d67a7cabdee036b71382f7bf3d93675310",
         "descriptor": "impact workspace 'msl-coverage'",
         "engine": "impact",
         "impact_case_id": "case_1",
-        "impact_experiment_id": "_sistatic_fluxtubes_transientshapesandpermeability_20261031_060308_c21a9ab",
+        "impact_experiment_id": "_sistatic_fluxtubes_transientshapesandpermeability_20261103_024454_70f83a2",
         "released": true,
         "rtol_factor": 1.0,
         "workspace": "msl-coverage",
@@ -733,13 +709,9 @@
         "class": "ModelicaTest.Magnetic.QuasiStatic.FluxTubes.TransientShapesAndPermeability",
         "libraries": [
           {
-            "git_commit": "38c9e4e4ae9f0fa0e826cfddea26f90a5b9a89ed",
-            "git_dirty": true,
+            "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+            "git_dirty": false,
             "name": "ModelicaTest",
-            "uses": {
-              "Complex": "4.2.0 dev",
-              "Modelica": "4.2.0 dev"
-            },
             "version": "4.2.0 dev"
           }
         ]
@@ -751,10 +723,10 @@
         "sha256": "0b4cc09bd05f9fc0e5cb3c488f4b4a039072165c0aa4312ca8464c4642ea155f"
       },
       "run": {
-        "utc": "2026-10-31T06:03:13+00:00",
+        "utc": "2026-11-03T02:45:00+00:00",
         "modcheck": {
           "api": 1,
-          "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+          "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
           "dirty": false
         }
       }

@@ -1,6 +1,7 @@
 # ModCheck case list: new ModelicaTest coverage tests for Modelica.Electrical (branch coverage-improvement).
 #
-# Each case is one new test model, run unmodified on Modelon Impact (MSL 4.1.0 dependency).
+# Each case is one new test model, run unmodified on Modelon Impact with the
+# libraries of this repository (MSL 4.2.0 dev, see README.md).
 # Variables are the comparison signals of the model, as listed in
 # ModelicaTest/Resources/Reference/ModelicaTest/<Package>/<Model>/comparisonSignals.txt.
 # ncp gives 500 output intervals per second of simulated time (2000 for long runs).
@@ -1076,3 +1077,29 @@ cases:
       - "rd.v"
       - "cs.v"
       - "rs.i"
+  - name: AnalogOpAmpLimited
+    enabled: true
+    model: ModelicaTest.Electrical.Analog.AnalogOpAmpLimited
+    start_time: 0.0
+    final_time: 0.04
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "opAmpLimited.out.v"
+      - "opAmpFirstOrder.out.v"
+  - name: MutualInductor
+    enabled: true
+    model: ModelicaTest.Electrical.QuasiStatic.Polyphase.MutualInductor
+    start_time: 0.0
+    final_time: 1.0
+    ncp: 500
+    rtol: 1.0e-6
+    modifiers: {}
+    variables:
+      - time
+      - "mutualInductor.i[[]1].re"
+      - "mutualInductor.i[[]1].im"
+      - "mutualInductor.i[[]2].re"
+      - "load.v[[]3].im"

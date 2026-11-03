@@ -2,28 +2,38 @@
 
 Results of the new ModelicaTest coverage tests on branch `coverage-improvement`,
 one directory per sub-library. These are review results, not reference results:
-they were produced with Modelon Impact (MSL 4.1.0 dependency, CVode) and still
-need to be confirmed with the usual reference-result tooling before they move
-to the reference-results repository.
+they were produced with Modelon Impact (CVode) and still need to be confirmed with
+the usual reference-result tooling before they move to the reference-results
+repository.
 
-Exception: `Clocked/`. The MSL distribution of Modelon Impact does not contain
-`Modelica.Clocked`, so these cases run on OpenModelica 1.27.1 (CVode) with the
-libraries of this repository (MSL 4.2.0 dev). omc loads them through
+Since 2026-11-02 the Impact cases run with the libraries of **this repository** (MSL 4.2.0 dev), not with
+Impact's built-in MSL 4.1.0, so they test the code of this branch. The workspace `msl-coverage` is set up as
+follows (see "Impact workspace" below):
+
+- `Modelica`, `ModelicaServices`, `Complex.mo` and `ModelicaTest` of this branch are uploaded into the
+  workspace's **default project**. In a non-default project, Impact resolves `Modelica` to its built-in
+  4.1.0 instead.
+- The built-in Modelica 4.1.0 dependency stays **enabled**; with every built-in MSL disabled, Impact
+  compiles no model at all.
+- The upload of `Modelica` contains `Resources/Library/linux64/` with the C libraries (`libModelicaExternalC.a`
+  etc.), built from `Resources/C-Sources` of this branch. A git checkout has none, and without them every
+  model that calls `Streams`, `Strings` or `Files` fails to link (`cannot find -lModelicaExternalC`).
+
+Running on this MSL needs these fixes of the branch, each also an upstream PR:
+modelica/ModelicaStandardLibrary#4846, #4847, #4848, #4851, #4854, #4855, #4686 (applied unchanged) and #4857.
+
+Exception: `Clocked/`. Modelon Impact does not support `Modelica.Clocked`, so these cases run on
+OpenModelica 1.27.1 (CVode) with the libraries of this repository. omc loads them through
 `loadModel(Modelica, {"4.2.0 dev"})`, so `OPENMODELICALIBRARY` must contain a
 directory with entries `Modelica 4.2.0 dev`, `ModelicaServices 4.2.0 dev` (junctions
 or symlinks to this repository) and `Complex 4.2.0 dev.mo`.
 
-Some single cases of other sub-libraries cannot run on Impact either. They use a class that is new in
-MSL 4.2, or MSL 4.1.0 code that OCT fails on and that this branch fixes. Each fix is also an upstream PR:
-modelica/ModelicaStandardLibrary#4846, #4847, #4848 and #4851. These cases run on OpenModelica the same
-way. ModCheck runs one source per case list, so they have their own case list, baselines and report in
-`<SubLibrary>/OpenModelica/`. The reason is stated at each case.
-
 `Completion/` holds the 21 tests of the completion round, which spans several sub-libraries (see section 4
-of `CoverageImprovementReport.md`). Two of them run on OpenModelica: the Clocked variant, and
-`UniversalConstraint_StiffSpring`, whose constraint orientation OCT lets drift. Its HTML reports
-(`Completion/HtmlReports/`, `Completion/OpenModelica/HtmlReports/`) were generated but are not committed
-for now; the commands below regenerate them.
+of `CoverageImprovementReport.md`). Two of them run on OpenModelica (`Completion/OpenModelica/`): the
+Clocked variant, and `UniversalConstraint_StiffSpring`, because OCT computes the orientation of the body
+behind `Joints.Constraints.Universal` wrongly (hubertus65/ModelicaStandardLibrary#6). ModCheck runs one
+source per case list, hence the separate list. Its HTML reports are not committed for now; the commands
+below regenerate them.
 
 Each `<SubLibrary>/` directory holds:
 
@@ -38,12 +48,27 @@ Each `<SubLibrary>/` directory holds:
 The comparison signals of each model are also stored in the library, in
 `ModelicaTest/Resources/Reference/ModelicaTest/<Package>/<Model>/comparisonSignals.txt`.
 
-Reproduce a report (needs a Modelon Impact workspace `msl-coverage` holding the
-test models):
+### Impact workspace
+
+Build the C libraries for linux64 (here in WSL Ubuntu; Impact's OCT uses gcc 11.4 with an older glibc, so
+the C23 symbol that newer glibc headers substitute for `strtol_l` is mapped back):
+
+```bash
+cd Modelica/Resources/BuildProjects/gcc   # in a copy, the Makefile writes to ../../Library/linux64
+make all CFLAGS="-O2 -fPIC -Wno-attributes -fno-delete-null-pointer-checks"
+for f in ../../Library/linux64/*.a; do
+  for s in $(nm -u $f | awk '{print $2}' | grep '^__isoc23_'); do objcopy --redefine-sym $s=${s#__isoc23_} $f; done
+done
+```
+
+Then zip `Modelica` (with `Resources/Library/linux64/`), `ModelicaServices`, `ModelicaTest` and upload them
+and `Complex.mo` with "Import library" into the default project of a new workspace `msl-coverage`.
+
+### Reproduce a report
 
 ```bash
 cd ModCheck/ModCheck/Resources
 python regression_testing.py --config <repo>/ReviewResults/Blocks/regression_cases_Blocks.yaml --store
 python regression_testing.py --config <repo>/ReviewResults/Blocks/regression_cases_Blocks.yaml \
-    --report-format html --batch-size 100 --html-report-dir <repo>/ReviewResults/Blocks/HtmlReports
+    --report-format html --batch-size 25 --html-report-dir <repo>/ReviewResults/Blocks/HtmlReports
 ```

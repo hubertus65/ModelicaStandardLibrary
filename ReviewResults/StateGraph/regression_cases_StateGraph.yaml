@@ -1,7 +1,7 @@
 # ModCheck case list: new ModelicaTest.StateGraph coverage tests (branch coverage-improvement).
 #
-# Each case is one new test model, run unmodified on Modelon Impact (MSL 4.1.0
-# dependency). Variables are the comparison signals of the model, as listed in
+# Each case is one new test model, run unmodified on Modelon Impact with the
+# libraries of this repository (MSL 4.2.0 dev, see README.md). Variables are the comparison signals of the model, as listed in
 # ModelicaTest/Resources/Reference/ModelicaTest/StateGraph/<Model>/comparisonSignals.txt.
 # ncp gives 500 output intervals per second of simulated time.
 library: ModelicaTest

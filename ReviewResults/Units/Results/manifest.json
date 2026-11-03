@@ -1,6 +1,6 @@
 {
  "run": {
-  "utc": "2026-10-31T04:57:50+00:00",
+  "utc": "2026-11-03T02:54:09+00:00",
   "rtol_factor": 100.0,
   "descriptor": "impact workspace 'msl-coverage'",
   "reference_descriptor": "impact workspace 'msl-coverage'",
@@ -37,7 +37,7 @@
     "linear_solver_type": "DENSE",
     "atol": 9.999999999999999e-05,
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.06732793198898435,
+    "cpu_time": 0.04684794899367262,
     "steps": 501,
     "rhs_evaluations": 505,
     "jacobian_evaluations": 9,
@@ -62,21 +62,21 @@
    "bytes": 31274,
    "record": {
     "schema": 1,
-    "record_id": "d3bd8e1cb3140aef482d51f1af3904d5ac17366a029fda05527a036a2d6ac0cc",
+    "record_id": "a5221e1d8f9e3ea604ccb5b729434512186af16537bf9a2f2c007e90d65d0e4b",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-10-31T04:57:43",
+     "generation_date": "2026-11-03T02:54:02",
      "generation_tool": "Optimica Compiler Toolkit",
-     "guid": "559f2f3587fa2b00f47ea22b467d54a3",
-     "impact_fmu_id": "modelicatest_units_complexunitsandconversions_20261031_045741_7c18b46",
-     "model_description_sha256": "03f88d0191ad92cb6db15a33fc0eb6c818c0bd18772f2dc68b3fa9defa45e9d4"
+     "guid": "d2c0ae01072b2120021f6760f7ffb56",
+     "impact_fmu_id": "modelicatest_units_complexunitsandconversions_20261103_025400_a765d94",
+     "model_description_sha256": "f6d8143560346e54bf353e24b893af4b7c7376da314548b6695103c0ffc49743"
     },
     "experiment": {
      "case_entry_sha256": "f1d61e8f9cae5ea58bd740efb056ab53c76d4010ec741e181ddb5c95d1dbcd36",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "modelicatest_units_complexunitsandconversions_20261031_045741_c47d1aa",
+     "impact_experiment_id": "modelicatest_units_complexunitsandconversions_20261103_025400_f3fd634",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -86,13 +86,9 @@
      "class": "ModelicaTest.Units.ComplexUnitsAndConversions",
      "libraries": [
       {
-       "git_commit": "1db057b7f601065ce2247e2d6750badec0dad11f",
-       "git_dirty": true,
+       "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
+       "git_dirty": false,
        "name": "ModelicaTest",
-       "uses": {
-        "Complex": "4.2.0 dev",
-        "Modelica": "4.2.0 dev"
-       },
        "version": "4.2.0 dev"
       }
      ]
@@ -104,10 +100,10 @@
      "sha256": "2fbfeb60f2dc14891e28750c1398be2afd0b224164e2eb0e1ec153a5d85d3965"
     },
     "run": {
-     "utc": "2026-10-31T04:57:48+00:00",
+     "utc": "2026-11-03T02:54:07+00:00",
      "modcheck": {
       "api": 1,
-      "commit": "386763cc216f79a576b27342d1e97c157a698e46",
+      "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
       "dirty": false
      }
     }
