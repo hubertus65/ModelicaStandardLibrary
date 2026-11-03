@@ -20,7 +20,7 @@ follows (see "Impact workspace" below):
   model that calls `Streams`, `Strings` or `Files` fails to link (`cannot find -lModelicaExternalC`).
 
 Running on this MSL needs these fixes of the branch, each also an upstream PR:
-modelica/ModelicaStandardLibrary#4846, #4847, #4848, #4851, #4854, #4855, #4686 (applied unchanged) and #4857.
+modelica/ModelicaStandardLibrary#4846, #4847, #4848, #4851, #4854, #4855, #4686 (applied unchanged), #4857 and #4858 (the baseline of `Spice3InternalRecordsAndFunctions` assumes it).
 
 Exception: `Clocked/`. Modelon Impact does not support `Modelica.Clocked`, so these cases run on
 OpenModelica 1.27.1 (CVode) with the libraries of this repository. omc loads them through

@@ -1,13 +1,13 @@
 {
  "run": {
-  "utc": "2026-11-03T18:19:16+00:00",
+  "utc": "2026-11-03T22:39:21+00:00",
   "rtol_factor": 100.0,
   "descriptor": "impact workspace 'msl-coverage'",
   "reference_descriptor": "impact workspace 'msl-coverage'",
   "cases": 19,
   "cases_this_run": 19,
   "failed_cases": 0,
-  "bytes": 710308
+  "bytes": 710327
  },
  "cases": [
   {
@@ -26,7 +26,7 @@
     "linear_solver_type": "DENSE",
     "atol": 9.999999999999999e-05,
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.18754945500404574,
+    "cpu_time": 0.18151282100006938,
     "steps": 2027,
     "rhs_evaluations": 2065,
     "jacobian_evaluations": 36,
@@ -44,21 +44,21 @@
    "bytes": 21106,
    "record": {
     "schema": 1,
-    "record_id": "9c520e6edaf8fda5bc32ef762d2e58cd1989adcc8cb241af981d58bc2f83d05f",
+    "record_id": "01b72715bab263a19f7645a0b415a29b1934cb8ae0e8f22c38aabc43b7f98b38",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-11-03T18:18:51",
+     "generation_date": "2026-11-03T22:38:57",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "9ffcc198791abe3bef4320ce85de47d1",
-     "impact_fmu_id": "_catest_electrical_machines_dccompoundpowerbalance_20261103_181848_e8b23b6",
-     "model_description_sha256": "c614a414a2352d011ad4d1dd6e9da55707930a032c9292f711a2a1115c6a06f4"
+     "impact_fmu_id": "_catest_electrical_machines_dccompoundpowerbalance_20261103_223854_c0ca4e3",
+     "model_description_sha256": "1d60a5dfbdf1f48b1cc74486b9b0b05c14e1f7a3a5ea4d199c7eeca6af2c184d"
     },
     "experiment": {
      "case_entry_sha256": "31b32cc9f44438664ca0ca40032b33fca78516d8cecb0bddd62a887971bb2bca",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "_catest_electrical_machines_dccompoundpowerbalance_20261103_181848_5e1d99d",
+     "impact_experiment_id": "_catest_electrical_machines_dccompoundpowerbalance_20261103_223854_253c0cf",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -68,8 +68,8 @@
      "class": "ModelicaTest.Electrical.Machines.DCCompoundPowerBalance",
      "libraries": [
       {
-       "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
-       "git_dirty": true,
+       "git_commit": "5df776c097ced7023140be53c72de826460c9ad6",
+       "git_dirty": false,
        "name": "ModelicaTest",
        "version": "4.2.0 dev"
       }
@@ -82,7 +82,7 @@
      "sha256": "72499ba6f353f95b127554b294609bfb28b4e4935211b6c96667a7362e0e2a42"
     },
     "run": {
-     "utc": "2026-11-03T18:18:54+00:00",
+     "utc": "2026-11-03T22:39:00+00:00",
      "modcheck": {
       "api": 1,
       "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",
@@ -110,7 +110,7 @@
     "linear_solver_type": "DENSE",
     "atol": 1e-06,
     "rtol": 1e-06,
-    "cpu_time": 0.10091067300527357,
+    "cpu_time": 0.12395172598189674,
     "steps": 1008,
     "rhs_evaluations": 1018,
     "jacobian_evaluations": 17,
@@ -131,21 +131,21 @@
    "bytes": 48876,
    "record": {
     "schema": 1,
-    "record_id": "de2dae6f84fce7e13c1e2727a29f7a9b58ed1c85e13531e2c6d007f34e4a45dd",
+    "record_id": "ea6c71e13589f48a6ba2d29c4b9b5e294f064c597c07766688a3005a6d53759b",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-11-03T18:16:59",
+     "generation_date": "2026-11-03T22:37:03",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "abcbaa954c17d1fd0253da6b240c6edb",
-     "impact_fmu_id": "modelicatest_translational_generationoffmus_3hz_20261103_181657_8f78711",
-     "model_description_sha256": "315cc9b3ea335dbdd4deec1698a4b07db61721880ab881f74df9c8734bd9fce4"
+     "impact_fmu_id": "modelicatest_translational_generationoffmus_3hz_20261103_223701_6d35903",
+     "model_description_sha256": "3c0db03c6a8aadd3fd78509eb3325f62505ce28bc2dfabed83cc05376ffd4ee2"
     },
     "experiment": {
      "case_entry_sha256": "58d0110b7b44b7d652eae9830fddf5d4a2c00ecb6016be5707569aae8e2bb53e",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "modelicatest_translational_generationoffmus_3hz_20261103_181656_2e9d4e1",
+     "impact_experiment_id": "modelicatest_translational_generationoffmus_3hz_20261103_223701_20b392b",
      "released": true,
      "rtol_factor": 1.0,
      "workspace": "msl-coverage",
@@ -155,8 +155,8 @@
      "class": "ModelicaTest.Translational.GenerationOfFMUs_3Hz",
      "libraries": [
       {
-       "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
-       "git_dirty": true,
+       "git_commit": "5df776c097ced7023140be53c72de826460c9ad6",
+       "git_dirty": false,
        "name": "ModelicaTest",
        "version": "4.2.0 dev"
       }
@@ -169,7 +169,7 @@
      "sha256": "003045e6a2f6cb9614c62b2a9e3d9ea2c885134ec5e0a98abd7887a9a4619de6"
     },
     "run": {
-     "utc": "2026-11-03T18:17:02+00:00",
+     "utc": "2026-11-03T22:37:06+00:00",
      "modcheck": {
       "api": 1,
       "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",
@@ -194,7 +194,7 @@
     "linear_solver_type": "DENSE",
     "atol": 0.003,
     "rtol": 1e-05,
-    "cpu_time": 0.0935629710147623,
+    "cpu_time": 0.10035013701417483,
     "steps": 1001,
     "rhs_evaluations": 1006,
     "jacobian_evaluations": 17,
@@ -216,21 +216,21 @@
    "bytes": 25134,
    "record": {
     "schema": 1,
-    "record_id": "fc838eff276e2968fdf68a5d3d22ec8b0f04151f2b1ffa53d3a9c278eeac8503",
+    "record_id": "a7bda03a5fce55f84df344a93e2cf199f478858f9e214cfe45685b69953ac1c4",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-11-03T18:17:25",
+     "generation_date": "2026-11-03T22:37:30",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "eb9fccd4b29bcc5da5056df1409fde0a",
-     "impact_fmu_id": "_licatest_thermal_heattransfergenerationoffmus_3hz_20261103_181723_6c23532",
-     "model_description_sha256": "039dba8fc69d1cf3afabfe4913619732057fde8660c22167e94f8273a7f0a9dc"
+     "impact_fmu_id": "_licatest_thermal_heattransfergenerationoffmus_3hz_20261103_223728_5b1e7bc",
+     "model_description_sha256": "38956f1ca774e8e9fa16e1b39f276f37be7b401c119599c3344f1c05b9201f80"
     },
     "experiment": {
      "case_entry_sha256": "9ef069967b2c2fb279176488390ff4367773a52eb219d343e95d3ad271e67f90",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "_licatest_thermal_heattransfergenerationoffmus_3hz_20261103_181723_cda5796",
+     "impact_experiment_id": "_licatest_thermal_heattransfergenerationoffmus_3hz_20261103_223727_e7566e9",
      "released": true,
      "rtol_factor": 10.000000000000002,
      "workspace": "msl-coverage",
@@ -240,8 +240,8 @@
      "class": "ModelicaTest.Thermal.HeatTransferGenerationOfFMUs_3Hz",
      "libraries": [
       {
-       "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
-       "git_dirty": true,
+       "git_commit": "5df776c097ced7023140be53c72de826460c9ad6",
+       "git_dirty": false,
        "name": "ModelicaTest",
        "version": "4.2.0 dev"
       }
@@ -254,7 +254,7 @@
      "sha256": "e8aa0efd238a19a85bb5f768a40a5dc8407ef14049bd2db49f8004a9f0da6c11"
     },
     "run": {
-     "utc": "2026-11-03T18:17:28+00:00",
+     "utc": "2026-11-03T22:37:33+00:00",
      "modcheck": {
       "api": 1,
       "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",
@@ -280,7 +280,7 @@
     "linear_solver_type": "DENSE",
     "atol": 1e-05,
     "rtol": 1e-05,
-    "cpu_time": 0.066454721003538,
+    "cpu_time": 0.0847529089951422,
     "steps": 599,
     "rhs_evaluations": 695,
     "jacobian_evaluations": 20,
@@ -299,21 +299,21 @@
    "bytes": 15238,
    "record": {
     "schema": 1,
-    "record_id": "cc5d62ea1f547546d3b164aab8f042c0ac5da12767fc25140d3b8a8790ff06f2",
+    "record_id": "f48cd87276906d4fada04221dccd58217df02eb0b245ff12023d5f84d9f2698b",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-11-03T18:18:29",
+     "generation_date": "2026-11-03T22:38:34",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "891ba872d97d3a044f743b436ab558fb",
-     "impact_fmu_id": "_magnetic_quasistatic_fluxtubes_linearinductor_r10_20261103_181825_fc5eef7",
-     "model_description_sha256": "8a200d5bd2348f4aa2b4de1069a81b0d2275b9b560c7e3d815930cb8d3e96709"
+     "impact_fmu_id": "_magnetic_quasistatic_fluxtubes_linearinductor_r10_20261103_223831_ecad629",
+     "model_description_sha256": "89f2ab44c41ba2b2cfe662c6414b09829638538ace82659a7065fe7e64469521"
     },
     "experiment": {
      "case_entry_sha256": "ee77cd4af71182ebb09d5dec26234fa829aa88bcc7f3c5afd029b8ea9b3fa27f",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "_magnetic_quasistatic_fluxtubes_linearinductor_r10_20261103_181825_6819bab",
+     "impact_experiment_id": "_magnetic_quasistatic_fluxtubes_linearinductor_r10_20261103_223830_24ed573",
      "released": true,
      "rtol_factor": 10.000000000000002,
      "workspace": "msl-coverage",
@@ -323,8 +323,8 @@
      "class": "ModelicaTest.Magnetic.QuasiStatic.FluxTubes.LinearInductor_R10",
      "libraries": [
       {
-       "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
-       "git_dirty": true,
+       "git_commit": "5df776c097ced7023140be53c72de826460c9ad6",
+       "git_dirty": false,
        "name": "ModelicaTest",
        "version": "4.2.0 dev"
       }
@@ -337,7 +337,7 @@
      "sha256": "a85defd37e9b08b93a99344841e652c4e3142b7300e50dd53048f129c30fd9ce"
     },
     "run": {
-     "utc": "2026-11-03T18:18:32+00:00",
+     "utc": "2026-11-03T22:38:38+00:00",
      "modcheck": {
       "api": 1,
       "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",
@@ -363,7 +363,7 @@
     "linear_solver_type": "DENSE",
     "atol": 9.999999999999999e-05,
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.053073543997015804,
+    "cpu_time": 0.050187034998089075,
     "steps": 501,
     "rhs_evaluations": 505,
     "jacobian_evaluations": 9,
@@ -382,21 +382,21 @@
    "bytes": 6635,
    "record": {
     "schema": 1,
-    "record_id": "6091074ad0ea55bcbd6b69cc4f66b88dd0db84afd48474d5dd837c1bc6d625ea",
+    "record_id": "eff38686644c98d31afa492033674eb76e5e4bbf1921d8b971a3d659666b9838",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-11-03T18:19:13",
+     "generation_date": "2026-11-03T22:39:18",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "49f5c2cdff5ce858588c8c5338ac17e1",
-     "impact_fmu_id": "_t_magnetic_quasistatic_fluxtubes_magneticportbase_20261103_181911_b752a52",
-     "model_description_sha256": "200d98a412db1dcd27daaecd724aee8d87f58b37bb02220f43538f4c223004e1"
+     "impact_fmu_id": "_t_magnetic_quasistatic_fluxtubes_magneticportbase_20261103_223917_037e660",
+     "model_description_sha256": "bea8f4f87baefd77b0005720130b8ca8571ca288bd2c322d24f007d8b0577bba"
     },
     "experiment": {
      "case_entry_sha256": "9cf790a35022e912eff269f6d68df816f97feaa5c95ee6112e50d20ee1e04f6e",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "_t_magnetic_quasistatic_fluxtubes_magneticportbase_20261103_181911_c0eb83f",
+     "impact_experiment_id": "_t_magnetic_quasistatic_fluxtubes_magneticportbase_20261103_223917_25d9fa9",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -406,8 +406,8 @@
      "class": "ModelicaTest.Magnetic.QuasiStatic.FluxTubes.MagneticPortBase",
      "libraries": [
       {
-       "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
-       "git_dirty": true,
+       "git_commit": "5df776c097ced7023140be53c72de826460c9ad6",
+       "git_dirty": false,
        "name": "ModelicaTest",
        "version": "4.2.0 dev"
       }
@@ -420,7 +420,7 @@
      "sha256": "0fd95408ec9348fef6b6dd139b433461d258c47c8f94628a082f51bcdcb7e1f5"
     },
     "run": {
-     "utc": "2026-11-03T18:19:16+00:00",
+     "utc": "2026-11-03T22:39:21+00:00",
      "modcheck": {
       "api": 1,
       "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",
@@ -447,7 +447,7 @@
     "linear_solver_type": "DENSE",
     "atol": 9.999999999999999e-05,
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.35766325698932633,
+    "cpu_time": 0.3585914400173351,
     "steps": 2002,
     "rhs_evaluations": 2007,
     "jacobian_evaluations": 34,
@@ -467,21 +467,21 @@
    "bytes": 81512,
    "record": {
     "schema": 1,
-    "record_id": "61f23af717180975eec5de2366ac94d6b955cba3c8663b8b7eb2f450a3fd1a10",
+    "record_id": "fb834a0f75b1e0b0adeaa5ae8ef0ef7387f0d1427d3512976b04f3e6b2abb593",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-11-03T18:16:26",
+     "generation_date": "2026-11-03T22:36:28",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "299f0c1cc85c13e3756a687410333d14",
-     "impact_fmu_id": "_icatest_multibody_prismaticconstraint_stiffspring_20261103_181620_8750fe9",
-     "model_description_sha256": "7d31f655410caac42276a4116a402704dbbf5e0504e87a2db05af0f05ad68155"
+     "impact_fmu_id": "_icatest_multibody_prismaticconstraint_stiffspring_20261103_223622_f6b41ea",
+     "model_description_sha256": "fb1699d0f36093feb7dc41f68b9ab9da53a22e887877bf66e453dec78fe1a8ed"
     },
     "experiment": {
      "case_entry_sha256": "b68d386984ba2b02aa672f52950d0d9db685370720860cbfc7969c643f0962fa",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "_icatest_multibody_prismaticconstraint_stiffspring_20261103_181620_9a8f2c0",
+     "impact_experiment_id": "_icatest_multibody_prismaticconstraint_stiffspring_20261103_223622_5c2412d",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -491,8 +491,8 @@
      "class": "ModelicaTest.MultiBody.PrismaticConstraint_StiffSpring",
      "libraries": [
       {
-       "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
-       "git_dirty": true,
+       "git_commit": "5df776c097ced7023140be53c72de826460c9ad6",
+       "git_dirty": false,
        "name": "ModelicaTest",
        "version": "4.2.0 dev"
       }
@@ -505,7 +505,7 @@
      "sha256": "ff35ef4a2bbed1fe165b0d742a633ab64a4452344b588034056d873896a68876"
     },
     "run": {
-     "utc": "2026-11-03T18:16:31+00:00",
+     "utc": "2026-11-03T22:36:33+00:00",
      "modcheck": {
       "api": 1,
       "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",
@@ -529,7 +529,7 @@
     "nonlinear_solver": "Newton",
     "linear_solver_type": "DENSE",
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.2187768580042757,
+    "cpu_time": 0.23600862501189113,
     "steps": 2002,
     "rhs_evaluations": 2022,
     "jacobian_evaluations": 35,
@@ -552,21 +552,21 @@
    "bytes": 39857,
    "record": {
     "schema": 1,
-    "record_id": "2069c4d97b9001e14618020317197829ddf859fd25cbd00738524eef6bd50e21",
+    "record_id": "f4113fb82643060d8fb29dc2e37ec819f895b026ccf065521b9c4702b8fb0118",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-11-03T18:17:05",
+     "generation_date": "2026-11-03T22:37:10",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "d349e2faaf6358ef0b361772872bcbc9",
-     "impact_fmu_id": "modelicatest_thermal_pumpandvalve_20w_20261103_181703_57bfb4f",
-     "model_description_sha256": "bc4d3f0c9db72aadb1dc4f824e02c78d5ba39ae6d457a1370738add49b80032d"
+     "impact_fmu_id": "modelicatest_thermal_pumpandvalve_20w_20261103_223707_1c1ff17",
+     "model_description_sha256": "ab71f30e9fc6920c08eca61f14de6064617406939e267f17b049834ba215c558"
     },
     "experiment": {
      "case_entry_sha256": "b23f601c85cc7587f3e86d980109f3eb36ecbaaae510dffa2cdd373ff72ce111",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "modelicatest_thermal_pumpandvalve_20w_20261103_181703_00e1cf6",
+     "impact_experiment_id": "modelicatest_thermal_pumpandvalve_20w_20261103_223707_73c41e2",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -576,8 +576,8 @@
      "class": "ModelicaTest.Thermal.PumpAndValve_20W",
      "libraries": [
       {
-       "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
-       "git_dirty": true,
+       "git_commit": "5df776c097ced7023140be53c72de826460c9ad6",
+       "git_dirty": false,
        "name": "ModelicaTest",
        "version": "4.2.0 dev"
       }
@@ -590,7 +590,7 @@
      "sha256": "dc1dd03c5bb4f736538b983edd90e25bfb005a6274a9731483e8ed18f6d928e9"
     },
     "run": {
-     "utc": "2026-11-03T18:17:09+00:00",
+     "utc": "2026-11-03T22:37:13+00:00",
      "modcheck": {
       "api": 1,
       "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",
@@ -616,7 +616,7 @@
     "linear_solver_type": "DENSE",
     "atol": 9.999999999999999e-05,
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.2941539309977088,
+    "cpu_time": 0.29688138599158265,
     "steps": 2002,
     "rhs_evaluations": 2007,
     "jacobian_evaluations": 34,
@@ -637,21 +637,21 @@
    "bytes": 64787,
    "record": {
     "schema": 1,
-    "record_id": "3041a102f120c3fa578eed125f655988db2acbce1be794a97d75554f5cf827ff",
+    "record_id": "eed0d21d0d37466886f21544af0ae584d7bf17757d36e03a261b2f6e8fc41abf",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-11-03T18:16:02",
+     "generation_date": "2026-11-03T22:36:03",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "a7f2f9436c7691bd99435a7aa39bbb0",
-     "impact_fmu_id": "_licatest_multibody_revoluteconstraint_stiffspring_20261103_181556_7c57708",
-     "model_description_sha256": "4b4c29f107a754c57b9b462f15a2d72094ae128e2c9ab1799d60171eac70aafc"
+     "impact_fmu_id": "_licatest_multibody_revoluteconstraint_stiffspring_20261103_223557_46a1517",
+     "model_description_sha256": "56e3b582007b6e4cbce60865edf565cb9c40917dfe2d5da573b657eb9be0b41a"
     },
     "experiment": {
      "case_entry_sha256": "ec11503a59cca420829860b175e3c16d1c66c5abc886734e414926093917e273",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "_licatest_multibody_revoluteconstraint_stiffspring_20261103_181556_21ad438",
+     "impact_experiment_id": "_licatest_multibody_revoluteconstraint_stiffspring_20261103_223557_c6f5c7e",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -661,8 +661,8 @@
      "class": "ModelicaTest.MultiBody.RevoluteConstraint_StiffSpring",
      "libraries": [
       {
-       "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
-       "git_dirty": true,
+       "git_commit": "5df776c097ced7023140be53c72de826460c9ad6",
+       "git_dirty": false,
        "name": "ModelicaTest",
        "version": "4.2.0 dev"
       }
@@ -675,7 +675,7 @@
      "sha256": "a5ca1f253de4c44ad69751aa798db7a761763562c6f0d6be04f525940fade30b"
     },
     "run": {
-     "utc": "2026-11-03T18:16:06+00:00",
+     "utc": "2026-11-03T22:36:08+00:00",
      "modcheck": {
       "api": 1,
       "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",
@@ -702,7 +702,7 @@
     "linear_solver_type": "DENSE",
     "atol": 9.999999999999999e-05,
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.1863528870162554,
+    "cpu_time": 0.1880625200283248,
     "steps": 1505,
     "rhs_evaluations": 1510,
     "jacobian_evaluations": 26,
@@ -726,21 +726,21 @@
    "bytes": 61768,
    "record": {
     "schema": 1,
-    "record_id": "10e31ecf8c79bf0a2786ccd15b7aa8706521653ab44212e5e2a5f5ae3ad3fa5f",
+    "record_id": "0824faae4b381df739575bd43b271598f5fb409c010ee7b7078161390b1acf24",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-11-03T18:16:46",
+     "generation_date": "2026-11-03T22:36:50",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "f16d97d3a0f0a8e430405883661f25aa",
-     "impact_fmu_id": "_est_multibody_rollingwheelsetdriving_highertorque_20261103_181640_99335e8",
-     "model_description_sha256": "6bfc1d122b381f5e299915404b87b766e35c2db4eefdcc87ad2d1132467fa554"
+     "impact_fmu_id": "_est_multibody_rollingwheelsetdriving_highertorque_20261103_223644_e49e2a2",
+     "model_description_sha256": "81902dc0e0d4b547d2668e3e95313728bd0bb037ccb302ff1247fdb4e7c3d90e"
     },
     "experiment": {
      "case_entry_sha256": "08e216f72e3103427b7bf894f669cb9be4d46b31dfa81e80e1396087232e7fb0",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "_est_multibody_rollingwheelsetdriving_highertorque_20261103_181640_e71c111",
+     "impact_experiment_id": "_est_multibody_rollingwheelsetdriving_highertorque_20261103_223644_a364b2b",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -750,8 +750,8 @@
      "class": "ModelicaTest.MultiBody.RollingWheelSetDriving_HigherTorque",
      "libraries": [
       {
-       "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
-       "git_dirty": true,
+       "git_commit": "5df776c097ced7023140be53c72de826460c9ad6",
+       "git_dirty": false,
        "name": "ModelicaTest",
        "version": "4.2.0 dev"
       }
@@ -764,7 +764,7 @@
      "sha256": "8dbbb83a078a55d572ffac3ae20dee3514c76aea83a94f952038c47158984927"
     },
     "run": {
-     "utc": "2026-11-03T18:16:50+00:00",
+     "utc": "2026-11-03T22:36:54+00:00",
      "modcheck": {
       "api": 1,
       "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",
@@ -791,7 +791,7 @@
     "linear_solver_type": "DENSE",
     "atol": 1e-05,
     "rtol": 1e-05,
-    "cpu_time": 0.26319976698141545,
+    "cpu_time": 0.26978216698626056,
     "steps": 2124,
     "rhs_evaluations": 2211,
     "jacobian_evaluations": 36,
@@ -814,21 +814,21 @@
    "bytes": 81957,
    "record": {
     "schema": 1,
-    "record_id": "4d6d2d01346d2b86443b350aebeaf6c365d75073da0fe306901b25490b89d229",
+    "record_id": "23b4846ba8a4a2c3575062dbb171304cc97b06809ce19e92a415bab8385ad447",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-11-03T18:16:36",
+     "generation_date": "2026-11-03T22:36:40",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "4c974741c7522b8e2de5532abe7ffd3e",
-     "impact_fmu_id": "modelicatest_multibody_rollingwheel_fastspin_20261103_181632_6502aeb",
-     "model_description_sha256": "cd11c716960a20e139deadd094ee1477e724be3bcf4ee0c410fe8fc9e8d7d2ae"
+     "impact_fmu_id": "modelicatest_multibody_rollingwheel_fastspin_20261103_223634_d0762e8",
+     "model_description_sha256": "f870eb29cff5a4f6f729b1d2893c2e926cfaf73c2287c6cdda45fd724087acca"
     },
     "experiment": {
      "case_entry_sha256": "f98fd4e05e4d55d7de025d5ab0a2dbfd95a10a7abbe9a6f61aac4ecdbbda9d30",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "modelicatest_multibody_rollingwheel_fastspin_20261103_181631_738124a",
+     "impact_experiment_id": "modelicatest_multibody_rollingwheel_fastspin_20261103_223634_a840d17",
      "released": true,
      "rtol_factor": 10.000000000000002,
      "workspace": "msl-coverage",
@@ -838,8 +838,8 @@
      "class": "ModelicaTest.MultiBody.RollingWheel_FastSpin",
      "libraries": [
       {
-       "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
-       "git_dirty": true,
+       "git_commit": "5df776c097ced7023140be53c72de826460c9ad6",
+       "git_dirty": false,
        "name": "ModelicaTest",
        "version": "4.2.0 dev"
       }
@@ -852,7 +852,7 @@
      "sha256": "94cfbdfb48103a36f07b85d791513d7e1e5227a5f81302b0dd95d6e5b351a29c"
     },
     "run": {
-     "utc": "2026-11-03T18:16:39+00:00",
+     "utc": "2026-11-03T22:36:43+00:00",
      "modcheck": {
       "api": 1,
       "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",
@@ -876,7 +876,7 @@
     "linear_solver_type": "DENSE",
     "atol": 9.999999999999999e-05,
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.11980710699572228,
+    "cpu_time": 0.12443658101256005,
     "steps": 1002,
     "rhs_evaluations": 1006,
     "jacobian_evaluations": 17,
@@ -893,21 +893,21 @@
    "bytes": 9167,
    "record": {
     "schema": 1,
-    "record_id": "9cb991f135ffcd1c92f58af3646f7ff332ad7fce3fedc44b8b0c9cfe4e5846ac",
+    "record_id": "e123f582d056d7abb1db01cc483f82b6fbd34437f620adc126d20c5d7a04236c",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-11-03T18:17:36",
+     "generation_date": "2026-11-03T22:37:40",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "ca30eb451ee33bd5fa7ccd41742f7ed9",
-     "impact_fmu_id": "_static_fundamentalwave_smpm_opencircuit_halfspeed_20261103_181729_6cd0966",
-     "model_description_sha256": "701e53e19494baf0b39ca23d5a35c0fb8220686b59caacb2a5a70cb8ae97b3bd"
+     "impact_fmu_id": "_static_fundamentalwave_smpm_opencircuit_halfspeed_20261103_223734_423dc8c",
+     "model_description_sha256": "b4879bb09209f00900ac322b28483e91ae793a306f0d3d1c565bc9e26ab41ca4"
     },
     "experiment": {
      "case_entry_sha256": "3fff2d61eb1db95b97d17f4f384babdadd3e4d607e8b0977b2ac2ce5f53f214a",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "_static_fundamentalwave_smpm_opencircuit_halfspeed_20261103_181729_5304fd1",
+     "impact_experiment_id": "_static_fundamentalwave_smpm_opencircuit_halfspeed_20261103_223734_00d3d1d",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -917,8 +917,8 @@
      "class": "ModelicaTest.Magnetic.QuasiStatic.FundamentalWave.SMPM_OpenCircuit_HalfSpeed",
      "libraries": [
       {
-       "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
-       "git_dirty": true,
+       "git_commit": "5df776c097ced7023140be53c72de826460c9ad6",
+       "git_dirty": false,
        "name": "ModelicaTest",
        "version": "4.2.0 dev"
       }
@@ -931,7 +931,7 @@
      "sha256": "33d79c9a9ab325c51d33037f385f3ed29366d206ddd3d02daf2efd343c4b4722"
     },
     "run": {
-     "utc": "2026-11-03T18:17:39+00:00",
+     "utc": "2026-11-03T22:37:44+00:00",
      "modcheck": {
       "api": 1,
       "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",
@@ -957,7 +957,7 @@
     "linear_solver_type": "DENSE",
     "atol": 9.999999999999999e-05,
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.08802467898931354,
+    "cpu_time": 0.09646479197544977,
     "steps": 1002,
     "rhs_evaluations": 1008,
     "jacobian_evaluations": 17,
@@ -976,21 +976,21 @@
    "bytes": 27219,
    "record": {
     "schema": 1,
-    "record_id": "f9ecbe07736c019908209e6b6529874161cbb53716892ab93fcfab399890fbc8",
+    "record_id": "8d7eb76eac3c2a9cd3a6225b3510ca6659f61ebe2e60ee848ef20862ac1a0358",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-11-03T18:16:53",
+     "generation_date": "2026-11-03T22:36:57",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "f4870c728ece161b6c241ceecf524753",
-     "impact_fmu_id": "modelicatest_translational_sensors_20n_20261103_181651_ea24ae4",
-     "model_description_sha256": "6c56bfa23d6cb10d7552107f31c4e21b2c2712673e08bd5d602d0fb203c063a5"
+     "impact_fmu_id": "modelicatest_translational_sensors_20n_20261103_223655_0db71c1",
+     "model_description_sha256": "5fab3468e091eaec639e5942de8922a3b0d091d5867adbf5f8aee54bd6f52df4"
     },
     "experiment": {
      "case_entry_sha256": "27180701f59d992a0b396ed283e0eb44d7e36e5363e495d61d305c83bf713f50",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "modelicatest_translational_sensors_20n_20261103_181650_59caf82",
+     "impact_experiment_id": "modelicatest_translational_sensors_20n_20261103_223655_4ad7e6a",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -1000,8 +1000,8 @@
      "class": "ModelicaTest.Translational.Sensors_20N",
      "libraries": [
       {
-       "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
-       "git_dirty": true,
+       "git_commit": "5df776c097ced7023140be53c72de826460c9ad6",
+       "git_dirty": false,
        "name": "ModelicaTest",
        "version": "4.2.0 dev"
       }
@@ -1014,7 +1014,7 @@
      "sha256": "cd47ab453f0fdd808f8ee0b3029e95b852beaa9975fa530cba5753a82a83bd4a"
     },
     "run": {
-     "utc": "2026-11-03T18:16:56+00:00",
+     "utc": "2026-11-03T22:37:00+00:00",
      "modcheck": {
       "api": 1,
       "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",
@@ -1039,7 +1039,7 @@
     "nonlinear_solver": "Newton",
     "linear_solver_type": "DENSE",
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.34862209600396454,
+    "cpu_time": 0.35796640400076285,
     "steps": 2076,
     "rhs_evaluations": 2106,
     "jacobian_evaluations": 37,
@@ -1059,21 +1059,21 @@
    "bytes": 55763,
    "record": {
     "schema": 1,
-    "record_id": "20601ac3449576a7c638435daa65fb486f9d0f5be76afc720c986626d1a02336",
+    "record_id": "5eaab74fd54af8baf31a0d3d3a94d26946e8acfb19af66f22b16bfa041640c84",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-11-03T18:18:36",
+     "generation_date": "2026-11-03T22:38:43",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "9c9d1dc15e18bf94f2dfc371c529c56f",
-     "impact_fmu_id": "_netic_fluxtubes_solenoidcomparisonquasistatic_10v_20261103_181832_bf3b4fe",
-     "model_description_sha256": "89afb5e77892c4d823baf6c8a91877b105947f13660fb0ce492529c6efedbb1a"
+     "impact_fmu_id": "_netic_fluxtubes_solenoidcomparisonquasistatic_10v_20261103_223839_58ea093",
+     "model_description_sha256": "c38ae6005c0ec36638560a03c7a4809c2b57d930f6445205c8a057907355c356"
     },
     "experiment": {
      "case_entry_sha256": "c11646f049618b25a25f1bc19be2dade35d357059e409bc43a3e9d6281bf520f",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "_netic_fluxtubes_solenoidcomparisonquasistatic_10v_20261103_181832_0039c81",
+     "impact_experiment_id": "_netic_fluxtubes_solenoidcomparisonquasistatic_10v_20261103_223839_728f0de",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -1083,8 +1083,8 @@
      "class": "ModelicaTest.Magnetic.FluxTubes.SolenoidComparisonQuasiStatic_10V",
      "libraries": [
       {
-       "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
-       "git_dirty": true,
+       "git_commit": "5df776c097ced7023140be53c72de826460c9ad6",
+       "git_dirty": false,
        "name": "ModelicaTest",
        "version": "4.2.0 dev"
       }
@@ -1097,7 +1097,7 @@
      "sha256": "8ef102c72f606e1abf16ac5acba3243ee22d7b9ea473f65366e49c95f4ecbefc"
     },
     "run": {
-     "utc": "2026-11-03T18:18:40+00:00",
+     "utc": "2026-11-03T22:38:47+00:00",
      "modcheck": {
       "api": 1,
       "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",
@@ -1122,7 +1122,7 @@
     "linear_solver_type": "DENSE",
     "atol": 9.999999999999999e-05,
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.26107286399928853,
+    "cpu_time": 0.2435402300034184,
     "steps": 2002,
     "rhs_evaluations": 2007,
     "jacobian_evaluations": 34,
@@ -1140,21 +1140,21 @@
    "bytes": 36197,
    "record": {
     "schema": 1,
-    "record_id": "d55becb3a026e1d7426506199e69509337265aab66156c5242f598b761c9a308",
+    "record_id": "c138ae9dbbb9da66c5739d3678561ddb03a3920bc4915a3b9bf59d953a79c1bf",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-11-03T18:16:15",
+     "generation_date": "2026-11-03T22:36:18",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "84782c1f0d8d33434b14aff4ac4674dd",
-     "impact_fmu_id": "_icatest_multibody_sphericalconstraint_stiffspring_20261103_181609_6b57471",
-     "model_description_sha256": "3b2d431a78f860efbcf2d4b50660c8d02fbb672905010dcaea33ca6fd6370f7f"
+     "impact_fmu_id": "_icatest_multibody_sphericalconstraint_stiffspring_20261103_223612_b57d428",
+     "model_description_sha256": "17bde7546917215a2eea3103525a168f0d512deb5049e7cc3c942df2cb56c2f3"
     },
     "experiment": {
      "case_entry_sha256": "d85661749727f81fdff27a19cabb043726a8ee88053f33131aa1aad8120f980e",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "_icatest_multibody_sphericalconstraint_stiffspring_20261103_181609_be7b893",
+     "impact_experiment_id": "_icatest_multibody_sphericalconstraint_stiffspring_20261103_223612_930d2ed",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -1164,8 +1164,8 @@
      "class": "ModelicaTest.MultiBody.SphericalConstraint_StiffSpring",
      "libraries": [
       {
-       "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
-       "git_dirty": true,
+       "git_commit": "5df776c097ced7023140be53c72de826460c9ad6",
+       "git_dirty": false,
        "name": "ModelicaTest",
        "version": "4.2.0 dev"
       }
@@ -1178,7 +1178,7 @@
      "sha256": "1ae68eae21b48b61c970d8e6916a7668172da72084bd7284ab347797003db4e0"
     },
     "run": {
-     "utc": "2026-11-03T18:16:19+00:00",
+     "utc": "2026-11-03T22:36:21+00:00",
      "modcheck": {
       "api": 1,
       "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",
@@ -1211,7 +1211,7 @@
     "linear_solver_type": "DENSE",
     "atol": 9.999999999999999e-05,
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.042508547980105504,
+    "cpu_time": 0.042466776008950546,
     "steps": 501,
     "rhs_evaluations": 505,
     "jacobian_evaluations": 9,
@@ -1227,24 +1227,24 @@
    },
    "display_units": {},
    "format": "npz",
-   "bytes": 4548,
+   "bytes": 4567,
    "record": {
     "schema": 1,
-    "record_id": "ac3c8696dcd37c3eae1b4f842f399c1ff702e1cd05f20f88dcd297b6e62384ab",
+    "record_id": "f94d3762c0d28fecfb63a779b8201bac5c2c7cb642ff271761f5231d34ab0c75",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-11-03T18:18:43",
+     "generation_date": "2026-11-03T22:38:50",
      "generation_tool": "Optimica Compiler Toolkit",
-     "guid": "77f8e1bb76d0fec552a52b2af94007",
-     "impact_fmu_id": "_ectrical_spice3_spice3internalrecordsandfunctions_20261103_181841_8106136",
-     "model_description_sha256": "8a271b885efb2bcf7aa682d2411fe6c68e952eaac955f995bd99a4582fa7e5a2"
+     "guid": "418c078763de6900e424166f3d620dea",
+     "impact_fmu_id": "_ectrical_spice3_spice3internalrecordsandfunctions_20261103_223847_d9f0101",
+     "model_description_sha256": "9f9b24c3ddf7a1232a5f48d0ca4ccfcb2255f87a8b9cf5383023d28ecef98797"
     },
     "experiment": {
      "case_entry_sha256": "08073c66c28c9fee25a1584628b31eaf78ec597c26917e58e247e76754fba764",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "_ectrical_spice3_spice3internalrecordsandfunctions_20261103_181841_4058ff7",
+     "impact_experiment_id": "_ectrical_spice3_spice3internalrecordsandfunctions_20261103_223847_f17c2d9",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -1254,21 +1254,21 @@
      "class": "ModelicaTest.Electrical.Spice3.Spice3InternalRecordsAndFunctions",
      "libraries": [
       {
-       "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
-       "git_dirty": true,
+       "git_commit": "5df776c097ced7023140be53c72de826460c9ad6",
+       "git_dirty": false,
        "name": "ModelicaTest",
        "version": "4.2.0 dev"
       }
      ]
     },
     "result": {
-     "bytes": 4548,
+     "bytes": 4567,
      "file": "Spice3InternalRecordsAndFunctions.npz",
      "format": "npz",
-     "sha256": "24b17f18010335e23acdb19591458a6dccdc11c9e61ec7782f918afc075f5d82"
+     "sha256": "c2af9d0b371152a18d2bfa06bd7e622729bce375d7c46062677e8ec65416e583"
     },
     "run": {
-     "utc": "2026-11-03T18:18:47+00:00",
+     "utc": "2026-11-03T22:38:53+00:00",
      "modcheck": {
       "api": 1,
       "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",
@@ -1294,7 +1294,7 @@
     "nonlinear_solver": "Newton",
     "linear_solver_type": "DENSE",
     "rtol": 1e-05,
-    "cpu_time": 0.19212213999708183,
+    "cpu_time": 0.20061720299418084,
     "steps": 2015,
     "rhs_evaluations": 2055,
     "jacobian_evaluations": 39,
@@ -1316,21 +1316,21 @@
    "bytes": 71351,
    "record": {
     "schema": 1,
-    "record_id": "1961ab9f807fc472c55158e8b4a5103dd5fe8936b40e3154ba948832d792434b",
+    "record_id": "318dc945b77e736b07228db580ff3fc9cf30de97507dbeeadbd207b80150836c",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-11-03T18:17:18",
+     "generation_date": "2026-11-03T22:37:23",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "f44731b43508b4dfa7b32fa1a31a4de",
-     "impact_fmu_id": "modelicatest_thermal_testcylinder_mass2_20261103_181716_263638d",
-     "model_description_sha256": "6963c85734dfa737aa83e8595113ca546c9e448fd344998bcc2cb3b89d8990df"
+     "impact_fmu_id": "modelicatest_thermal_testcylinder_mass2_20261103_223720_ce56e65",
+     "model_description_sha256": "25c08d7fb0fab3c815c17d58a4f0d85071289c71afcdc95a4f8a8d0a163b5ad7"
     },
     "experiment": {
      "case_entry_sha256": "edf5e5c72d70d72b2cff382ba4e7bdb55ad0bd7022150f392f7065f7ef577f7d",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "modelicatest_thermal_testcylinder_mass2_20261103_181716_e4a2dfd",
+     "impact_experiment_id": "modelicatest_thermal_testcylinder_mass2_20261103_223720_53bb495",
      "released": true,
      "rtol_factor": 10.000000000000002,
      "workspace": "msl-coverage",
@@ -1340,8 +1340,8 @@
      "class": "ModelicaTest.Thermal.TestCylinder_Mass2",
      "libraries": [
       {
-       "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
-       "git_dirty": true,
+       "git_commit": "5df776c097ced7023140be53c72de826460c9ad6",
+       "git_dirty": false,
        "name": "ModelicaTest",
        "version": "4.2.0 dev"
       }
@@ -1354,7 +1354,7 @@
      "sha256": "f9b489755bd564dafe858e7385bf306e1a225e4d0404dd3285bee5701b66f51a"
     },
     "run": {
-     "utc": "2026-11-03T18:17:22+00:00",
+     "utc": "2026-11-03T22:37:27+00:00",
      "modcheck": {
       "api": 1,
       "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",
@@ -1384,7 +1384,7 @@
     "linear_solver_type": "DENSE",
     "atol": 9.999999999999999e-05,
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.059231816994724795,
+    "cpu_time": 0.06305648598936386,
     "steps": 501,
     "rhs_evaluations": 505,
     "jacobian_evaluations": 9,
@@ -1402,21 +1402,21 @@
    "bytes": 29523,
    "record": {
     "schema": 1,
-    "record_id": "19d4f23d5a1f3666835f4e6aeee7b0dd9eac6211e3c97d46ba91676174bbdc79",
+    "record_id": "dd7b348ce773956dc4a977eb341672e7f9d726334f2e672632dc64d7a7581634",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-11-03T18:19:00",
+     "generation_date": "2026-11-03T22:39:05",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "4b216036ebbb7b54a9d5950529fe6c59",
-     "impact_fmu_id": "modelicatest_media_thermofluidspecialrecords_20261103_181856_e6454f3",
-     "model_description_sha256": "ad72b4c9de52465f1e5426a0046c0c79b45d6d42898d86465618939df8c2fae6"
+     "impact_fmu_id": "modelicatest_media_thermofluidspecialrecords_20261103_223901_d2ee8bd",
+     "model_description_sha256": "21b7b46d858cf3c27e1da7401e92ba053fa48db65cdf2e7a48671e7971a6e39a"
     },
     "experiment": {
      "case_entry_sha256": "61c92375c65290949d939349a416372225eea13d8121c1e2ad11c5ebce2dced3",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "modelicatest_media_thermofluidspecialrecords_20261103_181855_1ec036c",
+     "impact_experiment_id": "modelicatest_media_thermofluidspecialrecords_20261103_223901_08c3dba",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -1426,8 +1426,8 @@
      "class": "ModelicaTest.Media.ThermoFluidSpecialRecords",
      "libraries": [
       {
-       "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
-       "git_dirty": true,
+       "git_commit": "5df776c097ced7023140be53c72de826460c9ad6",
+       "git_dirty": false,
        "name": "ModelicaTest",
        "version": "4.2.0 dev"
       }
@@ -1440,7 +1440,7 @@
      "sha256": "4d754131e11cb840a45831dbe78fbf7388eb7625656644dad45226c2424e8d96"
     },
     "run": {
-     "utc": "2026-11-03T18:19:04+00:00",
+     "utc": "2026-11-03T22:39:09+00:00",
      "modcheck": {
       "api": 1,
       "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",
@@ -1466,7 +1466,7 @@
     "linear_solver_type": "DENSE",
     "atol": 9.999999999999999e-05,
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.1024767330090981,
+    "cpu_time": 0.0923235840164125,
     "steps": 751,
     "rhs_evaluations": 756,
     "jacobian_evaluations": 13,
@@ -1488,21 +1488,21 @@
    "bytes": 19242,
    "record": {
     "schema": 1,
-    "record_id": "3d8722649c46263f827134f0a9c5320b5335188cdc208d7982bfa73f9d277a1a",
+    "record_id": "3335fc9ec5efad890ddcc35e4376123729eb1753dd8049d71e048977603974e7",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-11-03T18:17:12",
+     "generation_date": "2026-11-03T22:37:16",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "49754875db4ff95644219c44cdc6b6d8",
-     "impact_fmu_id": "modelicatest_thermal_twotanks_level07_20261103_181710_1d7c59a",
-     "model_description_sha256": "9dc988832d7d575337f265bf23dc73195a5a1d9638adfc326c17a436ad83b1a2"
+     "impact_fmu_id": "modelicatest_thermal_twotanks_level07_20261103_223714_9bd9037",
+     "model_description_sha256": "64a493c1790ec15459680ab3a354a3c029cbb027b05193df2aac49e30be7b182"
     },
     "experiment": {
      "case_entry_sha256": "61c447f6c5c398f9f3b9a67dd7f5f8d026af6d63720d6d3b6608ac8a5d5ca51b",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "modelicatest_thermal_twotanks_level07_20261103_181710_000c503",
+     "impact_experiment_id": "modelicatest_thermal_twotanks_level07_20261103_223714_dbedd69",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -1512,8 +1512,8 @@
      "class": "ModelicaTest.Thermal.TwoTanks_Level07",
      "libraries": [
       {
-       "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
-       "git_dirty": true,
+       "git_commit": "5df776c097ced7023140be53c72de826460c9ad6",
+       "git_dirty": false,
        "name": "ModelicaTest",
        "version": "4.2.0 dev"
       }
@@ -1526,7 +1526,7 @@
      "sha256": "e7239517f6c4f4d943c5265b5e79d627a0ab911080fbf971015df84f7f99aab4"
     },
     "run": {
-     "utc": "2026-11-03T18:17:15+00:00",
+     "utc": "2026-11-03T22:37:19+00:00",
      "modcheck": {
       "api": 1,
       "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",
@@ -1552,7 +1552,7 @@
     "linear_solver_type": "DENSE",
     "atol": 9.999999999999999e-05,
     "rtol": 9.999999999999999e-05,
-    "cpu_time": 0.051795040984870866,
+    "cpu_time": 0.05737145498278551,
     "steps": 501,
     "rhs_evaluations": 505,
     "jacobian_evaluations": 9,
@@ -1574,21 +1574,21 @@
    "bytes": 10428,
    "record": {
     "schema": 1,
-    "record_id": "70e595dd72e0a5fb03140a267b2eee3b11619cbc5bed0644818d03e10275fab4",
+    "record_id": "a071fe5b3d9dd1f142486f196ac518dd2785df1fa9f046e6ce903e9b4490d3d1",
     "executable": {
      "fmi_version": "2.0",
-     "generation_date": "2026-11-03T18:19:07",
+     "generation_date": "2026-11-03T22:39:13",
      "generation_tool": "Optimica Compiler Toolkit",
      "guid": "5059a70d903d169d8f752ab8d001b930",
-     "impact_fmu_id": "_t_fluid_testutilities_vectorizedportsfluidandheat_20261103_181905_0cfa0ad",
-     "model_description_sha256": "1cce2d78898e12407e841a2a25a9829d3f81be85e9f6f19e7bfb0a8f765729e5"
+     "impact_fmu_id": "_t_fluid_testutilities_vectorizedportsfluidandheat_20261103_223910_cfa2f23",
+     "model_description_sha256": "72cf1f176d3d09304580337a44e6b19e2639b373e0e34fe910b43f00f54ef2b0"
     },
     "experiment": {
      "case_entry_sha256": "d03745c44b334b61155d55d24e4057fb6aefbf13ae9ee7a31d356100a5edff5b",
      "descriptor": "impact workspace 'msl-coverage'",
      "engine": "impact",
      "impact_case_id": "case_1",
-     "impact_experiment_id": "_t_fluid_testutilities_vectorizedportsfluidandheat_20261103_181904_b1d42fe",
+     "impact_experiment_id": "_t_fluid_testutilities_vectorizedportsfluidandheat_20261103_223910_d7c092e",
      "released": true,
      "rtol_factor": 100.0,
      "workspace": "msl-coverage",
@@ -1598,8 +1598,8 @@
      "class": "ModelicaTest.Fluid.TestUtilities.VectorizedPortsFluidAndHeat",
      "libraries": [
       {
-       "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
-       "git_dirty": true,
+       "git_commit": "5df776c097ced7023140be53c72de826460c9ad6",
+       "git_dirty": false,
        "name": "ModelicaTest",
        "version": "4.2.0 dev"
       }
@@ -1612,7 +1612,7 @@
      "sha256": "e111b5343350045f0a648544803048dcbd007a0a30e0a19ebb2ab101c73c1fbd"
     },
     "run": {
-     "utc": "2026-11-03T18:19:11+00:00",
+     "utc": "2026-11-03T22:39:16+00:00",
      "modcheck": {
       "api": 1,
       "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",

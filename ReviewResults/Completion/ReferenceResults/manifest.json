@@ -1214,7 +1214,7 @@
       "linear_solver_type": "DENSE",
       "atol": 1e-06,
       "rtol": 1e-06,
-      "cpu_time": 0.04304699500789866,
+      "cpu_time": 0.04623871701187454,
       "steps": 501,
       "rhs_evaluations": 505,
       "jacobian_evaluations": 9,
@@ -1231,24 +1231,24 @@
     },
     "display_units": {},
     "format": "npz",
-    "bytes": 4548,
+    "bytes": 4567,
     "record": {
       "schema": 1,
-      "record_id": "1aa3f8d30cce31cac044bacc5c86ea73b7887b0dc8afb13572971fee04b3156a",
+      "record_id": "b30d41b8feef7a992e8cbccb8a8e4e5b870a92394365aff29db6de11df793703",
       "executable": {
         "fmi_version": "2.0",
-        "generation_date": "2026-11-03T18:15:15",
+        "generation_date": "2026-11-03T22:35:30",
         "generation_tool": "Optimica Compiler Toolkit",
-        "guid": "77f8e1bb76d0fec552a52b2af94007",
-        "impact_fmu_id": "_ectrical_spice3_spice3internalrecordsandfunctions_20261103_181513_6a32e14",
-        "model_description_sha256": "6449862393597d5a3d4735e5e217640f0ed155b7694d85bbf523967ec4589f5f"
+        "guid": "418c078763de6900e424166f3d620dea",
+        "impact_fmu_id": "_ectrical_spice3_spice3internalrecordsandfunctions_20261103_223526_c9acec3",
+        "model_description_sha256": "8fcaa1ebd5f17be1483759c0edc537ccb1580a56a37cd0919a3e11d224126ecb"
       },
       "experiment": {
         "case_entry_sha256": "08073c66c28c9fee25a1584628b31eaf78ec597c26917e58e247e76754fba764",
         "descriptor": "impact workspace 'msl-coverage'",
         "engine": "impact",
         "impact_case_id": "case_1",
-        "impact_experiment_id": "_ectrical_spice3_spice3internalrecordsandfunctions_20261103_181513_cbb9d0d",
+        "impact_experiment_id": "_ectrical_spice3_spice3internalrecordsandfunctions_20261103_223526_631826a",
         "released": true,
         "rtol_factor": 1.0,
         "workspace": "msl-coverage",
@@ -1258,21 +1258,21 @@
         "class": "ModelicaTest.Electrical.Spice3.Spice3InternalRecordsAndFunctions",
         "libraries": [
           {
-            "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
-            "git_dirty": true,
+            "git_commit": "5df776c097ced7023140be53c72de826460c9ad6",
+            "git_dirty": false,
             "name": "ModelicaTest",
             "version": "4.2.0 dev"
           }
         ]
       },
       "result": {
-        "bytes": 4548,
+        "bytes": 4567,
         "file": "Spice3InternalRecordsAndFunctions.npz",
         "format": "npz",
-        "sha256": "24b17f18010335e23acdb19591458a6dccdc11c9e61ec7782f918afc075f5d82"
+        "sha256": "c2af9d0b371152a18d2bfa06bd7e622729bce375d7c46062677e8ec65416e583"
       },
       "run": {
-        "utc": "2026-11-03T18:15:19+00:00",
+        "utc": "2026-11-03T22:35:34+00:00",
         "modcheck": {
           "api": 1,
           "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",
