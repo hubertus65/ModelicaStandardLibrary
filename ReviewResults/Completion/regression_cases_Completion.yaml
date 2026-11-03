@@ -156,9 +156,9 @@ cases:
     modifiers: {}
     variables:
       - time
-      - "cylinder1.H"
-      - "cylinder1.m"
-      - "cylinder2.H"
+      - "cylinder1.flowPort.H_flow"
+      - "cylinder1.s"
+      - "cylinder1.flowPort.m_flow"
       - "springDamper.s_rel"
       - "springDamper.v_rel"
   - name: HeatTransferGenerationOfFMUs_3Hz
@@ -203,7 +203,7 @@ cases:
       - "coil.Phi"
       - "coil.i"
       - "r_mLeak.port_p.Phi"
-      - "rootMeanSquare.mean.x"
+      - "rootMeanSquare.y"
   - name: SolenoidComparisonQuasiStatic_10V
     enabled: true
     model: ModelicaTest.Magnetic.FluxTubes.SolenoidComparisonQuasiStatic_10V

@@ -9,7 +9,7 @@
      },
      {
       "name": "final_time",
-      "value": 0.2
+      "value": 1.0
      },
      {
       "name": "interval",
@@ -19,7 +19,7 @@
     "simulationLogLevel": "WARNING",
     "simulationOptions": {
      "dynamic_diagnostics": false,
-     "filter": "['time', 'coil.Phi', 'coil.i', 'r_mLeak.port_p.Phi', 'rootMeanSquare.mean.x']",
+     "filter": "['time', 'v', 'vError', 'cpError', 'alpha', 'gamma', 'p3', 's3', 'boundaryDiff', 'cv2ph', 'dpT', 'dpTRelDiff', 'pro_ph.d', 'pro_ph.ddhp', 'pro_ph.duph', 'pro_dT.p', 'pro_dT.dudT', 'nderivs_ph.ht', 'nderivs_dT.vp', 'nderivs_ps.st', 'satBoundary.dTp', 'twoPhaseTransport.eta_liq', 'igProps.R_s[[]1]', 'transport.lam']",
      "ncp": 500
     },
     "solverOptions": {
@@ -32,7 +32,7 @@
    },
    "model": {
     "modelica": {
-     "className": "ModelicaTest.Magnetic.QuasiStatic.FluxTubes.LinearInductor_R10",
+     "className": "ModelicaTest.Media.MediaCommonFunctions",
      "compilerLogLevel": "warning",
      "compilerOptions": {
       "generate_html_diagnostics": false,

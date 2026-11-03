@@ -8,7 +8,10 @@ dpTRelDiff
 gamma
 igProps.R_s[1]
 nderivs_dT.vp
+nderivs_ph.ht
+nderivs_ps.st
 p3
+pro_dT.dudT
 pro_dT.p
 pro_ph.d
 pro_ph.ddhp

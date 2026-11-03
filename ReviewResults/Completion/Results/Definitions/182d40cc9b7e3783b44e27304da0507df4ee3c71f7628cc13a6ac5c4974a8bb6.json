@@ -9,7 +9,7 @@
      },
      {
       "name": "final_time",
-      "value": 2.0
+      "value": 0.2
      },
      {
       "name": "interval",
@@ -19,8 +19,8 @@
     "simulationLogLevel": "WARNING",
     "simulationOptions": {
      "dynamic_diagnostics": false,
-     "filter": "['time', 'cylinder1.H', 'cylinder1.m', 'cylinder2.H', 'springDamper.s_rel', 'springDamper.v_rel']",
-     "ncp": 2000
+     "filter": "['time', 'coil.Phi', 'coil.i', 'r_mLeak.port_p.Phi', 'rootMeanSquare.y']",
+     "ncp": 500
     },
     "solverOptions": {
      "rtol": 1e-05
@@ -32,7 +32,7 @@
    },
    "model": {
     "modelica": {
-     "className": "ModelicaTest.Thermal.TestCylinder_Mass2",
+     "className": "ModelicaTest.Magnetic.QuasiStatic.FluxTubes.LinearInductor_R10",
      "compilerLogLevel": "warning",
      "compilerOptions": {
       "generate_html_diagnostics": false,

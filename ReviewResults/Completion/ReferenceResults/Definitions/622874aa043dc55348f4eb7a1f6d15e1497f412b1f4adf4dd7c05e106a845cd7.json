@@ -19,11 +19,11 @@
     "simulationLogLevel": "WARNING",
     "simulationOptions": {
      "dynamic_diagnostics": false,
-     "filter": "['time', 'coil.Phi', 'coil.i', 'r_mLeak.port_p.Phi', 'rootMeanSquare.mean.x']",
+     "filter": "['time', 'coil.Phi', 'coil.i', 'r_mLeak.port_p.Phi', 'rootMeanSquare.y']",
      "ncp": 500
     },
     "solverOptions": {
-     "rtol": 1e-05
+     "rtol": 1e-06
     },
     "type": "dynamic"
    },

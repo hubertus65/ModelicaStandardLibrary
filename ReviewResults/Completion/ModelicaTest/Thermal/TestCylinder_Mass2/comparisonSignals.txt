@@ -1,6 +1,6 @@
 time
-cylinder1.H
-cylinder1.m
-cylinder2.H
+cylinder1.flowPort.H_flow
+cylinder1.flowPort.m_flow
+cylinder1.s
 springDamper.s_rel
 springDamper.v_rel

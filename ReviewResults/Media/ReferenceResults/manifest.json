@@ -12,7 +12,10 @@
       "gamma",
       "igProps.R_s[1]",
       "nderivs_dT.vp",
+      "nderivs_ph.ht",
+      "nderivs_ps.st",
       "p3",
+      "pro_dT.dudT",
       "pro_dT.p",
       "pro_ph.d",
       "pro_ph.ddhp",
@@ -32,7 +35,7 @@
       "linear_solver_type": "DENSE",
       "atol": 1e-06,
       "rtol": 1e-06,
-      "cpu_time": 0.07089596400328446,
+      "cpu_time": 0.07207674701930955,
       "steps": 501,
       "rhs_evaluations": 505,
       "jacobian_evaluations": 9,
@@ -54,6 +57,7 @@
       "pro_ph.d": "kg/m3",
       "pro_ph.ddhp": "kg.s2/m5",
       "pro_ph.duph": "m3/kg",
+      "pro_dT.dudT": "m5/(kg.s2)",
       "twoPhaseTransport.eta_liq": "Pa.s",
       "transport.lam": "W/(m.K)"
     },
@@ -63,51 +67,51 @@
       "pro_ph.d": "g/cm3"
     },
     "format": "npz",
-    "bytes": 57114,
+    "bytes": 68227,
     "record": {
       "schema": 1,
-      "record_id": "8fa4289e16128f6402d554ab1e383ef73129dbbcba86bdcc65ce28477ff8ba2a",
+      "record_id": "8c72881b8ea6b3bc076d41d4e0357ba5b260b1079855fbd1e7fb77a721097f43",
       "executable": {
         "fmi_version": "2.0",
-        "generation_date": "2026-11-03T02:51:06",
+        "generation_date": "2026-11-03T18:11:44",
         "generation_tool": "Optimica Compiler Toolkit",
         "guid": "67b24bb04ad268cf0ca11c0204590489",
-        "impact_fmu_id": "modelicatest_media_mediacommonfunctions_20261103_025102_00ee3af",
-        "model_description_sha256": "4fbcbf5b9b22f80f10fecb8fb2fcb4d7e3d92fd34ef14c5911c98d7b67bd3362"
+        "impact_fmu_id": "modelicatest_media_mediacommonfunctions_20261103_181140_850fc3a",
+        "model_description_sha256": "722533674996039f85c9237fbd5ea8d02b91f0ad0e43a4df2ca0abbacce55b8f"
       },
       "experiment": {
-        "case_entry_sha256": "f839032f42fc02c8e81ad7693293815aac89eb7802cc80345944f53eaefd26c6",
+        "case_entry_sha256": "217deca928764d0ccf6ae62cf972616b5a03ac53f5bb9f9d5a4039b1a3506bc0",
         "descriptor": "impact workspace 'msl-coverage'",
         "engine": "impact",
         "impact_case_id": "case_1",
-        "impact_experiment_id": "modelicatest_media_mediacommonfunctions_20261103_025102_d23e7f5",
+        "impact_experiment_id": "modelicatest_media_mediacommonfunctions_20261103_181139_366a2dd",
         "released": true,
         "rtol_factor": 1.0,
         "workspace": "msl-coverage",
-        "definition_sha256": "5fc4725b6967236abeb89f32736470fc013cfd723b1200779657e99b68b33f88"
+        "definition_sha256": "d10cd48165e4a80f6e5bd9cea26d216739391dde8a2bc26cd802ace901c73af5"
       },
       "model": {
         "class": "ModelicaTest.Media.MediaCommonFunctions",
         "libraries": [
           {
-            "git_commit": "76aa9445b1bc6531b0fee14ba9b0e6a317798278",
-            "git_dirty": false,
+            "git_commit": "9709859417685cb98e23e84682eb4aa312792c45",
+            "git_dirty": true,
             "name": "ModelicaTest",
             "version": "4.2.0 dev"
           }
         ]
       },
       "result": {
-        "bytes": 57114,
+        "bytes": 68227,
         "file": "MediaCommonFunctions.npz",
         "format": "npz",
-        "sha256": "eddc5ad1bde371c5491904f65e31ec2666b6cc5bed05c291de8ee9f41a45866f"
+        "sha256": "2692b86481d4a11c31232da562efa279db3af37a1ddb2f8c6c37b24602c6bd2c"
       },
       "run": {
-        "utc": "2026-11-03T02:51:12+00:00",
+        "utc": "2026-11-03T18:11:51+00:00",
         "modcheck": {
           "api": 1,
-          "commit": "2c0b181dcdd00e86cc2197cfeac596f13aa7815a",
+          "commit": "8ec35178b7493dfa4e31cc0ad68c3ab04d716750",
           "dirty": false
         }
       }
